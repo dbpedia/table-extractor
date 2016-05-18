@@ -10,21 +10,33 @@ __coauthor__ = 'feddie - Federica Baiocchi - feddiebai@gmail.com'
 # Some STD configurations: logging, scope of analysis,jsonpedia service used, dbpedia used, query to select the scope of interest
 time = time.time()
 date = datetime.datetime.fromtimestamp(time).strftime('%Y_%m_%d')
+
 scope = "SOCCER PLAYERS"
+
 logging.basicConfig(filename="statistics -"+scope+" - "+date+".log", filemode='w', level=logging.WARNING, format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+
 jsonpedia = "http://jsonpedia.org/annotate/resource/json/"
-#jsonpedia_lan = "it:"
-jsonpedia_lan = "en:"
+
+jsonpedia_lan = "it:"
+#jsonpedia_lan = "en:"
+
 jsonpedia_call_format_table = "?filter=@type:table&procs=Extractors,Structure"
 jsonpedia_call_format_list = "?filter=@type:list&procs=Extractors,Structure"
-#dbpedia = "it.dbpedia.org"
-dbpedia = "dbpedia.org"
+
+dbpedia = "it.dbpedia.org"
+#dbpedia = "dbpedia.org"
+
 dbpedia_sparql = "http://"+dbpedia+"/sparql?default-graph-uri=&query="
-#query_num_res = "select count(?s) as ?res_num where{?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f}"
-query_num_res = "select count(?s) as ?res_num  where{?s <http://dbpedia.org/ontology/wikiPageID> 736 }"
-#query_scope = "SELECT ?s as ?res WHERE{ ?s a <http://dbpedia.org/ontology/SoccerPlayer> . ?s <http://dbpedia.org/ontology/wikiPageID> ?a} LIMIT 1000 OFFSET "
-query_scope = "select ?s as ?res  where{?s <http://dbpedia.org/ontology/wikiPageID> 736 } LIMIT 1000 OFFSET "
+
+query_num_res = "select count(?s) as ?res_num where{?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f}"
+#query_num_res = "select count(?s) as ?res_num  where{?s <http://dbpedia.org/ontology/wikiPageID> 736 }"
+
+query_scope = "SELECT ?s as ?res WHERE{ ?s a <http://dbpedia.org/ontology/SoccerPlayer> . ?s <http://dbpedia.org/ontology/wikiPageID> ?a} LIMIT 1000 OFFSET "
+#query_scope = "select ?s as ?res  where{?s <http://dbpedia.org/ontology/wikiPageID> 736 } LIMIT 1000 OFFSET "
+
+
 call_format_sparql = "&format=application%2Fsparql-results%2Bjson&debug=on"
+
 total_table = 0
 total_list = 0
 offset = 0
@@ -87,15 +99,16 @@ def dbpedia_res_list(url):
 ''':param total_structures is a parameter containing
  tl_retrieve is a function used to retrieve the number of tables in a wiki page
 '''
-def tl_retrieve(total_structures, json_answer,type):
+def tl_retrieve(json_answer,type):
     if type == 2:
-        total_structures += len(json_answer['result'])
-        print "Total tables: "+total_structures
+        total_structures = len(json_answer['result'])
+        logging.warning("Elements found for this resource: "+str(total_structures))
+        print "Tables: "+str(total_structures)
     elif type == 3:
-        total_structures += len(json_answer['result'])
-        logging.warning("Found "+str(total_structures)+" lists")
-        print "Total lists: "+str(total_structures)
-    return
+        total_structures = len(json_answer['result'])
+        logging.warning("Elements found for this resource: " + str(total_structures))
+        print "Lists: "+str(total_structures)
+    return total_structures
 
 
 
@@ -136,18 +149,22 @@ while offset <= int(tot_resources):
                 res_name = res_name.encode('utf-8')
                 # printing on the log the name of the resource analyzed
                 try:
+                    logging.warning("Total elements found : " + str(total_table))
                     logging.warning("Analyzing "+res_name)
+
                     # composing the url to call the jsonpedia service, filtering the wiki page in order to catch only tables
                     table_call_to_jsonpedia = url_composition(res_name, 2)
                     # call to api
                     table_json_answer = json_call(table_call_to_jsonpedia)
-                    list_call_to_jsonpedia = url_composition(res_name, 3)
-                    list_json_answer = json_call(list_call_to_jsonpedia)
+                    #list_call_to_jsonpedia = url_composition(res_name, 3)
+                    #list_json_answer = json_call(list_call_to_jsonpedia)
                     # call to function used to count the number of tables(2) or list(3) in a wiki page
-                    if len(list_json_answer) == 3:
-                        print "Problems related to JSONpedia service :"+str(list_json_answer)
+                    if len(table_json_answer) == 3:
+                        print "Problems related to JSONpedia service :"+str(table_json_answer)
+                        logging.warning("JSONpedia failure")
                     else:
-                        tl_retrieve(total_list, list_json_answer, 3)
+                        total_table += tl_retrieve(table_json_answer, 2)
+
                 except:
                     print "Lost: "+res_name
                     logging.exception("Exception REPORT: ")
@@ -155,3 +172,5 @@ while offset <= int(tot_resources):
             print "Exception during cycle"
     else:
         print "Exception during the retrieval of resource list"
+
+logging.warning(scope+" - Total number of TABLES:  "+str(total_table))
