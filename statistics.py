@@ -7,43 +7,54 @@ import logging
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 __coauthor__ = 'feddie - Federica Baiocchi - feddiebai@gmail.com'
 
-# Some STD configurations: logging, scope of analysis,jsonpedia service used, dbpedia used, query to select the scope of interest
+# Some STD configurations: getting time and formatting the date
 time = time.time()
 date = datetime.datetime.fromtimestamp(time).strftime('%Y_%m_%d')
 
+# scope is used to compose log's name
 scope = "SOCCER PLAYERS"
-
+# configuring log
 logging.basicConfig(filename="statistics -"+scope+" - "+date+".log", filemode='w', level=logging.WARNING, format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 
+# baseurl to JSONpedia service
 jsonpedia = "http://jsonpedia.org/annotate/resource/json/"
 
+# wiki chapter to be used when requesting resources on JSONpedia, it should be same language of wiki used to retrieve resources' list
 jsonpedia_lan = "it:"
 #jsonpedia_lan = "en:"
 
+# These two strings is used to request the application of filters in JSONpedia service, for more info visit jsonpedia.org
 jsonpedia_call_format_table = "?filter=@type:table&procs=Extractors,Structure"
 jsonpedia_call_format_list = "?filter=@type:list&procs=Extractors,Structure"
 
+#version of DBpedia used
 dbpedia = "it.dbpedia.org"
 #dbpedia = "dbpedia.org"
 
+# setting the BaseUrl to the DBpedia SPARQL Endpoint
 dbpedia_sparql = "http://"+dbpedia+"/sparql?default-graph-uri=&query="
 
+# string containing the query in SPARQL language used to enumerate  type's searched resources
 query_num_res = "select count(?s) as ?res_num where{?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f}"
 #query_num_res = "select count(?s) as ?res_num  where{?s <http://dbpedia.org/ontology/wikiPageID> 736 }"
 
+# string wich contains the query to get the list of resources you want to analyze
 query_scope = "SELECT ?s as ?res WHERE{ ?s a <http://dbpedia.org/ontology/SoccerPlayer> . ?s <http://dbpedia.org/ontology/wikiPageID> ?a} LIMIT 1000 OFFSET "
 #query_scope = "select ?s as ?res  where{?s <http://dbpedia.org/ontology/wikiPageID> 736 } LIMIT 1000 OFFSET "
 
-
+# format required from a call to the endpoint
 call_format_sparql = "&format=application%2Fsparql-results%2Bjson&debug=on"
 
-total_table = 0
-total_list = 0
+# global variables are set to 0
+total_res_found = 0
 offset = 0
+res_num = 0
+res_lost_jsonpedia = 0
 
 
 ''':param question is the url to jsonpedia service, used to retrieve info of interest
-Json_call is used to recall a web service with the query question as parameter asking for a json formatted response
+Json_call is used to recall a web service with the query question as parameter asking for a json formatted response.
+Urllib is used to instance a communication while json library to deserialize the answer
 '''
 
 
@@ -96,8 +107,9 @@ def dbpedia_res_list(url):
     list_res = list_res['results']['bindings']
     return list_res
 
-''':param total_structures is a parameter containing
- tl_retrieve is a function used to retrieve the number of tables in a wiki page
+''':param json_answer contains an array delivered by JSONpedia and already deserialized
+   :param type indicates which kind of information do you want, type = 2 for tables, type = 3 for lists
+ tl_retrieve is a function used to retrieve the number of tables or lists in a wiki page
 '''
 def tl_retrieve(json_answer,type):
     if type == 2:
@@ -110,9 +122,7 @@ def tl_retrieve(json_answer,type):
         print "Lists: "+str(total_structures)
     return total_structures
 
-
-
-# brief stat at the beginning of log, it indicate the scope of data and wiki/dbpedia chapter
+# brief stat at the beginning of log, it indicates the scope of data and wiki/dbpedia chapter
 logging.warning("You're analyzing statistics about "+scope+ " at "+dbpedia)
 # composing the request to get the total number of data scope considered
 res_num_query = url_composition(query_num_res,1)
@@ -149,21 +159,24 @@ while offset <= int(tot_resources):
                 res_name = res_name.encode('utf-8')
                 # printing on the log the name of the resource analyzed
                 try:
-                    logging.warning("Total elements found : " + str(total_table))
-                    logging.warning("Analyzing "+res_name)
+                    logging.warning("Total elements found : " + str(total_res_found))
+                    # updating resource index
+                    res_num +=1
+                    res_name_spaced = res_name.replace("_", " ")
+                    logging.warning("Analyzing "+str(res_name_spaced)+". Resource # "+str(res_num)+" of "+str(tot_resources))
 
                     # composing the url to call the jsonpedia service, filtering the wiki page in order to catch only tables
                     table_call_to_jsonpedia = url_composition(res_name, 2)
                     # call to api
                     table_json_answer = json_call(table_call_to_jsonpedia)
-                    #list_call_to_jsonpedia = url_composition(res_name, 3)
-                    #list_json_answer = json_call(list_call_to_jsonpedia)
                     # call to function used to count the number of tables(2) or list(3) in a wiki page
                     if len(table_json_answer) == 3:
                         print "Problems related to JSONpedia service :"+str(table_json_answer)
                         logging.warning("JSONpedia failure")
+                        res_lost_jsonpedia +=1
                     else:
-                        total_table += tl_retrieve(table_json_answer, 2)
+                        # calling the function to count tables/lists and adding result to total number
+                        total_res_found += tl_retrieve(table_json_answer, 2)
 
                 except:
                     print "Lost: "+res_name
@@ -173,4 +186,5 @@ while offset <= int(tot_resources):
     else:
         print "Exception during the retrieval of resource list"
 
-logging.warning(scope+" - Total number of TABLES:  "+str(total_table))
+logging.warning("Resources lost due to JSONPedia related problems:"+str(res_lost_jsonpedia))
+logging.warning(scope+" - Total number of TABLES:  "+str(total_res_found))
