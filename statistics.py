@@ -12,7 +12,10 @@ __coauthor__ = 'feddie - Federica Baiocchi - feddiebai@gmail.com'
 The script requires 3 arguments representing:
 1) 2-characters string representing the DBpedia endpoint to query (e.g. it for it.dbpedia.org or en for dbedia.org)
 2) character 'l' or 't' to look for lists or tables
-3) where clause in quotes or a string representing default queries (soccer, writer, act, all)
+3) a string representing default queries (soccer, writer, act, all) or a where clause as:
+    "?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f
+    (it's important to specify that these resources have a related wikipage)
+
 '''
 
 # Some STD configurations: getting time and formatting the date
@@ -28,6 +31,7 @@ except:
     example: it l \"?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s \
     <http://dbpedia.org/ontology/wikiPageID> ?f)\"")
 
+struct_name=''
 try:
     if struct_type == "l":
         struct_name = "LISTS"
@@ -52,6 +56,9 @@ if where_clause == "soccer":
 elif where_clause == "act":
     where_clause = "?s a <http://dbpedia.org/ontology/Actor>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
     topic= " Actors"
+elif where_clause =="dir":
+    where_clause ="?film <http://dbpedia.org/ontology/director> ?s . ?s <http://dbpedia.org/ontology/wikiPageID> ?f"
+    topic = " Directors"
 elif where_clause == "writer":
     where_clause = "?s a <http://dbpedia.org/ontology/Writer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
     topic= " Writers"
@@ -89,7 +96,7 @@ query_num_res = "select count(?s) as ?res_num where{" + where_clause + "}"
 # query_num_res = "select count(?s) as ?res_num  where{?s <http://dbpedia.org/ontology/wikiPageID> 736 }"
 
 # string which contains the query to get the list of resources you want to analyze
-query_scope = "SELECT ?s as ?res WHERE{" + where_clause + "} LIMIT 1000 OFFSET "
+query_scope = "SELECT distinct ?s as ?res WHERE{" + where_clause + "} LIMIT 1000 OFFSET "
 # query_scope = "SELECT ?s as ?res WHERE{ ?s a <http://dbpedia.org/ontology/SoccerPlayer> . ?s <http://dbpedia.org/ontology/wikiPageID> ?a} LIMIT 1000 OFFSET "
 # query_scope = "select ?s as ?res  where{?s <http://dbpedia.org/ontology/wikiPageID> 736 } LIMIT 1000 OFFSET "
 
@@ -215,8 +222,8 @@ while offset <= int(tot_resources):
                     res_name_spaced = res_name.replace("_", " ")
                     # logging.warning("Analyzing "+str(res_name_spaced)+". Resource # "+str(res_num)+" of "+str(tot_resources))
                     logging.warning(
-                        "Resource # " + str(res_num) + " of " + str(tot_resources) + \
-                        ". Total " + struct_name.lower() +" found : " + str(
+                        "Resource [" + str(res_name_spaced) + "] #" + str(res_num) + " of " + str(tot_resources) + \
+                        ". Tot " + struct_name.lower() +" found : " + str(
                             total_res_found))
                     # composing the url to call the jsonpedia service, filtering the wiki page in order to catch only tables
                     table_call_to_jsonpedia = url_composition(res_name, 'json')
