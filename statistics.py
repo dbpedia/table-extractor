@@ -91,7 +91,7 @@ dbpedia_sparql = "http://" + dbpedia + "/sparql?default-graph-uri=&query="
 
 
 # string containing the query in SPARQL language used to enumerate  type's searched resources
-query_num_res = "select count(?s) as ?res_num where{" + where_clause + "}"
+query_num_res = "select (count(distinct ?s) as ?res_num) where{" + where_clause + "}"
 # query_num_res = "select count(?s) as ?res_num where{?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f}"
 # query_num_res = "select count(?s) as ?res_num  where{?s <http://dbpedia.org/ontology/wikiPageID> 736 }"
 
