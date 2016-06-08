@@ -31,7 +31,7 @@ except:
     example: it l \"?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s \
     <http://dbpedia.org/ontology/wikiPageID> ?f)\"")
 
-struct_name=''
+struct_name = ''
 try:
     if struct_type == "l":
         struct_name = "LISTS"
@@ -41,30 +41,30 @@ try:
         struct_name = "TABLES"
         jsonpedia_call_format = "?filter=@type:table&procs=Extractors,Structure"
 except:
-    print("The first argument should be l or t, type l for counting lists or t for tables")
+    print("The second argument should be l or t, type l for counting lists or t for tables")
 
 try:
     len(language) == 2
 except:
-    print("The second argument should be a language code, as en or it")
+    print("The first argument should be a language code, as en or it")
 
-topic=''
+topic = ''
 # temporary shortcuts for particular searches
 if where_clause == "soccer":
     where_clause = "?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-    topic= " Soccer Players"
+    topic = " Soccer Players"
 elif where_clause == "act":
     where_clause = "?s a <http://dbpedia.org/ontology/Actor>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-    topic= " Actors"
-elif where_clause =="dir":
-    where_clause ="?film <http://dbpedia.org/ontology/director> ?s . ?s <http://dbpedia.org/ontology/wikiPageID> ?f"
+    topic = " Actors"
+elif where_clause == "dir":
+    where_clause = "?film <http://dbpedia.org/ontology/director> ?s . ?s <http://dbpedia.org/ontology/wikiPageID> ?f"
     topic = " Directors"
 elif where_clause == "writer":
     where_clause = "?s a <http://dbpedia.org/ontology/Writer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-    topic= " Writers"
+    topic = " Writers"
 elif where_clause == "all":
     where_clause = "?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-    topic=" All wikis"
+    topic = " All wikis"
 
 
 # scope is used to compose log's name - will be something like WIKI PAGES TABLES [SoccerPlayers] - EN
@@ -194,9 +194,9 @@ while offset <= int(tot_resources):
 
     # retrieving a list of 1000 resources of the kind of interest
     try:
-        #composing query
+        # composing query
         res_list_url= url_composition(query_scope+str(offset), 'sparql')
-        #retrieve the list
+        # retrieve the list
         res_list = dbpedia_res_list(res_list_url)
     except:
         logging.exception("Exception: Lost resources from  " + str(offset) + " to " + str(offset + 1000) + ", REPORT: ")
