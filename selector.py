@@ -1,5 +1,7 @@
 import urllib
 import json
+import datetime
+import time
 
 __author__='papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
@@ -39,6 +41,7 @@ class Selector:
         self.offset = 0
         self.res_num = 0
         self.tot_res_interested()
+        self.list = open(self.topic+"_"+datetime.datetime.fromtimestamp(time.time()).strftime('%Y_%m_%d')+".txt",'a')
         # tests
         # TODO erase this part once tested
         print str(self.query_num_res)
@@ -52,20 +55,20 @@ class Selector:
         :return:
         """
         if scope_passed == "soccer":
-            self.topic = " Soccer Players"
+            self.topic = "Soccer Players"
             self.where_clause = "?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
         elif scope_passed == "act":
-            self.topic = " Actors"
+            self.topic = "Actors"
             self.where_clause = "?s a <http://dbpedia.org/ontology/Actor>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
         elif scope_passed == "dir":
             self.where_clause = "?film <http://dbpedia.org/ontology/director> ?s . ?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-            self.topic = " Directors"
+            self.topic = "Directors"
         elif scope_passed == "writer":
             self.where_clause = "?s a <http://dbpedia.org/ontology/Writer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-            self.topic = " Writers"
+            self.topic = "Writers"
         elif scope_passed == "all":
             self.where_clause = "?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-            self.topic = " All pages"
+            self.topic = "All_pages"
         else:
             # TODO set a way to accept where clauses with different results than ?s
             self.where_clause = scope_passed
@@ -149,6 +152,15 @@ class Selector:
         while self.offset <= self.total_res_found:
             try:
                 self.last_res_list = self.dbpedia_res_list(self.offset)
+                for res in self.last_res_list:
+                    try:
+                        res_name = res['res']['value'].replace("http://" + self.dbpedia + "/resource/", "")
+                        res_name = res_name.encode('utf-8')
+                        self.list.write(str(res_name)+'\n')
+                        self.counter +=1
+
+                    except:
+                        print("exception for: "+str(res))
                 self.__update_offset()
                 # TODO insert the part of iteration
             except:
