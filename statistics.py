@@ -57,7 +57,8 @@ elif where_clause == "act":
     where_clause = "?s a <http://dbpedia.org/ontology/Actor>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
     topic = " Actors"
 elif where_clause == "dir":
-    where_clause = "?film <http://dbpedia.org/ontology/director> ?s . ?s <http://dbpedia.org/ontology/wikiPageID> ?f"
+    where_clause = "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>. \
+     ?film <http://dbpedia.org/ontology/director> ?s . ?s <http://dbpedia.org/ontology/wikiPageID> ?f"
     topic = " Directors"
 elif where_clause == "writer":
     where_clause = "?s a <http://dbpedia.org/ontology/Writer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
@@ -88,17 +89,13 @@ else:
 # setting the BaseUrl to the DBpedia SPARQL Endpoint
 dbpedia_sparql = "http://" + dbpedia + "/sparql?default-graph-uri=&query="
 
-
-
 # string containing the query in SPARQL language used to enumerate  type's searched resources
 query_num_res = "select (count(distinct ?s) as ?res_num) where{" + where_clause + "}"
-# query_num_res = "select count(?s) as ?res_num where{?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f}"
-# query_num_res = "select count(?s) as ?res_num  where{?s <http://dbpedia.org/ontology/wikiPageID> 736 }"
+
 
 # string which contains the query to get the list of resources you want to analyze
 query_scope = "SELECT distinct ?s as ?res WHERE{" + where_clause + "} LIMIT 1000 OFFSET "
-# query_scope = "SELECT ?s as ?res WHERE{ ?s a <http://dbpedia.org/ontology/SoccerPlayer> . ?s <http://dbpedia.org/ontology/wikiPageID> ?a} LIMIT 1000 OFFSET "
-# query_scope = "select ?s as ?res  where{?s <http://dbpedia.org/ontology/wikiPageID> 736 } LIMIT 1000 OFFSET "
+
 
 # format required from a call to the endpoint
 call_format_sparql = "&format=application%2Fsparql-results%2Bjson&debug=on"
@@ -108,6 +105,9 @@ total_res_found = 0
 offset = 0
 res_num = 0
 res_lost_jsonpedia = 0
+control = True
+calls_to_jsonpedia = 0
+
 
 ''':param question is the url to jsonpedia service, used to retrieve info of interest
 Json_call is used to recall a web service with the query question as parameter asking for a json formatted response.
@@ -116,10 +116,20 @@ Urllib is used to instance a communication, while json library to deserialize th
 
 
 def json_call(question):
-    call = urllib.urlopen(question)
-    answer = call.read()
-    deserialized = json.loads(answer)
-    return deserialized
+    try:
+        call = urllib.urlopen(question)
+        answer = call.read()
+        deserialized = json.loads(answer)
+        return deserialized
+    except IOError:
+        print ("Try, again, some problems due to Internet connection")
+        return "InternetE"
+    except ValueError:
+        print ("Not a Json object.")
+        return "valueE"
+    except:
+        print ("General Exception during json call")
+        return "GeneralE"
 
 
 ''':param query is the query to submit to the web service (endpoint sparql or jsonpedia)
@@ -129,10 +139,10 @@ def json_call(question):
 
 def url_composition(query, type):
     query = urllib.quote_plus(query)
-    if type == 'sparql' :
+    if type == 'sparql':
         url = dbpedia_sparql + query + call_format_sparql
         return url
-    elif type == 'json' :
+    elif type == 'json':
         url = jsonpedia+jsonpedia_lan + query + jsonpedia_call_format
         return url
     elif type == 3:
@@ -150,10 +160,15 @@ Dbpedia_tot_res is a function used to know how many pages are related to the sco
 
 def dbpedia_tot_res(url):
     # obtaining the answer from the web service
-    tot_res = json_call(url)
-    # finding usable results
-    tot_res = tot_res['results']['bindings'][0]['res_num']['value']
-    return tot_res
+    try:
+        tot_res = json_call(url)
+        # finding usable results
+        tot_res = tot_res['results']['bindings'][0]['res_num']['value']
+        return tot_res
+    except ValueError:
+        print("Connection Error, please check your connection - Retrying")
+        return "none"
+
 
 
 ''':param url is the url already composed and ready to be called
@@ -223,21 +238,48 @@ while offset <= int(tot_resources):
                     # logging.warning("Analyzing "+str(res_name_spaced)+". Resource # "+str(res_num)+" of "+str(tot_resources))
                     logging.warning(
                         "Resource [" + str(res_name_spaced) + "] #" + str(res_num) + " of " + str(tot_resources) + \
-                        ". Tot " + struct_name.lower() +" found : " + str(
+                        ". Tot " + struct_name.lower() + " found : " + str(
                             total_res_found))
                     # composing the url to call the jsonpedia service, filtering the wiki page in order to catch only tables
                     table_call_to_jsonpedia = url_composition(res_name, 'json')
+                    control = True
                     # call to api
-                    table_json_answer = json_call(table_call_to_jsonpedia)
-                    # call to function used to count the number of tables(2) or list(3) in a wiki page
-                    if len(table_json_answer) == 3:
-                        print "Problems related to JSONpedia service :" + str(table_json_answer)
-                        logging.warning("JSONpedia failure")
-                        res_lost_jsonpedia += 1
-                    else:
-                        # calling the function to count tables/lists and adding result to total number
-                        total_res_found += tl_retrieve(table_json_answer)
-
+                    while control:
+                        table_json_answer = json_call(table_call_to_jsonpedia)
+                        # keeping trace of the number of jsonpedia calls
+                        calls_to_jsonpedia += 1
+                        if type(table_json_answer) != basestring:
+                            # call to function used to count the number of tables(2) or list(3) in a wiki page
+                            if 'message' in table_json_answer.keys():
+                                message = table_json_answer['message']
+                                if message == u'Invalid page metadata.':
+                                    logging.warning("Lost: " + res_name + " due to Invalid page metadata exception ")
+                                    control = False
+                                    res_lost_jsonpedia += 1
+                                elif message == u'Expected DocumentElement found ParameterElement':
+                                    logging.warning(
+                                        "Lost: " + res_name + " due to Expected DocumentElement, found ParameterElement exception ")
+                                    control = False
+                                    res_lost_jsonpedia += 1
+                                elif message == u'Expected DocumentElement found ListItem':
+                                    logging.warning(
+                                        "Lost: " + res_name + " due to Expected DocumentElement found ListItem exception ")
+                                    control = False
+                                    res_lost_jsonpedia += 1
+                                elif message == u'Expected DocumentElement found TableCell':
+                                    logging.warning(
+                                        "Lost: " + res_name + " due to Expected DocumentElement found TableCell exception ")
+                                    control = False
+                                    res_lost_jsonpedia += 1
+                                elif len(table_json_answer) == 3:
+                                    print "Problems related to JSONpedia service :" + str(table_json_answer) + " - RETRYING"
+                            else:
+                                # calling the function to count tables/lists and adding result to total number
+                                total_res_found += tl_retrieve(table_json_answer)
+                                # set control to false in order to exit the cycle of calls
+                                control = False
+                        else:
+                            pass
                 except:
                     print "Lost: " + res_name
                     logging.exception("Exception REPORT: ")
@@ -248,3 +290,4 @@ while offset <= int(tot_resources):
 
 logging.warning("Resources lost due to JSONPedia related problems:" + str(res_lost_jsonpedia))
 logging.warning(scope + " - Total number of " + struct_name + ":   " + str(total_res_found))
+logging.warning(scope + " - Total calls to JSONpedia services :" + str(calls_to_jsonpedia))
