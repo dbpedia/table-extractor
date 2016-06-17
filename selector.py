@@ -3,7 +3,7 @@ import json
 import datetime
 import time
 
-__author__='papalinis - Simone Papalini - papalini.simone.an@gmail.com'
+__author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
 
 class Selector:
@@ -17,22 +17,24 @@ class Selector:
         call_format_sparql:
 
     """
-    def __init__(self, lang, scope):
+    def __init__(self, lang, query, topic):
+        # TODO USE THE TOPIC ALREADY SET
         """
 
         :param lang:
-        :param scope:
+        :param query:
+        :param topic:
         """
+        self.lang = lang
+        self.where_clause = query
+        self.topic = topic
         self.last_res_list = None
         self.struct_name = "TABLES"
         self.jsonpedia_call_format = "?filter=@type:table&procs=Extractors,Structure"
         self.call_format_sparql = "&format=application%2Fsparql-results%2Bjson&debug=on"
-        self.lang = lang
         self.jsonpedia_base_url = "http://jsonpedia.org/annotate/resource/json/"
         self.jsonpedia_lan = lang + ":"
-        self.where_clause = scope
-        self.topic = ""
-        self.scope_selection(scope)
+        self.dbpedia = None
         self.dbpedia_sparql_url = self.dbpedia_selection()
         self.query_num_res = "select (count(distinct ?s) as ?res_num) where{" + self.where_clause + "}"
         self.query_res_list = "SELECT distinct ?s as ?res WHERE{" + self.where_clause + "} LIMIT 1000 OFFSET "
@@ -41,39 +43,12 @@ class Selector:
         self.offset = 0
         self.res_num = 0
         self.tot_res_interested()
-        self.list = open(self.topic+"_"+datetime.datetime.fromtimestamp(time.time()).strftime('%Y_%m_%d')+".txt",'a')
+        self.res_list_filename = topic+"_"+datetime.datetime.fromtimestamp(time.time()).strftime('%Y_%m_%d')+".txt"
+        self.list = open(self.res_list_filename,'a')
         # tests
         # TODO erase this part once tested
         print str(self.query_num_res)
-        self.counter = 0
-
-
-    def scope_selection(self, scope_passed):
-        """
-
-        :param scope_passed:
-        :return:
-        """
-        if scope_passed == "soccer":
-            self.topic = "Soccer Players"
-            self.where_clause = "?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-        elif scope_passed == "act":
-            self.topic = "Actors"
-            self.where_clause = "?s a <http://dbpedia.org/ontology/Actor>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-        elif scope_passed == "dir":
-            self.where_clause = "?film <http://dbpedia.org/ontology/director> ?s . ?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-            self.topic = "Directors"
-        elif scope_passed == "writer":
-            self.where_clause = "?s a <http://dbpedia.org/ontology/Writer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-            self.topic = "Writers"
-        elif scope_passed == "all":
-            self.where_clause = "?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-            self.topic = "All_pages"
-        else:
-            # TODO set a way to accept where clauses with different results than ?s
-            self.where_clause = scope_passed
-            self.topic = "Custom Selection"
-        return
+        self.written = 0
 
     def dbpedia_selection(self):
         """
@@ -144,7 +119,7 @@ class Selector:
         except:
             print ("ERROR RETRIEVING RESOURCES FROM "+str(offset)+" TO "+str(offset+1000))
 
-    def resources_iterator(self):
+    def resources_collect(self):
         """
         It is  intended to iterate 1000 resources at once
         :return:
@@ -157,12 +132,12 @@ class Selector:
                         res_name = res['res']['value'].replace("http://" + self.dbpedia + "/resource/", "")
                         res_name = res_name.encode('utf-8')
                         self.list.write(str(res_name)+'\n')
-                        self.counter +=1
+                        self.written += 1
 
                     except:
                         print("exception for: "+str(res))
                 self.__update_offset()
-                # TODO insert the part of iteration
+
             except:
                 print "none"
 
@@ -180,9 +155,24 @@ class Selector:
         """
         return self.topic
 
+    def get_tot_res(self):
+        """
+
+        :return: Number of total resources found for this scope
+        """
+        return self.total_res_found
+
     def __update_offset(self):
         """
 
         :return:
         """
         self.offset += 1000
+
+    def get_res_list_filename(self):
+
+        """
+
+        :return:
+        """
+        return self.res_list_filename

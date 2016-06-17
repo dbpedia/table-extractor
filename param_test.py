@@ -1,5 +1,5 @@
 import sys
-__author__='papalinis - Simone Papalini - papalini.simone.an@gmail.com'
+__author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
 
 
@@ -23,6 +23,7 @@ class ParamTester:
         self.__param_test(self.args)
         self.lang = self.__lang_test_and_set(self.args)
         self.where = self.__where_test_and_set(self.args)
+        self.__topic()
 
     def __param_test(self, argv):
         """
@@ -95,6 +96,34 @@ class ParamTester:
              using \"all\" as default ")
             return "all"
 
+    def __topic(self):
+        # TODO Docstring
+        """
+        This method sets the topic of interest, if possible.
+        :return:
+        """
+        if self.where == "soccer":
+            self.topic = "Soccer Players"
+            self.where_clause = "?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
+        elif self.where == "act":
+            self.topic = "Actors"
+            self.where_clause = "?s a <http://dbpedia.org/ontology/Actor>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
+        elif self.where == "dir":
+            self.where_clause = "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>. \
+             ?film <http://dbpedia.org/ontology/director> ?s . ?s <http://dbpedia.org/ontology/wikiPageID> ?f"
+            self.topic = "Directors"
+        elif self.where == "writer":
+            self.where_clause = "?s a <http://dbpedia.org/ontology/Writer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
+            self.topic = "Writers"
+        elif self.where == "all":
+            self.where_clause = "?s <http://dbpedia.org/ontology/wikiPageID> ?f"
+            self.topic = "All_pages"
+        else:
+            # TODO set a way to accept where clauses with different results than ?s
+            self.where_clause = self.where
+            self.topic = "Custom Selection"
+        return
+
     def get_lang(self):
         """
         get_lang() is used to pick up the value of language set.
@@ -109,4 +138,13 @@ class ParamTester:
             Typically is used from outer scope.
             :return: where that is the where_clause used to target a special subset of Wiki pages.
         """
-        return self.where
+        return self.where_clause
+
+    def get_topic(self):
+        """
+        get_topic() is used to pick up the value of topic.
+
+
+        :return: self.topic, the scope of the resources targeted
+        """
+        return self.topic
