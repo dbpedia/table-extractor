@@ -4,161 +4,101 @@ import datetime
 import time
 import logging
 import sys
+import argparse
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 __coauthor__ = 'feddie - Federica Baiocchi - feddiebai@gmail.com'
 
-'''
+"""
 The script requires 3 arguments representing:
 1) 2-characters string representing the DBpedia endpoint to query (e.g. it for it.dbpedia.org or en for dbedia.org)
 2) character 'l' or 't' to look for lists or tables
 3) a string representing default queries (soccer, writer, act, all) or a where clause as:
     "?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f
     (it's important to specify that these resources have a related wikipage)
-
-'''
-
-# Some STD configurations: getting time and formatting the date
-time = time.time()
-date = datetime.datetime.fromtimestamp(time).strftime('%Y_%m_%d')
-
-try:
-    language = sys.argv[1]
-    struct_type = sys.argv[2]
-    where_clause = sys.argv[3]
-except:
-    print("INCORRECT NUMBER OF ARGUMENTS -- \
-    example: it l \"?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s \
-    <http://dbpedia.org/ontology/wikiPageID> ?f)\"")
-
-struct_name = ''
-try:
-    if struct_type == "l":
-        struct_name = "LISTS"
-        # This string is used to request the application of filters in JSONpedia service, for more info visit jsonpedia.org
-        jsonpedia_call_format = "?filter=@type:list&procs=Extractors,Structure"
-    elif sys.argv[2] == "t":
-        struct_name = "TABLES"
-        jsonpedia_call_format = "?filter=@type:table&procs=Extractors,Structure"
-except:
-    print("The second argument should be l or t, type l for counting lists or t for tables")
-
-try:
-    len(language) == 2
-except:
-    print("The first argument should be a language code, as en or it")
-
-topic = ''
-# temporary shortcuts for particular searches
-if where_clause == "soccer":
-    where_clause = "?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-    topic = " Soccer Players"
-elif where_clause == "act":
-    where_clause = "?s a <http://dbpedia.org/ontology/Actor>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-    topic = " Actors"
-elif where_clause == "dir":
-    where_clause = "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>. \
-     ?film <http://dbpedia.org/ontology/director> ?s . ?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-    topic = " Directors"
-elif where_clause == "writer":
-    where_clause = "?s a <http://dbpedia.org/ontology/Writer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-    topic = " Writers"
-elif where_clause == "all":
-    where_clause = "?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-    topic = " All wikis"
+"""
 
 
-# scope is used to compose log's name - will be something like WIKI PAGES TABLES [SoccerPlayers] - EN
-scope = struct_name + " WIKI PAGES" + topic + " - " + str(language).upper()
-# configuring log
-logging.basicConfig(filename= scope + " (" + date + ").log", filemode='w', level=logging.WARNING,
-                    format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
-
-# baseurl to JSONpedia service
-jsonpedia = "http://jsonpedia.org/annotate/resource/json/"
-
-# wiki chapter to be used when requesting resources on JSONpedia, it should be same language of wiki used to retrieve resources' list
-jsonpedia_lan = language + ":"
-
-# version of DBpedia used
-if language != "en":
-    dbpedia = language + ".dbpedia.org"
-else:
-    dbpedia = "dbpedia.org"
-
-# setting the BaseUrl to the DBpedia SPARQL Endpoint
-dbpedia_sparql = "http://" + dbpedia + "/sparql?default-graph-uri=&query="
-
-# string containing the query in SPARQL language used to enumerate  type's searched resources
-query_num_res = "select (count(distinct ?s) as ?res_num) where{" + where_clause + "}"
 
 
-# string which contains the query to get the list of resources you want to analyze
-query_scope = "SELECT distinct ?s as ?res WHERE{" + where_clause + "} LIMIT 1000 OFFSET "
-
-
-# format required from a call to the endpoint
-call_format_sparql = "&format=application%2Fsparql-results%2Bjson&debug=on"
-
-# global variables are set to 0
-total_res_found = 0
-offset = 0
-res_num = 0
-res_lost_jsonpedia = 0
-control = True
-calls_to_jsonpedia = 0
-
-
-''':param question is the url to jsonpedia service, used to retrieve info of interest
-Json_call is used to recall a web service with the query question as parameter asking for a json formatted response.
-Urllib is used to instance a communication, while json library to deserialize the answer
-'''
-
+def set_where_topic(where_clause) :
+    """
+    Returns where clause of the query and topic name which will be used for the log file.
+    It also associates some shortcuts with actual queries
+    :param where_clause:
+    :return:
+    """
+    topic = ''
+    # temporary shortcuts for particular searches
+    if where_clause == "soccer":
+        where_clause = "?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
+        topic = " Soccer Players"
+    elif where_clause == "act":
+        where_clause = "?s a <http://dbpedia.org/ontology/Actor>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
+        topic = " Actors"
+    elif where_clause == "dir":
+        where_clause = "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>. \
+         ?film <http://dbpedia.org/ontology/director> ?s . ?s <http://dbpedia.org/ontology/wikiPageID> ?f"
+        topic = " Directors"
+    elif where_clause == "writer":
+        where_clause = "?s a <http://dbpedia.org/ontology/Writer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
+        topic = " Writers"
+    elif where_clause == "all":
+        where_clause = "?s <http://dbpedia.org/ontology/wikiPageID> ?f"
+        topic = " All wikis"
+    return [where_clause, topic]
 
 def json_call(question):
+    """
+    This method is used to recall a web service with the query question as parameter asking for a json formatted response.
+    Urllib is used to instance a communication, while json library to deserialize the answer
+    :param question: the url to jsonpedia service, used to retrieve info of interest
+    :return: Wiki page representation in JSON format
+    """
     try:
         call = urllib.urlopen(question)
         answer = call.read()
         deserialized = json.loads(answer)
         return deserialized
     except IOError:
-        print ("Try, again, some problems due to Internet connection")
+        print("Connection Error on request: " + question + ". Please try again")
         return "InternetE"
     except ValueError:
-        print ("Not a Json object.")
+        print ("Error! " + answer + " is not a Json object.")
         return "valueE"
     except:
         print ("General Exception during json call")
         return "GeneralE"
 
-
-''':param query is the query to submit to the web service (endpoint sparql or jsonpedia)
-:param type is used to switch between service requested, 1 = dbpedia sparql endpoint , 2 = jsonpedia searching for tables , 3 = jsonpedia searching for lists
- Url_composition is a function that compose correctly the url to call a jsonpedia or a dbpedia/sparql service'''
-
-
-def url_composition(query, type):
+def dbpedia_call_compose(query, dbpedia_sparql) :
+    """
+    Constructs a URL to query a DBpedia endpoint
+    :param query: the query to be submitted to the sparql endpoint
+    :param dbpedia_sparql: contains URL prefix with the selected endpoint
+    :return: complete URL
+    """
     query = urllib.quote_plus(query)
-    if type == 'sparql':
-        url = dbpedia_sparql + query + call_format_sparql
-        return url
-    elif type == 'json':
-        url = jsonpedia+jsonpedia_lan + query + jsonpedia_call_format
-        return url
-    elif type == 3:
-        url = jsonpedia + jsonpedia_lan + query + jsonpedia_call_format
-        return url
-    else:
-        print "type error"
-        return
+    url = dbpedia_sparql + query + "&format=application%2Fsparql-results%2Bjson&debug=on"
     return url
 
-''':param url is the url already composed and ready to be called
-Dbpedia_tot_res is a function used to know how many pages are related to the scope considered
-'''
-
+def jsonpedia_call_compose(res, jsonpedia_suffix) :
+    """
+    Constructs a URL to query JSONpedia web service
+    :param res: resource corresponding to the Wikipedia page to be analyzed
+    :param lang: lanaguage prefix
+    :param jsonpedia_suffix: contains the last part of the request which varies for lists or tables
+    :return: complete URL
+    """
+    res = language + ":" + res
+    url = "http://jsonpedia.org/annotate/resource/json/" + res + jsonpedia_suffix
+    return url
 
 def dbpedia_tot_res(url):
+    """
+    it's used to know how many pages are related to the scope considered
+    :param url: already composed url, ready to be called
+    :return: number of total resources
+    """
     # obtaining the answer from the web service
     try:
         tot_res = json_call(url)
@@ -166,128 +106,211 @@ def dbpedia_tot_res(url):
         tot_res = tot_res['results']['bindings'][0]['res_num']['value']
         return tot_res
     except ValueError:
-        print("Connection Error, please check your connection - Retrying")
-        return "none"
-
-
-
-''':param url is the url already composed and ready to be called
-Dbpedia_res_list is a function used to retrieve resources (LIMIT at a time) from dbpedia
-'''
-
+        print("Connection Error on request "+ url +" , please check your connection and retry")
+        return 0
+    except :
+        print("Something went wrong - Could not retrieve resources")
+        return 0
 
 def dbpedia_res_list(url):
+    """
+    It's used to retrieve resources (LIMIT at a time) from dbpedia
+    :param url: already composed url, ready to be called
+    :return:  a list of DBpedia resources satisfyng the query
+    """
     # obtaining the answer from the web service
     list_res = json_call(url)
     # finding usable results
     list_res = list_res['results']['bindings']
     return list_res
 
+def init_log() :
+    """
+    Initializes and creates log file containing statistics
+    :return: log file name
+    """
+    # Some STD configurations: getting time and formatting the date
+    curr_time = time.time()
+    date = datetime.datetime.fromtimestamp(curr_time).strftime('%Y_%m_%d')
+    # configuring log
+    file_name = scope + " (" + date + ").log"
+    logging.basicConfig(filename=file_name, filemode='w', level=logging.WARNING,
+                        format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+    # brief stat at the beginning of log, it indicates the scope of data and wiki/dbpedia chapter
+    logging.warning("You're analyzing statistics about " + scope + " at " + dbpedia)
+    return file_name
 
-''':param json_answer contains an array delivered by JSONpedia and already deserialized
-   :param type indicates which kind of information do you want, type = 2 for tables, type = 3 for lists
- tl_retrieve is a function used to retrieve the number of tables or lists in a wiki page
-'''
+def res_count() :
+    # string containing the query in SPARQL language used to enumerate  type's searched resources
+    query_num_res = "SELECT (count(distinct ?s) as ?res_num) where{" + where_clause + "}"
+    # composing the request to get the total number of data scope considered
+    res_num_query = dbpedia_call_compose(query_num_res, dbpedia_sparql)
+    # call to dbpedia to get the total number of resources considered
+    tot_resources = int(dbpedia_tot_res(res_num_query))
+    # writing result on the log
+    logging.warning("Total number of resources : " + str(tot_resources))
+    return tot_resources
 
 
-def tl_retrieve(json_answer):
-    return len(json_answer['result'])
-
-
-# brief stat at the beginning of log, it indicates the scope of data and wiki/dbpedia chapter
-logging.warning("You're analyzing statistics about " + scope + " at " + dbpedia)
-# composing the request to get the total number of data scope considered
-res_num_query = url_composition(query_num_res, 'sparql')
-# call to dbpedia to get the total number of resources considered
-tot_resources = dbpedia_tot_res(str(res_num_query))
-# writing result on the log
-logging.warning("Total number of resources : " + tot_resources)
-
-# cycling result list to inspect wiki pages
-# condition to stop the cycle is that var offset become bigger than the number of total resources
-while offset <= int(tot_resources):
-
-    # retrieving a list of 1000 resources of the kind of interest
-    try:
-        # composing query
-        res_list_url= url_composition(query_scope+str(offset), 'sparql')
-        # retrieve the list
-        res_list = dbpedia_res_list(res_list_url)
-    except:
-        logging.exception("Exception: Lost resources from  " + str(offset) + " to " + str(offset + 1000) + ", REPORT: ")
-
-    # updating the offset in order to cycle with new resources
-    offset += 1000
-    # if res_list has some results in it:
-    if res_list:
+def find_res_list(tot_res) :
+    offset = 0
+    tot_list = []
+    # string which contains the query to get the list of resources you want to analyze
+    query_scope = "SELECT distinct ?s as ?res WHERE{" + where_clause + "} LIMIT 1000 OFFSET "
+    while offset <= tot_res:
+        # retrieving a list of 1000 resources of the kind of interest
         try:
-            # for every resource in res_list
-            for resource in res_list:
-                # res is a var containing the URI of a resource
-                res = resource['res']['value']
-                # extracting name of the resource
-                res_name = res.replace("http://" + dbpedia + "/resource/", "")
-                # encoding the name in utf-8 , useful because a lot of URIs are composed by utf-8
-                res_name = res_name.encode('utf-8')
-                # printing on the log the name of the resource analyzed
-                try:
-                    # logging.warning("Total elements found : " + str(total_res_found))
-                    # updating resource index
-                    res_num += 1
-                    res_name_spaced = res_name.replace("_", " ")
-                    # logging.warning("Analyzing "+str(res_name_spaced)+". Resource # "+str(res_num)+" of "+str(tot_resources))
-                    logging.warning(
-                        "Resource [" + str(res_name_spaced) + "] #" + str(res_num) + " of " + str(tot_resources) + \
-                        ". Tot " + struct_name.lower() + " found : " + str(
-                            total_res_found))
-                    # composing the url to call the jsonpedia service, filtering the wiki page in order to catch only tables
-                    table_call_to_jsonpedia = url_composition(res_name, 'json')
-                    control = True
-                    # call to api
-                    while control:
-                        table_json_answer = json_call(table_call_to_jsonpedia)
-                        # keeping trace of the number of jsonpedia calls
-                        calls_to_jsonpedia += 1
-                        if type(table_json_answer) != basestring:
-                            # call to function used to count the number of tables(2) or list(3) in a wiki page
-                            if 'message' in table_json_answer.keys():
-                                message = table_json_answer['message']
-                                if message == u'Invalid page metadata.':
-                                    logging.warning("Lost: " + res_name + " due to Invalid page metadata exception ")
-                                    control = False
-                                    res_lost_jsonpedia += 1
-                                elif message == u'Expected DocumentElement found ParameterElement':
-                                    logging.warning(
-                                        "Lost: " + res_name + " due to Expected DocumentElement, found ParameterElement exception ")
-                                    control = False
-                                    res_lost_jsonpedia += 1
-                                elif message == u'Expected DocumentElement found ListItem':
-                                    logging.warning(
-                                        "Lost: " + res_name + " due to Expected DocumentElement found ListItem exception ")
-                                    control = False
-                                    res_lost_jsonpedia += 1
-                                elif message == u'Expected DocumentElement found TableCell':
-                                    logging.warning(
-                                        "Lost: " + res_name + " due to Expected DocumentElement found TableCell exception ")
-                                    control = False
-                                    res_lost_jsonpedia += 1
-                                elif len(table_json_answer) == 3:
-                                    print "Problems related to JSONpedia service :" + str(table_json_answer) + " - RETRYING"
-                            else:
-                                # calling the function to count tables/lists and adding result to total number
-                                total_res_found += tl_retrieve(table_json_answer)
-                                # set control to false in order to exit the cycle of calls
-                                control = False
-                        else:
-                            pass
-                except:
-                    print "Lost: " + res_name
-                    logging.exception("Exception REPORT: ")
+            # composing query
+            query = query_scope + str(offset)
+            res_list_url = dbpedia_call_compose(query, dbpedia_sparql)
+            # call to dbpedia to get the total number of resources considered)
+            # retrieve the list
+            list_res = dbpedia_res_list(res_list_url)
+            for l in list_res:
+                tot_list.append(l)
         except:
-            print "Exception during cycle"
-    else:
-        print "Exception during the retrieval of resource list - no resources found"
+            logging.exception("Exception: Lost resources from  " + str(offset) + " to " + str(offset + 1000) + ", REPORT: ")
 
-logging.warning("Resources lost due to JSONPedia related problems:" + str(res_lost_jsonpedia))
-logging.warning(scope + " - Total number of " + struct_name + ":   " + str(total_res_found))
-logging.warning(scope + " - Total calls to JSONpedia services :" + str(calls_to_jsonpedia))
+        # updating the offset in order to cycle with new resources
+        offset += 1000
+    return tot_list
+
+def analyze_stats(tot_res, res_list) :
+    """
+    Iterates on list of resources found and updates logfile with the number of lists or tables found
+    for each resource, as well as the total number of structures
+    :param tot_res: total number of resources found
+    :param res_list: list of resources
+    """
+    # initialize count variables
+    total_res_found = 0
+    res_num = 0
+    res_lost_jsonpedia = 0
+    #control = True
+    calls_to_jsonpedia = 0
+
+    try:
+        # for every resource in res_list
+        for resource in res_list:
+            # res is a var containing the URI of a resource
+            res = resource['res']['value']
+            # extracting name of the resource
+            res_name = res.replace("http://" + dbpedia + "/resource/", "")
+            # encoding the name in utf-8 , useful because a lot of URIs are composed by utf-8
+            res_name = res_name.encode('utf-8')
+            # printing on the log the name of the resource analyzed
+            try:
+                # logging.warning("Total elements found : " + str(total_res_found))
+                # updating resource index
+                res_num += 1
+                res_name_spaced = res_name.replace("_", " ")
+                # logging.warning("Analyzing "+str(res_name_spaced)+". Resource # "+str(res_num)+" of "+str(tot_resources))
+                logging.warning(
+                    "Resource [" + str(res_name_spaced) + "] #" + str(res_num) + " of " + str(tot_res) + \
+                    ". Tot " + struct_name.lower() + " found : " + str(
+                        total_res_found))
+                # composing the url to call the jsonpedia service, filtering the wiki page in order to catch only tables or lists
+                call_to_jsonpedia = jsonpedia_call_compose(res_name, jsonpedia_call_format)
+                control = True
+                # call to api
+                while control:
+                    json_answer = json_call(call_to_jsonpedia)
+                    # keeping trace of the number of jsonpedia calls
+                    calls_to_jsonpedia += 1
+                    if type(json_answer) != basestring:
+                        # call to function used to count the number of tables(2) or list(3) in a wiki page
+                        if 'message' in json_answer.keys():
+                            message = json_answer['message']
+                            if message == u'Invalid page metadata.':
+                                logging.warning("Lost: " + res_name + " due to Invalid page metadata exception ")
+                                control = False
+                                res_lost_jsonpedia += 1
+                            elif message == u'Expected DocumentElement found ParameterElement':
+                                logging.warning(
+                                    "Lost: " + res_name + " due to Expected DocumentElement, found ParameterElement exception ")
+                                control = False
+                                res_lost_jsonpedia += 1
+                            elif message == u'Expected DocumentElement found ListItem':
+                                logging.warning(
+                                    "Lost: " + res_name + " due to Expected DocumentElement found ListItem exception ")
+                                control = False
+                                res_lost_jsonpedia += 1
+                            elif message == u'Expected DocumentElement found TableCell':
+                                logging.warning(
+                                    "Lost: " + res_name + " due to Expected DocumentElement found TableCell exception ")
+                                control = False
+                                res_lost_jsonpedia += 1
+                            elif len(json_answer) == 3:
+                                print "Problems related to JSONpedia service :" + str(json_answer) + " - RETRYING"
+                        else:
+                            # set control to false in order to exit the cycle of calls
+                            control = False
+                    else:
+                        pass
+            except:
+                print "Lost: " + res_name
+                logging.exception("Exception REPORT: ")
+    except:
+        print "Exception during cycle"
+
+
+    logging.warning("Resources lost due to JSONPedia related problems:" + str(res_lost_jsonpedia))
+    logging.warning(scope + " - Total number of " + struct_name + ":   " + str(tot_res))
+    logging.warning(scope + " - Total calls to JSONpedia services :" + str(calls_to_jsonpedia))
+
+def main() :
+    parser = argparse.ArgumentParser(description='Statistics related to tables and lists in Wikipedia pages')
+    parser.add_argument('language', help="Two letter long prefix representing Wikipedia language and SPARQL endpoint to query. Example : en, it")
+    parser.add_argument('struct_type', help="Specify whether to analyze statistics about tables (t) or lists (l)", choices=['t', 'l'] )
+    parser.add_argument('where_clause', help="Where clause specifying desired topic. Example: \"?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s \
+                                <http://dbpedia.org/ontology/wikiPageID> ?f)\"")
+    args = parser.parse_args()
+
+    global language
+    global struct_name
+    global jsonpedia_call_format
+    if args.struct_type == "l":
+        struct_name = "LISTS"
+        # This string is used to request the application of filters in JSONpedia service, for more info visit jsonpedia.org
+        jsonpedia_call_format = "?filter=@type:list&procs=Extractors,Structure"
+    elif args.struct_type == "t":
+        struct_name = "TABLES"
+        jsonpedia_call_format = "?filter=@type:table&procs=Extractors,Structure"
+    try:
+        len(args.language) == 2
+        language = args.language
+    except:
+        print("The first argument should be a language code, as en or it")
+        sys.exit(0)
+
+    global where_clause
+    global scope
+    tw = set_where_topic(args.where_clause)
+    where_clause = tw[0]
+    topic =tw[1]
+
+    # topic is used to compose log's name - will be something like TABLES WIKI PAGES SoccerPlayers - EN (<current date>)
+    scope = struct_name + " WIKI PAGES" + topic + " - " + str(language).upper()
+
+    #specify version of DBpedia used
+    global dbpedia
+    dbpedia = "dbpedia.org"
+    if args.language != "en":
+        dbpedia = language + ".dbpedia.org"
+    # setting the BaseUrl to the DBpedia SPARQL Endpoint
+    global dbpedia_sparql
+    dbpedia_sparql = "http://" + dbpedia + "/sparql?default-graph-uri=&query="
+
+    log_file_name = init_log()
+    tot_resources = res_count()
+    res_list = find_res_list(tot_resources)
+
+    if res_list :
+        analyze_stats(tot_resources, res_list)
+        print("Statistics stored in "+ log_file_name)
+    else:
+        print ("Exception during the retrieval of resource list - no resources found")
+
+
+if __name__ == "__main__":
+    main()
