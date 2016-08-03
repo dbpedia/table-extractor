@@ -2,8 +2,6 @@ import sys
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
 
-
-
 class ParamTester:
     """
     ParamTester is a class used to test and set some main variables, usually received as main script arguments.
@@ -103,25 +101,30 @@ class ParamTester:
         :return:
         """
         if self.where == "soccer":
-            self.topic = "Soccer Players"
+            self.topic = "soccer Players"
             self.where_clause = "?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
         elif self.where == "act":
-            self.topic = "Actors"
+            self.topic = "actors"
             self.where_clause = "?s a <http://dbpedia.org/ontology/Actor>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
         elif self.where == "dir":
             self.where_clause = "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>. \
              ?film <http://dbpedia.org/ontology/director> ?s . ?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-            self.topic = "Directors"
+            self.topic = "directors"
         elif self.where == "writer":
             self.where_clause = "?s a <http://dbpedia.org/ontology/Writer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-            self.topic = "Writers"
+            self.topic = "writers"
         elif self.where == "all":
             self.where_clause = "?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-            self.topic = "All_pages"
+            self.topic = "all_pages"
+        elif self.where == 'elections':
+            self.where_clause = "?s <http://it.dbpedia.org/property/wikiPageUsesTemplate> \
+            <http://it.dbpedia.org/resource/Template:Elezioni_negli_Stati_Uniti_d'America> . \
+            ?s <http://dbpedia.org/ontology/wikiPageID> ?f"
+            self.topic = "elections"
         else:
             # TODO set a way to accept where clauses with different results than ?s
             self.where_clause = self.where
-            self.topic = "Custom Selection"
+            self.topic = "custom_selection"
         return
 
     def get_lang(self):

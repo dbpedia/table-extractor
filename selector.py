@@ -2,6 +2,8 @@ import urllib
 import json
 import datetime
 import time
+import os.path
+import logging
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
@@ -30,6 +32,7 @@ class Selector:
         self.topic = topic
         self.last_res_list = None
         self.struct_name = "TABLES"
+
         self.jsonpedia_call_format = "?filter=@type:table&procs=Extractors,Structure"
         self.call_format_sparql = "&format=application%2Fsparql-results%2Bjson&debug=on"
         self.jsonpedia_base_url = "http://jsonpedia.org/annotate/resource/json/"
@@ -37,17 +40,22 @@ class Selector:
         self.dbpedia = None
         self.dbpedia_sparql_url = self.dbpedia_selection()
         self.query_num_res = "select (count(distinct ?s) as ?res_num) where{" + self.where_clause + "}"
+        logging.info("The query used to retrieve the exact number of resources involved is: " + str(self.query_num_res))
         self.query_res_list = "SELECT distinct ?s as ?res WHERE{" + self.where_clause + "} LIMIT 1000 OFFSET "
+        logging.info("To find out the actual resources, this SPARQL query is used: " + str(self.query_res_list))
+        logging.info("Remember that the OFFSET value is increased by 1000 in a cycle till the total number of resources \
+         is reached.")
 
         self.total_res_found = 0
         self.offset = 0
         self.res_num = 0
         self.tot_res_interested()
+
         self.res_list_filename = topic+"_"+datetime.datetime.fromtimestamp(time.time()).strftime('%Y_%m_%d')+".txt"
-        self.list = open(self.res_list_filename,'a')
-        # tests
-        # TODO erase this part once tested
-        print str(self.query_num_res)
+        # if os.path.isfile(self.res_list_filename):
+        self.list = open(self.res_list_filename, 'w')
+        logging.info("The file which contains the list of resources is: " + self.res_list_filename)
+
         self.written = 0
 
     def dbpedia_selection(self):
@@ -88,6 +96,7 @@ class Selector:
             json_parsed = json.loads(answer)
             return json_parsed
         except:
+            logging.exception("json answer not well formed for resource: " + str(url_passed))
             print "Exception with url:"+str(url_passed)
 
     def tot_res_interested(self):
@@ -103,6 +112,7 @@ class Selector:
             tot_res = self.json_answer_getter(url_composed)['results']['bindings'][0]['res_num']['value']
             self.total_res_found = int(tot_res)
         except:
+            logging.exception("Unable to find the total number of resource involved..")
             print("total resource not found")
 
     def dbpedia_res_list(self, offset):
@@ -117,9 +127,10 @@ class Selector:
             res_list = self.json_answer_getter(url_res_list)['results']['bindings']
             return res_list
         except:
+            logging.info("Lost resources with this offset range: " + str(offset) + " / " + str(offset+1000))
             print ("ERROR RETRIEVING RESOURCES FROM "+str(offset)+" TO "+str(offset+1000))
 
-    def resources_collect(self):
+    def collect_resources(self):
         """
         It is  intended to iterate 1000 resources at once
         :return:
@@ -135,11 +146,14 @@ class Selector:
                         self.written += 1
 
                     except:
+                        logging.exception("Something went wrong writing down this resource: " + str(res))
                         print("exception for: "+str(res))
                 self.__update_offset()
 
             except:
-                print "none"
+                print "exception during the iteration of collection of resources"
+        self.list.close()
+        logging.info("Written down resources:  " + str(self.written))
 
     def get_lang(self):
         """

@@ -124,6 +124,7 @@ def dbpedia_res_list(url):
     list_res = list_res['results']['bindings']
     return list_res
 
+
 def init_log() :
     """
     Initializes and creates log file containing statistics
@@ -257,6 +258,7 @@ def analyze_stats(tot_res, res_list) :
     logging.warning("Resources lost due to JSONPedia related problems:" + str(res_lost_jsonpedia))
     logging.warning(scope + " - Total number of " + struct_name + ":   " + str(tot_res))
     logging.warning(scope + " - Total calls to JSONpedia services :" + str(calls_to_jsonpedia))
+
 
 def main() :
     parser = argparse.ArgumentParser(description='Statistics related to tables and lists in Wikipedia pages')
