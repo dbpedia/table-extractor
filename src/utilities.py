@@ -5,6 +5,7 @@ import datetime
 import lxml.html
 import lxml.etree as etree
 import os
+import errno
 
 
 __author__='papalinis - Simone Papalini - papalini.simone.an@gmail.com'
@@ -29,6 +30,29 @@ class Utilities:
         self.res_lost_jsonpedia = 0
 
         self.parser = etree.HTMLParser(encoding='utf-8')
+
+        self.test_dir_existance('../Extractions')
+
+    def test_dir_existance(self, directory):
+        current_dir = self.get_current_dir()
+        dir_abs_path = self.join_paths(current_dir, directory)
+
+        if not os.path.exists(dir_abs_path):
+            print('Extraction folder doesn\'t exist, creating..')
+            try:
+                os.makedirs(dir_abs_path)
+                print('done')
+            except OSError as exception:
+                if exception.errno != errno.EEXIST:
+                    raise
+
+    def get_current_dir(self):
+        cur_dir = os.path.dirname(os.path.abspath(__file__))
+        return cur_dir
+
+    def join_paths(self, path1, path2):
+        destination = os.path.join(path1, path2)
+        return destination
 
     def dbpedia_selection(self):
         """
@@ -200,11 +224,6 @@ class Utilities:
         date = datetime.datetime.fromtimestamp(timestamp).strftime('%Y_%m_%d-%H_%M')
         return date
 
-    def get_current_dir(self):
-        cur_dir = os.path.dirname(os.path.abspath(__file__))
-        return cur_dir
 
-    def join_paths(self, path1, path2):
 
-        destination = os.path.join(path1, path2)
-        return destination
+
