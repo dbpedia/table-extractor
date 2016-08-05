@@ -6,6 +6,7 @@ import lxml.html
 import lxml.etree as etree
 import os
 import errno
+import logging
 
 
 __author__='papalinis - Simone Papalini - papalini.simone.an@gmail.com'
@@ -38,7 +39,7 @@ class Utilities:
         dir_abs_path = self.join_paths(current_dir, directory)
 
         if not os.path.exists(dir_abs_path):
-            print('Extraction folder doesn\'t exist, creating..')
+            print('Folder doesn\'t exist, creating..')
             try:
                 os.makedirs(dir_abs_path)
                 print('done')
@@ -159,7 +160,7 @@ class Utilities:
                 if type(html_answer) != str:
                     answer_ok = self.test_html_result(html_answer)
             except:
-                print("Error during json_object_getter")
+                print("Error trying to get html object")
         print("Html document well formed..")
         return html_answer
 
@@ -216,9 +217,43 @@ class Utilities:
         else:"""
         return 'JSON object well formed'
 
+    def tot_res_interested(self, query):
+        """
+        Method used to retrieve the total number of resources (wiki pages) interested.
+        It uses url_composer passing by the query to get the number of res.
+        Then it sets tot_res as the response of a call to jsonpedia.
+        Last it sets the local instance of total_res_found.
+       :return nothing
+        """
+        try:
+            url_composed = self.url_composer(query, 'dbpedia')
+            json_answer = self.json_answer_getter(url_composed)
+            tot_res = json_answer['results']['bindings'][0]['res_num']['value']
+            total_res_found = int(tot_res)
+            return total_res_found
+        except:
+            logging.exception("Unable to find the total number of resource involved..")
+            print("total resource not found")
+
+    def dbpedia_res_list(self, query, offset):
+        """
+        This method retrieve a list of 1000 resources.
+
+        :param offset: is the offset served to sparql service in order to get res from "offset" to "offset"+1000
+        :return: res_list is a vector of resources, typically 1000 resources
+        """
+        try:
+            url_res_list = self.url_composer(query + str(offset), 'dbpedia')
+            answer = self.json_answer_getter(url_res_list)
+            res_list = answer['results']['bindings']
+            return res_list
+        except:
+            logging.info("Lost resources with this offset range: " + str(offset) + " / " + str(offset + 1000))
+            print ("ERROR RETRIEVING RESOURCES FROM " + str(offset) + " TO " + str(offset + 1000))
+
     def get_date(self):
         """
-        It returns current YEAR_MONTH_DAY as a string
+        It returns current YEAR_MONTH_DAY_HOUR_MINUTES as a string
         """
         timestamp = time.time()
         date = datetime.datetime.fromtimestamp(timestamp).strftime('%Y_%m_%d-%H_%M')

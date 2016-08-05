@@ -63,6 +63,7 @@ def setup_log(topic, lang, utils):
     # getting time and date
     current_date_time = utils.get_date()
 
+    utils.test_dir_existance('../Extractions')
     current_dir = utils.get_current_dir()
     filename = "TableExtraction_" + topic + "_" + lang + "_(" + current_date_time + ")_" + ".log"
     path_desired = utils.join_paths(current_dir, '../Extractions/'+filename)
