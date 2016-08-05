@@ -1,9 +1,11 @@
-import utilities
-import sys
-import tableParser
-import htmlParser
-import rdflib
 import logging
+import sys
+
+import rdflib
+
+import htmlParser
+import tableParser
+import utilities
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
@@ -108,12 +110,19 @@ class Analyzer:
 
         :return:
         """
+        # serialize the graph if only contains triples
         if len(self.graph) > 0:
-            destination = "Table_Extraction_" + self.mode + "_" + self.chapter + "_" + self.topic + "_" + self.utils.get_date() + ".ttl"
+
+            cur_dir = self.utils.get_current_dir()
+            filename = "Table_Extraction_" + self.mode + '_' + self.chapter + '_' + self.topic + '_' + self.utils.get_date() + ".ttl"
+            destination = self.utils.join_paths(cur_dir, '../Extractions/'+filename)
+
             rdf_format = "turtle"
             self.graph.serialize(destination, rdf_format)
-            logging.info("Graph serialized, filename: " + destination)
-            logging.info("Triples in the graph: " + str(len(self.graph)))
-            print("Graph serialized, filename: " + destination)
+            logging.info('Triples in the graph: ' + str(len(self.graph)))
+            print('Graph serialized, filename: ' + destination)
+            logging.info('Graph serialized, filename: ' + destination)
         else:
-            print("Nothing to serialize")
+            print('Something went wrong: Nothing to serialize')
+            logging.warn('Nothing to serialize, you have to choose right scope or resource, \
+                            or something went wrong scraping tables')

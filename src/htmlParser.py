@@ -1,9 +1,10 @@
-import lxml.html as html
-from lxml.etree import _Element
 import logging
 
-import table
+import lxml.html as html
+from lxml.etree import _Element
+
 import mapper
+import table
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 

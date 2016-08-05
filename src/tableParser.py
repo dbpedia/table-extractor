@@ -1,5 +1,6 @@
-import re
 import logging
+import re
+
 import mapper
 
 # TODO DOCSTRINGS

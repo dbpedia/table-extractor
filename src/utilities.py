@@ -4,6 +4,7 @@ import time
 import datetime
 import lxml.html
 import lxml.etree as etree
+import os
 
 
 __author__='papalinis - Simone Papalini - papalini.simone.an@gmail.com'
@@ -138,8 +139,6 @@ class Utilities:
         print("Html document well formed..")
         return html_answer
 
-
-
     def test_json_result(self, json_obj):
         if 'message' in json_obj.keys():
             # TODO think about the possibility of write down problems encountered
@@ -167,7 +166,7 @@ class Utilities:
             return 'JSON object well formed'
 
     def test_html_result(self, html_doc):
-        '''if 'message' in json_obj.keys():
+        """if 'message' in json_obj.keys():
             # TODO think about the possibility of write down problems encountered
             message = json_obj['message']
             if message == u'Invalid page metadata.':
@@ -190,7 +189,7 @@ class Utilities:
                 print "Problems related to JSONpedia service :" + str(json_obj) + " - RETRYING"
                 return 'try'
 
-        else:'''
+        else:"""
         return 'JSON object well formed'
 
     def get_date(self):
@@ -200,3 +199,12 @@ class Utilities:
         timestamp = time.time()
         date = datetime.datetime.fromtimestamp(timestamp).strftime('%Y_%m_%d-%H_%M')
         return date
+
+    def get_current_dir(self):
+        cur_dir = os.path.dirname(os.path.abspath(__file__))
+        return cur_dir
+
+    def join_paths(self, path1, path2):
+
+        destination = os.path.join(path1, path2)
+        return destination
