@@ -1,8 +1,3 @@
-import utilities
-import logging
-import datetime
-import time
-
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
@@ -18,8 +13,7 @@ class Selector:
         call_format_sparql:
 
     """
-    def __init__(self, lang, query, topic):
-        # TODO USE THE TOPIC ALREADY SET
+    def __init__(self, lang, query, topic, utils):
         """
 
         :param lang:
@@ -29,12 +23,13 @@ class Selector:
         self.lang = lang
         self.where_clause = query
         self.topic = topic
+        self.utils = utils
         self.last_res_list = None
 
-        self.utils = utilities.Utilities(self.lang)
+        self.query_res_list = "SELECT distinct ?s as ?res WHERE{" + str(self.where_clause) + "} LIMIT 1000 OFFSET "
+        self.query_num_res = "select (count(distinct ?s) as ?res_num) where{" + str(self.where_clause) + "}"
 
-        self.query_res_list = "SELECT distinct ?s as ?res WHERE{" + self.where_clause + "} LIMIT 1000 OFFSET "
-        self.query_num_res = "select (count(distinct ?s) as ?res_num) where{" + self.where_clause + "}"
+        self.current_res_list = []
 
         self.total_res_found = 0
         self.offset = 0
@@ -45,7 +40,7 @@ class Selector:
 
         # if os.path.isfile(self.res_list_filename):
         self.list = open(self.res_list_filename, 'w')
-        logging.info("The file which contains the list of resources is: " + self.res_list_filename)
+        self.utils.logging.info("The file which contains the list of resources is: " + self.res_list_filename)
 
         self.written = 0
 
@@ -63,8 +58,8 @@ class Selector:
         """
         while self.offset <= self.total_res_found:
             try:
-                self.last_res_list = self.utils.dbpedia_res_list(self.query_res_list, self.offset)
-                for res in self.last_res_list:
+                self.current_res_list = self.utils.dbpedia_res_list(self.query_res_list, self.offset)
+                for res in self.current_res_list:
                     try:
                         res_name = res['res']['value'].replace("http://" + self.utils.dbpedia + "/resource/", "")
                         res_name = res_name.encode('utf-8')
@@ -72,16 +67,14 @@ class Selector:
                         self.written += 1
 
                     except:
-                        logging.exception("Something went wrong writing down this resource: " + str(res))
+                        self.utils.logging.exception("Something went wrong writing down this resource: " + str(res))
                         print("exception for: "+str(res))
                 self.__update_offset()
 
             except:
                 print "exception during the iteration of collection of resources"
         self.list.close()
-        logging.info("Written down resources:  " + str(self.written))
-
-
+        self.utils.logging.info("Written down resources:  " + str(self.written))
 
     def get_lang(self):
         """

@@ -1,4 +1,8 @@
 import sys
+import argparse
+
+import settings
+
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
 
@@ -10,122 +14,93 @@ class ParamTester:
     Therefore it tests, and set, each parameter.
     Two functions are used to retrieve the values of parameters from an outer scope
     """
-    def __init__(self, argv):
+    def __init__(self):
         """
         Initialization of the tester. It has to set a local variable containing the arguments vector.
-        Then it launches itself __param_test(self,argv) that automatically test the number of parameters passed.
+        Then it launches itself parse_arguments that automatically test the number of parameters passed.
         Two local variables (lang and where) are set testing corresponding arg vector's parameters.
-        :param argv: it is arguments' vector passed to the script, typically is sys.argv
         """
-        self.args = argv
-        self.__param_test(self.args)
-        self.lang = self.__lang_test_and_set(self.args)
-        self.where = self.__where_test_and_set(self.args)
-        self.__topic()
+        self.single_res = None
+        self.topic = None
+        self.where = None
 
-    def __param_test(self, argv):
-        """
-        __param_test(self,argv) is a function used to test if the number of arguments passed to the script is correct.
-        It firstly tests if there are more than 3 arguments. If so it prints out a warning and exits programmatically.
-        Then if there are less than 2 arguments passed, a warning is printed just to remind the user, he usually has to
-        specify 2 parameters (language and where_clause).
-        Usually none has to access this function outside the class itself.
-        Raising a SystemExit exception prevents the script to go further without a clear target.
-        :param argv: arguments'vector
-        :return: nothing
-        """
-        try:
-            if len(argv) > 3:
-                print("WARNING -- wrong number of parameters -- it accepts only 2 parameters, usage example:\
-                    it  \"?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f)\"")
-                sys.exit(0)
-            if len(argv) < 3:
-                print("WARNING -- you are using the script with minus than 2 parameters,\
-                        make sure that the first is a language encode (eg. en or it or fr..)\
-                         and that the second one is a where clause \
-                        usage example : it \"?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f)\"")
-        except SystemExit:
-            exit()
-        except:
-            print "Unusual Error"
+        self.args = self.parse_arguments()
 
-    def __lang_test_and_set(self, argv):
-        """
-        __lang_test_and_set(self, argv) is a function used to test the correctness of language parameter and
-        return it to the caller, in order to set a local variable.
-        If problems are found choosing the language, a default value is used.
-        In this case, the function pointed it out to the user printing a WARNING.
-        DEFAULT VALUE "en"
-        :param argv: arguments'vector
-        :return: it returns the parameter, if correct, or the default value "en"
-        """
-        try:
-            lang = argv[1]
-            if len(lang) == 2:
-                return lang
-            else:
-                return "en"
-        except:
-            print("WARNING -- The first argument should be a language code, as en or it, default en")
-            return "en"
+        self.where = self.set_where_clause()
+        self.lang = self.set_chapter()
+        self.mode = self.set_mode()
 
-    def __where_test_and_set(self, argv):
-        """
-            __where_test_and_set(self, argv) is a function used to test the correctness of the where_clause parameter and
-            return it to the caller, in order to set a local variable.
-            If problems are found selecting the correct where_clause to use, a default value is used.
-            In this case, the function pointed it out to the user printing a WARNING.
-            REMEMBER: there are some particular values used to pick up default queries:
-                       "all" to select all wiki pages.
-                       "soccer" for soccer players.
-                       "dir" for film directors.
-                       "writer" for writers.
-                       "act" for actors.
-            DEFAULT VALUE "all"
-            :param argv: arguments'vector
-            :return: it returns the where clause, if correct, or the default value "all".
-        """
-        try:
-            # TODO set useful tests for where clause
-            where = argv[2]
-            return where
-        except:
-            print("WARNING -- The second argument should be a where clause or a std definition , \
-             using \"all\" as default ")
-            return "all"
+    def parse_arguments(self):
 
-    def __topic(self):
-        # TODO Docstring
+        # initialize script parameters
+        parser = argparse.ArgumentParser(description=settings.GENERAL_DESCRIPTION)
+
+        m_e_group = parser.add_mutually_exclusive_group()
+
+        m_e_group.add_argument('-s', '--single', type=lambda s: unicode(s, sys.getfilesystemencoding()),
+                               help=settings.SINGLE_HELP)
+
+        m_e_group.add_argument('-t', '--topic', type=str,
+                               help=settings.TOPIC_HELP,
+                               choices=settings.TOPIC_CHOICES)
+
+        m_e_group.add_argument('-w', '--where', type=lambda s: unicode(s, sys.getfilesystemencoding()),
+                               help=settings.WHERE_HELP)
+
+        parser.add_argument('-c', '--chapter', type=str, default=settings.CHAPTER_DEFAULT,
+                            help=settings.CHAPTER_HELP)
+
+        parser.add_argument('-m', '--mode',
+                            help=settings.MODE_HELP,
+                            type=str, choices=settings.MODE_CHOICES, default=settings.MODE_DEFAULT)
+
+        args = parser.parse_args()
+        return args
+
+    def set_where_clause(self):
+        # TODO check out if it works for 'all'
         """
         This method sets the topic of interest, if possible.
         :return:
         """
-        if self.where == "soccer":
-            self.topic = "soccer Players"
-            self.where_clause = "?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-        elif self.where == "act":
-            self.topic = "actors"
-            self.where_clause = "?s a <http://dbpedia.org/ontology/Actor>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-        elif self.where == "dir":
-            self.where_clause = "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>. \
-             ?film <http://dbpedia.org/ontology/director> ?s . ?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-            self.topic = "directors"
-        elif self.where == "writer":
-            self.where_clause = "?s a <http://dbpedia.org/ontology/Writer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-            self.topic = "writers"
-        elif self.where == "all":
-            self.where_clause = "?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-            self.topic = "all_pages"
-        elif self.where == 'elections':
-            self.where_clause = "?s <http://it.dbpedia.org/property/wikiPageUsesTemplate> \
-            <http://it.dbpedia.org/resource/Template:Elezioni_negli_Stati_Uniti_d'America> . \
-            ?s <http://dbpedia.org/ontology/wikiPageID> ?f"
-            self.topic = "elections"
+        where_clause = ""
+
+        if self.args.topic:
+            for topic in settings.TOPIC_SPARQL:
+                if self.args.topic == topic:
+                    where_clause = settings.TOPIC_SPARQL[topic]
+                    where_clause += settings.wiki_page
+                    self.topic = topic
+
+        elif self.args.single:
+            self.topic = "single_resource"
+            where_clause = "Not a where clause"
+            self.single_res = self.args.single
+
+        elif self.args.where:
+            where_clause = self.args.where
+            self.topic = "custom"
+
         else:
-            # TODO set a way to accept where clauses with different results than ?s
-            self.where_clause = self.where
-            self.topic = "custom_selection"
-        return
+            where_clause = settings.wiki_page
+            self.topic = "all_pages"
+
+        return where_clause
+
+    def set_mode(self):
+        if self.args.mode:
+            for mode in settings.MODE:
+                if mode == self.args.mode:
+                    return settings.MODE[mode]
+        else:
+            return settings.MODE_DEFAULT
+
+    def set_chapter(self):
+        if self.args.chapter:
+            if len(self.args.chapter) < 3:
+                return self.args.chapter
+            else:
+                return settings.CHAPTER_DEFAULT
 
     def get_lang(self):
         """
@@ -141,7 +116,7 @@ class ParamTester:
             Typically is used from outer scope.
             :return: where that is the where_clause used to target a special subset of Wiki pages.
         """
-        return self.where_clause
+        return self.where
 
     def get_topic(self):
         """

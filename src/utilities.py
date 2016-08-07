@@ -7,6 +7,7 @@ import lxml.etree as etree
 import os
 import errno
 import logging
+import settings
 
 
 __author__='papalinis - Simone Papalini - papalini.simone.an@gmail.com'
@@ -17,15 +18,21 @@ class Utilities:
     """
 
     """
-    def __init__(self, lang):
+    def __init__(self, lang, topic):
         self.lang = lang
-        self.jsonpedia_call_format = "?&procs=Extractors,Structure"
-        self.jsonpedia_section_format = "?filter=@type:section&procs=Extractors,Structure"
-        self.jsonpedia_tables_format = "?filter=@type:table&procs=Extractors,Structure"
-        self.call_format_sparql = "&format=application%2Fsparql-results%2Bjson&debug=on"
-        self.jsonpedia_base_url = "http://jsonpedia.org/annotate/resource/json/"
+        self.topic = topic
+
+        self.setup_log()
+
+        self.jsonpedia_call_format = settings.jsonpedia_call_format
+        self.jsonpedia_section_format = settings.jsonpedia_section_format
+        self.jsonpedia_tables_format = settings.jsonpedia_tables_format
+        self.call_format_sparql = settings.call_format_sparql
+
+        self.jsonpedia_base_url = settings.jsonpedia_base_url
         self.jsonpedia_lan = lang + ":"
         self.dbpedia = None
+
         self.dbpedia_sparql_url = self.dbpedia_selection()
         self.html_format = "https://" + lang + ".wikipedia.org/wiki/"
         self.res_lost_jsonpedia = 0
@@ -33,6 +40,26 @@ class Utilities:
         self.parser = etree.HTMLParser(encoding='utf-8')
 
         self.test_dir_existance('../Extractions')
+
+        self.logging = logging
+
+    def setup_log(self):
+        """
+        Initializes and creates log file containing info and statistics
+        """
+        # getting time and date
+        current_date_time = self.get_date()
+
+        self.test_dir_existance('../Extractions')
+        current_dir = self.get_current_dir()
+        filename = "TableExtraction_" + self.topic + "_" + self.lang + "_(" + current_date_time + ")_" + ".log"
+        path_desired = self.join_paths(current_dir, '../Extractions/' + filename)
+
+        logging.basicConfig(filename=path_desired, filemode='w', level=logging.DEBUG,
+                            format='%(levelname)-3s %(asctime)-4s %(message)s', datefmt='%m/%d %I:%M:%S %p')
+
+        # brief stat at the beginning of log, it indicates the scope of data and wiki/dbpedia chapter
+        logging.info("You're analyzing wiki tables, wiki chapter: " + self.lang + ", topic: " + self.topic)
 
     def test_dir_existance(self, directory):
         current_dir = self.get_current_dir()
@@ -191,6 +218,7 @@ class Utilities:
             return 'JSON object well formed'
 
     def test_html_result(self, html_doc):
+        # TODO implement a test on html_object
         """if 'message' in json_obj.keys():
             # TODO think about the possibility of write down problems encountered
             message = json_obj['message']
@@ -239,6 +267,7 @@ class Utilities:
         """
         This method retrieve a list of 1000 resources.
 
+        :param query:
         :param offset: is the offset served to sparql service in order to get res from "offset" to "offset"+1000
         :return: res_list is a vector of resources, typically 1000 resources
         """
@@ -251,7 +280,7 @@ class Utilities:
             logging.info("Lost resources with this offset range: " + str(offset) + " / " + str(offset + 1000))
             print ("ERROR RETRIEVING RESOURCES FROM " + str(offset) + " TO " + str(offset + 1000))
 
-    def get_date(self):
+    def get_date_time(self):
         """
         It returns current YEAR_MONTH_DAY_HOUR_MINUTES as a string
         """
@@ -259,6 +288,10 @@ class Utilities:
         date = datetime.datetime.fromtimestamp(timestamp).strftime('%Y_%m_%d-%H_%M')
         return date
 
-
-
-
+    def get_date(self):
+        """
+        It returns current YEAR_MONTH_DAY as a string
+        """
+        timestamp = time.time()
+        date = datetime.datetime.fromtimestamp(timestamp).strftime('%Y_%m_%d')
+        return date

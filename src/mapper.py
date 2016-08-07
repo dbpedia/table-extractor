@@ -1,6 +1,7 @@
 import rdflib
 import re
 
+import mapping_rules
 
 class Mapper:
     """
@@ -34,7 +35,22 @@ class Mapper:
         self.dbp = rdflib.Namespace("http://dbpedia.org/property/")
 
     def map(self):
-        if self.topic:
+        if self.topic == 'single_resource':
+            rules = mapping_rules.MAPPING_TOPICS[self.language]
+            for topic in rules:
+
+                print "Mapping: " + str(self.table_data) + " under section: " + str(self.table_section) + \
+                      " , coming from resource: " + str(self.resource) + " of topic: " + str(topic)
+                reification_index = 0
+                for single_row in self.table_data:
+                    self.reification_index += 1
+                    # choose the right mapping for this kind of data, based upon language and topic parameters
+                    try:
+                        eval("self." + self.language + "_" + topic + "(single_row, self.reification_index)")
+                    except:
+                        print("Exception during mapping of: " + self.resource + "with this mapping rules: "+topic)
+
+        elif self.topic:
             print "Mapping: " + str(self.table_data) + " under section: " + str(self.table_section) + \
                   " , coming from resource: " + str(self.resource) + " of topic: " + str(self.topic)
             reification_index = 0

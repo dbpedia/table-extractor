@@ -1,11 +1,9 @@
-import logging
 import sys
 
 import rdflib
 
 import htmlParser
 import tableParser
-import utilities
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
@@ -16,24 +14,29 @@ class Analyzer:
 
     """
 
-    def __init__(self, chapter, topic, filename=None, mode="html"):
+    def __init__(self, chapter, topic, utils, mode="html", filename=None, single_res=None):
         self.chapter = chapter
         self.topic = topic
+        self.utils = utils
         self.filename = filename
         self.mode = mode
-        logging.info(self.mode + " mode activated.. ")
+        self.utils.logging.info(self.mode + " mode activated.. ")
         self.analyzed = 0
+        self.current_resource = None
         # composing a list of resources from the file (filename) passed
-        self.open_stream()
         if self.filename:
-            self.res_list = self.open_file()
-            # instancing a iterator
-            try:
-                self.res_iterator = iter(self.res_list)
-            except TypeError:
-                print "Check the file's existence "
-                sys.exit(0)
-        self.utils = utilities.Utilities(self.chapter)
+                self.open_stream()
+                self.res_list = self.open_file()
+                # instancing a iterator
+                try:
+                    self.res_iterator = iter(self.res_list)
+                except TypeError:
+                    print "Check the file's existence "
+                    sys.exit(0)
+        else:
+            self.res_iterator = iter([single_res])
+
+
         self.lines_to_read = True
         self.last_json_object = None
 
@@ -76,9 +79,10 @@ class Analyzer:
             try:
                 resource = self.res_iterator.next()
                 resource = resource.replace("\n", "")
-                logging.info("Analyzing " + str(resource))
+                self.utils.logging.info("Analyzing " + str(resource))
                 print("Analyzing " + str(resource))
                 if resource:
+                    self.current_resource = resource
                     if self.mode == "json":
 
                         json_object = self.utils.json_object_getter(resource, 'jsonpedia_sections')
@@ -94,7 +98,7 @@ class Analyzer:
                         print("mode")
             except StopIteration:
                 self.lines_to_read = False
-                logging.info("End Of File reached, now the graph should be serialized")
+                self.utils.logging.info("End Of File reached, now the graph should be serialized")
                 print (" End Of File reached")
 
     def get_filename(self):
@@ -114,15 +118,17 @@ class Analyzer:
         if len(self.graph) > 0:
 
             cur_dir = self.utils.get_current_dir()
+            if self.topic == 'single_resource':
+                self.topic += "_" + str(self.current_resource)
             filename = "Table_Extraction_" + self.mode + '_' + self.chapter + '_' + self.topic + '_' + self.utils.get_date() + ".ttl"
             destination = self.utils.join_paths(cur_dir, '../Extractions/'+filename)
 
             rdf_format = "turtle"
             self.graph.serialize(destination, rdf_format)
-            logging.info('Triples in the graph: ' + str(len(self.graph)))
+            self.utils.logging.info('Triples in the graph: ' + str(len(self.graph)))
             print('Graph serialized, filename: ' + destination)
-            logging.info('Graph serialized, filename: ' + destination)
+            self.utils.logging.info('Graph serialized, filename: ' + destination)
         else:
             print('Something went wrong: Nothing to serialize')
-            logging.warn('Nothing to serialize, you have to choose right scope or resource, \
+            self.utils.logging.warn('Nothing to serialize, you have to choose right scope or resource, \
                             or something went wrong scraping tables')
