@@ -20,13 +20,13 @@ The script requires 3 arguments representing:
 
 
 
-
 def set_where_topic(where_clause) :
     """
     Returns where clause of the query and topic name which will be used for the log file.
     It also associates some shortcuts with actual queries
     :param where_clause:
-    :return:
+    :return: a couple of string values corresdponding to the where clause to be used in the query
+    and the topic or domain to be analyzed
     """
     topic = ''
     # temporary shortcuts for particular searches
@@ -85,7 +85,6 @@ def jsonpedia_call_compose(res, jsonpedia_suffix) :
     """
     Constructs a URL to query JSONpedia web service
     :param res: resource corresponding to the Wikipedia page to be analyzed
-    :param lang: lanaguage prefix
     :param jsonpedia_suffix: contains the last part of the request which varies for lists or tables
     :return: complete URL
     """
@@ -99,8 +98,8 @@ def dbpedia_tot_res(url):
     :param url: already composed url, ready to be called
     :return: number of total resources
     """
-    # obtaining the answer from the web service
     try:
+        # obtaining the answer from the web service
         tot_res = json_call(url)
         # finding usable results
         tot_res = tot_res['results']['bindings'][0]['res_num']['value']
@@ -142,6 +141,10 @@ def init_log() :
     return file_name
 
 def res_count() :
+    '''
+    Performs a SPARQL query on the given endpoint to retrieve the number of resources from the given type
+    :return: total number of resources
+    '''
     # string containing the query in SPARQL language used to enumerate  type's searched resources
     query_num_res = "SELECT (count(distinct ?s) as ?res_num) where{" + where_clause + "}"
     # composing the request to get the total number of data scope considered
@@ -154,6 +157,12 @@ def res_count() :
 
 
 def find_res_list(tot_res) :
+    """
+    Since the maximum number of results is 1000, it performs (N mod 1000) SPARQL queries to the endpoint
+    and constructs a list of resource names.
+    :param tot_res: number of resources
+    :return: complete list of resources
+    """
     offset = 0
     tot_list = []
     # string which contains the query to get the list of resources you want to analyze
@@ -171,7 +180,6 @@ def find_res_list(tot_res) :
                 tot_list.append(l)
         except:
             logging.exception("Exception: Lost resources from  " + str(offset) + " to " + str(offset + 1000) + ", REPORT: ")
-
         # updating the offset in order to cycle with new resources
         offset += 1000
     return tot_list
@@ -184,12 +192,10 @@ def analyze_stats(tot_res, res_list) :
     :param res_list: list of resources
     """
     # initialize count variables
-    total_res_found = 0
-    res_num = 0
-    res_lost_jsonpedia = 0
-    #control = True
-    calls_to_jsonpedia = 0
-
+    total_res_found = 0 #number of list or tables found until now
+    res_num = 0 #resource index
+    res_lost_jsonpedia = 0 #number of resrources lost due to JSONpedia
+    calls_to_jsonpedia = 0 #
     try:
         # for every resource in res_list
         for resource in res_list:
@@ -201,25 +207,16 @@ def analyze_stats(tot_res, res_list) :
             res_name = res_name.encode('utf-8')
             # printing on the log the name of the resource analyzed
             try:
-                # logging.warning("Total elements found : " + str(total_res_found))
-                # updating resource index
-                res_num += 1
+                res_num += 1 # updating resource index
                 res_name_spaced = res_name.replace("_", " ")
-                # logging.warning("Analyzing "+str(res_name_spaced)+". Resource # "+str(res_num)+" of "+str(tot_resources))
-                logging.warning(
-                    "Resource [" + str(res_name_spaced) + "] #" + str(res_num) + " of " + str(tot_res) + \
-                    ". Tot " + struct_name.lower() + " found : " + str(
-                        total_res_found))
                 # composing the url to call the jsonpedia service, filtering the wiki page in order to catch only tables or lists
                 call_to_jsonpedia = jsonpedia_call_compose(res_name, jsonpedia_call_format)
-                control = True
-                # call to api
+                control = True #flag used to repeat JSONpedia calls
                 while control:
                     json_answer = json_call(call_to_jsonpedia)
                     # keeping trace of the number of jsonpedia calls
                     calls_to_jsonpedia += 1
                     if type(json_answer) != basestring:
-                        # call to function used to count the number of tables(2) or list(3) in a wiki page
                         if 'message' in json_answer.keys():
                             message = json_answer['message']
                             if message == u'Invalid page metadata.':
@@ -228,17 +225,17 @@ def analyze_stats(tot_res, res_list) :
                                 res_lost_jsonpedia += 1
                             elif message == u'Expected DocumentElement found ParameterElement':
                                 logging.warning(
-                                    "Lost: " + res_name + " due to Expected DocumentElement, found ParameterElement exception ")
+                                    "Lost: " + res_name + " due to \'Expected DocumentElement, found ParameterElement\' exception ")
                                 control = False
                                 res_lost_jsonpedia += 1
                             elif message == u'Expected DocumentElement found ListItem':
                                 logging.warning(
-                                    "Lost: " + res_name + " due to Expected DocumentElement found ListItem exception ")
+                                    "Lost: " + res_name + " due to \'Expected DocumentElement found ListItem\' exception ")
                                 control = False
                                 res_lost_jsonpedia += 1
                             elif message == u'Expected DocumentElement found TableCell':
                                 logging.warning(
-                                    "Lost: " + res_name + " due to Expected DocumentElement found TableCell exception ")
+                                    "Lost: " + res_name + " due to \'Expected DocumentElement found TableCell\' exception ")
                                 control = False
                                 res_lost_jsonpedia += 1
                             elif len(json_answer) == 3:
@@ -246,17 +243,18 @@ def analyze_stats(tot_res, res_list) :
                         else:
                             # set control to false in order to exit the cycle of calls
                             control = False
-                    else:
-                        pass
+                            total_res_found += len(json_answer['result'])
+                            logging.warning("Resource [" + str(res_name_spaced) + "] #" + str(res_num) + \
+                                " of " + str(tot_res) + \
+                                ". Tot " + struct_name.lower() + " found : " + str(total_res_found))
             except:
                 print "Lost: " + res_name
                 logging.exception("Exception REPORT: ")
     except:
         print "Exception during cycle"
 
-
     logging.warning("Resources lost due to JSONPedia related problems:" + str(res_lost_jsonpedia))
-    logging.warning(scope + " - Total number of " + struct_name + ":   " + str(tot_res))
+    logging.warning(scope + " - Total number of " + struct_name + ": " + str(total_res_found))
     logging.warning(scope + " - Total calls to JSONpedia services :" + str(calls_to_jsonpedia))
 
 
@@ -291,7 +289,7 @@ def main() :
     where_clause = tw[0]
     topic =tw[1]
 
-    # topic is used to compose log's name - will be something like TABLES WIKI PAGES SoccerPlayers - EN (<current date>)
+    # topic is used to compose log's name - e.g. TABLES WIKI PAGES SoccerPlayers - EN (<current date>)
     scope = struct_name + " WIKI PAGES" + topic + " - " + str(language).upper()
 
     #specify version of DBpedia used
