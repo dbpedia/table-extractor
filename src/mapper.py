@@ -35,10 +35,9 @@ class Mapper:
         self.dbp = rdflib.Namespace("http://dbpedia.org/property/")
 
     def map(self):
-        if self.topic == 'single_resource':
+        if self.topic == 'single_resource' or self.topic == 'custom':
             rules = mapping_rules.MAPPING_TOPICS[self.language]
             for topic in rules:
-
                 print "Mapping: " + str(self.table_data) + " under section: " + str(self.table_section) + \
                       " , coming from resource: " + str(self.resource) + " of topic: " + str(topic)
                 reification_index = 0

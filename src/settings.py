@@ -9,7 +9,7 @@ SINGLE_HELP = "Use -s | --single to specify a single Wikipedia resource to parse
                                     Eg: -s Andrea_Pirlo"
 
 # Topic you can choose from as -t parameter choice. Eg: -t actors
-TOPIC_CHOICES = ['all', 'soccer', 'actors', 'directors', 'writers', 'elections']
+TOPIC_CHOICES = ['all', 'soccer', 'actors', 'directors', 'writers', 'elections', 'elections_USA']
 TOPIC_DEFAULT = 'all'
 TOPIC_HELP = "Use -t | --topic to specify a set of wiki pages to work with. "
 
@@ -46,7 +46,9 @@ CHAPTER_HELP = "Language of Wikipedia pages/resources to analyze. \n \
 TOPIC_SPARQL = {
                 'soccer': "?s a <http://dbpedia.org/ontology/SoccerPlayer>",
 
-                'elections': "?s <http://it.dbpedia.org/property/wikiPageUsesTemplate> \
+                'elections': "?s a <http://dbpedia.org/ontology/Election>",
+
+                'elections_USA': "?s <http://it.dbpedia.org/property/wikiPageUsesTemplate> \
                              <http://it.dbpedia.org/resource/Template:Elezioni_negli_Stati_Uniti_d'America>",
 
                 'actors': "?s a <http://dbpedia.org/ontology/Actor>",
@@ -55,6 +57,7 @@ TOPIC_SPARQL = {
                              ?film <http://dbpedia.org/ontology/director> ?s",
 
                 'writers': "?s a <http://dbpedia.org/ontology/Writer>"
+
                 }
 
 #

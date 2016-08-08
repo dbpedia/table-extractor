@@ -48,11 +48,11 @@ class Utilities:
         Initializes and creates log file containing info and statistics
         """
         # getting time and date
-        current_date_time = self.get_date()
+        current_date_time = self.get_date_time()
 
         self.test_dir_existance('../Extractions')
         current_dir = self.get_current_dir()
-        filename = "TableExtraction_" + self.topic + "_" + self.lang + "_(" + current_date_time + ")_" + ".log"
+        filename = "TableExtraction_" + self.topic + "_" + self.lang + "_(" + current_date_time + ")" + ".log"
         path_desired = self.join_paths(current_dir, '../Extractions/' + filename)
 
         logging.basicConfig(filename=path_desired, filemode='w', level=logging.DEBUG,

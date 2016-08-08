@@ -120,7 +120,7 @@ class Analyzer:
             cur_dir = self.utils.get_current_dir()
             if self.topic == 'single_resource':
                 self.topic += "_" + str(self.current_resource)
-            filename = "Table_Extraction_" + self.mode + '_' + self.chapter + '_' + self.topic + '_' + self.utils.get_date() + ".ttl"
+            filename = "Table_Extraction_" + self.mode + '_' + self.chapter + '_' + self.topic + '_' + self.utils.get_date_time() + ".ttl"
             destination = self.utils.join_paths(cur_dir, '../Extractions/'+filename)
 
             rdf_format = "turtle"

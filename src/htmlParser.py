@@ -21,7 +21,7 @@ class HtmlParser:
         self.tables = []
         self.find_wiki_table()
         self.rows_num = 0
-        self.last_html_table = None
+        self.current_html_table = None
 
     def find_wiki_table(self):
         self.tables = self.doc_tree.findall('//table[@class=\'wikitable\']')
@@ -33,14 +33,15 @@ class HtmlParser:
 
     def analyze_tables(self):
         for html_table in self.tables:
-            self.last_html_table = html_table
+            self.current_html_table = html_table
             tab = table.Table()
-            tab.n_rows = self.count_elements(self.last_html_table)
+            tab.n_rows = self.count_elements(self.current_html_table)
             tab.table_attributes = html_table.attrib
             self.find_headers(tab)
             self.check_miss_subheaders(tab)
             if tab.headers:
-                print("Resource : " + self.resource + "Headers Found")
+                print("Resource : " + self.resource + " Headers Found")
+                self.refine_headers(tab)
                 print("These are the headers found: ")
                 for row in tab.headers:
                     for th in row:
@@ -73,7 +74,7 @@ class HtmlParser:
 
     def find_headers(self, tab):
         try:
-            for row in self.last_html_table:
+            for row in self.current_html_table:
                 html_headers = row.findall('th')
                 if html_headers:
                     self.set_header(row, tab)
@@ -114,7 +115,7 @@ class HtmlParser:
                 print("Something wrong setting a new header...")
 
     def set_new_header(self, row_index, tab):
-        row = self.last_html_table.find('tr[' + str(row_index + 1) + ']')
+        row = self.current_html_table.find('tr[' + str(row_index + 1) + ']')
         html = row.findall('td')
         if html:
             headers = self.compose_tab_headers(html)
@@ -122,33 +123,64 @@ class HtmlParser:
                 tab.headers.append(headers)
 
     def remove_row(self, tr_index):
-        row = self.last_html_table.find('tr[' + str(tr_index) + ']')
-        self.last_html_table.remove(row)
+        row = self.current_html_table.find('tr[' + str(tr_index) + ']')
+        self.current_html_table.remove(row)
 
-        print(html.tostring(self.last_html_table, pretty_print=True))
+        print(html.tostring(self.current_html_table, pretty_print=True))
 
     def compose_tab_headers(self, html_headers):
+        # TODO split in multiple simple functions
         headers = []
         for elem in html_headers:
             header_cell = {}
+
+            current_text = ""
+            text_iterator = elem.itertext()
+            for text in text_iterator:
+                # WYSIWYG
+                current_text += text
+            if '\n' in current_text:
+                current_text = current_text.replace("\n", " ")
+
             attributes = elem.attrib
+            if 'rowspan' in attributes:
+                header_cell['rowspan'] = int(attributes['rowspan'])
             if 'colspan' in attributes:
                 header_cell['colspan'] = attributes['colspan']
             else:
                 header_cell['colspan'] = 1
-            if elem.text:
-                header_cell['th'] = elem.text
+            # TODO review this part to carve out anchors
+            if current_text:
+                header_cell['th'] = current_text
             else:
-                anchor = self.find_anchors(elem)
-                if anchor:
-                    # WYSIWYG
-                    header_cell['th'] = anchor[0]['text']
-                else:
-                    header_cell['th'] = 'Header_Not_Resolved'
-                    logging.debug("Header not resolved")
+                header_cell['th'] = 'Header_Not_Resolved'
+                logging.debug("Header not resolved")
             headers.append(header_cell)
         if headers:
             return headers
+
+    def refine_headers(self, tab):
+
+        self.expand_colspan_cells(tab.headers)
+
+        self.resolve_rowspan(tab.headers)
+        print("Headers refined")
+
+    def resolve_rowspan(self, rows):
+        try:
+            for row in rows:
+                row_index = rows.index(row)
+                for cell in row:
+                    cell_index = row.index(cell)
+                    if 'rowspan' in cell and cell['rowspan'] > 1:
+                        cell['rowspan'] -= 1
+                        cell_copy = dict(cell)
+                        cell_copy['th'] = ""
+                        rows[row_index+1].insert(cell_index, cell_copy)
+        except:
+            print("Error resolving rowspan")
+
+
 
     def associate_super_and_sub_headers(self, tab):
         try:
@@ -163,7 +195,10 @@ class HtmlParser:
                     colspan = int(sup['colspan'])
                     for n_of_sub_related in range(0, colspan):
                         sub = sub_headers[0]
-                        composition = {'th': sup['th'] + " - " + sub['th'], 'colspan': sub['colspan']}
+                        if sub['th']:
+                            composition = {'th': sup['th'] + " - " + sub['th'], 'colspan': sub['colspan']}
+                        else:
+                            composition = {'th': sup['th'], 'colspan': sub['colspan']}
                         temp_header.append(composition)
                         sub_headers.remove(sub)
                 headers_copy.insert(0, temp_header)
@@ -179,8 +214,16 @@ class HtmlParser:
         for header in tab.headers_refined:
             header['th'] = header['th'].encode('ascii', 'replace')
 
+    def encode_data(self, tab):
+        for row in tab.data_refined:
+            for key in row.keys():
+                for data in row[key]:
+                    if type(data) == unicode:
+                        data = data.encode('ascii', 'replace')
+
+
     def extract_data(self, tab):
-        for row in self.last_html_table:
+        for row in self.current_html_table:
             table_data = row.findall('td')
             if table_data:
                 data_row = []
@@ -221,17 +264,15 @@ class HtmlParser:
         attributes = cell.attrib
         for attrib in attributes:
             data_cell[attrib] = attributes[attrib]
-        text = cell.text
-        if text:
-            text = text.replace(",", ".")
-            data_cell['td'] = unicode(text)
-        else:
-            b = self.resolve_sub_tag(cell, 'b')
-            if b:
-                data_cell['td'] = unicode(b)
-            span = self.resolve_sub_tag(cell, 'span')
-            if span:
-                data_cell['td'] = span
+        cell_text = ""
+        text_iterator = cell.itertext()
+        for text in text_iterator:
+            # WYSIWYG
+            cell_text += text
+        if type(cell_text) == unicode:
+            if u'\xa0' in cell_text:
+                cell_text = cell_text.replace(u'\xa0', u' ')
+        data_cell['td'] = cell_text
 
         return data_cell
 
@@ -255,9 +296,10 @@ class HtmlParser:
     def refine_data(self, tab):
         print("Refining data ...")
         self.delete_useless_rows(tab)
-        self.expand_colspan_cells(tab)
+        self.expand_colspan_cells(tab.data)
         self.resolve_data_type(tab)
         self.join_data_and_headers(tab)
+        self.encode_data(tab)
         print ("done")
 
     def delete_useless_rows(self, tab):
@@ -267,15 +309,15 @@ class HtmlParser:
                     if 'td' in element and element['td'] == 'Totale':
                         tab.data.remove(row)
 
-    def expand_colspan_cells(self, tab):
-        for row in tab.data:
+    def expand_colspan_cells(self, rows):
+        for row in rows:
             for cell in row:
                 for element in cell:
                     if 'colspan' in element:
-                        colspan = int(element['colspan'])
+                        colspan = int(cell['colspan'])
                         if colspan > 1:
                             cell_index = row.index(cell)
-                            element['colspan'] = 1
+                            cell['colspan'] = 1
                             for index in range(0, colspan - 1):
                                 row.insert(cell_index, cell)
 
@@ -288,11 +330,8 @@ class HtmlParser:
                     data = []
                     if 'a' in element:
                         data = element['a'].replace(' ', '_')
-                        data = unicode(data)
                     elif 'td' in element:
                         data = element['td'].replace(' ', '_')
-                        data = data.encode('utf-8')
-                        # data = data.replace('.', '')
                         number = self.is_float(data)
                         if number:
                             data = float(data)
@@ -331,3 +370,5 @@ class HtmlParser:
                         print ("index: =" + str(index))
                 if temp_row:
                     tab.data_refined.append(temp_row)
+
+
