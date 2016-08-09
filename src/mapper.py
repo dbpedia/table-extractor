@@ -3,12 +3,13 @@ import re
 
 import mapping_rules
 
+
 class Mapper:
     """
 
     """
 
-    def __init__(self, language, graph, topic, resource, table_data, mode, table_section=None):
+    def __init__(self, language, graph, topic, resource, table_data, mode, utils, table_section=None):
 
         self.language = language
         self.graph = graph
@@ -17,7 +18,11 @@ class Mapper:
         self.table_section = table_section
         self.table_data = table_data
         self.mode = mode
+        self.utils = utils
+        if self.topic == 'elections_USA':
+            self.topic = 'elections'
 
+        self.total_cell_mapped = 0
         self.reification_index = 0
 
         self.dbo = None
@@ -50,7 +55,7 @@ class Mapper:
                         print("Exception during mapping of: " + self.resource + "with this mapping rules: "+topic)
 
         elif self.topic:
-            print "Mapping: " + str(self.table_data) + " under section: " + str(self.table_section) + \
+            print "Mapping: " + str(self.table_data) + " under section: " + self.table_section + \
                   " , coming from resource: " + str(self.resource) + " of topic: " + str(self.topic)
             reification_index = 0
             for single_row in self.table_data:
@@ -60,6 +65,9 @@ class Mapper:
                     eval("self." + self.language + "_" + self.topic + "(single_row, self.reification_index)")
                 except:
                     print("Exception during mapping of: " + self.resource)
+
+            self.utils.logging.info("Total cell mapped for this table: " + str(self.total_cell_mapped))
+
 
     def it_elections(self, single_row, reification_index):
         """
@@ -186,6 +194,8 @@ class Mapper:
             # add only those rows with some mapped cells
             self.graph.add((row_subject, row_predicate, row_object))
             self.print_triple(row_subject, row_predicate, row_object)
+            self.total_cell_mapped += self.cell_mapped
+
         else:
             self.reification_index -= 1
 

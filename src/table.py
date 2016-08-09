@@ -7,6 +7,8 @@ class Table:
         self.n_cells = 0
         self.n_headers = 0
 
+        self.table_section = None
+
         self.table_class = []
         self.table_attributes = {}
 

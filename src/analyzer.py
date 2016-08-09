@@ -91,7 +91,7 @@ class Analyzer:
 
                     elif self.mode == "html":
                         html_doc_tree = self.utils.html_object_getter(resource)
-                        htmlParsr = htmlParser.HtmlParser(html_doc_tree, self.chapter, self.graph, self.topic, resource)
+                        htmlParsr = htmlParser.HtmlParser(html_doc_tree, self.chapter, self.graph, self.topic, resource, self.utils)
                         htmlParsr.analyze_tables()
 
                     else:

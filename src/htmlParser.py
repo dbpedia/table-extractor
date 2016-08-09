@@ -10,13 +10,14 @@ __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
 
 class HtmlParser:
-    def __init__(self, html_doc_tree, chapter, graph, topic, resource):
+    def __init__(self, html_doc_tree, chapter, graph, topic, resource, utils):
 
         self.doc_tree = html_doc_tree
         self.chapter = chapter
         self.graph = graph
         self.topic = topic
         self.resource = resource
+        self.utils = utils
 
         self.tables = []
         self.find_wiki_table()
@@ -25,6 +26,9 @@ class HtmlParser:
 
     def find_wiki_table(self):
         self.tables = self.doc_tree.findall('//table[@class=\'wikitable\']')
+        sortable_tables = self.doc_tree.findall('//table[@class=\'wikitable sortable\']')
+        for sort_table in sortable_tables:
+            self.tables.append(sort_table)
         self.print_html(self.tables)
 
     def print_html(self, etree):
@@ -37,8 +41,10 @@ class HtmlParser:
             tab = table.Table()
             tab.n_rows = self.count_elements(self.current_html_table)
             tab.table_attributes = html_table.attrib
+            tab.table_section = self.find_table_section()
+            self.set_class(tab)
             self.find_headers(tab)
-            self.check_miss_subheaders(tab)
+            # self.check_miss_subheaders(tab)
             if tab.headers:
                 print("Resource : " + self.resource + " Headers Found")
                 self.refine_headers(tab)
@@ -52,7 +58,7 @@ class HtmlParser:
                 self.refine_data(tab)
                 if tab.data_refined:
                     map_tool = mapper.Mapper(self.chapter, self.graph, self.topic, self.resource,
-                                             tab.data_refined, 'html')
+                                             tab.data_refined, 'html', self.utils, tab.table_section)
                     map_tool.map()
                 else:
                     logging.debug("e3 - UNABLE TO EXTRACT DATA - resource: " + str(self.resource))
@@ -61,6 +67,26 @@ class HtmlParser:
                 logging.debug(
                     " e2 Unable to find headers - resource: " + str(self.resource))
                 print("e2 UNABLE TO FIND HEADERS")
+
+    def find_table_section(self):
+        section_text = ""
+        siblings = self.current_html_table.itersiblings(preceding=True)
+        for sibling in siblings:
+            if 'h' in sibling.tag:
+                children = sibling.iterchildren()
+                for child in children:
+                    if 'id' in child.attrib:
+                        h_text = child.text
+                        if h_text:
+                            section_text = h_text
+                        else:
+                            iter_text = child.itertext()
+                            for text in iter_text:
+                                section_text += text
+                        section_text = section_text.encode('utf-8')
+                        return section_text
+        return self.resource
+
 
     def count_elements(self, wrapper):
         """
@@ -71,6 +97,10 @@ class HtmlParser:
         for element in wrapper:
             num_of_elems += 1
         return num_of_elems
+
+    def set_class(self, tab):
+        if 'class' in self.current_html_table.attrib:
+            tab.table_class = self.current_html_table.attrib['class']
 
     def find_headers(self, tab):
         try:
@@ -84,8 +114,9 @@ class HtmlParser:
     def set_header(self, row, tab):
         # TODO refactor this function
         html_headers = row.findall('th')
+        html_data = row.findall('td')
         headers = []
-        if html_headers:
+        if html_headers and not html_data:
             headers = self.compose_tab_headers(html_headers)
         if headers:
             tab.headers.append(headers)
@@ -116,9 +147,10 @@ class HtmlParser:
 
     def set_new_header(self, row_index, tab):
         row = self.current_html_table.find('tr[' + str(row_index + 1) + ']')
-        html = row.findall('td')
-        if html:
-            headers = self.compose_tab_headers(html)
+        td_html = row.findall('td')
+        th_html = row.findall('th')
+        if td_html and not th_html:
+            headers = self.compose_tab_headers(td_html)
             if headers:
                 tab.headers.append(headers)
 
@@ -153,7 +185,7 @@ class HtmlParser:
             if current_text:
                 header_cell['th'] = current_text
             else:
-                header_cell['th'] = 'Header_Not_Resolved'
+                header_cell['th'] = ''
                 logging.debug("Header not resolved")
             headers.append(header_cell)
         if headers:
@@ -179,8 +211,6 @@ class HtmlParser:
                         rows[row_index+1].insert(cell_index, cell_copy)
         except:
             print("Error resolving rowspan")
-
-
 
     def associate_super_and_sub_headers(self, tab):
         try:
@@ -221,11 +251,11 @@ class HtmlParser:
                     if type(data) == unicode:
                         data = data.encode('ascii', 'replace')
 
-
     def extract_data(self, tab):
         for row in self.current_html_table:
             table_data = row.findall('td')
             if table_data:
+                table_data = row.iterchildren()
                 data_row = []
                 for cell in table_data:
                     data_cell = []
@@ -272,7 +302,8 @@ class HtmlParser:
         if type(cell_text) == unicode:
             if u'\xa0' in cell_text:
                 cell_text = cell_text.replace(u'\xa0', u' ')
-        data_cell['td'] = cell_text
+        if cell_text:
+            data_cell['td'] = cell_text
 
         return data_cell
 
@@ -310,16 +341,28 @@ class HtmlParser:
                         tab.data.remove(row)
 
     def expand_colspan_cells(self, rows):
-        for row in rows:
-            for cell in row:
-                for element in cell:
-                    if 'colspan' in element:
-                        colspan = int(cell['colspan'])
-                        if colspan > 1:
-                            cell_index = row.index(cell)
-                            cell['colspan'] = 1
-                            for index in range(0, colspan - 1):
-                                row.insert(cell_index, cell)
+        try:
+            for row in rows:
+                for cell in row:
+                    for element in cell:
+                        colspan = 0
+                        if 'colspan' in element:
+                            if type(element) == str:
+                                colspan = int(cell['colspan'])
+                            elif type(element) == dict:
+                                colspan = int(element['colspan'])
+                            if colspan > 1:
+                                cell_index = row.index(cell)
+                                if type(element) == str:
+                                    cell['colspan'] = 1
+                                elif type(element) == dict:
+                                    element['colspan'] = 1
+                                for index in range(0, colspan - 1):
+                                    row.insert(cell_index, cell)
+        except TypeError:
+            print("TypeError trying to expand colspan cells")
+        except ValueError:
+            print("ValueError trying to expand colspan cells")
 
     def resolve_data_type(self, tab):
         for row in tab.data:

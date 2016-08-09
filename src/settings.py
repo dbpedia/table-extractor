@@ -8,10 +8,28 @@ GENERAL_DESCRIPTION = "This script try to parse data from tables in wiki pages.\
 SINGLE_HELP = "Use -s | --single to specify a single Wikipedia resource to parse. \n \
                                     Eg: -s Andrea_Pirlo"
 
-# Topic you can choose from as -t parameter choice. Eg: -t actors
-TOPIC_CHOICES = ['all', 'soccer', 'actors', 'directors', 'writers', 'elections', 'elections_USA']
 TOPIC_DEFAULT = 'all'
 TOPIC_HELP = "Use -t | --topic to specify a set of wiki pages to work with. "
+# Topic you can choose from as -t parameter choice. Eg: -t actors
+TOPIC_CHOICES = ['all', 'soccer', 'actors', 'directors', 'writers', 'elections', 'elections_USA']
+
+#
+TOPIC_SPARQL = {
+                'soccer': "?s a <http://dbpedia.org/ontology/SoccerPlayer>",
+
+                'elections': "?s a <http://dbpedia.org/ontology/Election>",
+
+                'elections_USA': "?s <http://it.dbpedia.org/property/wikiPageUsesTemplate> \
+                             <http://it.dbpedia.org/resource/Template:Elezioni_negli_Stati_Uniti_d'America>",
+
+                'actors': "?s a <http://dbpedia.org/ontology/Actor>",
+
+                'directors': "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>. \
+                             ?film <http://dbpedia.org/ontology/director> ?s",
+
+                'writers': "?s a <http://dbpedia.org/ontology/Writer>"
+
+                }
 
 # WHERE
 WHERE_HELP = "Use -c | --custom to specify a custom SPARQL where clause, \
@@ -42,23 +60,7 @@ CHAPTER_HELP = "Language of Wikipedia pages/resources to analyze. \n \
                 'fr' ---> fr.wikipedia.org  etc. etc. \n \
                 DEFAULT = "+CHAPTER_DEFAULT
 
-#
-TOPIC_SPARQL = {
-                'soccer': "?s a <http://dbpedia.org/ontology/SoccerPlayer>",
 
-                'elections': "?s a <http://dbpedia.org/ontology/Election>",
-
-                'elections_USA': "?s <http://it.dbpedia.org/property/wikiPageUsesTemplate> \
-                             <http://it.dbpedia.org/resource/Template:Elezioni_negli_Stati_Uniti_d'America>",
-
-                'actors': "?s a <http://dbpedia.org/ontology/Actor>",
-
-                'directors': "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>. \
-                             ?film <http://dbpedia.org/ontology/director> ?s",
-
-                'writers': "?s a <http://dbpedia.org/ontology/Writer>"
-
-                }
 
 #
 jsonpedia_call_format = "?&procs=Extractors,Structure"
