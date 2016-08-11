@@ -3,12 +3,12 @@
  _Wikipedia is full of data hidden in tables. The aim of this project is to explore the possibilities of exploiting all the data represented with the appearance of tables in Wiki pages, in order to populate the different chapters of DBpedia through new data of interest. The Table Extractor has to be the engine of this data “revolution”: it would achieve the final purpose of extracting the semi structured data from all those tables now scattered in most of the Wiki pages._
 
 
-#### You can find progress page [here](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone)
+#### You can find progress page [here](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone "Progresses")
 
 ###Requirements
 * Python 2.7
-* [RDFlib library](http://rdflib.readthedocs.io/en/stable/gettingstarted.html)
-* [lxml library] (http://lxml.de/lxmlhtml.html) (Tested v. 3.6)
+* [RDFlib library](http://rdflib.readthedocs.io/en/stable/gettingstarted.html "RDFlib homepage")
+* [lxml library] (http://lxml.de/lxmlhtml.html "lxml homepage") (v. 3.6 Tested)
 * Stable internet connection
 
 ###How to run pyTableExtractor.py
@@ -16,21 +16,20 @@
 
 * `-c`, `--chapter` : Optional. 2 letter long string representing the desidered endpoint/Wikipedia language (e.g. `en`, `it`, `fr` ...) Default value: 'en'. Reccomendation: do not use  -m 'json'  
 * `-m`, `--mode` : Optional. As I changed approach to the problem, I initially face the project working with JSONPedia, I introduced two working method for the algorithm : json or html. Default value: 'html'
-
 #####Note: -w -s -t are all mutual exclusive parameters  
 
 * `-t`, `--topic` : Optional. one of the keywords from the following: 'elections' for pages related to electoral results, 'elections_USA' to limit election result to USA presidential elections, 'all' to select all wiki pages, 'soccer' for soccer players, 'actors' , 'directors' for people who has directed a film, 'writers'. Default value: 'all' (all wiki pages from a chapter).
 * `-w`, `--where` : Optional. A SPARQL where clause. Eg. "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>.  ?film <http://dbpedia.org/ontology/director> ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s
-* `-s`, `--single` : Optional. can be used to select a wiki page at a time. Eg. -s 'Channel_Tunnel' takes only the [wiki page] (https://en.wikipedia.org/wiki/Channel_Tunnel) representing the European channel tunnel between France and UK. [-s]Note: please use only the name of a wiki page without spaces ( substitued by underscores) Eg. Use -s [German_federal_election,_1874](https://en.wikipedia.org/wiki/German_federal_election,_1874) and not https://en.wikipedia.org/wiki/German_federal_election,_1874 or German federal election, 1874 .
+* `-s`, `--single` : Optional. can be used to select a wiki page at a time. Eg. -s 'Channel_Tunnel' takes only the [wiki page] (https://en.wikipedia.org/wiki/Channel_Tunnel "Channel Tunnel wiki page") representing the European channel tunnel between France and UK. [-s]Note: please use only the name of a wiki page without spaces ( substitued by underscores) Eg. Use -s [German_federal_election,_1874](https://en.wikipedia.org/wiki/German_federal_election,_1874 "German federal 1874 election") and not https://en.wikipedia.org/wiki/German_federal_election,_1874 or German federal election, 1874 .
 
 ###Usage examples: 
 * `python pyTableExtractor.py` ---> as default it takes chapter = 'en', topic= 'all', mode='html'
 
-* `python pyTableExtractor.py -c it -w "?s a <http://dbpedia.org/ontology/SoccerPlayer>"` ---> chapter = it, tries to collect resources which answer to this sparql query from dbpedia, mode='html'
+* `python pyTableExtractor.py -c it -w "?s a <http://dbpedia.org/ontology/SoccerPlayer>"` ---> chapter = it, tries to collect resources (soccer players) which answer to this sparql query from dbpedia, mode='html'
 
 * `python pyTableExtractor.py -c en -t actors -m html` ---> chapter='en', topic='actors', mode='html'
 
-* `python pyTableExtractor.py -c it -s "Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888"` ---> the script will works only one [wiki page](https://it.wikipedia.org/wiki/Elezioni_presidenziali_negli_Stati_Uniti_d%27America_del_1888) of 'it' chapter 
+* `python pyTableExtractor.py -c it -s "Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888"` ---> the script will works only one [wiki page](https://it.wikipedia.org/wiki/Elezioni_presidenziali_negli_Stati_Uniti_d%27America_del_1888 "USA 1888 presidential election, it chapter") of 'it' chapter 
 
 
 ### Folders:
@@ -65,7 +64,7 @@
 **mapping_rules** File which store rules to be used depending on the topic used and the wiki chapter selected.
 
 
-
+---
 
 ####statistics.py
 This script, written in collaboration with Federica Baiocchi (@github/Feddie), is useful to know the number of tables or lists contained in Wikipedia pages from a given topic, and was created in collaboration with Feddie who is working on the [List Extractor](https://github.com/dbpedia/list-extractor). We both used it in the beginning of our projects to choose a domain to start from.
@@ -79,4 +78,4 @@ This script, written in collaboration with Federica Baiocchi (@github/Feddie), i
 *`python statistics.py en l writer`
 
 
-For any questions please feel free to contact me by [email](papalini.simone.an@gmail.com)
+For any questions please feel free to contact me by [email](papalini.simone.an@gmail.com "author email")

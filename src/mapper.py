@@ -94,15 +94,18 @@ class Mapper:
                     cell_predicate = None
                     cell_object = None
 
-                    if 'Candidati - Presidente' in cell or 'Candidato' in cell or 'candidato' in cell:
+                    if cell == 'Candidati - Presidente' or cell == 'Candidato' or cell == 'candidato':
                         cell_subject = row  # row
 
                         cell_predicate = rdflib.URIRef(self.dbo.President)  # http://dbpedia.org/ontology/President
 
-                        if len(value) == 2 and self.mode == 'json' :
+                        if len(value) == 2 and self.mode == 'json':
                             cell_object = value[1]  # value: eg [u'New York (stato)', u'Franklin D. Roosevelt']
                         else:
                             cell_object = value[0]
+                            comma_index = cell_object.find(",")
+                            if comma_index:
+                                cell_object = cell_object[:comma_index]
                         cell_object = cell_object.replace(" ", "_")
                         cell_object = rdflib.URIRef(self.dbr + cell_object)
 
@@ -115,10 +118,13 @@ class Mapper:
                             cell_object = value[1]  # value eg [u'Iowa', u'Henry A. Wallace']
                         else:
                             cell_object = value[0]
+                            comma_index = cell_object.find(",")
+                            if comma_index:
+                                cell_object = cell_object[:comma_index]
                         cell_object = cell_object.replace(" ", "_")
                         cell_object = rdflib.URIRef(self.dbr + cell_object)
 
-                    elif 'Candidati - Partito' in cell or 'Partito' in cell or 'Lista' in cell:
+                    elif cell == 'Candidati - Partito'or cell == 'Partito' or cell == 'Lista':
                         cell_subject = row  # row
 
                         cell_predicate = rdflib.URIRef(
@@ -132,9 +138,9 @@ class Mapper:
                             cell_object = cell_object.replace(" ", "_")
                             cell_object = rdflib.URIRef(self.dbr + cell_object)
 
-                    elif 'Grandi elettori - #' in cell or 'Grandi elettori - n.' in cell \
-                            or 'Grandi elettori - Num.' in cell or 'Grandi Elettori ottenuti' in cell \
-                            or 'Voti Elettorali' in cell or 'Grandi Elettori' in cell:
+                    elif cell == 'Grandi elettori - #' or cell == 'Grandi elettori - n.' \
+                            or cell== 'Grandi elettori - Num.' or cell == 'Grandi Elettori ottenuti' \
+                            or cell == 'Voti Elettorali' or cell == 'Grandi Elettori':
                         cell_subject = row  # row
 
                         cell_predicate = rdflib.URIRef(self.dbp.electoralVote)  # number of Great Electors
@@ -143,8 +149,8 @@ class Mapper:
                             cell_object = int(value[0])  # value eg [449.0]
                             cell_object = rdflib.Literal(cell_object, datatype=rdflib.namespace.XSD.positiveInteger)
 
-                    elif 'Voti - #' in cell or 'Voti - n.' in cell or 'Voti - Num.' in cell or 'Voti' in cell \
-                            or 'Voti Popolari' in cell:
+                    elif cell == 'Voti - #' or cell == 'Voti - n.' or cell == 'Voti - Num.' or cell == 'Voti' \
+                            or cell == 'Voti Popolari':
                         cell_subject = row  # row
 
                         cell_predicate = rdflib.URIRef(self.dbo.popularVote)  # popular vote number
@@ -158,13 +164,17 @@ class Mapper:
                                 cell_object = rdflib.Literal(cell_object,
                                                              datatype=rdflib.namespace.XSD.positiveInteger)  # value (number)
 
-                    elif 'Voti - %' in cell or '?% voti' in cell or '% voti' in cell \
-                            or 'Percentuale' in cell or '%' in cell or '?%' in cell:
+                    elif cell == 'Voti - %' or cell == '?% voti' or cell == '% voti' \
+                            or cell == 'Percentuale' or cell == '%' or cell == '?%' in cell:
                         cell_subject = row  # row
 
                         cell_predicate = rdflib.URIRef(self.dbp.pvPct)  # pvPct stands for popular vote, percentage
 
-                        if type(value[0]) is float:
+                        # Sometimes wiki Users use comma instead of dot desribing percentage, so we have to convert commas in dots.
+                        if ',' in value[0]:
+                            value[0] = value[0].replace(",", ".")
+
+                        if self.is_float(value[0]):
                             cell_object = rdflib.Literal(value[0], datatype=rdflib.namespace.XSD.float)  # value
                         basestr = isinstance(value[0], basestring)
                         if basestr:
@@ -201,3 +211,10 @@ class Mapper:
 
     def print_triple(self, s, p, o):
         print("Added s= " + str(s) + " p= " + str(p) + " o= " + str(o) + " to the graph")
+
+    def is_float(self, value):
+        try:
+            float(value)
+            return True
+        except:
+            return False

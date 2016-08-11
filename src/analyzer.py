@@ -21,7 +21,10 @@ class Analyzer:
         self.filename = filename
         self.mode = mode
         self.utils.logging.info(self.mode + " mode activated.. ")
-        self.analyzed = 0
+
+        self.res_analyzed = 0
+        self.total_table_num = 0
+
         self.current_resource = None
         # composing a list of resources from the file (filename) passed
         if self.filename:
@@ -80,6 +83,7 @@ class Analyzer:
                 resource = self.res_iterator.next()
                 resource = resource.replace("\n", "")
                 self.utils.logging.info("Analyzing " + str(resource))
+                self.res_analyzed += 1
                 print("Analyzing " + str(resource))
                 if resource:
                     self.current_resource = resource
@@ -94,11 +98,16 @@ class Analyzer:
                         htmlParsr = htmlParser.HtmlParser(html_doc_tree, self.chapter, self.graph, self.topic, resource, self.utils)
                         htmlParsr.analyze_tables()
 
+                        # Add to the total the tables for this resource
+                        self.total_table_num += htmlParsr.tables_num
+                        # Count tables which headers had not found
+
+
                     else:
                         print("mode")
             except StopIteration:
                 self.lines_to_read = False
-                self.utils.logging.info("End Of File reached, now the graph should be serialized")
+                self.utils.logging.info("End Of File reached, now you can serialize the graph")
                 print (" End Of File reached")
 
     def get_filename(self):
@@ -119,8 +128,8 @@ class Analyzer:
 
             cur_dir = self.utils.get_current_dir()
             if self.topic == 'single_resource':
-                self.topic += "_" + str(self.current_resource)
-            filename = "Table_Extraction_" + self.mode + '_' + self.chapter + '_' + self.topic + '_' + self.utils.get_date_time() + ".ttl"
+                self.topic = "single_res_" + str(self.current_resource)
+            filename = "T_Ext_" + self.mode + '_' + self.chapter + '_' + self.topic + '_(' + self.utils.get_date_time() + ").ttl"
             destination = self.utils.join_paths(cur_dir, '../Extractions/'+filename)
 
             rdf_format = "turtle"

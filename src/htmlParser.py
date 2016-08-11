@@ -20,15 +20,21 @@ class HtmlParser:
         self.utils = utils
 
         self.tables = []
-        self.find_wiki_table()
-        self.rows_num = 0
         self.current_html_table = None
+
+        self.rows_num = 0
+        self.tables_num = 0
+        self.no_headers = 0
+        self.no_data = 0
+
+        self.find_wiki_table()
 
     def find_wiki_table(self):
         self.tables = self.doc_tree.findall('//table[@class=\'wikitable\']')
         sortable_tables = self.doc_tree.findall('//table[@class=\'wikitable sortable\']')
         for sort_table in sortable_tables:
             self.tables.append(sort_table)
+        self.tables_num += len(self.tables)
         self.print_html(self.tables)
 
     def print_html(self, etree):
@@ -44,7 +50,10 @@ class HtmlParser:
             tab.table_section = self.find_table_section()
             self.set_class(tab)
             self.find_headers(tab)
+
+            # TODO make a decision
             # self.check_miss_subheaders(tab)
+
             if tab.headers:
                 print("Resource : " + self.resource + " Headers Found")
                 self.refine_headers(tab)
@@ -54,6 +63,7 @@ class HtmlParser:
                         print(th['th'])
                 self.associate_super_and_sub_headers(tab)
                 self.encode_headers(tab)
+
                 self.extract_data(tab)
                 self.refine_data(tab)
                 if tab.data_refined:
@@ -63,10 +73,12 @@ class HtmlParser:
                 else:
                     logging.debug("e3 - UNABLE TO EXTRACT DATA - resource: " + str(self.resource))
                     print("e3 UNABLE TO EXTRACT DATA")
+                    self.no_data += 1
             else:
                 logging.debug(
                     " e2 Unable to find headers - resource: " + str(self.resource))
                 print("e2 UNABLE TO FIND HEADERS")
+                self.no_headers += 1
 
     def find_table_section(self):
         section_text = ""
@@ -157,8 +169,8 @@ class HtmlParser:
     def remove_row(self, tr_index):
         row = self.current_html_table.find('tr[' + str(tr_index) + ']')
         self.current_html_table.remove(row)
-
         print(html.tostring(self.current_html_table, pretty_print=True))
+
 
     def compose_tab_headers(self, html_headers):
         # TODO split in multiple simple functions
@@ -306,7 +318,7 @@ class HtmlParser:
             data_cell['td'] = cell_text
 
         return data_cell
-
+    '''
     def resolve_sub_tag(self, cell, tag):
         sub_tag = cell.find(tag)
         if type(sub_tag) == _Element:
@@ -323,7 +335,7 @@ class HtmlParser:
                     return anchor[0]['a']
         else:
             return None
-
+    '''
     def refine_data(self, tab):
         print("Refining data ...")
         self.delete_useless_rows(tab)
@@ -374,7 +386,7 @@ class HtmlParser:
                     if 'a' in element:
                         data = element['a'].replace(' ', '_')
                     elif 'td' in element:
-                        data = element['td'].replace(' ', '_')
+                        # data = element['td'].replace(' ', '_')
                         number = self.is_float(data)
                         if number:
                             data = float(data)
