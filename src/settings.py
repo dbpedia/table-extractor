@@ -61,7 +61,9 @@ CHAPTER_HELP = "Language of Wikipedia pages/resources to analyze. \n \
                 DEFAULT = "+CHAPTER_DEFAULT
 
 
+time_to_attend_between_tries = 2
 
+MAX_ATTEMPTS = 5
 #
 jsonpedia_call_format = "?&procs=Extractors,Structure"
 

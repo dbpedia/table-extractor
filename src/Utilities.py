@@ -9,8 +9,7 @@ import errno
 import logging
 import settings
 
-
-__author__='papalinis - Simone Papalini - papalini.simone.an@gmail.com'
+__author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
 
 class Utilities:
@@ -18,11 +17,8 @@ class Utilities:
     """
 
     """
+
     def __init__(self, lang, topic):
-
-
-
-
 
         self.lang = lang
         self.topic = topic
@@ -37,6 +33,9 @@ class Utilities:
         self.jsonpedia_base_url = settings.jsonpedia_base_url
         self.jsonpedia_lan = lang + ":"
         self.dbpedia = None
+
+        self.time_to_attend = settings.time_to_attend_between_tries
+        self.max_attempts = settings.MAX_ATTEMPTS
 
         self.dbpedia_sparql_url = self.dbpedia_selection()
         self.html_format = "https://" + lang + ".wikipedia.org/wiki/"
@@ -137,7 +136,7 @@ class Utilities:
             url = self.jsonpedia_base_url + self.jsonpedia_lan + query + self.jsonpedia_section_format
 
         elif service == 'html':
-            url = self.html_format+query
+            url = self.html_format + query
 
         else:
             url = "ERROR"
@@ -156,7 +155,7 @@ class Utilities:
             json_parsed = json.loads(answer)
             return json_parsed
         except IOError:
-            print ("Try, again, some problems due to Internet connection, url: "+url_passed)
+            print ("Try, again, some problems due to Internet connection, url: " + url_passed)
             return "Internet problems"
         except ValueError:
             print ("Not a JSON object.")
@@ -172,13 +171,14 @@ class Utilities:
             return html_document
         except IOError:
             print ("Try, again, some problems due to Internet connection, url: " + url_passed)
-            return "Internet problems"
+
+            return "Internet Error"
         except ValueError:
-            print ("Not a JSON object.")
-            return "ValueE"
+            print ("Not a HTML object.")
+            return "Value Error"
         except:
             print "Exception with url:" + str(url_passed)
-            return "GeneralE"
+            return "General Error"
 
     def json_object_getter(self, resource, struct='jsonpedia'):
         """
@@ -193,6 +193,8 @@ class Utilities:
                 json_answer = self.json_answer_getter(jsonpedia_url)
                 if type(json_answer) != str:
                     json_object_state = self.test_json_result(json_answer)
+                else:
+                    time.sleep(self.time_to_attend)
             except:
                 print("Error during json_object_getter")
         print(json_object_state)
@@ -200,15 +202,26 @@ class Utilities:
 
     def html_object_getter(self, resource):
         html_url = self.url_composer(resource, 'html')
-        answer_ok = 'try'
-        while answer_ok == 'try':
+        is_answer_ok = False
+        attempts = 0
+        html_answer = None
+
+        while is_answer_ok != True and attempts < self.max_attempts:
             try:
+                attempts += 1
                 html_answer = self.html_answer(html_url)
                 if type(html_answer) != str:
-                    answer_ok = self.test_html_result(html_answer)
+                    is_answer_ok = self.test_html_result(html_answer)
+                else:
+                    time.sleep(self.time_to_attend)
             except:
                 print("Error trying to get html object")
-        print("Html document well formed..")
+
+        if is_answer_ok:
+            print("Html document well formed..")
+        else:
+            print("Error trying to get html object : %s" % html_answer)
+            html_answer = None
         return html_answer
 
     def test_json_result(self, json_obj):
@@ -239,31 +252,10 @@ class Utilities:
 
     def test_html_result(self, html_doc):
         # TODO implement a test on html_object
-        """if 'message' in json_obj.keys():
-            # TODO think about the possibility of write down problems encountered
-            message = json_obj['message']
-            if message == u'Invalid page metadata.':
-                self.res_lost_jsonpedia += 1
-                return 'Invalid page metadata'
-
-            elif message == u'Expected DocumentElement found ParameterElement':
-                self.res_lost_jsonpedia += 1
-                return 'Expected DocumentElement found ParameterElement'
-
-            elif message == u'Expected DocumentElement found ListItem':
-                self.res_lost_jsonpedia += 1
-                return 'Expected DocumentElement found ListItem'
-
-            elif message == u'Expected DocumentElement found TableCell':
-                self.res_lost_jsonpedia += 1
-                return 'Expected DocumentElement found TableCell'
-
-            elif len(json_obj) == 3:
-                print "Problems related to JSONpedia service :" + str(json_obj) + " - RETRYING"
-                return 'try'
-
-        else:"""
-        return 'JSON object well formed'
+        if type(html_doc) == str and "Error" in html_doc:
+            return False
+        else:
+            return True
 
     def tot_res_interested(self, query):
         """

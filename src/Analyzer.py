@@ -96,15 +96,13 @@ class Analyzer:
 
                     elif self.mode == "html":
                         html_doc_tree = self.utils.html_object_getter(resource)
-                        html_parser = HtmlTableParser.HtmlTableParser(html_doc_tree, self.chapter, self.graph, self.topic, resource, self.utils)
-                        html_parser.analyze_tables()
+                        if html_doc_tree:
+                            html_parser = HtmlTableParser.HtmlTableParser(html_doc_tree, self.chapter, self.graph, self.topic, resource, self.utils)
+                            html_parser.analyze_tables()
 
-                        # Add to the total the tables for this resource
-                        self.total_table_num += html_parser.tables_num
+                            # Add to the total the tables for this resource
+                            self.total_table_num += html_parser.tables_num
 
-
-                    else:
-                        print("mode")
             except StopIteration:
                 self.lines_to_read = False
                 self.utils.res_analyzed = self.res_analyzed

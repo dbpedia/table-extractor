@@ -278,7 +278,6 @@ class HtmlTableParser:
             for header in row:
                 header['th'] = header['th'].replace(error, u'')
 
-
     def associate_super_and_sub_headers(self, tab):
         try:
             headers_copy = tab.headers
