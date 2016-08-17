@@ -249,6 +249,8 @@ class HtmlTableParser:
 
         self.resolve_rowspan(tab.headers)
 
+        self.remove_html_encode_errors(tab.headers, u'\xa0')
+
         print("Headers refined")
 
     def print_headers(self, tab):
@@ -270,6 +272,12 @@ class HtmlTableParser:
                         rows[row_index+1].insert(cell_index, cell_copy)
         except:
             print("Error resolving rowspan")
+
+    def remove_html_encode_errors(self, headers, error):
+        for row in headers:
+            for header in row:
+                header['th'] = header['th'].replace(error, u'')
+
 
     def associate_super_and_sub_headers(self, tab):
         try:
@@ -480,3 +488,4 @@ class HtmlTableParser:
                         print ("index: =" + str(index))
                 if temp_row:
                     tab.data_refined.append(temp_row)
+
