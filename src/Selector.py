@@ -40,9 +40,9 @@ class Selector:
 
         # if os.path.isfile(self.res_list_filename):
         self.list = open(self.res_list_filename, 'w')
-        self.utils.logging.info("The file which contains the list of resources is: " + self.res_list_filename)
+        self.utils.logging.info("The file which contains the list of resources is: %s" % self.res_list_filename)
 
-        self.written = 0
+        self.resources_serialized = 0
 
     def set_file(self):
         self.utils.test_dir_existance('../Resource lists')
@@ -64,17 +64,19 @@ class Selector:
                         res_name = res['res']['value'].replace("http://" + self.utils.dbpedia + "/resource/", "")
                         res_name = res_name.encode('utf-8')
                         self.list.write(str(res_name)+'\n')
-                        self.written += 1
+                        self.resources_serialized += 1
 
                     except:
-                        self.utils.logging.exception("Something went wrong writing down this resource: " + str(res))
-                        print("exception for: "+str(res))
+                        self.utils.logging.exception("Something went wrong writing down this resource: %s" % res)
+                        print("exception for: %s" % res)
                 self.__update_offset()
 
             except:
                 print "exception during the iteration of collection of resources"
         self.list.close()
-        self.utils.logging.info("Written down resources:  " + str(self.written))
+        self.utils.logging.info("Resources found and serialized:  %s" % self.resources_serialized)
+        # Update number of resources collected in utilities in order to print a final report
+        self.utils.res_collected = self.resources_serialized
 
     def get_lang(self):
         """

@@ -2,8 +2,8 @@ import sys
 
 import rdflib
 
-import htmlParser
-import tableParser
+import HtmlTableParser
+import JsonTableParser
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
@@ -18,9 +18,10 @@ class Analyzer:
         self.chapter = chapter
         self.topic = topic
         self.utils = utils
+        self.logging = self.utils.logging
         self.filename = filename
         self.mode = mode
-        self.utils.logging.info(self.mode + " mode activated.. ")
+        self.logging.info(self.mode + " mode activated.. ")
 
         self.res_analyzed = 0
         self.total_table_num = 0
@@ -82,7 +83,7 @@ class Analyzer:
             try:
                 resource = self.res_iterator.next()
                 resource = resource.replace("\n", "")
-                self.utils.logging.info("Analyzing " + str(resource))
+                self.logging.info("Analyzing " + str(resource))
                 self.res_analyzed += 1
                 print("Analyzing " + str(resource))
                 if resource:
@@ -90,24 +91,24 @@ class Analyzer:
                     if self.mode == "json":
 
                         json_object = self.utils.json_object_getter(resource, 'jsonpedia_sections')
-                        t_parser = tableParser.TableParser(json_object, self.chapter, self.graph, self.topic, resource)
+                        t_parser = JsonTableParser.JsonTableParser(json_object, self.chapter, self.graph, self.topic, resource)
                         t_parser.analyze_tables()
 
                     elif self.mode == "html":
                         html_doc_tree = self.utils.html_object_getter(resource)
-                        htmlParsr = htmlParser.HtmlParser(html_doc_tree, self.chapter, self.graph, self.topic, resource, self.utils)
-                        htmlParsr.analyze_tables()
+                        html_parser = HtmlTableParser.HtmlTableParser(html_doc_tree, self.chapter, self.graph, self.topic, resource, self.utils)
+                        html_parser.analyze_tables()
 
                         # Add to the total the tables for this resource
-                        self.total_table_num += htmlParsr.tables_num
-                        # Count tables which headers had not found
+                        self.total_table_num += html_parser.tables_num
 
 
                     else:
                         print("mode")
             except StopIteration:
                 self.lines_to_read = False
-                self.utils.logging.info("End Of File reached, now you can serialize the graph")
+                self.utils.res_analyzed = self.res_analyzed
+                self.logging.info("End Of File reached, now you can serialize the graph")
                 print (" End Of File reached")
 
     def get_filename(self):
@@ -134,7 +135,10 @@ class Analyzer:
 
             rdf_format = "turtle"
             self.graph.serialize(destination, rdf_format)
-            self.utils.logging.info('Triples in the graph: ' + str(len(self.graph)))
+
+            self.logging.info('Triples in the graph: ' + str(len(self.graph)))
+            # updating triples serialized for report purpose
+            self.utils.triples_serialized = len(self.graph)
             print('Graph serialized, filename: ' + destination)
             self.utils.logging.info('Graph serialized, filename: ' + destination)
         else:

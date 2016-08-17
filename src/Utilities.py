@@ -19,6 +19,11 @@ class Utilities:
 
     """
     def __init__(self, lang, topic):
+
+
+
+
+
         self.lang = lang
         self.topic = topic
 
@@ -42,6 +47,21 @@ class Utilities:
         self.test_dir_existance('../Extractions')
 
         self.logging = logging
+
+        # Variables used in final report see print_report()
+        self.res_analyzed = 0
+        self.res_collected = 0
+        self.data_extracted = 0
+        self.tot_tables = 0
+        self.tot_tables_analyzed = 0
+        self.rows_extracted = 0
+        self.data_extraction_errors = 0
+        self.not_resolved_header_errors = 0
+        self.headers_errors = 0
+        self.mapping_errors = 0
+        self.no_mapping_rule_errors = 0
+        self.mapped_cells = 0
+        self.triples_serialized = 0
 
     def setup_log(self):
         """
@@ -295,3 +315,51 @@ class Utilities:
         timestamp = time.time()
         date = datetime.datetime.fromtimestamp(timestamp).strftime('%Y_%m_%d')
         return date
+
+    def print_report(self):
+        """ Method used to print a final report of table extractor execution.
+
+            It has statistics regarding # of:
+            - Total res collected
+            - Total res analyzed
+            - Total tables found
+            - Total rows successfully extracted
+            - Total cells successfully extracted
+            - Total errors trying to extract table's data
+            - Total headers which the Parser wasn't able to resolve
+            - Total errors trying to extract headers of a table
+            - Total mapped cells
+            - Total mapping errors
+            - Total cells serialized in RDF triples
+
+            Usually other classes set these values during their normal working cycle
+            Simply call print_report() as last method of entire extraction
+        """
+        self.logging.info("REPORT:")
+        # if the Table Extractor is executed in single_res mode, no resources are collected from dbpedia sparql endpoints
+        if self.res_collected:
+            self.logging.info("# of resources collected for this topic (%s) : %d" % (self.topic, self.res_collected))
+
+        self.logging.info("Total # resources analyzed: %d" % self.res_analyzed)
+
+        self.logging.info("Total # tables found : %d" % self.tot_tables)
+
+        self.logging.info("Total # tables analyzed : %d" % self.tot_tables_analyzed)
+
+        self.logging.info("Total # of rows extracted: %d" % self.rows_extracted)
+
+        self.logging.info("Total # of data cells extracted : %d" % self.data_extracted)
+
+        self.logging.info("Total # of exceptions extracting data : %d" % self.data_extraction_errors)
+
+        self.logging.info("Total # of \'header not resolved\' errors : %d" % self.not_resolved_header_errors)
+
+        self.logging.info("Total # of \'no headers\' errors : %d" % self.headers_errors)
+
+        self.logging.info("Total # of mapping errors : %d" % self.mapping_errors)
+
+        self.logging.info("Total # of \'no mapping rule\' errors : %d" % self.no_mapping_rule_errors)
+
+        self.logging.info("Total # cells mapped : %d" % self.mapped_cells)
+
+        self.logging.info("Total # of triples serialized : %d" % self.triples_serialized)

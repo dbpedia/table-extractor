@@ -47,8 +47,8 @@ MODE = {'html': 'html',
         }
 MODE_DEFAULT = 'html'
 MODE_HELP = "Mode used to parse the web pages, \n \
-             With 'h' | 'html' script will use htmlParser.py, \n \
-             With 'j' | 'json' script will use tableParser.py, a parser which use JSONPedia results. \n \
+             With 'h' | 'html' script will use HtmlTableParser.py, \n \
+             With 'j' | 'json' script will use TableParser.py, a parser which use JSONPedia results. \n \
              DEFAULT = "+MODE_DEFAULT
 
 #

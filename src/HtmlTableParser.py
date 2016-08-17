@@ -1,16 +1,14 @@
-import logging
-
 import lxml.html as html
-from lxml.etree import _Element
 
-import mapper
-import table
+import Mapper
+import Table
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
 
-class HtmlParser:
+class HtmlTableParser:
     def __init__(self, html_doc_tree, chapter, graph, topic, resource, utils):
+
 
         self.doc_tree = html_doc_tree
         self.chapter = chapter
@@ -18,15 +16,29 @@ class HtmlParser:
         self.topic = topic
         self.resource = resource
         self.utils = utils
+        self.logging = self.utils.logging
 
         self.tables = []
         self.current_html_table = None
 
-        self.rows_num = 0
+        # statistics regarding a resource
         self.tables_num = 0
+        self.tables_analyzed = 0
+        # Errors or problems regarding a table
+        self.headers_not_resolved = 0
+        # no headers found
         self.no_headers = 0
+        # no data extracted
         self.no_data = 0
 
+        # statistics regarding a table
+        self.rows_num = 0
+        self.headers_found_num = 0
+        self.cell_per_row = 0
+        self.rows_extracted_num = 0
+        self.data_extracted_num = 0
+
+        # As HtmlTableParsed is correctly initialized, we want to find tables
         self.find_wiki_table()
 
     def find_wiki_table(self):
@@ -34,8 +46,15 @@ class HtmlParser:
         sortable_tables = self.doc_tree.findall('//table[@class=\'wikitable sortable\']')
         for sort_table in sortable_tables:
             self.tables.append(sort_table)
-        self.tables_num += len(self.tables)
-        self.print_html(self.tables)
+        if len(self.tables):
+            self.tables_num += len(self.tables)
+            # Adding tables number to the total, used to print a final report
+            self.utils.tot_tables += self.tables_num
+            self.print_html(self.tables)
+        else:
+            print("No tables found for this resource.")
+            self.logging.info("No Tables found for this resource.")
+
 
     def print_html(self, etree):
         for element in etree:
@@ -43,11 +62,22 @@ class HtmlParser:
 
     def analyze_tables(self):
         for html_table in self.tables:
+            self.tables_analyzed += 1
+
+            self.rows_num = 0
+            self.headers_found_num = 0
+            self.rows_extracted_num = 0
+            self.data_extracted_num = 0
+
             self.current_html_table = html_table
-            tab = table.Table()
+            tab = Table.Table()
+            # TODO review this part
             tab.n_rows = self.count_elements(self.current_html_table)
+            self.rows_num = tab.n_rows
+
             tab.table_attributes = html_table.attrib
             tab.table_section = self.find_table_section()
+            self.logging.info("Table under section: %s" % tab.table_section)
             self.set_class(tab)
             self.find_headers(tab)
 
@@ -55,30 +85,42 @@ class HtmlParser:
             # self.check_miss_subheaders(tab)
 
             if tab.headers:
-                print("Resource : " + self.resource + " Headers Found")
+                self.logging.info("Headers Found")
                 self.refine_headers(tab)
-                print("These are the headers found: ")
-                for row in tab.headers:
-                    for th in row:
-                        print(th['th'])
+                self.print_headers(tab)
+
                 self.associate_super_and_sub_headers(tab)
                 self.encode_headers(tab)
 
                 self.extract_data(tab)
                 self.refine_data(tab)
                 if tab.data_refined:
-                    map_tool = mapper.Mapper(self.chapter, self.graph, self.topic, self.resource,
+                    self.logging.info("Data extracted for this table:")
+                    tab.count_data_cells_and_rows()
+                    self.logging.info("Rows extracted: %d" % tab.data_refined_rows)
+                    self.logging.info("Data extracted for this table: %d" % tab.cells_refined)
+                    # update data cells extracted in order to make a final report
+                    self.utils.data_extracted += tab.cells_refined
+                    self.utils.rows_extracted += tab.data_refined_rows
+
+                    map_tool = Mapper.Mapper(self.chapter, self.graph, self.topic, self.resource,
                                              tab.data_refined, 'html', self.utils, tab.table_section)
                     map_tool.map()
                 else:
-                    logging.debug("e3 - UNABLE TO EXTRACT DATA - resource: " + str(self.resource))
+                    self.logging.debug("e3 - UNABLE TO EXTRACT DATA - resource: %s" % self.resource)
                     print("e3 UNABLE TO EXTRACT DATA")
                     self.no_data += 1
             else:
-                logging.debug(
+                self.logging.debug(
                     " e2 Unable to find headers - resource: " + str(self.resource))
                 print("e2 UNABLE TO FIND HEADERS")
                 self.no_headers += 1
+
+        # Adding statistics values and errors to the extraction errors, in order to print a final report
+        self.utils.tot_tables_analyzed += self.tables_analyzed
+        self.utils.headers_errors += self.no_headers
+        self.utils.not_resolved_header_errors += self.headers_not_resolved
+        self.utils.data_extraction_errors += self.no_data
 
     def find_table_section(self):
         section_text = ""
@@ -98,7 +140,6 @@ class HtmlParser:
                         section_text = section_text.encode('utf-8')
                         return section_text
         return self.resource
-
 
     def count_elements(self, wrapper):
         """
@@ -121,7 +162,7 @@ class HtmlParser:
                 if html_headers:
                     self.set_header(row, tab)
         except:
-            logging.warning("Error Finding the headers, resource: " + str(self.resource))
+            self.logging.warning("Error Finding the headers, resource: %s" % self.resource)
 
     def set_header(self, row, tab):
         # TODO refactor this function
@@ -171,7 +212,6 @@ class HtmlParser:
         self.current_html_table.remove(row)
         print(html.tostring(self.current_html_table, pretty_print=True))
 
-
     def compose_tab_headers(self, html_headers):
         # TODO split in multiple simple functions
         headers = []
@@ -198,7 +238,8 @@ class HtmlParser:
                 header_cell['th'] = current_text
             else:
                 header_cell['th'] = ''
-                logging.debug("Header not resolved")
+                self.logging.debug("Header not resolved")
+                self.headers_not_resolved += 1
             headers.append(header_cell)
         if headers:
             return headers
@@ -208,7 +249,14 @@ class HtmlParser:
         self.expand_colspan_cells(tab.headers)
 
         self.resolve_rowspan(tab.headers)
+
         print("Headers refined")
+
+    def print_headers(self, tab):
+        print("These are the headers found: ")
+        for row in tab.headers:
+            for th in row:
+                print(th['th'])
 
     def resolve_rowspan(self, rows):
         try:
@@ -265,8 +313,8 @@ class HtmlParser:
 
     def extract_data(self, tab):
         for row in self.current_html_table:
-            table_data = row.findall('td')
-            if table_data:
+            data_in_row = row.findall('td')
+            if data_in_row:
                 table_data = row.iterchildren()
                 data_row = []
                 for cell in table_data:
@@ -318,6 +366,8 @@ class HtmlParser:
             data_cell['td'] = cell_text
 
         return data_cell
+
+    # TODO refactor this function
     '''
     def resolve_sub_tag(self, cell, tag):
         sub_tag = cell.find(tag)
@@ -338,18 +388,22 @@ class HtmlParser:
     '''
     def refine_data(self, tab):
         print("Refining data ...")
-        self.delete_useless_rows(tab)
-        self.expand_colspan_cells(tab.data)
-        self.resolve_data_type(tab)
-        self.join_data_and_headers(tab)
-        self.encode_data(tab)
-        print ("done")
+        try:
+            self.delete_useless_rows(tab, 'Totale')
+            self.expand_colspan_cells(tab.data)
+            self.resolve_data_type(tab)
+            self.join_data_and_headers(tab)
+            self.encode_data(tab)
+            print ("done")
+            self.logging.info("Data refined")
+        except:
+            self.logging.debug("Exception refining data")
 
-    def delete_useless_rows(self, tab):
+    def delete_useless_rows(self, tab, tag):
         for row in tab.data:
             for cell in row:
                 for element in cell:
-                    if 'td' in element and element['td'] == 'Totale':
+                    if 'td' in element and element['td'] == tag:
                         tab.data.remove(row)
 
     def expand_colspan_cells(self, rows):
@@ -386,6 +440,7 @@ class HtmlParser:
                     if 'a' in element:
                         data = element['a'].replace(' ', '_')
                     elif 'td' in element:
+                        data = element['td']
                         # data = element['td'].replace(' ', '_')
                         number = self.is_float(data)
                         if number:
@@ -421,9 +476,8 @@ class HtmlParser:
                             temp_row = {}
                             index = 0
                     except:
+                        self.logging.debug("Exception building rows. \n index = %s" % index)
                         print("Exception building rows.")
                         print ("index: =" + str(index))
                 if temp_row:
                     tab.data_refined.append(temp_row)
-
-

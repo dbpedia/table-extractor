@@ -1,13 +1,13 @@
 import logging
 import re
 
-import mapper
+import Mapper
 
 # TODO DOCSTRINGS
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
 
-class TableParser:
+class JsonTableParser:
     """
     This class is used to analyze the structure of a table in order to extract data.
     It needs a data structure representing a general table.
@@ -132,7 +132,7 @@ class TableParser:
                         logging.info("3. Data extracted")
                         logging.debug("DATA: " + str(self.data_rows))
                         print("3. Data extracted")
-                        map_tool = mapper.Mapper(self.chapter, self.graph, self.topic, self.resource, self.data_rows, 'json', table['section_title'])
+                        map_tool = Mapper.Mapper(self.chapter, self.graph, self.topic, self.resource, self.data_rows, 'json', table['section_title'])
                         map_tool.map()
                     else:
                         logging.debug("e3 - UNABLE TO EXTRACT DATA - resource: " + str(self.resource) + "table : " + str(table))

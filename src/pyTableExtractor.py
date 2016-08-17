@@ -1,7 +1,8 @@
-import param_test
-import selector
-import utilities
-import analyzer
+
+import ParamTester
+import Selector
+import Utilities
+import Analyzer
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
@@ -22,8 +23,8 @@ The script requires 2 arguments representing:
 
 def main():
     # arguments = parse_arguments()
-    # First of all a test is run over the parameters passed with the script, see param_test.py
-    p_tester = param_test.ParamTester()
+    # First of all a test is run over the parameters passed with the script, see ParamTester.py
+    p_tester = ParamTester.ParamTester()
     # Variables language and where_clause are set
     # default language is en
     language = p_tester.lang
@@ -33,12 +34,12 @@ def main():
     single_res = p_tester.single_res
     mode = p_tester.mode
     res_list_filename = None
-    utils = utilities.Utilities(language, topic)
+    utils = Utilities.Utilities(language, topic)
 
     if not single_res:
         # creating a selector object, which is used to retrieve resources of interest (it depends on the scope)
         #  from dbpedia/wikipedia/jsonpedia
-        select = selector.Selector(language, where_clause, topic, utils)
+        select = Selector.Selector(language, where_clause, topic, utils)
 
         # Collecting resources of given topic
         select.collect_resources()
@@ -46,12 +47,13 @@ def main():
         res_list_filename = select.get_res_list_filename()
 
     # Create an Analyzer
-    analyzr = analyzer.Analyzer(language, topic, utils, mode, res_list_filename, single_res)
+    analyzr = Analyzer.Analyzer(language, topic, utils, mode, res_list_filename, single_res)
     # Analyze resources given in res_list_filename
     analyzr.analyze()
     # Serialize the RDF graph created
     analyzr.serialize()
-
+    # Print final report for the current extraction, then exits
+    utils.print_report()
 
 if __name__ == "__main__":
     main()
