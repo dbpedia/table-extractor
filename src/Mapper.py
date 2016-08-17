@@ -25,6 +25,9 @@ class Mapper:
         if self.topic == 'elections_USA':
             self.topic = 'elections'
 
+        # This dictionary it is used to have an idea of which headers haven't a mapping rule.
+        self.headers_not_mapped = {}
+        # Statistical values
         self.triples_added_to_the_graph = 0
         self.cells_mapped = 0
         self.total_cell_mapped = 0
@@ -78,7 +81,16 @@ class Mapper:
                     if self.reification_index > 0:
                         self.reification_index -= 1
 
-        self.utils.logging.info("Total cell mapped for this table: %s " % self.total_cell_mapped)
+        # print in the log useful infos to keep trace of results
+
+        if self.headers_not_mapped:
+            self.logging.info("These headers have not a corresponding mapping rule: ")
+            for header in self.headers_not_mapped:
+                self.logging.info(" - %s , Value Example: %s" % (header, self.headers_not_mapped[header]))
+        self.logging.info("Total cell mapped for this table: %s " % self.total_cell_mapped)
+        self.logging.info("Total \'no mapping rule\' : %s " % self.no_mapping_found_cells)
+        self.logging.info("Total mapping errors: %s " % self.num_of_mapping_errors)
+
         # Adding values to the total, stored in Utilities class, in order to print a final report
         self.utils.mapped_cells += self.total_cell_mapped
         self.utils.no_mapping_rule_errors += self.no_mapping_found_cells
@@ -202,11 +214,17 @@ class Mapper:
                                 cell_object = rdflib.Literal(value[0], datatype=rdflib.namespace.XSD.float)
 
                     else:
-                        print ("Something went wrong choosing mapping rules :'((  data: %s header: %s" % (value,cell))
+
                         cell_subject = None
                         cell_predicate = None
                         cell_object = None
-                    self.no_mapping_found_cells += 1
+
+                        print ("Something went wrong choosing mapping rules :'((  data: %s header: %s" % (value, cell))
+                        self.no_mapping_found_cells += 1
+                        if cell not in self.headers_not_mapped.keys():
+                            # Add to the list of headers with no mapping rules defined the current header
+                            self.headers_not_mapped[cell] = value
+
 
                     # if s,p,o are set for this cell, add them to the graph
                     if cell_predicate and cell_object and cell_subject:

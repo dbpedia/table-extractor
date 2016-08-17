@@ -95,7 +95,6 @@ class HtmlTableParser:
                 self.extract_data(tab)
                 self.refine_data(tab)
                 if tab.data_refined:
-                    self.logging.info("Data extracted for this table:")
                     tab.count_data_cells_and_rows()
                     self.logging.info("Rows extracted: %d" % tab.data_refined_rows)
                     self.logging.info("Data extracted for this table: %d" % tab.cells_refined)

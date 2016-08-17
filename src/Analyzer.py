@@ -140,8 +140,8 @@ class Analyzer:
             # updating triples serialized for report purpose
             self.utils.triples_serialized = len(self.graph)
             print('Graph serialized, filename: ' + destination)
-            self.utils.logging.info('Graph serialized, filename: ' + destination)
+            self.logging.info('Graph serialized, filename: ' + destination)
         else:
             print('Something went wrong: Nothing to serialize')
-            self.utils.logging.warn('Nothing to serialize, you have to choose right scope or resource, \
+            self.logging.warn('Nothing to serialize, you have to choose right scope or resource, \
                             or something went wrong scraping tables')
