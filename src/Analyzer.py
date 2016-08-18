@@ -15,6 +15,7 @@ class Analyzer:
     """
 
     def __init__(self, chapter, topic, utils, mode="html", filename=None, single_res=None):
+
         self.chapter = chapter
         self.topic = topic
         self.utils = utils
@@ -25,6 +26,7 @@ class Analyzer:
 
         self.res_analyzed = 0
         self.total_table_num = 0
+        self.total_headers_not_mapped = {}
 
         self.current_resource = None
         # composing a list of resources from the file (filename) passed
@@ -100,14 +102,28 @@ class Analyzer:
                             html_parser = HtmlTableParser.HtmlTableParser(html_doc_tree, self.chapter, self.graph, self.topic, resource, self.utils)
                             html_parser.analyze_tables()
 
+                            # Add headers not mapped and not already present in the list to total_headers_not_mapped
+                            for header in html_parser.headers_not_mapped:
+                                if header not in self.total_headers_not_mapped:
+                                    self.total_headers_not_mapped[header] = html_parser.headers_not_mapped[header]
                             # Add to the total the tables for this resource
                             self.total_table_num += html_parser.tables_num
 
             except StopIteration:
                 self.lines_to_read = False
                 self.utils.res_analyzed = self.res_analyzed
+
+                # Print out and in log every header cell without mapping rule
+                print("These are headers without mapping rules:")
+                self.logging.info("These are headers without mapping rules:")
+                for header in self.total_headers_not_mapped:
+                    print("-  -%s- , Value example %s" % (header, self.total_headers_not_mapped[header]))
+                    self.logging.info("- Header:%s , Resource: %s, Value example: %s" % (header, self.total_headers_not_mapped[header][0], self.total_headers_not_mapped[header][1]))
+                self.logging.info("")
+
                 self.logging.info("End Of File reached, now you can serialize the graph")
                 print (" End Of File reached")
+
 
     def get_filename(self):
         """
@@ -137,7 +153,7 @@ class Analyzer:
             self.logging.info('Triples in the graph: ' + str(len(self.graph)))
             # updating triples serialized for report purpose
             self.utils.triples_serialized = len(self.graph)
-            print('Graph serialized, filename: ' + destination)
+            print('GRAPH SERIALIZED, filename: ' + destination)
             self.logging.info('Graph serialized, filename: ' + destination)
         else:
             print('Something went wrong: Nothing to serialize')

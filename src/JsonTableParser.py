@@ -446,7 +446,6 @@ class JsonTableParser:
             if append:
                 self.filtered_table.append(row)
 
-
     def add_single_colspan_header(self):
         header_in_row = True
         for row in self.filtered_table:

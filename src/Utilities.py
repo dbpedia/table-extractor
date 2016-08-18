@@ -71,7 +71,7 @@ class Utilities:
 
         self.test_dir_existance('../Extractions')
         current_dir = self.get_current_dir()
-        filename = "TableExtraction_" + self.topic + "_" + self.lang + "_(" + current_date_time + ")" + ".log"
+        filename = "LOG_T_Ext_" + self.lang + '_' + self.topic + "_(" + current_date_time + ")" + ".log"
         path_desired = self.join_paths(current_dir, '../Extractions/' + filename)
 
         logging.basicConfig(filename=path_desired, filemode='w', level=logging.DEBUG,
@@ -292,6 +292,29 @@ class Utilities:
             logging.info("Lost resources with this offset range: " + str(offset) + " / " + str(offset + 1000))
             print ("ERROR RETRIEVING RESOURCES FROM " + str(offset) + " TO " + str(offset + 1000))
 
+    def ask_if_resource_exists(self, resource):
+        """
+        This method asks to a dbpedia sparql endpoint if a resource exists or not.
+        This is useful to compose the new dataset, so that it can be coherent with the DBpedia RDF dataset.
+
+        :param resource: is the resource which existence you want to test
+                        Eg.  Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789 (it chapter) or
+                             Bavarian_state_election,_2013 (en chapter)
+        :return: response (true if the resource exists in the dataset, false otherwise)
+        """
+        try:
+            query = "ASK { <" + resource + "> ?p ?o }"
+            ask_url = self.url_composer(query, 'dbpedia')
+            answer = self.json_answer_getter(ask_url)
+            if "boolean" in answer:
+                response = answer["boolean"]
+                return response
+            else:
+                return False
+        except:
+            print("Exception asking if %s exists" % resource)
+            return False
+
     def get_date_time(self):
         """
         It returns current YEAR_MONTH_DAY_HOUR_MINUTES as a string
@@ -330,28 +353,28 @@ class Utilities:
         self.logging.info("REPORT:")
         # if the Table Extractor is executed in single_res mode, no resources are collected from dbpedia sparql endpoints
         if self.res_collected:
-            self.logging.info("# of resources collected for this topic (%s) : %d" % (self.topic, self.res_collected))
+            self.logging.info("+           # of resources collected for this topic (%s) : %d" % (self.topic, self.res_collected))
 
-        self.logging.info("Total # resources analyzed: %d" % self.res_analyzed)
+        self.logging.info("+           Total # resources analyzed: %d" % self.res_analyzed)
 
-        self.logging.info("Total # tables found : %d" % self.tot_tables)
+        self.logging.info("+           Total # tables found : %d" % self.tot_tables)
 
-        self.logging.info("Total # tables analyzed : %d" % self.tot_tables_analyzed)
+        self.logging.info("+           Total # tables analyzed : %d" % self.tot_tables_analyzed)
 
-        self.logging.info("Total # of rows extracted: %d" % self.rows_extracted)
+        self.logging.info("+           Total # of rows extracted: %d" % self.rows_extracted)
 
-        self.logging.info("Total # of data cells extracted : %d" % self.data_extracted)
+        self.logging.info("+           Total # of data cells extracted : %d" % self.data_extracted)
 
-        self.logging.info("Total # of exceptions extracting data : %d" % self.data_extraction_errors)
+        self.logging.info("+           Total # of exceptions extracting data : %d" % self.data_extraction_errors)
 
-        self.logging.info("Total # of \'header not resolved\' errors : %d" % self.not_resolved_header_errors)
+        self.logging.info("+           Total # of \'header not resolved\' errors : %d" % self.not_resolved_header_errors)
 
-        self.logging.info("Total # of \'no headers\' errors : %d" % self.headers_errors)
+        self.logging.info("+           Total # of \'no headers\' errors : %d" % self.headers_errors)
 
-        self.logging.info("Total # of mapping errors : %d" % self.mapping_errors)
+        self.logging.info("+           Total # of mapping errors : %d" % self.mapping_errors)
 
-        self.logging.info("Total # of \'no mapping rule\' errors : %d" % self.no_mapping_rule_errors)
+        self.logging.info("+           Total # of \'no mapping rule\' errors : %d" % self.no_mapping_rule_errors)
 
-        self.logging.info("Total # cells mapped : %d" % self.mapped_cells)
+        self.logging.info("+           Total # cells mapped : %d" % self.mapped_cells)
 
-        self.logging.info("Total # of triples serialized : %d" % self.triples_serialized)
+        self.logging.info("+           Total # of triples serialized : %d" % self.triples_serialized)

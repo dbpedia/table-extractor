@@ -1,4 +1,5 @@
 import lxml.html as html
+import re
 
 import Mapper
 import Table
@@ -20,6 +21,8 @@ class HtmlTableParser:
 
         self.tables = []
         self.current_html_table = None
+
+        self.headers_not_mapped = {}
 
         # statistics regarding a resource
         self.tables_num = 0
@@ -87,10 +90,6 @@ class HtmlTableParser:
             if tab.headers:
                 self.logging.info("Headers Found")
                 self.refine_headers(tab)
-                self.print_headers(tab)
-
-                self.associate_super_and_sub_headers(tab)
-                self.encode_headers(tab)
 
                 self.extract_data(tab)
                 self.refine_data(tab)
@@ -102,9 +101,20 @@ class HtmlTableParser:
                     self.utils.data_extracted += tab.cells_refined
                     self.utils.rows_extracted += tab.data_refined_rows
 
-                    map_tool = Mapper.Mapper(self.chapter, self.graph, self.topic, self.resource,
+                    mapper = Mapper.Mapper(self.chapter, self.graph, self.topic, self.resource,
                                              tab.data_refined, 'html', self.utils, tab.table_section)
-                    map_tool.map()
+                    mapper.map()
+
+                    # Compose headers not mapped for this resource
+                    for header in mapper.headers_not_mapped:
+                        if header not in self.headers_not_mapped:
+                            # Compose a list  with the name of the current resource [0] and with values in [1]
+                            support_list = [self.resource, mapper.headers_not_mapped[header]]
+                            '''
+                            result Eg in self.headers_not_mapped = {'header1': ['resource1',[value0,value1...]], \
+                                                                'header2': ['resource2',[value0, value1, value2...]]...}
+                            '''
+                            self.headers_not_mapped[header] = support_list
                 else:
                     self.logging.debug("e3 - UNABLE TO EXTRACT DATA - resource: %s" % self.resource)
                     print("e3 UNABLE TO EXTRACT DATA")
@@ -251,6 +261,13 @@ class HtmlTableParser:
 
         self.remove_html_encode_errors(tab.headers, u'\xa0')
 
+        self.remove_citations(tab)
+
+        self.print_headers(tab)
+
+        self.associate_super_and_sub_headers(tab)
+
+        self.encode_headers(tab)
         print("Headers refined")
 
     def print_headers(self, tab):
@@ -277,6 +294,29 @@ class HtmlTableParser:
         for row in headers:
             for header in row:
                 header['th'] = header['th'].replace(error, u'')
+
+    def remove_citations(self, tab):
+        """
+        Method used to remove citations from the headers. Eg in some wiki table, users use to explain the headers
+        they chose using citations to refer to other web pages or to a simple text explanation.
+        Take a look at https://it.wikipedia.org/wiki/Elezioni_politiche_italiane_del_1968 :
+        in the first table you can find as last header "Segretario [1]". After remove_citations(), the new string would
+        be "Segretario".
+        It is useful to remove citations as they are used only in few tables, otherwise you can't find them in others.
+        So, if you have designed mapping rules for the header Segretario, all data under Segretario[1] wouldn't be
+        mapped without remove_citation().
+        :param tab: Table class instance containing the table which headers have to be refined from citations
+        :return: nothing
+        """
+        for row in tab.headers:
+            for header in row:
+                try:
+                    citations = re.findall(r'\[\d+\]', header['th'])
+                    if citations:
+                        for citation in citations:
+                            header['th'] = header['th'].replace(citation, '')
+                except TypeError:
+                    print("TypeError searching for citations")
 
     def associate_super_and_sub_headers(self, tab):
         try:
@@ -325,14 +365,16 @@ class HtmlTableParser:
                 data_row = []
                 for cell in table_data:
                     data_cell = []
-                    td = self.find_td_text(cell)
-                    if td:
-                        data_cell.append(td)
                     anchors = self.find_anchors(cell)
                     if anchors:
                         for anc in anchors:
                             if anc:
                                 data_cell.append(anc)
+
+                    td = self.find_td_text(cell)
+                    if td:
+                        data_cell.append(td)
+
                     if not data_cell:
                         data_cell.append({'td': '-'})
                     data_row.append(data_cell)
@@ -370,6 +412,8 @@ class HtmlTableParser:
                 cell_text = cell_text.replace(u'\xa0', u' ')
         if cell_text:
             data_cell['td'] = cell_text
+        else:
+            data_cell = None
 
         return data_cell
 

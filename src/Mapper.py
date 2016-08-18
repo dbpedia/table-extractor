@@ -126,15 +126,21 @@ class Mapper:
 
                         cell_predicate = rdflib.URIRef(self.dbo.President)  # http://dbpedia.org/ontology/President
 
-                        if len(value) == 2 and self.mode == 'json':
+                        if len(value) == 2:
                             cell_object = value[1]  # value: eg [u'New York (stato)', u'Franklin D. Roosevelt']
                         else:
                             cell_object = value[0]
                             comma_index = cell_object.find(",")
-                            if comma_index:
+                            if comma_index >= 0:
                                 cell_object = cell_object[:comma_index]
                         cell_object = cell_object.replace(" ", "_")
-                        cell_object = rdflib.URIRef(self.dbr + cell_object)
+                        res_exists = self.utils.ask_if_resource_exists(self.dbr + cell_object)
+                        if res_exists:
+                            cell_object = rdflib.URIRef(self.dbr + cell_object)
+                        else:
+                            cell_object = cell_object.replace("_", " ")
+                            # TODO lang= ???
+                            cell_object = rdflib.Literal(cell_object, datatype=rdflib.namespace.XSD.string)
 
                     elif 'Candidati - Vicepresidente' in cell or 'Candidato Vicepresidente' in cell:
                         cell_subject = row  # row
@@ -149,8 +155,13 @@ class Mapper:
                             comma_index = cell_object.find(",")
                             if comma_index:
                                 cell_object = cell_object[:comma_index]
-                        cell_object = cell_object.replace(" ", "_")
-                        cell_object = rdflib.URIRef(self.dbr + cell_object)
+                        res_exists = self.utils.ask_if_resource_exists(self.dbr + cell_object)
+                        if res_exists:
+                            cell_object = rdflib.URIRef(self.dbr + cell_object)
+                        else:
+                            cell_object = cell_object.replace("_", " ")
+                            # TODO lang= ???
+                            cell_object = rdflib.Literal(cell_object, datatype=rdflib.namespace.XSD.string)
 
                     elif cell == 'Candidati - Partito' or cell == 'Partito' or cell == 'Lista':
                         cell_subject = row  # row
@@ -162,9 +173,14 @@ class Mapper:
                         basestr = isinstance(cell_object, basestring)
                         if basestr:
                             if "Stati Uniti" in cell_object or "Stati_Uniti" in cell_object:
-                                cell_object = cell_object[:-1] + " d'America)"
-                            cell_object = cell_object.replace(" ", "_")
+                                cell_object = cell_object[:-1] + "_d'America)"
+                        res_exists = self.utils.ask_if_resource_exists(self.dbr + cell_object)
+                        if res_exists:
                             cell_object = rdflib.URIRef(self.dbr + cell_object)
+                        else:
+                            cell_object = cell_object.replace("_", " ")
+                            # TODO lang= ???
+                            cell_object = rdflib.Literal(cell_object, datatype=rdflib.namespace.XSD.string)
 
                     elif cell == 'Grandi elettori - #' or cell == 'Grandi elettori - n.' \
                             or cell == 'Grandi elettori - Num.' or cell == 'Grandi Elettori ottenuti' \
@@ -182,18 +198,16 @@ class Mapper:
                         cell_subject = row  # row
 
                         cell_predicate = rdflib.URIRef(self.dbo.popularVote)  # popular vote number
-
-                        if value[0] >= 0:
-                            if type(value[0]) is float:
-                                test = str(value[0])
-                                if '.' in test:
-                                    value[0] = test.replace('.', '')
-                                cell_object = int(value[0])
-                                cell_object = rdflib.Literal(cell_object,
-                                                             datatype=rdflib.namespace.XSD.positiveInteger)  # value (number)
+                        if ' ' in value[0]:
+                            value[0] = value[0].replace(' ', '')
+                        if '.' in value[0]:
+                            value[0] = value[0].replace('.', '')
+                        if self.is_int(value[0]):
+                            value[0] = int(value[0])
+                            cell_object = rdflib.Literal(value[0], datatype=rdflib.namespace.XSD.positiveInteger)
 
                     elif cell == 'Voti - %' or cell == '?% voti' or cell == '% voti' \
-                            or cell == 'Percentuale' or cell == '%' or cell == '?%' in cell:
+                            or cell == 'Percentuale' or cell == '%' or cell == '?%' or cell == 'Voti (%)':
                         cell_subject = row  # row
 
                         cell_predicate = rdflib.URIRef(self.dbp.pvPct)  # pvPct stands for popular vote, percentage
@@ -203,6 +217,7 @@ class Mapper:
                             value[0] = value[0].replace(",", ".")
 
                         if self.is_float(value[0]):
+                            value[0] = float(value[0])
                             cell_object = rdflib.Literal(value[0], datatype=rdflib.namespace.XSD.float)  # value
                         basestr = isinstance(value[0], basestring)
                         if basestr:
@@ -224,7 +239,6 @@ class Mapper:
                         if cell not in self.headers_not_mapped.keys():
                             # Add to the list of headers with no mapping rules defined the current header
                             self.headers_not_mapped[cell] = value
-
 
                     # if s,p,o are set for this cell, add them to the graph
                     if cell_predicate and cell_object and cell_subject:
@@ -257,5 +271,14 @@ class Mapper:
         try:
             float(value)
             return True
-        except:
+        except Exception as e:
+            print e
+            return False
+
+    def is_int(self, value):
+        try:
+            int(value)
+            return True
+        except Exception as e:
+            print e
             return False

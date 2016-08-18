@@ -33,25 +33,25 @@ def main():
     topic = p_tester.topic
     single_res = p_tester.single_res
     mode = p_tester.mode
-    res_list_filename = None
+
     utils = Utilities.Utilities(language, topic)
 
+    res_list_filename = None
     if not single_res:
         # creating a selector object, which is used to retrieve resources of interest (it depends on the scope)
         #  from dbpedia/wikipedia/jsonpedia
-        select = Selector.Selector(language, where_clause, topic, utils)
-
+        selector = Selector.Selector(language, where_clause, topic, utils)
         # Collecting resources of given topic
-        select.collect_resources()
+        selector.collect_resources()
         # setting the resources list filename
-        res_list_filename = select.get_res_list_filename()
+        res_list_filename = selector.get_res_list_filename()
 
     # Create an Analyzer
-    analyzr = Analyzer.Analyzer(language, topic, utils, mode, res_list_filename, single_res)
+    analyzer = Analyzer.Analyzer(language, topic, utils, mode, res_list_filename, single_res)
     # Analyze resources given in res_list_filename
-    analyzr.analyze()
+    analyzer.analyze()
     # Serialize the RDF graph created
-    analyzr.serialize()
+    analyzer.serialize()
     # Print final report for the current extraction, then exits
     utils.print_report()
 
