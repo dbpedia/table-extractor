@@ -1,0 +1,293 @@
+# coding=utf-8
+
+import sys
+
+import rdflib
+
+import HtmlTableParser
+import JsonTableParser
+
+__author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
+
+
+class Analyzer:
+    """
+    Analyzer class takes resources from a list and call a TableParser (html |json) over them.
+
+    It takes resources from .txt file (generally created by Selector objects) or from a string if a single_resource is
+     involved.
+    Therefore a Table Parser object (Html or Json), it depends on mode chosen, is called over their wiki page
+     representation.
+     This representation is retrieved by a utilities object (calling json_object_getter() or html_object_getter()).
+    Once the list of resources is finished or the analysis of a resource is done some useful statistics values are set.
+    Some of them are passed to the utilities object (res_analyzed), as they are useful to print a final cumulative
+     report, while some others (headers with no mapping rules found) are just print out and to the log.
+    They are used to give to the user an idea of which headers he can find in tables but which has not yet a
+     corresponding mapping rule. This is so important, as tables in wiki pages (even in pages with same topic
+     or describing the same phenomenons) are as well heterogeneous as the taste of users who wrote them.
+
+    Public Methods:
+        -analyze(): it is used to analyze a list of resources(or a single resource) passed once analyzer has been
+            initialized. Once you have created Analyzer object simply call this method to begin the analysis.
+            This method doesn't return nothing by itself as useful informations are printed out both in the log and in the
+            console.
+
+        -serialize(): method used to serialize the RDF graph fulfilled with triples during analysis (mapping) phase.
+            it creates a .ttl file (serialization of the RDF graph).
+            Filename and directory (it should be /Extractions) are reported in the log.
+            Please call serialize() after analyze() method!
+    """
+
+    def __init__(self, chapter, topic, utils, mode="html", filename=None, single_res=None):
+        """
+        Analyzer object takes resources from a list and call a TableParser (html |json) over them.
+
+        Please, after initialization, use the analyze() method to start the analysis and the serialize() one to
+         serialize the RDF graph.
+        During the initialization a rdf graph is created (the class need rdflib to work) and a iterator is set over the
+         list of resources or over the single_resource passed.
+
+        Arguments:
+        :param chapter (str): a two alpha-characters string representing the chapter of wikipedia user chose.
+        :param topic (str): a string representing the common topic of the resources considered.
+        :param utils (Utilities object): utilities object used to access common log and to set statistics values used to
+                print a final report.
+        :param mode (str): DEFAULT:'html' string used to choose HtmlTableParser or JsonTableParser.
+            it can be 'html' or 'json'.
+        :param filename (str): DEFAULT:None filename of a resources' list. It should be a .txt file containing name
+            of wiki pages (with spaces replaced by underscores Eg. Elezioni_amministrative_italiane_del_2016).
+            Note that filename is mutual exclusive with single_res (if one is set, the other should not)
+        :param single_res (str): DEFAULT:None string with a single resource name, as for list of resources file,
+            the name should have spaces replaced by underscores Eg. Elezioni_amministrative_italiane_del_2016
+            Note that single_res is mutual exclusive with filename (if one is set, the other should not)
+
+        """
+        # parameters are registered in the object
+        self.chapter = chapter
+        self.topic = topic
+        self.utils = utils
+        self.logging = self.utils.logging  # just for reading comfort
+        self.filename = filename
+        self.single_res = single_res
+        self.mode = mode
+
+        # Reporting which mode has been chosen
+        self.logging.info(self.mode + " mode activated.. ")
+
+        # These values are used to statistics purposes
+        self.res_analyzed = 0  # number of resources correctly analyzed
+        self.total_table_num = 0  # Extraction tables number
+        self.total_headers_not_mapped = {}  # Extraction headers with no mapping rules found
+
+        self.res_list = None
+
+        # setup a list of resources  from the file (filename) passed to __init__
+        if self.filename:
+                self.open_stream()
+        else:
+            # if self.filename == None, the single_res should be set, so use a iterator over it.
+            self.res_iterator = iter([self.single_res])
+
+        # boolean value to check if others lines are in the list file
+        self.lines_to_read = True
+
+        # Set a RDF graph, using rdflib. Ensure to have rdflib installed!
+        self.graph = rdflib.Graph()
+
+    def open_file(self):
+        """
+        open_file is used to open a input stream from a file.
+        Filename has to be set in self.filename, and the file should exists or an IOError Exception is raised.
+        :return: the function returns lines from the file opened.
+        """
+        try:
+            # open file in read mode
+            file_opened = open(self.filename, 'r')
+            return file_opened.readlines()
+        except IOError:
+            print "IOError opening the file: " + str(self.filename)
+
+    def setup_iterator(self):
+        """
+        setup_iterator tries to make a iterable object from self.res_list.
+
+        Note: res_list should be set to a list of string (use open_file() method)
+        :return:
+        """
+        try:
+            res_iterator = iter(self.res_list)
+            return res_iterator
+        except TypeError:
+            print "Check file's existence. "
+            sys.exit(0)
+
+    def open_stream(self):
+        """
+        open_stream() is used to set res_list (with a stream coming from file) and a res_iterator (see setup_iterator())
+
+        If filename is set, setup res_list with a input stream coming from file (filename) and res_iterator with
+         setup_iterator().
+        :return: nothing
+        """
+        if self.filename:
+            # set lines to be read
+            self.res_list = self.open_file()
+            # set the iterator from that self.res_list
+            self.res_iterator = self.setup_iterator()
+        else:
+            print " File name not set, please check it. "
+            sys.exit(0)
+
+    def analyze(self):
+        """
+        This method iterates over a list of resources and setup a TableParser on a html|json representation of it.
+
+        Then it uses the analyze_tables() method of Table Parsers to start the analysis process for tables of current
+            resource.
+        Finally, once the list of resources is empty, the method set some statistics value and print out headers with no
+            adequate mapping rules.
+        This last feature is useful to find out headers in tables of a specific topic with a name user or
+         developer had not considered (to improve data mapped)
+        :return: nothing
+        """
+
+        # lines_to_read is used to know when the iterator is finished.It is set to False once StopIteration is raised
+        while self.lines_to_read:
+
+            try:
+                # set resource to the next element in the iterator
+                resource = self.res_iterator.next()
+                # delete newline tag from the resource name
+                resource = resource.replace("\n", "")
+                print("Analyzing " + str(resource))
+                self.logging.info("Analyzing " + str(resource))
+                # update res_analyzed index
+                self.res_analyzed += 1
+
+                if resource:
+                    """
+                    Depending on self.mode we get a representation of the selected resource (html|json)].
+                    Therefore a corresponding Table Parser is created and tables for the current resources are analyzed
+                     using TableParser.analyze_tables().
+
+                    """
+
+                    if self.mode == "html":
+                        """
+                        If mode == html, a html doc tree (see http://lxml.de/lxmlhtml.html for documentation) is
+                         retrieved using utils.html_object_getter(resource).
+
+                        Finally there is a part of code used to compose a dictionary containing all the headers for
+                         which the Mapper object hasn't found an adequate mapping rule.
+                        """
+                        html_doc_tree = self.utils.html_object_getter(resource)
+                        if html_doc_tree:
+                            """
+                            Then a HtmlTableParser object is created and the tables for the current resource are
+                                analyzed with HtmlTableParser.analyze_tables() method.
+                            """
+                            html_parser = HtmlTableParser.HtmlTableParser(html_doc_tree, self.chapter, self.graph,
+                                                                          self.topic, resource, self.utils)
+                            html_parser.analyze_tables()
+
+                            """
+                            Finally there is a part of code used to compose a dictionary containing all the headers for
+                                which the Mapper object hasn't found an adequate mapping rule.
+                            """
+                            # Add headers not mapped and not already present in the list to total_headers_not_mapped
+                            for header in html_parser.headers_not_mapped:
+                                if header not in self.total_headers_not_mapped:
+                                    self.total_headers_not_mapped[header] = html_parser.headers_not_mapped[header]
+
+                            # Add to the total the number of tables found for this resource
+                            self.total_table_num += html_parser.tables_num
+
+                    elif self.mode == "json":
+                        # if mode == json, a json representation is retrieved with utils.json_object_getter()
+                        json_object = self.utils.json_object_getter(resource, 'jsonpedia_sections')
+                        # then an instance of Json Table Parser is created passing the json object just set
+                        t_parser = JsonTableParser.JsonTableParser(json_object, self.chapter, self.graph, self.topic,
+                                                                   resource)
+                        t_parser.analyze_tables()
+
+            except StopIteration:
+                self.lines_to_read = False
+                self.utils.res_analyzed = self.res_analyzed
+
+                # Print out and in the log every header cell without mapping rule
+                print("These are -headers- without mapping rules:")
+                self.logging.info("These are -headers- without mapping rules:")
+
+                for header in self.total_headers_not_mapped:
+
+                    print("- Header:  -%s- , Value example %s, Resource: %s"
+                          % (header, self.total_headers_not_mapped[header][1],
+                             self.total_headers_not_mapped[header][0]))
+                    """
+                    This is an Example of header not mapped. As key of the dict you can find the header.
+                    As key's value there is a list with an example of  resource involved (list[0]) and possible values
+                    for that header (list[1]).
+                    The following is an actual possible dictionary value for this kind of structure
+                    {'Stato di origine' :["Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008",
+                                            ['Illinois', 'Illinois']]}
+                    """
+                    self.logging.info("- Header:  -%s- , : Value example %s, Resource: %s"
+                                      % (header, self.total_headers_not_mapped[header][1],
+                                         self.total_headers_not_mapped[header][0]))
+
+                self.logging.info("End Of File reached, now you can serialize the graph")
+                print (" End Of File reached")
+
+    def get_filename(self):
+        """
+        It returns the filename set to this analyzer.
+        It is intended to be a txt file with a list of wiki resources divided by newline tag.
+        :return: filename
+        """
+        return self.filename
+
+    def serialize(self):
+        """
+        Call serialize() when you want to serialize the RDF graph created with a Analyzer object.
+
+        The graph should be fulfilled with triples during the mapping process, so analyze() method should be called
+         before serialize() otherwise the graph would be empty.
+        Messages are printed in console and in log file to update the user on the result.
+        :return: nothing
+        """
+        # serialize the graph if only contains triples
+        if len(self.graph) > 0:
+
+            # get the current directory using utils.get_current_dir()
+            cur_dir = self.utils.get_current_dir()
+
+            # if this Extraction is over a single resource use single_res joined with the resource name as self.topic
+            if self.topic == 'single_resource':
+                self.topic = "single_res_" + str(self.single_res)
+
+            # compose filename of the .ttl file
+            filename = self.utils.get_date_time() + "_T_Ext_" + self.mode + '_' + self.chapter + '_' +\
+                self.topic + ".ttl"
+            # join path of execution with that of ../Extraction
+            destination = self.utils.join_paths(cur_dir, '../Extractions/'+filename)
+
+            # setting the rdf_format
+            rdf_format = "turtle"
+            # serialize the graph using graph.serialize. It needs destination and the rdf format as parameters
+            self.graph.serialize(destination, rdf_format)
+
+            # Writing down triples number in the log
+            self.logging.info('Triples in the graph: ' + str(len(self.graph)))
+
+            # updating triples serialized for report purpose
+            self.utils.triples_serialized = len(self.graph)
+
+            # show the user result of serialization both in log and in console
+            print('GRAPH SERIALIZED, filename: ' + destination)
+            self.logging.info('Graph serialized, filename: ' + destination)
+
+        # if no triple is in graph
+        else:
+            print('Something went wrong: Nothing to serialize')
+            self.logging.warn('Nothing to serialize, you have to choose right scope or resource, \
+                            or something went wrong scraping tables')

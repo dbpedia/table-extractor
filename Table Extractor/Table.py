@@ -1,5 +1,10 @@
+# coding=utf-8
 
 class Table:
+    """
+    Table class is a support class used by a Parser to manage a table.
+    It collects table statistics and method to work over a table structure
+    """
 
     def __init__(self):
 
@@ -23,6 +28,11 @@ class Table:
         self.data_filtered = []
 
     def count_data_cells_and_rows(self):
+        """
+        Method which set number of data cells and rows for this table
+
+        :return:
+        """
         data_num = 0
         rows = 0
         rows = len(self.data_refined)
@@ -31,4 +41,5 @@ class Table:
 
         self.cells_refined += data_num
         self.data_refined_rows += rows
+
 

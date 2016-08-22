@@ -1,3 +1,5 @@
+# coding=utf-8
+
 import urllib
 import json
 import time
@@ -13,41 +15,67 @@ __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
 
 class Utilities:
-    # TODO DOCSTRINGS
+    """
+    Utilities is a class containing a lot of methods and attributes used by the others class and modules.
+    It requires only a 2 alpha-characters string representing a wiki chapter and a topic of interest.
+    Topic is used mainly in reporting and composing filename for log while chapter is used to correctly address the outer
+    service calls.
+
+    Methods usable by outer scopes are:
+    - setup_log()
+    - test_dir_existence(directory_to_test) # to tests if a directory exists in current filesystem
+    - get_current_dir() # returns current directory
+    - join_paths(path1, path2) # use os.path to join tho relative paths
+
+    - json_object_getter(resource, struct='jsonpedia') # retrieve a json representation of the requested resource
+    - html_object_getter(resource) # return a html representation of the requested resource
+
+    - tot_res_interested(query) # return the total number of the resources selected with the Sparql query passed as a parameter.
+    - dbpedia_res_list(query, offset) # return 1000 resources at a time of the scope identified by 'query'
+    - ask_if_resource_exists(resource) # test if a resource currently exists in the dbpedia endpoint RDF graph of reference.
+    - get_date_time() # return YEAR_MONTH_DAY_HOUR_MINUTES
+    - get_date() # return YEAR_MONTH_DAY
+    - print_report() # print in the log metrics to evaluate efficiency of the script
+
     """
 
-    """
+    def __init__(self, chapter, topic):
 
-    def __init__(self, lang, topic):
-
-        self.lang = lang
+        self.chapter = chapter
         self.topic = topic
 
+        # test if the directory ../Extractions exists (or create it)
+        self.test_dir_existence('../Extractions')
+
+        # First of all setup the log and initialize it
         self.setup_log()
 
-        self.jsonpedia_call_format = settings.jsonpedia_call_format
-        self.jsonpedia_section_format = settings.jsonpedia_section_format
-        self.jsonpedia_tables_format = settings.jsonpedia_tables_format
-        self.call_format_sparql = settings.call_format_sparql
-
-        self.jsonpedia_base_url = settings.jsonpedia_base_url
-        self.jsonpedia_lan = lang + ":"
-        self.dbpedia = None
-
-        self.time_to_attend = settings.time_to_attend_between_tries
-        self.max_attempts = settings.MAX_ATTEMPTS
-
-        self.dbpedia_sparql_url = self.dbpedia_selection()
-        self.html_format = "https://" + lang + ".wikipedia.org/wiki/"
+        # These values are used to compose calls to services as JsonPedia or Sparql endpoints or to a html wiki page
+        self.jsonpedia_call_format = settings.JSONPEDIA_CALL_FORMAT
+        self.jsonpedia_section_format = settings.JSONPEDIA_SECTION_FORMAT
+        self.jsonpedia_tables_format = settings.JSONPEDIA_TABLES_FORMAT
+        self.jsonpedia_base_url = settings.JSONPEDIA_BASE_URL
+        self.jsonpedia_lan = self.chapter + ":"
+        self.call_format_sparql = settings.SPARQL_CALL_FORMAT
+        self.html_format = "https://" + self.chapter + ".wikipedia.org/wiki/"
+        # self.res_lost_jsonpedia is used to count how many resources are lost due to jsonpedia service problems
         self.res_lost_jsonpedia = 0
 
-        self.parser = etree.HTMLParser(encoding='utf-8')
+        # Parameters used in methods which need internet connection
+        self.time_to_attend = settings.SECONDS_BTW_TRIES  # seconds to sleep between two internet service call
+        self.max_attempts = settings.MAX_ATTEMPTS  # max number of internet service' call tries
 
-        self.test_dir_existance('../Extractions')
+        # self.dbpedia is used to contain which dbpedia to use Eg. dbpedia.org
+        self.dbpedia = None
+        # use dbpedia_selection to set self.dbpedia and self.dbpedia_sparql_url
+        self.dbpedia_sparql_url = self.dbpedia_selection()
+
+        # Instancing a lxml HTMLParser with utf-8 encoding
+        self.parser = etree.HTMLParser(encoding='utf-8')
 
         self.logging = logging
 
-        # Variables used in final report see print_report()
+        # Variables used in final report, see print_report()
         self.res_analyzed = 0
         self.res_collected = 0
         self.data_extracted = 0
@@ -69,18 +97,21 @@ class Utilities:
         # getting time and date
         current_date_time = self.get_date_time()
 
-        self.test_dir_existance('../Extractions')
+        # obtain the current directory
         current_dir = self.get_current_dir()
-        filename = "LOG_T_Ext_" + self.lang + '_' + self.topic + "_(" + current_date_time + ")" + ".log"
+        # composing the log filename as current_date_and_time + _LOG_T_EXT + chapter_chosen + topic_chosen
+        filename = current_date_time + "_LOG_T_Ext_" + self.chapter + '_' + self.topic + ".log"
+        # composing the absolute path of the log
         path_desired = self.join_paths(current_dir, '../Extractions/' + filename)
 
+        # configuring logger
         logging.basicConfig(filename=path_desired, filemode='w', level=logging.DEBUG,
                             format='%(levelname)-3s %(asctime)-4s %(message)s', datefmt='%m/%d %I:%M:%S %p')
 
-        # brief stat at the beginning of log, it indicates the scope of data and wiki/dbpedia chapter
-        logging.info("You're analyzing wiki tables, wiki chapter: " + self.lang + ", topic: " + self.topic)
+        # brief stat at the beginning of log, it indicates the  wiki/dbpedia chapter and topic selected
+        logging.info("You're analyzing wiki tables, wiki chapter: " + self.chapter + ", topic: " + self.topic)
 
-    def test_dir_existance(self, directory):
+    def test_dir_existence(self, directory):
         current_dir = self.get_current_dir()
         dir_abs_path = self.join_paths(current_dir, directory)
 
@@ -103,26 +134,32 @@ class Utilities:
 
     def dbpedia_selection(self):
         """
-
-        :return:
+        Method used to set self.dbpedia and to return the URL to the correct dbpedia sparql endpoint depending on the
+        chapter (self.chapter) used.
+        :return: URL to the correct dbpedia sparql endpoint.
         """
-        if self.lang != "en":
-            self.dbpedia = self.lang + ".dbpedia.org"
+        if self.chapter != "en":
+            self.dbpedia = self.chapter + ".dbpedia.org"
         else:
             self.dbpedia = "dbpedia.org"
         return "http://" + self.dbpedia + "/sparql?default-graph-uri=&query="
 
     def url_composer(self, query, service):
         """
-        This function is used to compose a url to call some std services used by the selector,
-        such as sparql endpoints or as jsonpedia rest service.
-        Before returning the url composed, the method replaces
+        This function is used to compose a url to call some web services, such as sparql endpoints or jsonpedia
+        rest service.
+
         :param query: is the string used in some rest calls. For a jsonpedia service is typically the resource name.
         :param service: type of service you request (jsonpedia, dbpedia sparql endpoint..)
         :return url: the url composed
         """
-        # TODO conditions for dbpedia/jsonpedia services
+        # use quote_plus method from urllib to encode special character (must to do with web service)
         query = urllib.quote_plus(query)
+
+        """
+        The following if clause are differentiated by service requested Eg. 'dbpedia', 'jsonpedia'...
+            but in all the cases url is composed using pre formatted string along with the query
+        """
         if service == 'dbpedia':
             url = self.dbpedia_sparql_url + query + self.call_format_sparql
 
@@ -144,15 +181,19 @@ class Utilities:
 
     def json_answer_getter(self, url_passed):
         """
-        json_answer_getter is a method used to call a REST service and to parse the answer in json.
+        json_answer_getter is a method used to call a web service and to parse the answer in json.
         It returns a json parsed answer if everything is ok
         :param url_passed: type string,is the url to reach for a rest service
-        :return json_parsed: the method returns the answer parsed in json
+        :return json_parsed: the method returns the JSON parsed answer to the call to JSONpedia
         """
         try:
+            # open a call with urllib.urlopen and passing the URL
             call = urllib.urlopen(url_passed)
+            # read the answer
             answer = call.read()
+            # decode the answer in json
             json_parsed = json.loads(answer)
+            # return the answer parsed
             return json_parsed
         except IOError:
             print ("Try, again, some problems due to Internet connection, url: " + url_passed)
@@ -160,7 +201,7 @@ class Utilities:
         except ValueError:
             print ("Not a JSON object.")
             return "ValueE"
-        except:
+        except Exception as e:
             print "Exception with url:" + str(url_passed)
             return "GeneralE"
 
@@ -180,23 +221,45 @@ class Utilities:
             print "Exception with url:" + str(url_passed)
             return "General Error"
 
-    def json_object_getter(self, resource, struct='jsonpedia'):
+    def json_object_getter(self, resource):
         """
-        :param resource:
-        :param struct:
-        :return:
+        Method used to retrieve a JSON representation of the wiki page (from JSONpedia) of 'resource' parameter.
+
+        :param resource: (str) the name of resource which JSON representation we want to get.
+                Eg. "Elezioni_amministrative_italiane_del_2016"
+        :return json_answer: is the JSON parsed answer to the call to JSONpedia service. If everything is ok it would be
+            the JSON wrapped representation of the resource's wiki page
         """
-        jsonpedia_url = self.url_composer(resource, struct)
+        json_answer = None
+
+        # compose the URL to make the call to the JSONpedia web service
+        jsonpedia_url = self.url_composer(resource, 'jsonpedia')
+
+        """
+        set json_object_state to 'try'.
+        json_object_state is a string used to track the status of object_state. Once the web server answer, this answer
+         is tested in order be sure of its correctness. json_object_state can be 'try','JSON object well formed','Invalid page metadata',
+         'Expected DocumentElement found ParameterElement', 'Expected DocumentElement found ListItem',
+         'Expected DocumentElement found TableCell'  (see test_json_result())
+
+        """
         json_object_state = 'try'
+
         while json_object_state == 'try':
             try:
+                # call to JSONpedia service  using json_answer_getter(URL)
                 json_answer = self.json_answer_getter(jsonpedia_url)
+
                 if type(json_answer) != str:
+                    # test if json answer well formed using test_json_result(json_answer)
                     json_object_state = self.test_json_result(json_answer)
                 else:
+
+                    # waiting time_to_attend before trying again
                     time.sleep(self.time_to_attend)
             except:
                 print("Error during json_object_getter")
+        # if json_object_state is not equal to 'try' return json_answer
         print(json_object_state)
         return json_answer
 
@@ -225,9 +288,12 @@ class Utilities:
         return html_answer
 
     def test_json_result(self, json_obj):
+        # JSONPedia returns a message part if there are problems with that resource, or with the service itself
         if 'message' in json_obj.keys():
-            # TODO think about the possibility of write down problems encountered
+            # keep and set message
             message = json_obj['message']
+
+            # Following different values are all possible JSONpedia fatal errors for a specific resource.
             if message == u'Invalid page metadata.':
                 self.res_lost_jsonpedia += 1
                 return 'Invalid page metadata'
@@ -244,9 +310,12 @@ class Utilities:
                 self.res_lost_jsonpedia += 1
                 return 'Expected DocumentElement found TableCell'
 
+            # if the problem regarding server traffic on JSONpedia the length of json_obj is == 3
             elif len(json_obj) == 3:
                 print "Problems related to JSONpedia service :" + str(json_obj) + " - RETRYING"
                 return 'try'
+
+        # if 'message' is not in json_obj the object is correctly formed
         else:
             return 'JSON object well formed'
 
@@ -277,15 +346,21 @@ class Utilities:
 
     def dbpedia_res_list(self, query, offset):
         """
-        This method retrieve a list of 1000 resources.
+        This method retrieve a list of 1000 resources using a SPARQL query.
+        It composes the URL to be called, and then retrieve the JSON answer.
+        Finally returns the result
 
-        :param query:
+        :param query: SPARQL query
+        Eg. 'SELECT distinct ?s as ?res WHERE{?s a <http://dbpedia.org/ontology/Election>} LIMIT 1000 OFFSET '
         :param offset: is the offset served to sparql service in order to get res from "offset" to "offset"+1000
-        :return: res_list is a vector of resources, typically 1000 resources
+        :return: res_list is a list of resources, typically 1000 resources
         """
         try:
+            # composing the url with the help of url_composer and passing the offset, along with the service required
             url_res_list = self.url_composer(query + str(offset), 'dbpedia')
+            # call to the web service with json_answer_getter(url_res_list) and obtain a json answer
             answer = self.json_answer_getter(url_res_list)
+            # the actual res_list resides in answer['results']['bindings']
             res_list = answer['results']['bindings']
             return res_list
         except:

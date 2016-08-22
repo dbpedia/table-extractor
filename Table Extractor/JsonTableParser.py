@@ -1,3 +1,5 @@
+# coding=utf-8
+
 import logging
 import re
 
@@ -8,6 +10,7 @@ __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
 
 class JsonTableParser:
+    # TODO DOCSTRINGS
     """
     This class is used to analyze the structure of a table in order to extract data.
     It needs a data structure representing a general table.
