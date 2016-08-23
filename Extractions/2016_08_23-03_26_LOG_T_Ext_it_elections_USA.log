@@ -1,0 +1,504 @@
+INFO 08/23 03:26:49 AM You're analyzing wiki tables, wiki chapter: it, topic: elections_USA
+INFO 08/23 03:26:49 AM The file which contains the list of resources is: /Users/macbookpro/PycharmProjects/table-extractor/table_extractor/../Resource lists/2016_08_23_elections_USA_it.txt
+INFO 08/23 03:26:49 AM Resources found and serialized:  52
+INFO 08/23 03:26:49 AM html mode activated..
+INFO 08/23 03:26:49 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940
+INFO 08/23 03:26:49 AM Table under section: Risultati
+INFO 08/23 03:26:49 AM Headers Found
+INFO 08/23 03:26:49 AM Data refined
+INFO 08/23 03:26:49 AM Rows extracted: 5
+INFO 08/23 03:26:49 AM Data extracted for this table: 30
+INFO 08/23 03:26:50 AM Total cell mapped for this table: 27 
+INFO 08/23 03:26:50 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:26:50 AM Total mapping errors: 0 
+INFO 08/23 03:26:50 AM Analyzing Elezioni_parlamentari_negli_Stati_Uniti_d'America_del_2004
+INFO 08/23 03:26:50 AM No Tables found for this resource.
+INFO 08/23 03:26:50 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America
+INFO 08/23 03:26:51 AM No Tables found for this resource.
+INFO 08/23 03:26:51 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004
+INFO 08/23 03:26:51 AM Table under section: Risultati
+INFO 08/23 03:26:51 AM Headers Found
+INFO 08/23 03:26:51 AM Data refined
+INFO 08/23 03:26:51 AM Rows extracted: 8
+INFO 08/23 03:26:51 AM Data extracted for this table: 48
+INFO 08/23 03:26:52 AM Total cell mapped for this table: 42 
+INFO 08/23 03:26:52 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:26:52 AM Total mapping errors: 0 
+INFO 08/23 03:26:52 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1964
+INFO 08/23 03:26:53 AM Table under section: Risultati
+INFO 08/23 03:26:53 AM Headers Found
+INFO 08/23 03:26:53 AM Data refined
+INFO 08/23 03:26:53 AM Rows extracted: 4
+INFO 08/23 03:26:53 AM Data extracted for this table: 24
+INFO 08/23 03:26:53 AM Total cell mapped for this table: 21 
+INFO 08/23 03:26:53 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:26:53 AM Total mapping errors: 0 
+INFO 08/23 03:26:53 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1960
+INFO 08/23 03:26:53 AM Table under section: Risultati
+INFO 08/23 03:26:53 AM Headers Found
+INFO 08/23 03:26:53 AM Data refined
+INFO 08/23 03:26:53 AM Rows extracted: 6
+INFO 08/23 03:26:53 AM Data extracted for this table: 36
+INFO 08/23 03:26:54 AM Total cell mapped for this table: 32 
+INFO 08/23 03:26:54 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:26:54 AM Total mapping errors: 0 
+INFO 08/23 03:26:54 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1968
+INFO 08/23 03:26:55 AM Table under section: Risultati
+INFO 08/23 03:26:55 AM Headers Found
+INFO 08/23 03:26:55 AM Data refined
+INFO 08/23 03:26:55 AM Rows extracted: 4
+INFO 08/23 03:26:55 AM Data extracted for this table: 24
+INFO 08/23 03:26:55 AM Total cell mapped for this table: 23 
+INFO 08/23 03:26:55 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:26:55 AM Total mapping errors: 0 
+INFO 08/23 03:26:55 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972
+INFO 08/23 03:26:55 AM Table under section: Risultati
+INFO 08/23 03:26:55 AM Headers Found
+INFO 08/23 03:26:55 AM Data refined
+INFO 08/23 03:26:55 AM Rows extracted: 7
+INFO 08/23 03:26:55 AM Data extracted for this table: 42
+INFO 08/23 03:26:56 AM Total cell mapped for this table: 36 
+INFO 08/23 03:26:56 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:26:56 AM Total mapping errors: 0 
+INFO 08/23 03:26:56 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976
+INFO 08/23 03:26:57 AM Table under section: Risultati
+INFO 08/23 03:26:57 AM Headers Found
+INFO 08/23 03:26:57 AM Data refined
+INFO 08/23 03:26:57 AM Rows extracted: 9
+INFO 08/23 03:26:57 AM Data extracted for this table: 54
+INFO 08/23 03:26:58 AM Total cell mapped for this table: 45 
+INFO 08/23 03:26:58 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:26:58 AM Total mapping errors: 0 
+INFO 08/23 03:26:58 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1980
+INFO 08/23 03:26:58 AM Table under section: Risultati
+INFO 08/23 03:26:58 AM Headers Found
+INFO 08/23 03:26:58 AM Data refined
+INFO 08/23 03:26:58 AM Rows extracted: 6
+INFO 08/23 03:26:58 AM Data extracted for this table: 36
+INFO 08/23 03:26:59 AM Total cell mapped for this table: 32 
+INFO 08/23 03:26:59 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:26:59 AM Total mapping errors: 0 
+INFO 08/23 03:26:59 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1984
+INFO 08/23 03:27:00 AM Table under section: Risultati
+INFO 08/23 03:27:00 AM Headers Found
+INFO 08/23 03:27:00 AM Data refined
+INFO 08/23 03:27:00 AM Rows extracted: 4
+INFO 08/23 03:27:00 AM Data extracted for this table: 24
+INFO 08/23 03:27:00 AM Total cell mapped for this table: 22 
+INFO 08/23 03:27:00 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:00 AM Total mapping errors: 0 
+INFO 08/23 03:27:00 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1988
+INFO 08/23 03:27:00 AM Table under section: Risultati
+INFO 08/23 03:27:00 AM Headers Found
+INFO 08/23 03:27:00 AM Data refined
+INFO 08/23 03:27:00 AM Rows extracted: 6
+INFO 08/23 03:27:00 AM Data extracted for this table: 36
+INFO 08/23 03:27:01 AM Total cell mapped for this table: 32 
+INFO 08/23 03:27:01 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:01 AM Total mapping errors: 0 
+INFO 08/23 03:27:01 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992
+INFO 08/23 03:27:02 AM Table under section: Risultati
+INFO 08/23 03:27:02 AM Headers Found
+INFO 08/23 03:27:02 AM Data refined
+INFO 08/23 03:27:02 AM Rows extracted: 8
+INFO 08/23 03:27:02 AM Data extracted for this table: 48
+INFO 08/23 03:27:03 AM Total cell mapped for this table: 42 
+INFO 08/23 03:27:03 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:03 AM Total mapping errors: 0 
+INFO 08/23 03:27:03 AM Table under section: Statistiche
+INFO 08/23 03:27:03 AM Headers Found
+INFO 08/23 03:27:03 AM Data refined
+DEBUG 08/23 03:27:03 AM E3 - UNABLE TO EXTRACT DATA - resource: Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992
+INFO 08/23 03:27:03 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996
+INFO 08/23 03:27:03 AM Table under section: Risultati
+INFO 08/23 03:27:03 AM Headers Found
+INFO 08/23 03:27:03 AM Data refined
+INFO 08/23 03:27:03 AM Rows extracted: 8
+INFO 08/23 03:27:03 AM Data extracted for this table: 48
+INFO 08/23 03:27:04 AM Total cell mapped for this table: 41 
+INFO 08/23 03:27:04 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:04 AM Total mapping errors: 0 
+INFO 08/23 03:27:04 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000
+INFO 08/23 03:27:05 AM Table under section: Risultati
+INFO 08/23 03:27:05 AM Headers Found
+INFO 08/23 03:27:05 AM Data refined
+INFO 08/23 03:27:05 AM Rows extracted: 8
+INFO 08/23 03:27:05 AM Data extracted for this table: 48
+INFO 08/23 03:27:06 AM Total cell mapped for this table: 42 
+INFO 08/23 03:27:06 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:06 AM Total mapping errors: 0 
+INFO 08/23 03:27:06 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1956
+INFO 08/23 03:27:06 AM Table under section: Risultati
+INFO 08/23 03:27:06 AM Headers Found
+INFO 08/23 03:27:06 AM Data refined
+INFO 08/23 03:27:06 AM Rows extracted: 6
+INFO 08/23 03:27:06 AM Data extracted for this table: 36
+INFO 08/23 03:27:07 AM Total cell mapped for this table: 29 
+INFO 08/23 03:27:07 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:07 AM Total mapping errors: 0 
+INFO 08/23 03:27:07 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1936
+INFO 08/23 03:27:07 AM Table under section: Risultati
+INFO 08/23 03:27:07 AM Headers Found
+INFO 08/23 03:27:07 AM Data refined
+INFO 08/23 03:27:07 AM Rows extracted: 6
+INFO 08/23 03:27:07 AM Data extracted for this table: 36
+INFO 08/23 03:27:08 AM Total cell mapped for this table: 32 
+INFO 08/23 03:27:08 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:08 AM Total mapping errors: 0 
+INFO 08/23 03:27:08 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948
+INFO 08/23 03:27:08 AM Table under section: Risultati
+INFO 08/23 03:27:08 AM Headers Found
+INFO 08/23 03:27:08 AM Data refined
+INFO 08/23 03:27:08 AM Rows extracted: 7
+INFO 08/23 03:27:08 AM Data extracted for this table: 42
+INFO 08/23 03:27:09 AM Total cell mapped for this table: 38 
+INFO 08/23 03:27:09 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:09 AM Total mapping errors: 0 
+INFO 08/23 03:27:09 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1944
+INFO 08/23 03:27:10 AM Table under section: Risultati
+INFO 08/23 03:27:10 AM Headers Found
+INFO 08/23 03:27:10 AM Data refined
+INFO 08/23 03:27:10 AM Rows extracted: 6
+INFO 08/23 03:27:10 AM Data extracted for this table: 36
+INFO 08/23 03:27:10 AM Total cell mapped for this table: 30 
+INFO 08/23 03:27:10 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:10 AM Total mapping errors: 0 
+INFO 08/23 03:27:10 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1952
+INFO 08/23 03:27:11 AM Table under section: Risultati
+INFO 08/23 03:27:11 AM Headers Found
+INFO 08/23 03:27:11 AM Data refined
+INFO 08/23 03:27:11 AM Rows extracted: 5
+INFO 08/23 03:27:11 AM Data extracted for this table: 30
+INFO 08/23 03:27:11 AM Total cell mapped for this table: 27 
+INFO 08/23 03:27:11 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:11 AM Total mapping errors: 0 
+INFO 08/23 03:27:11 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900
+INFO 08/23 03:27:12 AM Table under section: Risultati
+INFO 08/23 03:27:12 AM Headers Found
+INFO 08/23 03:27:12 AM Data refined
+INFO 08/23 03:27:12 AM Rows extracted: 7
+INFO 08/23 03:27:12 AM Data extracted for this table: 42
+INFO 08/23 03:27:13 AM Total cell mapped for this table: 36 
+INFO 08/23 03:27:13 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:13 AM Total mapping errors: 0 
+INFO 08/23 03:27:13 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904
+INFO 08/23 03:27:13 AM Table under section: Risultati
+INFO 08/23 03:27:13 AM Headers Found
+INFO 08/23 03:27:13 AM Data refined
+INFO 08/23 03:27:13 AM Rows extracted: 7
+INFO 08/23 03:27:13 AM Data extracted for this table: 42
+INFO 08/23 03:27:14 AM Total cell mapped for this table: 36 
+INFO 08/23 03:27:14 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:14 AM Total mapping errors: 0 
+INFO 08/23 03:27:14 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908
+INFO 08/23 03:27:14 AM Table under section: Risultati
+INFO 08/23 03:27:14 AM Headers Found
+INFO 08/23 03:27:14 AM Data refined
+INFO 08/23 03:27:14 AM Rows extracted: 7
+INFO 08/23 03:27:14 AM Data extracted for this table: 42
+INFO 08/23 03:27:15 AM Total cell mapped for this table: 37 
+INFO 08/23 03:27:15 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:15 AM Total mapping errors: 0 
+INFO 08/23 03:27:15 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912
+INFO 08/23 03:27:16 AM Table under section: Risultati
+INFO 08/23 03:27:16 AM Headers Found
+INFO 08/23 03:27:16 AM Data refined
+INFO 08/23 03:27:16 AM Rows extracted: 7
+INFO 08/23 03:27:16 AM Data extracted for this table: 42
+INFO 08/23 03:27:17 AM Total cell mapped for this table: 37 
+INFO 08/23 03:27:17 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:17 AM Total mapping errors: 0 
+INFO 08/23 03:27:17 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1916
+INFO 08/23 03:27:17 AM Table under section: Risultati
+INFO 08/23 03:27:17 AM Headers Found
+INFO 08/23 03:27:17 AM Data refined
+INFO 08/23 03:27:17 AM Rows extracted: 5
+INFO 08/23 03:27:17 AM Data extracted for this table: 30
+INFO 08/23 03:27:18 AM Total cell mapped for this table: 27 
+INFO 08/23 03:27:18 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:18 AM Total mapping errors: 0 
+INFO 08/23 03:27:18 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1928
+INFO 08/23 03:27:18 AM Table under section: Risultati
+INFO 08/23 03:27:18 AM Headers Found
+INFO 08/23 03:27:18 AM Data refined
+INFO 08/23 03:27:18 AM Rows extracted: 5
+INFO 08/23 03:27:18 AM Data extracted for this table: 30
+INFO 08/23 03:27:19 AM Total cell mapped for this table: 27 
+INFO 08/23 03:27:19 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:19 AM Total mapping errors: 0 
+INFO 08/23 03:27:19 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920
+INFO 08/23 03:27:19 AM Table under section: Risultati
+INFO 08/23 03:27:19 AM Headers Found
+INFO 08/23 03:27:19 AM Data refined
+INFO 08/23 03:27:19 AM Rows extracted: 8
+INFO 08/23 03:27:19 AM Data extracted for this table: 48
+INFO 08/23 03:27:20 AM Total cell mapped for this table: 40 
+INFO 08/23 03:27:20 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:20 AM Total mapping errors: 0 
+INFO 08/23 03:27:20 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1924
+INFO 08/23 03:27:21 AM Table under section: Risultati
+INFO 08/23 03:27:21 AM Headers Found
+INFO 08/23 03:27:21 AM Data refined
+INFO 08/23 03:27:21 AM Rows extracted: 6
+INFO 08/23 03:27:21 AM Data extracted for this table: 36
+INFO 08/23 03:27:21 AM Total cell mapped for this table: 33 
+INFO 08/23 03:27:21 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:21 AM Total mapping errors: 0 
+INFO 08/23 03:27:21 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896
+INFO 08/23 03:27:22 AM Table under section: Risultati
+INFO 08/23 03:27:22 AM Headers Found
+INFO 08/23 03:27:22 AM Data refined
+INFO 08/23 03:27:22 AM Rows extracted: 7
+INFO 08/23 03:27:22 AM Data extracted for this table: 42
+INFO 08/23 03:27:23 AM Total cell mapped for this table: 36 
+INFO 08/23 03:27:23 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:23 AM Total mapping errors: 0 
+INFO 08/23 03:27:23 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008
+INFO 08/23 03:27:23 AM Table under section: Risultati
+INFO 08/23 03:27:23 AM Headers Found
+INFO 08/23 03:27:23 AM Data refined
+INFO 08/23 03:27:23 AM Rows extracted: 4
+INFO 08/23 03:27:23 AM Data extracted for this table: 32
+INFO 08/23 03:27:24 AM These headers have not a corresponding mapping rule: 
+INFO 08/23 03:27:24 AM  - Stato di origine , Value Example: ['Illinois', 'Illinois']
+INFO 08/23 03:27:24 AM  - Stati vinti , Value Example: ['Washington_DC', '28 + Washington DC']
+INFO 08/23 03:27:24 AM Total cell mapped for this table: 18 
+INFO 08/23 03:27:24 AM Total 'no mapping rule' : 8 
+INFO 08/23 03:27:24 AM Total mapping errors: 0 
+INFO 08/23 03:27:24 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1892
+INFO 08/23 03:27:24 AM Table under section: Risultati
+INFO 08/23 03:27:24 AM Headers Found
+INFO 08/23 03:27:24 AM Data refined
+INFO 08/23 03:27:24 AM Rows extracted: 6
+INFO 08/23 03:27:24 AM Data extracted for this table: 36
+INFO 08/23 03:27:25 AM Total cell mapped for this table: 32 
+INFO 08/23 03:27:25 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:25 AM Total mapping errors: 0 
+INFO 08/23 03:27:25 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888
+INFO 08/23 03:27:25 AM Table under section: Risultati
+INFO 08/23 03:27:25 AM Headers Found
+INFO 08/23 03:27:25 AM Data refined
+INFO 08/23 03:27:25 AM Rows extracted: 5
+INFO 08/23 03:27:25 AM Data extracted for this table: 30
+INFO 08/23 03:27:26 AM Total cell mapped for this table: 27 
+INFO 08/23 03:27:26 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:26 AM Total mapping errors: 0 
+INFO 08/23 03:27:26 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1880
+INFO 08/23 03:27:26 AM Table under section: Risultati
+INFO 08/23 03:27:26 AM Headers Found
+INFO 08/23 03:27:26 AM Data refined
+INFO 08/23 03:27:26 AM Rows extracted: 5
+INFO 08/23 03:27:26 AM Data extracted for this table: 30
+INFO 08/23 03:27:27 AM Total cell mapped for this table: 25 
+INFO 08/23 03:27:27 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:27 AM Total mapping errors: 0 
+INFO 08/23 03:27:27 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1884
+INFO 08/23 03:27:27 AM Table under section: Risultati
+INFO 08/23 03:27:27 AM Headers Found
+INFO 08/23 03:27:27 AM Data refined
+INFO 08/23 03:27:27 AM Rows extracted: 5
+INFO 08/23 03:27:27 AM Data extracted for this table: 30
+INFO 08/23 03:27:28 AM Total cell mapped for this table: 26 
+INFO 08/23 03:27:28 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:28 AM Total mapping errors: 0 
+INFO 08/23 03:27:28 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932
+INFO 08/23 03:27:28 AM Table under section: Risultati
+INFO 08/23 03:27:28 AM Headers Found
+INFO 08/23 03:27:28 AM Data refined
+INFO 08/23 03:27:28 AM Rows extracted: 8
+INFO 08/23 03:27:28 AM Data extracted for this table: 48
+INFO 08/23 03:27:29 AM Total cell mapped for this table: 42 
+INFO 08/23 03:27:29 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:29 AM Total mapping errors: 0 
+INFO 08/23 03:27:29 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789
+INFO 08/23 03:27:30 AM Table under section: Voto popolare
+INFO 08/23 03:27:30 AM Headers Found
+INFO 08/23 03:27:30 AM Data refined
+INFO 08/23 03:27:30 AM Rows extracted: 2
+INFO 08/23 03:27:30 AM Data extracted for this table: 6
+INFO 08/23 03:27:30 AM Total cell mapped for this table: 6 
+INFO 08/23 03:27:30 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:30 AM Total mapping errors: 0 
+INFO 08/23 03:27:30 AM Table under section: Voto elettorale
+INFO 08/23 03:27:30 AM Headers Found
+INFO 08/23 03:27:30 AM Data refined
+INFO 08/23 03:27:30 AM Rows extracted: 13
+INFO 08/23 03:27:30 AM Data extracted for this table: 78
+INFO 08/23 03:27:31 AM These headers have not a corresponding mapping rule: 
+INFO 08/23 03:27:31 AM  - Stato , Value Example: ['Virginia', 'Virginia']
+INFO 08/23 03:27:31 AM Total cell mapped for this table: 40 
+INFO 08/23 03:27:31 AM Total 'no mapping rule' : 13 
+INFO 08/23 03:27:31 AM Total mapping errors: 0 
+INFO 08/23 03:27:31 AM Table under section: Composizione del collegio elettorale
+INFO 08/23 03:27:31 AM Headers Found
+INFO 08/23 03:27:31 AM Data refined
+INFO 08/23 03:27:31 AM Rows extracted: 6
+INFO 08/23 03:27:31 AM Data extracted for this table: 12
+INFO 08/23 03:27:31 AM These headers have not a corresponding mapping rule: 
+INFO 08/23 03:27:31 AM  - Metodo di selezione dei grandi elettori , Value Example: ["Gli elettori furono investiti dall'assemblea legislativa dello Stato."]
+INFO 08/23 03:27:31 AM  - Stati , Value Example: ['Carolina_del_Sud', 'Connecticut', 'Georgia', 'New_Jersey', 'New_York', 'Carolina del Sud\nConnecticut\nGeorgia\nNew Jersey\nNew York[8]']
+INFO 08/23 03:27:31 AM Total cell mapped for this table: 0 
+INFO 08/23 03:27:31 AM Total 'no mapping rule' : 12 
+INFO 08/23 03:27:31 AM Total mapping errors: 0 
+INFO 08/23 03:27:31 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1792
+INFO 08/23 03:27:31 AM Table under section: Voto popolare
+INFO 08/23 03:27:31 AM Headers Found
+INFO 08/23 03:27:31 AM Data refined
+INFO 08/23 03:27:31 AM Rows extracted: 2
+INFO 08/23 03:27:31 AM Data extracted for this table: 6
+INFO 08/23 03:27:31 AM Total cell mapped for this table: 4 
+INFO 08/23 03:27:31 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:31 AM Total mapping errors: 0 
+INFO 08/23 03:27:31 AM Table under section: Voto Elettorale
+DEBUG 08/23 03:27:31 AM  E2 Unable to find headers - resource: Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1792
+INFO 08/23 03:27:31 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1860
+INFO 08/23 03:27:32 AM Table under section: Risultati
+INFO 08/23 03:27:32 AM Headers Found
+INFO 08/23 03:27:32 AM Data refined
+INFO 08/23 03:27:32 AM Rows extracted: 5
+INFO 08/23 03:27:32 AM Data extracted for this table: 29
+INFO 08/23 03:27:32 AM Total cell mapped for this table: 26 
+INFO 08/23 03:27:32 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:32 AM Total mapping errors: 0 
+INFO 08/23 03:27:32 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1876
+INFO 08/23 03:27:33 AM Table under section: Risultati
+INFO 08/23 03:27:33 AM Headers Found
+INFO 08/23 03:27:33 AM Data refined
+INFO 08/23 03:27:33 AM Rows extracted: 5
+INFO 08/23 03:27:33 AM Data extracted for this table: 30
+INFO 08/23 03:27:33 AM Total cell mapped for this table: 27 
+INFO 08/23 03:27:33 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:33 AM Total mapping errors: 0 
+INFO 08/23 03:27:33 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872
+INFO 08/23 03:27:34 AM Table under section: Risultati
+INFO 08/23 03:27:34 AM Headers Found
+INFO 08/23 03:27:34 AM Data refined
+INFO 08/23 03:27:34 AM Rows extracted: 9
+INFO 08/23 03:27:34 AM Data extracted for this table: 54
+INFO 08/23 03:27:35 AM Total cell mapped for this table: 38 
+INFO 08/23 03:27:35 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:35 AM Total mapping errors: 0 
+INFO 08/23 03:27:35 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1868
+INFO 08/23 03:27:35 AM Table under section: Risultati
+INFO 08/23 03:27:35 AM Headers Found
+INFO 08/23 03:27:35 AM Data refined
+INFO 08/23 03:27:35 AM Rows extracted: 3
+INFO 08/23 03:27:35 AM Data extracted for this table: 18
+INFO 08/23 03:27:36 AM Total cell mapped for this table: 16 
+INFO 08/23 03:27:36 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:36 AM Total mapping errors: 0 
+INFO 08/23 03:27:36 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2012
+INFO 08/23 03:27:36 AM Table under section: Risultati
+INFO 08/23 03:27:36 AM Headers Found
+INFO 08/23 03:27:36 AM Data refined
+INFO 08/23 03:27:36 AM Rows extracted: 5
+INFO 08/23 03:27:36 AM Data extracted for this table: 30
+INFO 08/23 03:27:37 AM Total cell mapped for this table: 27 
+INFO 08/23 03:27:37 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:37 AM Total mapping errors: 0 
+INFO 08/23 03:27:37 AM Analyzing Elezioni_parlamentari_negli_Stati_Uniti_d'America_del_2006
+INFO 08/23 03:27:37 AM No Tables found for this resource.
+INFO 08/23 03:27:37 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1864
+INFO 08/23 03:27:37 AM Table under section: Risultati
+INFO 08/23 03:27:37 AM Headers Found
+INFO 08/23 03:27:37 AM Data refined
+INFO 08/23 03:27:37 AM Rows extracted: 3
+INFO 08/23 03:27:37 AM Data extracted for this table: 17
+INFO 08/23 03:27:38 AM Total cell mapped for this table: 14 
+INFO 08/23 03:27:38 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:38 AM Total mapping errors: 0 
+INFO 08/23 03:27:38 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1856
+INFO 08/23 03:27:38 AM Table under section: Risultati
+INFO 08/23 03:27:38 AM Headers Found
+INFO 08/23 03:27:38 AM Data refined
+INFO 08/23 03:27:38 AM Rows extracted: 4
+INFO 08/23 03:27:38 AM Data extracted for this table: 23
+INFO 08/23 03:27:38 AM Total cell mapped for this table: 21 
+INFO 08/23 03:27:38 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:38 AM Total mapping errors: 0 
+INFO 08/23 03:27:38 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1852
+INFO 08/23 03:27:39 AM Table under section: Risultati
+INFO 08/23 03:27:39 AM Headers Found
+INFO 08/23 03:27:39 AM Data refined
+INFO 08/23 03:27:39 AM Rows extracted: 6
+INFO 08/23 03:27:39 AM Data extracted for this table: 35
+INFO 08/23 03:27:40 AM Total cell mapped for this table: 30 
+INFO 08/23 03:27:40 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:40 AM Total mapping errors: 0 
+INFO 08/23 03:27:40 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1848
+INFO 08/23 03:27:40 AM Table under section: Risultati
+INFO 08/23 03:27:40 AM Headers Found
+INFO 08/23 03:27:40 AM Data refined
+INFO 08/23 03:27:40 AM Rows extracted: 5
+INFO 08/23 03:27:40 AM Data extracted for this table: 29
+INFO 08/23 03:27:40 AM Total cell mapped for this table: 24 
+INFO 08/23 03:27:40 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:40 AM Total mapping errors: 0 
+INFO 08/23 03:27:40 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1844
+INFO 08/23 03:27:41 AM Table under section: Risultati
+INFO 08/23 03:27:41 AM Headers Found
+INFO 08/23 03:27:41 AM Data refined
+INFO 08/23 03:27:41 AM Rows extracted: 4
+INFO 08/23 03:27:41 AM Data extracted for this table: 24
+INFO 08/23 03:27:41 AM Total cell mapped for this table: 20 
+INFO 08/23 03:27:41 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:41 AM Total mapping errors: 0 
+INFO 08/23 03:27:41 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1840
+INFO 08/23 03:27:42 AM Table under section: Risultati
+INFO 08/23 03:27:42 AM Headers Found
+INFO 08/23 03:27:42 AM Data refined
+INFO 08/23 03:27:42 AM Rows extracted: 4
+INFO 08/23 03:27:42 AM Data extracted for this table: 24
+INFO 08/23 03:27:42 AM Total cell mapped for this table: 19 
+INFO 08/23 03:27:42 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:42 AM Total mapping errors: 0 
+INFO 08/23 03:27:42 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1836
+INFO 08/23 03:27:42 AM Table under section: Risultati
+INFO 08/23 03:27:42 AM Headers Found
+INFO 08/23 03:27:42 AM Data refined
+INFO 08/23 03:27:42 AM Rows extracted: 6
+INFO 08/23 03:27:42 AM Data extracted for this table: 30
+INFO 08/23 03:27:43 AM Total cell mapped for this table: 26 
+INFO 08/23 03:27:43 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:43 AM Total mapping errors: 0 
+INFO 08/23 03:27:43 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1832
+INFO 08/23 03:27:43 AM Table under section: Risultati
+INFO 08/23 03:27:43 AM Headers Found
+INFO 08/23 03:27:43 AM Data refined
+INFO 08/23 03:27:43 AM Rows extracted: 5
+INFO 08/23 03:27:43 AM Data extracted for this table: 25
+INFO 08/23 03:27:44 AM Total cell mapped for this table: 20 
+INFO 08/23 03:27:44 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:44 AM Total mapping errors: 0 
+INFO 08/23 03:27:44 AM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1828
+INFO 08/23 03:27:44 AM Table under section: Risultati
+INFO 08/23 03:27:44 AM Headers Found
+INFO 08/23 03:27:44 AM Data refined
+INFO 08/23 03:27:44 AM Rows extracted: 3
+INFO 08/23 03:27:44 AM Data extracted for this table: 15
+INFO 08/23 03:27:44 AM Total cell mapped for this table: 13 
+INFO 08/23 03:27:44 AM Total 'no mapping rule' : 0 
+INFO 08/23 03:27:44 AM Total mapping errors: 0 
+INFO 08/23 03:27:44 AM These are -headers- without mapping rules:
+INFO 08/23 03:27:44 AM - Header:  -Stato- , : Value example ['Virginia', 'Virginia'], Resource: Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789
+INFO 08/23 03:27:44 AM - Header:  -Stato di origine- , : Value example ['Illinois', 'Illinois'], Resource: Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008
+INFO 08/23 03:27:44 AM - Header:  -Stati vinti- , : Value example ['Washington_DC', '28 + Washington DC'], Resource: Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008
+INFO 08/23 03:27:44 AM - Header:  -Metodo di selezione dei grandi elettori- , : Value example ["Gli elettori furono investiti dall'assemblea legislativa dello Stato."], Resource: Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789
+INFO 08/23 03:27:44 AM - Header:  -Stati- , : Value example ['Carolina_del_Sud', 'Connecticut', 'Georgia', 'New_Jersey', 'New_York', 'Carolina del Sud\nConnecticut\nGeorgia\nNew Jersey\nNew York[8]'], Resource: Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789
+INFO 08/23 03:27:44 AM End Of File reached, now you can serialize the graph
+INFO 08/23 03:27:44 AM Triples in the graph: 1730
+INFO 08/23 03:27:44 AM Graph serialized, filename: /Users/macbookpro/PycharmProjects/table-extractor/table_extractor/../Extractions/2016_08_23-03_27_T_Ext_html_it_elections_USA.ttl
+INFO 08/23 03:27:44 AM REPORT:
+INFO 08/23 03:27:44 AM +           # of resources collected for this topic (elections_USA) : 52
+INFO 08/23 03:27:44 AM +           Total # resources analyzed: 52
+INFO 08/23 03:27:44 AM +           Total # tables found : 53
+INFO 08/23 03:27:44 AM +           Total # tables analyzed : 53
+INFO 08/23 03:27:44 AM +           Total # of rows extracted: 295
+INFO 08/23 03:27:44 AM +           Total # of data cells extracted : 1723
+INFO 08/23 03:27:44 AM +           Total # of exceptions extracting data : 1
+INFO 08/23 03:27:44 AM +           Total # of 'header not resolved' errors : 0
+INFO 08/23 03:27:44 AM +           Total # of 'no headers' errors : 1
+INFO 08/23 03:27:44 AM +           Total # of mapping errors : 0
+INFO 08/23 03:27:44 AM +           Total # of 'no mapping rule' errors : 33
+INFO 08/23 03:27:44 AM +           Total # cells mapped : 1443
+INFO 08/23 03:27:44 AM +           Total # of triples serialized : 1730

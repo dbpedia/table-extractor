@@ -1,0 +1,69 @@
+INFO 08/05 04:48:29 PM You're analyzing wiki tables, wiki chapter: it, topic: elections
+INFO 08/05 04:48:29 PM The file which contains the list of resources is: elections_2016_08_05.txt
+INFO 08/05 04:48:29 PM Written down resources:  52
+INFO 08/05 04:48:29 PM html mode activated..
+INFO 08/05 04:48:29 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940
+INFO 08/05 04:48:30 PM Analyzing Elezioni_parlamentari_negli_Stati_Uniti_d'America_del_2004
+INFO 08/05 04:48:30 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America
+INFO 08/05 04:48:30 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004
+INFO 08/05 04:48:31 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1964
+INFO 08/05 04:48:31 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1960
+INFO 08/05 04:48:31 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1968
+INFO 08/05 04:48:32 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972
+INFO 08/05 04:48:32 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976
+INFO 08/05 04:48:32 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1980
+INFO 08/05 04:48:33 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1984
+INFO 08/05 04:48:33 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1988
+INFO 08/05 04:48:33 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992
+DEBUG 08/05 04:48:34 PM Header not resolved
+DEBUG 08/05 04:48:34 PM Header not resolved
+DEBUG 08/05 04:48:34 PM Header not resolved
+DEBUG 08/05 04:48:34 PM Header not resolved
+DEBUG 08/05 04:48:34 PM Header not resolved
+DEBUG 08/05 04:48:34 PM Header not resolved
+DEBUG 08/05 04:48:34 PM Header not resolved
+DEBUG 08/05 04:48:34 PM Header not resolved
+INFO 08/05 04:48:34 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996
+INFO 08/05 04:48:34 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000
+INFO 08/05 04:48:35 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1956
+INFO 08/05 04:48:35 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1936
+INFO 08/05 04:48:35 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948
+INFO 08/05 04:48:36 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1944
+INFO 08/05 04:48:36 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1952
+INFO 08/05 04:48:36 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900
+INFO 08/05 04:48:37 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904
+INFO 08/05 04:48:37 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908
+INFO 08/05 04:48:37 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912
+INFO 08/05 04:48:38 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1916
+INFO 08/05 04:48:38 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1928
+INFO 08/05 04:48:38 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920
+DEBUG 08/05 04:48:39 PM Header not resolved
+INFO 08/05 04:48:39 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1924
+INFO 08/05 04:48:40 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896
+INFO 08/05 04:48:40 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008
+INFO 08/05 04:48:40 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1892
+INFO 08/05 04:48:41 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888
+INFO 08/05 04:48:41 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1880
+INFO 08/05 04:48:42 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1884
+INFO 08/05 04:48:42 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932
+INFO 08/05 04:48:42 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789
+INFO 08/05 04:48:43 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1792
+DEBUG 08/05 04:48:43 PM e3 - UNABLE TO EXTRACT DATA - resource: Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1792
+INFO 08/05 04:48:43 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1860
+INFO 08/05 04:48:43 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1876
+INFO 08/05 04:48:43 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872
+INFO 08/05 04:48:44 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1868
+INFO 08/05 04:48:44 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2012
+INFO 08/05 04:48:44 PM Analyzing Elezioni_parlamentari_negli_Stati_Uniti_d'America_del_2006
+INFO 08/05 04:48:45 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1864
+INFO 08/05 04:48:45 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1856
+INFO 08/05 04:48:45 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1852
+INFO 08/05 04:48:46 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1848
+INFO 08/05 04:48:46 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1844
+INFO 08/05 04:48:47 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1840
+INFO 08/05 04:48:47 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1836
+INFO 08/05 04:48:47 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1832
+INFO 08/05 04:48:48 PM Analyzing Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1828
+INFO 08/05 04:48:48 PM End Of File reached, now the graph should be serialized
+INFO 08/05 04:48:48 PM Triples in the graph: 1607
+INFO 08/05 04:48:48 PM Graph serialized, filename: /Users/macbookpro/PycharmProjects/table-extractor/src/../Extractions/Table_Extraction_html_it_elections_2016_08_05-16_48.ttl

@@ -1,0 +1,2073 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <http://dbpedia.org/property/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__10>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__11>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__12>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__13>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__7>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__8>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__9> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1792> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1792__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1792__2> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1828> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1828__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1828__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1828__3> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1832> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1832__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1832__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1832__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1832__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1832__5> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1836> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1836__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1836__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1836__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1836__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1836__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1836__6> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1840> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1840__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1840__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1840__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1840__4> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1844> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1844__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1844__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1844__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1844__4> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1848> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1848__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1848__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1848__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1848__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1848__5> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1852> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1852__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1852__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1852__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1852__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1852__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1852__6> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1856> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1856__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1856__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1856__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1856__4> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1860> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1860__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1860__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1860__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1860__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1860__5> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1864> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1864__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1864__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1864__3> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1868> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1868__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1868__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1868__3> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__7>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__8>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__9> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1876> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1876__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1876__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1876__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1876__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1876__5> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1880> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1880__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1880__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1880__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1880__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1880__5> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1884> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1884__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1884__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1884__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1884__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1884__5> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888__5> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1892> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1892__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1892__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1892__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1892__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1892__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1892__6> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896__7> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900__7> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904__7> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908__7> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912__7> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1916> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1916__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1916__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1916__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1916__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1916__5> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__7>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__8> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1924> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1924__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1924__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1924__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1924__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1924__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1924__6> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1928> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1928__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1928__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1928__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1928__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1928__5> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__7>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__8> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1936> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1936__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1936__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1936__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1936__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1936__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1936__6> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940__5> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1944> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1944__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1944__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1944__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1944__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1944__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1944__6> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948__7> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1952> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1952__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1952__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1952__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1952__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1952__5> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1956> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1956__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1956__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1956__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1956__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1956__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1956__6> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1960> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1960__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1960__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1960__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1960__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1960__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1960__6> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1964> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1964__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1964__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1964__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1964__4> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1968> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1968__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1968__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1968__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1968__4> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972__7> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__7>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__8>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__9> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1980> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1980__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1980__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1980__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1980__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1980__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1980__6> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1984> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1984__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1984__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1984__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1984__4> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1988> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1988__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1988__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1988__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1988__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1988__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1988__6> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__7>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__8> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__7>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__8> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__7>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__8> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__5>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__6>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__7>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__8> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008__4> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2012> ns1:Election <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2012__1>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2012__2>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2012__3>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2012__4>,
+        <http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2012__5> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Federalisti>,
+        "‒"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/George_Washington> ;
+    ns1:popularVote "35"^^xsd:positiveInteger,
+        "38"^^xsd:positiveInteger ;
+    ns2:electoralVote "69"^^xsd:positiveInteger ;
+    ns2:pvPct "92.4"^^xsd:float,
+        "100.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__10> ns1:PoliticalParty <http://it.dbpedia.org/resource/Federalista> ;
+    ns1:President "James Armstrong"^^xsd:string ;
+    ns2:electoralVote "1"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__11> ns1:PoliticalParty <http://it.dbpedia.org/resource/Federalista> ;
+    ns1:President "Benjamin Lincoln"^^xsd:string ;
+    ns2:electoralVote "1"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__12> ns1:PoliticalParty "Antifederalista"^^xsd:string ;
+    ns1:President "Edward Telfair"^^xsd:string ;
+    ns2:electoralVote "1"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__13> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Federalista>,
+        "Antifederalisti"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/John_Adams> ;
+    ns1:popularVote "2"^^xsd:positiveInteger ;
+    ns2:electoralVote "34"^^xsd:positiveInteger ;
+    ns2:pvPct "7.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Federalista> ;
+    ns1:President <http://it.dbpedia.org/resource/John_Jay> ;
+    ns2:electoralVote "9"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Federalista> ;
+    ns1:President "Robert H. Harrison"^^xsd:string ;
+    ns2:electoralVote "6"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Federalista> ;
+    ns1:President <http://it.dbpedia.org/resource/John_Rutledge> ;
+    ns2:electoralVote "6"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__6> ns1:PoliticalParty <http://it.dbpedia.org/resource/Federalista> ;
+    ns1:President <http://it.dbpedia.org/resource/John_Hancock> ;
+    ns2:electoralVote "4"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__7> ns1:PoliticalParty "Antifederalista"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/George_Clinton> ;
+    ns2:electoralVote "3"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__8> ns1:PoliticalParty <http://it.dbpedia.org/resource/Federalista> ;
+    ns1:President <http://it.dbpedia.org/resource/Samuel_Huntington> ;
+    ns2:electoralVote "2"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1789__9> ns1:PoliticalParty <http://it.dbpedia.org/resource/Federalista> ;
+    ns1:President <http://it.dbpedia.org/resource/John_Milton> ;
+    ns2:electoralVote "2"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1792__1> ns1:PoliticalParty "Elettori Federalisti"^^xsd:string ;
+    ns2:pvPct "71.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1792__2> ns1:PoliticalParty "Elettori Democratico-repubblicani"^^xsd:string ;
+    ns2:pvPct "28.9"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1828__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Andrew_Jackson> ;
+    ns1:popularVote "642"^^xsd:positiveInteger ;
+    ns2:electoralVote "178"^^xsd:positiveInteger ;
+    ns2:pvPct "56.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1828__2> ns1:PoliticalParty "Partito Nazionale Repubblicano"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/John_Adams> ;
+    ns1:popularVote "500"^^xsd:positiveInteger ;
+    ns2:electoralVote "83"^^xsd:positiveInteger ;
+    ns2:pvPct "43.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1828__3> ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "4"^^xsd:positiveInteger ;
+    ns2:pvPct "0.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1832__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Andrew_Jackson> ;
+    ns1:popularVote "701"^^xsd:positiveInteger ;
+    ns2:electoralVote "219"^^xsd:positiveInteger ;
+    ns2:pvPct "54.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1832__2> ns1:PoliticalParty "Partito Nazionale Repubblicano"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Henry_Clay> ;
+    ns1:popularVote "484"^^xsd:positiveInteger ;
+    ns2:electoralVote "49"^^xsd:positiveInteger ;
+    ns2:pvPct "37.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1832__3> ns1:President <http://it.dbpedia.org/resource/John_Floyd> ;
+    ns2:electoralVote "11"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1832__4> ns1:PoliticalParty "Partito Anti-Massoneria"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/William_Wirt> ;
+    ns1:popularVote "100"^^xsd:positiveInteger ;
+    ns2:electoralVote "7"^^xsd:positiveInteger ;
+    ns2:pvPct "7.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1832__5> ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "7"^^xsd:positiveInteger ;
+    ns2:pvPct "0.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1836__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Martin_Van_Buren> ;
+    ns1:popularVote "764"^^xsd:positiveInteger ;
+    ns2:electoralVote "170"^^xsd:positiveInteger ;
+    ns2:pvPct "50.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1836__2> ns1:PoliticalParty "Partito Whig (Stati Uniti d'America d'America)"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/William_Henry_Harrison> ;
+    ns1:popularVote "550"^^xsd:positiveInteger ;
+    ns2:electoralVote "73"^^xsd:positiveInteger ;
+    ns2:pvPct "36.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1836__3> ns1:PoliticalParty "Partito Whig"^^xsd:string ;
+    ns1:President "Hugh Lawson White"^^xsd:string ;
+    ns1:popularVote "146"^^xsd:positiveInteger ;
+    ns2:electoralVote "26"^^xsd:positiveInteger ;
+    ns2:pvPct "9.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1836__4> ns1:PoliticalParty "Partito Whig"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Daniel_Webster> ;
+    ns1:popularVote "41"^^xsd:positiveInteger ;
+    ns2:electoralVote "14"^^xsd:positiveInteger ;
+    ns2:pvPct "2.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1836__5> ns1:PoliticalParty "Partito Whig"^^xsd:string ;
+    ns1:President "Willie Person Mangum"^^xsd:string ;
+    ns2:electoralVote "11"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1836__6> ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "1"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1840__1> ns1:PoliticalParty "Partito Whig (Stati Uniti d'America d'America)"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/William_Henry_Harrison> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/John_Tyler> ;
+    ns1:popularVote "1275390"^^xsd:positiveInteger ;
+    ns2:electoralVote "234"^^xsd:positiveInteger ;
+    ns2:pvPct "52.9"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1840__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Martin_Van_Buren> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Richard_Mentor_Johnson> ;
+    ns1:popularVote "1128854"^^xsd:positiveInteger ;
+    ns2:electoralVote "60"^^xsd:positiveInteger ;
+    ns2:pvPct "46.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1840__3> ns1:PoliticalParty "Liberty Party"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/James_G._Birney> ;
+    ns1:VicePresident "Thomas Earle"^^xsd:string ;
+    ns1:popularVote "6"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1840__4> ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "767"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1844__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/James_K._Polk> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/George_M._Dallas> ;
+    ns1:popularVote "1339494"^^xsd:positiveInteger ;
+    ns2:electoralVote "170"^^xsd:positiveInteger ;
+    ns2:pvPct "49.5"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1844__2> ns1:PoliticalParty "Partito Whig (Stati Uniti d'America d'America)"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Henry_Clay> ;
+    ns1:VicePresident "Theodore Frelinghuysen"^^xsd:string ;
+    ns1:popularVote "1300004"^^xsd:positiveInteger ;
+    ns2:electoralVote "105"^^xsd:positiveInteger ;
+    ns2:pvPct "48.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1844__3> ns1:PoliticalParty "Liberty Party"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/James_G._Birney> ;
+    ns1:VicePresident "Thomas Morris"^^xsd:string ;
+    ns1:popularVote "62"^^xsd:positiveInteger ;
+    ns2:pvPct "2.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1844__4> ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "2"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1848__1> ns1:PoliticalParty "Partito Whig (Stati Uniti d'America d'America)"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Zachary_Taylor> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Millard_Fillmore> ;
+    ns1:popularVote "1361393"^^xsd:positiveInteger ;
+    ns2:electoralVote "163"^^xsd:positiveInteger ;
+    ns2:pvPct "47.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1848__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Lewis_Cass> ;
+    ns1:VicePresident "William Orlando Butler"^^xsd:string ;
+    ns1:popularVote "1223460"^^xsd:positiveInteger ;
+    ns2:electoralVote "127"^^xsd:positiveInteger ;
+    ns2:pvPct "42.5"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1848__3> ns1:PoliticalParty "Free Soil Party"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Martin_Van_Buren> ;
+    ns1:VicePresident "Charles Francis Adams"^^xsd:string ;
+    ns1:popularVote "291"^^xsd:positiveInteger ;
+    ns2:pvPct "10.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1848__4> ns1:PoliticalParty "Liberty Party"^^xsd:string ;
+    ns1:President "Gerrit Smith"^^xsd:string ;
+    ns1:VicePresident "Charles C. Foote"^^xsd:string ;
+    ns1:popularVote "2"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1848__5> ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "285"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1852__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Franklin_Pierce> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/William_R._King> ;
+    ns1:popularVote "1607510"^^xsd:positiveInteger ;
+    ns2:electoralVote "254"^^xsd:positiveInteger ;
+    ns2:pvPct "50.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1852__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Winfield_Scott> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/William_Alexander_Graham> ;
+    ns1:popularVote "1386942"^^xsd:positiveInteger ;
+    ns2:electoralVote "42"^^xsd:positiveInteger ;
+    ns2:pvPct "43.9"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1852__3> ns1:PoliticalParty "Free Soil Party"^^xsd:string ;
+    ns1:President "John P. Hale"^^xsd:string ;
+    ns1:VicePresident "George Washington Julian"^^xsd:string ;
+    ns1:popularVote "155"^^xsd:positiveInteger ;
+    ns2:pvPct "4.9"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1852__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Union> ;
+    ns1:President <http://it.dbpedia.org/resource/Daniel_Webster> ;
+    ns1:VicePresident "Charles J. Jenkins"^^xsd:string ;
+    ns1:popularVote "6"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1852__5> ns1:PoliticalParty "Southern Rights"^^xsd:string ;
+    ns1:President "George Troup"^^xsd:string ;
+    ns1:VicePresident "John A. Quitman"^^xsd:string ;
+    ns1:popularVote "2"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1852__6> ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "2"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1856__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/James_Buchanan> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/John_C._Breckinridge> ;
+    ns1:popularVote "1836072"^^xsd:positiveInteger ;
+    ns2:electoralVote "174"^^xsd:positiveInteger ;
+    ns2:pvPct "45.28"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1856__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/John_Fremont> ;
+    ns1:VicePresident "William Dayton"^^xsd:string ;
+    ns1:popularVote "1342345"^^xsd:positiveInteger ;
+    ns2:electoralVote "114"^^xsd:positiveInteger ;
+    ns2:pvPct "33.11"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1856__3> ns1:PoliticalParty "Partito Americano"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Millard_Fillmore> ;
+    ns1:VicePresident "Andrew Donelson"^^xsd:string ;
+    ns1:popularVote "873"^^xsd:positiveInteger ;
+    ns2:electoralVote "8"^^xsd:positiveInteger ;
+    ns2:pvPct "21.53"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1856__4> ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "3"^^xsd:positiveInteger ;
+    ns2:pvPct "0.08"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1860__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Abraham_Lincoln> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Hannibal_Hamlin> ;
+    ns1:popularVote "1865908"^^xsd:positiveInteger ;
+    ns2:electoralVote "180"^^xsd:positiveInteger ;
+    ns2:pvPct "39.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1860__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/John_Cabell_Breckinridge> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Joseph_Lane> ;
+    ns1:popularVote "848"^^xsd:positiveInteger ;
+    ns2:electoralVote "72"^^xsd:positiveInteger ;
+    ns2:pvPct "18.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1860__3> ns1:PoliticalParty "Constitutional Union Party"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/John_Bell> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Edward_Everett> ;
+    ns1:popularVote "590"^^xsd:positiveInteger ;
+    ns2:electoralVote "39"^^xsd:positiveInteger ;
+    ns2:pvPct "12.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1860__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Stephen_Arnold_Douglas> ;
+    ns1:VicePresident "Herschel Vespasian Johnson"^^xsd:string ;
+    ns1:popularVote "1380202"^^xsd:positiveInteger ;
+    ns2:electoralVote "12"^^xsd:positiveInteger ;
+    ns2:pvPct "29.5"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1860__5> ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "531"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1864__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Abraham_Lincoln> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Andrew_Johnson> ;
+    ns1:popularVote "2218388"^^xsd:positiveInteger ;
+    ns2:electoralVote "212"^^xsd:positiveInteger ;
+    ns2:pvPct "55.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1864__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President "George Brinton McClellan"^^xsd:string ;
+    ns1:VicePresident "George Hunt Pendleton"^^xsd:string ;
+    ns1:popularVote "1812807"^^xsd:positiveInteger ;
+    ns2:electoralVote "21"^^xsd:positiveInteger ;
+    ns2:pvPct "45.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1864__3> ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "692"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1868__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Ulysses_S._Grant> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Schuyler_Colfax> ;
+    ns1:popularVote "3013650"^^xsd:positiveInteger ;
+    ns2:electoralVote "214"^^xsd:positiveInteger ;
+    ns2:pvPct "52.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1868__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Horatio_Seymour> ;
+    ns1:VicePresident "Francis Preston Blair"^^xsd:string ;
+    ns1:popularVote "2708744"^^xsd:positiveInteger ;
+    ns2:electoralVote "80"^^xsd:positiveInteger ;
+    ns2:pvPct "47.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1868__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "46"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Ulysses_S._Grant> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Henry_Wilson> ;
+    ns1:popularVote "3598235"^^xsd:positiveInteger ;
+    ns2:electoralVote "286"^^xsd:positiveInteger ;
+    ns2:pvPct "55.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Horace_Greeley> ;
+    ns1:VicePresident "Benjamin G. Brown"^^xsd:string ;
+    ns1:popularVote "2834761"^^xsd:positiveInteger ;
+    ns2:pvPct "43.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Thomas_A._Hendricks> ;
+    ns2:electoralVote "42"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President "Benjamin G. Brown"^^xsd:string ;
+    ns2:electoralVote "18"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President "Charles J. Jenkins"^^xsd:string ;
+    ns2:electoralVote "2"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__6> ns1:PoliticalParty "Liberalrepubblicano"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/David_Davis> ;
+    ns2:electoralVote "1"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__7> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President "Charles O'Conor"^^xsd:string ;
+    ns1:VicePresident "John Quincy Adams II"^^xsd:string ;
+    ns1:popularVote "18"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__8> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President <http://it.dbpedia.org/resource/James_Black> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/John_Russell> ;
+    ns1:popularVote "5"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1872__9> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "10"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1876__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Rutherford_B._Hayes> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/William_A._Wheeler> ;
+    ns1:popularVote "4034311"^^xsd:positiveInteger ;
+    ns2:electoralVote "185"^^xsd:positiveInteger ;
+    ns2:pvPct "47.9"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1876__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Samuel_J._Tilden> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Thomas_A._Hendricks> ;
+    ns1:popularVote "4288546"^^xsd:positiveInteger ;
+    ns2:electoralVote "184"^^xsd:positiveInteger ;
+    ns2:pvPct "51.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1876__3> ns1:PoliticalParty "Greenback Labor"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Peter_Cooper> ;
+    ns1:VicePresident "Samuel F. Cary"^^xsd:string ;
+    ns1:popularVote "75"^^xsd:positiveInteger ;
+    ns2:pvPct "0.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1876__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "Green C. Smith"^^xsd:string ;
+    ns1:VicePresident "Gideon T. Stewart"^^xsd:string ;
+    ns1:popularVote "9"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1876__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "4"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1880__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/James_A._Garfield> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Chester_A._Arthur> ;
+    ns1:popularVote "4446158"^^xsd:positiveInteger ;
+    ns2:electoralVote "214"^^xsd:positiveInteger ;
+    ns2:pvPct "48.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1880__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Winfield_Scott_Hancock> ;
+    ns1:VicePresident "William Hayden English"^^xsd:string ;
+    ns1:popularVote "4444260"^^xsd:positiveInteger ;
+    ns2:pvPct "48.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1880__3> ns1:PoliticalParty "Greenback Labor"^^xsd:string ;
+    ns1:President "James Weaver"^^xsd:string ;
+    ns1:VicePresident "Benjamin J. Chambers"^^xsd:string ;
+    ns1:popularVote "305"^^xsd:positiveInteger ;
+    ns2:pvPct "3.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1880__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "Neal Dow"^^xsd:string ;
+    ns1:VicePresident "Henry A. Thompson"^^xsd:string ;
+    ns1:popularVote "10"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1880__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "4"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1884__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Grover_Cleveland> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Thomas_A._Hendricks> ;
+    ns1:popularVote "4874621"^^xsd:positiveInteger ;
+    ns2:electoralVote "219"^^xsd:positiveInteger ;
+    ns2:pvPct "48.5"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1884__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/James_G._Blaine> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/John_A._Logan> ;
+    ns1:popularVote "4848936"^^xsd:positiveInteger ;
+    ns2:electoralVote "182"^^xsd:positiveInteger ;
+    ns2:pvPct "48.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1884__3> ns1:PoliticalParty "Greenback/Anti-Monopoly"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Benjamin_Franklin_Butler> ;
+    ns1:VicePresident "Absolom M. West"^^xsd:string ;
+    ns1:popularVote "175"^^xsd:positiveInteger ;
+    ns2:pvPct "1.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1884__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "John St. John"^^xsd:string ;
+    ns1:VicePresident "William Daniel"^^xsd:string ;
+    ns1:popularVote "147"^^xsd:positiveInteger ;
+    ns2:pvPct "1.5"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1884__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "3"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Benjamin_Harrison> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Levi_P._Morton> ;
+    ns1:popularVote "5443892"^^xsd:positiveInteger ;
+    ns2:electoralVote "233"^^xsd:positiveInteger ;
+    ns2:pvPct "47.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Grover_Cleveland> ;
+    ns1:VicePresident "Allen G. Thurman"^^xsd:string ;
+    ns1:popularVote "5534488"^^xsd:positiveInteger ;
+    ns2:electoralVote "168"^^xsd:positiveInteger ;
+    ns2:pvPct "48.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "Clinton B. Fisk"^^xsd:string ;
+    ns1:VicePresident "John A. Brooks"^^xsd:string ;
+    ns1:popularVote "249"^^xsd:positiveInteger ;
+    ns2:pvPct "2.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888__4> ns1:PoliticalParty "Union Labor"^^xsd:string ;
+    ns1:President "Alson J. Streeter"^^xsd:string ;
+    ns1:VicePresident "Charles E. Cunningham"^^xsd:string ;
+    ns1:popularVote "146"^^xsd:positiveInteger ;
+    ns2:pvPct "1.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "8"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1892__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Grover_Cleveland> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Adlai_E._Stevenson> ;
+    ns1:popularVote "5553898"^^xsd:positiveInteger ;
+    ns2:electoralVote "277"^^xsd:positiveInteger ;
+    ns2:pvPct "46.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1892__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Benjamin_Harrison> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Whitelaw_Reid> ;
+    ns1:popularVote "5190819"^^xsd:positiveInteger ;
+    ns2:electoralVote "145"^^xsd:positiveInteger ;
+    ns2:pvPct "43.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1892__3> ns1:PoliticalParty "Partito Populista (Stati Uniti d'America)"^^xsd:string ;
+    ns1:President "James Weaver"^^xsd:string ;
+    ns1:VicePresident "James G. Field"^^xsd:string ;
+    ns1:popularVote "1026595"^^xsd:positiveInteger ;
+    ns2:electoralVote "22"^^xsd:positiveInteger ;
+    ns2:pvPct "8.5"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1892__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "John Bidwell"^^xsd:string ;
+    ns1:VicePresident "James Cranfill"^^xsd:string ;
+    ns1:popularVote "270"^^xsd:positiveInteger ;
+    ns2:pvPct "2.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1892__5> ns1:PoliticalParty "Partito Socialista del Lavoro"^^xsd:string ;
+    ns1:President "Simon Wing"^^xsd:string ;
+    ns1:VicePresident "Charles Matchett"^^xsd:string ;
+    ns1:popularVote "21"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1892__6> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "4"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/William_McKinley> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Garret_Hobart> ;
+    ns1:popularVote "7112138"^^xsd:positiveInteger ;
+    ns2:electoralVote "271"^^xsd:positiveInteger ;
+    ns2:pvPct "51.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/William_Jennings_Bryan> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Arthur_Sewall> ;
+    ns1:popularVote "6508172"^^xsd:positiveInteger ;
+    ns2:electoralVote "176"^^xsd:positiveInteger ;
+    ns2:pvPct "46.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896__3> ns1:PoliticalParty "National Democratic Party"^^xsd:string ;
+    ns1:President "John McAuley Palmer"^^xsd:string ;
+    ns1:VicePresident "Simon Bolivar Buckner"^^xsd:string ;
+    ns1:popularVote "133"^^xsd:positiveInteger ;
+    ns2:pvPct "1.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "Joshua Levering"^^xsd:string ;
+    ns1:VicePresident "Hale Johnson"^^xsd:string ;
+    ns1:popularVote "125"^^xsd:positiveInteger ;
+    ns2:pvPct "0.9"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896__5> ns1:PoliticalParty "Socialist Labor Party"^^xsd:string ;
+    ns1:President "Charles Horatio Matchett"^^xsd:string ;
+    ns1:VicePresident "Matthew Maguire"^^xsd:string ;
+    ns1:popularVote "36"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896__6> ns1:PoliticalParty "National Party"^^xsd:string ;
+    ns1:President "Charles Eugene Bentley"^^xsd:string ;
+    ns1:VicePresident "James Southgate"^^xsd:string ;
+    ns1:popularVote "19"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1896__7> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "1"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/William_McKinley> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Theodore_Roosevelt> ;
+    ns1:popularVote "7228864"^^xsd:positiveInteger ;
+    ns2:electoralVote "292"^^xsd:positiveInteger ;
+    ns2:pvPct "51.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/William_Jennings_Bryan> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Adlai_Ewing_Stevenson> ;
+    ns1:popularVote "6370932"^^xsd:positiveInteger ;
+    ns2:electoralVote "155"^^xsd:positiveInteger ;
+    ns2:pvPct "45.5"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "John Granville Woolley"^^xsd:string ;
+    ns1:VicePresident "Henry Brewer Metcalf"^^xsd:string ;
+    ns1:popularVote "210"^^xsd:positiveInteger ;
+    ns2:pvPct "1.5"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900__4> ns1:PoliticalParty "Social-Democratic Party"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Eugene_Victor_Debs> ;
+    ns1:VicePresident "Job Harriman"^^xsd:string ;
+    ns1:popularVote "87"^^xsd:positiveInteger ;
+    ns2:pvPct "0.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900__5> ns1:PoliticalParty "Partito Populista (Stati Uniti d'America)"^^xsd:string ;
+    ns1:President "Wharton Barker"^^xsd:string ;
+    ns1:VicePresident "Ignatius Donnellyn"^^xsd:string ;
+    ns1:popularVote "50"^^xsd:positiveInteger ;
+    ns2:pvPct "0.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900__6> ns1:PoliticalParty "Socialist Labor Party"^^xsd:string ;
+    ns1:President "Joseph Francis Maloney"^^xsd:string ;
+    ns1:VicePresident "Valentine Remmel"^^xsd:string ;
+    ns1:popularVote "40"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1900__7> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "6"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Theodore_Roosevelt> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Charles_Warren_Fairbanks> ;
+    ns1:popularVote "7630457"^^xsd:positiveInteger ;
+    ns2:electoralVote "336"^^xsd:positiveInteger ;
+    ns2:pvPct "56.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Alton_Brooks_Parker> ;
+    ns1:VicePresident "Henry Gassaway Davis"^^xsd:string ;
+    ns1:popularVote "5083880"^^xsd:positiveInteger ;
+    ns2:electoralVote "140"^^xsd:positiveInteger ;
+    ns2:pvPct "37.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Socialista_d'America> ;
+    ns1:President <http://it.dbpedia.org/resource/Eugene_Victor_Debs> ;
+    ns1:VicePresident "Benjamin Hanford"^^xsd:string ;
+    ns1:popularVote "402"^^xsd:positiveInteger ;
+    ns2:pvPct "3.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "Silas Comfort Swallow"^^xsd:string ;
+    ns1:VicePresident "George W. Carroll"^^xsd:string ;
+    ns1:popularVote "259"^^xsd:positiveInteger ;
+    ns2:pvPct "1.9"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904__5> ns1:PoliticalParty "Partito Populista (Stati Uniti d'America)"^^xsd:string ;
+    ns1:President "Thomas Edward Watson"^^xsd:string ;
+    ns1:VicePresident "Thomas Henry Tibbles"^^xsd:string ;
+    ns1:popularVote "114"^^xsd:positiveInteger ;
+    ns2:pvPct "0.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904__6> ns1:PoliticalParty "Socialist Labor Party"^^xsd:string ;
+    ns1:President "Charles Hunter Corregan"^^xsd:string ;
+    ns1:VicePresident "William Wesley Cox"^^xsd:string ;
+    ns1:popularVote "33"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1904__7> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "1"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/William_Howard_Taft> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/James_Schoolcraft_Sherman> ;
+    ns1:popularVote "7678395"^^xsd:positiveInteger ;
+    ns2:electoralVote "321"^^xsd:positiveInteger ;
+    ns2:pvPct "51.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/William_Jennings_Bryan> ;
+    ns1:VicePresident "John Worth Kern"^^xsd:string ;
+    ns1:popularVote "6408984"^^xsd:positiveInteger ;
+    ns2:electoralVote "162"^^xsd:positiveInteger ;
+    ns2:pvPct "43.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Socialista_d'America> ;
+    ns1:President <http://it.dbpedia.org/resource/Eugene_Victor_Debs> ;
+    ns1:VicePresident "Benjamin Hanford"^^xsd:string ;
+    ns1:popularVote "420"^^xsd:positiveInteger ;
+    ns2:pvPct "2.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "Eugene Wilder Chafin"^^xsd:string ;
+    ns1:VicePresident "Aaron Sherman Watkins"^^xsd:string ;
+    ns1:popularVote "254"^^xsd:positiveInteger ;
+    ns2:pvPct "1.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908__5> ns1:PoliticalParty "Independence Party"^^xsd:string ;
+    ns1:President "Thomas Louis Hisgen"^^xsd:string ;
+    ns1:VicePresident "John Temple Graves"^^xsd:string ;
+    ns1:popularVote "82"^^xsd:positiveInteger ;
+    ns2:pvPct "0.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908__6> ns1:PoliticalParty "Partito Populista (Stati Uniti d'America)"^^xsd:string ;
+    ns1:President "Thomas Edward Watson"^^xsd:string ;
+    ns1:VicePresident "Samuel Williams"^^xsd:string ;
+    ns1:popularVote "28"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1908__7> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "15"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Thomas_Woodrow_Wilson> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Thomas_Riley_Marshall> ;
+    ns1:popularVote "6296184"^^xsd:positiveInteger ;
+    ns2:electoralVote "435"^^xsd:positiveInteger ;
+    ns2:pvPct "41.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Progressista> ;
+    ns1:President <http://it.dbpedia.org/resource/Theodore_Roosevelt> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Hiram_Warren_Johnson> ;
+    ns1:popularVote "4122721"^^xsd:positiveInteger ;
+    ns2:electoralVote "88"^^xsd:positiveInteger ;
+    ns2:pvPct "27.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/William_Howard_Taft> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Nicholas_Murray_Butler> ;
+    ns1:popularVote "3486242"^^xsd:positiveInteger ;
+    ns2:electoralVote "8"^^xsd:positiveInteger ;
+    ns2:pvPct "23.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Socialista_d'America> ;
+    ns1:President <http://it.dbpedia.org/resource/Eugene_Victor_Debs> ;
+    ns1:VicePresident "Emil Seidel"^^xsd:string ;
+    ns1:popularVote "901"^^xsd:positiveInteger ;
+    ns2:pvPct "6.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "Eugene Wilder Chafin"^^xsd:string ;
+    ns1:VicePresident "Aaron Sherman Watkins"^^xsd:string ;
+    ns1:popularVote "208"^^xsd:positiveInteger ;
+    ns2:pvPct "1.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912__6> ns1:PoliticalParty "Socialist Labor Party"^^xsd:string ;
+    ns1:President "Arthur Elmer Reimer"^^xsd:string ;
+    ns1:VicePresident "August Gilhaus"^^xsd:string ;
+    ns1:popularVote "29"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1912__7> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "4"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1916__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Thomas_Woodrow_Wilson> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Thomas_Riley_Marshall> ;
+    ns1:popularVote "9126868"^^xsd:positiveInteger ;
+    ns2:electoralVote "277"^^xsd:positiveInteger ;
+    ns2:pvPct "49.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1916__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Charles_Evans_Hughes> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Charles_Warren_Fairbanks> ;
+    ns1:popularVote "8548728"^^xsd:positiveInteger ;
+    ns2:electoralVote "254"^^xsd:positiveInteger ;
+    ns2:pvPct "46.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1916__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Socialista_d'America> ;
+    ns1:President "Allan Louis Benson"^^xsd:string ;
+    ns1:VicePresident "George Ross Kirkpatrick"^^xsd:string ;
+    ns1:popularVote "590"^^xsd:positiveInteger ;
+    ns2:pvPct "3.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1916__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "James Franklin Hanly"^^xsd:string ;
+    ns1:VicePresident "Ira Landrith"^^xsd:string ;
+    ns1:popularVote "221"^^xsd:positiveInteger ;
+    ns2:pvPct "1.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1916__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "49"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Warren_Gamaliel_Harding> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Calvin_Coolidge> ;
+    ns1:popularVote "16144093"^^xsd:positiveInteger ;
+    ns2:electoralVote "404"^^xsd:positiveInteger ;
+    ns2:pvPct "60.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/James_Middleton_Cox> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Franklin_D._Roosevelt> ;
+    ns1:popularVote "9139661"^^xsd:positiveInteger ;
+    ns2:electoralVote "127"^^xsd:positiveInteger ;
+    ns2:pvPct "34.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Socialista_d'America> ;
+    ns1:President <http://it.dbpedia.org/resource/Eugene_Victor_Debs> ;
+    ns1:VicePresident "Seymour Stedman"^^xsd:string ;
+    ns1:popularVote "913"^^xsd:positiveInteger ;
+    ns2:pvPct "3.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__4> ns1:PoliticalParty "Farmer-Labor Party"^^xsd:string ;
+    ns1:President "Parley Parker Christensen"^^xsd:string ;
+    ns1:VicePresident "Max S. Hayes"^^xsd:string ;
+    ns1:popularVote "265"^^xsd:positiveInteger ;
+    ns2:pvPct "1.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "Aaron Sherman Watkins"^^xsd:string ;
+    ns1:VicePresident "David Leigh Colvin"^^xsd:string ;
+    ns1:popularVote "188"^^xsd:positiveInteger ;
+    ns2:pvPct "0.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__6> ns1:PoliticalParty "American Party"^^xsd:string ;
+    ns1:President "James Edward Ferguson"^^xsd:string ;
+    ns1:VicePresident "William J. Hough"^^xsd:string ;
+    ns1:popularVote "47"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__7> ns1:PoliticalParty "Socialist Labor Party"^^xsd:string ;
+    ns1:President "William Wesley Cox"^^xsd:string ;
+    ns1:VicePresident "August Gilhaus"^^xsd:string ;
+    ns1:popularVote "31"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1920__8> ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "34"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1924__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Calvin_Coolidge> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Charles_Gates_Dawes> ;
+    ns1:popularVote "15723789"^^xsd:positiveInteger ;
+    ns2:electoralVote "382"^^xsd:positiveInteger ;
+    ns2:pvPct "54.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1924__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/John_William_Davis> ;
+    ns1:VicePresident "Charles Wayland Bryan"^^xsd:string ;
+    ns1:popularVote "8386242"^^xsd:positiveInteger ;
+    ns2:electoralVote "136"^^xsd:positiveInteger ;
+    ns2:pvPct "28.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1924__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Progressista> ;
+    ns1:President "Robert Marion LaFollette"^^xsd:string ;
+    ns1:VicePresident "Burton Kendall Wheeler"^^xsd:string ;
+    ns1:popularVote "4831706"^^xsd:positiveInteger ;
+    ns2:electoralVote "13"^^xsd:positiveInteger ;
+    ns2:pvPct "16.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1924__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "Herman P. Faris"^^xsd:string ;
+    ns1:VicePresident "Marie Brehm"^^xsd:string ;
+    ns1:popularVote "55"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1924__5> ns1:PoliticalParty "Partito Comunista degli Stati Uniti d'Americ d'America)"^^xsd:string ;
+    ns1:President "William Z. Foster"^^xsd:string ;
+    ns1:VicePresident "Benjamin Gitlow"^^xsd:string ;
+    ns1:popularVote "38"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1924__6> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "60"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1928__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Herbert_Hoover> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Charles_Curtis> ;
+    ns1:popularVote "21427123"^^xsd:positiveInteger ;
+    ns2:electoralVote "444"^^xsd:positiveInteger ;
+    ns2:pvPct "58.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1928__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Al_Smith> ;
+    ns1:VicePresident "Joseph Taylor Robinson"^^xsd:string ;
+    ns1:popularVote "15015464"^^xsd:positiveInteger ;
+    ns2:electoralVote "87"^^xsd:positiveInteger ;
+    ns2:pvPct "40.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1928__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Socialista_d'America> ;
+    ns1:President "Norman Thomas"^^xsd:string ;
+    ns1:VicePresident "James H. Maurer"^^xsd:string ;
+    ns1:popularVote "267"^^xsd:positiveInteger ;
+    ns2:pvPct "0.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1928__4> ns1:PoliticalParty "Partito Comunista degli Stati Uniti d'Americ d'America)"^^xsd:string ;
+    ns1:President "William Z. Foster"^^xsd:string ;
+    ns1:VicePresident "Benjamin Gitlow"^^xsd:string ;
+    ns1:popularVote "48"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1928__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "48"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Franklin_D._Roosevelt> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/John_Nance_Garner> ;
+    ns1:popularVote "22821277"^^xsd:positiveInteger ;
+    ns2:electoralVote "472"^^xsd:positiveInteger ;
+    ns2:pvPct "57.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Herbert_Hoover> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Charles_Curtis> ;
+    ns1:popularVote "15761254"^^xsd:positiveInteger ;
+    ns2:electoralVote "59"^^xsd:positiveInteger ;
+    ns2:pvPct "39.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Socialista_d'America> ;
+    ns1:President "Norman Thomas"^^xsd:string ;
+    ns1:VicePresident "James H. Maurer"^^xsd:string ;
+    ns1:popularVote "884"^^xsd:positiveInteger ;
+    ns2:pvPct "2.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__4> ns1:PoliticalParty "Partito Comunista degli Stati Uniti d'Americ d'America)"^^xsd:string ;
+    ns1:President "William Z. Foster"^^xsd:string ;
+    ns1:VicePresident "James W. Ford"^^xsd:string ;
+    ns1:popularVote "103"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "William D. Upshaw"^^xsd:string ;
+    ns1:VicePresident "Frank S. Regan"^^xsd:string ;
+    ns1:popularVote "81"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__6> ns1:PoliticalParty "Liberty Party"^^xsd:string ;
+    ns1:President "William Hope Harvey"^^xsd:string ;
+    ns1:VicePresident "Frank Hemenway"^^xsd:string ;
+    ns1:popularVote "53"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__7> ns1:PoliticalParty "Socialist Labor Party"^^xsd:string ;
+    ns1:President "Verne L. Reynolds"^^xsd:string ;
+    ns1:VicePresident "J.W. Aiken"^^xsd:string ;
+    ns1:popularVote "33"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1932__8> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "12"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1936__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Franklin_D._Roosevelt> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/John_Nance_Garner> ;
+    ns1:popularVote "27752648"^^xsd:positiveInteger ;
+    ns2:electoralVote "523"^^xsd:positiveInteger ;
+    ns2:pvPct "60.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1936__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Alf_Landon> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Frank_Knox> ;
+    ns1:popularVote "16681862"^^xsd:positiveInteger ;
+    ns2:electoralVote "8"^^xsd:positiveInteger ;
+    ns2:pvPct "36.5"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1936__3> ns1:PoliticalParty "Union Party"^^xsd:string ;
+    ns1:President "William Lemke"^^xsd:string ;
+    ns1:VicePresident "Thomas C. O'Brien"^^xsd:string ;
+    ns1:popularVote "892"^^xsd:positiveInteger ;
+    ns2:pvPct "2.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1936__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Socialista_d'America> ;
+    ns1:President "Norman Thomas"^^xsd:string ;
+    ns1:VicePresident "George A. Nelson"^^xsd:string ;
+    ns1:popularVote "187"^^xsd:positiveInteger ;
+    ns2:pvPct "0.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1936__5> ns1:PoliticalParty "Partito Comunista degli Stati Uniti d'Americ d'America)"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Earl_Browder> ;
+    ns1:VicePresident "James W. Ford"^^xsd:string ;
+    ns1:popularVote "79"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1936__6> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "53"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Franklin_D._Roosevelt> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Henry_A._Wallace> ;
+    ns1:popularVote "27313945"^^xsd:positiveInteger ;
+    ns2:electoralVote "449"^^xsd:positiveInteger ;
+    ns2:pvPct "54.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Wendell_Willkie> ;
+    ns1:VicePresident "Charles L. McNary"^^xsd:string ;
+    ns1:popularVote "22347744"^^xsd:positiveInteger ;
+    ns2:electoralVote "82"^^xsd:positiveInteger ;
+    ns2:pvPct "44.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Socialista_d'America> ;
+    ns1:President "Norman Thomas"^^xsd:string ;
+    ns1:VicePresident "Maynard C. Krueger"^^xsd:string ;
+    ns1:popularVote "116"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "Roger Babson"^^xsd:string ;
+    ns1:VicePresident "Edgar Moorman"^^xsd:string ;
+    ns1:popularVote "57"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "65"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1944__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Franklin_D._Roosevelt> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Harry_S._Truman> ;
+    ns1:popularVote "25612916"^^xsd:positiveInteger ;
+    ns2:electoralVote "432"^^xsd:positiveInteger ;
+    ns2:pvPct "53.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1944__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Thomas_E._Dewey> ;
+    ns1:VicePresident "John W. Bricker"^^xsd:string ;
+    ns1:popularVote "22017929"^^xsd:positiveInteger ;
+    ns2:electoralVote "99"^^xsd:positiveInteger ;
+    ns2:pvPct "45.9"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1944__3> ns1:PoliticalParty "Texas Regulars Party"^^xsd:string ;
+    ns1:popularVote "135"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1944__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Socialista_d'America> ;
+    ns1:President "Norman Thomas"^^xsd:string ;
+    ns1:VicePresident "Darlington Hoopes"^^xsd:string ;
+    ns1:popularVote "79"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1944__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "Claude A. Watson"^^xsd:string ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Andrew_Johnson> ;
+    ns1:popularVote "74"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1944__6> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "57"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Harry_S._Truman> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Alben_W._Barkley> ;
+    ns1:popularVote "24179347"^^xsd:positiveInteger ;
+    ns2:electoralVote "303"^^xsd:positiveInteger ;
+    ns2:pvPct "49.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Thomas_E._Dewey> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Earl_Warren> ;
+    ns1:popularVote "21991292"^^xsd:positiveInteger ;
+    ns2:electoralVote "189"^^xsd:positiveInteger ;
+    ns2:pvPct "45.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948__3> ns1:PoliticalParty "Dixiecrat"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Strom_Thurmond> ;
+    ns1:VicePresident "Fielding L. Wright"^^xsd:string ;
+    ns1:popularVote "1175930"^^xsd:positiveInteger ;
+    ns2:electoralVote "39"^^xsd:positiveInteger ;
+    ns2:pvPct "2.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948__4> ns1:PoliticalParty "Progressive Party/American Labor Party"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Henry_A._Wallace> ;
+    ns1:VicePresident "Glen H. Taylor"^^xsd:string ;
+    ns1:popularVote "1157328"^^xsd:positiveInteger ;
+    ns2:pvPct "2.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Socialista_d'America> ;
+    ns1:President "Norman Thomas"^^xsd:string ;
+    ns1:VicePresident "Tucker P. Smith"^^xsd:string ;
+    ns1:popularVote "139"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948__6> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "Claude A. Watson"^^xsd:string ;
+    ns1:VicePresident "Dale Learn"^^xsd:string ;
+    ns1:popularVote "103"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1948__7> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "46"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1952__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Dwight_D._Eisenhower> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Richard_Nixon> ;
+    ns1:popularVote "34075529"^^xsd:positiveInteger ;
+    ns2:electoralVote "442"^^xsd:positiveInteger ;
+    ns2:pvPct "55.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1952__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Adlai_Ewing_Stevenson_II> ;
+    ns1:VicePresident "John Sparkman"^^xsd:string ;
+    ns1:popularVote "27375090"^^xsd:positiveInteger ;
+    ns2:electoralVote "89"^^xsd:positiveInteger ;
+    ns2:pvPct "44.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1952__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Progressista> ;
+    ns1:President "Vincent Hallinan"^^xsd:string ;
+    ns1:VicePresident "Charlotta Bass"^^xsd:string ;
+    ns1:popularVote "140"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1952__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Proibizionista> ;
+    ns1:President "Carl Stuart Hamblen"^^xsd:string ;
+    ns1:VicePresident "Enoch A. Holtwick"^^xsd:string ;
+    ns1:popularVote "73"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1952__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "87"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1956__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Dwight_D._Eisenhower> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Richard_Nixon> ;
+    ns1:popularVote "35579180"^^xsd:positiveInteger ;
+    ns2:electoralVote "457"^^xsd:positiveInteger ;
+    ns2:pvPct "57.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1956__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Adlai_Ewing_Stevenson_II> ;
+    ns1:VicePresident "Estes Kefauver"^^xsd:string ;
+    ns1:popularVote "26028028"^^xsd:positiveInteger ;
+    ns2:electoralVote "73"^^xsd:positiveInteger ;
+    ns2:pvPct "42.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1956__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President "Walter Burgwyn Jones"^^xsd:string ;
+    ns1:VicePresident "Herman Talmadge"^^xsd:string ;
+    ns2:electoralVote "1"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1956__4> ns1:President "unpledged electors"^^xsd:string ;
+    ns1:popularVote "196"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1956__5> ns1:PoliticalParty "States Rights Party"^^xsd:string ;
+    ns1:President "T. Coleman Andrews"^^xsd:string ;
+    ns1:VicePresident "Thomas H. Werdel"^^xsd:string ;
+    ns1:popularVote "107"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1956__6> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "110"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1960__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/John_F._Kennedy> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Lyndon_B._Johnson> ;
+    ns1:popularVote "34220984"^^xsd:positiveInteger ;
+    ns2:electoralVote "303"^^xsd:positiveInteger ;
+    ns2:pvPct "49.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1960__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Richard_Nixon> ;
+    ns1:VicePresident "Henry Cabot Lodge"^^xsd:string ;
+    ns1:popularVote "34108157"^^xsd:positiveInteger ;
+    ns2:electoralVote "210"^^xsd:positiveInteger ;
+    ns2:pvPct "49.5"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1960__3> ns1:PoliticalParty "(nessuno)"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Harry_F._Byrd> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Strom_Thurmond> ;
+    ns2:electoralVote "14"^^xsd:positiveInteger ;
+    ns2:pvPct "-(a)"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1960__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President "Unpledged electors"^^xsd:string ;
+    ns1:VicePresident "Unpledged electors"^^xsd:string ;
+    ns1:popularVote "286"^^xsd:positiveInteger ;
+    ns2:pvPct "0.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1960__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President "Unpledged electors"^^xsd:string ;
+    ns1:VicePresident "Unpledged electors"^^xsd:string ;
+    ns1:popularVote "286"^^xsd:positiveInteger ;
+    ns2:pvPct "0.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1960__6> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "216"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1964__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Lyndon_B._Johnson> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Hubert_Humphrey> ;
+    ns1:popularVote "43127041"^^xsd:positiveInteger ;
+    ns2:electoralVote "486"^^xsd:positiveInteger ;
+    ns2:pvPct "61.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1964__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Barry_Goldwater> ;
+    ns1:VicePresident "William E. Miller"^^xsd:string ;
+    ns1:popularVote "27175754"^^xsd:positiveInteger ;
+    ns2:electoralVote "52"^^xsd:positiveInteger ;
+    ns2:pvPct "38.5"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1964__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President "unpledged electors"^^xsd:string ;
+    ns1:popularVote "210"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1964__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "125"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1968__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Richard_Nixon> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Spiro_Agnew> ;
+    ns1:popularVote "31783783"^^xsd:positiveInteger ;
+    ns2:electoralVote "301"^^xsd:positiveInteger ;
+    ns2:pvPct "43.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1968__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Hubert_Humphrey> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Edmund_Muskie> ;
+    ns1:popularVote "31271839"^^xsd:positiveInteger ;
+    ns2:electoralVote "191"^^xsd:positiveInteger ;
+    ns2:pvPct "42.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1968__3> ns1:PoliticalParty "Indipendente Americano"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/George_Wallace> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Curtis_LeMay> ;
+    ns1:popularVote "9901118"^^xsd:positiveInteger ;
+    ns2:electoralVote "46"^^xsd:positiveInteger ;
+    ns2:pvPct "13.5"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1968__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "243"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Richard_Nixon> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Spiro_Agnew> ;
+    ns1:popularVote "47169911"^^xsd:positiveInteger ;
+    ns2:electoralVote "520"^^xsd:positiveInteger ;
+    ns2:pvPct "60.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/George_McGovern> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Sargent_Shriver> ;
+    ns1:popularVote "29170383"^^xsd:positiveInteger ;
+    ns2:electoralVote "17"^^xsd:positiveInteger ;
+    ns2:pvPct "37.5"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972__3> ns1:PoliticalParty "Partito Libertariano (Stati Uniti d'America d'America)"^^xsd:string ;
+    ns1:President "John Hospers"^^xsd:string ;
+    ns1:VicePresident "Theodora Nathalia Nathan"^^xsd:string ;
+    ns1:popularVote "3"^^xsd:positiveInteger .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972__4> ns1:PoliticalParty "Indipendente Americano"^^xsd:string ;
+    ns1:President "John G. Schmitz"^^xsd:string ;
+    ns1:VicePresident "Thomas J. Anderson"^^xsd:string ;
+    ns1:popularVote "1100868"^^xsd:positiveInteger ;
+    ns2:pvPct "1.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972__5> ns1:PoliticalParty "Socialist Workers Party"^^xsd:string ;
+    ns1:President "Linda Jenness"^^xsd:string ;
+    ns1:VicePresident "Andrew Pulley"^^xsd:string ;
+    ns1:popularVote "83"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972__6> ns1:PoliticalParty "People's Party"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Benjamin_Spock> ;
+    ns1:VicePresident "Julius Hobson"^^xsd:string ;
+    ns1:popularVote "78"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1972__7> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "135"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Jimmy_Carter> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Walter_Mondale> ;
+    ns1:popularVote "40831881"^^xsd:positiveInteger ;
+    ns2:electoralVote "297"^^xsd:positiveInteger ;
+    ns2:pvPct "50.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Gerald_Ford> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Bob_Dole> ;
+    ns1:popularVote "39148634"^^xsd:positiveInteger ;
+    ns2:electoralVote "240"^^xsd:positiveInteger ;
+    ns2:pvPct "48.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Ronald_Reagan> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Bob_Dole> ;
+    ns2:electoralVote "1"^^xsd:positiveInteger ;
+    ns2:pvPct "-(a)"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__4> ns1:President "Eugene McCarthy"^^xsd:string ;
+    ns1:popularVote "740"^^xsd:positiveInteger ;
+    ns2:pvPct "0.9"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__5> ns1:PoliticalParty "Partito Libertariano (Stati Uniti d'America d'America)"^^xsd:string ;
+    ns1:President "Roger MacBride"^^xsd:string ;
+    ns1:VicePresident "David Bergland"^^xsd:string ;
+    ns1:popularVote "172"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__6> ns1:PoliticalParty "Indipendente Americano"^^xsd:string ;
+    ns1:President "Lester Maddox"^^xsd:string ;
+    ns1:VicePresident "William D. Dyke"^^xsd:string ;
+    ns1:popularVote "170"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__7> ns1:PoliticalParty "Indipendente Americano"^^xsd:string ;
+    ns1:President "Thomas J. Anderson"^^xsd:string ;
+    ns1:VicePresident "Rufus Shackelford"^^xsd:string ;
+    ns1:popularVote "158"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__8> ns1:PoliticalParty "Socialist Workers Party"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Peter_Camejo> ;
+    ns1:VicePresident "Willie Mae Reid"^^xsd:string ;
+    ns1:popularVote "90"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1976__9> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "218"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1980__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Ronald_Reagan> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/George_H._W._Bush> ;
+    ns1:popularVote "43903230"^^xsd:positiveInteger ;
+    ns2:electoralVote "489"^^xsd:positiveInteger ;
+    ns2:pvPct "50.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1980__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Jimmy_Carter> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Walter_Mondale> ;
+    ns1:popularVote "35480115"^^xsd:positiveInteger ;
+    ns2:electoralVote "49"^^xsd:positiveInteger ;
+    ns2:pvPct "41.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1980__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Indipendente> ;
+    ns1:President "John B. Anderson"^^xsd:string ;
+    ns1:VicePresident "Patrick Joseph Lucey"^^xsd:string ;
+    ns1:popularVote "5719850"^^xsd:positiveInteger ;
+    ns2:pvPct "6.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1980__4> ns1:PoliticalParty "Partito Libertariano (Stati Uniti d'America d'America)"^^xsd:string ;
+    ns1:President "Ed Clark"^^xsd:string ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/David_H._Koch> ;
+    ns1:popularVote "921"^^xsd:positiveInteger ;
+    ns2:pvPct "1.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1980__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Cittadini> ;
+    ns1:President <http://it.dbpedia.org/resource/Barry_Commoner> ;
+    ns1:VicePresident "La Donna Harris"^^xsd:string ;
+    ns1:popularVote "233"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1980__6> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "252"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1984__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Ronald_Reagan> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/George_H._W._Bush> ;
+    ns1:popularVote "54455472"^^xsd:positiveInteger ;
+    ns2:electoralVote "525"^^xsd:positiveInteger ;
+    ns2:pvPct "58.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1984__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Walter_Mondale> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Geraldine_Ferraro> ;
+    ns1:popularVote "37577352"^^xsd:positiveInteger ;
+    ns2:electoralVote "13"^^xsd:positiveInteger ;
+    ns2:pvPct "40.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1984__3> ns1:PoliticalParty "Partito Libertariano (Stati Uniti d'America d'America)"^^xsd:string ;
+    ns1:President "David Bergland, CA"^^xsd:string ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Connecticut> ;
+    ns1:popularVote "228"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1984__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "392"^^xsd:positiveInteger ;
+    ns2:pvPct "0.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1988__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/George_H._W._Bush> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Dan_Quayle> ;
+    ns1:popularVote "48886597"^^xsd:positiveInteger ;
+    ns2:electoralVote "426"^^xsd:positiveInteger ;
+    ns2:pvPct "53.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1988__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Michael_Dukakis> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Lloyd_Bentsen> ;
+    ns1:popularVote "41809476"^^xsd:positiveInteger ;
+    ns2:electoralVote "111"^^xsd:positiveInteger ;
+    ns2:pvPct "45.6"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1988__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Lloyd_Bentsen> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Michael_Dukakis> ;
+    ns2:electoralVote "1"^^xsd:positiveInteger ;
+    ns2:pvPct "-(a)"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1988__4> ns1:PoliticalParty "Partito Libertariano (Stati Uniti d'America d'America)"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Ron_Paul> ;
+    ns1:VicePresident "Andre Marrou"^^xsd:string ;
+    ns1:popularVote "431"^^xsd:positiveInteger ;
+    ns2:pvPct "0.5"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1988__5> ns1:PoliticalParty "Nuova Alleanza"^^xsd:string ;
+    ns1:President "Lenora Fulani"^^xsd:string ;
+    ns1:VicePresident "-(b)"^^xsd:string ;
+    ns1:popularVote "217"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1988__6> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "249"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Bill_Clinton> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Al_Gore> ;
+    ns1:popularVote "44909806"^^xsd:positiveInteger ;
+    ns2:electoralVote "370"^^xsd:positiveInteger ;
+    ns2:pvPct "43.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/George_H._W._Bush> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Dan_Quayle> ;
+    ns1:popularVote "39104550"^^xsd:positiveInteger ;
+    ns2:electoralVote "168"^^xsd:positiveInteger ;
+    ns2:pvPct "37.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Indipendente> ;
+    ns1:President <http://it.dbpedia.org/resource/Ross_Perot> ;
+    ns1:VicePresident "James Stockdale"^^xsd:string ;
+    ns1:popularVote "19743821"^^xsd:positiveInteger ;
+    ns2:pvPct "18.9"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__4> ns1:PoliticalParty "Partito Libertariano (Stati Uniti d'America d'America)"^^xsd:string ;
+    ns1:President "Andre Marrou"^^xsd:string ;
+    ns1:VicePresident "Nancy Lord"^^xsd:string ;
+    ns1:popularVote "290087"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__5> ns1:PoliticalParty "Partito Populista (Stati Uniti d'America)"^^xsd:string ;
+    ns1:President "Bo Gritz"^^xsd:string ;
+    ns1:VicePresident "Cy Minett"^^xsd:string ;
+    ns1:popularVote "106152"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__6> ns1:PoliticalParty "Nuova Alleanza"^^xsd:string ;
+    ns1:President "Lenora Fulani"^^xsd:string ;
+    ns1:VicePresident "Maria Elizabeth Muñoz"^^xsd:string ;
+    ns1:popularVote "73622"^^xsd:positiveInteger ;
+    ns2:pvPct "0.07"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__7> ns1:PoliticalParty "Taxpayers"^^xsd:string ;
+    ns1:President "Howard Phillips"^^xsd:string ;
+    ns1:VicePresident "Albion Knight"^^xsd:string ;
+    ns1:popularVote "43369"^^xsd:positiveInteger ;
+    ns2:pvPct "0.04"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1992__8> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "152516"^^xsd:positiveInteger ;
+    ns2:pvPct "0.13"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Bill_Clinton> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Al_Gore> ;
+    ns1:popularVote "47400125"^^xsd:positiveInteger ;
+    ns2:electoralVote "379"^^xsd:positiveInteger ;
+    ns2:pvPct "49.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Bob_Dole> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Jack_Kemp> ;
+    ns1:popularVote "39198755"^^xsd:positiveInteger ;
+    ns2:electoralVote "159"^^xsd:positiveInteger ;
+    ns2:pvPct "40.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Riforma> ;
+    ns1:President <http://it.dbpedia.org/resource/Ross_Perot> ;
+    ns1:VicePresident "Pat Choate"^^xsd:string ;
+    ns1:popularVote "8085402"^^xsd:positiveInteger ;
+    ns2:pvPct "8.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__4> ns1:PoliticalParty "Partito Verde degli Stati Unit d'America)"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Ralph_Nader> ;
+    ns1:popularVote "685297"^^xsd:positiveInteger ;
+    ns2:pvPct "0.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__5> ns1:PoliticalParty "Partito Libertariano (Stati Uniti d'America d'America)"^^xsd:string ;
+    ns1:President "Harry Browne"^^xsd:string ;
+    ns1:VicePresident "Jo Jorgensen"^^xsd:string ;
+    ns1:popularVote "485798"^^xsd:positiveInteger ;
+    ns2:pvPct "0.5"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__6> ns1:PoliticalParty "Taxpayers"^^xsd:string ;
+    ns1:President "Howard Phillips"^^xsd:string ;
+    ns1:VicePresident "Herb Titus"^^xsd:string ;
+    ns1:popularVote "184820"^^xsd:positiveInteger ;
+    ns2:pvPct "0.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__7> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_della_Legge_Naturale> ;
+    ns1:President <http://it.dbpedia.org/resource/John_Hagelin> ;
+    ns1:VicePresident "Michael Tompkins"^^xsd:string ;
+    ns1:popularVote "113670"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1996__8> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "121534"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/George_W._Bush> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Dick_Cheney> ;
+    ns1:popularVote "50460110"^^xsd:positiveInteger ;
+    ns2:electoralVote "271"^^xsd:positiveInteger ;
+    ns2:pvPct "47.9"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Al_Gore> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Joe_Lieberman> ;
+    ns1:popularVote "51003926"^^xsd:positiveInteger ;
+    ns2:electoralVote "266"^^xsd:positiveInteger ;
+    ns2:pvPct "48.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Verde_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Ralph_Nader> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Winona_LaDuke> ;
+    ns1:popularVote "2883105"^^xsd:positiveInteger ;
+    ns2:pvPct "2.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Riforma> ;
+    ns1:President <http://it.dbpedia.org/resource/Pat_Buchanan> ;
+    ns1:VicePresident "Jo Jorgensen"^^xsd:string ;
+    ns1:popularVote "449225"^^xsd:positiveInteger ;
+    ns2:pvPct "0.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__5> ns1:PoliticalParty "Partito Libertariano (Stati Uniti d'America d'America)"^^xsd:string ;
+    ns1:President "Harry Browne"^^xsd:string ;
+    ns1:VicePresident "Art Olivier"^^xsd:string ;
+    ns1:popularVote "384516"^^xsd:positiveInteger ;
+    ns2:pvPct "0.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__6> ns1:PoliticalParty <http://it.dbpedia.org/resource/Costituzione> ;
+    ns1:President "Howard Phillips"^^xsd:string ;
+    ns1:VicePresident "Curtis Frazier"^^xsd:string ;
+    ns1:popularVote "98022"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__7> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_della_Legge_Naturale> ;
+    ns1:President <http://it.dbpedia.org/resource/John_Hagelin> ;
+    ns1:VicePresident "Nat Goldhaber"^^xsd:string ;
+    ns1:popularVote "83702"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2000__8> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "54652"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/George_W._Bush> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Dick_Cheney> ;
+    ns1:popularVote "62040610"^^xsd:positiveInteger ;
+    ns2:electoralVote "286"^^xsd:positiveInteger ;
+    ns2:pvPct "50.7"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/John_Kerry> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/John_Edwards> ;
+    ns1:popularVote "59028111"^^xsd:positiveInteger ;
+    ns2:electoralVote "251"^^xsd:positiveInteger ;
+    ns2:pvPct "48.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/John_Edwards> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/John_Edwards> ;
+    ns2:electoralVote "1"^^xsd:positiveInteger ;
+    ns2:pvPct "-(a)"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__4> ns1:PoliticalParty <http://it.dbpedia.org/resource/Riforma> ;
+    ns1:President <http://it.dbpedia.org/resource/Ralph_Nader> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Peter_Camejo> ;
+    ns1:popularVote "463653"^^xsd:positiveInteger ;
+    ns2:pvPct "0.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__5> ns1:PoliticalParty "Partito Libertariano (Stati Uniti d'America d'America)"^^xsd:string ;
+    ns1:President "Michael Badnarik"^^xsd:string ;
+    ns1:VicePresident "Richard Campagna"^^xsd:string ;
+    ns1:popularVote "397265"^^xsd:positiveInteger ;
+    ns2:pvPct "0.3"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__6> ns1:PoliticalParty <http://it.dbpedia.org/resource/Costituzione> ;
+    ns1:President "Michael Peroutka"^^xsd:string ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Chuck_Baldwin> ;
+    ns1:popularVote "144498"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__7> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Verde_(Stati_Uniti_d'America)> ;
+    ns1:President "David Cobb"^^xsd:string ;
+    ns1:VicePresident "Patricia LaMarche"^^xsd:string ;
+    ns1:popularVote "119859"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2004__8> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "99336"^^xsd:positiveInteger ;
+    ns2:pvPct "0.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008__1> ns1:PoliticalParty "Partito Democratico"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Barack_Obama> ;
+    ns1:popularVote "69498516"^^xsd:positiveInteger ;
+    ns2:electoralVote "365"^^xsd:positiveInteger ;
+    ns2:pvPct "52.8"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008__2> ns1:PoliticalParty "Partito Repubblicano"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/John_McCain> ;
+    ns1:popularVote "59948323"^^xsd:positiveInteger ;
+    ns2:electoralVote "173"^^xsd:positiveInteger ;
+    ns2:pvPct "45.82"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008__3> ns1:PoliticalParty <http://it.dbpedia.org/resource/Indipendente> ;
+    ns1:President <http://it.dbpedia.org/resource/Ralph_Nader> ;
+    ns1:popularVote "726462"^^xsd:positiveInteger ;
+    ns2:pvPct "0.56"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008__4> ns1:PoliticalParty "Partito Libertariano"^^xsd:string ;
+    ns1:President "Bob Barr"^^xsd:string ;
+    ns1:popularVote "532995"^^xsd:positiveInteger ;
+    ns2:pvPct "0.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2012__1> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Democratico_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Barack_Obama> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Joe_Biden> ;
+    ns1:popularVote "65899660"^^xsd:positiveInteger ;
+    ns2:electoralVote "332"^^xsd:positiveInteger ;
+    ns2:pvPct "51.1"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2012__2> ns1:PoliticalParty <http://it.dbpedia.org/resource/Partito_Repubblicano_(Stati_Uniti_d'America)> ;
+    ns1:President <http://it.dbpedia.org/resource/Mitt_Romney> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Paul_Ryan> ;
+    ns1:popularVote "60932152"^^xsd:positiveInteger ;
+    ns2:electoralVote "206"^^xsd:positiveInteger ;
+    ns2:pvPct "47.2"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2012__3> ns1:PoliticalParty "Partito Libertariano (Stati Uniti d'America d'America)"^^xsd:string ;
+    ns1:President <http://it.dbpedia.org/resource/Gary_Johnson> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/California> ;
+    ns1:popularVote "1275827"^^xsd:positiveInteger ;
+    ns2:pvPct "1.0"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2012__4> ns1:PoliticalParty "Partito Verde degli Stati Unit d'America)"^^xsd:string ;
+    ns1:President "Jill Stein"^^xsd:string ;
+    ns1:VicePresident "Cheri Honkala"^^xsd:string ;
+    ns1:popularVote "468907"^^xsd:positiveInteger ;
+    ns2:pvPct "0.4"^^xsd:float .
+
+<http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2012__5> ns1:PoliticalParty <http://it.dbpedia.org/resource/Altri> ;
+    ns1:President <http://it.dbpedia.org/resource/Altri> ;
+    ns1:VicePresident <http://it.dbpedia.org/resource/Altri> ;
+    ns1:popularVote "556094"^^xsd:positiveInteger ;
+    ns2:pvPct "0.4"^^xsd:float .
+

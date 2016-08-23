@@ -292,7 +292,7 @@ class Mapper:
 
                             # find if there is a comma inside the object
                             comma_index = cell_object.find(",")
-                            if comma_index:
+                            if comma_index >= 0:
                                 # if so, replace it with everything comes before the comma
                                 cell_object = cell_object[:comma_index]
 
@@ -429,8 +429,8 @@ class Mapper:
                                 # test if this character is a '%'
                                 percentage = re.match(r'%', percentage)
                                 if percentage:
-                                    # if so, replace commas with dots, and value with float(value_less_last_character)
-                                    values[0] = values[0].replace(",", ".")
+                                    # if so, replace value with float(value_less_last_character)
+
                                     values[0] = float(values[0][:-1])
                                     # set object as a float Literal
                                     cell_object = rdflib.Literal(values[0], datatype=rdflib.namespace.XSD.float)
