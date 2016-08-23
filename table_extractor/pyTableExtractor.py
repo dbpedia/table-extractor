@@ -11,13 +11,13 @@ __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
 def main():
     """
-    The Table Extractor is a 2016 GSoC project; here you have the [first project idea]
+    The table_extractor is a 2016 GSoC project; here you have the [first project idea]
      (wiki.dbpedia.org/ideas/idea/59/the-table-extractor/), assigned to Simone Papalini(s.papalini) and developed for
      DBpedia Spotlight organization.
 
     Note: Python 2.7, RDFlib, lxml are strictly required, so please install them in your environment.
 
-    LICENSE: GNU GENERAL PUBLIC LICENSE. This is a OPEN SOURCE project.
+    LICENSE: Refer to LICENSE file. GNU GENERAL PUBLIC LICENSE. This is a OPEN SOURCE project.
      Feel free to download the project, use it, enhance functionalities, add your creativity to the project,
      but please SHARE your efforts with the rest of the World.
      Refer to [License file](https://github.com/dbpedia/table-extractor/blob/master/LICENSE)

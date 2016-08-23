@@ -29,6 +29,10 @@ class Mapper:
 
     def __init__(self, chapter, graph, topic, resource, table_data, mode, utils, table_section=None):
         """
+        Mapper is a class used to choose mapping rules over refined cells of data in order to compose a rdf dataset.
+
+        It uses chapter and topic to choose which method use in a extraction.
+        Once you have created a mapper object, simply call map() method
 
         :param chapter (str): a two alpha-characters string representing the chapter of wikipedia user chose.
         :param graph: (rdflib graph) graph which will contain our RDF triples set
@@ -376,12 +380,14 @@ class Mapper:
                         #  number of votes
                         cell_predicate = rdflib.URIRef(self.dbo.popularVote)
 
-                        # delete spaces
-                        if ' ' in values[0]:
-                            values[0] = values[0].replace(' ', '')
-                        # delete dots
-                        if '.' in values[0]:
-                            values[0] = values[0].replace('.', '')
+                        basestr = isinstance(values[0], basestring)
+                        if basestr:
+                            # delete spaces
+                            if ' ' in values[0]:
+                                values[0] = values[0].replace(' ', '')
+                            # delete dots
+                            if '.' in values[0]:
+                                values[0] = values[0].replace('.', '')
 
                         # test if value can be casted to int type
                         if self.is_int(values[0]):
@@ -403,11 +409,6 @@ class Mapper:
                         # predicate is http://dbpedia.org/property/pvPct which stands for popular vote, percentage
                         cell_predicate = rdflib.URIRef(self.dbp.pvPct)
 
-                        # Sometimes wiki Users use comma instead of dot desribing percentage, so we have to convert
-                        #  commas in dots.
-                        if ',' in values[0]:
-                            values[0] = values[0].replace(",", ".")
-
                         # test if the value can be casted to a float
                         if self.is_float(values[0]):
                             values[0] = float(values[0])
@@ -418,6 +419,11 @@ class Mapper:
                             # test if it is a string or a unicode
                             basestr = isinstance(values[0], basestring)
                             if basestr:
+                                # Sometimes wiki Users use comma instead of dot desribing percentage, so we have
+                                # to convert commas in dots.
+                                if ',' in values[0]:
+                                    values[0] = values[0].replace(",", ".")
+
                                 # set as percentage the last character of the string
                                 percentage = values[0][-1:]
                                 # test if this character is a '%'
@@ -426,6 +432,9 @@ class Mapper:
                                     # if so, replace commas with dots, and value with float(value_less_last_character)
                                     values[0] = values[0].replace(",", ".")
                                     values[0] = float(values[0][:-1])
+                                    # set object as a float Literal
+                                    cell_object = rdflib.Literal(values[0], datatype=rdflib.namespace.XSD.float)
+                                else:
                                     # set object as a float Literal
                                     cell_object = rdflib.Literal(values[0], datatype=rdflib.namespace.XSD.float)
 

@@ -1,6 +1,6 @@
 # coding=utf-8
 
-# This file contains some default configuration for the Table Extractor. Please, be aware of customization!
+# This file contains some default configuration for the table_extractor. Please, be aware of customization!
 
 # Here you have a general description of what the script (pyTableExtraction.py) do
 GENERAL_DESCRIPTION = "This script try to parse data from tables in wiki pages.\n " \
@@ -67,7 +67,7 @@ MODE_HELP = "Mode used to parse the web pages, \n \
              DEFAULT = "+MODE_DEFAULT
 
 # DEFAULT chapter
-CHAPTER_DEFAULT = 'en'
+CHAPTER_DEFAULT = 'it'
 # Help for -c option
 CHAPTER_HELP = "Language of Wikipedia pages/resources to analyze. \n \
                 Please ensure you are using an existing wikipedia chapter tag! \n \

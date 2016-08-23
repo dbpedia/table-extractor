@@ -21,7 +21,7 @@ class Utilities:
     Topic is used mainly in reporting and composing filename for log while chapter is used to correctly address the outer
     service calls.
 
-    Methods usable by outer scopes are:
+    Public methods:
     - setup_log()
     - test_dir_existence(directory_to_test) # to tests if a directory exists in current filesystem
     - get_current_dir() # returns current directory
@@ -426,7 +426,7 @@ class Utilities:
             Simply call print_report() as last method of entire extraction
         """
         self.logging.info("REPORT:")
-        # if the Table Extractor is executed in single_res mode, no resources are collected from dbpedia sparql endpoints
+        # if the table_extractor is executed in single_res mode, no resources are collected from dbpedia sparql endpoints
         if self.res_collected:
             self.logging.info("+           # of resources collected for this topic (%s) : %d" % (self.topic, self.res_collected))
 
