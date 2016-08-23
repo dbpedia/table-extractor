@@ -215,8 +215,8 @@ class Analyzer:
                 self.utils.res_analyzed = self.res_analyzed
 
                 # Print out and in the log every header cell without mapping rule
-                print("These are -headers- without mapping rules:")
-                self.logging.info("These are -headers- without mapping rules:")
+                print("There are %d -headers- without mapping rules:" % len(self.total_headers_not_mapped))
+                self.logging.info("There are %d -headers- without mapping rules:" % len(self.total_headers_not_mapped))
 
                 for header in self.total_headers_not_mapped:
 

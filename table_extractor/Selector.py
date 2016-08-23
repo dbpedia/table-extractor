@@ -69,15 +69,15 @@ class Selector:
         Used to set the file which will contain the list of resources involved in this extraction
         :return: path_to_file  absolute path to the file we want to create
         """
-        # call test_dir_existence() from Utilities class to test if '../Resource lists' exists.
-        self.utils.test_dir_existence('../Resource lists')
+        # call test_dir_existence() from Utilities class to test if '../Resource_lists' exists.
+        self.utils.test_dir_existence('../Resource_lists')
 
         # get current directory
         current_dir = self.utils.get_current_dir()
         # compose list filename
         filename = self.utils.get_date() + "_" + self.topic + "_" + self.chapter + ".txt"
         # recreating abs path from 2 paths
-        path_to_file = self.utils.join_paths(current_dir, '../Resource lists/' + filename)
+        path_to_file = self.utils.join_paths(current_dir, '../Resource_lists/' + filename)
         return path_to_file
 
     def collect_resources(self):

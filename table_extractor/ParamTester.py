@@ -159,7 +159,8 @@ class ParamTester:
                 for topic in settings.TOPIC_SPARQL_WHERE_CLAUSE:
                     print ("- %s" % topic)
                 # then states that the script will continue using the default topic.
-                print("The script will continue using default topic (%s)." % settings.TOPIC_DEFAULT)
+                print("The script will continue using default topic (%s) and default chapter (%s)."
+                      % (settings.TOPIC_DEFAULT, settings.CHAPTER_DEFAULT))
 
         elif self.args.single:
             """ if the user didn't choose a topic but a single resource (-s option), the method set object's topic

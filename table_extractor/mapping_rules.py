@@ -3,7 +3,7 @@
 # Mapping rules used to map table's data, topics are used to evaluate functions with same name.
 
 # Mapping topics is defined here to store which topics are mapped and for which wiki chapter ('en', 'it'...)
-MAPPING_TOPICS = {'en': [],
+MAPPING_TOPICS = {'en': ['elections'],
                   'it': ['elections']}
 
 

@@ -101,7 +101,7 @@ def main():
         selector.collect_resources()
         """
         Retrieve the resources list's filename which the selector has just created (a .txt file you can find in
-            /Resource lists/)
+            /Resource_lists/)
         """
         res_list_filename = selector.res_list_file
 
