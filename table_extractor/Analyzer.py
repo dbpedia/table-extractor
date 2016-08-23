@@ -231,7 +231,7 @@ class Analyzer:
                     {'Stato di origine' :["Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008",
                                             ['Illinois', 'Illinois']]}
                     """
-                    self.logging.info("- Header:  -%s- , : Value example %s, Resource: %s"
+                    self.logging.info("- Header:  -%s- , Value example %s, Resource: %s"
                                       % (header, self.total_headers_not_mapped[header][1],
                                          self.total_headers_not_mapped[header][0]))
 
