@@ -1,0 +1,12 @@
+#
+#
+####### Table Extractor Requirements #######
+#
+#pip install -r requirements.txt
+#
+###### Requirements with Version Specifiers ######
+#   See https://www.python.org/dev/peps/pep-0440/#version-specifiers
+rdflib >= 4.0           # rdflib used to manage rdf graphs and triples extraction.
+lxml >= 3.6          # lxml library is used in HtmlTableParser to manage html representation of wiki pages.
+#
+# If you have problems installing lxml please refer to http://lxml.de/
