@@ -282,6 +282,7 @@ class HtmlTableParser:
         :return: nothing
         """
         try:
+            i = 0   # for counting tables' rows
             # for every the table's row
             for row in self.current_html_table:
                 headers = []
@@ -289,14 +290,32 @@ class HtmlTableParser:
                 html_header_row = row.findall('th')
                 # find also data cell in the same row
                 html_data = row.findall('td')
-
+                header_row = ""
                 # we consider as a table header rows, only those ones with no data cells
-                if html_header_row and not html_data:
+                # we will use this case only if the tables if well formed.
+                # It won't read as header the last row.
+                if html_header_row and not html_data and (i < tab.n_rows - 2 or tab.n_rows > 1):
                     # headers are composed in the form of a dictionary Eg. {'colspan': '3', 'th': 'Candidati'}
                     header_row = self.compose_tab_headers(html_header_row)
-                    # if headers are found append them to the tab.headers list
-                    if header_row:
-                        tab.headers.append(header_row)
+
+                # this is the case where headers looks like data cell.
+                # we take only the first row as headers and the others rows will be taken as data cells (tag td)
+                elif i == 0 and not html_header_row and html_data:
+                    # headers are composed in the form of a dictionary Eg. {'colspan': '3', 'td': 'Candidati'}
+                    header_row = self.compose_tab_headers(html_data)
+
+                # another particular case where headers are in columns instead of being in a row.
+                elif html_data and html_header_row:
+                    # headers are composed in the form of a dictionary Eg. {'colspan': '3', 'td': 'Candidati'}
+                    header_row = self.compose_tab_headers(html_header_row)
+                    # variable that will be useful for mapper class. In this way we can distinct
+                    # different table types.
+                    tab.vertical_table = 1
+
+                # if headers are found append them to the tab.headers list
+                if header_row:
+                    tab.headers.append(header_row)
+                i += 1
         except:
             self.logging.warning("Error Finding the headers, resource: %s" % self.resource)
 
