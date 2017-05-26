@@ -453,3 +453,16 @@ class Utilities:
         self.logging.info("+           Total # cells mapped : %d" % self.mapped_cells)
 
         self.logging.info("+           Total # of triples serialized : %d" % self.triples_serialized)
+
+    """ 
+    Method used to delete all accented characters from the name of resource.
+    It takes in input one string called text and gives in output another string that doesn't have accented characters
+    that it's similar to the previous form.
+    """
+    def delete_accented_characters(self, text):
+        try:
+            unicode(text, "utf-8")
+        except TypeError:
+            nfkd_form = unicodedata.normalize('NFKD', text)
+            text = nfkd_form.encode('ASCII', 'ignore')
+        return text
