@@ -27,6 +27,9 @@ class Table:
 
         self.data_filtered = []
 
+        # used for understanding if headers are in rows or in columns
+        self.vertical_table = 0
+
     def count_data_cells_and_rows(self):
         """
         Method which set number of data cells and rows for this table
