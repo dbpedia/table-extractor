@@ -62,3 +62,6 @@ target/
 
 #Pycharm
 .idea/*
+
+#Extractor results
+Extractions/*
