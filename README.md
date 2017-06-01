@@ -1,4 +1,4 @@
-# table-extractor, a GSoC 2016 project 
+# The table-extractor - GSoC 2017 project 
 
 
 #### You can find progress page [here](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone "Progress")
