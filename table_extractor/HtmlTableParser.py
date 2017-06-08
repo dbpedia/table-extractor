@@ -322,7 +322,6 @@ class HtmlTableParser:
         except:
             self.logging.warning("Error Finding the headers, resource: %s" % self.resource)
 
-
     def check_miss_subheaders(self, tab):
         """
 
