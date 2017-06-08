@@ -59,7 +59,7 @@ class HtmlTableParser:
         # list of tables in html
         self.tables = []
         self.current_html_table = None
-
+        self.all_tables = []
         # statistics regarding a resource
         self.tables_num = 0  # number of tables
         self.tables_analyzed = 0  # number of tables analyzed
@@ -180,7 +180,7 @@ class HtmlTableParser:
                     self.logging.info("Rows extracted: %d" % tab.data_refined_rows)
                     self.logging.info("Data extracted for this table: %d" % tab.cells_refined)
 
-                    # update data cells extracted in order to make a final report
+                    # update data cells extracted in order to <make a final report
                     self.utils.data_extracted += tab.cells_refined
                     self.utils.rows_extracted += tab.data_refined_rows
 
@@ -189,8 +189,9 @@ class HtmlTableParser:
                                            'html', self.utils, tab.table_section)
 
                     # Start the mapping process
-                    mapper.map()
-
+                    #mapper.map()
+                    #self.print_table(tab)
+                    self.all_tables.append(tab)
                     # Compose headers not mapped for this resource
                     for header in mapper.headers_not_mapped:
                         if header not in self.headers_not_mapped:
@@ -284,6 +285,7 @@ class HtmlTableParser:
         try:
             i = 0   # for counting tables' rows
             # for every the table's row
+            started_data = 0    # variable for checking if we started reading data, so we can't find other headers
             for row in self.current_html_table:
                 headers = []
                 # find header cell
@@ -293,8 +295,8 @@ class HtmlTableParser:
                 header_row = ""
                 # we consider as a table header rows, only those ones with no data cells
                 # we will use this case only if the tables if well formed.
-                # It won't read as header the last row.
-                if html_header_row and not html_data and (i < tab.n_rows - 2 or tab.n_rows > 1):
+                # It won't read the last row as header.
+                if html_header_row and not html_data and started_data == 0:
                     # headers are composed in the form of a dictionary Eg. {'colspan': '3', 'th': 'Candidati'}
                     header_row = self.compose_tab_headers(html_header_row)
 
@@ -311,7 +313,8 @@ class HtmlTableParser:
                     # variable that will be useful for mapper class. In this way we can distinct
                     # different table types.
                     tab.vertical_table = 1
-
+                else:
+                    started_data = 1
                 # if headers are found append them to the tab.headers list
                 if header_row:
                     tab.headers.append(header_row)
@@ -452,7 +455,7 @@ class HtmlTableParser:
         self.remove_citations(tab)
 
         # Print in the console headers to have a visual feedback of which are header cells found and refined
-        self.print_headers(tab)
+        #self.print_headers(tab)
 
         # We want to make a single header's row, associating every header row with the next one.
         self.associate_super_and_sub_headers(tab)
@@ -626,9 +629,9 @@ class HtmlTableParser:
                 tab.headers_refined.append(element)
 
             # Finally prints out new headers to have a visual feedback
-            print "New headers:"
-            for header in tab.headers_refined:
-                print(header['th'])
+            #print "New headers:"
+            #for header in tab.headers_refined:
+            #    print(header['th'])
         except:
             print("Error gathering sub and super headers.. resource: " + str(self.resource))
 
@@ -1025,3 +1028,10 @@ class HtmlTableParser:
                 if temp_row:
                     tab.data_refined.append(temp_row)
 
+    def print_table(self, tab):
+        print "nome sezione ", tab.table_section, " verticale: ", tab.vertical_table
+        for value in self.current_html_table:
+            str = ""
+            for x in value.itertext():
+                str = str + x
+            print str.replace("\n", " ")
