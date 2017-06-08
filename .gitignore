@@ -65,3 +65,7 @@ target/
 
 #Extractor results
 Extractions/*
+Resource_lists/*
+
+#Domain analyzed result
+domain_settings.py
