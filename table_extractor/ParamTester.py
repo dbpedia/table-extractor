@@ -21,14 +21,14 @@ class ParamTester:
            (Eg. "?s a <http://dbpedia.org/ontology/SoccerPlayer>" in order to select all soccer players pages), or a
            SINGLE_RES (Eg. "Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888" which is a real page name).
            If none of these three arguments is chosen, with set_where_clause() is set a default TOPIC.
-           See TOPIC_DEFAULT in settings.py to know what is this default topic.
+           See TOPIC_DEFAULT in settings_domain_explorer.py to know what is this default topic.
 
         -t| --topic [str], DEFAULT: 'elections'
           topic is a string representing a topic the user can choose from.
           With this parameter is possible to pick up a corresponding where_clause to select a set of resources.
           Afterwards (see Mapper class) topic is used to choose a set of mapping rules to apply over data extracted from
           that set.
-          See settings.py to add new topics and customize old ones.
+          See settings_domain_explorer.py to add new topics and customize old ones.
           (Eg. 'elections' for elections, 'actors' for movies actors, 'directors' for film directors, 'all' to catch up
            all wiki pages (NOT recommended))
 
@@ -132,13 +132,13 @@ class ParamTester:
 
         :return where_clause used to set the SPARQL query to recover a resources' list from dbpedia.
          If it is the actual case, the method sets the class' where_clause, as defined in
-         settings.py and the topic.
+         settings_domain_explorer.py and the topic.
 
         """
         where_clause = ""
 
         """ It first test out the if user chose a topic with -t option and if this topic is already defined between those
-          you can find at settings.py. If the response is True, it sets where_clause as that defined in
+          you can find at settings_domain_explorer.py. If the response is True, it sets where_clause as that defined in
           settings.TOPIC_SPARQL_WHERE_CLAUSE[topic]"""
         if self.args.topic:
             for topic in settings.TOPIC_SPARQL_WHERE_CLAUSE:
@@ -214,7 +214,7 @@ class ParamTester:
         """
         Method which returns the mode ('html' or 'json') that will be used to choose which parser would be adopted by
         the Extractor.
-        :return: mode chosen by the user with -m option if it is defined in settings.py or
+        :return: mode chosen by the user with -m option if it is defined in settings_domain_explorer.py or
          the default mode (settings.MODE_DEFAULT)
         """
         if self.args.mode:  # if -m option is used
