@@ -28,6 +28,7 @@ def start_exploration(chapter, topic):
     uri_resource_list = get_uri_resources(utils, topic)
     if uri_resource_list:
         analyze_uri_resource_list(uri_resource_list, utils, chapter, topic, actual_dictionary)
+        insert_propertiers_old_dictionary(actual_dictionary)
         write_sections_and_headers(chapter, topic)
 
 
@@ -89,17 +90,7 @@ Check if section is present in the dictionary of pyTableExtractor
 
 
 def check_if_section_is_present(string_to_check, actual_dictionary, utils, headers_refined):
-    section_name = string_to_check
-    try:
-        # Section already in mapping_rules.py, but i have to update all_sections
-        key = (actual_dictionary[string_to_check])
-        try:
-            all_sections[string_to_check]
-        except:
-            all_sections[string_to_check] = OrderedDict()
-            all_sections[string_to_check].__setitem__(settings.SECTION_NAME_PROPERTY,"")
-    except KeyError:
-        section_name = check_if_similar_section_is_present(string_to_check, utils)
+    section_name = check_if_similar_section_is_present(string_to_check, utils)
     # Check if this section was already created, if not it will create another dictionary
     check_if_headers_not_present_then_add(headers_refined, actual_dictionary, utils, section_name)
 
@@ -112,10 +103,7 @@ def check_if_headers_not_present_then_add(headers, actual_dictionary, utils, sec
     for row in headers:
         header = row['th']
         header = header.replace("'", ":")
-        try:
-            actual_dictionary[header]
-        except KeyError:
-            check_if_header_already_exists(header, utils, section_name)
+        check_if_header_already_exists(header, utils, section_name)
 
 
 """
@@ -184,8 +172,6 @@ def check_if_similar_section_is_present(string_to_check, utils):
             all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, "")
     else:
         new_key = equal_key
-
-    print "Tocca: ", string_to_check, " Simili: ", similar_key, " Uguali: ",equal_key," nuova: ", new_key, "tutte le chiavi: ", keys
     return new_key
 
 """
@@ -253,6 +239,17 @@ def read_actual_dictionary(chapter):
         if name == dictionary_name:
             dictionary = dict(val)
     return dictionary
+
+
+def insert_propertiers_old_dictionary(actual_dictionary):
+    for actual_key in actual_dictionary:
+        for section_key in all_sections:
+            if actual_key == section_key:
+                all_sections[section_key].__setitem__(settings.SECTION_NAME_PROPERTY,actual_dictionary[actual_key])
+            else:
+                for headers_key in all_sections[section_key]:
+                    if actual_key == headers_key:
+                        all_sections[section_key].__setitem__(headers_key, actual_dictionary[actual_key])
 
 if __name__ == "__main__":
     arg = sys.argv
