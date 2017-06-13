@@ -1,7 +1,7 @@
 # The table extractor - GSoC 2017 project 
 
-
-#### You can find progress page [here](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone "Progress")
+#### GSoC 2017 progress page [here](https://github.com/dbpedia/table-extractor/wiki/GSoC-2017:-Luca-Virgili-progress)
+#### GSoC 2016 progress page [here](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone "Progress")
 
 ###Requirements
 You can install requirements using requirements.txt `pip install -r requirements.txt`
