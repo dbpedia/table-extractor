@@ -1,7 +1,6 @@
 #!/usr/bin/env python2.7
 # coding=utf-8
 
-import ParamTester
 import Selector
 import Utilities
 import Analyzer
@@ -45,57 +44,45 @@ def main():
 
     """
 
-    # First of all a test is run over the parameters passed to the script, see ParamTester.py
-    p_tester = ParamTester.ParamTester()
-
-    # The following values are used by the other classes and set from ParamTester attributes :
-
-    # language is a 2 letter string used to select the right wiki/dbpedia chapter and language to use mapping data cells
-    language = p_tester.lang  # default: 'en'
 
     """
     where_clause is a string representing a piece of a SELECT SPARQL query.
        It is used to collect resources of a certain scope (Eg all the resources representing actors)
     """
-    where_clause = p_tester.where  # default: "?s a <http://dbpedia.org/ontology/Election>"
+    #where_clause = p_tester.where  # default: "?s a <http://dbpedia.org/ontology/Election>"
 
-    """
-    topic is a string representing the scope of interest, used to collect resources and to choose the right mapping
-     rules for data extracted from tables found in those resources.
-    """
-    topic = p_tester.topic  # default:"elections"
+
 
     """
     single_res is a string containing the name of a wiki page (the same of dbpedia in most cases)
       NOTE: single_res is not always set, and it is used only in the case a user want to analyze a single wiki page.
     """
-    single_res = p_tester.single_res  # no default value
-
-    # mode is a string and could be 'html' or 'json'. User can choose to use the Json or the Html parser with this value
-    mode = p_tester.mode  # default: 'html'
 
     """
     Instancing a Utilities object using correct language and topic.
        Utilities would be used from other classes for different purposes (Internet connection, object testing,
        get time and date..) and to print a final report.
     """
-    utils = Utilities.Utilities(language, topic)
-
+    utils = Utilities.Utilities(None, None, None)
+    topic = utils.topic
+    language = utils.chapter
     """
     res_list_filename is created but not set. In fact, if a user want to test a single resource, there isn't a
        list of resources to collect.
     """
     res_list_filename = None
 
+
     # Test if the user chose a single resource
-    if not single_res:
+    if not utils.research_type == "s":
+        single_res = ""
         """
         if not, a Selector object is created, in order to retrieve resources of interest(it depends on the topic chosen)
           from dbpedia/wikipedia/jsonpedia.
         Note: a selector need 4 parameters, language, where_clause, topic chosen and the instance of utilities mainly
                  for a statistic purpose.
         """
-        selector = Selector.Selector(language, where_clause, topic, utils)
+        selector = Selector.Selector(utils)
 
         # Collecting resources of given topic using collect_resources().
         selector.collect_resources()
@@ -104,14 +91,15 @@ def main():
             /Resource_lists/)
         """
         res_list_filename = selector.res_list_file
-
+    else:
+        single_res = topic
     """
     Now we want to analyze the set of resources (or the single one) we just retrieved, so an analyzer is created.
     Parameters passed: language, topic, utilities object, mode,  list filename and the name of the single resource.
     Note: the last two parameters (res_list_filename and single_res) are actually mutual exclusive, so in both cases,
          one of them is None.
     """
-    analyzer = Analyzer.Analyzer(language, topic, utils, mode, res_list_filename, single_res)
+    analyzer = Analyzer.Analyzer(language, topic, utils, res_list_filename, single_res)
 
     """
     To actually analyze the wiki pages and tables in them, you have to call the analyze() method.
