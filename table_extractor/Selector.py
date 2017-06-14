@@ -12,27 +12,21 @@ class Selector:
     set of resources to work with.
 
     Arguments:
-        - chapter (str) # chapter of wikipedia Eg. en, it, de ..
-        - where_clause (str) # part of a select query (WHERE) used to retrieve a list of resources from a sparql endpoint
-        - topic (str) string representing the scope chose
         - utils (Utilities object) a Utilities object, useful to call dbpedia service depending on the chapter of interest
 
     Public methods:
         - collect_resources() # Used to start the process of resource collection
 
     """
-    def __init__(self, chapter, where_clause, topic, utils):
+    def __init__(self, utils):
         """
-        :param chapter: chapter of interest, it has to be a 2 alpha-characters string (Eg. 'en','it','de'...)
-        :param where_clause: a SPARQL where clause Eg. "?s a <http://dbpedia.org/ontology/SoccerPlayer>"
-        :param topic: a topic of interest Eg. soccer, actors, writers...
         :param utils: a Utilities object which some methods are used to call a endpoint service.
         """
         # set the parameters
-        self.chapter = chapter
-        self.where_clause = where_clause
-        self.topic = topic
+        self.chapter = utils.chapter
+        self.topic = utils.topic
         self.utils = utils
+        self.where_clause = self.set_where_clause()
 
         self.last_res_list = None
         self.current_res_list = []
@@ -75,7 +69,10 @@ class Selector:
         # get current directory
         current_dir = self.utils.get_current_dir()
         # compose list filename
-        filename = self.utils.get_date() + "_" + self.topic + "_" + self.chapter + ".txt"
+        if self.utils.research_type == "w":
+            filename = self.utils.get_date() + "_" + "custom" + "_" + self.chapter + ".txt"
+        else:
+            filename = self.utils.get_date() + "_" + self.topic + "_" + self.chapter + ".txt"
         # recreating abs path from 2 paths
         path_to_file = self.utils.join_paths(current_dir, '../Resource_lists/' + filename)
         return path_to_file
@@ -147,3 +144,11 @@ class Selector:
 
         """
         self.offset += 1000
+
+    def set_where_clause(self):
+        if self.utils.research_type == "t":
+            return "?s ?o <http://dbpedia.org/ontology/" + self.utils.topic + ">"
+        elif self.utils.research_type == "s":
+            return self.utils.topic
+        elif self.utils.research_type == "w":
+            return self.utils.topic
