@@ -1,8 +1,14 @@
 # The table extractor - GSoC 2017 project 
 
-#### GSoC 2017 progress page [here](https://github.com/dbpedia/table-extractor/wiki/GSoC-2017:-Luca-Virgili-progress)
-#### GSoC 2016 progress page [here](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone "Progress")
+## Abstract
+ _Wikipedia is full of data hidden in tables. The aim of this project is to explore the possibilities of exploiting all the data represented with the appearance of tables in Wiki pages, in order to populate the different chapters of DBpedia through new data of interest. The Table Extractor has to be the engine of this data “revolution”: it would achieve the final purpose of extracting the semi structured data from all those tables now scattered in most of the Wiki pages._
 
+
+## Progress pages
+ * **GSoC 2016 progress page** [here](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone "Progress")
+ * **GSoC 2017 progress page** [here](https://github.com/dbpedia/table-extractor/wiki/GSoC-2017:-Luca-Virgili-progress)
+ 
+## Project
 ###Requirements
 You can install requirements using requirements.txt `pip install -r requirements.txt`
 * Python 2.7
@@ -14,11 +20,16 @@ You can install requirements using requirements.txt `pip install -r requirements
 `python pyTableExtractor.py [(--where|--single|--topic) --chapter --mode]`
 
 * `-c`, `--chapter` : Optional. 2 letter long string representing the desidered endpoint/Wikipedia language (e.g. `en`, `it`, `fr` ...) Default value: 'en'. Reccomendation: do not use  -m 'json'  
-* `-m`, `--mode` : Optional. As I changed approach to the problem, I initially face the project working with JSONPedia, I introduced two working method for the algorithm : json or html. Default value: 'html'
+* `-v`, `--verbose` : Optional. One number that is between 1 and 3. Each value correspond to a different organization of output file.
+
+####Verbose
+* 1 - Output file will contain new data to map and old mapping rules contained in the table extractor's dictionary.
+* 2 - Output file will contain only new data to map, it won't show the mapping rules already saved.
+* 3 - Output file will contain new data to map (shown only one time) and the mapping rules saved in table extractor's dictionary
 
 #####Note: -w -s -t are all mutual exclusive parameters  
 
-* `-t`, `--topic` : Optional. one of the keywords from the following: 'elections' for pages related to electoral results, 'elections_USA' to limit election result to USA presidential elections, 'all' to select all wiki pages, 'soccer' for soccer players, 'actors' , 'directors' for people who has directed a film, 'writers'. Default value: 'all' (all wiki pages from a chapter).
+* `-t`, `--topic` : Optional. Represents a DBpedia ontology class that you want to explore and analyze. It's important to preserver the camelcase form. Eg. "BasketballPlayer".
 * `-w`, `--where` : Optional. A SPARQL where clause. Eg. "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>.  ?film <http://dbpedia.org/ontology/director> ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s
 * `-s`, `--single` : Optional. can be used to select a wiki page at a time. Eg. -s 'Channel_Tunnel' takes only the [wiki page](https://en.wikipedia.org/wiki/Channel_Tunnel "Channel Tunnel wiki page") representing the European channel tunnel between France and UK. [-s]Note: please use only the name of a wiki page without spaces ( substitued by underscores) Eg. Use -s [German_federal_election,_1874](https://en.wikipedia.org/wiki/German_federal_election,_1874 "German federal 1874 election") and not https://en.wikipedia.org/wiki/German_federal_election,_1874 or German federal election, 1874 .
 
@@ -35,28 +46,24 @@ Notes:
 * If you choose a topic (-t) or you pass to the script a custom where clause, a list of resources (.txt files) are created in /Resource_lists . 
 * If everything is ok, two files are created in /Extractions : a log file (for reporting purpose) and a .ttl file containing the serialized rdf data set.
 
-### Little final Report:
+
+
+## Results
 Please refer to [Progress_page](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone)
 
-### Results:
-Please refer to [Progress_page](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone)
+## Folders
+**table_extractor** Folder containing sources files for analyzing and mapping all properties found in the script "pyDomainExplorer.py"
 
-### Abstract:
- _Wikipedia is full of data hidden in tables. The aim of this project is to explore the possibilities of exploiting all the data represented with the appearance of tables in Wiki pages, in order to populate the different chapters of DBpedia through new data of interest. The Table Extractor has to be the engine of this data “revolution”: it would achieve the final purpose of extracting the semi structured data from all those tables now scattered in most of the Wiki pages._
-
-### Folders:
-**table_extractor** Folder containing sources files. You can find main script here (pyTableExtractor.py)
+**domain_explorer** Folder containing sources files for exploring and reading all properties of a domain.
 
 **Extractions** In this folder you will find .ttl and .log files about extractions you have completed.
 
 **Resource_lists** Here are collected .txt files as result from Selector.py work. Every .txt file contains a list of resources gathered by a SPARQL query (using -t topic or -w custom_where_clause). 
 
-### Sources Files:
+## Sources Files
 
 **pyTableExtractor** Module: contains main() function. It calls the other classes/modules as it should be done during usual operations. It first tests parameters calling param_test. Then, if a topic or a where clause are set, it calls selector.py to build up a list of resources. Afterward in all cases it calls the analyzer class. Analyzer is responsible to elaborate a resource at a time, to find out the tables' structure and to extract data. Analyzer finally calls Mapper, used to map data extracted on a RDF dataset. 
  
-**param_test** Using ArgParse this class is used to test parameters passed to the main script (pyTableExtractor.py). It takes most of the default values from settings.py, so take a look a that file to change default values or to add custom ones.
-
 **settings** A settings file used to store default values. You can customize the script from here. Eg you can add your personal topic adding a topic in TOPIC_CHOICES list, and the corresponding SPARQL query in TOPIC_SPARQL dictionary (please ensure the consistency of dictionary key and the topic added)
 
 **Selector** A class used to gather a list of resources calling a SPARQL dbpedia endpoint of chapter selected. It then serialize the list in a .txt file so you can keep trace of which set of resources has been found.   
@@ -67,14 +74,17 @@ Please refer to [Progress_page](https://github.com/dbpedia/extraction-framework/
 
 **Table** Class representing a table. It has some data structures used by other classes in order to recreate the table structure and to extract data.
 
-**JsonTableParser** Class which takes a json object (I used JSONPedia service) representing a wiki page of interest. It has the mission to find the structure (extract coherently headers) of the tables in the wiki page selected. Then it tries to extract data and to associate them with the corresponding headers. If the extraction is successful it calls the mapper to map data in RDF statements. Note: I warn users to not use this parser as I found lot of problems (which depend especially from Wiki users errors) with tables structures. In fact I had to change approach to the problem, realizing a html parser.
-
 **HtmlTableParser** Class which takes a html object representing a wiki page of interest. It has the mission to find the structure (extract coherently headers) of the tables in the wiki page selected. Then it tries to extract data and to associate them with the corresponding headers. If the extraction is successful it calls the mapper to map data in RDF statements.
 
 **Mapper** Class used to manage data extracted by the parsers. Depending on mapping_rules.py settings, it tries to map data applying different mapping rules. These rules depend on the chapter and the topic selected. 
 
 **mapping_rules** File which store rules to be used depending on the topic and the wiki chapter selected.
 
+**pyDomainExplorer** Main file for exploring the domain or single resource under exam.
+
+**ExplorerTools** Set of functions that help the previous script in the explorer task.
+
+**settings_domain_explored** Settings used in pyDomainExplorer.py. You can use this file for adapting all this work to your needs.
 
 ---
 
@@ -90,4 +100,6 @@ This script, written in collaboration with Federica Baiocchi (@github/Feddie), i
 *`python statistics.py en l writer`
 
 
-For any questions please feel free to contact me by [email](papalini.simone.an@gmail.com "author email")
+For any questions please feel to contact:
+* Simone papalini, papalini.simone.an@gmail.com , GSoC 2016 student.
+* Luca Virgili, lucav48@gmail.com , GSoC 2017 student.
