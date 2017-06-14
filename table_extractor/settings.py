@@ -58,13 +58,6 @@ MODE = {'html': 'html',
         'json': 'json',
         'j': 'json'
         }
-# DEFAULT MODE
-MODE_DEFAULT = 'html'
-# Help for -m option
-MODE_HELP = "Mode used to parse the web pages, \n \
-             With 'h' | 'html' script will use HtmlTableParser.py, \n \
-             With 'j' | 'json' script will use TableParser.py, a parser which use JSONPedia results. \n \
-             DEFAULT = "+MODE_DEFAULT
 
 # DEFAULT chapter
 CHAPTER_DEFAULT = 'it'
@@ -99,3 +92,12 @@ SPARQL_NUM_RES_QUERY = ["select (count(distinct ?s) as ?res_num) where{", "}"]
 
 # where clause to ensure that ?s has a wiki page
 WIKI_PAGE = ". ?s <http://dbpedia.org/ontology/wikiPageID> ?f"
+
+# path for dictionary created by pyDomainExplorer
+PATH_DOMAIN_EXPLORER = "../domain_settings.py"
+
+# comment to write in mapping_rules.py
+COMMENT_MAPPING_RULES = "# coding = utf-8 \n# Mapping rules used to map table's data, topics are used to evaluate functions with same name."
+
+# mapping rule's prefix
+MAPPING_RULE_PREFIX = "MAPPING_RULES_"
