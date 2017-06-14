@@ -10,7 +10,11 @@ import os
 import errno
 import logging
 import settings
+import unicodedata
 
+from domain_explorer import settings_domain_explorer
+from collections import OrderedDict
+import mapping_rules
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
 
@@ -39,14 +43,19 @@ class Utilities:
 
     """
 
-    def __init__(self, chapter, topic):
+    def __init__(self, chapter, topic, research_type):
 
         self.chapter = chapter
         self.topic = topic
-
+        self.research_type = research_type
         # test if the directory ../Extractions exists (or create it)
         self.test_dir_existence('../Extractions')
 
+        """
+        update actual mapping rules and set chapter and topic, given by domain_settings.py
+        """
+        if not self.chapter:
+            self.update_mapping_rules()
         # First of all setup the log and initialize it
         self.setup_log()
 
@@ -100,7 +109,10 @@ class Utilities:
         # obtain the current directory
         current_dir = self.get_current_dir()
         # composing the log filename as current_date_and_time + _LOG_T_EXT + chapter_chosen + topic_chosen
-        filename = current_date_time + "_LOG_T_Ext_" + self.chapter + '_' + self.topic + ".log"
+        if self.research_type == "w":
+            filename = current_date_time + "_LOG_T_Ext_" + self.chapter + '_' + "custom" + ".log"
+        else:
+            filename = current_date_time + "_LOG_T_Ext_" + self.chapter + '_' + self.topic + ".log"
         # composing the absolute path of the log
         path_desired = self.join_paths(current_dir, '../Extractions/' + filename)
 
@@ -466,3 +478,107 @@ class Utilities:
             nfkd_form = unicodedata.normalize('NFKD', text)
             text = nfkd_form.encode('ASCII', 'ignore')
         return text
+
+    """
+    Update mapping_rules.py
+    """
+    def update_mapping_rules(self):
+        new_mapping_rules = self.read_chapter_topic_and_mapping_rules()
+        actual_mapping_rules = self.read_actual_mapping_rules()
+        updated_mapping_rules = self.update_differences_between_dictionaries(actual_mapping_rules,new_mapping_rules)
+        self.print_updated_mapping_rules(updated_mapping_rules)
+
+    """
+    Read chapter and topic from domain_settings.py
+    """
+
+    def read_chapter_topic_and_mapping_rules(self):
+        # Import is there for being sure that the file exists.
+        import domain_settings
+        new_mapping_rules = OrderedDict()
+        if os.path.isfile(settings.PATH_DOMAIN_EXPLORER):
+            for name, val in domain_settings.__dict__.iteritems():
+                if name == settings_domain_explorer.DOMAIN_TITLE:
+                    self.topic = val
+                elif name == settings_domain_explorer.CHAPTER:
+                    self.chapter = val
+                elif name == settings_domain_explorer.RESEARCH_TYPE:
+                    self.research_type = val
+                elif settings_domain_explorer.SECTION_NAME in name:
+                    name_section = name.replace(settings_domain_explorer.SECTION_NAME, "")
+                    new_mapping_rules[name_section] = OrderedDict()
+                    new_mapping_rules[name_section].update(val)
+        parsed_mapping_rules = self.parse_mapping_rules(new_mapping_rules)
+        return parsed_mapping_rules
+
+    """
+    Check if mapping rules are meaningful
+    """
+
+    def parse_mapping_rules(self, new_mapping_rules):
+        parsed_mapping_rules = OrderedDict()
+        for section_key, section_dict in new_mapping_rules.items():
+            for key, value in section_dict.items():
+                # Change the sectionProperty with the name of the section
+                if key == settings_domain_explorer.SECTION_NAME_PROPERTY and value != "":
+                    # replace _ with a space.
+                    sections = section_key.split(settings_domain_explorer.CHARACTER_SEPARATOR)
+
+                    # i can find one or more sections that are similar
+                    if len(sections) == 1:
+                        parsed_mapping_rules.__setitem__(section_key.replace("_", " "), value)
+                    else:
+                        # if there are sections similar
+                        for section in sections:
+                            parsed_mapping_rules.__setitem__(section.replace("_", " "), value)
+                elif value != "":
+                    parsed_mapping_rules.__setitem__(key, value)
+        return parsed_mapping_rules
+
+    """
+    Read actual mapping_rules
+    """
+    def read_actual_mapping_rules(self):
+        actual_mapping_rules = OrderedDict()
+        for name, val in mapping_rules.__dict__.iteritems():
+            if self.chapter.upper() in name[-2:]:
+                actual_mapping_rules = dict(val)
+        return actual_mapping_rules
+
+    """
+    Search for differences between old and new mapping rules.
+    """
+
+    def update_differences_between_dictionaries(self,actual_mapping_rules,new_mapping_rules):
+        for key,value in new_mapping_rules.items():
+            try:
+                actual_mapping_rules[key]
+            except KeyError:
+                actual_mapping_rules.__setitem__(key,value)
+        return actual_mapping_rules
+
+    """
+    Print new mapping rules in mapping_rules.py
+    """
+    def print_updated_mapping_rules(self, updated_mapping_rules):
+        data_to_print = ""
+        printed_out = 0
+        for name, val in mapping_rules.__dict__.iteritems():
+            if settings.MAPPING_RULE_PREFIX in name:
+                if self.chapter.upper() in name[-2:]:
+                    printed_out = 1
+                    data_to_print = data_to_print + name + "=" + str(updated_mapping_rules).replace(", ", ", \n") + "\n\n\n"
+                else:
+                    data_to_print = data_to_print + name + "=" + str(val).replace(", ",", \n") + "\n\n\n"
+        file = open("mapping_rules.py","w")
+        file.write(settings.COMMENT_MAPPING_RULES + "\n\n")
+        # printed_out == 0 means that the dictionary didn't exists in mapping_rules.py
+        if printed_out == 0:
+            # Building dictionary in string form for printing out to file
+            new_dict = settings_domain_explorer.PREFIX_MAPPING_RULE + self.chapter.upper()
+            dict_in_str = "={"
+            for key, value in updated_mapping_rules.items():
+                dict_in_str = dict_in_str + "'" + key + "':'" + value + "',"
+            new_dict = new_dict + dict_in_str + "} \n"
+            data_to_print = data_to_print + new_dict
+        file.write(data_to_print)
