@@ -190,7 +190,7 @@ class HtmlTableParser:
 
                     # Start the mapping process
                     #mapper.map()
-                    #self.print_table(tab)
+                    self.print_table(tab)
                     self.all_tables.append(tab)
                     # Compose headers not mapped for this resource
                     for header in mapper.headers_not_mapped:
