@@ -5,7 +5,6 @@ import sys
 import rdflib
 
 import HtmlTableParser
-import JsonTableParser
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
@@ -38,7 +37,7 @@ class Analyzer:
             Please call serialize() after analyze() method!
     """
 
-    def __init__(self, chapter, topic, utils, mode="html", filename=None, single_res=None):
+    def __init__(self, chapter, topic, utils, filename=None, single_res=None):
         """
         Analyzer object takes resources from a list and call a TableParser (html |json) over them.
 
@@ -69,10 +68,6 @@ class Analyzer:
         self.logging = self.utils.logging  # just for reading comfort
         self.filename = filename
         self.single_res = single_res
-        self.mode = mode
-
-        # Reporting which mode has been chosen
-        self.logging.info(self.mode + " mode activated.. ")
 
         # These values are used to statistics purposes
         self.res_analyzed = 0  # number of resources correctly analyzed
@@ -171,44 +166,34 @@ class Analyzer:
                      using TableParser.analyze_tables().
 
                     """
+                    """
+                    If mode == html, a html doc tree (see http://lxml.de/lxmlhtml.html for documentation) is
+                     retrieved using utils.html_object_getter(resource).
 
-                    if self.mode == "html":
+                    Finally there is a part of code used to compose a dictionary containing all the headers for
+                     which the Mapper object hasn't found an adequate mapping rule.
+                    """
+                    html_doc_tree = self.utils.html_object_getter(resource)
+                    if html_doc_tree:
                         """
-                        If mode == html, a html doc tree (see http://lxml.de/lxmlhtml.html for documentation) is
-                         retrieved using utils.html_object_getter(resource).
+                        Then a HtmlTableParser object is created and the tables for the current resource are
+                            analyzed with HtmlTableParser.analyze_tables() method.
+                        """
+                        html_parser = HtmlTableParser.HtmlTableParser(html_doc_tree, self.chapter, self.graph,
+                                                                      self.topic, resource, self.utils)
+                        html_parser.analyze_tables()
 
+                        """
                         Finally there is a part of code used to compose a dictionary containing all the headers for
-                         which the Mapper object hasn't found an adequate mapping rule.
+                            which the Mapper object hasn't found an adequate mapping rule.
                         """
-                        html_doc_tree = self.utils.html_object_getter(resource)
-                        if html_doc_tree:
-                            """
-                            Then a HtmlTableParser object is created and the tables for the current resource are
-                                analyzed with HtmlTableParser.analyze_tables() method.
-                            """
-                            html_parser = HtmlTableParser.HtmlTableParser(html_doc_tree, self.chapter, self.graph,
-                                                                          self.topic, resource, self.utils)
-                            html_parser.analyze_tables()
+                        # Add headers not mapped and not already present in the list to total_headers_not_mapped
+                        for header in html_parser.headers_not_mapped:
+                            if header not in self.total_headers_not_mapped:
+                                self.total_headers_not_mapped[header] = html_parser.headers_not_mapped[header]
 
-                            """
-                            Finally there is a part of code used to compose a dictionary containing all the headers for
-                                which the Mapper object hasn't found an adequate mapping rule.
-                            """
-                            # Add headers not mapped and not already present in the list to total_headers_not_mapped
-                            for header in html_parser.headers_not_mapped:
-                                if header not in self.total_headers_not_mapped:
-                                    self.total_headers_not_mapped[header] = html_parser.headers_not_mapped[header]
-
-                            # Add to the total the number of tables found for this resource
-                            self.total_table_num += html_parser.tables_num
-
-                    elif self.mode == "json":
-                        # if mode == json, a json representation is retrieved with utils.json_object_getter()
-                        json_object = self.utils.json_object_getter(resource, 'jsonpedia_sections')
-                        # then an instance of Json Table Parser is created passing the json object just set
-                        t_parser = JsonTableParser.JsonTableParser(json_object, self.chapter, self.graph, self.topic,
-                                                                   resource)
-                        t_parser.analyze_tables()
+                        # Add to the total the number of tables found for this resource
+                        self.total_table_num += html_parser.tables_num
 
             except StopIteration:
                 self.lines_to_read = False
