@@ -12,7 +12,6 @@ import logging
 import settings
 import unicodedata
 
-from domain_explorer import settings_domain_explorer
 from collections import OrderedDict
 import mapping_rules
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
@@ -48,6 +47,8 @@ class Utilities:
         self.chapter = chapter
         self.topic = topic
         self.research_type = research_type
+        self.main_property = None
+        self.resource_file = None
         # test if the directory ../Extractions exists (or create it)
         self.test_dir_existence('../Extractions')
 
@@ -473,11 +474,11 @@ class Utilities:
     """
     def delete_accented_characters(self, text):
         try:
-            unicode(text, "utf-8")
+            text = unicode(text, "utf-8")
+            result = unicodedata.normalize('NFD', text).encode('ascii', 'ignore')
+            return result
         except TypeError:
-            nfkd_form = unicodedata.normalize('NFKD', text)
-            text = nfkd_form.encode('ASCII', 'ignore')
-        return text
+            return text
 
     """
     Update mapping_rules.py
@@ -498,14 +499,18 @@ class Utilities:
         new_mapping_rules = OrderedDict()
         if os.path.isfile(settings.PATH_DOMAIN_EXPLORER):
             for name, val in domain_settings.__dict__.iteritems():
-                if name == settings_domain_explorer.DOMAIN_TITLE:
+                if name == settings.DOMAIN_TITLE:
                     self.topic = val
-                elif name == settings_domain_explorer.CHAPTER:
+                elif name == settings.CHAPTER:
                     self.chapter = val
-                elif name == settings_domain_explorer.RESEARCH_TYPE:
+                elif name == settings.RESEARCH_TYPE:
                     self.research_type = val
-                elif settings_domain_explorer.SECTION_NAME in name:
-                    name_section = name.replace(settings_domain_explorer.SECTION_NAME, "")
+                elif name == settings.MAIN_PROPERTY:
+                    self.main_property = val
+                elif name == settings.RESOURCE_FILE:
+                    self.resource_file = val
+                elif settings.SECTION_NAME in name:
+                    name_section = name.replace(settings.SECTION_NAME, "")
                     new_mapping_rules[name_section] = OrderedDict()
                     new_mapping_rules[name_section].update(val)
         parsed_mapping_rules = self.parse_mapping_rules(new_mapping_rules)
@@ -520,17 +525,18 @@ class Utilities:
         for section_key, section_dict in new_mapping_rules.items():
             for key, value in section_dict.items():
                 # Change the sectionProperty with the name of the section
-                if key == settings_domain_explorer.SECTION_NAME_PROPERTY and value != "":
+                if key == settings.SECTION_NAME_PROPERTY and value != "":
                     # replace _ with a space.
-                    sections = section_key.split(settings_domain_explorer.CHARACTER_SEPARATOR)
+                    sections = section_key.split(settings.CHARACTER_SEPARATOR)
+                    for section in sections:
+                        parsed_mapping_rules.__setitem__(section.replace("_", " "), value)
 
-                    # i can find one or more sections that are similar
-                    if len(sections) == 1:
-                        parsed_mapping_rules.__setitem__(section_key.replace("_", " "), value)
-                    else:
-                        # if there are sections similar
-                        for section in sections:
-                            parsed_mapping_rules.__setitem__(section.replace("_", " "), value)
+                # add properties for sections rows.
+                elif key == settings.ROW_TABLE_PROPERTY and value != "":
+                    # replace _ with a space.
+                    sections = section_key.split(settings.CHARACTER_SEPARATOR)
+                    for section in sections:
+                        parsed_mapping_rules.__setitem__(section.replace("_", " ") + settings.ROW_SUFFIX, value)
                 elif value != "":
                     parsed_mapping_rules.__setitem__(key, value)
         return parsed_mapping_rules
@@ -570,15 +576,18 @@ class Utilities:
                     data_to_print = data_to_print + name + "=" + str(updated_mapping_rules).replace(", ", ", \n") + "\n\n\n"
                 else:
                     data_to_print = data_to_print + name + "=" + str(val).replace(", ",", \n") + "\n\n\n"
-        file = open("mapping_rules.py","w")
+        file = open("mapping_rules.py", "w")
         file.write(settings.COMMENT_MAPPING_RULES + "\n\n")
         # printed_out == 0 means that the dictionary didn't exists in mapping_rules.py
         if printed_out == 0:
             # Building dictionary in string form for printing out to file
-            new_dict = settings_domain_explorer.PREFIX_MAPPING_RULE + self.chapter.upper()
+            new_dict = settings.PREFIX_MAPPING_RULE + self.chapter.upper()
             dict_in_str = "={"
             for key, value in updated_mapping_rules.items():
-                dict_in_str = dict_in_str + "'" + key + "':'" + value + "',"
+                dict_in_str = dict_in_str + "'" + key + "':'" + value + "',\n"
             new_dict = new_dict + dict_in_str + "} \n"
             data_to_print = data_to_print + new_dict
         file.write(data_to_print)
+
+    def get_resource_file(self):
+        return settings.PATH_FOLDER_RESOURCE_LIST + "/" + self.resource_file
