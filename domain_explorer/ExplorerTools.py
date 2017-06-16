@@ -1,7 +1,8 @@
 import argparse
-import settings_domain_explorer as settings
 import sys
-from table_extractor import Utilities, mapping_rules,HtmlTableParser
+
+import Selector
+from table_extractor import Utilities, mapping_rules, HtmlTableParser, settings
 from collections import OrderedDict
 
 class ExplorerTools:
@@ -13,6 +14,8 @@ class ExplorerTools:
         self.chapter = self.set_chapter()
         self.verbose = self.set_verbose()
         self.utils = Utilities.Utilities(self.chapter, self.topic, self.research_type)
+        if not self.args.single:
+            self.selector = Selector.Selector(self.utils)
 
     def parse_arguments(self):
 
@@ -81,17 +84,16 @@ class ExplorerTools:
         # Metto in inglese per rifarmi all'ontology e scaricare le risorse
         uri_resource_list = []
         if not self.args.single:
-            if self.args.topic:
-                answer = self.make_sparql_dbpedia("resources", self.topic)
-            else:
-                answer = self.make_sparql_dbpedia("resources", self.args.where)
-
-            # Compose resource list with all the class uri
-            for value in answer["results"]["bindings"]:
-                uri_resource_list.append(value["s"]["value"])
+            self.selector.collect_resources()
+            uri_resource_file = self.selector.res_list_file
+            uri_resource_list = self.extract_resources(uri_resource_file)
         else:
             uri_resource_list.append(self.args.single)
         return uri_resource_list
+
+    def extract_resources(self, uri_resource_file):
+        content = open(uri_resource_file).read().split('\n')
+        return content
 
     """
     Function for making a dbpedia sparql query
@@ -100,11 +102,18 @@ class ExplorerTools:
     def make_sparql_dbpedia(self, service, data):
         query = ""
         if service == "check_property":
-            query = settings.SPARQL_CHECK_PROPERTY[0] + data.lower() + settings.SPARQL_CHECK_PROPERTY[1]
-        elif service == "resources":
-            where_clause = self.set_where_clause(data)
-            query = settings.SPARQL_GET_RESOURCES[0] + where_clause + settings.SPARQL_GET_RESOURCES[1]
-        url = self.utils.url_composer(query, "dbpedia")
+            # header as wrote in table
+            query = settings.SPARQL_CHECK_PROPERTY[0] +\
+                    '{' + settings.SPARQL_CHECK_PROPERTY[1] + '"' + data + '"@' + self.chapter + "} UNION " +\
+                    '{' + settings.SPARQL_CHECK_PROPERTY[1] + '"' + data.lower() + '"@' + self.chapter + "}" +\
+                    settings.SPARQL_CHECK_PROPERTY[2]
+            # need ontology
+            self.utils.chapter = "en"
+            self.utils.dbpedia_sparql_url = self.utils.dbpedia_selection()
+            url = self.utils.url_composer(query, "dbpedia")
+            # restore chapter given by user
+            self.utils.chapter = self.chapter
+            self.utils.dbpedia_sparql_url = self.utils.dbpedia_selection()
         answer = self.utils.json_answer_getter(url)
         return answer
 
@@ -114,12 +123,19 @@ class ExplorerTools:
 
     def get_resource_name_from_uri(self, uri):
         res_name = uri.replace("http://" + self.utils.dbpedia + "/resource/", "")
+        res_name = self.replace_accents(res_name)
+        return res_name
+
+    """
+    Get ontology name from uri
+    """
+    def get_ontology_name_from_uri(self,uri):
+        res_name = uri.replace("http://dbpedia.org/ontology/", "")
         res_name = res_name.encode('utf-8')
         return res_name
 
     def html_object_getter(self, name):
         return self.utils.html_object_getter(name)
-
 
     """
     Read the dictionary of pyTableExtractor. The script will update this dictionary with information given by user
@@ -132,7 +148,6 @@ class ExplorerTools:
             if name == dictionary_name:
                 dictionary = dict(val)
         return dictionary
-
 
     def html_table_parser(self,html_doc_tree, chapter, graph,topic, res_name):
         return HtmlTableParser.HtmlTableParser(html_doc_tree, chapter, graph, topic, res_name,self.utils)
@@ -147,23 +162,38 @@ class ExplorerTools:
     def print_dictionary_on_file(self, file, dict, verbose,all_headers):
         for key, value in dict.items():
             if verbose == 1:
-                file.write("'" + key + "':'" + value + "'" + ", \n")
+                if key != settings.SECTION_NAME_PROPERTY:
+                    file.write("'" + key + "':'" + value + "'" + ", \n")
+                else:
+                    # Print sectionProperty and rowTableProperty
+                    file.write("'" + key + "':'" + value + "'" + ", \n")
+                    file.write("'" + settings.ROW_TABLE_PROPERTY + "':''" + ", \n")
             elif verbose == 2 and value == "":
-                file.write("'" + key + "':'" + value + "'" + ", \n")
+                if key != settings.SECTION_NAME_PROPERTY:
+                    file.write("'" + key + "':'" + value + "'" + ", \n")
+                else:
+                    # Print sectionProperty and rowTableProperty
+                    file.write("'" + key + "':'" + value + "'" + ", \n")
+                    file.write("'" + settings.ROW_TABLE_PROPERTY + "':''" + ", \n")
             elif verbose == 3:
+                    # don't print header already printed
                 if key != settings.SECTION_NAME_PROPERTY and all_headers[key] != "printed":
                     file.write("'" + key + "':'" + value + "'" + ", \n")
                     all_headers.__setitem__(key, "printed")
                 elif key == settings.SECTION_NAME_PROPERTY:
+                    # Print sectionProperty and rowTableProperty
                     file.write("'" + key + "':'" + value + "'" + ", \n")
+                    file.write("'" + settings.ROW_TABLE_PROPERTY + "':'', \n")
 
     """
-    Define where clause for getting resources
+    Function that replace accented letters with the associated not accented letters
     """
-    def set_where_clause(self,data):
+
+    def replace_accents(self,string):
+        return self.utils.delete_accented_characters(string)
+
+    def get_res_list_file(self):
         result = ""
-        if self.args.where:
-            result = data
-        elif self.args.topic:
-            result = "?s ?o <http://dbpedia.org/ontology/" + data + ">"
+        if not self.args.single:
+            result = self.selector.res_list_file.split(settings.PATH_FOLDER_RESOURCE_LIST)[1].replace("/","")
         return result
