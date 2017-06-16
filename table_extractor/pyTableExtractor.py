@@ -1,9 +1,8 @@
 #!/usr/bin/env python2.7
 # coding=utf-8
 
-import Selector
-import Utilities
 import Analyzer
+import Utilities
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
@@ -76,21 +75,8 @@ def main():
     # Test if the user chose a single resource
     if not utils.research_type == "s":
         single_res = ""
-        """
-        if not, a Selector object is created, in order to retrieve resources of interest(it depends on the topic chosen)
-          from dbpedia/wikipedia/jsonpedia.
-        Note: a selector need 4 parameters, language, where_clause, topic chosen and the instance of utilities mainly
-                 for a statistic purpose.
-        """
-        selector = Selector.Selector(utils)
 
-        # Collecting resources of given topic using collect_resources().
-        selector.collect_resources()
-        """
-        Retrieve the resources list's filename which the selector has just created (a .txt file you can find in
-            /Resource_lists/)
-        """
-        res_list_filename = selector.res_list_file
+        res_list_filename = utils.get_resource_file()
     else:
         single_res = topic
     """
