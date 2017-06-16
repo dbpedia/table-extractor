@@ -1,6 +1,6 @@
 # coding=utf-8
 
-import settings
+import table_extractor.settings
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
@@ -27,24 +27,21 @@ class Selector:
         self.topic = utils.topic
         self.utils = utils
         self.where_clause = self.set_where_clause()
-
         self.last_res_list = None
         self.current_res_list = []
 
         # set the  SPARQL query used therefore to retrieve a list of 1000 resources at a time, see settings_domain_explorer.py.
-        self.query_res_list = settings.SPARQL_RES_LIST_QUERY[0] + str(self.where_clause) + \
-                              settings.SPARQL_RES_LIST_QUERY[1]
+        self.query_res_list = table_extractor.settings.SPARQL_RES_LIST_QUERY[0] + str(self.where_clause) + \
+                              table_extractor.settings.SPARQL_RES_LIST_QUERY[1]
 
         """ set the  SPARQL query used to know the total number of resources involved in collection.
            It then will be used by the collect_resources() method to augment the offset till the end of resources set"""
-        self.query_num_res = settings.SPARQL_NUM_RES_QUERY[0] + str(self.where_clause) +\
-                             settings.SPARQL_NUM_RES_QUERY[1]
+        self.query_num_res = table_extractor.settings.SPARQL_NUM_RES_QUERY[0] + str(self.where_clause) + \
+                             table_extractor.settings.SPARQL_NUM_RES_QUERY[1]
 
         # set total number of resources interested in this topic passing the query_num_res to utils.tot_res_interested()
         self.tot_res_interested = self.utils.tot_res_interested(self.query_num_res)
 
-        # self.total_res_found is the number of resources found by Selector
-        self.total_res_found = 0
         # self.offset is the offset reached currently (it is updated 1000 by 1000)
         self.offset = 0
         # number of resources written in the .txt file
@@ -85,7 +82,7 @@ class Selector:
         :return: After the list file has been serialized, it returns nothing
         """
         # Iterate until the offset is <= the total number of resources from that set
-        while self.offset <= self.total_res_found:
+        while self.offset <= 0:
             try:
                 # acquiring a list [] of resources calling utils.dbpedia_res_list(query_res_list, offset)
                 self.current_res_list = self.utils.dbpedia_res_list(self.query_res_list, self.offset)
@@ -116,27 +113,6 @@ class Selector:
         self.utils.logging.info("Resources found and serialized:  %s" % self.resources_serialized)
         # Update number of resources collected in utilities in order to print a final report
         self.utils.res_collected = self.resources_serialized
-
-    def get_chapter(self):
-        """
-
-        :return:
-        """
-        return self.chapter
-
-    def get_scope(self):
-        """
-
-        :return:
-        """
-        return self.topic
-
-    def get_tot_res(self):
-        """
-
-        :return: Number of total resources found for this scope
-        """
-        return self.total_res_found
 
     def __update_offset(self):
         """
