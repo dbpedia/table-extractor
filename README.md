@@ -16,11 +16,19 @@ You can install requirements using requirements.txt `pip install -r requirements
 * [lxml library](http://lxml.de/lxmlhtml.html "lxml homepage") (v. 3.6 Tested)
 * Stable internet connection
 
-###How to run pyTableExtractor.py
-`python pyTableExtractor.py [(--where|--single|--topic) --chapter --mode]`
+###Use guide
+Idea's project is to: analyze selected resources and then create related RDF triples. First of all you have to run `pyDomainExplorer`, passing right arguments. This script will create a settings file that you have to fill: it is commented in order to help you.
+Finally you can run `pyTableExtractor` that read previous filled file and start to map all resources so that you can obtain RDF triples saved in `Extractions` folder.
 
-* `-c`, `--chapter` : Optional. 2 letter long string representing the desidered endpoint/Wikipedia language (e.g. `en`, `it`, `fr` ...) Default value: 'en'. Reccomendation: do not use  -m 'json'  
+###How to run pyDomainExplorer.py
+`python pyDomainExplorer.py [--chapter --verbose (--where|--single|--topic)]`
+
+* `-c`, `--chapter` : Optional. 2 letter long string representing the desidered endpoint/Wikipedia language (e.g. `en`, `it`, `fr` ...) Default value: 'en'.
 * `-v`, `--verbose` : Optional. One number that is between 1 and 3. Each value correspond to a different organization of output file.
+
+###How to run pyTableExtractor.py
+`python pyTableExtractor.py`
+* this script read all parameters in `domain_settings.py` file, so you can run `pyTableExtractor.py` without any problem. It will print file in output that contains RDF triples obtained by domain's analysis.
 
 ####Verbose
 * 1 - Output file will contain new data to map and old mapping rules contained in the table extractor's dictionary.
@@ -29,18 +37,17 @@ You can install requirements using requirements.txt `pip install -r requirements
 
 #####Note: -w -s -t are all mutual exclusive parameters  
 
-* `-t`, `--topic` : Optional. Represents a DBpedia ontology class that you want to explore and analyze. It's important to preserver the camelcase form. Eg. "BasketballPlayer".
+* `-t`, `--topic` : Optional. Represents a DBpedia ontology class that you want to explore and analyze. It's important to preserve the camelcase form. Eg. "BasketballPlayer".
 * `-w`, `--where` : Optional. A SPARQL where clause. Eg. "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>.  ?film <http://dbpedia.org/ontology/director> ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s
 * `-s`, `--single` : Optional. can be used to select a wiki page at a time. Eg. -s 'Channel_Tunnel' takes only the [wiki page](https://en.wikipedia.org/wiki/Channel_Tunnel "Channel Tunnel wiki page") representing the European channel tunnel between France and UK. [-s]Note: please use only the name of a wiki page without spaces ( substitued by underscores) Eg. Use -s [German_federal_election,_1874](https://en.wikipedia.org/wiki/German_federal_election,_1874 "German federal 1874 election") and not https://en.wikipedia.org/wiki/German_federal_election,_1874 or German federal election, 1874 .
 
 ###Usage examples: 
-* `python pyTableExtractor.py` ---> as default it takes chapter = 'it', topic= 'elections', mode='html'
 
-* `python pyTableExtractor.py -c it -w "?s a <http://dbpedia.org/ontology/SoccerPlayer>"` ---> chapter = it, tries to collect resources (soccer players) which answer to this sparql query from dbpedia, mode='html'
+* `python pyDomainExplorer.py -c it -v 1 -w "?s a <http://dbpedia.org/ontology/SoccerPlayer>"` ---> chapter = 'it', verbose= '1', tries to collect resources (soccer players) which answer to this sparql query from DBpedia.
 
-* `python pyTableExtractor.py -c en -t actors -m html` ---> chapter='en', topic='actors', mode='html'
+* `python pyDomainExplorer.py -c en -v 2 -t BasketballPlayer -m html` ---> chapter='en', verbose='1', topic='BasketballPlayer', collect resources that are in DBpedia ontology class 'BasketballPlayer'.
 
-* `python pyTableExtractor.py -c it -s "Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1888"` ---> the script will works only one [wiki page](https://it.wikipedia.org/wiki/Elezioni_presidenziali_negli_Stati_Uniti_d%27America_del_1888 "USA 1888 presidential election, it chapter") of 'it' chapter 
+* `python pyDomainExplorer.py -c it -s "Kobe_Bryant"` ---> the script will works only one [wiki page](https://it.wikipedia.org/wiki/Kobe_Bryant "Kobe Bryant") of 'it' chapter. It's important to use the same name of wikipedia page.
 
 Notes:
 * If you choose a topic (-t) or you pass to the script a custom where clause, a list of resources (.txt files) are created in /Resource_lists . 
@@ -64,7 +71,7 @@ Please refer to [Progress_page](https://github.com/dbpedia/extraction-framework/
 
 **pyTableExtractor** Module: contains main() function. It calls the other classes/modules as it should be done during usual operations. It first tests parameters calling param_test. Then, if a topic or a where clause are set, it calls selector.py to build up a list of resources. Afterward in all cases it calls the analyzer class. Analyzer is responsible to elaborate a resource at a time, to find out the tables' structure and to extract data. Analyzer finally calls Mapper, used to map data extracted on a RDF dataset. 
  
-**settings** A settings file used to store default values. You can customize the script from here. Eg you can add your personal topic adding a topic in TOPIC_CHOICES list, and the corresponding SPARQL query in TOPIC_SPARQL dictionary (please ensure the consistency of dictionary key and the topic added)
+**settings** A settings file used to store default values, both for `pyDomainExplorer` and for `pyTableExplorer`. You can customize scripts from here. Eg you can add your personal topic adding a topic in TOPIC_CHOICES list, and the corresponding SPARQL query in TOPIC_SPARQL dictionary (please ensure the consistency of dictionary key and the topic added).
 
 **Selector** A class used to gather a list of resources calling a SPARQL dbpedia endpoint of chapter selected. It then serialize the list in a .txt file so you can keep trace of which set of resources has been found.   
 
@@ -84,7 +91,6 @@ Please refer to [Progress_page](https://github.com/dbpedia/extraction-framework/
 
 **ExplorerTools** Set of functions that help the previous script in the explorer task.
 
-**settings_domain_explored** Settings used in pyDomainExplorer.py. You can use this file for adapting all this work to your needs.
 
 ---
 
