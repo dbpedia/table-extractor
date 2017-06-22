@@ -21,6 +21,10 @@ You can install requirements using requirements.txt `pip install -r requirements
 Idea's project is to: analyze selected resources and then create related RDF triples. First of all you have to run `pyDomainExplorer`, passing right arguments. This script will create a settings file that you have to fill: it is commented in order to help you.
 Finally you can run `pyTableExtractor` that read previous filled file and start to map all resources so that you can obtain RDF triples saved in `Extractions` folder.
 
+**Note**
+
+I'm rebuilding all mapping functions, so now scripts will not create RDF triples file. This procedure (as said in my proposal) will be implemented next month, in order to create a general way to analyze as much domains as possible.
+
 ###**How to run pyDomainExplorer.py**
 
 `python pyDomainExplorer.py [--chapter --verbose (--where|--single|--topic)]`
