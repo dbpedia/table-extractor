@@ -1,5 +1,6 @@
 # coding=utf-8
 
+
 class Table:
     """
     Table class is a support class used by a Parser to manage a table.
@@ -21,7 +22,7 @@ class Table:
 
         self.headers = []
         self.headers_refined = []
-        self.sub_headers =[]
+        self.sub_headers = []
         self.data = []
         self.data_refined = []
 
@@ -37,12 +38,9 @@ class Table:
         :return:
         """
         data_num = 0
-        rows = 0
         rows = len(self.data_refined)
         for row in self.data_refined:
             data_num += len(row)
 
         self.cells_refined += data_num
         self.data_refined_rows += rows
-
-
