@@ -25,32 +25,24 @@ def main():
     pyTableExtractor is a Python script used to carve out data from tables tou can find in wiki pages and to compose a
      RDF data set (.ttl file) with them.
     Please refer to project's Readme, [Github project page](https://github.com/dbpedia/table-extractor) and [2016 GSoC
-     progress page](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone) to understand script's
-     usage, purposes and options.
+     progress page](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone) to understand
+     script's usage, purposes and options.
 
     pyTableExtractor.py represents the classical usage of classes and modules for this project;
      This script shows how you can easily recall modules and classes in order to:
 
      - Test parameters  (ParamTester.py)
      - Select a set of wikipedia pages/dbpedia resources you want to analyze (Selector.collect_resources())
-     - Analyze tables you can find in selected resources' pages (Analyzer.analyze()) once they were collected with Selector.
+     - Analyze tables you can find in selected resources' pages (Analyzer.analyze()) once they were collected with
+     Selector.
      - Serialize the mapping result in order to make a RDF dataset (Analyzer.serialize())
      - Print a final report to have metrics to measure efficiency and effectiveness of algorithm and
        to have an help writing down new mapping rules. (Utilities.print_report())
 
-    Once you have called pyTableExtractor with correct parameters (see DocStrings of ParamTester.py for help), just relax
-    and wait for the script to serialize a RDF data set (Turtle format) and to report results in a log file.
+    Once you have called pyTableExtractor with correct parameters (see DocStrings of ParamTester.py for help),
+     just relax and wait for the script to serialize a RDF data set (Turtle format) and to report results in a log file.
 
     """
-
-
-    """
-    where_clause is a string representing a piece of a SELECT SPARQL query.
-       It is used to collect resources of a certain scope (Eg all the resources representing actors)
-    """
-    #where_clause = p_tester.where  # default: "?s a <http://dbpedia.org/ontology/Election>"
-
-
 
     """
     single_res is a string containing the name of a wiki page (the same of dbpedia in most cases)
@@ -70,7 +62,6 @@ def main():
        list of resources to collect.
     """
     res_list_filename = None
-
 
     # Test if the user chose a single resource
     if not utils.research_type == "s":
