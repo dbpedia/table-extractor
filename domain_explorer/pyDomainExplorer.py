@@ -1,99 +1,85 @@
 # coding = utf-8
 
-import sys
-import rdflib
 import ExplorerTools
+import WriteSettingsFile
 from table_extractor import settings
 from collections import OrderedDict
 
 # All table's section found
 all_sections = OrderedDict()
 all_headers = OrderedDict()
+# Array that will contains resources name where it was found a particular section. It will be useful for user.
 example_wikipedia_pages = []
+
 __author__ = "Luca Virgili"
 
 """
-pyDomainExplorer is used for searching over the defined domain all headers and section table.
-Headers and sections are organized in two dictionaries.
-The script query dbpedia for asking if there's a property named like header.
-"""
+pyDomainExplorer works over domain specified by user in order to get all sections and headers of tables that 
+have been found.
+All data will be represented in all_sections variable. 
+It's a nested dictionary that has this organization: each key of all_sections represents a particular section 
+and its related value is a dictionary that contains all section's headers.
+Output of this script is a settings file that user has to fill in order to map all fields that hasn't a clear
+property.
 
 """
-Start the domain exploration. It will take resources list and give in output a settings file organized like
-a dictionary ---> "Header name":"Property associated"
-"""
 
 
-def start_exploration(chapter, topic, verbose):
-    # Prepare query SPARQL
+def start_exploration():
+    """
+    Start domain exploration.
+    It will take resources list and give in output a settings file organized
+    like a dictionary ---> "Header name":"Property associated"
+    :return:
+    """
+
+    # Read pyTableExtractor dictionary
     actual_dictionary = explorer_tools.read_actual_dictionary()
+    # Read uri resources
     uri_resource_list = explorer_tools.get_uri_resources()
     if uri_resource_list:
-        analyze_uri_resource_list(uri_resource_list, chapter, topic)
+        # Analyze uri list
+        analyze_uri_resource_list(uri_resource_list)
         insert_propertiers_old_dictionary(actual_dictionary)
-        write_sections_and_headers(chapter, topic, verbose)
-
-
-"""
-Write file domain_settings.py that contains all headers and sections found
-:param chapter
-:param topic
-:param verbose
-"""
-
-
-def write_sections_and_headers(chapter, topic, verbose):
-    domain_explored_file = file(settings.FILE_PATH_DOMAIN_EXPLORED, 'w')
-    domain_explored_file.write(settings.CODING_DOMAIN + "\n")
-    domain_explored_file.write(settings.DOMAIN_TITLE + "='" + topic + "' \n")
-    domain_explored_file.write(settings.CHAPTER + "='" + chapter + "' \n")
-    domain_explored_file.write(settings.RESEARCH_TYPE + "='" + explorer_tools.research_type + "' \n")
-    domain_explored_file.write(settings.RESOURCE_FILE + "='" + explorer_tools.get_res_list_file() + "' \n\n")
-    domain_explored_file.write(settings.MAIN_PROPERTY + "='" + "' \n\n")
-    for key, dict in all_sections.items():
-        wikipedia_example = explorer_tools.replace_accents(get_example_wikipedia_pages(key))
-        domain_explored_file.write(settings.COMMENT_FOR_EXAMPLE_PAGE + wikipedia_example + "\n")
-        key = explorer_tools.replace_accents(key.replace(" ", "_").replace("-", "_"))
-        domain_explored_file.write(settings.SECTION_NAME + key + "={\n")
-        explorer_tools.print_dictionary_on_file(domain_explored_file, dict, verbose, all_headers)
-        domain_explored_file.write("} \n\n")
-    domain_explored_file.close()
-
-
-def get_example_wikipedia_pages(section):
-    # each element in example_wikipedia_pages --> [0] page name where there is section name    [1]section name
-    for element in example_wikipedia_pages:
-        section_page = element.split(settings.CHARACTER_SEPARATOR)
-        if section_page[1] in section:
-            return section_page[0]
+        # write settings file
+        write_sections_and_headers()
+    else:
+        print "No resources found. Please check arguments passed to pyDomainExplorer"
 
 """
-For each resource found in the domain, I get section and headers
+    
+    For each resource found in the domain, I get section and headers
+
 """
 
 
-def analyze_uri_resource_list(uri_resource_list, chapter, topic):
-    graph = rdflib.Graph()
+def analyze_uri_resource_list(uri_resource_list):
+    """
+    Analyze each resource uri's to get sections and headers of related table.
+    :param uri_resource_list: list of all resource's uri
+    :return:
+    """
     for single_uri in uri_resource_list:
-        res_name = explorer_tools.get_resource_name_from_uri(single_uri)
-        get_resource_sections_and_headers(chapter, topic, graph, res_name)
-        print res_name
+        print single_uri
+        get_resource_sections_and_headers(single_uri)
+        print "\n\n"
 
 """
 Analyze tables and get headers and sections
 """
 
 
-def get_resource_sections_and_headers(chapter, topic, graph, res_name):
-    html_doc_tree = explorer_tools.html_object_getter(res_name)
-    if html_doc_tree:
-        html_parser = explorer_tools.html_table_parser(html_doc_tree, chapter, graph, topic, res_name)
-
-        if html_parser.tables:
-            html_parser.analyze_tables()
-            for table in html_parser.all_tables:
-                if table.n_rows > 1:
-                    check_if_section_is_present(table.table_section, table.headers_refined, res_name)
+def get_resource_sections_and_headers(res_name):
+    """
+    If there are defined tables, I will analyze each of them.
+    First of all I will study section's table, then I will go on headers' table.
+    :param res_name: resource name that has to be analyzed
+    :return:
+    """
+    all_tables = explorer_tools.html_table_parser(res_name)
+    for table in all_tables:
+        if table.n_rows > 1:
+            check_if_section_is_present(table.table_section, table.headers_refined, res_name)
 
 """
 Check if section is present in the dictionary of pyTableExtractor
@@ -101,9 +87,64 @@ Check if section is present in the dictionary of pyTableExtractor
 
 
 def check_if_section_is_present(string_to_check, headers_refined, res_name):
+    """
+    Check if section is already presents in all_sections dictionary.
+    I do this in order to create a dictionary that group similar section.
+    :param string_to_check: section name to check
+    :param headers_refined: all headers of this sections (JSON object that contains properties like 'colspan', etc..)
+    :param res_name: resource name that has to be analyzed
+    :return:
+    """
     section_name = check_if_similar_section_is_present(string_to_check, res_name)
     # Check if this section was already created, if not it will create another dictionary
     check_if_headers_not_present_then_add(headers_refined, section_name)
+
+
+"""
+
+"""
+
+
+def check_if_similar_section_is_present(string_to_check, res_name):
+    """
+    Check if there are sections that are similar.
+    (For example 'College' and 'College statistics' will be joint in one unique section to map)
+    :param string_to_check: section name to check
+    :param res_name: resource name that has to be analyzed
+    :return: section name that can be:
+                - already defined in all_sections dictionary.
+                - same as before.
+                - joint with others sections that has similar name.
+    Note:
+    Each section will be separated by a unique group of characters, defined in settings.py file. (now is _tte_)
+    """
+    keys = list(all_sections.keys())
+    new_key = string_to_check
+    # similar key
+    similar_key = [key for key in keys if string_to_check.lower() in key.lower() or key.lower()
+                   in string_to_check.lower()]
+    # key that is equal to that passed
+    equal_key = search_equal_key(keys, string_to_check)
+    # if there isn't an equal key, I have to search on similar key
+    if not equal_key:
+        # if there is a similar key I have to create another key that contains current key.
+        # I have also to delete previous key value in favour of the new key.
+        if similar_key:
+            new_key = similar_key[0] + settings.CHARACTER_SEPARATOR + string_to_check
+            app_dict = dict(all_sections[similar_key[0]])
+            del all_sections[similar_key[0]]
+            all_sections[new_key] = OrderedDict()
+            all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, "")
+            all_sections[new_key].update(app_dict)
+        # If there isn't similar key, I simply create a new one in all_sections dictionary.
+        else:
+            all_sections[new_key] = OrderedDict()
+            all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, "")
+            example_wikipedia_pages.append(res_name + settings.CHARACTER_SEPARATOR + new_key)
+    else:
+        new_key = equal_key
+    return new_key
+
 
 """
 Check if there is a property in ontology that has the same header's name.
@@ -111,18 +152,29 @@ Check if there is a property in ontology that has the same header's name.
 
 
 def check_if_headers_not_present_then_add(headers, section_name):
+    """
+    Check if headers passed are already defined in the section that you are analyzing.
+
+    :param headers: all table's headers
+    :param section_name: section name to analyze
+    :return:
+    """
     for row in headers:
         header = row['th']
-        header = header.replace("'", ":")
-        check_if_header_already_exists(header, section_name)
-
-
-"""
-Check if header has already been read.
-"""
+        if len(header) > 1:
+            # character "'" will produce a wrong output file
+            header = header.replace("'", "")
+            check_if_header_already_exists(header, section_name)
 
 
 def check_if_header_already_exists(header, section_name):
+    """
+    Check if section contains this header.
+    except KeyError will caught exception given by lack of a key (in this case 'header' is the key)
+    :param header: single table header
+    :param section_name: section name to analyze
+    :return:
+    """
     try:
         all_sections[section_name][header]
     except KeyError:
@@ -132,79 +184,67 @@ def check_if_header_already_exists(header, section_name):
             all_sections[section_name].__setitem__(header, header_property)
             all_headers.__setitem__(header, header_property)
 
+
 """
 Query dbpedia for searching a particular property.
 """
 
 
 def check_if_property_exists(header):
-    property = ""
+    """
+    Query dbpedia endpoint in order to search if a particular property is defined.
+    This method search if in dbpedia ontology there is a property that has a label (in chapter language)
+    that has same name of header's table.
+    This will be useful for user so that filling settings file will be easier.
+    :param header:
+    :return:
+    """
+    property_to_check = ""
     try:
-        property = all_headers[header]
+        property_to_check = all_headers[header]
     except KeyError:
         answer = explorer_tools.make_sparql_dbpedia("check_property", header)
-        if not isinstance(answer, basestring):
+        # if answer contains something useful
+        if not isinstance(answer, str):
             property_found = 0
             for row in answer["results"]["bindings"]:
                 # sparql results can be wikidata or dbpedia uri, i have to filter to catch only dbpedia ontology uri
                 if "ontology" in row["s"]["value"] and property_found == 0:
                     # i can't put a resource that can be a disambiguation or property --> I need ontology elements
-                    if not "disambiguation" in row["s"]["value"]:
-                        property = explorer_tools.get_ontology_name_from_uri(row["s"]["value"])
+                    if "disambiguation" not in row["s"]["value"]:
+                        property_to_check = explorer_tools.get_ontology_name_from_uri(row["s"]["value"])
                         property_found = 1
-    return property
-
-
-"""
-Check if there are headers that are similar. (For example 'College' and 'College statistics' will be join in one unique
-header to map)
-"""
-
-
-def check_if_similar_section_is_present(string_to_check, res_name):
-    keys = list(all_sections.keys())
-    new_key = string_to_check
-    similar_key = [key for key in keys if string_to_check.lower() in key.lower() or key.lower() in string_to_check.lower()]
-    equal_key = search_equal_key(keys, string_to_check)
-    if not equal_key:
-        if similar_key:
-            new_key = similar_key[0] + settings.CHARACTER_SEPARATOR + string_to_check
-            app_dict = dict(all_sections[similar_key[0]])
-            del all_sections[similar_key[0]]
-            all_sections[new_key] = OrderedDict()
-            all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, "")
-            all_sections[new_key].update(app_dict)
-        else:
-            all_sections[new_key] = OrderedDict()
-            all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, "")
-            example_wikipedia_pages.append(res_name + settings.CHARACTER_SEPARATOR + new_key)
-    else:
-        new_key = equal_key
-    return new_key
-
-"""
-Check if an array string contains a particular word
-"""
+    return property_to_check
 
 
 def search_equal_key(array_string, string_to_check):
+    """
+    Method to search over a string list in order to check if a particular string is equal to
+    an element of this list.
+
+    :param array_string: string list
+    :param string_to_check:  string to check if there is an equal in string list
+    :return: result can be:
+                - empty -> there isn't an equal key.
+                - equal key found.
+    """
     result = ""
     for string in array_string:
         keys = string.split(settings.CHARACTER_SEPARATOR)
-        found = 0
         for key in keys:
             if key.lower() == string_to_check.lower():
-                found = 1
-        if found == 1:
-            result = string
+                result = string
     return result
-
-"""
-When a I found a new key that's not present in the old dictionary, I will add it.
-"""
 
 
 def insert_propertiers_old_dictionary(actual_dictionary):
+    """
+    Insert in all_sections dictionary all properties defined in pyTableExtractor dictionary, in order to
+    print in settings file headers that are already defined.
+
+    :param actual_dictionary: pyTableExtractor dictionary (mapping_rules.py)
+    :return:
+    """
     for actual_key in actual_dictionary:
         for section_key in all_sections:
             if actual_key == section_key:
@@ -214,7 +254,16 @@ def insert_propertiers_old_dictionary(actual_dictionary):
                     if actual_key == headers_key:
                         all_sections[section_key].__setitem__(headers_key, actual_dictionary[actual_key])
 
+
+def write_sections_and_headers():
+    """
+    Write sections and headers found. I will use WriteSettingsFile to create output file.
+    :return:
+    """
+    WriteSettingsFile.WriteSettingsFile(all_sections, all_headers, example_wikipedia_pages,
+                                        explorer_tools)
+
+
 if __name__ == "__main__":
-    arg = sys.argv
     explorer_tools = ExplorerTools.ExplorerTools()
-    start_exploration(explorer_tools.chapter, explorer_tools.topic, explorer_tools.verbose)
+    start_exploration()
