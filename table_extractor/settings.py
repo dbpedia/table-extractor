@@ -8,15 +8,8 @@ SECONDS_BTW_TRIES = 2
 MAX_ATTEMPTS = 5
 
 # Following are values used to compose urls of web services.
-JSONPEDIA_CALL_FORMAT = "?&procs=Extractors,Structure"
-
-JSONPEDIA_SECTION_FORMAT = "?filter=@type:section&procs=Extractors,Structure"
-
-JSONPEDIA_TABLES_FORMAT = "?filter=@type:table&procs=Extractors,Structure"
 
 SPARQL_CALL_FORMAT = "&format=application%2Fsparql-results%2Bjson&debug=on"
-
-JSONPEDIA_BASE_URL = "http://jsonpedia.org/annotate/resource/json/"
 
 # Queries to select a list of resources and the number of resources involved
 SPARQL_RES_LIST_QUERY = ["SELECT distinct ?s as ?res WHERE{", "} LIMIT 5 OFFSET "]
@@ -28,7 +21,8 @@ SPARQL_NUM_RES_QUERY = ["select (count(distinct ?s) as ?res_num) where{", "}"]
 PATH_DOMAIN_EXPLORER = "../domain_settings.py"
 
 # comment to write in mapping_rules.py
-COMMENT_MAPPING_RULES = "# coding = utf-8 \n# Mapping rules used to map table's data, topics are used to evaluate functions with same name."
+COMMENT_MAPPING_RULES = "# coding = utf-8 \n# Mapping rules used to map table's data, topics are used to evaluate" +\
+                        "functions with same name."
 
 # mapping rule's prefix
 MAPPING_RULE_PREFIX = "MAPPING_RULES_"
@@ -38,21 +32,20 @@ ROW_SUFFIX = "row"
 
 # SETTINGS FOR pyDomainExplorer
 CODING_DOMAIN = "# coding = utf-8"
-RESEARCH_TYPE ="RESEACH_TYPE"
+RESEARCH_TYPE = "RESEACH_TYPE"
 DOMAIN_TITLE = "DOMAIN_EXPLORED"
-MAIN_PROPERTY = "MAIN_PROPERTY"
 CHAPTER = "CHAPTER"
 SECTION_NAME = "SECTION_"
-CHARACTER_SEPARATOR ="_tte_"
+CHARACTER_SEPARATOR = "_tte_"
 SECTION_NAME_PROPERTY = "sectionProperty"
-ROW_TABLE_PROPERTY ="rowTableProperty"
-COMMENT_FOR_EXAMPLE_PAGE ="# Example page where it was found this section: "
-RESOURCE_FILE ="RESOURCE_FILE"
+ROW_TABLE_PROPERTY = "rowTableProperty"
+COMMENT_FOR_EXAMPLE_PAGE = "# Example page where it was found this section: "
+RESOURCE_FILE = "RESOURCE_FILE"
 # Query for getting DBpedia class resources
 SPARQL_GET_RESOURCES = ["select ?s where{ ", "}"]
 
 # Query for verifying if there is a resource with a particular property
-SPARQL_CHECK_PROPERTY = ["select ?s where{"," ?s rdfs:label ", ". } LIMIT 5"]
+SPARQL_CHECK_PROPERTY = ["select ?s where{", " ?s rdfs:label ", " } LIMIT 5"]
 
 PREFIX_MAPPING_RULE = "MAPPING_RULES_"
 
@@ -65,7 +58,7 @@ FILE_PATH_DOMAIN_EXPLORED = "../domain_settings.py"
 # Help for verbose input
 VERBOSE_DEFAULT = '1'
 VERBOSE_CHOISES = [1, 2, 3]
-VERBOSE_HELP =" Verbose can be 1,2,3"
+VERBOSE_HELP = " Verbose can be 1,2,3"
 
 
 # Help for chapter input
