@@ -1,13 +1,27 @@
 import argparse
 import sys
-
 import Selector
+import rdflib
 from table_extractor import Utilities, mapping_rules, HtmlTableParser, settings
 from collections import OrderedDict
 
+
 class ExplorerTools:
+    """
+    ExplorerTools is a class that implement all methods in order to support pyDomainExplorer.py
+    In this script you will find functions that goes from parsing arguments given by user to get dbpedia resources.
+    This is also an interface to class Utilities, HtmlTableParser from table_extractor, because
+    I used some methods from those classes.
+
+    """
 
     def __init__(self):
+        """
+        Initialize Explorer Tools, that will:
+        - parse arguments given by user.
+        - get an instance of Utilities.
+        - get an instance of Selector, that will fetch dbpedia resources.
+        """
         self.args = self.parse_arguments()
         self.research_type = None
         self.topic = self.set_topic()
@@ -18,6 +32,16 @@ class ExplorerTools:
             self.selector = Selector.Selector(self.utils)
 
     def parse_arguments(self):
+        """
+        Parse arguments given by user. You can observe three different inputs:
+        - chapter: language specified by two letters.
+        - verbose: number that can be 1 or 2, that will change settings file format.
+        - mutual exclusive group:
+            - s: single resource.
+            - t: dbpedia ontology class.
+            - w: where clause of sparql query built by user.
+        :return: arguments passed by user
+        """
 
         # initialize a argparse.ArgumentParser with a general description coming from settings.GENERAL_DESCRIPTION
         parser = argparse.ArgumentParser(description=settings.GENERAL_DESCRIPTION)
@@ -49,19 +73,26 @@ class ExplorerTools:
         return args
 
     def set_chapter(self):
+        """
+        Read and set chapter.
+        :return: chapter value
+        """
         if self.args.chapter:
             if self.args.chapter.isalpha() and len(self.args.chapter) == 2:
                 return self.args.chapter.lower()
             else:
+                print "Wrong chapter, used default: " + settings.CHAPTER_DEFAULT
                 return settings.CHAPTER_DEFAULT
 
     def set_topic(self):
+        """
+        Read topic and set research_type to identify which input type is selected.
+        :return: topic value
+        """
         if self.args.topic:
             self.research_type = "t"
             if self.args.topic.isalpha() and len(self.args.topic) > 2:
                 return self.args.topic
-            else:
-                return settings.DOMAIN_DEFAULT
         elif self.args.single:
             self.research_type = "s"
             return self.args.single
@@ -70,18 +101,24 @@ class ExplorerTools:
             return self.args.where
 
     def set_verbose(self):
+        """
+        Read and set verbose. I will use a default value if user makes a mistake.
+        :return: verbose value
+        """
         if self.args.verbose:
-            if len(str(self.args.verbose)) == 1:
+            if len(str(self.args.verbose)) == 1 and self.args.verbose <= 2:
                 return self.args.verbose
             else:
+                print "Wrong verbose, used default: " + settings.VERBOSE_DEFAULT
                 return settings.VERBOSE_DEFAULT
 
-    """
-    Get uri of all domain's resources.
-    """
-
     def get_uri_resources(self):
-        # Metto in inglese per rifarmi all'ontology e scaricare le risorse
+        """
+        Read from Selector class resources that have been found.
+        uri_resource_file stands for file that contain uri's list.
+        uri_resource_list will contain a uri's list represented all resources.
+        :return: list of uri
+        """
         uri_resource_list = []
         if not self.args.single:
             self.selector.collect_resources()
@@ -92,44 +129,50 @@ class ExplorerTools:
         return uri_resource_list
 
     def extract_resources(self, uri_resource_file):
+        """
+        From uri_resource_file extract all resources.
+        Delete last element that is empty due to '\n'
+        :param uri_resource_file: file that contains resources' uri
+        :return: list of uri
+        """
         content = open(uri_resource_file).read().split('\n')
+        # Last resource is empty due to '\n'
+        content = content[:-1]
         return content
 
-    """
-    Function for making a dbpedia sparql query
-    """
-
     def make_sparql_dbpedia(self, service, data):
-        query = ""
+        """
+        Method for making a sparql query on dbpedia endpoint.
+
+        :param service: type of service, in order to create a unique method to make sparql query.
+        :param data: information to use in sparql query.
+        :return: response given by dbpedia endpoint
+        """
+        url = ""
         if service == "check_property":
             # header as wrote in table
             query = settings.SPARQL_CHECK_PROPERTY[0] +\
                     '{' + settings.SPARQL_CHECK_PROPERTY[1] + '"' + data + '"@' + self.chapter + "} UNION " +\
-                    '{' + settings.SPARQL_CHECK_PROPERTY[1] + '"' + data.lower() + '"@' + self.chapter + "}" +\
+                    '{' + settings.SPARQL_CHECK_PROPERTY[1] + '"' + data + '"@' + self.chapter + "}" +\
                     settings.SPARQL_CHECK_PROPERTY[2]
-            # need ontology
+            # If I change chapter language of Utilities I will make a sparql query to dbpedia.org ontology
             self.utils.chapter = "en"
             self.utils.dbpedia_sparql_url = self.utils.dbpedia_selection()
             url = self.utils.url_composer(query, "dbpedia")
             # restore chapter given by user
             self.utils.chapter = self.chapter
             self.utils.dbpedia_sparql_url = self.utils.dbpedia_selection()
+        # get endpoint's answer
         answer = self.utils.json_answer_getter(url)
         return answer
 
-    """
-    Get the resource name from uri.
-    """
+    def get_ontology_name_from_uri(self, uri):
+        """
+        Function to read only ontology property.
 
-    def get_resource_name_from_uri(self, uri):
-        res_name = uri.replace("http://" + self.utils.dbpedia + "/resource/", "")
-        res_name = self.replace_accents(res_name)
-        return res_name
-
-    """
-    Get ontology name from uri
-    """
-    def get_ontology_name_from_uri(self,uri):
+        :param uri: uri's resource
+        :return: property name
+        """
         res_name = uri.replace("http://dbpedia.org/ontology/", "")
         res_name = res_name.encode('utf-8')
         return res_name
@@ -137,11 +180,12 @@ class ExplorerTools:
     def html_object_getter(self, name):
         return self.utils.html_object_getter(name)
 
-    """
-    Read the dictionary of pyTableExtractor. The script will update this dictionary with information given by user
-    """
-
     def read_actual_dictionary(self):
+        """
+        Read the pyTableExtractor dictionary. I will choose dictionary of the same language given by chapter.
+
+        :return: pyTableExtractor dictionary
+        """
         dictionary = OrderedDict()
         dictionary_name = settings.PREFIX_MAPPING_RULE + self.chapter.upper()
         for name, val in mapping_rules.__dict__.iteritems():  # iterate through every module's attributes
@@ -149,51 +193,46 @@ class ExplorerTools:
                 dictionary = dict(val)
         return dictionary
 
-    def html_table_parser(self,html_doc_tree, chapter, graph,topic, res_name):
-        return HtmlTableParser.HtmlTableParser(html_doc_tree, chapter, graph, topic, res_name,self.utils)
+    def html_table_parser(self, res_name):
+        """
+        Method to instantiate HtmlTableParser, analyze tables and then give in output a list of tables.
+        :param res_name: resource that has to be analyzed
+        :return: list of tables found
+        """
+        html_doc_tree = self.html_object_getter(res_name)
+        # if html doc is defined
+        if html_doc_tree:
+            graph = rdflib.Graph()
+            # instantiate html table parser
+            html_table_parser = HtmlTableParser.HtmlTableParser(html_doc_tree, self.chapter, graph,
+                                                                self.topic, res_name, self.utils)
+            # if there are tables to analyze
+            if html_table_parser:
+                # analyze and parse tables
+                html_table_parser.analyze_tables()
+                return html_table_parser.all_tables
+            # if there aren't tables to analyze result will be empty
+            else:
+                return ""
+        # if html doc is not defined result will be empty
+        else:
+            return ""
 
-    """
-    Write dictionary in a file. Verbose is a variable for defining which output's type produce.
-    1 - print all in output file.
-    2 - print only resources that aren't mapped in the actual dictionary.
-    3 - print only one time the same header.
-    """
+    def replace_accents(self, string):
+        """
+        Function that replace accented letters with the associated not accented letters
 
-    def print_dictionary_on_file(self, file, dict, verbose,all_headers):
-        for key, value in dict.items():
-            if verbose == 1:
-                if key != settings.SECTION_NAME_PROPERTY:
-                    file.write("'" + key + "':'" + value + "'" + ", \n")
-                else:
-                    # Print sectionProperty and rowTableProperty
-                    file.write("'" + key + "':'" + value + "'" + ", \n")
-                    file.write("'" + settings.ROW_TABLE_PROPERTY + "':''" + ", \n")
-            elif verbose == 2 and value == "":
-                if key != settings.SECTION_NAME_PROPERTY:
-                    file.write("'" + key + "':'" + value + "'" + ", \n")
-                else:
-                    # Print sectionProperty and rowTableProperty
-                    file.write("'" + key + "':'" + value + "'" + ", \n")
-                    file.write("'" + settings.ROW_TABLE_PROPERTY + "':''" + ", \n")
-            elif verbose == 3:
-                    # don't print header already printed
-                if key != settings.SECTION_NAME_PROPERTY and all_headers[key] != "printed":
-                    file.write("'" + key + "':'" + value + "'" + ", \n")
-                    all_headers.__setitem__(key, "printed")
-                elif key == settings.SECTION_NAME_PROPERTY:
-                    # Print sectionProperty and rowTableProperty
-                    file.write("'" + key + "':'" + value + "'" + ", \n")
-                    file.write("'" + settings.ROW_TABLE_PROPERTY + "':'', \n")
-
-    """
-    Function that replace accented letters with the associated not accented letters
-    """
-
-    def replace_accents(self,string):
+        :param string: string where you have to replace accents
+        :return:  string without accents
+        """
         return self.utils.delete_accented_characters(string)
 
     def get_res_list_file(self):
+        """
+        Get file that contains all resources.
+        :return: file with resources
+        """
         result = ""
         if not self.args.single:
-            result = self.selector.res_list_file.split(settings.PATH_FOLDER_RESOURCE_LIST)[1].replace("/","")
+            result = self.selector.res_list_file.split(settings.PATH_FOLDER_RESOURCE_LIST)[1].replace("/", "")
         return result
