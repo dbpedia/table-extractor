@@ -30,7 +30,7 @@ I'm rebuilding all mapping functions, so now scripts will not create RDF triples
 `python pyDomainExplorer.py [--chapter --verbose (--where|--single|--topic)]`
 
 * `-c`, `--chapter` : Optional. 2 letter long string representing the desidered endpoint/Wikipedia language (e.g. `en`, `it`, `fr` ...) Default value: 'en'.
-* `-v`, `--verbose` : Optional. One number that is between 1 and 3. Each value correspond to a different organization of output file.
+* `-v`, `--verbose` : Optional. One number that can be 1 or 2. Each value correspond to a different organization of output file.
 
 ###**How to run pyTableExtractor.py**
 
@@ -39,8 +39,7 @@ I'm rebuilding all mapping functions, so now scripts will not create RDF triples
 
 ####**Verbose**
 * 1 - Output file will contain new data to map and old mapping rules contained in the table extractor's dictionary.
-* 2 - Output file will contain only new data to map, it won't show the mapping rules already saved.
-* 3 - Output file will contain new data to map (shown only one time) and the mapping rules saved in table extractor's dictionary
+* 2 - Output file will contain new data to map (shown only one time) and the mapping rules saved in table extractor's dictionary
 
 #####**Note:** -w -s -t are all mutual exclusive parameters  
 
@@ -54,7 +53,7 @@ I'm rebuilding all mapping functions, so now scripts will not create RDF triples
 
 * `python pyDomainExplorer.py -c en -v 2 -t BasketballPlayer -m html` ---> chapter='en', verbose='1', topic='BasketballPlayer', collect resources that are in DBpedia ontology class 'BasketballPlayer'.
 
-* `python pyDomainExplorer.py -c it -s "Kobe_Bryant"` ---> the script will works only one [wiki page](https://it.wikipedia.org/wiki/Kobe_Bryant "Kobe Bryant") of 'it' chapter. It's important to use the same name of wikipedia page.
+* `python pyDomainExplorer.py -c it -v 2 -s "Kobe_Bryant"` ---> the script will works only one [wiki page](https://it.wikipedia.org/wiki/Kobe_Bryant "Kobe Bryant") of 'it' chapter. It's important to use the same name of wikipedia page.
 
 Notes:
 * If you choose a topic (-t) or you pass to the script a custom where clause, a list of resources (.txt files) are created in /Resource_lists . 
