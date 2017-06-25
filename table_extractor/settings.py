@@ -39,7 +39,15 @@ SECTION_NAME = "SECTION_"
 CHARACTER_SEPARATOR = "_tte_"
 SECTION_NAME_PROPERTY = "sectionProperty"
 ROW_TABLE_PROPERTY = "rowTableProperty"
+FIRST_COMMENT = "# Comments below will help you in filling this file settings. Remember to change only " +\
+                SECTION_NAME + " variables \n# Research parameters "
 COMMENT_FOR_EXAMPLE_PAGE = "# Example page where it was found this section: "
+COMMENT_ROW_PROPERTY = "# The entry named " + ROW_TABLE_PROPERTY + " represents ontology property that will map " +\
+    "each table's row. (Eg. in basket domain, each row of playoff's table, " + ROW_TABLE_PROPERTY +\
+    " is something like 'match')"
+COMMENT_SECTION_PROPERTY = "# The entry named " + SECTION_NAME_PROPERTY + " represents ontology property associated " +\
+    "to table's section. (Eg. in basket domain, section named playoff can be mapped with something like 'playoff' or "\
+    " 'playoffMatch')."
 RESOURCE_FILE = "RESOURCE_FILE"
 # Query for getting DBpedia class resources
 SPARQL_GET_RESOURCES = ["select ?s where{ ", "}"]
