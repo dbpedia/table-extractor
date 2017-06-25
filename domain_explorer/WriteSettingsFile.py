@@ -68,10 +68,13 @@ class WriteSettingsFile:
         :return:
         """
         domain_explored_file.write(settings.CODING_DOMAIN + "\n")
+        domain_explored_file.write(settings.FIRST_COMMENT + "\n")
         domain_explored_file.write(settings.DOMAIN_TITLE + "='" + self.topic + "' \n")
         domain_explored_file.write(settings.CHAPTER + "='" + self.chapter + "' \n")
         domain_explored_file.write(settings.RESEARCH_TYPE + "='" + self.explorer_tools.research_type + "' \n")
         domain_explored_file.write(settings.RESOURCE_FILE + "='" + self.explorer_tools.get_res_list_file() + "' \n\n")
+        domain_explored_file.write(settings.COMMENT_SECTION_PROPERTY + "\n")
+        domain_explored_file.write(settings.COMMENT_ROW_PROPERTY + "\n\n")
 
     def get_example_wikipedia_pages(self, section):
         """
