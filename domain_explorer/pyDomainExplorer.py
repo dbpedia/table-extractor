@@ -19,7 +19,7 @@ have been found.
 All data will be represented in all_sections variable. 
 It's a nested dictionary that has this organization: each key of all_sections represents a particular section 
 and its related value is a dictionary that contains all section's headers.
-Output of this script is a settings file that user has to fill in order to map all fields that hasn't a clear
+Output of this script is a settings file, named "domain_settings", that user has to fill in order to map all fields that hasn't a clear
 property.
 
 """
