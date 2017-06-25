@@ -462,7 +462,7 @@ class Utilities:
     """
 
     def update_differences_between_dictionaries(self,actual_mapping_rules,new_mapping_rules):
-        for key,value in new_mapping_rules.items():
+        for key, value in new_mapping_rules.items():
             try:
                 actual_mapping_rules[key]
             except KeyError:
@@ -497,3 +497,19 @@ class Utilities:
 
     def get_resource_file(self):
         return settings.PATH_FOLDER_RESOURCE_LIST + "/" + self.resource_file
+
+    def validate_user_input(self):
+        result = "valid_input"
+        # check chapter
+        if len(self.chapter) != 2:
+            result = "Chapter (" + self.chapter + ") is wrong, check domain_settings.py"
+        # check research type
+        if len(self.research_type) == 1:
+            if self.research_type != "t" and self.research_type != "s" and self.research_type != "w":
+                result = "Research type (" + self.research_type + ") is wrong, check domain_settings.py"
+        else:
+            result = "Research type (" + self.research_type + ") is wrong, check domain_settings.py"
+        # check resource file
+        if not os.path.isfile(self.get_resource_file()):
+            result = "Resource file doesn't exists, check domain_settings.py"
+        return result
