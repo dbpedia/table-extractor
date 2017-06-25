@@ -55,46 +55,53 @@ def main():
        get time and date..) and to print a final report.
     """
     utils = Utilities.Utilities(None, None, None)
-    topic = utils.topic
-    language = utils.chapter
     """
-    res_list_filename is created but not set. In fact, if a user want to test a single resource, there isn't a
-       list of resources to collect.
+    Check if domain_settings.py has valid input
     """
-    res_list_filename = None
+    check_parameters = utils.validate_user_input()
+    if check_parameters == "valid_input":
+        topic = utils.topic
+        language = utils.chapter
+        """
+        res_list_filename is created but not set. In fact, if a user want to test a single resource, there isn't a
+           list of resources to collect.
+        """
+        res_list_filename = None
 
-    # Test if the user chose a single resource
-    if not utils.research_type == "s":
-        single_res = ""
+        # Test if the user chose a single resource
+        if not utils.research_type == "s":
+            single_res = ""
 
-        res_list_filename = utils.get_resource_file()
+            res_list_filename = utils.get_resource_file()
+        else:
+            single_res = topic
+        """
+        Now we want to analyze the set of resources (or the single one) we just retrieved, so an analyzer is created.
+        Parameters passed: language, topic, utilities object, mode,  list filename and the name of the single resource.
+        Note: the last two parameters (res_list_filename and single_res) are actually mutual exclusive, so in both cases,
+             one of them is None.
+        """
+        analyzer = Analyzer.Analyzer(language, topic, utils, res_list_filename, single_res)
+
+        """
+        To actually analyze the wiki pages and tables in them, you have to call the analyze() method.
+        Note: Once analyze has started, it carves out tables from every single resource passed to the Analyzer, and then
+            trying to apply mapping rules to every single data cells of those tables. See Mapper class to get an idea of the
+            decision algorithm for the mapping.
+        """
+        analyzer.analyze()
+
+        """
+        At last, you surely want to serialize the RDF graph obtained with serialize() method.
+        You can find the .ttl file containing the graph serialized in /Extractions/ along with
+             the corresponding log file.
+        """
+        analyzer.serialize()
+
+        # Finally, print a report for the current extraction, then exits.
+        utils.print_report()
     else:
-        single_res = topic
-    """
-    Now we want to analyze the set of resources (or the single one) we just retrieved, so an analyzer is created.
-    Parameters passed: language, topic, utilities object, mode,  list filename and the name of the single resource.
-    Note: the last two parameters (res_list_filename and single_res) are actually mutual exclusive, so in both cases,
-         one of them is None.
-    """
-    analyzer = Analyzer.Analyzer(language, topic, utils, res_list_filename, single_res)
-
-    """
-    To actually analyze the wiki pages and tables in them, you have to call the analyze() method.
-    Note: Once analyze has started, it carves out tables from every single resource passed to the Analyzer, and then
-        trying to apply mapping rules to every single data cells of those tables. See Mapper class to get an idea of the
-        decision algorithm for the mapping.
-    """
-    analyzer.analyze()
-
-    """
-    At last, you surely want to serialize the RDF graph obtained with serialize() method.
-    You can find the .ttl file containing the graph serialized in /Extractions/ along with
-         the corresponding log file.
-    """
-    analyzer.serialize()
-
-    # Finally, print a report for the current extraction, then exits.
-    utils.print_report()
-
+        # print parameters error
+        print check_parameters
 if __name__ == "__main__":
     main()
