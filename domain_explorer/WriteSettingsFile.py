@@ -67,6 +67,7 @@ class WriteSettingsFile:
         :param domain_explored_file: reference to the output file
         :return:
         """
+
         domain_explored_file.write(settings.CODING_DOMAIN + "\n")
         domain_explored_file.write(settings.FIRST_COMMENT + "\n")
         domain_explored_file.write(settings.DOMAIN_TITLE + "='" + self.topic + "' \n")
