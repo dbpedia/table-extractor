@@ -18,7 +18,7 @@ You can install requirements using requirements.txt `pip install -r requirements
 
 ###**User guide**
 
-Idea's project is to: analyze selected resources and then create related RDF triples. First of all you have to run `pyDomainExplorer`, passing right arguments. This script will create a settings file that you have to fill: it is commented in order to help you.
+Idea's project is to: analyze selected resources and then create related RDF triples. First of all you have to run `pyDomainExplorer`, passing right arguments. This script will create a settings file (named `domain_settings.py`) that you have to fill: it is commented in order to help you.
 Finally you can run `pyTableExtractor` that read previous filled file and start to map all resources so that you can obtain RDF triples saved in `Extractions` folder.
 
 **Note**
