@@ -30,6 +30,9 @@ MAPPING_RULE_PREFIX = "MAPPING_RULES_"
 # identify row section
 ROW_SUFFIX = "row"
 
+# which property's type I have to pick - I have found three different types: 'resource','ontology','property'
+ONTOLOGY_TYPE = ["ontology"]
+
 # SETTINGS FOR pyDomainExplorer
 CODING_DOMAIN = "# coding = utf-8"
 RESEARCH_TYPE = "RESEACH_TYPE"
@@ -53,7 +56,7 @@ RESOURCE_FILE = "RESOURCE_FILE"
 SPARQL_GET_RESOURCES = ["select ?s where{ ", "}"]
 
 # Query for verifying if there is a resource with a particular property
-SPARQL_CHECK_PROPERTY = ["select ?s where{", " ?s rdfs:label ", " } LIMIT 5"]
+SPARQL_CHECK_PROPERTY = ["select ?s where{", " ?s rdfs:label ", " } LIMIT 10"]
 
 PREFIX_MAPPING_RULE = "MAPPING_RULES_"
 
