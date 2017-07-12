@@ -30,7 +30,7 @@ class HtmlTableParser:
 
     """
 
-    def __init__(self, html_doc_tree, chapter, graph, topic, resource, utils):
+    def __init__(self, html_doc_tree, chapter, graph, topic, resource, utils, mapping = False):
         """
         HtmlTableParser is a class used to analyze the tables for a preselected resource.
 
@@ -55,7 +55,7 @@ class HtmlTableParser:
         self.resource = resource
         self.utils = utils
         self.logging = self.utils.logging
-
+        self.mapping = mapping
         # list of tables in html
         self.tables = []
         self.current_html_table = None
@@ -84,6 +84,7 @@ class HtmlTableParser:
         """
         self.headers_not_mapped = {}
 
+        self.utils.logging.info("Analyzing resource: " + self.resource)
         # As HtmlTableParsed is correctly initialized, we find tables with find_wiki_tables()
         self.find_wiki_tables()
 
@@ -151,6 +152,7 @@ class HtmlTableParser:
             tab.table_attributes = html_table.attrib
             # find out the table section using find_table_section()
             tab.table_section = self.find_table_section()
+            print "Section found: ", tab.table_section
             self.logging.info("Table under section: %s" % tab.table_section)
 
             # find headers for this table
@@ -184,24 +186,24 @@ class HtmlTableParser:
                     self.utils.data_extracted += tab.cells_refined
                     self.utils.rows_extracted += tab.data_refined_rows
 
-                    # Create a MAPPER object in order to map data extracted
-                    mapper = Mapper.Mapper(self.chapter, self.graph, self.topic, self.resource, tab.data_refined,
-                                           'html', self.utils, tab.table_section)
-
                     # Start the mapping process
-                    #mapper.map()
-                    self.print_table(tab)
                     self.all_tables.append(tab)
-                    # Compose headers not mapped for this resource
-                    for header in mapper.headers_not_mapped:
-                        if header not in self.headers_not_mapped:
-                            # Compose a list  with the name of the current resource [0] and with values in [1]
-                            support_list = [self.resource, mapper.headers_not_mapped[header]]
-                            '''
-                            result Eg in self.headers_not_mapped = {'header1': ['resource1',[value0,value1...]], \
-                                                                'header2': ['resource2',[value0, value1, value2...]]...}
-                            '''
-                            self.headers_not_mapped[header] = support_list
+                    if self.mapping:
+                        # Create a MAPPER object in order to map data extracted
+                        mapper = Mapper.Mapper(self.chapter, self.graph, self.topic, self.resource, tab.data_refined,
+                                               self.utils, tab.table_section)
+                        mapper.map()
+                        #self.print_table(tab)
+                        # Compose headers not mapped for this resource
+                        for header in mapper.headers_not_mapped:
+                            if header not in self.headers_not_mapped:
+                                # Compose a list  with the name of the current resource [0] and with values in [1]
+                                support_list = [self.resource, mapper.headers_not_mapped[header]]
+                                '''
+                                result Eg in self.headers_not_mapped = {'header1': ['resource1',[value0,value1...]], \
+                                                                    'header2': ['resource2',[value0, value1, value2...]]...}
+                                '''
+                                self.headers_not_mapped[header] = support_list
 
                 # If no data have been found for this table report this condition with tag E3
                 else:
@@ -218,6 +220,7 @@ class HtmlTableParser:
                 # Update the count of tables with this condition (no headers found)
                 self.no_headers += 1
 
+        print "Resource analysis completed \n\n"
         # Adding statistics values and errors to the extraction errors, in order to print a final report
         self.utils.tot_tables_analyzed += self.tables_analyzed
         self.utils.headers_errors += self.no_headers
@@ -461,7 +464,6 @@ class HtmlTableParser:
 
         # Finally encode headers
         self.encode_headers(tab)
-        print("Headers refined")
 
     def print_headers(self, tab):
         """
@@ -824,7 +826,6 @@ class HtmlTableParser:
         :param tab: Table object containing data rows we want to refine
         :return: nothing
         """
-        print("Refining data ...")
         try:
             # Delete row we don't want to consider
             self.delete_useless_rows(tab, 'Totale')
@@ -840,7 +841,6 @@ class HtmlTableParser:
 
             # Encode data
             self.encode_data(tab)
-            print ("done")
             self.logging.info("Data refined")
         except:
             self.logging.debug("Exception refining data")
