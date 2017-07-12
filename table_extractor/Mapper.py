@@ -1,9 +1,8 @@
 # coding=utf-8
 import rdflib
-import re
+import settings
 
-
-import mapping_rules
+resources_found = []
 
 
 class Mapper:
@@ -27,7 +26,7 @@ class Mapper:
 
     """
 
-    def __init__(self, chapter, graph, topic, resource, table_data, mode, utils, table_section=None):
+    def __init__(self, chapter, graph, topic, resource, table_data, utils, table_section=None):
         """
         Mapper is a class used to choose mapping rules over refined cells of data in order to compose a rdf dataset.
 
@@ -52,13 +51,9 @@ class Mapper:
         self.resource = resource
         self.table_section = table_section
         self.table_data = table_data
-        self.mode = mode
         self.utils = utils
         self.logging = utils.logging
-
-        # this is a little hook, it is used to change topic from elections_USA to elections
-        if self.topic == 'elections_USA':
-            self.topic = 'elections'
+        self.dictionary = self.utils.dictionary
 
         # This dictionary  is used to have an idea of which headers haven't a mapping rule.
         self.headers_not_mapped = {}
@@ -70,15 +65,19 @@ class Mapper:
         self.no_mapping_found_cells = 0  # number of cell for which no mapping rule has found
 
         # Reification_index is and index used to make a reification possible. It use the concept of row.
-        self.reification_index = 0
+        self.reification_index = 1
+
+        # array to print key in log file only one time
+        self.printed_key = []
 
         # Defining namespace used by the rdf graph
         self.dbo = None
         self.dbr = None
         self.dbp = None
-        self.define_namespace(self.chapter)
+        self.db = None
+        self.define_namespace()
 
-    def define_namespace(self, chapter):
+    def define_namespace(self):
         """
         Method used to set standard names (dbr stands for dbpediaresource, dbp for dbpediaproperty,
           dbo for dbpediaontology)
@@ -87,10 +86,12 @@ class Mapper:
         :return:
         """
 
-        if chapter != 'en':
-            self.dbr = rdflib.Namespace("http://" + chapter + ".dbpedia.org/resource/")
+        if self.chapter != 'en':
+            self.dbr = rdflib.Namespace("http://" + self.chapter + ".dbpedia.org/resource/")
+            self.db = rdflib.Namespace("http://" + self.chapter + ".dbpedia.org/")
         else:
             self.dbr = rdflib.Namespace("http://dbpedia.org/resource/")
+            self.db = rdflib.Namespace("http://dbpedia.org/")
 
         self.dbo = rdflib.Namespace("http://dbpedia.org/ontology/")
         self.dbp = rdflib.Namespace("http://dbpedia.org/property/")
@@ -105,718 +106,95 @@ class Mapper:
 
         :return:
         """
-        self.logging.info("Analyzing table under section: %s " % self.table_section)
 
-        # In case -s | -w is used as pyTableExtractor option, we know which is the chapter but not the topic,
-        # so tries every mapping rule for the selected chapter
-        # NOTE: This part seems to be a logical mistake, but I haven't received a feedback by community about this.
-        if self.topic == 'single_resource' or self.topic == 'custom':
-
-            # Rules are retrieved using mapping_rules.py
-            rules = mapping_rules.MAPPING_TOPICS[self.chapter]
-            # Iteraters over topic
-            for topic in rules:
-                # prints out what the method tries to do
-                print ("Mapping: %s under section: %s , coming from resource: %s of topic: %s "
-                       % (self.table_data, self.table_section, self.resource, self.topic))
-                # reset reification index
-                reification_index = 0
-                # Iterates row by row in table_data
-                for single_row in self.table_data:
-                    # Increase reification index by one
-                    self.reification_index += 1
-                    # choose the right mapping for this kind of data, based upon chapter and topic parameters
-                    try:
-                        eval("self."+self.chapter+"_"+topic+"(single_row, self.reification_index)")
-                    except:
-                        print("Exception during mapping of: %s with this mapping rules: %s" % (self.resource, self.topic))
-                        # if exception occurs, decrease the reification_index
-                        if self.reification_index > 0:
-                            self.reification_index -= 1
-
-        # If a topic is set, use it to choose the right mapping method
-        elif self.topic:
-
-            print ("Mapping: %s under section: %s , coming from resource: %s of topic: %s "
-                   % (self.table_data, self.table_section, self.resource, self.topic))
-
-            # reset reification_index
-            reification_index = 0
-
-            # for every row of data
-            for single_row in self.table_data:
-                # increase the reification_index
+        # in row[cell] (that is table's cell value) contains even link in first position
+        for row in self.table_data:
+            # link with between resource section property and each section's row
+            section_property, section_row_property = self.define_row_and_section_property()
+            # if i find a section property that is defined
+            if section_property:
                 self.reification_index += 1
-
-                # choose the right mapping for this kind of data, based upon chapter and topic parameters
-                try:
-                    eval("self."+self.chapter+"_"+self.topic+"(single_row, self.reification_index)")
-                except:
-                    print("Exception during mapping of: %s " % self.resource)
-                    # if exception occurs, decrease the reification_index
-                    if self.reification_index > 0:
-                        self.reification_index -= 1
-
-        # print in the log useful infos to keep trace of results
-        if self.headers_not_mapped:   # these headers are ones for which no mapping rules has been found
-            self.logging.info("These %d headers have not a corresponding mapping rule: " % len(self.headers_not_mapped))
-            for header in self.headers_not_mapped:
-                self.logging.info(" - %s , Value Example: %s" % (header, self.headers_not_mapped[header]))
-
-        self.logging.info("Total cell mapped for this table: %s " % self.total_cell_mapped)
-        self.logging.info("Total \'no mapping rule\' : %s " % self.no_mapping_found_cells)
-        self.logging.info("Total mapping errors: %s " % self.num_of_mapping_errors)
-
-        # Adding values to the total, stored in Utilities class, in order to print a final report
-        self.utils.mapped_cells += self.total_cell_mapped
-        self.utils.no_mapping_rule_errors += self.no_mapping_found_cells
-        self.utils.mapping_errors += self.num_of_mapping_errors
-
-    def it_elections(self, single_row, reification_index):
-        """
-        Italian mapping rules for elections pages. It is used to add triples to the graph.
-
-
-        :param reification_index: (int) index used to reification of the row concept
-        :param single_row: (dict) dictionary containing data to map. {'header': [values]}
-        :return: nothing
-        """
-
-        """
-        row_subject,row_predicate, row_object are values used to make a triple which represents reification for the
-          row concept.
-
-        -subject, as the resources analyzed are in fact wiki pages, is their dbpedia representation
-        Eg. http://dbpedia.org/resource/United_States_presidential_election,_2012
-
-        -predicate for the row concept is dbo:Election
-         NOTE: it would be better to use a different concept to map the predicate (Electoral Result?) but due to lack of
-          time I didn't get a feedback by Community over this idea.
-
-        -object = reification for the row concept
-          It uses the resourceName__reificationIndex format as you can see in CareerStation for Soccer Players
-          Please see http://dbpedia.org/page/Andrea_Pirlo and http://dbpedia.org/page/Andrea_Pirlo__1 to fully
-           understand what is done here.
-        """
-
-        row_subject = rdflib.URIRef(self.dbr + self.resource)  # Eg. resource =United_States_presidential_election,_2012
-        row_predicate = self.dbo.Election  # Election http://dbpedia.org/ontology/Election
-        row_object = rdflib.URIRef(self.dbr + self.resource + "__" + str(
-            reification_index))  # Reification eg USA_presidential_elections_1984__1 for the first row,
-        #  __2 for second one etc.
-
-        # keeping track of how many cells are added to the graph, for this row
-        self.cells_mapped = 0
-        # Iterates over cell in the current row. cell equals to header
-        for header in single_row:
-            # values is a list containing data extracted
-            values = single_row[header]
-            try:
-                # try to map data, but only if data for that cell exists :)
-                if values[0] != "-":
-
-                    # set row as the reification of the row's concept
-                    row = row_object
-
-                    # set subject, predicate and object for the single cell
-                    cell_subject = None
-                    cell_predicate = None
-                    cell_object = None
-
-                    """
-                    NOTE: data are substantially mapped using the corresponding header. In fact manipulation of values
-                     and rules to set subject object and predicate of a cell strictly depending on the value of the
-                     header associated with values.
-                    From here you can see if blocks representing the actual mapping rules.
-
-                    FUTURE DEVELOPMENT: It would be useful to use soft coded mapping rules using standard methods to
-                     manipulate values and algorithm to decide how to map each part.
-                    """
-
-                    # 1° RULE
-
-                    if header == 'Candidati - Presidente' or header == 'Candidato' or header == 'candidato' \
-                            or header == 'Candidato presidente' or header == 'Candidati - Presidente (Stato)' \
-                            or header == 'Leader':
-
-                        # subject is the row concept
-                        # Eg. http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940
-                        cell_subject = row
-
-                        # Predicate is http://dbpedia.org/ontology/President
-                        cell_predicate = rdflib.URIRef(self.dbo.President)  # http://dbpedia.org/ontology/President
-
-                        # if the length of data list is 2
-                        if len(values) == 2:
-                            # object is the second value
-                            cell_object = values[1]  # value: eg [u'New York (stato)', u'Franklin D. Roosevelt']
-                        else:
-                            # if not, object is the first between values list
-                            cell_object = values[0]
-
-                            # find if a comma is inside the object
-                            comma_index = cell_object.find(",")
-                            if comma_index >= 0:
-                                # If so, replace it with everything comes before the comma
-                                cell_object = cell_object[:comma_index]
-
-                        # replace the spaces with underscores
-                        cell_object = cell_object.replace(" ", "_")
-
-                        # try to know if the value in object is a existing dbpedia resource
-                        res_exists = self.utils.ask_if_resource_exists(self.dbr + cell_object)
-                        if res_exists:
-                            # If the resource already exists use the reference to that resource
-                            cell_object = rdflib.URIRef(self.dbr + cell_object)
-                        else:
-                            # replace underscores with simple spaces
-                            cell_object = cell_object.replace("_", " ")
-                            # NOTE use lang= instead of datatype?
-                            # use a Literal containing value as the object
-                            cell_object = rdflib.Literal(cell_object, datatype=rdflib.namespace.XSD.string)
-
-                    # 2° RULE
-
-                    elif header == 'Candidati - Vicepresidente' or header == 'Candidato Vicepresidente' \
-                            or header == 'Candidato vicepresidente' or header == 'Candidati - Vicepresidente (Stato)':
-
-                        # subject is the row concept
-                        # Eg. http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940
-                        cell_subject = row  # row
-
-                        # Predicate is http://dbpedia.org/ontology/VicePresident
-                        cell_predicate = rdflib.URIRef(self.dbo.VicePresident)
-
-                        # choose which value has to be selected depending on mode and values lenght
-                        if len(values) == 2 and self.mode == 'json':
-                            cell_object = values[1]  # values eg [u'Iowa', u'Henry A. Wallace']
-                        else:
-                            cell_object = values[0]
-
-                            # find if there is a comma inside the object
-                            comma_index = cell_object.find(",")
-                            if comma_index >= 0:
-                                # if so, replace it with everything comes before the comma
-                                cell_object = cell_object[:comma_index]
-
-                        # try to know if the value in object is a existing dbpedia resource
-                        res_exists = self.utils.ask_if_resource_exists(self.dbr + cell_object)
-                        if res_exists:
-                            # If the resource already exists use the reference to that resource
-                            cell_object = rdflib.URIRef(self.dbr + cell_object)
-                        else:
-                            # replace underscores with simple spaces
-                            cell_object = cell_object.replace("_", " ")
-                            # NOTE use lang= instead of datatype?
-                            # use a Literal containing value as the object
-                            cell_object = rdflib.Literal(cell_object, datatype=rdflib.namespace.XSD.string)
-
-                    # 3° RULE
-
-                    elif header == 'Candidati - Partito' or header == 'Partito' or header == 'Lista':
-
-                        # subject is the row concept
-                        # Eg. http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940
-                        cell_subject = row  # row
-
-                        # predicate is http://dbpedia.org/ontology/PoliticalParty
-                        cell_predicate = rdflib.URIRef(self.dbo.PoliticalParty)
-
-                        # object is values[0]
-                        cell_object = values[0]  # values eg [u'Partito Democratico (Stati Uniti)']
-
-                        # test out if object is a string or a unicode
-                        basestr = isinstance(cell_object, basestring)
-                        if basestr:
-                            # if so, test if "Stati Uniti" is inside it
-                            if "Stati Uniti" in cell_object or "Stati_Uniti" in cell_object:
-                                # if so, add to the last part of the string "_d'America)"
-                                cell_object = cell_object[:-1] + "_d'America)"
-
-                        # try to know if the value in object is a existing dbpedia resource
-                        res_exists = self.utils.ask_if_resource_exists(self.dbr + cell_object)
-                        if res_exists:
-                            # If the resource already exists use the reference to that resource
-                            cell_object = rdflib.URIRef(self.dbr + cell_object)
-                        else:
-                            # replace underscores with simple spaces
-                            cell_object = cell_object.replace("_", " ")
-                            # NOTE use lang= instead of datatype?
-                            # use a Literal containing value as the object
-                            cell_object = rdflib.Literal(cell_object, datatype=rdflib.namespace.XSD.string)
-
-                    # 4° RULE
-
-                    elif header == 'Grandi elettori - #' or header == 'Grandi elettori - n.' \
-                            or header == 'Grandi elettori - Num.' or header == 'Grandi Elettori ottenuti' \
-                            or header == 'Voti Elettorali' or header == 'Grandi Elettori' \
-                            or header == 'Voti elettorali' or header == 'Elettori':
-
-                        # subject is the row concept
-                        # Eg. http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940
-                        cell_subject = row  # row
-
-                        # predicate is http://dbpedia.org/property/electoralVote which stands for the
-                        #  number of Great Electors
-                        cell_predicate = rdflib.URIRef(self.dbp.electoralVote)
-
-                        # test if value is >= 0
-                        if values[0] >= 0:
-                            if self.is_int(values[0]):
-                                # if so set object as int(value)
-                                cell_object = int(values[0])  # values eg [449.0]
-
-                                # finally  use a Literal with a positiveInteger data type
-                                cell_object = rdflib.Literal(cell_object, datatype=rdflib.namespace.XSD.positiveInteger)
-
-                    # 5° RULE
-
-                    elif header == 'Voti - #' or header == 'Voti - n.' or header == 'Voti - Num.' or header == 'Voti' \
-                            or header == 'Voti Popolari' or header == 'Voti popolari' \
-                            or header == 'Voto popolare - Voti' or header == 'Voto popolare':
-
-                        # subject is the row concept
-                        # Eg. http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940
-                        cell_subject = row  # row
-
-                        # predicate is http://dbpedia.org/property/popularVote which stands for the
-                        #  number of votes
-                        cell_predicate = rdflib.URIRef(self.dbo.popularVote)
-
-                        basestr = isinstance(values[0], basestring)
-                        if basestr:
-                            # delete spaces
-                            if ' ' in values[0]:
-                                values[0] = values[0].replace(' ', '')
-                            # delete dots
-                            if '.' in values[0]:
-                                values[0] = values[0].replace('.', '')
-
-                        # test if value can be casted to int type
-                        if self.is_int(values[0]):
-                            # cast it to int
-                            values[0] = int(values[0])
-                            # set object to a Literal with a positiveInteger data type
-                            cell_object = rdflib.Literal(values[0], datatype=rdflib.namespace.XSD.positiveInteger)
-
-                    # 6° RULE
-
-                    elif header == 'Voti - %' or header == '?% voti' or header == '% voti' \
-                            or header == 'Percentuale' or header == '%' or header == '?%' or header == 'Voti (%)' \
-                            or header == 'Voto popolare - Percentuale'or header == '% (Primo Turno)':
-
-                        # subject is the row concept
-                        # Eg. http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940
-                        cell_subject = row  # row
-
-                        # predicate is http://dbpedia.org/property/pvPct which stands for popular vote, percentage
-                        cell_predicate = rdflib.URIRef(self.dbp.pvPct)
-
-                        # test if the value can be casted to a float
-                        if self.is_float(values[0]):
-                            values[0] = float(values[0])
-                            # set object to a float Literal
-                            cell_object = rdflib.Literal(values[0], datatype=rdflib.namespace.XSD.float)  # values
-
-                        else:
-                            # test if it is a string or a unicode
-                            basestr = isinstance(values[0], basestring)
-                            if basestr:
-                                # Sometimes wiki Users use comma instead of dot desribing percentage, so we have
-                                # to convert commas in dots.
-                                if ',' in values[0]:
-                                    values[0] = values[0].replace(",", ".")
-
-                                # set as percentage the last character of the string
-                                percentage = values[0][-1:]
-                                # test if this character is a '%'
-                                percentage = re.match(r'%', percentage)
-                                if percentage:
-                                    # if so, replace value with float(value_less_last_character)
-
-                                    values[0] = float(values[0][:-1])
-                                    # set object as a float Literal
-                                    cell_object = rdflib.Literal(values[0], datatype=rdflib.namespace.XSD.float)
-                                else:
-                                    # set object as a float Literal
-                                    cell_object = rdflib.Literal(values[0], datatype=rdflib.namespace.XSD.float)
-
-                    # IF HEADER DOES NOT MATCH ANY RULE
-                    else:
-
-                        # Reset sub, obj and predicate to None
-                        cell_subject = None
-                        cell_predicate = None
-                        cell_object = None
-
-                        # print out this condition to the console
-                        print ("Something went wrong choosing mapping rules :'((  data: %s header: %s"
-                               % (values, header))
-
-                        # increase the count of 'no mapping rule found' cells
-                        self.no_mapping_found_cells += 1
-
-                        # test if the header is already in headers_not_mapped
-                        if header not in self.headers_not_mapped.keys():
-                            # If not, add to the list of headers with no mapping rules defined the current header
-                            self.headers_not_mapped[header] = values
-
-                    # if sub,pred,obj are set for this cell, add them to the graph
-                    if cell_predicate and cell_object and cell_subject:
-                        # increase the count of cells mapped for this row
-                        self.cells_mapped += 1
-
-                        # Adding the triple to the graph using graph.add(sub, pred, obj)
-                        self.graph.add((cell_subject, cell_predicate, cell_object))
-
-                        # increase the amount of triples added to the graph
-                        self.triples_added_to_the_graph += 1
-                        # print in the console the triple added using print_triple(sub, pred, object)
-                        self.print_triple(cell_subject, cell_predicate, cell_object)
-
-            except:
-                print("Error mapping %s   ,associate with cell: %s" % (values, header))
-                # Increase the number of mapping exceptions
-                self.num_of_mapping_errors += 1
-
-        # Finally if at least one cell is correctly mapped
-        if self.cells_mapped > 0:
-            # add only those rows with some mapped cells to the graph
-            self.graph.add((row_subject, row_predicate, row_object))
-            # add the row to the triples mapped
-            self.triples_added_to_the_graph += 1
-            # print triple added
-            self.print_triple(row_subject, row_predicate, row_object)
-            # added this row cells to the total number of cells maapped
-            self.total_cell_mapped += self.cells_mapped
-
+                self.add_triple_to_graph(self.dbr + self.resource, self.db + section_property, self.db + section_row_property)
+                self.utils.triples_serialized += 1
+                for cell in row:
+                    value = self.extract_value_from_cell(row[cell])
+                    dictionary_property = self.search_on_dictionary(cell)
+                    if dictionary_property:
+                        self.add_triple_to_graph(self.db + section_row_property, self.db + dictionary_property, value)
+                        self.utils.triples_serialized += 1
+                        self.utils.mapped_cells += 1
+
+    def extract_value_from_cell(self, cell):
+        # take only value's cell and not link
+        if len(cell) > 1:
+            value = cell[-1]
         else:
-            # decrease the reification index as the row has not been added to the graph
-            self.reification_index -= 1
-
-    def en_elections(self, single_row, reification_index):
-        """
-        English mapping rules for elections pages. It is used to add triples to the graph.
-
-
-        :param reification_index: (int) index used to reification of the row concept
-        :param single_row: (dict) dictionary containing data to map. {'header': [values]}
-        :return: nothing
-        """
-
-        """
-        row_subject,row_predicate, row_object are values used to make a triple which represents reification for the
-          row concept.
-
-        -subject, as the resources analyzed are in fact wiki pages, is their dbpedia representation
-        Eg. http://dbpedia.org/resource/United_States_presidential_election,_2012
-
-        -predicate for the row concept is dbo:Election
-         NOTE: it would be better to use a different concept to map the predicate (Electoral Result?) but due to lack of
-          time I didn't get a feedback by Community over this idea.
-
-        -object = reification for the row concept
-          It uses the resourceName__reificationIndex format as you can see in CareerStation for Soccer Players
-          Please see http://dbpedia.org/page/Andrea_Pirlo and http://dbpedia.org/page/Andrea_Pirlo__1 to fully
-           understand what is done here.
-        """
-
-        row_subject = rdflib.URIRef(self.dbr + self.resource)  # Eg. resource =United_States_presidential_election,_2012
-        row_predicate = self.dbo.Election  # Election http://dbpedia.org/ontology/Election
-        row_object = rdflib.URIRef(self.dbr + self.resource + "__" + str(
-            reification_index))  # Reification eg USA_presidential_elections_1984__1 for the first row,
-        #  __2 for second one etc.
-
-        # keeping track of how many cells are added to the graph, for this row
-        self.cells_mapped = 0
-        # Iterates over cell in the current row. cell equals to header
-        for header in single_row:
-            # values is a list containing data extracted
-            values = single_row[header]
-            try:
-                # try to map data, but only if data for that cell exists :)
-                if values[0] != "-":
-
-                    # set row as the reification of the row's concept
-                    row = row_object
-
-                    # set subject, predicate and object for the single cell
-                    cell_subject = None
-                    cell_predicate = None
-                    cell_object = None
-
-                    """
-                    NOTE: data are substantially mapped using the corresponding header. In fact manipulation of values
-                     and rules to set subject object and predicate of a cell strictly depending on the value of the
-                     header associated with values.
-                    From here you can see if blocks representing the actual mapping rules.
-
-                    FUTURE DEVELOPMENT: It would be useful to use soft coded mapping rules using standard methods to
-                     manipulate values and algorithm to decide how to map each part.
-                    """
-
-                    # 1° RULE
-
-                    if 'Candidate' in header or 'candidate' in header :
-
-                        # subject is the row concept
-                        # Eg. http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940
-                        cell_subject = row
-
-                        # Predicate is http://dbpedia.org/property/candidate
-                        cell_predicate = rdflib.URIRef(self.dbp.candidate)
-
-                        # if the length of data list is 2
-                        if len(values) == 2:
-                            # object is the second value
-                            cell_object = values[1]  # value: eg [u'New York (stato)', u'Franklin D. Roosevelt']
-                        else:
-                            # if not, object is the first between values list
-                            cell_object = values[0]
-
-                            # find if a comma is inside the object
-                            comma_index = cell_object.find(",")
-                            if comma_index >= 0:
-                                # If so, replace it with everything comes before the comma
-                                cell_object = cell_object[:comma_index]
-
-                        # replace the spaces with underscores
-                        cell_object = cell_object.replace(" ", "_")
-
-                        # try to know if the value in object is a existing dbpedia resource
-                        res_exists = self.utils.ask_if_resource_exists(self.dbr + cell_object)
-                        if res_exists:
-                            # If the resource already exists use the reference to that resource
-                            cell_object = rdflib.URIRef(self.dbr + cell_object)
-                        else:
-                            # replace underscores with simple spaces
-                            cell_object = cell_object.replace("_", " ")
-                            # NOTE use lang= instead of datatype?
-                            # use a Literal containing value as the object
-                            cell_object = rdflib.Literal(cell_object, datatype=rdflib.namespace.XSD.string)
-
-                    # 2° RULE
-
-                    elif 'Candidati - Vicepresidente' in header:
-
-                        # subject is the row concept
-                        # Eg. http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940
-                        cell_subject = row  # row
-
-                        # Predicate is http://dbpedia.org/ontology/VicePresident
-                        cell_predicate = rdflib.URIRef(self.dbo.VicePresident)
-
-                        # choose which value has to be selected depending on mode and values lenght
-                        if len(values) == 2 and self.mode == 'json':
-                            cell_object = values[1]  # values eg [u'Iowa', u'Henry A. Wallace']
-                        else:
-                            cell_object = values[0]
-
-                            # find if there is a comma inside the object
-                            comma_index = cell_object.find(",")
-                            if comma_index >= 0:
-                                # if so, replace it with everything comes before the comma
-                                cell_object = cell_object[:comma_index]
-
-                        # try to know if the value in object is a existing dbpedia resource
-                        res_exists = self.utils.ask_if_resource_exists(self.dbr + cell_object)
-                        if res_exists:
-                            # If the resource already exists use the reference to that resource
-                            cell_object = rdflib.URIRef(self.dbr + cell_object)
-                        else:
-                            # replace underscores with simple spaces
-                            cell_object = cell_object.replace("_", " ")
-                            # NOTE use lang= instead of datatype?
-                            # use a Literal containing value as the object
-                            cell_object = rdflib.Literal(cell_object, datatype=rdflib.namespace.XSD.string)
-
-                    # 3° RULE
-
-                    elif header == 'Candidati - Partito' or 'Party' in header:
-
-                        # subject is the row concept
-                        # Eg. http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940
-                        cell_subject = row  # row
-
-                        # predicate is http://dbpedia.org/ontology/PoliticalParty
-                        cell_predicate = rdflib.URIRef(self.dbo.PoliticalParty)
-
-                        # object is values[0]
-                        cell_object = values[0]  # values eg [u'Partito Democratico (Stati Uniti)']
-
-                        # test out if object is a string or a unicode
-                        basestr = isinstance(cell_object, basestring)
-                        if basestr:
-                            # if so, test if "Stati Uniti" is inside it
-                            if "Stati Uniti" in cell_object or "Stati_Uniti" in cell_object:
-                                # if so, add to the last part of the string "_d'America)"
-                                cell_object = cell_object[:-1] + "_d'America)"
-
-                        # try to know if the value in object is a existing dbpedia resource
-                        res_exists = self.utils.ask_if_resource_exists(self.dbr + cell_object)
-                        if res_exists:
-                            # If the resource already exists use the reference to that resource
-                            cell_object = rdflib.URIRef(self.dbr + cell_object)
-                        else:
-                            # replace underscores with simple spaces
-                            cell_object = cell_object.replace("_", " ")
-                            # NOTE use lang= instead of datatype?
-                            # use a Literal containing value as the object
-                            cell_object = rdflib.Literal(cell_object, datatype=rdflib.namespace.XSD.string)
-
-                    # 4° RULE
-
-                    elif 'Grandi elettori - #' in header :
-
-                        # subject is the row concept
-                        # Eg. http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940
-                        cell_subject = row  # row
-
-                        # predicate is http://dbpedia.org/property/electoralVote which stands for the
-                        #  number of Great Electors
-                        cell_predicate = rdflib.URIRef(self.dbp.electoralVote)
-
-                        # test if value is >= 0
-                        if values[0] >= 0:
-                            if self.is_int(values[0]):
-                                # if so set object as int(value)
-                                cell_object = int(values[0])  # values eg [449.0]
-
-                                # finally  use a Literal with a positiveInteger data type
-                                cell_object = rdflib.Literal(cell_object, datatype=rdflib.namespace.XSD.positiveInteger)
-
-                    # 5° RULE
-
-                    elif 'Votes' in header or '#' in header:
-
-                        # subject is the row concept
-                        # Eg. http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940
-                        cell_subject = row  # row
-
-                        # predicate is http://dbpedia.org/property/popularVote which stands for the
-                        #  number of votes
-                        cell_predicate = rdflib.URIRef(self.dbo.popularVote)
-
-                        basestr = isinstance(values[0], basestring)
-                        if basestr:
-                            # delete spaces
-                            if ' ' in values[0]:
-                                values[0] = values[0].replace(' ', '')
-                            # delete dots
-                            if '.' in values[0]:
-                                values[0] = values[0].replace('.', '')
-
-                        # test if value can be casted to int type
-                        if self.is_int(values[0]):
-                            # cast it to int
-                            values[0] = int(values[0])
-                            # set object to a Literal with a positiveInteger data type
-                            cell_object = rdflib.Literal(values[0], datatype=rdflib.namespace.XSD.positiveInteger)
-
-                    # 6° RULE
-
-                    elif header == 'Voti - %' or header == '?% voti' or header == '% voti' \
-                            or header == 'Percentuale' or '%' in header or header == '?%' or header == 'Voti (%)' \
-                            or header == 'Voto popolare - Percentuale':
-
-                        # subject is the row concept
-                        # Eg. http://it.dbpedia.org/resource/Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_1940
-                        cell_subject = row  # row
-
-                        # predicate is http://dbpedia.org/property/pvPct which stands for popular vote, percentage
-                        cell_predicate = rdflib.URIRef(self.dbp.pvPct)
-
-                        # test if the value can be casted to a float
-                        if self.is_float(values[0]):
-                            values[0] = float(values[0])
-                            # set object to a float Literal
-                            cell_object = rdflib.Literal(values[0], datatype=rdflib.namespace.XSD.float)  # values
-
-                        else:
-                            # test if it is a string or a unicode
-                            basestr = isinstance(values[0], basestring)
-                            if basestr:
-                                # Sometimes wiki Users use comma instead of dot desribing percentage, so we have
-                                # to convert commas in dots.
-                                if ',' in values[0]:
-                                    values[0] = values[0].replace(",", ".")
-
-                                # set as percentage the last character of the string
-                                percentage = values[0][-1:]
-                                # test if this character is a '%'
-                                percentage = re.match(r'%', percentage)
-                                if percentage:
-                                    # if so, replace value with float(value_less_last_character)
-
-                                    values[0] = float(values[0][:-1])
-                                    # set object as a float Literal
-                                    cell_object = rdflib.Literal(values[0], datatype=rdflib.namespace.XSD.float)
-                                else:
-                                    # set object as a float Literal
-                                    cell_object = rdflib.Literal(values[0], datatype=rdflib.namespace.XSD.float)
-
-                    # IF HEADER DOES NOT MATCH ANY RULE
-                    else:
-
-                        # Reset sub, obj and predicate to None
-                        cell_subject = None
-                        cell_predicate = None
-                        cell_object = None
-
-                        # print out this condition to the console
-                        print ("Something went wrong choosing mapping rules :'((  data: %s header: %s"
-                               % (values, header))
-
-                        # increase the count of 'no mapping rule found' cells
-                        self.no_mapping_found_cells += 1
-
-                        # test if the header is already in headers_not_mapped
-                        if header not in self.headers_not_mapped.keys():
-                            # If not, add to the list of headers with no mapping rules defined the current header
-                            self.headers_not_mapped[header] = values
-
-                    # if sub,pred,obj are set for this cell, add them to the graph
-                    if cell_predicate and cell_object and cell_subject:
-                        # increase the count of cells mapped for this row
-                        self.cells_mapped += 1
-
-                        # Adding the triple to the graph using graph.add(sub, pred, obj)
-                        self.graph.add((cell_subject, cell_predicate, cell_object))
-
-                        # increase the amount of triples added to the graph
-                        self.triples_added_to_the_graph += 1
-                        # print in the console the triple added using print_triple(sub, pred, object)
-                        self.print_triple(cell_subject, cell_predicate, cell_object)
-
-            except:
-                print("Error mapping %s   ,associate with cell: %s" % (values, header))
-                # Increase the number of mapping exceptions
-                self.num_of_mapping_errors += 1
-
-        # Finally if at least one cell is correctly mapped
-        if self.cells_mapped > 0:
-            # add only those rows with some mapped cells to the graph
-            self.graph.add((row_subject, row_predicate, row_object))
-            # add the row to the triples mapped
-            self.triples_added_to_the_graph += 1
-            # print triple added
-            self.print_triple(row_subject, row_predicate, row_object)
-            # added this row cells to the total number of cells maapped
-            self.total_cell_mapped += self.cells_mapped
-
+            value = cell
+        return value
+
+    def define_row_and_section_property(self):
+        section_property = self.search_on_dictionary(self.table_section)
+        section_row_property = self.search_on_dictionary(self.table_section + settings.ROW_SUFFIX)
+        # you can even not specify rowTableProperty
+        if not section_row_property:
+            section_row_property = section_property + "_" + str(self.reification_index)
         else:
-            # decrease the reification index as the row has not been added to the graph
-            self.reification_index -= 1
+            section_row_property = self.search_on_dictionary(self.table_section + settings.ROW_SUFFIX) + "_" + \
+                                   str(self.reification_index)
+        return section_property, section_row_property
 
-    def print_triple(self, s, p, o):
-        """
-         Prints the triple added to the graph
-        :param s: subject
-        :param p: predicate
-        :param o: object
-        :return:
-        """
-        print("Added sub= %s pred= %s obj= %s to the graph" % (s, p, o))
+    def add_triple_to_graph(self, subject, prop, value):
+        subject = rdflib.URIRef(subject)
+        prop = rdflib.URIRef(prop)
+        value = self.check_value_type(value)
+        # print subject, prop, value
+        self.graph.add((subject, prop, value))
+
+    def check_value_type(self, value):
+        # i can have input value like list or like single input, i need to make a filter and get
+        # unique element of this list
+        if isinstance(value, list):
+            result = value[0]
+        else:
+            result = value
+        if self.is_float(result):
+            data_type = rdflib.namespace.XSD.float
+        elif self.is_int(result):
+            data_type = rdflib.namespace.XSD.int
+        else:
+            # If this string represents a resource
+            resource = self.check_if_is_resource(result)
+            if resource:
+                return rdflib.URIRef(resource)
+            else:
+                data_type = rdflib.namespace.XSD.string
+        return rdflib.Literal(result, datatype=data_type)
+
+    def check_if_is_resource(self, resource):
+        resource_to_search = resource.replace(" ", "_")
+        saved_resource = [r for r in resources_found if r in resource_to_search]
+        if not saved_resource:
+            if self.utils.ask_if_resource_exists(self.dbr + resource_to_search):
+                resources_found.append(resource_to_search)
+                result = self.dbr + resource_to_search
+            else:
+                result = ""
+        else:
+            result = self.dbr + saved_resource[-1]
+        return result
+
+    def search_on_dictionary(self, key):
+        try:
+            return self.dictionary[key]
+        except KeyError:
+            # there's no mapping rule in dictionary for this header
+            self.utils.no_mapping_rule_errors += 1
+            already_printed = [x for x in self.printed_key if x == key]
+            if len(already_printed) == 0:
+                self.printed_key.append(key)
+                print "Key '", key, "' not found. Check actual dictionary on mapping_rules.py"
+                self.logging.warn("Key " + key + " not found. Check actual dictionary on mapping_rules.py")
+            return ""
 
     def is_float(self, value):
         """
@@ -827,6 +205,8 @@ class Mapper:
         try:
             float(value)
             return True
+        except TypeError:
+            return False
         except ValueError:
             return False
 
@@ -839,6 +219,7 @@ class Mapper:
         try:
             int(value)
             return True
-
+        except TypeError:
+            return False
         except ValueError:
             return False
