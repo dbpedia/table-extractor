@@ -28,6 +28,7 @@ class ExplorerTools:
         self.chapter = self.set_chapter()
         self.verbose = self.set_verbose()
         self.utils = Utilities.Utilities(self.chapter, self.topic, self.research_type)
+
         if not self.args.single:
             self.selector = Selector.Selector(self.utils)
 
@@ -153,7 +154,7 @@ class ExplorerTools:
             # header as wrote in table
             query = settings.SPARQL_CHECK_PROPERTY[0] +\
                     '{' + settings.SPARQL_CHECK_PROPERTY[1] + '"' + data + '"@' + self.chapter + "} UNION " +\
-                    '{' + settings.SPARQL_CHECK_PROPERTY[1] + '"' + data + '"@' + self.chapter + "}" +\
+                    '{' + settings.SPARQL_CHECK_PROPERTY[1] + '"' + data.lower() + '"@' + self.chapter + "}" +\
                     settings.SPARQL_CHECK_PROPERTY[2]
             # If I change chapter language of Utilities I will make a sparql query to dbpedia.org ontology
             self.utils.chapter = "en"
@@ -173,8 +174,9 @@ class ExplorerTools:
         :param uri: uri's resource
         :return: property name
         """
-        res_name = uri.replace("http://dbpedia.org/ontology/", "")
-        res_name = res_name.encode('utf-8')
+        # split by '/', i need last two elements (e.g. 'resource/Kobe_Bryant' or 'ontology/weight')
+        split_uri = uri.split("/")
+        res_name = split_uri[-1].encode('utf-8')
         return res_name
 
     def html_object_getter(self, name):
@@ -205,7 +207,7 @@ class ExplorerTools:
             graph = rdflib.Graph()
             # instantiate html table parser
             html_table_parser = HtmlTableParser.HtmlTableParser(html_doc_tree, self.chapter, graph,
-                                                                self.topic, res_name, self.utils)
+                                                                self.topic, res_name, self.utils, False)
             # if there are tables to analyze
             if html_table_parser:
                 # analyze and parse tables
@@ -236,3 +238,13 @@ class ExplorerTools:
         if not self.args.single:
             result = self.selector.res_list_file.split(settings.PATH_FOLDER_RESOURCE_LIST)[1].replace("/", "")
         return result
+
+    def print_log_msg(self, log_type, msg):
+        if log_type == "info":
+            self.utils.logging.info(msg)
+        elif log_type == "warning":
+            self.utils.logging.warning(msg)
+        elif log_type == "exception":
+            self.utils.logging.exception(msg)
+        elif log_type == "error":
+            self.utils.logging.error(msg)
