@@ -55,9 +55,11 @@ class Utilities:
         update actual mapping rules and set chapter and topic, given by domain_settings.py
         """
         if not self.chapter:
-            self.update_mapping_rules()
-        # First of all setup the log and initialize it
-        self.setup_log()
+            self.dictionary = self.update_mapping_rules()
+            # First of all setup the log and initialize it
+            self.setup_log("extractor")
+        else:
+            self.setup_log("explorer")
 
         # These values are used to compose calls to services as Sparql endpoints or to a html wiki page
         self.call_format_sparql = settings.SPARQL_CALL_FORMAT
@@ -87,12 +89,11 @@ class Utilities:
         self.data_extraction_errors = 0
         self.not_resolved_header_errors = 0
         self.headers_errors = 0
-        self.mapping_errors = 0
         self.no_mapping_rule_errors = 0
         self.mapped_cells = 0
         self.triples_serialized = 0
 
-    def setup_log(self):
+    def setup_log(self, script_name):
         """
         Initializes and creates log file containing info and statistics
         """
@@ -103,9 +104,9 @@ class Utilities:
         current_dir = self.get_current_dir()
         # composing the log filename as current_date_and_time + _LOG_T_EXT + chapter_chosen + topic_chosen
         if self.research_type == "w":
-            filename = current_date_time + "_LOG_T_Ext_" + self.chapter + '_' + "custom" + ".log"
+            filename = current_date_time + "_LOG_" + script_name + "_" + self.chapter + '_' + "custom" + ".log"
         else:
-            filename = current_date_time + "_LOG_T_Ext_" + self.chapter + '_' + self.topic + ".log"
+            filename = current_date_time + "_LOG_" + script_name + "_" + self.chapter + '_' + self.topic + ".log"
         # composing the absolute path of the log
         path_desired = self.join_paths(current_dir, '../Extractions/' + filename)
 
@@ -308,7 +309,7 @@ class Utilities:
             else:
                 return False
         except:
-            print("Exception asking if %s exists" % resource)
+            #print("Exception asking if %s exists" % resource)
             return False
 
     def get_date_time(self):
@@ -367,8 +368,6 @@ class Utilities:
 
         self.logging.info("+           Total # of \'no headers\' errors : %d" % self.headers_errors)
 
-        self.logging.info("+           Total # of mapping errors : %d" % self.mapping_errors)
-
         self.logging.info("+           Total # of \'no mapping rule\' errors : %d" % self.no_mapping_rule_errors)
 
         self.logging.info("+           Total # cells mapped : %d" % self.mapped_cells)
@@ -396,6 +395,7 @@ class Utilities:
         actual_mapping_rules = self.read_actual_mapping_rules()
         updated_mapping_rules = self.update_differences_between_dictionaries(actual_mapping_rules,new_mapping_rules)
         self.print_updated_mapping_rules(updated_mapping_rules)
+        return updated_mapping_rules
 
     """
     Read chapter and topic from domain_settings.py
