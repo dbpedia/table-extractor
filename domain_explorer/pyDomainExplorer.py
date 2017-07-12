@@ -60,9 +60,8 @@ def analyze_uri_resource_list(uri_resource_list):
     :return:
     """
     for single_uri in uri_resource_list:
-        print single_uri
+        print "Resource: ", single_uri
         get_resource_sections_and_headers(single_uri)
-        print "\n\n"
 
 """
 Analyze tables and get headers and sections
@@ -182,7 +181,11 @@ def check_if_header_already_exists(header, section_name):
         # delete headers that have only one character
         if len(header) > 1:
             all_sections[section_name].__setitem__(header, header_property)
-            all_headers.__setitem__(header, header_property)
+            try:
+                all_headers[header]
+            except KeyError:
+                all_headers.__setitem__(header, header_property)
+                explorer_tools.print_log_msg("info", "New header found: " + header)
 
 
 """
@@ -209,9 +212,8 @@ def check_if_property_exists(header):
             property_found = 0
             for row in answer["results"]["bindings"]:
                 # sparql results can be wikidata or dbpedia uri, i have to filter to catch only dbpedia ontology uri
-                if "ontology" in row["s"]["value"] and property_found == 0:
-                    # i can't put a resource that can be a disambiguation or property --> I need ontology elements
-                    if "disambiguation" not in row["s"]["value"]:
+                for property_type in settings.ONTOLOGY_TYPE:
+                    if property_type in row["s"]["value"] and property_found == 0:
                         property_to_check = explorer_tools.get_ontology_name_from_uri(row["s"]["value"])
                         property_found = 1
     return property_to_check
