@@ -180,7 +180,7 @@ class Analyzer:
                             analyzed with HtmlTableParser.analyze_tables() method.
                         """
                         html_parser = HtmlTableParser.HtmlTableParser(html_doc_tree, self.chapter, self.graph,
-                                                                      self.topic, resource, self.utils)
+                                                                      self.topic, resource, self.utils, mapping=True)
                         html_parser.analyze_tables()
 
                         """
@@ -251,7 +251,7 @@ class Analyzer:
                 self.topic = "single_res_" + str(self.single_res)
 
             # compose filename of the .ttl file
-            filename = self.utils.get_date_time() + "_T_Ext_" + self.mode + '_' + self.chapter + '_' +\
+            filename = self.utils.get_date_time() + "_T_Ext_" + self.chapter + '_' +\
                 self.topic + ".ttl"
             # join path of execution with that of ../Extraction
             destination = self.utils.join_paths(cur_dir, '../Extractions/'+filename)
@@ -274,5 +274,5 @@ class Analyzer:
         # if no triple is in graph
         else:
             print('Something went wrong: Nothing to serialize')
-            self.logging.warn('Nothing to serialize, you have to choose right scope or resource, \
-                            or something went wrong scraping tables')
+            self.logging.warn('Nothing to serialize, you have to choose right scope or resource,'
+                              'or something went wrong scraping tables')
