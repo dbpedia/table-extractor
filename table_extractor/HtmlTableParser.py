@@ -103,10 +103,14 @@ class HtmlTableParser:
 
         # now class = 'wikitable sortable' tables are found
         sortable_tables = self.doc_tree.findall('//table[@class=\'wikitable sortable\']')
+        # now class = 'wikitable collapsible' tables are found
+        collapsible_tables = self.doc_tree.findall('//table[@class=\'wikitable sortable collapsible\']')
         # Adding sortable tables to the tables list
         for sort_table in sortable_tables:
             self.tables.append(sort_table)
-
+        # Adding collapsible tables to the tables list
+        for collaps_table in collapsible_tables:
+            self.tables.append(collaps_table)
         # If at least a table is found
         if self.tables:
             # count the number of tables and add it to the total count
