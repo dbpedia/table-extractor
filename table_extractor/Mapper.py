@@ -76,6 +76,7 @@ class Mapper:
         self.dbp = None
         self.db = None
         self.define_namespace()
+        self.filter_table_data()
 
     def define_namespace(self):
         """
@@ -88,10 +89,8 @@ class Mapper:
 
         if self.chapter != 'en':
             self.dbr = rdflib.Namespace("http://" + self.chapter + ".dbpedia.org/resource/")
-            self.db = rdflib.Namespace("http://" + self.chapter + ".dbpedia.org/")
         else:
             self.dbr = rdflib.Namespace("http://dbpedia.org/resource/")
-            self.db = rdflib.Namespace("http://dbpedia.org/")
 
         self.dbo = rdflib.Namespace("http://dbpedia.org/ontology/")
         self.dbp = rdflib.Namespace("http://dbpedia.org/property/")
@@ -114,15 +113,17 @@ class Mapper:
             # if i find a section property that is defined
             if section_property:
                 self.reification_index += 1
-                self.add_triple_to_graph(self.dbr + self.resource, self.db + section_property, self.db + section_row_property)
+                self.add_triple_to_graph(self.dbr + self.resource, self.dbo + section_property, section_row_property)
                 self.utils.triples_serialized += 1
                 for cell in row:
                     value = self.extract_value_from_cell(row[cell])
-                    dictionary_property = self.search_on_dictionary(cell)
-                    if dictionary_property:
-                        self.add_triple_to_graph(self.db + section_row_property, self.db + dictionary_property, value)
-                        self.utils.triples_serialized += 1
-                        self.utils.mapped_cells += 1
+                    # character "-" means that cell is empty
+                    if value != '-':
+                        dictionary_property = self.search_on_dictionary(cell)
+                        if dictionary_property:
+                            self.add_triple_to_graph(section_row_property, self.dbo + dictionary_property, value)
+                            self.utils.triples_serialized += 1
+                            self.utils.mapped_cells += 1
 
     def extract_value_from_cell(self, cell):
         # take only value's cell and not link
@@ -130,17 +131,26 @@ class Mapper:
             value = cell[-1]
         else:
             value = cell
-        return value
+        if isinstance(value, list):
+            return value[0]
+        else:
+            return value
 
     def define_row_and_section_property(self):
         section_property = self.search_on_dictionary(self.table_section)
         section_row_property = self.search_on_dictionary(self.table_section + settings.ROW_SUFFIX)
         # you can even not specify rowTableProperty
         if not section_row_property:
-            section_row_property = section_property + "_" + str(self.reification_index)
+            section_row_property = "_b:" + section_property + "_" + str(self.reification_index)
         else:
-            section_row_property = self.search_on_dictionary(self.table_section + settings.ROW_SUFFIX) + "_" + \
+            section_dict = self.search_on_dictionary(self.table_section + settings.ROW_SUFFIX) + "_" + \
                                    str(self.reification_index)
+            section_splitted = section_dict.split("/")
+            if len(section_splitted) > 1:
+                if section_splitted[0] == "resource":
+                    section_row_property = self.dbr + section_splitted[1]
+            else:
+                section_row_property = self.dbo + section_splitted[0]
         return section_property, section_row_property
 
     def add_triple_to_graph(self, subject, prop, value):
@@ -153,21 +163,22 @@ class Mapper:
     def check_value_type(self, value):
         # i can have input value like list or like single input, i need to make a filter and get
         # unique element of this list
-        if isinstance(value, list):
-            result = value[0]
-        else:
-            result = value
+        result = value
         if self.is_float(result):
             data_type = rdflib.namespace.XSD.float
         elif self.is_int(result):
             data_type = rdflib.namespace.XSD.int
         else:
-            # If this string represents a resource
-            resource = self.check_if_is_resource(result)
-            if resource:
-                return rdflib.URIRef(resource)
+            if "resource" not in result and "_b:" not in result:
+                # If this string represents a resource
+                resource = self.check_if_is_resource(result)
+                if resource:
+                    return rdflib.URIRef(resource)
+                else:
+                    data_type = rdflib.namespace.XSD.string
+            # If uri received already contains "resource"
             else:
-                data_type = rdflib.namespace.XSD.string
+                return rdflib.URIRef(result)
         return rdflib.Literal(result, datatype=data_type)
 
     def check_if_is_resource(self, resource):
@@ -223,3 +234,31 @@ class Mapper:
             return False
         except ValueError:
             return False
+
+    def filter_table_data(self):
+        table_list = dict()
+        n = len(self.table_data)
+        i = 0
+        # variables used to count how many cells of last row contains sum or mean of previously cell's value in
+        # same column
+        summarized = 0
+        for row in self.table_data:
+            for cell in row:
+                value = self.extract_value_from_cell(row[cell])
+                if self.is_float(value) or self.is_int(value):
+                    # i have to avoid last row
+                    if i < n - 1:
+                        try:
+                            new_value = table_list[cell] + value
+                            table_list.__setitem__(cell, new_value)
+                        except KeyError:
+                            table_list.__setitem__(cell, value)
+                    else:
+                        mean_value = (table_list[cell]/(n-1))
+                        # check if last row is sum or mean value of cells
+                        if value == table_list[cell] or str(value) == str(mean_value):
+                            summarized += 1
+            i += 1
+        # delete last row if summarized is higher than 1 or 2
+        if summarized >= 2:
+            del self.table_data[-1]
