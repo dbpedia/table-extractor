@@ -101,3 +101,5 @@ TOPIC_WHERE = "SPARQL where clause defined"
 
 
 PATH_FOLDER_RESOURCE_LIST = "../Resource_lists"
+
+SPARQL_PROPERTY_IN_ONTOLOGY = "ASK { ?s <http://dbpedia.org/ontology/", "> ?o }"
