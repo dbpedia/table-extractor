@@ -55,15 +55,18 @@ class Utilities:
         update actual mapping rules and set chapter and topic, given by domain_settings.py
         """
         if not self.chapter:
-            self.dictionary = self.update_mapping_rules()
-            # First of all setup the log and initialize it
+            self.read_parameters_research()
             self.setup_log("extractor")
+            update = True   # utilities called by extractor, so i need to update mapping rules
         else:
             self.setup_log("explorer")
+            update = False
+        self.logging = logging
+        # use dbpedia_selection to set self.dbpedia and self.dbpedia_sparql_url
+        self.dbpedia_sparql_url = self.dbpedia_selection()
 
         # These values are used to compose calls to services as Sparql endpoints or to a html wiki page
         self.call_format_sparql = settings.SPARQL_CALL_FORMAT
-        self.html_format = "https://" + self.chapter + ".wikipedia.org/wiki/"
 
         # Parameters used in methods which need internet connection
         self.time_to_attend = settings.SECONDS_BTW_TRIES  # seconds to sleep between two internet service call
@@ -71,13 +74,14 @@ class Utilities:
 
         # self.dbpedia is used to contain which dbpedia to use Eg. dbpedia.org
         self.dbpedia = None
-        # use dbpedia_selection to set self.dbpedia and self.dbpedia_sparql_url
-        self.dbpedia_sparql_url = self.dbpedia_selection()
 
         # Instancing a lxml HTMLParser with utf-8 encoding
         self.parser = etree.HTMLParser(encoding='utf-8')
 
-        self.logging = logging
+        self.html_format = "https://" + self.chapter + ".wikipedia.org/wiki/"
+
+        if update:
+            self.dictionary = self.update_mapping_rules()
 
         # Variables used in final report, see print_report()
         self.res_analyzed = 0
@@ -391,9 +395,11 @@ class Utilities:
     Update mapping_rules.py
     """
     def update_mapping_rules(self):
-        new_mapping_rules = self.read_chapter_topic_and_mapping_rules()
+        new_mapping_rules = self.read_mapping_rules()
+        verified_mapping_rules = self.check_user_input_properties(new_mapping_rules)
         actual_mapping_rules = self.read_actual_mapping_rules()
-        updated_mapping_rules = self.update_differences_between_dictionaries(actual_mapping_rules,new_mapping_rules)
+        updated_mapping_rules = self.update_differences_between_dictionaries(actual_mapping_rules,
+                                                                             verified_mapping_rules)
         self.print_updated_mapping_rules(updated_mapping_rules)
         return updated_mapping_rules
 
@@ -401,10 +407,21 @@ class Utilities:
     Read chapter and topic from domain_settings.py
     """
 
-    def read_chapter_topic_and_mapping_rules(self):
+    def read_mapping_rules(self):
         # Import is there for being sure that the file exists.
         import domain_settings
         new_mapping_rules = OrderedDict()
+        if os.path.isfile(settings.PATH_DOMAIN_EXPLORER):
+            for name, val in domain_settings.__dict__.iteritems():
+                if settings.SECTION_NAME in name:
+                    name_section = name.replace(settings.SECTION_NAME, "")
+                    new_mapping_rules[name_section] = OrderedDict()
+                    new_mapping_rules[name_section].update(val)
+        parsed_mapping_rules = self.parse_mapping_rules(new_mapping_rules)
+        return parsed_mapping_rules
+
+    def read_parameters_research(self):
+        import domain_settings
         if os.path.isfile(settings.PATH_DOMAIN_EXPLORER):
             for name, val in domain_settings.__dict__.iteritems():
                 if name == settings.DOMAIN_TITLE:
@@ -415,13 +432,6 @@ class Utilities:
                     self.research_type = val
                 elif name == settings.RESOURCE_FILE:
                     self.resource_file = val
-                elif settings.SECTION_NAME in name:
-                    name_section = name.replace(settings.SECTION_NAME, "")
-                    new_mapping_rules[name_section] = OrderedDict()
-                    new_mapping_rules[name_section].update(val)
-        parsed_mapping_rules = self.parse_mapping_rules(new_mapping_rules)
-        return parsed_mapping_rules
-
     """
     Check if mapping rules are meaningful
     """
@@ -436,7 +446,6 @@ class Utilities:
                     sections = section_key.split(settings.CHARACTER_SEPARATOR)
                     for section in sections:
                         parsed_mapping_rules.__setitem__(section.replace("_", " "), value)
-
                 # add properties for sections rows.
                 elif key == settings.ROW_TABLE_PROPERTY and value != "":
                     # replace _ with a space.
@@ -455,6 +464,22 @@ class Utilities:
         for name, val in mapping_rules.__dict__.iteritems():
             if self.chapter.upper() in name[-2:]:
                 actual_mapping_rules = dict(val)
+        return actual_mapping_rules
+
+    def check_user_input_properties(self, actual_mapping_rules):
+        for key in actual_mapping_rules:
+            # don't check table's row
+            if settings.ROW_SUFFIX not in key:
+                query = settings.SPARQL_PROPERTY_IN_ONTOLOGY[0] + actual_mapping_rules[key] +\
+                    settings.SPARQL_PROPERTY_IN_ONTOLOGY[1]
+                url = self.url_composer(query, "dbpedia")
+                response = self.json_answer_getter(url)['boolean']
+                if not response:
+                    message = "Property: " + actual_mapping_rules[key] +\
+                          ", doesn't exist in dbpedia ontology. Please add it."
+                    print message, "\n"
+                    del actual_mapping_rules[key]
+                    self.logging.warn(message)
         return actual_mapping_rules
 
     """
