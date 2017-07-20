@@ -7,6 +7,7 @@ from collections import OrderedDict
 
 # All table's section found
 all_sections = OrderedDict()
+# All headers found in tables analyzed
 all_headers = OrderedDict()
 # Array that will contains resources name where it was found a particular section. It will be useful for user.
 example_wikipedia_pages = []
@@ -29,7 +30,7 @@ def start_exploration():
     """
     Start domain exploration.
     It will take resources list and give in output a settings file organized
-    like a dictionary ---> "Header name":"Property associated"
+    like a dictionary ---> "Header name":"Ontology property associated"
     :return:
     """
 
@@ -37,20 +38,16 @@ def start_exploration():
     actual_dictionary = explorer_tools.read_actual_dictionary()
     # Read uri resources
     uri_resource_list = explorer_tools.get_uri_resources()
+    # If resources are found
     if uri_resource_list:
         # Analyze uri list
         analyze_uri_resource_list(uri_resource_list)
-        insert_propertiers_old_dictionary(actual_dictionary)
+        # Add properties defined in pyTableExtractor dictionary
+        insert_properties_old_dictionary(actual_dictionary)
         # write settings file
         write_sections_and_headers()
     else:
         print "No resources found. Please check arguments passed to pyDomainExplorer"
-
-"""
-    
-    For each resource found in the domain, I get section and headers
-
-"""
 
 
 def analyze_uri_resource_list(uri_resource_list):
@@ -63,10 +60,6 @@ def analyze_uri_resource_list(uri_resource_list):
         print "Resource: ", single_uri
         get_resource_sections_and_headers(single_uri)
 
-"""
-Analyze tables and get headers and sections
-"""
-
 
 def get_resource_sections_and_headers(res_name):
     """
@@ -75,14 +68,13 @@ def get_resource_sections_and_headers(res_name):
     :param res_name: resource name that has to be analyzed
     :return:
     """
+    # Get all tables
     all_tables = explorer_tools.html_table_parser(res_name)
+    # For each table defined
     for table in all_tables:
+        # I won't get tables with only one row --> It can be an error during table's reading
         if table.n_rows > 1:
             check_if_section_is_present(table.table_section, table.headers_refined, res_name)
-
-"""
-Check if section is present in the dictionary of pyTableExtractor
-"""
 
 
 def check_if_section_is_present(string_to_check, headers_refined, res_name):
@@ -99,11 +91,6 @@ def check_if_section_is_present(string_to_check, headers_refined, res_name):
     check_if_headers_not_present_then_add(headers_refined, section_name)
 
 
-"""
-
-"""
-
-
 def check_if_similar_section_is_present(string_to_check, res_name):
     """
     Check if there are sections that are similar.
@@ -117,6 +104,7 @@ def check_if_similar_section_is_present(string_to_check, res_name):
     Note:
     Each section will be separated by a unique group of characters, defined in settings.py file. (now is _tte_)
     """
+    # Get all sections
     keys = list(all_sections.keys())
     new_key = string_to_check
     # similar key
@@ -145,11 +133,6 @@ def check_if_similar_section_is_present(string_to_check, res_name):
     return new_key
 
 
-"""
-Check if there is a property in ontology that has the same header's name.
-"""
-
-
 def check_if_headers_not_present_then_add(headers, section_name):
     """
     Check if headers passed are already defined in the section that you are analyzing.
@@ -158,6 +141,7 @@ def check_if_headers_not_present_then_add(headers, section_name):
     :param section_name: section name to analyze
     :return:
     """
+    #
     for row in headers:
         header = row['th']
         if len(header) > 1:
@@ -177,20 +161,17 @@ def check_if_header_already_exists(header, section_name):
     try:
         all_sections[section_name][header]
     except KeyError:
+        # check if it's already defined a property for this header
         header_property = check_if_property_exists(header)
         # delete headers that have only one character
         if len(header) > 1:
             all_sections[section_name].__setitem__(header, header_property)
+            # verify if in all_headers is already defined
             try:
                 all_headers[header]
             except KeyError:
                 all_headers.__setitem__(header, header_property)
                 explorer_tools.print_log_msg("info", "New header found: " + header)
-
-
-"""
-Query dbpedia for searching a particular property.
-"""
 
 
 def check_if_property_exists(header):
@@ -203,6 +184,7 @@ def check_if_property_exists(header):
     :return:
     """
     property_to_check = ""
+    # check if it's already defined
     try:
         property_to_check = all_headers[header]
     except KeyError:
@@ -239,7 +221,7 @@ def search_equal_key(array_string, string_to_check):
     return result
 
 
-def insert_propertiers_old_dictionary(actual_dictionary):
+def insert_properties_old_dictionary(actual_dictionary):
     """
     Insert in all_sections dictionary all properties defined in pyTableExtractor dictionary, in order to
     print in settings file headers that are already defined.
@@ -247,13 +229,20 @@ def insert_propertiers_old_dictionary(actual_dictionary):
     :param actual_dictionary: pyTableExtractor dictionary (mapping_rules.py)
     :return:
     """
+    # loop on both dictionary
     for actual_key in actual_dictionary:
         for section_key in all_sections:
+            # if it's equal I have found a section
             if actual_key == section_key:
                 all_sections[section_key].__setitem__(settings.SECTION_NAME_PROPERTY, actual_dictionary[actual_key])
             else:
+                # otherwise I have to analyze each header of section
                 for headers_key in all_sections[section_key]:
-                    if actual_key == headers_key:
+                    # key are related to section
+                    if actual_key == section_key + "_" + headers_key:
+                        all_sections[section_key].__setitem__(headers_key, actual_dictionary[actual_key])
+                    # it can be even defined "in" actual key, in order to facilitate user to compile settings file
+                    elif headers_key in actual_key and all_sections[section_key][headers_key] == "":
                         all_sections[section_key].__setitem__(headers_key, actual_dictionary[actual_key])
 
 
