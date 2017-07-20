@@ -10,9 +10,9 @@ class WriteSettingsFile:
     In order to help user in this task, I will print an example wikipedia page where a section is found and
     I will also add all table's headers that are in "pyTableExtractor" dictionary.
 
-    It's important to note two string printed in settings file:
+    It's important to note strings printed in settings file:
     - sectionProperty: represent ontology property to map section.
-    - rowTableProperty: represent ontology property to map each section line.
+    - one row for each table's header -->  "Header":"ontology property"
     """
     def __init__(self, all_sections, all_headers, example_wikipedia_pages, explorer_tools):
         """
@@ -23,6 +23,7 @@ class WriteSettingsFile:
         :param example_wikipedia_pages: contains one wikipedia page for each section
         :param explorer_tools: explorer_tools class that will be useful for public methods.
         """
+        # take all parameters
         self.all_sections = all_sections
         self.all_headers = all_headers
         self.example_wikipedia_pages = example_wikipedia_pages
@@ -30,6 +31,7 @@ class WriteSettingsFile:
         self.chapter = explorer_tools.chapter
         self.topic = explorer_tools.topic
         self.verbose = explorer_tools.verbose
+        # start to write
         self.write_sections_and_headers()
 
     def write_sections_and_headers(self):
@@ -46,6 +48,7 @@ class WriteSettingsFile:
         for key, section_dict in self.all_sections.items():
             # take wikipedia page example for this section
             wikipedia_example = self.explorer_tools.replace_accents(self.get_example_wikipedia_pages(key))
+            # adjust key to print in output
             key = self.explorer_tools.replace_accents(key.replace(" ", "_").replace("-", "_"))
             # print comments and first line of section
             domain_explored_file.write(settings.COMMENT_FOR_EXAMPLE_PAGE + wikipedia_example + "\n")
@@ -64,6 +67,7 @@ class WriteSettingsFile:
         - chapter, language defined.
         - research type, that can be single resource, sparql where or dbpedia ontology class.
         - resource file, that contains all resources involved in user's research.
+        - verbose defined.
         :param domain_explored_file: reference to the output file
         :return:
         """
@@ -73,9 +77,9 @@ class WriteSettingsFile:
         domain_explored_file.write(settings.DOMAIN_TITLE + "='" + self.topic + "' \n")
         domain_explored_file.write(settings.CHAPTER + "='" + self.chapter + "' \n")
         domain_explored_file.write(settings.RESEARCH_TYPE + "='" + self.explorer_tools.research_type + "' \n")
+        domain_explored_file.write(settings.VERBOSE_TYPE + "='" + str(self.explorer_tools.verbose) + "' \n")
         domain_explored_file.write(settings.RESOURCE_FILE + "='" + self.explorer_tools.get_res_list_file() + "' \n\n")
-        domain_explored_file.write(settings.COMMENT_SECTION_PROPERTY + "\n")
-        domain_explored_file.write(settings.COMMENT_ROW_PROPERTY + "\n\n")
+        domain_explored_file.write(settings.COMMENT_SECTION_PROPERTY + "\n\n")
 
     def get_example_wikipedia_pages(self, section):
         """
@@ -101,18 +105,11 @@ class WriteSettingsFile:
         """
         for key, value in section_dict.items():
             if self.verbose == 1:
-                if key != settings.SECTION_NAME_PROPERTY:
-                    file_settings.write("'" + key + "':'" + value + "'" + ", \n")
-                else:
-                    # Print sectionProperty and rowTableProperty
-                    file_settings.write("'" + key + "':'" + value + "'" + ", \n")
-                    file_settings.write("'" + settings.ROW_TABLE_PROPERTY + "':''" + ", \n")
+                file_settings.write("'" + key + "':'" + value + "'" + ", \n")
             elif self.verbose == 2:
                 # don't print header already printed
-                if key != settings.SECTION_NAME_PROPERTY and self.all_headers[key] != "printed":
+                if key == settings.SECTION_NAME_PROPERTY:
+                    file_settings.write("'" + key + "':'" + value + "'" + ", \n")
+                elif self.all_headers[key] != "printed":
                     file_settings.write("'" + key + "':'" + value + "'" + ", \n")
                     self.all_headers.__setitem__(key, "printed")
-                elif key == settings.SECTION_NAME_PROPERTY:
-                    # Print sectionProperty and rowTableProperty
-                    file_settings.write("'" + key + "':'" + value + "'" + ", \n")
-                    file_settings.write("'" + settings.ROW_TABLE_PROPERTY + "':'', \n")
