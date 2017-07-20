@@ -27,6 +27,7 @@ class ExplorerTools:
         self.topic = self.set_topic()
         self.chapter = self.set_chapter()
         self.verbose = self.set_verbose()
+        # declare pyTableExtractor Utilities
         self.utils = Utilities.Utilities(self.chapter, self.topic, self.research_type)
 
         if not self.args.single:
@@ -79,11 +80,12 @@ class ExplorerTools:
         :return: chapter value
         """
         if self.args.chapter:
-            if self.args.chapter.isalpha() and len(self.args.chapter) == 2:
-                return self.args.chapter.lower()
+            ch = self.args.chapter.lower()
+            search = [x for x in settings.LANGUAGES_AVAILABLE if x == ch]
+            if len(search) > 0:
+                return search[0]
             else:
-                print "Wrong chapter, used default: " + settings.CHAPTER_DEFAULT
-                return settings.CHAPTER_DEFAULT
+                sys.exit("Wrong chapter, languages available are: " + str(settings.LANGUAGES_AVAILABLE))
 
     def set_topic(self):
         """
@@ -180,6 +182,11 @@ class ExplorerTools:
         return res_name
 
     def html_object_getter(self, name):
+        """
+
+        :param name: resource
+        :return: html object that represents resource
+        """
         return self.utils.html_object_getter(name)
 
     def read_actual_dictionary(self):
@@ -240,6 +247,12 @@ class ExplorerTools:
         return result
 
     def print_log_msg(self, log_type, msg):
+        """
+        Print a message to log file
+        :param log_type: log type that can be info, warning and error depending on message type
+        :param msg: message to print
+        :return:
+        """
         if log_type == "info":
             self.utils.logging.info(msg)
         elif log_type == "warning":
