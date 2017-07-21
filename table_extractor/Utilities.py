@@ -11,6 +11,7 @@ import errno
 import logging
 import settings
 import unicodedata
+import sys
 
 from collections import OrderedDict
 import mapping_rules
@@ -48,6 +49,7 @@ class Utilities:
         self.topic = topic
         self.research_type = research_type
         self.resource_file = None
+        self.verbose = None
         # test if the directory ../Extractions exists (or create it)
         self.test_dir_existence('../Extractions')
 
@@ -73,7 +75,10 @@ class Utilities:
         self.max_attempts = settings.MAX_ATTEMPTS  # max number of internet service' call tries
 
         # self.dbpedia is used to contain which dbpedia to use Eg. dbpedia.org
-        self.dbpedia = None
+        if self.chapter == "en":
+            self.dbpedia = "dbpedia.org"
+        else:
+            self.dbpedia = self.chapter + ".dbpedia.org"
 
         # Instancing a lxml HTMLParser with utf-8 encoding
         self.parser = etree.HTMLParser(encoding='utf-8')
@@ -95,7 +100,7 @@ class Utilities:
         self.headers_errors = 0
         self.no_mapping_rule_errors = 0
         self.mapped_cells = 0
-        self.triples_serialized = 0
+        self.triples_row = 0  # number of triples created for table's rows
 
     def setup_log(self, script_name):
         """
@@ -122,6 +127,11 @@ class Utilities:
         logging.info("You're analyzing wiki tables, wiki chapter: " + self.chapter + ", topic: " + self.topic)
 
     def test_dir_existence(self, directory):
+        """
+        Test if directory exists
+        :param directory: name of directory
+        :return:
+        """
         current_dir = self.get_current_dir()
         dir_abs_path = self.join_paths(current_dir, directory)
 
@@ -343,10 +353,11 @@ class Utilities:
             - Total cells successfully extracted
             - Total errors trying to extract table's data
             - Total headers which the Parser wasn't able to resolve
-            - Total errors trying to extract headers of a table
-            - Total mapped cells
-            - Total mapping errors
-            - Total cells serialized in RDF triples
+            - Total of error of searching if a header has its own mapping rule
+            - Total triples created to represent table's rows
+            - Total triples created for table's cells
+            - Total triples added to graph
+            - Percentage of effectiveness of mapping process
 
             Usually other classes set these values during their normal working cycle
             Simply call print_report() as last method of entire extraction
@@ -374,16 +385,23 @@ class Utilities:
 
         self.logging.info("+           Total # of \'no mapping rule\' errors : %d" % self.no_mapping_rule_errors)
 
-        self.logging.info("+           Total # cells mapped : %d" % self.mapped_cells)
+        self.logging.info("+           Total # of table's rows triples serialized : %d" % self.triples_row)
 
-        self.logging.info("+           Total # of triples serialized : %d" % self.triples_serialized)
+        self.logging.info("+           Total # of table's cells triples serialized : %d" % self.mapped_cells)
 
-    """ 
-    Method used to delete all accented characters from the name of resource.
-    It takes in input one string called text and gives in output another string that doesn't have accented characters
-    that it's similar to the previous form.
-    """
+        self.logging.info("+           Total # of triples serialized : %d" % int(self.mapped_cells + self.triples_row))
+
+        effectiveness = (self.mapped_cells/float(self.data_extracted)) * 100
+        self.logging.info("+           Percentage of mapping effectiveness  : %.2f" % effectiveness)
+
     def delete_accented_characters(self, text):
+        """
+        Method used to delete all accented characters from the name of resource.
+        It takes in input one string called text and gives in output another string that doesn't have accented characters
+        that it's similar to the previous form.
+        :param text: string where you have to delete accented charactes
+        :return:
+        """
         try:
             text = unicode(text, "utf-8")
             result = unicodedata.normalize('NFD', text).encode('ascii', 'ignore')
@@ -391,10 +409,15 @@ class Utilities:
         except TypeError:
             return text
 
-    """
-    Update mapping_rules.py
-    """
     def update_mapping_rules(self):
+        """
+        Method that:
+        - read new mapping rules defined by user
+        - parse these mapping rules
+        - read actual dictionary and update or add all new keys
+        - print new dictionary
+        :return: updated dictionary
+        """
         new_mapping_rules = self.read_mapping_rules()
         verified_mapping_rules = self.check_user_input_properties(new_mapping_rules)
         actual_mapping_rules = self.read_actual_mapping_rules()
@@ -403,11 +426,11 @@ class Utilities:
         self.print_updated_mapping_rules(updated_mapping_rules)
         return updated_mapping_rules
 
-    """
-    Read chapter and topic from domain_settings.py
-    """
-
     def read_mapping_rules(self):
+        """
+        Read mapping rules defined by user and parse it
+        :return: parsed mapping rules
+        """
         # Import is there for being sure that the file exists.
         import domain_settings
         new_mapping_rules = OrderedDict()
@@ -421,8 +444,12 @@ class Utilities:
         return parsed_mapping_rules
 
     def read_parameters_research(self):
-        import domain_settings
+        """
+        Read parameters defined in header of settings file
+        :return:
+        """
         if os.path.isfile(settings.PATH_DOMAIN_EXPLORER):
+            import domain_settings
             for name, val in domain_settings.__dict__.iteritems():
                 if name == settings.DOMAIN_TITLE:
                     self.topic = val
@@ -432,72 +459,85 @@ class Utilities:
                     self.research_type = val
                 elif name == settings.RESOURCE_FILE:
                     self.resource_file = val
-    """
-    Check if mapping rules are meaningful
-    """
+                elif name == settings.VERBOSE_TYPE:
+                    self.verbose = val
+        else:
+            sys.exit("File " + settings.PATH_DOMAIN_EXPLORER + " not found. You should running pyDomainExplorer")
 
     def parse_mapping_rules(self, new_mapping_rules):
+        """
+        Parse mapping rules written by user in order to create an ordinary dictionary
+        :param new_mapping_rules: mapping rules read previously
+        :return: parsed mapping rules
+        """
         parsed_mapping_rules = OrderedDict()
         for section_key, section_dict in new_mapping_rules.items():
             for key, value in section_dict.items():
-                # Change the sectionProperty with the name of the section
-                if key == settings.SECTION_NAME_PROPERTY and value != "":
-                    # replace _ with a space.
-                    sections = section_key.split(settings.CHARACTER_SEPARATOR)
-                    for section in sections:
-                        parsed_mapping_rules.__setitem__(section.replace("_", " "), value)
-                # add properties for sections rows.
-                elif key == settings.ROW_TABLE_PROPERTY and value != "":
-                    # replace _ with a space.
-                    sections = section_key.split(settings.CHARACTER_SEPARATOR)
-                    for section in sections:
-                        parsed_mapping_rules.__setitem__(section.replace("_", " ") + settings.ROW_SUFFIX, value)
-                elif value != "":
-                    parsed_mapping_rules.__setitem__(key, value)
+                if value != "":
+                    # Change the sectionProperty with the name of the section
+                    if key == settings.SECTION_NAME_PROPERTY:
+                        # replace _ with a space.
+                        sections = section_key.split(settings.CHARACTER_SEPARATOR)
+                        for section in sections:
+                            parsed_mapping_rules.__setitem__(section.replace("_", " "), value)
+                    else:
+                        sections = section_key.split(settings.CHARACTER_SEPARATOR)
+                        for section in sections:
+                            parsed_mapping_rules.__setitem__(section.replace("_", " ") + "_" + key, value)
         return parsed_mapping_rules
 
-    """
-    Read actual mapping_rules
-    """
     def read_actual_mapping_rules(self):
+        """
+        Read actual mapping rules of the chapter selected
+        :return: mapping rules already defined
+        """
         actual_mapping_rules = OrderedDict()
         for name, val in mapping_rules.__dict__.iteritems():
             if self.chapter.upper() in name[-2:]:
                 actual_mapping_rules = dict(val)
         return actual_mapping_rules
 
-    def check_user_input_properties(self, actual_mapping_rules):
-        for key in actual_mapping_rules:
+    def check_user_input_properties(self, new_mapping_rules):
+        """
+        Check if properties defined by user are defined in dbpedia ontology
+        :param new_mapping_rules: mapping rules defined by user in settings file
+        :return:
+        """
+        for key in new_mapping_rules:
             # don't check table's row
-            if settings.ROW_SUFFIX not in key:
-                query = settings.SPARQL_PROPERTY_IN_ONTOLOGY[0] + actual_mapping_rules[key] +\
+            if False and settings.ROW_SUFFIX not in key:
+                query = settings.SPARQL_PROPERTY_IN_ONTOLOGY[0] + new_mapping_rules[key] +\
                     settings.SPARQL_PROPERTY_IN_ONTOLOGY[1]
                 url = self.url_composer(query, "dbpedia")
                 response = self.json_answer_getter(url)['boolean']
                 if not response:
-                    message = "Property: " + actual_mapping_rules[key] +\
+                    message = "Property: " + new_mapping_rules[key] +\
                           ", doesn't exist in dbpedia ontology. Please add it."
                     print message, "\n"
-                    del actual_mapping_rules[key]
+                    del new_mapping_rules[key]
                     self.logging.warn(message)
-        return actual_mapping_rules
-
-    """
-    Search for differences between old and new mapping rules.
-    """
+        return new_mapping_rules
 
     def update_differences_between_dictionaries(self,actual_mapping_rules,new_mapping_rules):
+        """
+        Search for differences between old and new mapping rules
+        :param actual_mapping_rules: properties dictionary already defined
+        :param new_mapping_rules: properties dictionary defined by user
+        :return: updated dictionary with old and new mapping rules
+        """
         for key, value in new_mapping_rules.items():
             try:
                 actual_mapping_rules[key]
             except KeyError:
-                actual_mapping_rules.__setitem__(key,value)
+                actual_mapping_rules.__setitem__(key, value)
         return actual_mapping_rules
 
-    """
-    Print new mapping rules in mapping_rules.py
-    """
     def print_updated_mapping_rules(self, updated_mapping_rules):
+        """
+        Print new dictionary with all updated mapping rules
+        :param updated_mapping_rules: dictionary to print
+        :return: nothing
+        """
         data_to_print = ""
         printed_out = 0
         for name, val in mapping_rules.__dict__.iteritems():
@@ -521,9 +561,19 @@ class Utilities:
         file.write(data_to_print)
 
     def get_resource_file(self):
+        """
+        :return: resource file
+        """
         return settings.PATH_FOLDER_RESOURCE_LIST + "/" + self.resource_file
 
     def validate_user_input(self):
+        """
+        Verify each option of settings file created. I have to notify user if he wrote something wrong in settings
+        file's header
+        :return: string that can be
+            - 'valid_input' if it's all right
+            - message that depend on type of error
+        """
         result = "valid_input"
         # check chapter
         if len(self.chapter) != 2:
