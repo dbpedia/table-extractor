@@ -1,9 +1,7 @@
 # coding=utf-8
 
 import sys
-
 import rdflib
-
 import HtmlTableParser
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
@@ -11,13 +9,13 @@ __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
 class Analyzer:
     """
-    Analyzer class takes resources from a list and call a TableParser (html |json) over them.
+    Analyzer class takes resources from a list and call a HtmlTableParser  over them.
 
     It takes resources from .txt file (generally created by Selector objects) or from a string if a single_resource is
      involved.
     Therefore a Table Parser object (Html or Json), it depends on mode chosen, is called over their wiki page
      representation.
-     This representation is retrieved by a utilities object (calling json_object_getter() or html_object_getter()).
+     This representation is retrieved by a utilities object (calling html_object_getter()).
     Once the list of resources is finished or the analysis of a resource is done some useful statistics values are set.
     Some of them are passed to the utilities object (res_analyzed), as they are useful to print a final cumulative
      report, while some others (headers with no mapping rules found) are just print out and to the log.
@@ -51,8 +49,6 @@ class Analyzer:
         :param topic (str): a string representing the common topic of the resources considered.
         :param utils (Utilities object): utilities object used to access common log and to set statistics values used to
                 print a final report.
-        :param mode (str): DEFAULT:'html' string used to choose HtmlTableParser or JsonTableParser.
-            it can be 'html' or 'json'.
         :param filename (str): DEFAULT:None filename of a resources' list. It should be a .txt file containing name
             of wiki pages (with spaces replaced by underscores Eg. Elezioni_amministrative_italiane_del_2016).
             Note that filename is mutual exclusive with single_res (if one is set, the other should not)
@@ -72,7 +68,6 @@ class Analyzer:
         # These values are used to statistics purposes
         self.res_analyzed = 0  # number of resources correctly analyzed
         self.total_table_num = 0  # Extraction tables number
-        self.total_headers_not_mapped = {}  # Extraction headers with no mapping rules found
 
         self.res_list = None
 
@@ -160,19 +155,6 @@ class Analyzer:
                 self.res_analyzed += 1
 
                 if resource:
-                    """
-                    Depending on self.mode we get a representation of the selected resource (html|json)].
-                    Therefore a corresponding Table Parser is created and tables for the current resources are analyzed
-                     using TableParser.analyze_tables().
-
-                    """
-                    """
-                    If mode == html, a html doc tree (see http://lxml.de/lxmlhtml.html for documentation) is
-                     retrieved using utils.html_object_getter(resource).
-
-                    Finally there is a part of code used to compose a dictionary containing all the headers for
-                     which the Mapper object hasn't found an adequate mapping rule.
-                    """
                     html_doc_tree = self.utils.html_object_getter(resource)
                     if html_doc_tree:
                         """
@@ -183,15 +165,6 @@ class Analyzer:
                                                                       self.topic, resource, self.utils, mapping=True)
                         html_parser.analyze_tables()
 
-                        """
-                        Finally there is a part of code used to compose a dictionary containing all the headers for
-                            which the Mapper object hasn't found an adequate mapping rule.
-                        """
-                        # Add headers not mapped and not already present in the list to total_headers_not_mapped
-                        for header in html_parser.headers_not_mapped:
-                            if header not in self.total_headers_not_mapped:
-                                self.total_headers_not_mapped[header] = html_parser.headers_not_mapped[header]
-
                         # Add to the total the number of tables found for this resource
                         self.total_table_num += html_parser.tables_num
 
@@ -200,28 +173,11 @@ class Analyzer:
                 self.utils.res_analyzed = self.res_analyzed
 
                 # Print out and in the log every header cell without mapping rule
-                print("There are %d -headers- without mapping rules:" % len(self.total_headers_not_mapped))
-                self.logging.info("There are %d -headers- without mapping rules:" % len(self.total_headers_not_mapped))
-
-                for header in self.total_headers_not_mapped:
-
-                    print("- Header:  -%s- , Value example %s, Resource: %s"
-                          % (header, self.total_headers_not_mapped[header][1],
-                             self.total_headers_not_mapped[header][0]))
-                    """
-                    This is an Example of header not mapped. As key of the dict you can find the header.
-                    As key's value there is a list with an example of  resource involved (list[0]) and possible values
-                    for that header (list[1]).
-                    The following is an actual possible dictionary value for this kind of structure
-                    {'Stato di origine' :["Elezioni_presidenziali_negli_Stati_Uniti_d'America_del_2008",
-                                            ['Illinois', 'Illinois']]}
-                    """
-                    self.logging.info("- Header:  -%s- , Value example %s, Resource: %s"
-                                      % (header, self.total_headers_not_mapped[header][1],
-                                         self.total_headers_not_mapped[header][0]))
+                print("There are %d -headers- without mapping rules" % self.utils.no_mapping_rule_errors)
+                self.logging.info("There are %d -headers- without mapping rules" % self.utils.no_mapping_rule_errors)
 
                 self.logging.info("End Of File reached, now you can serialize the graph")
-                print (" End Of File reached")
+                print ("End Of Resource File reached")
 
     def get_filename(self):
         """
