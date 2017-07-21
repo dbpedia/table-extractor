@@ -72,17 +72,13 @@ class HtmlTableParser:
         # This value is used to count the times parser cannot find data cells for the current table
         self.no_data = 0
 
+        # This value is used to count resource's triples.
+        self.reification_index = 1
+
         # statistics regarding a table
         self.headers_found_num = 0  # counts header cells found
         self.rows_extracted_num = 0  # counts the extracted data rows
         self.data_extracted_num = 0  # counts the extracted data cells
-
-        """
-        Dictionary representing headers Mapper isn't able to map due to lack of mapping rules.
-        This informations are useful to let the user understand which headers lack a corresponding mapping rules set.
-        Structure ---> {header:[data cell values example]}
-        """
-        self.headers_not_mapped = {}
 
         self.utils.logging.info("Analyzing resource: " + self.resource)
         # As HtmlTableParsed is correctly initialized, we find tables with find_wiki_tables()
@@ -189,25 +185,15 @@ class HtmlTableParser:
                     # update data cells extracted in order to <make a final report
                     self.utils.data_extracted += tab.cells_refined
                     self.utils.rows_extracted += tab.data_refined_rows
-
                     # Start the mapping process
                     self.all_tables.append(tab)
                     if self.mapping:
                         # Create a MAPPER object in order to map data extracted
                         mapper = Mapper.Mapper(self.chapter, self.graph, self.topic, self.resource, tab.data_refined,
-                                               self.utils, tab.table_section)
+                                               self.utils, self.reification_index, tab.table_section, )
                         mapper.map()
-                        #self.print_table(tab)
-                        # Compose headers not mapped for this resource
-                        for header in mapper.headers_not_mapped:
-                            if header not in self.headers_not_mapped:
-                                # Compose a list  with the name of the current resource [0] and with values in [1]
-                                support_list = [self.resource, mapper.headers_not_mapped[header]]
-                                '''
-                                result Eg in self.headers_not_mapped = {'header1': ['resource1',[value0,value1...]], \
-                                                                    'header2': ['resource2',[value0, value1, value2...]]...}
-                                '''
-                                self.headers_not_mapped[header] = support_list
+                        self.reification_index = mapper.reification_index
+
 
                 # If no data have been found for this table report this condition with tag E3
                 else:
@@ -461,7 +447,7 @@ class HtmlTableParser:
         self.remove_citations(tab)
 
         # Print in the console headers to have a visual feedback of which are header cells found and refined
-        #self.print_headers(tab)
+        # self.print_headers(tab)
 
         # We want to make a single header's row, associating every header row with the next one.
         self.associate_super_and_sub_headers(tab)
