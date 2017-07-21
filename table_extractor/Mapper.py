@@ -1,6 +1,5 @@
 # coding=utf-8
 import rdflib
-import settings
 
 resources_found = []
 
@@ -16,17 +15,9 @@ class Mapper:
     Public methods:
         -map() # used to start the mapping process and so fulfill the RDF graph
 
-    Properties:
-        -triples_added_to_the_graph # number of triples added to the graph for this table
-        -cells_mapped # number of cells correctly mapped for the current row
-        -total_cell_mapped # number of cells correctly mapped for the current table
-        -num_of_mapping_errors # number of exceptions during mapping process
-        -no_mapping_found_cells # number of cells for which none of the mapping rules has been successful
-        -headers_not_mapped # Headers for which the defined mapping rules have not been successful
-
     """
 
-    def __init__(self, chapter, graph, topic, resource, table_data, utils, table_section=None):
+    def __init__(self, chapter, graph, topic, resource, table_data, utils, index, table_section=None):
         """
         Mapper is a class used to choose mapping rules over refined cells of data in order to compose a rdf dataset.
 
@@ -39,9 +30,9 @@ class Mapper:
         :param resource (str): string representing the resource we are analyzing
         :param table_data: (list) list of data rows. Every row is a unique dictionary containing  'header1':[values1]
             and so on.
-        :param mode (str): string used to choose HtmlTableParser or JsonTableParser. Usually it is 'html' or 'json'.
         :param utils (Utilities object): utilities object used to access common log and to set statistics values used to
                 print a final report.
+        :param index: last row's number of a resource added to graph
         :param table_section: (str) string representing section under which this table resides
         """
         # parameters are registered in the object
@@ -55,17 +46,8 @@ class Mapper:
         self.logging = utils.logging
         self.dictionary = self.utils.dictionary
 
-        # This dictionary  is used to have an idea of which headers haven't a mapping rule.
-        self.headers_not_mapped = {}
-        # Statistical values
-        self.triples_added_to_the_graph = 0  # number of triples added to the graph
-        self.cells_mapped = 0  # number of cells mapped for a certain row
-        self.total_cell_mapped = 0  # total number of mapped cells for this table
-        self.num_of_mapping_errors = 0  # number of mapping exceptions
-        self.no_mapping_found_cells = 0  # number of cell for which no mapping rule has found
-
         # Reification_index is and index used to make a reification possible. It use the concept of row.
-        self.reification_index = 1
+        self.reification_index = index
 
         # array to print key in log file only one time
         self.printed_key = []
@@ -83,7 +65,6 @@ class Mapper:
         Method used to set standard names (dbr stands for dbpediaresource, dbp for dbpediaproperty,
           dbo for dbpediaontology)
 
-        :param chapter: the wiki chapter of reference
         :return:
         """
 
@@ -99,9 +80,7 @@ class Mapper:
         """
         Method used to map table data choosing correct mapping rules.
 
-        It uses chapter to retrieve mapping rules for such wiki chapter, and topic to restrict mapping rules used.
-        It prints out some mapping result in log and console and store statistical values in the Utilities object.
-        These values are used to print a final report regarding the entire extraction.
+        It will use dictionary to map section and headers table to the property defined by user.
 
         :return:
         """
@@ -114,19 +93,24 @@ class Mapper:
             if section_property:
                 self.reification_index += 1
                 self.add_triple_to_graph(self.dbr + self.resource, self.dbo + section_property, section_row_property)
-                self.utils.triples_serialized += 1
+                self.utils.triples_row += 1
                 for cell in row:
                     value = self.extract_value_from_cell(row[cell])
                     # character "-" means that cell is empty
                     if value != '-':
-                        dictionary_property = self.search_on_dictionary(cell)
+                        dictionary_property = self.search_on_dictionary(self.table_section + "_" + cell)
                         if dictionary_property:
-                            self.add_triple_to_graph(section_row_property, self.dbo + dictionary_property, value)
-                            self.utils.triples_serialized += 1
+                            self.add_triple_to_graph(section_row_property, self.dbo + dictionary_property, value,
+                                                     type="cell")
                             self.utils.mapped_cells += 1
 
     def extract_value_from_cell(self, cell):
-        # take only value's cell and not link
+        """
+        Cell can be a link and value or only a value
+        :param cell: table's cell
+        :return: value of cell
+        """
+        # take only value's cell and not possible link
         if len(cell) > 1:
             value = cell[-1]
         else:
@@ -137,30 +121,40 @@ class Mapper:
             return value
 
     def define_row_and_section_property(self):
+        """
+        Method to search property of section and to create row's resource with its own index
+        :return: section property and row resource
+        """
+        resource = self.resource.replace("'", "")
         section_property = self.search_on_dictionary(self.table_section)
-        section_row_property = self.search_on_dictionary(self.table_section + settings.ROW_SUFFIX)
-        # you can even not specify rowTableProperty
-        if not section_row_property:
-            section_row_property = "_b:" + section_property + "_" + str(self.reification_index)
-        else:
-            section_dict = self.search_on_dictionary(self.table_section + settings.ROW_SUFFIX) + "_" + \
-                                   str(self.reification_index)
-            section_splitted = section_dict.split("/")
-            if len(section_splitted) > 1:
-                if section_splitted[0] == "resource":
-                    section_row_property = self.dbr + section_splitted[1]
-            else:
-                section_row_property = self.dbo + section_splitted[0]
+        section_row_property = self.dbr + resource + "__" + str(self.reification_index)
         return section_property, section_row_property
 
-    def add_triple_to_graph(self, subject, prop, value):
+    def add_triple_to_graph(self, subject, prop, value, type="row"):
+        """
+        Simply add triple to graph
+        :param subject: subject of triple
+        :param prop: property of triple
+        :param value: value of triple (value has to check type of value)
+        :param type: can be "row" if i'm adding a row triple or something else if it's a simple triple.
+        :return: nothing
+        """
         subject = rdflib.URIRef(subject)
         prop = rdflib.URIRef(prop)
-        value = self.check_value_type(value)
+        # check if i'm working with rows or single header
+        if type == "row":
+            value = rdflib.URIRef(value)
+        else:
+            value = self.check_value_type(value)
         # print subject, prop, value
         self.graph.add((subject, prop, value))
 
     def check_value_type(self, value):
+        """
+        Check type of a value that I'm analyzing
+        :param value to check
+        :return: value that are casted to a rdflib type (float, string or uri if it's a resource)
+        """
         # i can have input value like list or like single input, i need to make a filter and get
         # unique element of this list
         result = value
@@ -169,19 +163,22 @@ class Mapper:
         elif self.is_int(result):
             data_type = rdflib.namespace.XSD.int
         else:
-            if "resource" not in result and "_b:" not in result:
-                # If this string represents a resource
-                resource = self.check_if_is_resource(result)
-                if resource:
-                    return rdflib.URIRef(resource)
-                else:
-                    data_type = rdflib.namespace.XSD.string
-            # If uri received already contains "resource"
+            # If this string represents a resource
+            resource = self.check_if_is_resource(result)
+            if resource:
+                return rdflib.URIRef(resource)
             else:
-                return rdflib.URIRef(result)
+                data_type = rdflib.namespace.XSD.string
         return rdflib.Literal(result, datatype=data_type)
 
     def check_if_is_resource(self, resource):
+        """
+        Make a SPARQL query in dbpedia dataset to know if exists a resource named in a particular way
+        :param resource: name of resource that you want to check if it's a reresource
+        :return:
+            - empty if it's not a resource
+            - uri of resource if it exists
+        """
         resource_to_search = resource.replace(" ", "_")
         saved_resource = [r for r in resources_found if r in resource_to_search]
         if not saved_resource:
@@ -195,10 +192,25 @@ class Mapper:
         return result
 
     def search_on_dictionary(self, key):
+        """
+        Search over dictionary previously defined for header or section that is passed to this method
+        :param key: string that you want to search over dictionary
+        :return: two possible retrive:
+                - empty if 'key' is not defined in dictionary
+                - property associated to 'key' if this exists
+        """
         try:
+            # if verbose is 2 i have to make a deep search ( i will search for same key (eg. 3P%) in different sections)
             return self.dictionary[key]
         except KeyError:
-            # there's no mapping rule in dictionary for this header
+            # there's no mapping rule in dictionary for this header ( deep search isn't for table section)
+            if self.utils.verbose == "2" and key != self.table_section:
+                for element in self.dictionary:
+                    # take only header, without section
+                    header = key.split("_")[1]
+                    if len(element.split("_")) > 1 and header in element.split("_")[1]:
+                        return self.dictionary[element]
+            # script continues here if it doesn't return anything, so i have to define a mapping rule error
             self.utils.no_mapping_rule_errors += 1
             already_printed = [x for x in self.printed_key if x == key]
             if len(already_printed) == 0:
@@ -236,12 +248,18 @@ class Mapper:
             return False
 
     def filter_table_data(self):
+        """
+        This method is used to delete last table's row if it represents sum or mean of previous values.
+        It's useful in order to not create triples for this type of information
+        :return:
+        """
         table_list = dict()
         n = len(self.table_data)
         i = 0
         # variables used to count how many cells of last row contains sum or mean of previously cell's value in
         # same column
         summarized = 0
+        num_cols = 0
         for row in self.table_data:
             for cell in row:
                 value = self.extract_value_from_cell(row[cell])
@@ -258,7 +276,11 @@ class Mapper:
                         # check if last row is sum or mean value of cells
                         if value == table_list[cell] or str(value) == str(mean_value):
                             summarized += 1
+                            num_cols = len(row)
             i += 1
         # delete last row if summarized is higher than 1 or 2
         if summarized >= 2:
             del self.table_data[-1]
+            # for a well done statistic, i have to decrease data_extracted so that it will not represents
+            # even summary rows (like Career in athlete tables)
+            self.utils.data_extracted -= num_cols
