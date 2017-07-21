@@ -1,6 +1,9 @@
 # coding=utf-8
 
+
 # This file contains some default configuration for the table_extractor. Please, be aware of customization!
+
+# SETTINGS FOR pyTableExtractor
 
 # When using a online service, number of seconds between two tries
 SECONDS_BTW_TRIES = 2
@@ -11,14 +14,6 @@ MAX_ATTEMPTS = 5
 
 SPARQL_CALL_FORMAT = "&format=application%2Fsparql-results%2Bjson&debug=on"
 
-# Queries to select a list of resources and the number of resources involved
-SPARQL_RES_LIST_QUERY = ["SELECT distinct ?s as ?res WHERE{", "} LIMIT 5 OFFSET "]
-
-SPARQL_NUM_RES_QUERY = ["select (count(distinct ?s) as ?res_num) where{", "}"]
-
-
-# path for dictionary created by pyDomainExplorer
-PATH_DOMAIN_EXPLORER = "../domain_settings.py"
 
 # comment to write in mapping_rules.py
 COMMENT_MAPPING_RULES = "# coding = utf-8 \n# Mapping rules used to map table's data, topics are used to evaluate" +\
@@ -27,50 +22,39 @@ COMMENT_MAPPING_RULES = "# coding = utf-8 \n# Mapping rules used to map table's 
 # mapping rule's prefix
 MAPPING_RULE_PREFIX = "MAPPING_RULES_"
 
-# identify row section
-ROW_SUFFIX = "row"
-
-# which property's type I have to pick - I have found three different types: 'resource','ontology','property'
-ONTOLOGY_TYPE = ["ontology"]
-
-# SETTINGS FOR pyDomainExplorer
-CODING_DOMAIN = "# coding = utf-8"
-RESEARCH_TYPE = "RESEACH_TYPE"
-DOMAIN_TITLE = "DOMAIN_EXPLORED"
-CHAPTER = "CHAPTER"
-SECTION_NAME = "SECTION_"
-CHARACTER_SEPARATOR = "_tte_"
-SECTION_NAME_PROPERTY = "sectionProperty"
-ROW_TABLE_PROPERTY = "rowTableProperty"
-FIRST_COMMENT = "# Comments below will help you in filling this file settings. Remember to change only " +\
-                SECTION_NAME + " variables \n# Research parameters "
-COMMENT_FOR_EXAMPLE_PAGE = "# Example page where it was found this section: "
-COMMENT_ROW_PROPERTY = "# The entry named " + ROW_TABLE_PROPERTY + " represents ontology property that will map " +\
-    "each table's row. (Eg. in basket domain, each row of playoff's table, " + ROW_TABLE_PROPERTY +\
-    " is something like 'match')"
-COMMENT_SECTION_PROPERTY = "# The entry named " + SECTION_NAME_PROPERTY + " represents ontology property associated " +\
-    "to table's section. (Eg. in basket domain, section named playoff can be mapped with something like 'playoff' or "\
-    " 'playoffMatch')."
-RESOURCE_FILE = "RESOURCE_FILE"
-# Query for getting DBpedia class resources
-SPARQL_GET_RESOURCES = ["select ?s where{ ", "}"]
-
-# Query for verifying if there is a resource with a particular property
-SPARQL_CHECK_PROPERTY = ["select ?s where{", " ?s rdfs:label ", " } LIMIT 10"]
+# check if a particular property is defined
+SPARQL_PROPERTY_IN_ONTOLOGY = "ASK { <http://dbpedia.org/ontology/", "> ?s ?o }"
 
 PREFIX_MAPPING_RULE = "MAPPING_RULES_"
 
 # Path where the pyTableExtractor dictionary is located
 PATH_ACTUAL_DICTIONARY = "../table_extractor/mapping_rules.py"
 
+# SETTINGS FOR pyDomainExplorer
+# strings for settings file's header
+CODING_DOMAIN = "# coding = utf-8"
+RESEARCH_TYPE = "RESEACH_TYPE"
+VERBOSE_TYPE = "VERBOSE_TYPE"
+DOMAIN_TITLE = "DOMAIN_EXPLORED"
+CHAPTER = "CHAPTER"
+SECTION_NAME = "SECTION_"
+CHARACTER_SEPARATOR = "_tte_"
+SECTION_NAME_PROPERTY = "sectionProperty"
+FIRST_COMMENT = "# Comments below will help you in filling this file settings. Remember to change only " +\
+                SECTION_NAME + " variables \n# Research parameters "
+COMMENT_FOR_EXAMPLE_PAGE = "# Example page where it was found this section: "
+COMMENT_SECTION_PROPERTY = "# The entry named " + SECTION_NAME_PROPERTY + " represents ontology property associated " +\
+    "to table's section. (Eg. in basket domain, section named playoff can be mapped with something like 'playoff' or "\
+    " 'playoffMatch')."
+RESOURCE_FILE = "RESOURCE_FILE"
+
 # Path where pyDomainExplorer print the result file .py
 FILE_PATH_DOMAIN_EXPLORED = "../domain_settings.py"
 
 # Help for verbose input
 VERBOSE_DEFAULT = '1'
-VERBOSE_CHOISES = [1, 2, 3]
-VERBOSE_HELP = " Verbose can be 1,2,3"
-
+VERBOSE_CHOISES = [1, 2]
+VERBOSE_HELP = " Verbose can be 1,2"
 
 # Help for chapter input
 CHAPTER_DEFAULT = 'en'
@@ -91,15 +75,35 @@ GENERAL_DESCRIPTION = "This script try to parse data from tables in wiki pages.\
 # Help for topic input
 TOPIC_HELP = "Topic input"
 
-# Single HELP
+# Single clause message help
 SINGLE_HELP = "Search for a single resource, named like wikipedia page"
 
+# Where clause message help
 WHERE_HELP = "Define a correct where clause"
 
 # define different topic selected by user
 TOPIC_WHERE = "SPARQL where clause defined"
 
+# path for dictionary created by pyDomainExplorer
+PATH_DOMAIN_EXPLORER = "../domain_settings.py"
 
+# path where a file with all resources will created
 PATH_FOLDER_RESOURCE_LIST = "../Resource_lists"
 
-SPARQL_PROPERTY_IN_ONTOLOGY = "ASK { ?s <http://dbpedia.org/ontology/", "> ?o }"
+# languages available in scripts
+LANGUAGES_AVAILABLE = ["en", "it", "fr", "de", "pt"]
+
+# Query for getting DBpedia class resources
+SPARQL_GET_RESOURCES = ["select ?s where{ ", "}"]
+
+# Query for verifying if there is a resource with a particular property
+SPARQL_CHECK_PROPERTY = ["select ?s where{", " ?s rdfs:label ", " } LIMIT 10"]
+
+# which property's type I have to pick - I have found three different types: 'resource','ontology','property'
+ONTOLOGY_TYPE = ["ontology"]
+
+# Queries to select a list of resources and the number of resources involved
+SPARQL_RES_LIST_QUERY = ["SELECT distinct ?s as ?res WHERE{", "} LIMIT 1000 OFFSET "]
+
+# Query to get number of resources involved in an execution
+SPARQL_NUM_RES_QUERY = ["select (count(distinct ?s) as ?res_num) where{", "}"]
