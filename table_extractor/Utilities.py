@@ -391,8 +391,8 @@ class Utilities:
 
         self.logging.info("+           Total # of triples serialized : %d" % int(self.mapped_cells + self.triples_row))
 
-        effectiveness = (self.mapped_cells/float(self.data_extracted)) * 100
-        self.logging.info("+           Percentage of mapping effectiveness  : %.2f" % effectiveness)
+        effectiveness = (self.mapped_cells/float(self.data_extracted))
+        self.logging.info("+           Percentage of mapping effectiveness  : %.3f" % effectiveness)
 
     def delete_accented_characters(self, text):
         """
@@ -483,7 +483,10 @@ class Utilities:
                     else:
                         sections = section_key.split(settings.CHARACTER_SEPARATOR)
                         for section in sections:
-                            parsed_mapping_rules.__setitem__(section.replace("_", " ") + "_" + key, value)
+                            if self.verbose == "2":
+                                parsed_mapping_rules.__setitem__(key, value)
+                            else:
+                                parsed_mapping_rules.__setitem__(section.replace("_", " ") + "_" + key, value)
         return parsed_mapping_rules
 
     def read_actual_mapping_rules(self):
@@ -505,18 +508,17 @@ class Utilities:
         """
         for key in new_mapping_rules:
             # don't check table's row
-            if False and settings.ROW_SUFFIX not in key:
-                query = settings.SPARQL_PROPERTY_IN_ONTOLOGY[0] + new_mapping_rules[key] +\
-                    settings.SPARQL_PROPERTY_IN_ONTOLOGY[1]
-                url = self.url_composer(query, "dbpedia")
-                response = self.json_answer_getter(url)['boolean']
-                if not response:
-                    message = "Property: " + new_mapping_rules[key] +\
-                          ", doesn't exist in dbpedia ontology. Please add it."
-                    print message, "\n"
-                    del new_mapping_rules[key]
-                    self.logging.warn(message)
-        return new_mapping_rules
+            # query = settings.SPARQL_PROPERTY_IN_ONTOLOGY[0] + new_mapping_rules[key] +\
+            #     settings.SPARQL_PROPERTY_IN_ONTOLOGY[1]
+            # url = self.url_composer(query, "dbpedia")
+            # response = self.json_answer_getter(url)['boolean']
+            # if not response:
+            #     message = "Property: " + new_mapping_rules[key] +\
+            #           ", doesn't exist in dbpedia ontology. Please add it."
+            #     print message, "\n"
+            #     del new_mapping_rules[key]
+            #     self.logging.warn(message)
+            return new_mapping_rules
 
     def update_differences_between_dictionaries(self,actual_mapping_rules,new_mapping_rules):
         """
