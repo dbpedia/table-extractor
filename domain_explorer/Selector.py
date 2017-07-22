@@ -33,7 +33,6 @@ class Selector:
         self.current_res_list = []
 
         # set the  SPARQL query used therefore to retrieve a list of 1000 resources at a time.
-        # see settings_domain_explorer.py.
         self.query_res_list = table_extractor.settings.SPARQL_RES_LIST_QUERY[0] + str(self.where_clause) + \
             table_extractor.settings.SPARQL_RES_LIST_QUERY[1]
 
