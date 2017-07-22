@@ -91,7 +91,7 @@ PATH_DOMAIN_EXPLORER = "../domain_settings.py"
 PATH_FOLDER_RESOURCE_LIST = "../Resource_lists"
 
 # languages available in scripts
-LANGUAGES_AVAILABLE = ["en", "it", "fr", "de", "pt"]
+LANGUAGES_AVAILABLE = ["en", "it", "fr", "de", "pt", "es"]
 
 # Query for getting DBpedia class resources
 SPARQL_GET_RESOURCES = ["select ?s where{ ", "}"]
@@ -103,7 +103,7 @@ SPARQL_CHECK_PROPERTY = ["select ?s where{", " ?s rdfs:label ", " } LIMIT 10"]
 ONTOLOGY_TYPE = ["ontology"]
 
 # Queries to select a list of resources and the number of resources involved
-SPARQL_RES_LIST_QUERY = ["SELECT distinct ?s as ?res WHERE{", "} LIMIT 1000 OFFSET "]
+SPARQL_RES_LIST_QUERY = ["SELECT distinct ?s as ?res WHERE{", "} LIMIT 5 OFFSET "]
 
 # Query to get number of resources involved in an execution
 SPARQL_NUM_RES_QUERY = ["select (count(distinct ?s) as ?res_num) where{", "}"]
