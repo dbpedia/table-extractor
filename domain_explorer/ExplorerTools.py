@@ -196,10 +196,15 @@ class ExplorerTools:
         :return: pyTableExtractor dictionary
         """
         dictionary = OrderedDict()
+        english_dictionary = None
         dictionary_name = settings.PREFIX_MAPPING_RULE + self.chapter.upper()
+        if self.chapter != "en":
+            english_dictionary = settings.PREFIX_MAPPING_RULE + "EN"
         for name, val in mapping_rules.__dict__.iteritems():  # iterate through every module's attributes
             if name == dictionary_name:
                 dictionary = dict(val)
+            elif english_dictionary and name == english_dictionary:
+                dictionary.update(val)
         return dictionary
 
     def html_table_parser(self, res_name):
