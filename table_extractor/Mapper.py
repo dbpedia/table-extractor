@@ -39,11 +39,11 @@ class Mapper:
         self.chapter = chapter
         self.graph = graph
         self.topic = topic
-        self.resource = resource
         self.table_section = table_section
         self.table_data = table_data
         self.utils = utils
         self.logging = utils.logging
+        self.resource = self.utils.delete_accented_characters(resource)
         self.dictionary = self.utils.dictionary
 
         # Reification_index is and index used to make a reification possible. It use the concept of row.
@@ -127,7 +127,7 @@ class Mapper:
         """
         resource = self.resource.replace("'", "")
         section_property = self.search_on_dictionary(self.table_section)
-        section_row_property = self.dbr + resource + "__" + str(self.reification_index)
+        section_row_property = self.dbr + self.resource + "__" + str(self.reification_index)
         return section_property, section_row_property
 
     def add_triple_to_graph(self, subject, prop, value, type="row"):
@@ -179,10 +179,10 @@ class Mapper:
             - empty if it's not a resource
             - uri of resource if it exists
         """
-        resource_to_search = resource.replace(" ", "_")
+        resource_to_search = self.adjust_resource(resource)
         saved_resource = [r for r in resources_found if r in resource_to_search]
         if not saved_resource:
-            if self.utils.ask_if_resource_exists(self.dbr + resource_to_search):
+            if self.utils.ask_if_resource_exists(self.dbr + self.utils.delete_accented_characters(resource_to_search)):
                 resources_found.append(resource_to_search)
                 result = self.dbr + resource_to_search
             else:
@@ -190,6 +190,20 @@ class Mapper:
         else:
             result = self.dbr + saved_resource[-1]
         return result
+
+    def adjust_resource(self, text):
+        """
+        Remove space from beginning and ending of a string.
+        After that I replace other spaces with _ in order to get a resource suitable for uri
+        :param text: string to process
+        :return: string without blank spaces
+        """
+        if text.startswith(" "):
+            text = text[1:]
+        if text.endswith(" "):
+            text = text[:-1]
+        text = text.replace(" ", "_")
+        return text
 
     def search_on_dictionary(self, key):
         """
@@ -201,16 +215,13 @@ class Mapper:
         """
         try:
             # if verbose is 2 i have to make a deep search ( i will search for same key (eg. 3P%) in different sections)
-            return self.dictionary[key]
+            if self.utils.verbose == "2" and key != self.table_section:
+                header = key.split("_")[1]
+                return self.dictionary[header]
+            else:
+                return self.dictionary[key]
         except KeyError:
             # there's no mapping rule in dictionary for this header ( deep search isn't for table section)
-            if self.utils.verbose == "2" and key != self.table_section:
-                for element in self.dictionary:
-                    # take only header, without section
-                    header = key.split("_")[1]
-                    if len(element.split("_")) > 1 and header in element.split("_")[1]:
-                        return self.dictionary[element]
-            # script continues here if it doesn't return anything, so i have to define a mapping rule error
             self.utils.no_mapping_rule_errors += 1
             already_printed = [x for x in self.printed_key if x == key]
             if len(already_printed) == 0:
@@ -272,11 +283,14 @@ class Mapper:
                         except KeyError:
                             table_list.__setitem__(cell, value)
                     else:
-                        mean_value = (table_list[cell]/(n-1))
-                        # check if last row is sum or mean value of cells
-                        if value == table_list[cell] or str(value) == str(mean_value):
-                            summarized += 1
-                            num_cols = len(row)
+                        try:
+                            mean_value = (table_list[cell]/(n-1))
+                            # check if last row is sum or mean value of cells
+                            if value == table_list[cell] or str(value) == str(mean_value):
+                                summarized += 1
+                                num_cols = len(row)
+                        except KeyError:
+                            continue
             i += 1
         # delete last row if summarized is higher than 1 or 2
         if summarized >= 2:
