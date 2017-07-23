@@ -213,22 +213,32 @@ class Mapper:
                 - empty if 'key' is not defined in dictionary
                 - property associated to 'key' if this exists
         """
-        try:
-            # if verbose is 2 i have to make a deep search ( i will search for same key (eg. 3P%) in different sections)
-            if self.utils.verbose == "2" and key != self.table_section:
-                header = key.split("_")[1]
-                return self.dictionary[header]
-            else:
-                return self.dictionary[key]
-        except KeyError:
+        message = ""
+        value = ""
+        if key in self.dictionary:
+            value = self.dictionary[key]
+            message = "Header: " + key + " mapped with: " + str(value)
+        # if it's a section + "_" + header
+        elif len(key.split("_")) > 1:
+            header = key.split("_")[-1]
+            if header in self.dictionary:
+                value = self.dictionary[header]
+                message = "Header: " + header + " mapped with: " + str(value)
+            key = header
+        else:
             # there's no mapping rule in dictionary for this header ( deep search isn't for table section)
             self.utils.no_mapping_rule_errors += 1
-            already_printed = [x for x in self.printed_key if x == key]
-            if len(already_printed) == 0:
-                self.printed_key.append(key)
-                print "Key '", key, "' not found. Check actual dictionary on mapping_rules.py"
-                self.logging.warn("Key " + key + " not found. Check actual dictionary on mapping_rules.py")
-            return ""
+            message = "Key " + key + " not found. Check actual dictionary on mapping_rules.py"
+
+        # print message in log
+        already_printed = [x for x in self.printed_key if x == key]
+        if len(already_printed) == 0:
+            self.printed_key.append(key)
+            self.logging.info(message)
+            # means a lack of mapping rules
+            if value == "":
+                print message
+        return value
 
     def is_float(self, value):
         """
