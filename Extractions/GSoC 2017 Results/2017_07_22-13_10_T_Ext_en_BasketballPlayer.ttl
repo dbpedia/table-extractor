@@ -1,0 +1,2545 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)> ns1:regularSeasonMatch <http://dbpedia.org/resource/Alex_Garcia_(basketball)__1>,
+        <http://dbpedia.org/resource/Alex_Garcia_(basketball)__10>,
+        <http://dbpedia.org/resource/Alex_Garcia_(basketball)__11>,
+        <http://dbpedia.org/resource/Alex_Garcia_(basketball)__12>,
+        <http://dbpedia.org/resource/Alex_Garcia_(basketball)__13>,
+        <http://dbpedia.org/resource/Alex_Garcia_(basketball)__14>,
+        <http://dbpedia.org/resource/Alex_Garcia_(basketball)__15>,
+        <http://dbpedia.org/resource/Alex_Garcia_(basketball)__16>,
+        <http://dbpedia.org/resource/Alex_Garcia_(basketball)__2>,
+        <http://dbpedia.org/resource/Alex_Garcia_(basketball)__3>,
+        <http://dbpedia.org/resource/Alex_Garcia_(basketball)__4>,
+        <http://dbpedia.org/resource/Alex_Garcia_(basketball)__5>,
+        <http://dbpedia.org/resource/Alex_Garcia_(basketball)__6>,
+        <http://dbpedia.org/resource/Alex_Garcia_(basketball)__7>,
+        <http://dbpedia.org/resource/Alex_Garcia_(basketball)__8>,
+        <http://dbpedia.org/resource/Alex_Garcia_(basketball)__9> .
+
+<http://dbpedia.org/resource/Alex_Legion> ns1:college <http://dbpedia.org/resource/Alex_Legion__1>,
+        <http://dbpedia.org/resource/Alex_Legion__2>,
+        <http://dbpedia.org/resource/Alex_Legion__3>,
+        <http://dbpedia.org/resource/Alex_Legion__4> .
+
+<http://dbpedia.org/resource/Andre_Drummond> ns1:college <http://dbpedia.org/resource/Andre_Drummond__1> .
+
+<http://dbpedia.org/resource/Andrew_Nicholson_(basketball)> ns1:college <http://dbpedia.org/resource/Andrew_Nicholson_(basketball)__1>,
+        <http://dbpedia.org/resource/Andrew_Nicholson_(basketball)__2>,
+        <http://dbpedia.org/resource/Andrew_Nicholson_(basketball)__3>,
+        <http://dbpedia.org/resource/Andrew_Nicholson_(basketball)__4> .
+
+<http://dbpedia.org/resource/Andrew_Wiggins> ns1:college <http://dbpedia.org/resource/Andrew_Wiggins__1> .
+
+<http://dbpedia.org/resource/Arnett_Moultrie> ns1:college <http://dbpedia.org/resource/Arnett_Moultrie__1>,
+        <http://dbpedia.org/resource/Arnett_Moultrie__2>,
+        <http://dbpedia.org/resource/Arnett_Moultrie__3> .
+
+<http://dbpedia.org/resource/Brandon_Roy> ns1:college <http://dbpedia.org/resource/Brandon_Roy__1>,
+        <http://dbpedia.org/resource/Brandon_Roy__2>,
+        <http://dbpedia.org/resource/Brandon_Roy__3>,
+        <http://dbpedia.org/resource/Brandon_Roy__4> .
+
+<http://dbpedia.org/resource/C._J._Wilcox> ns1:college <http://dbpedia.org/resource/C._J._Wilcox__1>,
+        <http://dbpedia.org/resource/C._J._Wilcox__2>,
+        <http://dbpedia.org/resource/C._J._Wilcox__3>,
+        <http://dbpedia.org/resource/C._J._Wilcox__4> .
+
+<http://dbpedia.org/resource/Chris_Copeland> ns1:college <http://dbpedia.org/resource/Chris_Copeland__1>,
+        <http://dbpedia.org/resource/Chris_Copeland__2>,
+        <http://dbpedia.org/resource/Chris_Copeland__3>,
+        <http://dbpedia.org/resource/Chris_Copeland__4> .
+
+<http://dbpedia.org/resource/Cory_Jefferson> ns1:college <http://dbpedia.org/resource/Cory_Jefferson__1>,
+        <http://dbpedia.org/resource/Cory_Jefferson__2>,
+        <http://dbpedia.org/resource/Cory_Jefferson__3>,
+        <http://dbpedia.org/resource/Cory_Jefferson__4> .
+
+<http://dbpedia.org/resource/Cory_Joseph> ns1:college <http://dbpedia.org/resource/Cory_Joseph__1> .
+
+<http://dbpedia.org/resource/D'Angelo_Russell> ns1:college <http://dbpedia.org/resource/DAngelo_Russell__1> .
+
+<http://dbpedia.org/resource/David_West_(basketball)> ns1:college <http://dbpedia.org/resource/David_West_(basketball)__1>,
+        <http://dbpedia.org/resource/David_West_(basketball)__2>,
+        <http://dbpedia.org/resource/David_West_(basketball)__3>,
+        <http://dbpedia.org/resource/David_West_(basketball)__4> .
+
+<http://dbpedia.org/resource/Dennis_Smith_Jr.> ns1:college <http://dbpedia.org/resource/Dennis_Smith_Jr.__1> .
+
+<http://dbpedia.org/resource/Derrick_Rose> ns1:college <http://dbpedia.org/resource/Derrick_Rose__1> .
+
+<http://dbpedia.org/resource/Derrick_Williams_(basketball)> ns1:college <http://dbpedia.org/resource/Derrick_Williams_(basketball)__1>,
+        <http://dbpedia.org/resource/Derrick_Williams_(basketball)__2> .
+
+<http://dbpedia.org/resource/Dexter_Pittman> ns1:college <http://dbpedia.org/resource/Dexter_Pittman__1>,
+        <http://dbpedia.org/resource/Dexter_Pittman__2>,
+        <http://dbpedia.org/resource/Dexter_Pittman__3>,
+        <http://dbpedia.org/resource/Dexter_Pittman__4> .
+
+<http://dbpedia.org/resource/Doron_Lamb> ns1:college <http://dbpedia.org/resource/Doron_Lamb__1>,
+        <http://dbpedia.org/resource/Doron_Lamb__2> .
+
+<http://dbpedia.org/resource/Doug_McDermott> ns1:college <http://dbpedia.org/resource/Doug_McDermott__1>,
+        <http://dbpedia.org/resource/Doug_McDermott__2>,
+        <http://dbpedia.org/resource/Doug_McDermott__3>,
+        <http://dbpedia.org/resource/Doug_McDermott__4> .
+
+<http://dbpedia.org/resource/Draymond_Green> ns1:college <http://dbpedia.org/resource/Draymond_Green__1>,
+        <http://dbpedia.org/resource/Draymond_Green__2>,
+        <http://dbpedia.org/resource/Draymond_Green__3>,
+        <http://dbpedia.org/resource/Draymond_Green__4> .
+
+<http://dbpedia.org/resource/Greg_Monroe> ns1:college <http://dbpedia.org/resource/Greg_Monroe__1>,
+        <http://dbpedia.org/resource/Greg_Monroe__2> .
+
+<http://dbpedia.org/resource/Greg_Oden> ns1:college <http://dbpedia.org/resource/Greg_Oden__1> .
+
+<http://dbpedia.org/resource/Harrison_Barnes> ns1:college <http://dbpedia.org/resource/Harrison_Barnes__1>,
+        <http://dbpedia.org/resource/Harrison_Barnes__2> .
+
+<http://dbpedia.org/resource/Isaiah_Thomas_(basketball)> ns1:college <http://dbpedia.org/resource/Isaiah_Thomas_(basketball)__1>,
+        <http://dbpedia.org/resource/Isaiah_Thomas_(basketball)__2>,
+        <http://dbpedia.org/resource/Isaiah_Thomas_(basketball)__3> .
+
+<http://dbpedia.org/resource/JJ_Hickson> ns1:college <http://dbpedia.org/resource/JJ_Hickson__1> .
+
+<http://dbpedia.org/resource/Jabari_Brown> ns1:college <http://dbpedia.org/resource/Jabari_Brown__1>,
+        <http://dbpedia.org/resource/Jabari_Brown__2> .
+
+<http://dbpedia.org/resource/Jae_Crowder> ns1:college <http://dbpedia.org/resource/Jae_Crowder__1>,
+        <http://dbpedia.org/resource/Jae_Crowder__2> .
+
+<http://dbpedia.org/resource/James_Michael_McAdoo> ns1:college <http://dbpedia.org/resource/James_Michael_McAdoo__1>,
+        <http://dbpedia.org/resource/James_Michael_McAdoo__2>,
+        <http://dbpedia.org/resource/James_Michael_McAdoo__3> .
+
+<http://dbpedia.org/resource/James_Young_(basketball)> ns1:college <http://dbpedia.org/resource/James_Young_(basketball)__1> .
+
+<http://dbpedia.org/resource/Jeff_Withey> ns1:college <http://dbpedia.org/resource/Jeff_Withey__1>,
+        <http://dbpedia.org/resource/Jeff_Withey__2>,
+        <http://dbpedia.org/resource/Jeff_Withey__3>,
+        <http://dbpedia.org/resource/Jeff_Withey__4> .
+
+<http://dbpedia.org/resource/Jeremy_Lamb> ns1:college <http://dbpedia.org/resource/Jeremy_Lamb__1>,
+        <http://dbpedia.org/resource/Jeremy_Lamb__2> .
+
+<http://dbpedia.org/resource/Jimmy_Butler_(basketball)> ns1:college <http://dbpedia.org/resource/Jimmy_Butler_(basketball)__1>,
+        <http://dbpedia.org/resource/Jimmy_Butler_(basketball)__2>,
+        <http://dbpedia.org/resource/Jimmy_Butler_(basketball)__3> .
+
+<http://dbpedia.org/resource/Joe_Harris_(basketball)> ns1:college <http://dbpedia.org/resource/Joe_Harris_(basketball)__1>,
+        <http://dbpedia.org/resource/Joe_Harris_(basketball)__2>,
+        <http://dbpedia.org/resource/Joe_Harris_(basketball)__3>,
+        <http://dbpedia.org/resource/Joe_Harris_(basketball)__4> .
+
+<http://dbpedia.org/resource/Jon_Leuer> ns1:college <http://dbpedia.org/resource/Jon_Leuer__1>,
+        <http://dbpedia.org/resource/Jon_Leuer__2>,
+        <http://dbpedia.org/resource/Jon_Leuer__3>,
+        <http://dbpedia.org/resource/Jon_Leuer__4> .
+
+<http://dbpedia.org/resource/Jonathan_Gibson_(basketball)> ns1:college <http://dbpedia.org/resource/Jonathan_Gibson_(basketball)__1>,
+        <http://dbpedia.org/resource/Jonathan_Gibson_(basketball)__2>,
+        <http://dbpedia.org/resource/Jonathan_Gibson_(basketball)__3>,
+        <http://dbpedia.org/resource/Jonathan_Gibson_(basketball)__4> .
+
+<http://dbpedia.org/resource/Jordan_Clarkson> ns1:college <http://dbpedia.org/resource/Jordan_Clarkson__1>,
+        <http://dbpedia.org/resource/Jordan_Clarkson__2>,
+        <http://dbpedia.org/resource/Jordan_Clarkson__3> .
+
+<http://dbpedia.org/resource/Jrue_Holiday> ns1:college <http://dbpedia.org/resource/Jrue_Holiday__1> .
+
+<http://dbpedia.org/resource/Justin_Ingram> ns1:college <http://dbpedia.org/resource/Justin_Ingram__1>,
+        <http://dbpedia.org/resource/Justin_Ingram__2>,
+        <http://dbpedia.org/resource/Justin_Ingram__3>,
+        <http://dbpedia.org/resource/Justin_Ingram__4> .
+
+<http://dbpedia.org/resource/Kemba_Walker> ns1:college <http://dbpedia.org/resource/Kemba_Walker__1>,
+        <http://dbpedia.org/resource/Kemba_Walker__2>,
+        <http://dbpedia.org/resource/Kemba_Walker__3> .
+
+<http://dbpedia.org/resource/Kenneth_Faried> ns1:college <http://dbpedia.org/resource/Kenneth_Faried__1>,
+        <http://dbpedia.org/resource/Kenneth_Faried__2>,
+        <http://dbpedia.org/resource/Kenneth_Faried__3>,
+        <http://dbpedia.org/resource/Kenneth_Faried__4> .
+
+<http://dbpedia.org/resource/Khris_Middleton> ns1:college <http://dbpedia.org/resource/Khris_Middleton__1>,
+        <http://dbpedia.org/resource/Khris_Middleton__2>,
+        <http://dbpedia.org/resource/Khris_Middleton__3> .
+
+<http://dbpedia.org/resource/Kosta_Koufos> ns1:college <http://dbpedia.org/resource/Kosta_Koufos__1> .
+
+<http://dbpedia.org/resource/Larry_Bird> ns1:college <http://dbpedia.org/resource/Larry_Bird__1>,
+        <http://dbpedia.org/resource/Larry_Bird__2>,
+        <http://dbpedia.org/resource/Larry_Bird__3> .
+
+<http://dbpedia.org/resource/Marcus_Smart> ns1:college <http://dbpedia.org/resource/Marcus_Smart__1>,
+        <http://dbpedia.org/resource/Marcus_Smart__2> .
+
+<http://dbpedia.org/resource/Marcus_Thornton_(basketball,_born_1993)> ns1:college <http://dbpedia.org/resource/Marcus_Thornton_(basketball,_born_1993)__1>,
+        <http://dbpedia.org/resource/Marcus_Thornton_(basketball,_born_1993)__2>,
+        <http://dbpedia.org/resource/Marcus_Thornton_(basketball,_born_1993)__3>,
+        <http://dbpedia.org/resource/Marcus_Thornton_(basketball,_born_1993)__4> .
+
+<http://dbpedia.org/resource/Matthew_Dellavedova> ns1:college <http://dbpedia.org/resource/Matthew_Dellavedova__1>,
+        <http://dbpedia.org/resource/Matthew_Dellavedova__2>,
+        <http://dbpedia.org/resource/Matthew_Dellavedova__3>,
+        <http://dbpedia.org/resource/Matthew_Dellavedova__4> .
+
+<http://dbpedia.org/resource/Melo_Trimble> ns1:college <http://dbpedia.org/resource/Melo_Trimble__1>,
+        <http://dbpedia.org/resource/Melo_Trimble__2>,
+        <http://dbpedia.org/resource/Melo_Trimble__3> .
+
+<http://dbpedia.org/resource/Mike_Muscala> ns1:college <http://dbpedia.org/resource/Mike_Muscala__1>,
+        <http://dbpedia.org/resource/Mike_Muscala__2>,
+        <http://dbpedia.org/resource/Mike_Muscala__3>,
+        <http://dbpedia.org/resource/Mike_Muscala__4> .
+
+<http://dbpedia.org/resource/Nolan_Smith> ns1:college <http://dbpedia.org/resource/Nolan_Smith__1>,
+        <http://dbpedia.org/resource/Nolan_Smith__2>,
+        <http://dbpedia.org/resource/Nolan_Smith__3>,
+        <http://dbpedia.org/resource/Nolan_Smith__4> .
+
+<http://dbpedia.org/resource/Quincy_Pondexter> ns1:college <http://dbpedia.org/resource/Quincy_Pondexter__1>,
+        <http://dbpedia.org/resource/Quincy_Pondexter__2>,
+        <http://dbpedia.org/resource/Quincy_Pondexter__3>,
+        <http://dbpedia.org/resource/Quincy_Pondexter__4> .
+
+<http://dbpedia.org/resource/Rakeem_Christmas> ns1:college <http://dbpedia.org/resource/Rakeem_Christmas__1>,
+        <http://dbpedia.org/resource/Rakeem_Christmas__2>,
+        <http://dbpedia.org/resource/Rakeem_Christmas__3>,
+        <http://dbpedia.org/resource/Rakeem_Christmas__4> .
+
+<http://dbpedia.org/resource/Rashanda_McCants> ns1:college <http://dbpedia.org/resource/Rashanda_McCants__1>,
+        <http://dbpedia.org/resource/Rashanda_McCants__2>,
+        <http://dbpedia.org/resource/Rashanda_McCants__3>,
+        <http://dbpedia.org/resource/Rashanda_McCants__4> .
+
+<http://dbpedia.org/resource/Sophia_Young> ns1:college <http://dbpedia.org/resource/Sophia_Young__1>,
+        <http://dbpedia.org/resource/Sophia_Young__2>,
+        <http://dbpedia.org/resource/Sophia_Young__3>,
+        <http://dbpedia.org/resource/Sophia_Young__4> .
+
+<http://dbpedia.org/resource/Sydney_Colson> ns1:college <http://dbpedia.org/resource/Sydney_Colson__1>,
+        <http://dbpedia.org/resource/Sydney_Colson__2>,
+        <http://dbpedia.org/resource/Sydney_Colson__3>,
+        <http://dbpedia.org/resource/Sydney_Colson__4> .
+
+<http://dbpedia.org/resource/Tony_Delk> ns1:college <http://dbpedia.org/resource/Tony_Delk__1>,
+        <http://dbpedia.org/resource/Tony_Delk__2>,
+        <http://dbpedia.org/resource/Tony_Delk__3>,
+        <http://dbpedia.org/resource/Tony_Delk__4> .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__1> ns1:assistsPerGame "2.0"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.62"^^xsd:float ;
+    ns1:freeThrow "0.7"^^xsd:float ;
+    ns1:gamesPlayed "21.0"^^xsd:float ;
+    ns1:league <http://dbpedia.org/resource/BBL> ;
+    ns1:minutesPerGame "25.5"^^xsd:float ;
+    ns1:pointPerGame "13.0"^^xsd:float ;
+    ns1:reboundsPerGame "3.9"^^xsd:float ;
+    ns1:season <http://dbpedia.org/resource/1999-00> ;
+    ns1:stealsPerGame "1.5"^^xsd:float ;
+    ns1:team "COC Ribeirão Preto"^^xsd:string .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__10> ns1:assistsPerGame "2.7"^^xsd:float ;
+    ns1:blockPerGame "0.7"^^xsd:float ;
+    ns1:fieldGoal "0.486"^^xsd:float ;
+    ns1:freeThrow "0.74"^^xsd:float ;
+    ns1:gamesPlayed "27.0"^^xsd:float ;
+    ns1:league <http://dbpedia.org/resource/NBB> ;
+    ns1:minutesPerGame "30.9"^^xsd:float ;
+    ns1:pointPerGame "18.7"^^xsd:float ;
+    ns1:reboundsPerGame "4.9"^^xsd:float ;
+    ns1:season "2008–09"^^xsd:string ;
+    ns1:stealsPerGame "1.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Brasilia> .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__11> ns1:assistsPerGame "0.9"^^xsd:float ;
+    ns1:blockPerGame "14.5"^^xsd:float ;
+    ns1:fieldGoal "0.463"^^xsd:float ;
+    ns1:freeThrow "5.5"^^xsd:float ;
+    ns1:gamesPlayed "30.0"^^xsd:float ;
+    ns1:league "28.0"^^xsd:float ;
+    ns1:minutesPerGame "0.561"^^xsd:float ;
+    ns1:reboundsPerGame "4.1"^^xsd:float ;
+    ns1:season "2014–15"^^xsd:string ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Bauru> .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__12> ns1:assistsPerGame "0.9"^^xsd:float ;
+    ns1:blockPerGame "14.5"^^xsd:float ;
+    ns1:fieldGoal "0.463"^^xsd:float ;
+    ns1:freeThrow "5.5"^^xsd:float ;
+    ns1:gamesPlayed "30.0"^^xsd:float ;
+    ns1:league "28.0"^^xsd:float ;
+    ns1:minutesPerGame "0.561"^^xsd:float ;
+    ns1:reboundsPerGame "4.1"^^xsd:float ;
+    ns1:season "2014–15"^^xsd:string ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Bauru> .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__13> ns1:assistsPerGame "0.9"^^xsd:float ;
+    ns1:blockPerGame "14.5"^^xsd:float ;
+    ns1:fieldGoal "0.463"^^xsd:float ;
+    ns1:freeThrow "5.5"^^xsd:float ;
+    ns1:gamesPlayed "30.0"^^xsd:float ;
+    ns1:league "28.0"^^xsd:float ;
+    ns1:minutesPerGame "0.561"^^xsd:float ;
+    ns1:reboundsPerGame "4.1"^^xsd:float ;
+    ns1:season "2014–15"^^xsd:string ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Bauru> .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__14> ns1:assistsPerGame "0.9"^^xsd:float ;
+    ns1:blockPerGame "14.5"^^xsd:float ;
+    ns1:fieldGoal "0.463"^^xsd:float ;
+    ns1:freeThrow "5.5"^^xsd:float ;
+    ns1:gamesPlayed "30.0"^^xsd:float ;
+    ns1:league "28.0"^^xsd:float ;
+    ns1:minutesPerGame "0.561"^^xsd:float ;
+    ns1:reboundsPerGame "4.1"^^xsd:float ;
+    ns1:season "2014–15"^^xsd:string ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Bauru> .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__15> ns1:assistsPerGame "0.9"^^xsd:float ;
+    ns1:blockPerGame "14.5"^^xsd:float ;
+    ns1:fieldGoal "0.463"^^xsd:float ;
+    ns1:freeThrow "5.5"^^xsd:float ;
+    ns1:gamesPlayed "30.0"^^xsd:float ;
+    ns1:league "28.0"^^xsd:float ;
+    ns1:minutesPerGame "0.561"^^xsd:float ;
+    ns1:reboundsPerGame "4.1"^^xsd:float ;
+    ns1:season "2014–15"^^xsd:string ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Bauru> .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__16> ns1:assistsPerGame "0.9"^^xsd:float ;
+    ns1:blockPerGame "14.5"^^xsd:float ;
+    ns1:fieldGoal "0.463"^^xsd:float ;
+    ns1:freeThrow "5.5"^^xsd:float ;
+    ns1:gamesPlayed "30.0"^^xsd:float ;
+    ns1:league "28.0"^^xsd:float ;
+    ns1:minutesPerGame "0.561"^^xsd:float ;
+    ns1:reboundsPerGame "4.1"^^xsd:float ;
+    ns1:season "2014–15"^^xsd:string ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Bauru> .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__2> ns1:assistsPerGame "0.0"^^xsd:float ;
+    ns1:blockPerGame "0.0"^^xsd:float ;
+    ns1:fieldGoal "0.143"^^xsd:float ;
+    ns1:freeThrow "0.5"^^xsd:float ;
+    ns1:gamesPlayed "2.0"^^xsd:float ;
+    ns1:league <http://dbpedia.org/resource/NBA> ;
+    ns1:minutesPerGame "6.5"^^xsd:float ;
+    ns1:pointPerGame "1.5"^^xsd:float ;
+    ns1:reboundsPerGame "0.0"^^xsd:float ;
+    ns1:season "2003–04"^^xsd:string ;
+    ns1:stealsPerGame "1.0"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/San_Antonio> .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__3> ns1:assistsPerGame "0.0"^^xsd:float ;
+    ns1:blockPerGame "0.0"^^xsd:float ;
+    ns1:fieldGoal "0.143"^^xsd:float ;
+    ns1:freeThrow "0.5"^^xsd:float ;
+    ns1:gamesPlayed "2.0"^^xsd:float ;
+    ns1:league <http://dbpedia.org/resource/NBA> ;
+    ns1:minutesPerGame "6.5"^^xsd:float ;
+    ns1:pointPerGame "1.5"^^xsd:float ;
+    ns1:reboundsPerGame "0.0"^^xsd:float ;
+    ns1:season "2003–04"^^xsd:string ;
+    ns1:stealsPerGame "1.0"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/San_Antonio> .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__4> ns1:assistsPerGame "0.0"^^xsd:float ;
+    ns1:blockPerGame "0.0"^^xsd:float ;
+    ns1:fieldGoal "0.143"^^xsd:float ;
+    ns1:freeThrow "0.5"^^xsd:float ;
+    ns1:gamesPlayed "2.0"^^xsd:float ;
+    ns1:league <http://dbpedia.org/resource/NBA> ;
+    ns1:minutesPerGame "6.5"^^xsd:float ;
+    ns1:pointPerGame "1.5"^^xsd:float ;
+    ns1:reboundsPerGame "0.0"^^xsd:float ;
+    ns1:season "2003–04"^^xsd:string ;
+    ns1:stealsPerGame "1.0"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/San_Antonio> .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__5> ns1:assistsPerGame "0.0"^^xsd:float ;
+    ns1:blockPerGame "0.0"^^xsd:float ;
+    ns1:fieldGoal "0.143"^^xsd:float ;
+    ns1:freeThrow "0.5"^^xsd:float ;
+    ns1:gamesPlayed "2.0"^^xsd:float ;
+    ns1:league <http://dbpedia.org/resource/NBA> ;
+    ns1:minutesPerGame "6.5"^^xsd:float ;
+    ns1:pointPerGame "1.5"^^xsd:float ;
+    ns1:reboundsPerGame "0.0"^^xsd:float ;
+    ns1:season "2003–04"^^xsd:string ;
+    ns1:stealsPerGame "1.0"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/San_Antonio> .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__6> ns1:assistsPerGame "5.0"^^xsd:float ;
+    ns1:blockPerGame "0.8"^^xsd:float ;
+    ns1:fieldGoal "0.627"^^xsd:float ;
+    ns1:freeThrow "0.781"^^xsd:float ;
+    ns1:gamesPlayed "15.0"^^xsd:float ;
+    ns1:league <http://dbpedia.org/resource/BBL> ;
+    ns1:minutesPerGame "32.3"^^xsd:float ;
+    ns1:pointPerGame "21.0"^^xsd:float ;
+    ns1:reboundsPerGame "4.5"^^xsd:float ;
+    ns1:season "2005–06"^^xsd:string ;
+    ns1:stealsPerGame "2.8"^^xsd:float ;
+    ns1:team "COC Ribeirão Preto"^^xsd:string .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__7> ns1:assistsPerGame "5.0"^^xsd:float ;
+    ns1:blockPerGame "0.8"^^xsd:float ;
+    ns1:fieldGoal "0.627"^^xsd:float ;
+    ns1:freeThrow "0.781"^^xsd:float ;
+    ns1:gamesPlayed "15.0"^^xsd:float ;
+    ns1:league <http://dbpedia.org/resource/BBL> ;
+    ns1:minutesPerGame "32.3"^^xsd:float ;
+    ns1:pointPerGame "21.0"^^xsd:float ;
+    ns1:reboundsPerGame "4.5"^^xsd:float ;
+    ns1:season "2005–06"^^xsd:string ;
+    ns1:stealsPerGame "2.8"^^xsd:float ;
+    ns1:team "COC Ribeirão Preto"^^xsd:string .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__8> ns1:assistsPerGame "1.3"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.677"^^xsd:float ;
+    ns1:freeThrow "0.697"^^xsd:float ;
+    ns1:gamesPlayed "26.0"^^xsd:float ;
+    ns1:league <http://dbpedia.org/resource/Ligat_HaAl> ;
+    ns1:minutesPerGame "16.3"^^xsd:float ;
+    ns1:pointPerGame "7.0"^^xsd:float ;
+    ns1:reboundsPerGame "1.9"^^xsd:float ;
+    ns1:season <http://dbpedia.org/resource/2007-08> ;
+    ns1:stealsPerGame "0.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Maccabi_Tel_Aviv_B.C.> .
+
+<http://dbpedia.org/resource/Alex_Garcia_(basketball)__9> ns1:assistsPerGame "1.3"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.677"^^xsd:float ;
+    ns1:freeThrow "0.697"^^xsd:float ;
+    ns1:gamesPlayed "26.0"^^xsd:float ;
+    ns1:league <http://dbpedia.org/resource/Ligat_HaAl> ;
+    ns1:minutesPerGame "16.3"^^xsd:float ;
+    ns1:pointPerGame "7.0"^^xsd:float ;
+    ns1:reboundsPerGame "1.9"^^xsd:float ;
+    ns1:season <http://dbpedia.org/resource/2007-08> ;
+    ns1:stealsPerGame "0.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Maccabi_Tel_Aviv_B.C.> .
+
+<http://dbpedia.org/resource/Alex_Legion__1> ns1:Year "2007–08"^^xsd:string ;
+    ns1:assistsPerGame "1.3"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.417"^^xsd:float ;
+    ns1:freeThrow "0.556"^^xsd:float ;
+    ns1:gamesPlayed "6.0"^^xsd:float ;
+    ns1:gamesStarted "2.0"^^xsd:float ;
+    ns1:minutesPerGame "17.5"^^xsd:float ;
+    ns1:pointPerGame "6.7"^^xsd:float ;
+    ns1:reboundsPerGame "1.8"^^xsd:float ;
+    ns1:stealsPerGame "1.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Kentucky> ;
+    ns1:threePoints "0.333"^^xsd:float .
+
+<http://dbpedia.org/resource/Alex_Legion__2> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "0.5"^^xsd:float ;
+    ns1:blockPerGame "0.0"^^xsd:float ;
+    ns1:fieldGoal "0.289"^^xsd:float ;
+    ns1:freeThrow "0.75"^^xsd:float ;
+    ns1:gamesPlayed "22.0"^^xsd:float ;
+    ns1:gamesStarted "0.0"^^xsd:float ;
+    ns1:minutesPerGame "11.1"^^xsd:float ;
+    ns1:pointPerGame "3.5"^^xsd:float ;
+    ns1:reboundsPerGame "1.5"^^xsd:float ;
+    ns1:stealsPerGame "0.4"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Illinois> ;
+    ns1:threePoints "0.24"^^xsd:float .
+
+<http://dbpedia.org/resource/Alex_Legion__3> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "0.5"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.297"^^xsd:float ;
+    ns1:freeThrow "0.667"^^xsd:float ;
+    ns1:gamesPlayed "11.0"^^xsd:float ;
+    ns1:gamesStarted "1.0"^^xsd:float ;
+    ns1:minutesPerGame "9.9"^^xsd:float ;
+    ns1:pointPerGame "2.7"^^xsd:float ;
+    ns1:reboundsPerGame "0.9"^^xsd:float ;
+    ns1:stealsPerGame "0.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Illinois> ;
+    ns1:threePoints "0.211"^^xsd:float .
+
+<http://dbpedia.org/resource/Alex_Legion__4> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "1.3"^^xsd:float ;
+    ns1:blockPerGame "0.4"^^xsd:float ;
+    ns1:fieldGoal "0.462"^^xsd:float ;
+    ns1:freeThrow "0.636"^^xsd:float ;
+    ns1:gamesPlayed "10.0"^^xsd:float ;
+    ns1:gamesStarted "2.0"^^xsd:float ;
+    ns1:minutesPerGame "28.1"^^xsd:float ;
+    ns1:pointPerGame "13.0"^^xsd:float ;
+    ns1:reboundsPerGame "5.1"^^xsd:float ;
+    ns1:stealsPerGame "1.0"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Florida_International> ;
+    ns1:threePoints "0.431"^^xsd:float .
+
+<http://dbpedia.org/resource/Andre_Drummond__1> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "0.4"^^xsd:float ;
+    ns1:blockPerGame "2.7"^^xsd:float ;
+    ns1:fieldGoal "0.538"^^xsd:float ;
+    ns1:freeThrow "0.295"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "30.0"^^xsd:float ;
+    ns1:minutesPerGame "28.4"^^xsd:float ;
+    ns1:pointPerGame "10.0"^^xsd:float ;
+    ns1:reboundsPerGame "7.6"^^xsd:float ;
+    ns1:stealsPerGame "0.8"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Connecticut> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/Andrew_Nicholson_(basketball)__1> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "0.2"^^xsd:float ;
+    ns1:blockPerGame "2.7"^^xsd:float ;
+    ns1:fieldGoal "0.602"^^xsd:float ;
+    ns1:freeThrow "0.613"^^xsd:float ;
+    ns1:gamesPlayed "30.0"^^xsd:float ;
+    ns1:gamesStarted "25.0"^^xsd:float ;
+    ns1:minutesPerGame "25.1"^^xsd:float ;
+    ns1:pointPerGame "12.5"^^xsd:float ;
+    ns1:reboundsPerGame "6.0"^^xsd:float ;
+    ns1:stealsPerGame "0.6"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/St._Bonaventure> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/Andrew_Nicholson_(basketball)__2> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "0.5"^^xsd:float ;
+    ns1:blockPerGame "1.8"^^xsd:float ;
+    ns1:fieldGoal "0.564"^^xsd:float ;
+    ns1:freeThrow "0.76"^^xsd:float ;
+    ns1:gamesPlayed "30.0"^^xsd:float ;
+    ns1:gamesStarted "30.0"^^xsd:float ;
+    ns1:minutesPerGame "30.2"^^xsd:float ;
+    ns1:pointPerGame "16.4"^^xsd:float ;
+    ns1:reboundsPerGame "7.1"^^xsd:float ;
+    ns1:stealsPerGame "0.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/St._Bonaventure> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/Andrew_Nicholson_(basketball)__3> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "1.0"^^xsd:float ;
+    ns1:blockPerGame "1.5"^^xsd:float ;
+    ns1:fieldGoal "0.571"^^xsd:float ;
+    ns1:freeThrow "0.711"^^xsd:float ;
+    ns1:gamesPlayed "31.0"^^xsd:float ;
+    ns1:gamesStarted "31.0"^^xsd:float ;
+    ns1:minutesPerGame "33.8"^^xsd:float ;
+    ns1:pointPerGame "20.8"^^xsd:float ;
+    ns1:reboundsPerGame "7.3"^^xsd:float ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/St._Bonaventure> ;
+    ns1:threePoints "0.261"^^xsd:float .
+
+<http://dbpedia.org/resource/Andrew_Nicholson_(basketball)__4> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "1.0"^^xsd:float ;
+    ns1:blockPerGame "2.0"^^xsd:float ;
+    ns1:fieldGoal "0.571"^^xsd:float ;
+    ns1:freeThrow "0.776"^^xsd:float ;
+    ns1:gamesPlayed "32.0"^^xsd:float ;
+    ns1:gamesStarted "32.0"^^xsd:float ;
+    ns1:minutesPerGame "30.1"^^xsd:float ;
+    ns1:pointPerGame "18.5"^^xsd:float ;
+    ns1:reboundsPerGame "8.4"^^xsd:float ;
+    ns1:stealsPerGame "0.7"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/St._Bonaventure> ;
+    ns1:threePoints "0.434"^^xsd:float .
+
+<http://dbpedia.org/resource/Andrew_Wiggins__1> ns1:Year "2013–14"^^xsd:string ;
+    ns1:assistsPerGame "1.5"^^xsd:float ;
+    ns1:blockPerGame "1.0"^^xsd:float ;
+    ns1:fieldGoal "0.448"^^xsd:float ;
+    ns1:freeThrow "0.775"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "35.0"^^xsd:float ;
+    ns1:minutesPerGame "32.8"^^xsd:float ;
+    ns1:pointPerGame "17.1"^^xsd:float ;
+    ns1:reboundsPerGame "5.9"^^xsd:float ;
+    ns1:stealsPerGame "1.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Kansas> ;
+    ns1:threePoints "0.341"^^xsd:float .
+
+<http://dbpedia.org/resource/Arnett_Moultrie__1> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "0.6"^^xsd:float ;
+    ns1:blockPerGame "0.9"^^xsd:float ;
+    ns1:fieldGoal "0.502"^^xsd:float ;
+    ns1:freeThrow "0.535"^^xsd:float ;
+    ns1:gamesPlayed "37.0"^^xsd:float ;
+    ns1:gamesStarted "34.0"^^xsd:float ;
+    ns1:minutesPerGame "26.8"^^xsd:float ;
+    ns1:pointPerGame "8.8"^^xsd:float ;
+    ns1:reboundsPerGame "8.2"^^xsd:float ;
+    ns1:stealsPerGame "0.8"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/UTEP> ;
+    ns1:threePoints "0.282"^^xsd:float .
+
+<http://dbpedia.org/resource/Arnett_Moultrie__2> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "1.2"^^xsd:float ;
+    ns1:blockPerGame "0.8"^^xsd:float ;
+    ns1:fieldGoal "0.475"^^xsd:float ;
+    ns1:freeThrow "0.651"^^xsd:float ;
+    ns1:gamesPlayed "33.0"^^xsd:float ;
+    ns1:gamesStarted "33.0"^^xsd:float ;
+    ns1:minutesPerGame "28.9"^^xsd:float ;
+    ns1:pointPerGame "9.8"^^xsd:float ;
+    ns1:reboundsPerGame "8.2"^^xsd:float ;
+    ns1:stealsPerGame "1.4"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/UTEP> ;
+    ns1:threePoints "0.225"^^xsd:float .
+
+<http://dbpedia.org/resource/Arnett_Moultrie__3> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "1.2"^^xsd:float ;
+    ns1:blockPerGame "0.8"^^xsd:float ;
+    ns1:fieldGoal "0.549"^^xsd:float ;
+    ns1:freeThrow "0.78"^^xsd:float ;
+    ns1:gamesPlayed "30.0"^^xsd:float ;
+    ns1:gamesStarted "30.0"^^xsd:float ;
+    ns1:minutesPerGame "35.8"^^xsd:float ;
+    ns1:pointPerGame "16.4"^^xsd:float ;
+    ns1:reboundsPerGame "10.5"^^xsd:float ;
+    ns1:stealsPerGame "0.8"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Mississippi_State> ;
+    ns1:threePoints "0.444"^^xsd:float .
+
+<http://dbpedia.org/resource/Brandon_Roy__1> ns1:Year "2002–03"^^xsd:string ;
+    ns1:assistsPerGame "1.0"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.5"^^xsd:float ;
+    ns1:freeThrow "0.486"^^xsd:float ;
+    ns1:gamesPlayed "13.0"^^xsd:float ;
+    ns1:gamesStarted "2.0"^^xsd:float ;
+    ns1:min "17.2"^^xsd:float ;
+    ns1:pointPerGame "6.1"^^xsd:float ;
+    ns1:reboundsPerGame "2.9"^^xsd:float ;
+    ns1:stealsPerGame "0.3"^^xsd:float ;
+    ns1:threePoints "0.1"^^xsd:float .
+
+<http://dbpedia.org/resource/Brandon_Roy__2> ns1:Year "2003–04"^^xsd:string ;
+    ns1:assistsPerGame "3.3"^^xsd:float ;
+    ns1:blockPerGame "0.4"^^xsd:float ;
+    ns1:fieldGoal "0.48"^^xsd:float ;
+    ns1:freeThrow "0.785"^^xsd:float ;
+    ns1:gamesPlayed "31.0"^^xsd:float ;
+    ns1:gamesStarted "31.0"^^xsd:float ;
+    ns1:min "30.3"^^xsd:float ;
+    ns1:pointPerGame "12.9"^^xsd:float ;
+    ns1:reboundsPerGame "5.3"^^xsd:float ;
+    ns1:stealsPerGame "1.2"^^xsd:float ;
+    ns1:threePoints "0.222"^^xsd:float .
+
+<http://dbpedia.org/resource/Brandon_Roy__3> ns1:Year "2004–05"^^xsd:string ;
+    ns1:assistsPerGame "2.2"^^xsd:float ;
+    ns1:blockPerGame "0.3"^^xsd:float ;
+    ns1:fieldGoal "0.565"^^xsd:float ;
+    ns1:freeThrow "0.741"^^xsd:float ;
+    ns1:gamesPlayed "26.0"^^xsd:float ;
+    ns1:gamesStarted "5.0"^^xsd:float ;
+    ns1:min "24.2"^^xsd:float ;
+    ns1:pointPerGame "12.8"^^xsd:float ;
+    ns1:reboundsPerGame "5.0"^^xsd:float ;
+    ns1:stealsPerGame "0.6"^^xsd:float ;
+    ns1:threePoints "0.35"^^xsd:float .
+
+<http://dbpedia.org/resource/Brandon_Roy__4> ns1:Year "2005–06"^^xsd:string ;
+    ns1:assistsPerGame "4.1"^^xsd:float ;
+    ns1:blockPerGame "0.8"^^xsd:float ;
+    ns1:fieldGoal "0.508"^^xsd:float ;
+    ns1:freeThrow "0.81"^^xsd:float ;
+    ns1:gamesPlayed "33.0"^^xsd:float ;
+    ns1:gamesStarted "33.0"^^xsd:float ;
+    ns1:min "31.7"^^xsd:float ;
+    ns1:pointPerGame "20.2"^^xsd:float ;
+    ns1:reboundsPerGame "5.6"^^xsd:float ;
+    ns1:stealsPerGame "1.4"^^xsd:float ;
+    ns1:threePoints "0.402"^^xsd:float .
+
+<http://dbpedia.org/resource/C._J._Wilcox__1> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "0.9"^^xsd:float ;
+    ns1:blockPerGame "0.3"^^xsd:float ;
+    ns1:fieldGoal "0.419"^^xsd:float ;
+    ns1:freeThrow "0.806"^^xsd:float ;
+    ns1:gamesPlayed "33.0"^^xsd:float ;
+    ns1:gamesStarted "6.0"^^xsd:float ;
+    ns1:minutesPerGame "15.8"^^xsd:float ;
+    ns1:pointPerGame "8.1"^^xsd:float ;
+    ns1:reboundsPerGame "2.1"^^xsd:float ;
+    ns1:stealsPerGame "0.4"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Washington> ;
+    ns1:threePoints "0.401"^^xsd:float .
+
+<http://dbpedia.org/resource/C._J._Wilcox__2> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "1.2"^^xsd:float ;
+    ns1:blockPerGame "0.6"^^xsd:float ;
+    ns1:fieldGoal "0.437"^^xsd:float ;
+    ns1:freeThrow "0.839"^^xsd:float ;
+    ns1:gamesPlayed "32.0"^^xsd:float ;
+    ns1:gamesStarted "12.0"^^xsd:float ;
+    ns1:minutesPerGame "28.5"^^xsd:float ;
+    ns1:pointPerGame "14.2"^^xsd:float ;
+    ns1:reboundsPerGame "3.4"^^xsd:float ;
+    ns1:stealsPerGame "0.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Washington> ;
+    ns1:threePoints "0.403"^^xsd:float .
+
+<http://dbpedia.org/resource/C._J._Wilcox__3> ns1:Year "2012–13"^^xsd:string ;
+    ns1:assistsPerGame "1.9"^^xsd:float ;
+    ns1:blockPerGame "1.1"^^xsd:float ;
+    ns1:fieldGoal "0.419"^^xsd:float ;
+    ns1:freeThrow "0.816"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "34.0"^^xsd:float ;
+    ns1:minutesPerGame "34.8"^^xsd:float ;
+    ns1:pointPerGame "16.8"^^xsd:float ;
+    ns1:reboundsPerGame "4.3"^^xsd:float ;
+    ns1:stealsPerGame "1.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Washington> ;
+    ns1:threePoints "0.366"^^xsd:float .
+
+<http://dbpedia.org/resource/C._J._Wilcox__4> ns1:Year "2013–14"^^xsd:string ;
+    ns1:assistsPerGame "2.5"^^xsd:float ;
+    ns1:blockPerGame "1.0"^^xsd:float ;
+    ns1:fieldGoal "0.453"^^xsd:float ;
+    ns1:freeThrow "0.873"^^xsd:float ;
+    ns1:gamesPlayed "32.0"^^xsd:float ;
+    ns1:gamesStarted "32.0"^^xsd:float ;
+    ns1:minutesPerGame "34.9"^^xsd:float ;
+    ns1:pointPerGame "18.3"^^xsd:float ;
+    ns1:reboundsPerGame "3.7"^^xsd:float ;
+    ns1:stealsPerGame "1.0"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Washington> ;
+    ns1:threePoints "0.391"^^xsd:float .
+
+<http://dbpedia.org/resource/Chris_Copeland__1> ns1:Year "2002–03"^^xsd:string ;
+    ns1:assistsPerGame "0.3"^^xsd:float ;
+    ns1:blockPerGame "0.3"^^xsd:float ;
+    ns1:fieldGoal "0.377"^^xsd:float ;
+    ns1:freeThrow "0.577"^^xsd:float ;
+    ns1:gamesPlayed "26.0"^^xsd:float ;
+    ns1:gamesStarted "0.0"^^xsd:float ;
+    ns1:minutesPerGame "7.7"^^xsd:float ;
+    ns1:pointPerGame "2.5"^^xsd:float ;
+    ns1:reboundsPerGame "1.6"^^xsd:float ;
+    ns1:stealsPerGame "0.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Colorado> ;
+    ns1:threePoints "0.25"^^xsd:float .
+
+<http://dbpedia.org/resource/Chris_Copeland__2> ns1:Year "2003–04"^^xsd:string ;
+    ns1:assistsPerGame "0.5"^^xsd:float ;
+    ns1:blockPerGame "0.5"^^xsd:float ;
+    ns1:fieldGoal "0.379"^^xsd:float ;
+    ns1:freeThrow "0.594"^^xsd:float ;
+    ns1:gamesPlayed "28.0"^^xsd:float ;
+    ns1:gamesStarted "0.0"^^xsd:float ;
+    ns1:minutesPerGame "9.2"^^xsd:float ;
+    ns1:pointPerGame "2.9"^^xsd:float ;
+    ns1:reboundsPerGame "2.5"^^xsd:float ;
+    ns1:stealsPerGame "0.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Colorado> ;
+    ns1:threePoints "0.393"^^xsd:float .
+
+<http://dbpedia.org/resource/Chris_Copeland__3> ns1:Year "2004–05"^^xsd:string ;
+    ns1:assistsPerGame "1.5"^^xsd:float ;
+    ns1:blockPerGame "1.2"^^xsd:float ;
+    ns1:fieldGoal "0.448"^^xsd:float ;
+    ns1:freeThrow "0.814"^^xsd:float ;
+    ns1:gamesPlayed "29.0"^^xsd:float ;
+    ns1:gamesStarted "15.0"^^xsd:float ;
+    ns1:minutesPerGame "25.2"^^xsd:float ;
+    ns1:pointPerGame "11.7"^^xsd:float ;
+    ns1:reboundsPerGame "5.6"^^xsd:float ;
+    ns1:stealsPerGame "0.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Colorado> ;
+    ns1:threePoints "0.375"^^xsd:float .
+
+<http://dbpedia.org/resource/Chris_Copeland__4> ns1:Year "2005–06"^^xsd:string ;
+    ns1:assistsPerGame "1.6"^^xsd:float ;
+    ns1:blockPerGame "1.1"^^xsd:float ;
+    ns1:fieldGoal "0.44"^^xsd:float ;
+    ns1:freeThrow "0.688"^^xsd:float ;
+    ns1:gamesPlayed "30.0"^^xsd:float ;
+    ns1:gamesStarted "28.0"^^xsd:float ;
+    ns1:minutesPerGame "24.3"^^xsd:float ;
+    ns1:pointPerGame "12.1"^^xsd:float ;
+    ns1:reboundsPerGame "5.1"^^xsd:float ;
+    ns1:stealsPerGame "0.8"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Colorado> ;
+    ns1:threePoints "0.357"^^xsd:float .
+
+<http://dbpedia.org/resource/Cory_Jefferson__1> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "0.0"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.391"^^xsd:float ;
+    ns1:freeThrow "0.692"^^xsd:float ;
+    ns1:gamesPlayed "21.0"^^xsd:float ;
+    ns1:gamesStarted "0.0"^^xsd:float ;
+    ns1:minutesPerGame "4.6"^^xsd:float ;
+    ns1:pointPerGame "1.3"^^xsd:float ;
+    ns1:reboundsPerGame "1.2"^^xsd:float ;
+    ns1:stealsPerGame "0.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Baylor> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/Cory_Jefferson__2> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "0.1"^^xsd:float ;
+    ns1:blockPerGame "1.2"^^xsd:float ;
+    ns1:fieldGoal "0.522"^^xsd:float ;
+    ns1:freeThrow "0.6"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "1.0"^^xsd:float ;
+    ns1:minutesPerGame "10.5"^^xsd:float ;
+    ns1:pointPerGame "3.6"^^xsd:float ;
+    ns1:reboundsPerGame "2.6"^^xsd:float ;
+    ns1:stealsPerGame "0.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Baylor> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/Cory_Jefferson__3> ns1:Year "2012–13"^^xsd:string ;
+    ns1:assistsPerGame "0.3"^^xsd:float ;
+    ns1:blockPerGame "1.9"^^xsd:float ;
+    ns1:fieldGoal "0.61"^^xsd:float ;
+    ns1:freeThrow "0.704"^^xsd:float ;
+    ns1:gamesPlayed "37.0"^^xsd:float ;
+    ns1:gamesStarted "37.0"^^xsd:float ;
+    ns1:minutesPerGame "27.9"^^xsd:float ;
+    ns1:pointPerGame "13.3"^^xsd:float ;
+    ns1:reboundsPerGame "8.0"^^xsd:float ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Baylor> ;
+    ns1:threePoints "0.333"^^xsd:float .
+
+<http://dbpedia.org/resource/Cory_Jefferson__4> ns1:Year "2013–14"^^xsd:string ;
+    ns1:assistsPerGame "1.0"^^xsd:float ;
+    ns1:blockPerGame "1.3"^^xsd:float ;
+    ns1:fieldGoal "0.5"^^xsd:float ;
+    ns1:freeThrow "0.64"^^xsd:float ;
+    ns1:gamesPlayed "38.0"^^xsd:float ;
+    ns1:gamesStarted "38.0"^^xsd:float ;
+    ns1:minutesPerGame "29.0"^^xsd:float ;
+    ns1:pointPerGame "13.7"^^xsd:float ;
+    ns1:reboundsPerGame "8.2"^^xsd:float ;
+    ns1:stealsPerGame "0.4"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Baylor> ;
+    ns1:threePoints "0.368"^^xsd:float .
+
+<http://dbpedia.org/resource/Cory_Joseph__1> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "3.0"^^xsd:float ;
+    ns1:blockPerGame "0.3"^^xsd:float ;
+    ns1:fieldGoal "0.422"^^xsd:float ;
+    ns1:freeThrow "0.699"^^xsd:float ;
+    ns1:gamesPlayed "36.0"^^xsd:float ;
+    ns1:gamesStarted "36.0"^^xsd:float ;
+    ns1:minutesPerGame "32.4"^^xsd:float ;
+    ns1:pointPerGame "10.4"^^xsd:float ;
+    ns1:reboundsPerGame "3.6"^^xsd:float ;
+    ns1:stealsPerGame "1.0"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Texas> ;
+    ns1:threePoints "0.413"^^xsd:float .
+
+<http://dbpedia.org/resource/DAngelo_Russell__1> ns1:Year "2014–15"^^xsd:string ;
+    ns1:assistsPerGame "5.0"^^xsd:float ;
+    ns1:blockPerGame "0.3"^^xsd:float ;
+    ns1:fieldGoal "0.449"^^xsd:float ;
+    ns1:freeThrow "0.756"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "35.0"^^xsd:float ;
+    ns1:minutesPerGame "33.9"^^xsd:float ;
+    ns1:pointPerGame "19.3"^^xsd:float ;
+    ns1:reboundsPerGame "5.7"^^xsd:float ;
+    ns1:stealsPerGame "1.6"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Ohio_State> ;
+    ns1:threePoints "0.411"^^xsd:float .
+
+<http://dbpedia.org/resource/David_West_(basketball)__1> ns1:Year "1999–00"^^xsd:string ;
+    ns1:assistsPerGame "1.7"^^xsd:float ;
+    ns1:blockPerGame "1.1"^^xsd:float ;
+    ns1:fieldGoal "0.532"^^xsd:float ;
+    ns1:freeThrow "0.667"^^xsd:float ;
+    ns1:gamesPlayed "33.0"^^xsd:float ;
+    ns1:gamesStarted "33.0"^^xsd:float ;
+    ns1:minutesPerGame "29.4"^^xsd:float ;
+    ns1:pointPerGame "11.7"^^xsd:float ;
+    ns1:reboundsPerGame "9.1"^^xsd:float ;
+    ns1:stealsPerGame "1.6"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Xavier> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/David_West_(basketball)__2> ns1:Year "2000–01"^^xsd:string ;
+    ns1:assistsPerGame "2.0"^^xsd:float ;
+    ns1:blockPerGame "2.1"^^xsd:float ;
+    ns1:fieldGoal "0.551"^^xsd:float ;
+    ns1:freeThrow "0.74"^^xsd:float ;
+    ns1:gamesPlayed "29.0"^^xsd:float ;
+    ns1:gamesStarted "29.0"^^xsd:float ;
+    ns1:minutesPerGame "33.7"^^xsd:float ;
+    ns1:pointPerGame "17.8"^^xsd:float ;
+    ns1:reboundsPerGame "10.9"^^xsd:float ;
+    ns1:stealsPerGame "1.4"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Xavier> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/David_West_(basketball)__3> ns1:Year "2001–02"^^xsd:string ;
+    ns1:assistsPerGame "1.6"^^xsd:float ;
+    ns1:blockPerGame "2.5"^^xsd:float ;
+    ns1:fieldGoal "0.536"^^xsd:float ;
+    ns1:freeThrow "0.768"^^xsd:float ;
+    ns1:gamesPlayed "32.0"^^xsd:float ;
+    ns1:gamesStarted "32.0"^^xsd:float ;
+    ns1:minutesPerGame "34.2"^^xsd:float ;
+    ns1:pointPerGame "18.3"^^xsd:float ;
+    ns1:reboundsPerGame "9.8"^^xsd:float ;
+    ns1:stealsPerGame "1.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Xavier> ;
+    ns1:threePoints "0.321"^^xsd:float .
+
+<http://dbpedia.org/resource/David_West_(basketball)__4> ns1:Year "2002–03"^^xsd:string ;
+    ns1:assistsPerGame "3.2"^^xsd:float ;
+    ns1:blockPerGame "1.6"^^xsd:float ;
+    ns1:fieldGoal "0.513"^^xsd:float ;
+    ns1:freeThrow "0.816"^^xsd:float ;
+    ns1:gamesPlayed "32.0"^^xsd:float ;
+    ns1:gamesStarted "32.0"^^xsd:float ;
+    ns1:minutesPerGame "36.5"^^xsd:float ;
+    ns1:pointPerGame "20.1"^^xsd:float ;
+    ns1:reboundsPerGame "11.8"^^xsd:float ;
+    ns1:stealsPerGame "1.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Xavier> ;
+    ns1:threePoints "0.346"^^xsd:float .
+
+<http://dbpedia.org/resource/Dennis_Smith_Jr.__1> ns1:Year "2016–17"^^xsd:string ;
+    ns1:assistsPerGame "6.2"^^xsd:float ;
+    ns1:blockPerGame "0.4"^^xsd:float ;
+    ns1:fieldGoal "0.455"^^xsd:float ;
+    ns1:freeThrow "0.715"^^xsd:float ;
+    ns1:gamesPlayed "32.0"^^xsd:float ;
+    ns1:gamesStarted "32.0"^^xsd:float ;
+    ns1:minutesPerGame "34.8"^^xsd:float ;
+    ns1:pointPerGame "18.1"^^xsd:float ;
+    ns1:reboundsPerGame "4.6"^^xsd:float ;
+    ns1:stealsPerGame "1.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/NC_State> ;
+    ns1:threePoints "0.359"^^xsd:float .
+
+<http://dbpedia.org/resource/Derrick_Rose__1> ns1:Year "2007–08"^^xsd:string ;
+    ns1:assistsPerGame "4.7"^^xsd:float ;
+    ns1:blockPerGame "0.4"^^xsd:float ;
+    ns1:fieldGoal "0.477"^^xsd:float ;
+    ns1:freeThrow "0.712"^^xsd:float ;
+    ns1:gamesPlayed "40.0"^^xsd:float ;
+    ns1:gamesStarted "40.0"^^xsd:float ;
+    ns1:minutesPerGame "29.2"^^xsd:float ;
+    ns1:pointPerGame "14.9"^^xsd:float ;
+    ns1:reboundsPerGame "4.5"^^xsd:float ;
+    ns1:stealsPerGame "1.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Memphis> ;
+    ns1:threePoints "0.337"^^xsd:float .
+
+<http://dbpedia.org/resource/Derrick_Williams_(basketball)__1> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "0.7"^^xsd:float ;
+    ns1:blockPerGame "0.6"^^xsd:float ;
+    ns1:fieldGoal "0.574"^^xsd:float ;
+    ns1:freeThrow "0.681"^^xsd:float ;
+    ns1:gamesPlayed "31.0"^^xsd:float ;
+    ns1:gamesStarted "31.0"^^xsd:float ;
+    ns1:min "28.2"^^xsd:float ;
+    ns1:pointPerGame "15.7"^^xsd:float ;
+    ns1:reboundsPerGame "7.1"^^xsd:float ;
+    ns1:stealsPerGame "0.6"^^xsd:float ;
+    ns1:threePoints "0.25"^^xsd:float .
+
+<http://dbpedia.org/resource/Derrick_Williams_(basketball)__2> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "1.1"^^xsd:float ;
+    ns1:blockPerGame "0.7"^^xsd:float ;
+    ns1:fieldGoal "0.595"^^xsd:float ;
+    ns1:freeThrow "0.746"^^xsd:float ;
+    ns1:gamesPlayed "38.0"^^xsd:float ;
+    ns1:gamesStarted "38.0"^^xsd:float ;
+    ns1:min "30.0"^^xsd:float ;
+    ns1:pointPerGame "19.5"^^xsd:float ;
+    ns1:reboundsPerGame "8.3"^^xsd:float ;
+    ns1:stealsPerGame "1.0"^^xsd:float ;
+    ns1:threePoints "0.568"^^xsd:float .
+
+<http://dbpedia.org/resource/Dexter_Pittman__1> ns1:Year "2006–07"^^xsd:string ;
+    ns1:assistsPerGame "0.1"^^xsd:float ;
+    ns1:blockPerGame "0.3"^^xsd:float ;
+    ns1:fieldGoal "0.604"^^xsd:float ;
+    ns1:freeThrow "0.471"^^xsd:float ;
+    ns1:gamesPlayed "29.0"^^xsd:float ;
+    ns1:gamesStarted "0.0"^^xsd:float ;
+    ns1:minutesPerGame "5.3"^^xsd:float ;
+    ns1:pointPerGame "2.6"^^xsd:float ;
+    ns1:reboundsPerGame "1.8"^^xsd:float ;
+    ns1:stealsPerGame "0.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Texas> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/Dexter_Pittman__2> ns1:Year "2007–08"^^xsd:string ;
+    ns1:assistsPerGame "0.2"^^xsd:float ;
+    ns1:blockPerGame "0.5"^^xsd:float ;
+    ns1:fieldGoal "0.559"^^xsd:float ;
+    ns1:freeThrow "0.561"^^xsd:float ;
+    ns1:gamesPlayed "36.0"^^xsd:float ;
+    ns1:gamesStarted "1.0"^^xsd:float ;
+    ns1:minutesPerGame "6.8"^^xsd:float ;
+    ns1:pointPerGame "2.8"^^xsd:float ;
+    ns1:reboundsPerGame "2.4"^^xsd:float ;
+    ns1:stealsPerGame "0.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Texas> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/Dexter_Pittman__3> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "0.4"^^xsd:float ;
+    ns1:blockPerGame "0.9"^^xsd:float ;
+    ns1:fieldGoal "0.616"^^xsd:float ;
+    ns1:freeThrow "0.691"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "24.0"^^xsd:float ;
+    ns1:minutesPerGame "16.6"^^xsd:float ;
+    ns1:pointPerGame "10.1"^^xsd:float ;
+    ns1:reboundsPerGame "5.5"^^xsd:float ;
+    ns1:stealsPerGame "0.4"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Texas> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/Dexter_Pittman__4> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "0.5"^^xsd:float ;
+    ns1:blockPerGame "1.9"^^xsd:float ;
+    ns1:fieldGoal "0.654"^^xsd:float ;
+    ns1:freeThrow "0.556"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "34.0"^^xsd:float ;
+    ns1:minutesPerGame "19.1"^^xsd:float ;
+    ns1:pointPerGame "10.4"^^xsd:float ;
+    ns1:reboundsPerGame "5.9"^^xsd:float ;
+    ns1:stealsPerGame "0.4"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Texas> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/Doron_Lamb__1> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "1.6"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.497"^^xsd:float ;
+    ns1:freeThrow "0.79"^^xsd:float ;
+    ns1:gamesPlayed "38.0"^^xsd:float ;
+    ns1:gamesStarted "14.0"^^xsd:float ;
+    ns1:minutesPerGame "28.4"^^xsd:float ;
+    ns1:pointPerGame "12.3"^^xsd:float ;
+    ns1:reboundsPerGame "2.7"^^xsd:float ;
+    ns1:stealsPerGame "0.6"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Kentucky> ;
+    ns1:threePoints "0.486"^^xsd:float .
+
+<http://dbpedia.org/resource/Doron_Lamb__2> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "1.5"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.474"^^xsd:float ;
+    ns1:freeThrow "0.826"^^xsd:float ;
+    ns1:gamesPlayed "40.0"^^xsd:float ;
+    ns1:gamesStarted "35.0"^^xsd:float ;
+    ns1:minutesPerGame "31.2"^^xsd:float ;
+    ns1:pointPerGame "13.7"^^xsd:float ;
+    ns1:reboundsPerGame "2.7"^^xsd:float ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Kentucky> ;
+    ns1:threePoints "0.466"^^xsd:float .
+
+<http://dbpedia.org/resource/Doug_McDermott__1> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "1.2"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.525"^^xsd:float ;
+    ns1:freeThrow "0.746"^^xsd:float ;
+    ns1:gamesPlayed "39.0"^^xsd:float ;
+    ns1:gamesStarted "39.0"^^xsd:float ;
+    ns1:minutesPerGame "29.1"^^xsd:float ;
+    ns1:pointPerGame "14.9"^^xsd:float ;
+    ns1:reboundsPerGame "7.2"^^xsd:float ;
+    ns1:stealsPerGame "0.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Creighton> ;
+    ns1:threePoints "0.405"^^xsd:float .
+
+<http://dbpedia.org/resource/Doug_McDermott__2> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "1.1"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.601"^^xsd:float ;
+    ns1:freeThrow "0.796"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "34.0"^^xsd:float ;
+    ns1:minutesPerGame "31.9"^^xsd:float ;
+    ns1:pointPerGame "22.9"^^xsd:float ;
+    ns1:reboundsPerGame "8.2"^^xsd:float ;
+    ns1:stealsPerGame "0.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Creighton> ;
+    ns1:threePoints "0.486"^^xsd:float .
+
+<http://dbpedia.org/resource/Doug_McDermott__3> ns1:Year "2012–13"^^xsd:string ;
+    ns1:assistsPerGame "1.6"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.548"^^xsd:float ;
+    ns1:freeThrow "0.875"^^xsd:float ;
+    ns1:gamesPlayed "36.0"^^xsd:float ;
+    ns1:gamesStarted "36.0"^^xsd:float ;
+    ns1:minutesPerGame "31.6"^^xsd:float ;
+    ns1:pointPerGame "23.2"^^xsd:float ;
+    ns1:reboundsPerGame "7.7"^^xsd:float ;
+    ns1:stealsPerGame "0.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Creighton> ;
+    ns1:threePoints "0.49"^^xsd:float .
+
+<http://dbpedia.org/resource/Doug_McDermott__4> ns1:Year "2013–14"^^xsd:string ;
+    ns1:assistsPerGame "1.6"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.526"^^xsd:float ;
+    ns1:freeThrow "0.864"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "35.0"^^xsd:float ;
+    ns1:minutesPerGame "33.7"^^xsd:float ;
+    ns1:pointPerGame "26.7"^^xsd:float ;
+    ns1:reboundsPerGame "7.0"^^xsd:float ;
+    ns1:stealsPerGame "0.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Creighton> ;
+    ns1:threePoints "0.449"^^xsd:float .
+
+<http://dbpedia.org/resource/Draymond_Green__1> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "0.8"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.556"^^xsd:float ;
+    ns1:freeThrow "0.615"^^xsd:float ;
+    ns1:gamesPlayed "37.0"^^xsd:float ;
+    ns1:gamesStarted "0.0"^^xsd:float ;
+    ns1:minutesPerGame "11.3"^^xsd:float ;
+    ns1:pointPerGame "3.3"^^xsd:float ;
+    ns1:reboundsPerGame "3.3"^^xsd:float ;
+    ns1:stealsPerGame "0.6"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Michigan_State> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/Draymond_Green__2> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "3.0"^^xsd:float ;
+    ns1:blockPerGame "0.9"^^xsd:float ;
+    ns1:fieldGoal "0.525"^^xsd:float ;
+    ns1:freeThrow "0.672"^^xsd:float ;
+    ns1:gamesPlayed "37.0"^^xsd:float ;
+    ns1:gamesStarted "3.0"^^xsd:float ;
+    ns1:minutesPerGame "25.5"^^xsd:float ;
+    ns1:pointPerGame "9.9"^^xsd:float ;
+    ns1:reboundsPerGame "7.7"^^xsd:float ;
+    ns1:stealsPerGame "1.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Michigan_State> ;
+    ns1:threePoints "0.125"^^xsd:float .
+
+<http://dbpedia.org/resource/Draymond_Green__3> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "4.1"^^xsd:float ;
+    ns1:blockPerGame "1.1"^^xsd:float ;
+    ns1:fieldGoal "0.426"^^xsd:float ;
+    ns1:freeThrow "0.683"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "28.0"^^xsd:float ;
+    ns1:minutesPerGame "30.1"^^xsd:float ;
+    ns1:pointPerGame "12.6"^^xsd:float ;
+    ns1:reboundsPerGame "8.6"^^xsd:float ;
+    ns1:stealsPerGame "1.8"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Michigan_State> ;
+    ns1:threePoints "0.366"^^xsd:float .
+
+<http://dbpedia.org/resource/Draymond_Green__4> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "3.8"^^xsd:float ;
+    ns1:blockPerGame "0.9"^^xsd:float ;
+    ns1:fieldGoal "0.449"^^xsd:float ;
+    ns1:freeThrow "0.723"^^xsd:float ;
+    ns1:gamesPlayed "37.0"^^xsd:float ;
+    ns1:gamesStarted "36.0"^^xsd:float ;
+    ns1:minutesPerGame "33.2"^^xsd:float ;
+    ns1:pointPerGame "16.2"^^xsd:float ;
+    ns1:reboundsPerGame "10.6"^^xsd:float ;
+    ns1:stealsPerGame "1.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Michigan_State> ;
+    ns1:threePoints "0.388"^^xsd:float .
+
+<http://dbpedia.org/resource/Greg_Monroe__1> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "2.6"^^xsd:float ;
+    ns1:blockPerGame "1.4"^^xsd:float ;
+    ns1:fieldGoal "0.57"^^xsd:float ;
+    ns1:freeThrow "0.7"^^xsd:float ;
+    ns1:gamesPlayed "31.0"^^xsd:float ;
+    ns1:gamesStarted "31.0"^^xsd:float ;
+    ns1:minutesPerGame "30.9"^^xsd:float ;
+    ns1:pointPerGame "12.7"^^xsd:float ;
+    ns1:reboundsPerGame "6.6"^^xsd:float ;
+    ns1:stealsPerGame "1.8"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Georgetown> ;
+    ns1:threePoints "0.333"^^xsd:float .
+
+<http://dbpedia.org/resource/Greg_Monroe__2> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "3.7"^^xsd:float ;
+    ns1:blockPerGame "1.5"^^xsd:float ;
+    ns1:fieldGoal "0.525"^^xsd:float ;
+    ns1:freeThrow "0.66"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "33.0"^^xsd:float ;
+    ns1:minutesPerGame "34.2"^^xsd:float ;
+    ns1:pointPerGame "16.2"^^xsd:float ;
+    ns1:reboundsPerGame "9.7"^^xsd:float ;
+    ns1:stealsPerGame "1.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Georgetown> ;
+    ns1:threePoints "0.259"^^xsd:float .
+
+<http://dbpedia.org/resource/Greg_Oden__1> ns1:Year "2006–07"^^xsd:string ;
+    ns1:assistsPerGame "0.7"^^xsd:float ;
+    ns1:blockPerGame "3.3"^^xsd:float ;
+    ns1:fieldGoal "0.616"^^xsd:float ;
+    ns1:freeThrow "0.628"^^xsd:float ;
+    ns1:gamesPlayed "32.0"^^xsd:float ;
+    ns1:gamesStarted "31.0"^^xsd:float ;
+    ns1:min "28.9"^^xsd:float ;
+    ns1:pointPerGame "15.7"^^xsd:float ;
+    ns1:reboundsPerGame "9.6"^^xsd:float ;
+    ns1:stealsPerGame "0.6"^^xsd:float ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/Harrison_Barnes__1> ns1:Year "2010–11[28]"^^xsd:string ;
+    ns1:assistsPerGame "1.4"^^xsd:float ;
+    ns1:blockPerGame "0.4"^^xsd:float ;
+    ns1:fieldGoal "0.423"^^xsd:float ;
+    ns1:freeThrow "0.75"^^xsd:float ;
+    ns1:gamesPlayed "37.0"^^xsd:float ;
+    ns1:gamesStarted "36.0"^^xsd:float ;
+    ns1:minutesPerGame "29.4"^^xsd:float ;
+    ns1:pointPerGame "15.7"^^xsd:float ;
+    ns1:reboundsPerGame "5.8"^^xsd:float ;
+    ns1:stealsPerGame "0.7"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/North_Carolina> ;
+    ns1:threePoints "0.344"^^xsd:float .
+
+<http://dbpedia.org/resource/Harrison_Barnes__2> ns1:Year "2011–12[29]"^^xsd:string ;
+    ns1:assistsPerGame "1.1"^^xsd:float ;
+    ns1:blockPerGame "0.3"^^xsd:float ;
+    ns1:fieldGoal "0.44"^^xsd:float ;
+    ns1:freeThrow "0.723"^^xsd:float ;
+    ns1:gamesPlayed "38.0"^^xsd:float ;
+    ns1:gamesStarted "37.0"^^xsd:float ;
+    ns1:minutesPerGame "29.2"^^xsd:float ;
+    ns1:pointPerGame "17.1"^^xsd:float ;
+    ns1:reboundsPerGame "5.2"^^xsd:float ;
+    ns1:stealsPerGame "1.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/North_Carolina> ;
+    ns1:threePoints "0.358"^^xsd:float .
+
+<http://dbpedia.org/resource/Isaiah_Thomas_(basketball)__1> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "2.6"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.418"^^xsd:float ;
+    ns1:freeThrow "0.686"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "34.0"^^xsd:float ;
+    ns1:minutesPerGame "28.4"^^xsd:float ;
+    ns1:pointPerGame "15.5"^^xsd:float ;
+    ns1:reboundsPerGame "3.0"^^xsd:float ;
+    ns1:stealsPerGame "1.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Washington> ;
+    ns1:threePoints "0.291"^^xsd:float .
+
+<http://dbpedia.org/resource/Isaiah_Thomas_(basketball)__2> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "3.2"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.415"^^xsd:float ;
+    ns1:freeThrow "0.732"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "35.0"^^xsd:float ;
+    ns1:minutesPerGame "31.1"^^xsd:float ;
+    ns1:pointPerGame "16.9"^^xsd:float ;
+    ns1:reboundsPerGame "3.9"^^xsd:float ;
+    ns1:stealsPerGame "1.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Washington> ;
+    ns1:threePoints "0.327"^^xsd:float .
+
+<http://dbpedia.org/resource/Isaiah_Thomas_(basketball)__3> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "6.1"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.445"^^xsd:float ;
+    ns1:freeThrow "0.719"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "35.0"^^xsd:float ;
+    ns1:minutesPerGame "31.9"^^xsd:float ;
+    ns1:pointPerGame "16.8"^^xsd:float ;
+    ns1:reboundsPerGame "3.5"^^xsd:float ;
+    ns1:stealsPerGame "1.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Washington> ;
+    ns1:threePoints "0.349"^^xsd:float .
+
+<http://dbpedia.org/resource/JJ_Hickson__1> ns1:Year "2007–08"^^xsd:string ;
+    ns1:assistsPerGame "1.0"^^xsd:float ;
+    ns1:blockPerGame "1.5"^^xsd:float ;
+    ns1:fieldGoal "0.591"^^xsd:float ;
+    ns1:freeThrow "0.677"^^xsd:float ;
+    ns1:gamesPlayed "31.0"^^xsd:float ;
+    ns1:gamesStarted "31.0"^^xsd:float ;
+    ns1:minutesPerGame "28.7"^^xsd:float ;
+    ns1:pointPerGame "14.8"^^xsd:float ;
+    ns1:reboundsPerGame "8.5"^^xsd:float ;
+    ns1:stealsPerGame "0.7"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/NC_State> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/Jabari_Brown__1> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "0.5"^^xsd:float ;
+    ns1:blockPerGame "0.0"^^xsd:float ;
+    ns1:fieldGoal "0.273"^^xsd:float ;
+    ns1:freeThrow "0.417"^^xsd:float ;
+    ns1:gamesPlayed "2.0"^^xsd:float ;
+    ns1:gamesStarted "2.0"^^xsd:float ;
+    ns1:minutesPerGame "25.5"^^xsd:float ;
+    ns1:pointPerGame "6.0"^^xsd:float ;
+    ns1:reboundsPerGame "2.0"^^xsd:float ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Oregon> ;
+    ns1:threePoints "0.143"^^xsd:float .
+
+<http://dbpedia.org/resource/Jabari_Brown__2> ns1:Year "2012–13"^^xsd:string ;
+    ns1:assistsPerGame "1.4"^^xsd:float ;
+    ns1:blockPerGame "0.0"^^xsd:float ;
+    ns1:fieldGoal "0.404"^^xsd:float ;
+    ns1:freeThrow "0.785"^^xsd:float ;
+    ns1:gamesPlayed "25.0"^^xsd:float ;
+    ns1:gamesStarted "24.0"^^xsd:float ;
+    ns1:minutesPerGame "32.7"^^xsd:float ;
+    ns1:pointPerGame "13.7"^^xsd:float ;
+    ns1:reboundsPerGame "3.4"^^xsd:float ;
+    ns1:stealsPerGame "0.7"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Missouri> ;
+    ns1:threePoints "0.366"^^xsd:float .
+
+<http://dbpedia.org/resource/Jae_Crowder__1> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "1.6"^^xsd:float ;
+    ns1:blockPerGame "0.9"^^xsd:float ;
+    ns1:fieldGoal "0.485"^^xsd:float ;
+    ns1:freeThrow "0.616"^^xsd:float ;
+    ns1:gamesPlayed "37.0"^^xsd:float ;
+    ns1:gamesStarted "17.0"^^xsd:float ;
+    ns1:minutesPerGame "27.6"^^xsd:float ;
+    ns1:pointPerGame "11.8"^^xsd:float ;
+    ns1:reboundsPerGame "6.8"^^xsd:float ;
+    ns1:stealsPerGame "1.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Marquette> ;
+    ns1:threePoints "0.359"^^xsd:float .
+
+<http://dbpedia.org/resource/Jae_Crowder__2> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "2.1"^^xsd:float ;
+    ns1:blockPerGame "1.0"^^xsd:float ;
+    ns1:fieldGoal "0.498"^^xsd:float ;
+    ns1:freeThrow "0.735"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "35.0"^^xsd:float ;
+    ns1:minutesPerGame "32.9"^^xsd:float ;
+    ns1:pointPerGame "17.5"^^xsd:float ;
+    ns1:reboundsPerGame "8.4"^^xsd:float ;
+    ns1:stealsPerGame "2.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Marquette> ;
+    ns1:threePoints "0.345"^^xsd:float .
+
+<http://dbpedia.org/resource/James_Michael_McAdoo__1> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "0.3"^^xsd:float ;
+    ns1:blockPerGame "0.3"^^xsd:float ;
+    ns1:fieldGoal "0.434"^^xsd:float ;
+    ns1:freeThrow "0.638"^^xsd:float ;
+    ns1:gamesPlayed "38.0"^^xsd:float ;
+    ns1:gamesStarted "3.0"^^xsd:float ;
+    ns1:minutesPerGame "15.6"^^xsd:float ;
+    ns1:pointPerGame "6.1"^^xsd:float ;
+    ns1:reboundsPerGame "3.9"^^xsd:float ;
+    ns1:stealsPerGame "0.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/North_Carolina> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/James_Michael_McAdoo__2> ns1:Year "2012–13"^^xsd:string ;
+    ns1:assistsPerGame "1.1"^^xsd:float ;
+    ns1:blockPerGame "0.4"^^xsd:float ;
+    ns1:fieldGoal "0.445"^^xsd:float ;
+    ns1:freeThrow "0.578"^^xsd:float ;
+    ns1:gamesPlayed "36.0"^^xsd:float ;
+    ns1:gamesStarted "36.0"^^xsd:float ;
+    ns1:minutesPerGame "30.0"^^xsd:float ;
+    ns1:pointPerGame "14.4"^^xsd:float ;
+    ns1:reboundsPerGame "7.3"^^xsd:float ;
+    ns1:stealsPerGame "1.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/North_Carolina> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/James_Michael_McAdoo__3> ns1:Year "2013–14"^^xsd:string ;
+    ns1:assistsPerGame "1.7"^^xsd:float ;
+    ns1:blockPerGame "0.9"^^xsd:float ;
+    ns1:fieldGoal "0.458"^^xsd:float ;
+    ns1:freeThrow "0.537"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "34.0"^^xsd:float ;
+    ns1:minutesPerGame "30.1"^^xsd:float ;
+    ns1:pointPerGame "14.2"^^xsd:float ;
+    ns1:reboundsPerGame "6.8"^^xsd:float ;
+    ns1:stealsPerGame "1.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/North_Carolina> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/James_Young_(basketball)__1> ns1:Year "2013–14"^^xsd:string ;
+    ns1:assistsPerGame "1.7"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.407"^^xsd:float ;
+    ns1:freeThrow "0.706"^^xsd:float ;
+    ns1:gamesPlayed "40.0"^^xsd:float ;
+    ns1:gamesStarted "39.0"^^xsd:float ;
+    ns1:minutesPerGame "32.4"^^xsd:float ;
+    ns1:pointPerGame "14.3"^^xsd:float ;
+    ns1:reboundsPerGame "4.3"^^xsd:float ;
+    ns1:stealsPerGame "0.8"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Kentucky> ;
+    ns1:threePoints "0.349"^^xsd:float .
+
+<http://dbpedia.org/resource/Jeff_Withey__1> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "0.0"^^xsd:float ;
+    ns1:blockPerGame "0.4"^^xsd:float ;
+    ns1:fieldGoal "0.538"^^xsd:float ;
+    ns1:freeThrow "0.556"^^xsd:float ;
+    ns1:gamesPlayed "15.0"^^xsd:float ;
+    ns1:minutesPerGame "3.0"^^xsd:float ;
+    ns1:pointPerGame "1.3"^^xsd:float ;
+    ns1:reboundsPerGame "1.4"^^xsd:float ;
+    ns1:stealsPerGame "0.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Kansas> .
+
+<http://dbpedia.org/resource/Jeff_Withey__2> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "0.2"^^xsd:float ;
+    ns1:blockPerGame "0.7"^^xsd:float ;
+    ns1:fieldGoal "0.647"^^xsd:float ;
+    ns1:freeThrow "0.515"^^xsd:float ;
+    ns1:gamesPlayed "26.0"^^xsd:float ;
+    ns1:minutesPerGame "6.2"^^xsd:float ;
+    ns1:pointPerGame "2.3"^^xsd:float ;
+    ns1:reboundsPerGame "1.8"^^xsd:float ;
+    ns1:stealsPerGame "0.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Kansas> .
+
+<http://dbpedia.org/resource/Jeff_Withey__3> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "0.7"^^xsd:float ;
+    ns1:blockPerGame "3.6"^^xsd:float ;
+    ns1:fieldGoal "0.536"^^xsd:float ;
+    ns1:freeThrow "0.795"^^xsd:float ;
+    ns1:gamesPlayed "39.0"^^xsd:float ;
+    ns1:gamesStarted "39.0"^^xsd:float ;
+    ns1:minutesPerGame "24.8"^^xsd:float ;
+    ns1:pointPerGame "9.0"^^xsd:float ;
+    ns1:reboundsPerGame "6.3"^^xsd:float ;
+    ns1:stealsPerGame "0.6"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Kansas> .
+
+<http://dbpedia.org/resource/Jeff_Withey__4> ns1:Year "2012–13"^^xsd:string ;
+    ns1:assistsPerGame "0.9"^^xsd:float ;
+    ns1:blockPerGame "3.9"^^xsd:float ;
+    ns1:fieldGoal "0.582"^^xsd:float ;
+    ns1:freeThrow "0.714"^^xsd:float ;
+    ns1:gamesPlayed "37.0"^^xsd:float ;
+    ns1:gamesStarted "37.0"^^xsd:float ;
+    ns1:minutesPerGame "30.9"^^xsd:float ;
+    ns1:pointPerGame "13.7"^^xsd:float ;
+    ns1:reboundsPerGame "8.5"^^xsd:float ;
+    ns1:stealsPerGame "0.8"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Kansas> ;
+    ns1:threePoints "1.0"^^xsd:float .
+
+<http://dbpedia.org/resource/Jeremy_Lamb__1> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "1.6"^^xsd:float ;
+    ns1:blockPerGame "0.6"^^xsd:float ;
+    ns1:fieldGoal "0.487"^^xsd:float ;
+    ns1:freeThrow "0.797"^^xsd:float ;
+    ns1:gamesPlayed "41.0"^^xsd:float ;
+    ns1:gamesStarted "40.0"^^xsd:float ;
+    ns1:minutesPerGame "28.8"^^xsd:float ;
+    ns1:pointPerGame "11.1"^^xsd:float ;
+    ns1:reboundsPerGame "4.5"^^xsd:float ;
+    ns1:stealsPerGame "0.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Connecticut> ;
+    ns1:threePoints "0.368"^^xsd:float .
+
+<http://dbpedia.org/resource/Jeremy_Lamb__2> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "1.7"^^xsd:float ;
+    ns1:blockPerGame "0.6"^^xsd:float ;
+    ns1:fieldGoal "0.478"^^xsd:float ;
+    ns1:freeThrow "0.81"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "34.0"^^xsd:float ;
+    ns1:minutesPerGame "37.2"^^xsd:float ;
+    ns1:pointPerGame "17.7"^^xsd:float ;
+    ns1:reboundsPerGame "4.9"^^xsd:float ;
+    ns1:stealsPerGame "1.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Connecticut> ;
+    ns1:threePoints "0.336"^^xsd:float .
+
+<http://dbpedia.org/resource/Jimmy_Butler_(basketball)__1> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "0.7"^^xsd:float ;
+    ns1:blockPerGame "0.5"^^xsd:float ;
+    ns1:fieldGoal "0.514"^^xsd:float ;
+    ns1:freeThrow "0.768"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "0.0"^^xsd:float ;
+    ns1:minutesPerGame "19.6"^^xsd:float ;
+    ns1:pointPerGame "5.6"^^xsd:float ;
+    ns1:reboundsPerGame "3.9"^^xsd:float ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Marquette> ;
+    ns1:threePoints "0.0"^^xsd:float .
+
+<http://dbpedia.org/resource/Jimmy_Butler_(basketball)__2> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "2.0"^^xsd:float ;
+    ns1:blockPerGame "0.6"^^xsd:float ;
+    ns1:fieldGoal "0.53"^^xsd:float ;
+    ns1:freeThrow "0.766"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "34.0"^^xsd:float ;
+    ns1:minutesPerGame "34.3"^^xsd:float ;
+    ns1:pointPerGame "14.7"^^xsd:float ;
+    ns1:reboundsPerGame "6.4"^^xsd:float ;
+    ns1:stealsPerGame "1.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Marquette> ;
+    ns1:threePoints "0.5"^^xsd:float .
+
+<http://dbpedia.org/resource/Jimmy_Butler_(basketball)__3> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "2.3"^^xsd:float ;
+    ns1:blockPerGame "0.4"^^xsd:float ;
+    ns1:fieldGoal "0.49"^^xsd:float ;
+    ns1:freeThrow "0.783"^^xsd:float ;
+    ns1:gamesPlayed "37.0"^^xsd:float ;
+    ns1:gamesStarted "35.0"^^xsd:float ;
+    ns1:minutesPerGame "34.6"^^xsd:float ;
+    ns1:pointPerGame "15.7"^^xsd:float ;
+    ns1:reboundsPerGame "6.1"^^xsd:float ;
+    ns1:stealsPerGame "1.4"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Marquette> ;
+    ns1:threePoints "0.345"^^xsd:float .
+
+<http://dbpedia.org/resource/Joe_Harris_(basketball)__1> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "1.3"^^xsd:float ;
+    ns1:blockPerGame "0.4"^^xsd:float ;
+    ns1:fieldGoal "0.418"^^xsd:float ;
+    ns1:freeThrow "0.759"^^xsd:float ;
+    ns1:gamesPlayed "31.0"^^xsd:float ;
+    ns1:gamesStarted "25.0"^^xsd:float ;
+    ns1:minutesPerGame "29.4"^^xsd:float ;
+    ns1:pointPerGame "10.4"^^xsd:float ;
+    ns1:reboundsPerGame "4.4"^^xsd:float ;
+    ns1:stealsPerGame "0.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Virginia> ;
+    ns1:threePoints "0.417"^^xsd:float .
+
+<http://dbpedia.org/resource/Joe_Harris_(basketball)__2> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "1.7"^^xsd:float ;
+    ns1:blockPerGame "0.4"^^xsd:float ;
+    ns1:fieldGoal "0.442"^^xsd:float ;
+    ns1:freeThrow "0.772"^^xsd:float ;
+    ns1:gamesPlayed "32.0"^^xsd:float ;
+    ns1:gamesStarted "31.0"^^xsd:float ;
+    ns1:minutesPerGame "30.3"^^xsd:float ;
+    ns1:pointPerGame "11.3"^^xsd:float ;
+    ns1:reboundsPerGame "3.9"^^xsd:float ;
+    ns1:stealsPerGame "0.7"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Virginia> ;
+    ns1:threePoints "0.38"^^xsd:float .
+
+<http://dbpedia.org/resource/Joe_Harris_(basketball)__3> ns1:Year "2012–13"^^xsd:string ;
+    ns1:assistsPerGame "2.2"^^xsd:float ;
+    ns1:blockPerGame "0.5"^^xsd:float ;
+    ns1:fieldGoal "0.468"^^xsd:float ;
+    ns1:freeThrow "0.74"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "35.0"^^xsd:float ;
+    ns1:minutesPerGame "32.5"^^xsd:float ;
+    ns1:pointPerGame "16.3"^^xsd:float ;
+    ns1:reboundsPerGame "4.0"^^xsd:float ;
+    ns1:stealsPerGame "0.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Virginia> ;
+    ns1:threePoints "0.425"^^xsd:float .
+
+<http://dbpedia.org/resource/Joe_Harris_(basketball)__4> ns1:Year "2013–14"^^xsd:string ;
+    ns1:assistsPerGame "2.3"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.441"^^xsd:float ;
+    ns1:freeThrow "0.64"^^xsd:float ;
+    ns1:gamesPlayed "37.0"^^xsd:float ;
+    ns1:gamesStarted "37.0"^^xsd:float ;
+    ns1:minutesPerGame "28.8"^^xsd:float ;
+    ns1:pointPerGame "12.0"^^xsd:float ;
+    ns1:reboundsPerGame "3.0"^^xsd:float ;
+    ns1:stealsPerGame "1.0"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Virginia> ;
+    ns1:threePoints "0.4"^^xsd:float .
+
+<http://dbpedia.org/resource/Jon_Leuer__1> ns1:Year "2007–08"^^xsd:string ;
+    ns1:assistsPerGame "0.4"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.472"^^xsd:float ;
+    ns1:freeThrow "0.483"^^xsd:float ;
+    ns1:gamesPlayed "32.0"^^xsd:float ;
+    ns1:gamesStarted "0.0"^^xsd:float ;
+    ns1:minutesPerGame "8.6"^^xsd:float ;
+    ns1:pointPerGame "2.9"^^xsd:float ;
+    ns1:reboundsPerGame "1.3"^^xsd:float ;
+    ns1:stealsPerGame "0.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Wisconsin_Badgers> ;
+    ns1:threePoints "0.462"^^xsd:float .
+
+<http://dbpedia.org/resource/Jon_Leuer__2> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "0.8"^^xsd:float ;
+    ns1:blockPerGame "0.6"^^xsd:float ;
+    ns1:fieldGoal "0.466"^^xsd:float ;
+    ns1:freeThrow "0.605"^^xsd:float ;
+    ns1:gamesPlayed "33.0"^^xsd:float ;
+    ns1:gamesStarted "12.0"^^xsd:float ;
+    ns1:minutesPerGame "21.3"^^xsd:float ;
+    ns1:pointPerGame "8.8"^^xsd:float ;
+    ns1:reboundsPerGame "3.8"^^xsd:float ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Wisconsin_Badgers> ;
+    ns1:threePoints "0.296"^^xsd:float .
+
+<http://dbpedia.org/resource/Jon_Leuer__3> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "1.6"^^xsd:float ;
+    ns1:blockPerGame "1.3"^^xsd:float ;
+    ns1:fieldGoal "0.522"^^xsd:float ;
+    ns1:freeThrow "0.72"^^xsd:float ;
+    ns1:gamesPlayed "24.0"^^xsd:float ;
+    ns1:gamesStarted "22.0"^^xsd:float ;
+    ns1:minutesPerGame "28.8"^^xsd:float ;
+    ns1:pointPerGame "15.4"^^xsd:float ;
+    ns1:reboundsPerGame "5.8"^^xsd:float ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Wisconsin_Badgers> ;
+    ns1:threePoints "0.391"^^xsd:float .
+
+<http://dbpedia.org/resource/Jon_Leuer__4> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "1.6"^^xsd:float ;
+    ns1:blockPerGame "0.9"^^xsd:float ;
+    ns1:fieldGoal "0.47"^^xsd:float ;
+    ns1:freeThrow "0.843"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "34.0"^^xsd:float ;
+    ns1:minutesPerGame "33.5"^^xsd:float ;
+    ns1:pointPerGame "18.3"^^xsd:float ;
+    ns1:reboundsPerGame "7.2"^^xsd:float ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Wisconsin_Badgers> ;
+    ns1:threePoints "0.37"^^xsd:float .
+
+<http://dbpedia.org/resource/Jonathan_Gibson_(basketball)__1> ns1:Year "2006–07"^^xsd:string ;
+    ns1:assistsPerGame "0.7"^^xsd:float ;
+    ns1:blockPerGame "0.0"^^xsd:float ;
+    ns1:fieldGoal "0.338"^^xsd:float ;
+    ns1:freeThrow "0.677"^^xsd:float ;
+    ns1:gamesPlayed "31.0"^^xsd:float ;
+    ns1:gamesStarted "2.0"^^xsd:float ;
+    ns1:minutesPerGame "7.3"^^xsd:float ;
+    ns1:pointPerGame "2.6"^^xsd:float ;
+    ns1:reboundsPerGame "0.6"^^xsd:float ;
+    ns1:stealsPerGame "0.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/New_Mexico_State> ;
+    ns1:threePoints "0.286"^^xsd:float .
+
+<http://dbpedia.org/resource/Jonathan_Gibson_(basketball)__2> ns1:Year "2007–08"^^xsd:string ;
+    ns1:assistsPerGame "1.6"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.454"^^xsd:float ;
+    ns1:freeThrow "0.756"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "32.0"^^xsd:float ;
+    ns1:minutesPerGame "27.0"^^xsd:float ;
+    ns1:pointPerGame "12.2"^^xsd:float ;
+    ns1:reboundsPerGame "2.2"^^xsd:float ;
+    ns1:stealsPerGame "0.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/New_Mexico_State> ;
+    ns1:threePoints "0.419"^^xsd:float .
+
+<http://dbpedia.org/resource/Jonathan_Gibson_(basketball)__3> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "2.1"^^xsd:float ;
+    ns1:blockPerGame "0.0"^^xsd:float ;
+    ns1:fieldGoal "0.426"^^xsd:float ;
+    ns1:freeThrow "0.668"^^xsd:float ;
+    ns1:gamesPlayed "31.0"^^xsd:float ;
+    ns1:gamesStarted "30.0"^^xsd:float ;
+    ns1:minutesPerGame "30.1"^^xsd:float ;
+    ns1:pointPerGame "14.1"^^xsd:float ;
+    ns1:reboundsPerGame "1.9"^^xsd:float ;
+    ns1:stealsPerGame "1.4"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/New_Mexico_State> ;
+    ns1:threePoints "0.387"^^xsd:float .
+
+<http://dbpedia.org/resource/Jonathan_Gibson_(basketball)__4> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "2.8"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.447"^^xsd:float ;
+    ns1:freeThrow "0.848"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "32.0"^^xsd:float ;
+    ns1:minutesPerGame "32.6"^^xsd:float ;
+    ns1:pointPerGame "17.5"^^xsd:float ;
+    ns1:reboundsPerGame "2.9"^^xsd:float ;
+    ns1:stealsPerGame "1.4"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/New_Mexico_State> ;
+    ns1:threePoints "0.406"^^xsd:float .
+
+<http://dbpedia.org/resource/Jordan_Clarkson__1> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "1.9"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.433"^^xsd:float ;
+    ns1:freeThrow "0.793"^^xsd:float ;
+    ns1:gamesPlayed "27.0"^^xsd:float ;
+    ns1:gamesStarted "9.0"^^xsd:float ;
+    ns1:minutesPerGame "24.9"^^xsd:float ;
+    ns1:pointPerGame "11.5"^^xsd:float ;
+    ns1:reboundsPerGame "2.1"^^xsd:float ;
+    ns1:stealsPerGame "0.7"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Tulsa> ;
+    ns1:threePoints "0.303"^^xsd:float .
+
+<http://dbpedia.org/resource/Jordan_Clarkson__2> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "2.5"^^xsd:float ;
+    ns1:blockPerGame "0.5"^^xsd:float ;
+    ns1:fieldGoal "0.435"^^xsd:float ;
+    ns1:freeThrow "0.784"^^xsd:float ;
+    ns1:gamesPlayed "31.0"^^xsd:float ;
+    ns1:gamesStarted "31.0"^^xsd:float ;
+    ns1:minutesPerGame "33.9"^^xsd:float ;
+    ns1:pointPerGame "16.5"^^xsd:float ;
+    ns1:reboundsPerGame "3.9"^^xsd:float ;
+    ns1:stealsPerGame "0.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Tulsa> ;
+    ns1:threePoints "0.374"^^xsd:float .
+
+<http://dbpedia.org/resource/Jordan_Clarkson__3> ns1:Year "2013–14"^^xsd:string ;
+    ns1:assistsPerGame "3.4"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.448"^^xsd:float ;
+    ns1:freeThrow "0.831"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "35.0"^^xsd:float ;
+    ns1:minutesPerGame "35.1"^^xsd:float ;
+    ns1:pointPerGame "17.5"^^xsd:float ;
+    ns1:reboundsPerGame "3.8"^^xsd:float ;
+    ns1:stealsPerGame "1.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Missouri> ;
+    ns1:threePoints "0.281"^^xsd:float .
+
+<http://dbpedia.org/resource/Jrue_Holiday__1> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "3.7"^^xsd:float ;
+    ns1:blockPerGame "0.5"^^xsd:float ;
+    ns1:fieldGoal "0.45"^^xsd:float ;
+    ns1:freeThrow "0.726"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "35.0"^^xsd:float ;
+    ns1:minutesPerGame "27.1"^^xsd:float ;
+    ns1:pointPerGame "8.5"^^xsd:float ;
+    ns1:reboundsPerGame "3.8"^^xsd:float ;
+    ns1:stealsPerGame "1.6"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/UCLA> ;
+    ns1:threePoints "0.307"^^xsd:float .
+
+<http://dbpedia.org/resource/Justin_Ingram__1> ns1:Year "2003–04"^^xsd:string ;
+    ns1:assistsPerGame "3.6"^^xsd:float ;
+    ns1:blockPerGame "0.3"^^xsd:float ;
+    ns1:fieldGoal "0.419"^^xsd:float ;
+    ns1:freeThrow "0.776"^^xsd:float ;
+    ns1:gamesPlayed "31.0"^^xsd:float ;
+    ns1:gamesStarted "31.0"^^xsd:float ;
+    ns1:minutesPerGame "29.6"^^xsd:float ;
+    ns1:pointPerGame "10.0"^^xsd:float ;
+    ns1:reboundsPerGame "3.0"^^xsd:float ;
+    ns1:stealsPerGame "1.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Toledo> ;
+    ns1:threePoints "0.39"^^xsd:float .
+
+<http://dbpedia.org/resource/Justin_Ingram__2> ns1:Year "2004–05"^^xsd:string ;
+    ns1:assistsPerGame "3.2"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.401"^^xsd:float ;
+    ns1:freeThrow "0.806"^^xsd:float ;
+    ns1:gamesPlayed "29.0"^^xsd:float ;
+    ns1:gamesStarted "29.0"^^xsd:float ;
+    ns1:minutesPerGame "28.7"^^xsd:float ;
+    ns1:pointPerGame "9.3"^^xsd:float ;
+    ns1:reboundsPerGame "4.0"^^xsd:float ;
+    ns1:stealsPerGame "1.8"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Toledo> ;
+    ns1:threePoints "0.366"^^xsd:float .
+
+<http://dbpedia.org/resource/Justin_Ingram__3> ns1:Year "2005–06"^^xsd:string ;
+    ns1:assistsPerGame "2.9"^^xsd:float ;
+    ns1:blockPerGame "0.3"^^xsd:float ;
+    ns1:fieldGoal "0.406"^^xsd:float ;
+    ns1:freeThrow "0.876"^^xsd:float ;
+    ns1:gamesPlayed "31.0"^^xsd:float ;
+    ns1:gamesStarted "31.0"^^xsd:float ;
+    ns1:minutesPerGame "31.6"^^xsd:float ;
+    ns1:pointPerGame "14.6"^^xsd:float ;
+    ns1:reboundsPerGame "3.2"^^xsd:float ;
+    ns1:stealsPerGame "1.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Toledo> ;
+    ns1:threePoints "0.337"^^xsd:float .
+
+<http://dbpedia.org/resource/Justin_Ingram__4> ns1:Year "2006–07"^^xsd:string ;
+    ns1:assistsPerGame "2.8"^^xsd:float ;
+    ns1:blockPerGame "0.3"^^xsd:float ;
+    ns1:fieldGoal "0.372"^^xsd:float ;
+    ns1:freeThrow "0.766"^^xsd:float ;
+    ns1:gamesPlayed "32.0"^^xsd:float ;
+    ns1:gamesStarted "32.0"^^xsd:float ;
+    ns1:minutesPerGame "35.2"^^xsd:float ;
+    ns1:pointPerGame "14.5"^^xsd:float ;
+    ns1:reboundsPerGame "4.4"^^xsd:float ;
+    ns1:stealsPerGame "2.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Toledo> ;
+    ns1:threePoints "0.297"^^xsd:float .
+
+<http://dbpedia.org/resource/Kemba_Walker__1> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "2.9"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.47"^^xsd:float ;
+    ns1:freeThrow "0.715"^^xsd:float ;
+    ns1:gamesPlayed "36.0"^^xsd:float ;
+    ns1:gamesStarted "2.0"^^xsd:float ;
+    ns1:minutesPerGame "25.2"^^xsd:float ;
+    ns1:pointPerGame "8.9"^^xsd:float ;
+    ns1:reboundsPerGame "3.5"^^xsd:float ;
+    ns1:stealsPerGame "1.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Connecticut> ;
+    ns1:threePoints "0.271"^^xsd:float .
+
+<http://dbpedia.org/resource/Kemba_Walker__2> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "5.0"^^xsd:float ;
+    ns1:blockPerGame "0.4"^^xsd:float ;
+    ns1:fieldGoal "0.405"^^xsd:float ;
+    ns1:freeThrow "0.767"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "34.0"^^xsd:float ;
+    ns1:minutesPerGame "35.2"^^xsd:float ;
+    ns1:pointPerGame "14.6"^^xsd:float ;
+    ns1:reboundsPerGame "4.3"^^xsd:float ;
+    ns1:stealsPerGame "2.0"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Connecticut> ;
+    ns1:threePoints "0.339"^^xsd:float .
+
+<http://dbpedia.org/resource/Kemba_Walker__3> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "4.5"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.428"^^xsd:float ;
+    ns1:freeThrow "0.819"^^xsd:float ;
+    ns1:gamesPlayed "41.0"^^xsd:float ;
+    ns1:gamesStarted "41.0"^^xsd:float ;
+    ns1:minutesPerGame "37.6"^^xsd:float ;
+    ns1:pointPerGame "23.5"^^xsd:float ;
+    ns1:reboundsPerGame "5.4"^^xsd:float ;
+    ns1:stealsPerGame "1.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Connecticut> ;
+    ns1:threePoints "0.33"^^xsd:float .
+
+<http://dbpedia.org/resource/Kenneth_Faried__1> ns1:Year "2007–08"^^xsd:string ;
+    ns1:assistsPerGame "0.3"^^xsd:float ;
+    ns1:blockPerGame "0.8"^^xsd:float ;
+    ns1:fieldGoal "0.516"^^xsd:float ;
+    ns1:freeThrow "0.58"^^xsd:float ;
+    ns1:gamesPlayed "30.0"^^xsd:float ;
+    ns1:min "605.0"^^xsd:float ;
+    ns1:pointPerGame "10.5"^^xsd:float ;
+    ns1:reboundsPerGame "8.0"^^xsd:float ;
+    ns1:stealsPerGame "1.2"^^xsd:float .
+
+<http://dbpedia.org/resource/Kenneth_Faried__2> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "1.4"^^xsd:float ;
+    ns1:blockPerGame "1.9"^^xsd:float ;
+    ns1:fieldGoal "0.556"^^xsd:float ;
+    ns1:freeThrow "0.577"^^xsd:float ;
+    ns1:gamesPlayed "36.0"^^xsd:float ;
+    ns1:min "1083.0"^^xsd:float ;
+    ns1:pointPerGame "13.9"^^xsd:float ;
+    ns1:reboundsPerGame "13.0"^^xsd:float ;
+    ns1:stealsPerGame "1.9"^^xsd:float .
+
+<http://dbpedia.org/resource/Kenneth_Faried__3> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "0.5"^^xsd:float ;
+    ns1:blockPerGame "1.9"^^xsd:float ;
+    ns1:fieldGoal "0.564"^^xsd:float ;
+    ns1:freeThrow "0.595"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:min "1060.0"^^xsd:float ;
+    ns1:pointPerGame "16.9"^^xsd:float ;
+    ns1:reboundsPerGame "13.0"^^xsd:float ;
+    ns1:stealsPerGame "1.6"^^xsd:float .
+
+<http://dbpedia.org/resource/Kenneth_Faried__4> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "1.1"^^xsd:float ;
+    ns1:blockPerGame "2.3"^^xsd:float ;
+    ns1:fieldGoal "0.623"^^xsd:float ;
+    ns1:freeThrow "0.577"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:min "1261.0"^^xsd:float ;
+    ns1:pointPerGame "17.3"^^xsd:float ;
+    ns1:reboundsPerGame "14.5"^^xsd:float ;
+    ns1:stealsPerGame "1.9"^^xsd:float .
+
+<http://dbpedia.org/resource/Khris_Middleton__1> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "1.1"^^xsd:float ;
+    ns1:blockPerGame "0.3"^^xsd:float ;
+    ns1:fieldGoal "0.416"^^xsd:float ;
+    ns1:freeThrow "0.75"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "22.0"^^xsd:float ;
+    ns1:minutesPerGame "20.9"^^xsd:float ;
+    ns1:pointPerGame "7.2"^^xsd:float ;
+    ns1:reboundsPerGame "3.7"^^xsd:float ;
+    ns1:stealsPerGame "0.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Texas> ;
+    ns1:threePoints "0.324"^^xsd:float .
+
+<http://dbpedia.org/resource/Khris_Middleton__2> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "2.8"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.45"^^xsd:float ;
+    ns1:freeThrow "0.784"^^xsd:float ;
+    ns1:gamesPlayed "33.0"^^xsd:float ;
+    ns1:gamesStarted "33.0"^^xsd:float ;
+    ns1:minutesPerGame "29.6"^^xsd:float ;
+    ns1:pointPerGame "14.3"^^xsd:float ;
+    ns1:reboundsPerGame "5.2"^^xsd:float ;
+    ns1:stealsPerGame "1.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Texas> ;
+    ns1:threePoints "0.361"^^xsd:float .
+
+<http://dbpedia.org/resource/Khris_Middleton__3> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "2.3"^^xsd:float ;
+    ns1:blockPerGame "0.3"^^xsd:float ;
+    ns1:fieldGoal "0.415"^^xsd:float ;
+    ns1:freeThrow "0.75"^^xsd:float ;
+    ns1:gamesPlayed "20.0"^^xsd:float ;
+    ns1:gamesStarted "17.0"^^xsd:float ;
+    ns1:minutesPerGame "28.8"^^xsd:float ;
+    ns1:pointPerGame "13.2"^^xsd:float ;
+    ns1:reboundsPerGame "5.0"^^xsd:float ;
+    ns1:stealsPerGame "1.0"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Texas> ;
+    ns1:threePoints "0.26"^^xsd:float .
+
+<http://dbpedia.org/resource/Kosta_Koufos__1> ns1:Year "2007–08"^^xsd:string ;
+    ns1:assistsPerGame "0.5"^^xsd:float ;
+    ns1:blockPerGame "1.8"^^xsd:float ;
+    ns1:fieldGoal "0.508"^^xsd:float ;
+    ns1:freeThrow "0.68"^^xsd:float ;
+    ns1:gamesPlayed "37.0"^^xsd:float ;
+    ns1:gamesStarted "37.0"^^xsd:float ;
+    ns1:minutesPerGame "27.1"^^xsd:float ;
+    ns1:pointPerGame "14.4"^^xsd:float ;
+    ns1:reboundsPerGame "6.7"^^xsd:float ;
+    ns1:stealsPerGame "0.4"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Ohio_State> ;
+    ns1:threePoints "0.349"^^xsd:float .
+
+<http://dbpedia.org/resource/Larry_Bird__1> ns1:Year "1976–77"^^xsd:string ;
+    ns1:assistsPerGame "4.4"^^xsd:float ;
+    ns1:blockPerGame "…"^^xsd:string ;
+    ns1:fieldGoal "0.544"^^xsd:float ;
+    ns1:freeThrow "0.84"^^xsd:float ;
+    ns1:gamesPlayed "28.0"^^xsd:float ;
+    ns1:gamesStarted "…"^^xsd:string ;
+    ns1:minutesPerGame "36.9"^^xsd:float ;
+    ns1:pointPerGame "32.8"^^xsd:float ;
+    ns1:reboundsPerGame "13.3"^^xsd:float ;
+    ns1:stealsPerGame "…"^^xsd:string ;
+    ns1:team <http://dbpedia.org/resource/Indiana_State> ;
+    ns1:threePoints "…"^^xsd:string .
+
+<http://dbpedia.org/resource/Larry_Bird__2> ns1:Year "1977–78"^^xsd:string ;
+    ns1:assistsPerGame "3.9"^^xsd:float ;
+    ns1:blockPerGame "…"^^xsd:string ;
+    ns1:fieldGoal "0.524"^^xsd:float ;
+    ns1:freeThrow "0.793"^^xsd:float ;
+    ns1:gamesPlayed "32.0"^^xsd:float ;
+    ns1:gamesStarted "…"^^xsd:string ;
+    ns1:minutesPerGame "…"^^xsd:string ;
+    ns1:pointPerGame "30.0"^^xsd:float ;
+    ns1:reboundsPerGame "11.5"^^xsd:float ;
+    ns1:stealsPerGame "…"^^xsd:string ;
+    ns1:team <http://dbpedia.org/resource/Indiana_State> ;
+    ns1:threePoints "…"^^xsd:string .
+
+<http://dbpedia.org/resource/Larry_Bird__3> ns1:Year "1978–79"^^xsd:string ;
+    ns1:assistsPerGame "5.5"^^xsd:float ;
+    ns1:blockPerGame "…"^^xsd:string ;
+    ns1:fieldGoal "0.532"^^xsd:float ;
+    ns1:freeThrow "0.831"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "…"^^xsd:string ;
+    ns1:minutesPerGame "…"^^xsd:string ;
+    ns1:pointPerGame "28.6"^^xsd:float ;
+    ns1:reboundsPerGame "14.9"^^xsd:float ;
+    ns1:stealsPerGame "…"^^xsd:string ;
+    ns1:team <http://dbpedia.org/resource/Indiana_State> ;
+    ns1:threePoints "…"^^xsd:string .
+
+<http://dbpedia.org/resource/Marcus_Smart__1> ns1:Year "2012–13"^^xsd:string ;
+    ns1:assistsPerGame "4.2"^^xsd:float ;
+    ns1:blockPerGame "0.7"^^xsd:float ;
+    ns1:fieldGoal "0.404"^^xsd:float ;
+    ns1:freeThrow "0.777"^^xsd:float ;
+    ns1:gamesPlayed "33.0"^^xsd:float ;
+    ns1:gamesStarted "32.0"^^xsd:float ;
+    ns1:minutesPerGame "33.5"^^xsd:float ;
+    ns1:pointPerGame "15.4"^^xsd:float ;
+    ns1:reboundsPerGame "5.8"^^xsd:float ;
+    ns1:stealsPerGame "3.0"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Oklahoma_State> ;
+    ns1:threePoints "0.29"^^xsd:float .
+
+<http://dbpedia.org/resource/Marcus_Smart__2> ns1:Year "2013–14"^^xsd:string ;
+    ns1:assistsPerGame "4.8"^^xsd:float ;
+    ns1:blockPerGame "0.6"^^xsd:float ;
+    ns1:fieldGoal "0.422"^^xsd:float ;
+    ns1:freeThrow "0.728"^^xsd:float ;
+    ns1:gamesPlayed "31.0"^^xsd:float ;
+    ns1:gamesStarted "31.0"^^xsd:float ;
+    ns1:minutesPerGame "32.7"^^xsd:float ;
+    ns1:pointPerGame "18.0"^^xsd:float ;
+    ns1:reboundsPerGame "5.9"^^xsd:float ;
+    ns1:stealsPerGame "2.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Oklahoma_State> ;
+    ns1:threePoints "0.299"^^xsd:float .
+
+<http://dbpedia.org/resource/Marcus_Thornton_(basketball,_born_1993)__1> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "1.3"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.371"^^xsd:float ;
+    ns1:freeThrow "0.707"^^xsd:float ;
+    ns1:gamesPlayed "32.0"^^xsd:float ;
+    ns1:gamesStarted "14.0"^^xsd:float ;
+    ns1:minutesPerGame "27.8"^^xsd:float ;
+    ns1:pointPerGame "11.1"^^xsd:float ;
+    ns1:reboundsPerGame "2.4"^^xsd:float ;
+    ns1:stealsPerGame "0.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/William_&_Mary> ;
+    ns1:threePoints "0.336"^^xsd:float .
+
+<http://dbpedia.org/resource/Marcus_Thornton_(basketball,_born_1993)__2> ns1:Year "2012–13"^^xsd:string ;
+    ns1:assistsPerGame "2.8"^^xsd:float ;
+    ns1:blockPerGame "0.5"^^xsd:float ;
+    ns1:fieldGoal "0.44"^^xsd:float ;
+    ns1:freeThrow "0.827"^^xsd:float ;
+    ns1:gamesPlayed "30.0"^^xsd:float ;
+    ns1:gamesStarted "30.0"^^xsd:float ;
+    ns1:minutesPerGame "36.3"^^xsd:float ;
+    ns1:pointPerGame "18.8"^^xsd:float ;
+    ns1:reboundsPerGame "2.8"^^xsd:float ;
+    ns1:stealsPerGame "0.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/William_&_Mary> ;
+    ns1:threePoints "0.435"^^xsd:float .
+
+<http://dbpedia.org/resource/Marcus_Thornton_(basketball,_born_1993)__3> ns1:Year "2013–14"^^xsd:string ;
+    ns1:assistsPerGame "2.8"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.435"^^xsd:float ;
+    ns1:freeThrow "0.779"^^xsd:float ;
+    ns1:gamesPlayed "32.0"^^xsd:float ;
+    ns1:gamesStarted "30.0"^^xsd:float ;
+    ns1:minutesPerGame "35.6"^^xsd:float ;
+    ns1:pointPerGame "18.7"^^xsd:float ;
+    ns1:reboundsPerGame "2.3"^^xsd:float ;
+    ns1:stealsPerGame "1.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/William_&_Mary> ;
+    ns1:threePoints "0.403"^^xsd:float .
+
+<http://dbpedia.org/resource/Marcus_Thornton_(basketball,_born_1993)__4> ns1:Year "2014–15"^^xsd:string ;
+    ns1:assistsPerGame "2.9"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.456"^^xsd:float ;
+    ns1:freeThrow "0.83"^^xsd:float ;
+    ns1:gamesPlayed "33.0"^^xsd:float ;
+    ns1:gamesStarted "33.0"^^xsd:float ;
+    ns1:minutesPerGame "36.7"^^xsd:float ;
+    ns1:pointPerGame "20.0"^^xsd:float ;
+    ns1:reboundsPerGame "2.8"^^xsd:float ;
+    ns1:stealsPerGame "0.6"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/William_&_Mary> ;
+    ns1:threePoints "0.402"^^xsd:float .
+
+<http://dbpedia.org/resource/Matthew_Dellavedova__1> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "4.5"^^xsd:float ;
+    ns1:blockPerGame "0.0"^^xsd:float ;
+    ns1:fieldGoal "0.39"^^xsd:float ;
+    ns1:freeThrow "0.85"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "34.0"^^xsd:float ;
+    ns1:minutesPerGame "36.4"^^xsd:float ;
+    ns1:pointPerGame "12.1"^^xsd:float ;
+    ns1:reboundsPerGame "3.5"^^xsd:float ;
+    ns1:stealsPerGame "1.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Saint_Mary's> ;
+    ns1:threePoints "0.398"^^xsd:float .
+
+<http://dbpedia.org/resource/Matthew_Dellavedova__2> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "5.3"^^xsd:float ;
+    ns1:blockPerGame "0.0"^^xsd:float ;
+    ns1:fieldGoal "0.418"^^xsd:float ;
+    ns1:freeThrow "0.881"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "31.0"^^xsd:float ;
+    ns1:minutesPerGame "35.3"^^xsd:float ;
+    ns1:pointPerGame "13.4"^^xsd:float ;
+    ns1:reboundsPerGame "3.6"^^xsd:float ;
+    ns1:stealsPerGame "1.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Saint_Mary's> ;
+    ns1:threePoints "0.376"^^xsd:float .
+
+<http://dbpedia.org/resource/Matthew_Dellavedova__3> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "6.4"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.446"^^xsd:float ;
+    ns1:freeThrow "0.857"^^xsd:float ;
+    ns1:gamesPlayed "33.0"^^xsd:float ;
+    ns1:gamesStarted "33.0"^^xsd:float ;
+    ns1:minutesPerGame "37.5"^^xsd:float ;
+    ns1:pointPerGame "15.5"^^xsd:float ;
+    ns1:reboundsPerGame "3.3"^^xsd:float ;
+    ns1:stealsPerGame "0.8"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Saint_Mary's> ;
+    ns1:threePoints "0.355"^^xsd:float .
+
+<http://dbpedia.org/resource/Matthew_Dellavedova__4> ns1:Year "2012–13"^^xsd:string ;
+    ns1:assistsPerGame "6.4"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.404"^^xsd:float ;
+    ns1:freeThrow "0.852"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "35.0"^^xsd:float ;
+    ns1:minutesPerGame "36.4"^^xsd:float ;
+    ns1:pointPerGame "15.8"^^xsd:float ;
+    ns1:reboundsPerGame "3.4"^^xsd:float ;
+    ns1:stealsPerGame "1.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Saint_Mary's> ;
+    ns1:threePoints "0.382"^^xsd:float .
+
+<http://dbpedia.org/resource/Melo_Trimble__1> ns1:Year "2014–15"^^xsd:string ;
+    ns1:assistsPerGame "3.0"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.444"^^xsd:float ;
+    ns1:freeThrow "0.863"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "35.0"^^xsd:float ;
+    ns1:minutesPerGame "33.5"^^xsd:float ;
+    ns1:pointPerGame "16.2"^^xsd:float ;
+    ns1:reboundsPerGame "3.9"^^xsd:float ;
+    ns1:stealsPerGame "1.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Maryland> ;
+    ns1:threePoints "0.412"^^xsd:float .
+
+<http://dbpedia.org/resource/Melo_Trimble__2> ns1:Year "2015–16"^^xsd:string ;
+    ns1:assistsPerGame "4.9"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.41"^^xsd:float ;
+    ns1:freeThrow "0.863"^^xsd:float ;
+    ns1:gamesPlayed "36.0"^^xsd:float ;
+    ns1:gamesStarted "36.0"^^xsd:float ;
+    ns1:minutesPerGame "32.9"^^xsd:float ;
+    ns1:pointPerGame "14.8"^^xsd:float ;
+    ns1:reboundsPerGame "3.6"^^xsd:float ;
+    ns1:stealsPerGame "1.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Maryland> ;
+    ns1:threePoints "0.314"^^xsd:float .
+
+<http://dbpedia.org/resource/Melo_Trimble__3> ns1:Year "2016–17"^^xsd:string ;
+    ns1:assistsPerGame "3.7"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.436"^^xsd:float ;
+    ns1:freeThrow "0.789"^^xsd:float ;
+    ns1:gamesPlayed "33.0"^^xsd:float ;
+    ns1:gamesStarted "33.0"^^xsd:float ;
+    ns1:minutesPerGame "32.1"^^xsd:float ;
+    ns1:pointPerGame "16.8"^^xsd:float ;
+    ns1:reboundsPerGame "3.6"^^xsd:float ;
+    ns1:stealsPerGame "1.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Maryland> ;
+    ns1:threePoints "0.317"^^xsd:float .
+
+<http://dbpedia.org/resource/Mike_Muscala__1> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "0.7"^^xsd:float ;
+    ns1:blockPerGame "2.1"^^xsd:float ;
+    ns1:fieldGoal "0.462"^^xsd:float ;
+    ns1:freeThrow "0.806"^^xsd:float ;
+    ns1:gamesPlayed "30.0"^^xsd:float ;
+    ns1:gamesStarted "16.0"^^xsd:float ;
+    ns1:minutesPerGame "24.8"^^xsd:float ;
+    ns1:pointPerGame "9.8"^^xsd:float ;
+    ns1:reboundsPerGame "4.9"^^xsd:float ;
+    ns1:stealsPerGame "0.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Bucknell> ;
+    ns1:threePoints "0.3"^^xsd:float .
+
+<http://dbpedia.org/resource/Mike_Muscala__2> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "1.3"^^xsd:float ;
+    ns1:blockPerGame "1.9"^^xsd:float ;
+    ns1:fieldGoal "0.517"^^xsd:float ;
+    ns1:freeThrow "0.816"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "34.0"^^xsd:float ;
+    ns1:minutesPerGame "27.8"^^xsd:float ;
+    ns1:pointPerGame "14.9"^^xsd:float ;
+    ns1:reboundsPerGame "5.5"^^xsd:float ;
+    ns1:stealsPerGame "0.4"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Bucknell> ;
+    ns1:threePoints "0.364"^^xsd:float .
+
+<http://dbpedia.org/resource/Mike_Muscala__3> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "1.8"^^xsd:float ;
+    ns1:blockPerGame "1.6"^^xsd:float ;
+    ns1:fieldGoal "0.504"^^xsd:float ;
+    ns1:freeThrow "0.853"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "35.0"^^xsd:float ;
+    ns1:minutesPerGame "29.9"^^xsd:float ;
+    ns1:pointPerGame "17.0"^^xsd:float ;
+    ns1:reboundsPerGame "9.0"^^xsd:float ;
+    ns1:stealsPerGame "0.4"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Bucknell> ;
+    ns1:threePoints "0.35"^^xsd:float .
+
+<http://dbpedia.org/resource/Mike_Muscala__4> ns1:Year "2012–13"^^xsd:string ;
+    ns1:assistsPerGame "2.2"^^xsd:float ;
+    ns1:blockPerGame "2.3"^^xsd:float ;
+    ns1:fieldGoal "0.509"^^xsd:float ;
+    ns1:freeThrow "0.789"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "34.0"^^xsd:float ;
+    ns1:minutesPerGame "31.7"^^xsd:float ;
+    ns1:pointPerGame "18.7"^^xsd:float ;
+    ns1:reboundsPerGame "11.1"^^xsd:float ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Bucknell> ;
+    ns1:threePoints "0.25"^^xsd:float .
+
+<http://dbpedia.org/resource/Nolan_Smith__1> ns1:Year "2007–08"^^xsd:string ;
+    ns1:assistsPerGame "1.3"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.467"^^xsd:float ;
+    ns1:freeThrow "0.769"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "1.0"^^xsd:float ;
+    ns1:minutesPerGame "14.7"^^xsd:float ;
+    ns1:pointPerGame "5.9"^^xsd:float ;
+    ns1:reboundsPerGame "1.5"^^xsd:float ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Duke> ;
+    ns1:threePoints "0.386"^^xsd:float .
+
+<http://dbpedia.org/resource/Nolan_Smith__2> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "1.7"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.426"^^xsd:float ;
+    ns1:freeThrow "0.849"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:gamesStarted "21.0"^^xsd:float ;
+    ns1:minutesPerGame "21.6"^^xsd:float ;
+    ns1:pointPerGame "8.4"^^xsd:float ;
+    ns1:reboundsPerGame "2.2"^^xsd:float ;
+    ns1:stealsPerGame "0.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Duke> ;
+    ns1:threePoints "0.346"^^xsd:float .
+
+<http://dbpedia.org/resource/Nolan_Smith__3> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "3.0"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.441"^^xsd:float ;
+    ns1:freeThrow "0.767"^^xsd:float ;
+    ns1:gamesPlayed "38.0"^^xsd:float ;
+    ns1:gamesStarted "38.0"^^xsd:float ;
+    ns1:minutesPerGame "35.5"^^xsd:float ;
+    ns1:pointPerGame "17.4"^^xsd:float ;
+    ns1:reboundsPerGame "2.8"^^xsd:float ;
+    ns1:stealsPerGame "1.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Duke> ;
+    ns1:threePoints "0.392"^^xsd:float .
+
+<http://dbpedia.org/resource/Nolan_Smith__4> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "5.1"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "0.458"^^xsd:float ;
+    ns1:freeThrow "0.813"^^xsd:float ;
+    ns1:gamesPlayed "37.0"^^xsd:float ;
+    ns1:gamesStarted "37.0"^^xsd:float ;
+    ns1:minutesPerGame "34.0"^^xsd:float ;
+    ns1:pointPerGame "20.6"^^xsd:float ;
+    ns1:reboundsPerGame "4.5"^^xsd:float ;
+    ns1:stealsPerGame "1.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Duke> ;
+    ns1:threePoints "0.35"^^xsd:float .
+
+<http://dbpedia.org/resource/Quincy_Pondexter__1> ns1:Year "2006–07"^^xsd:string ;
+    ns1:assistsPerGame "1.5"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.498"^^xsd:float ;
+    ns1:freeThrow "0.76"^^xsd:float ;
+    ns1:gamesPlayed "32.0"^^xsd:float ;
+    ns1:gamesStarted "22.0"^^xsd:float ;
+    ns1:minutesPerGame "23.9"^^xsd:float ;
+    ns1:pointPerGame "10.7"^^xsd:float ;
+    ns1:reboundsPerGame "4.0"^^xsd:float ;
+    ns1:stealsPerGame "0.7"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Washington> ;
+    ns1:threePoints "0.375"^^xsd:float .
+
+<http://dbpedia.org/resource/Quincy_Pondexter__2> ns1:Year "2007–08"^^xsd:string ;
+    ns1:assistsPerGame "1.9"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "0.452"^^xsd:float ;
+    ns1:freeThrow "0.685"^^xsd:float ;
+    ns1:gamesPlayed "33.0"^^xsd:float ;
+    ns1:gamesStarted "9.0"^^xsd:float ;
+    ns1:minutesPerGame "24.4"^^xsd:float ;
+    ns1:pointPerGame "9.9"^^xsd:float ;
+    ns1:reboundsPerGame "4.8"^^xsd:float ;
+    ns1:stealsPerGame "0.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Washington> ;
+    ns1:threePoints "0.288"^^xsd:float .
+
+<http://dbpedia.org/resource/Quincy_Pondexter__3> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "1.6"^^xsd:float ;
+    ns1:blockPerGame "0.4"^^xsd:float ;
+    ns1:fieldGoal "0.511"^^xsd:float ;
+    ns1:freeThrow "0.742"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:gamesStarted "35.0"^^xsd:float ;
+    ns1:minutesPerGame "28.1"^^xsd:float ;
+    ns1:pointPerGame "12.1"^^xsd:float ;
+    ns1:reboundsPerGame "5.9"^^xsd:float ;
+    ns1:stealsPerGame "0.7"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Washington> ;
+    ns1:threePoints "0.214"^^xsd:float .
+
+<http://dbpedia.org/resource/Quincy_Pondexter__4> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "1.8"^^xsd:float ;
+    ns1:blockPerGame "0.6"^^xsd:float ;
+    ns1:fieldGoal "0.528"^^xsd:float ;
+    ns1:freeThrow "0.827"^^xsd:float ;
+    ns1:gamesPlayed "36.0"^^xsd:float ;
+    ns1:gamesStarted "36.0"^^xsd:float ;
+    ns1:minutesPerGame "32.3"^^xsd:float ;
+    ns1:pointPerGame "19.3"^^xsd:float ;
+    ns1:reboundsPerGame "7.4"^^xsd:float ;
+    ns1:stealsPerGame "1.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Washington> ;
+    ns1:threePoints "0.353"^^xsd:float .
+
+<http://dbpedia.org/resource/Rakeem_Christmas__1> ns1:Year "2011–12"^^xsd:string ;
+    ns1:assistsPerGame "0.2"^^xsd:float ;
+    ns1:blockPerGame "0.8"^^xsd:float ;
+    ns1:fieldGoal "57.3%"^^xsd:string ;
+    ns1:minutesPerGame "11.5"^^xsd:float ;
+    ns1:pointPerGame "2.8"^^xsd:float ;
+    ns1:reboundsPerGame "2.9"^^xsd:float ;
+    ns1:stealsPerGame "0.3"^^xsd:float .
+
+<http://dbpedia.org/resource/Rakeem_Christmas__2> ns1:Year "2012–13"^^xsd:string ;
+    ns1:assistsPerGame "0.2"^^xsd:float ;
+    ns1:blockPerGame "1.8"^^xsd:float ;
+    ns1:fieldGoal "53.0%"^^xsd:string ;
+    ns1:minutesPerGame "20.8"^^xsd:float ;
+    ns1:pointPerGame "5.1"^^xsd:float ;
+    ns1:reboundsPerGame "4.6"^^xsd:float ;
+    ns1:stealsPerGame "0.5"^^xsd:float .
+
+<http://dbpedia.org/resource/Rakeem_Christmas__3> ns1:Year "2013–14"^^xsd:string ;
+    ns1:assistsPerGame "0.7"^^xsd:float ;
+    ns1:blockPerGame "1.9"^^xsd:float ;
+    ns1:fieldGoal "61.3%"^^xsd:string ;
+    ns1:minutesPerGame "23.6"^^xsd:float ;
+    ns1:pointPerGame "5.8"^^xsd:float ;
+    ns1:reboundsPerGame "5.1"^^xsd:float ;
+    ns1:stealsPerGame "0.5"^^xsd:float .
+
+<http://dbpedia.org/resource/Rakeem_Christmas__4> ns1:Year "2014–15"^^xsd:string ;
+    ns1:assistsPerGame "1.5"^^xsd:float ;
+    ns1:blockPerGame "2.5"^^xsd:float ;
+    ns1:fieldGoal "55.2%"^^xsd:string ;
+    ns1:minutesPerGame "34.3"^^xsd:float ;
+    ns1:pointPerGame "17.5"^^xsd:float ;
+    ns1:reboundsPerGame "9.1"^^xsd:float ;
+    ns1:stealsPerGame "0.9"^^xsd:float .
+
+<http://dbpedia.org/resource/Rashanda_McCants__1> ns1:Year <http://dbpedia.org/resource/2005-06> ;
+    ns1:assistsPerGame "1.5"^^xsd:float ;
+    ns1:blockPerGame "0.4"^^xsd:float ;
+    ns1:fieldGoal "37.8"^^xsd:float ;
+    ns1:freeThrow "56.8"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:pointPerGame "5.8"^^xsd:float ;
+    ns1:reboundsPerGame "3.0"^^xsd:float ;
+    ns1:stealsPerGame "1.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/North_Carolina> ;
+    ns1:threePoints "29.9"^^xsd:float .
+
+<http://dbpedia.org/resource/Rashanda_McCants__2> ns1:Year <http://dbpedia.org/resource/2006-07> ;
+    ns1:assistsPerGame "2.2"^^xsd:float ;
+    ns1:blockPerGame "0.6"^^xsd:float ;
+    ns1:fieldGoal "44.5"^^xsd:float ;
+    ns1:freeThrow "72.7"^^xsd:float ;
+    ns1:gamesPlayed "38.0"^^xsd:float ;
+    ns1:pointPerGame "9.4"^^xsd:float ;
+    ns1:reboundsPerGame "4.3"^^xsd:float ;
+    ns1:stealsPerGame "2.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/North_Carolina> ;
+    ns1:threePoints "26.7"^^xsd:float .
+
+<http://dbpedia.org/resource/Rashanda_McCants__3> ns1:Year <http://dbpedia.org/resource/2007-08> ;
+    ns1:assistsPerGame "3.3"^^xsd:float ;
+    ns1:blockPerGame "0.6"^^xsd:float ;
+    ns1:fieldGoal "44.7"^^xsd:float ;
+    ns1:freeThrow "62.9"^^xsd:float ;
+    ns1:gamesPlayed "36.0"^^xsd:float ;
+    ns1:pointPerGame "15.8"^^xsd:float ;
+    ns1:reboundsPerGame "6.6"^^xsd:float ;
+    ns1:stealsPerGame "2.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/North_Carolina> ;
+    ns1:threePoints "28.2"^^xsd:float .
+
+<http://dbpedia.org/resource/Rashanda_McCants__4> ns1:Year <http://dbpedia.org/resource/2008-09> ;
+    ns1:assistsPerGame "2.1"^^xsd:float ;
+    ns1:blockPerGame "0.6"^^xsd:float ;
+    ns1:fieldGoal "45.5"^^xsd:float ;
+    ns1:freeThrow "62.7"^^xsd:float ;
+    ns1:gamesPlayed "34.0"^^xsd:float ;
+    ns1:pointPerGame "14.4"^^xsd:float ;
+    ns1:reboundsPerGame "6.4"^^xsd:float ;
+    ns1:stealsPerGame "1.3"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/North_Carolina> ;
+    ns1:threePoints "28.6"^^xsd:float .
+
+<http://dbpedia.org/resource/Sophia_Young__1> ns1:Year "2002–03"^^xsd:string ;
+    ns1:assistsPerGame "1.6"^^xsd:float ;
+    ns1:blockPerGame "1.2"^^xsd:float ;
+    ns1:fieldGoal "56.3"^^xsd:float ;
+    ns1:freeThrow "54.0"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:pointPerGame "14.2"^^xsd:float ;
+    ns1:reboundsPerGame "10.0"^^xsd:float ;
+    ns1:stealsPerGame "2.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Baylor> .
+
+<http://dbpedia.org/resource/Sophia_Young__2> ns1:Year "2003–04"^^xsd:string ;
+    ns1:assistsPerGame "2.1"^^xsd:float ;
+    ns1:blockPerGame "0.8"^^xsd:float ;
+    ns1:fieldGoal "55.5"^^xsd:float ;
+    ns1:freeThrow "60.7"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:pointPerGame "16.7"^^xsd:float ;
+    ns1:reboundsPerGame "8.6"^^xsd:float ;
+    ns1:stealsPerGame "2.5"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Baylor> .
+
+<http://dbpedia.org/resource/Sophia_Young__3> ns1:Year "2004–05"^^xsd:string ;
+    ns1:assistsPerGame "2.9"^^xsd:float ;
+    ns1:blockPerGame "0.7"^^xsd:float ;
+    ns1:fieldGoal "52.6"^^xsd:float ;
+    ns1:freeThrow "70.5"^^xsd:float ;
+    ns1:gamesPlayed "36.0"^^xsd:float ;
+    ns1:pointPerGame "18.4"^^xsd:float ;
+    ns1:reboundsPerGame "9.3"^^xsd:float ;
+    ns1:stealsPerGame "1.9"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Baylor> .
+
+<http://dbpedia.org/resource/Sophia_Young__4> ns1:Year "2005–06"^^xsd:string ;
+    ns1:assistsPerGame "2.1"^^xsd:float ;
+    ns1:blockPerGame "1.0"^^xsd:float ;
+    ns1:fieldGoal "54.6"^^xsd:float ;
+    ns1:freeThrow "70.5"^^xsd:float ;
+    ns1:gamesPlayed "33.0"^^xsd:float ;
+    ns1:pointPerGame "22.3"^^xsd:float ;
+    ns1:reboundsPerGame "10.0"^^xsd:float ;
+    ns1:stealsPerGame "2.2"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Baylor> .
+
+<http://dbpedia.org/resource/Sydney_Colson__1> ns1:Year "2007–08"^^xsd:string ;
+    ns1:assistsPerGame "1.3"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "33.9"^^xsd:float ;
+    ns1:freeThrow "61.4"^^xsd:float ;
+    ns1:gamesPlayed "37.0"^^xsd:float ;
+    ns1:pointPerGame "3.2"^^xsd:float ;
+    ns1:reboundsPerGame "1.0"^^xsd:float ;
+    ns1:stealsPerGame "1.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Texas_A&M> ;
+    ns1:threePoints "21.8"^^xsd:float .
+
+<http://dbpedia.org/resource/Sydney_Colson__2> ns1:Year "2008–09"^^xsd:string ;
+    ns1:assistsPerGame "3.0"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "38.9"^^xsd:float ;
+    ns1:freeThrow "75.0"^^xsd:float ;
+    ns1:gamesPlayed "35.0"^^xsd:float ;
+    ns1:pointPerGame "6.5"^^xsd:float ;
+    ns1:reboundsPerGame "1.3"^^xsd:float ;
+    ns1:stealsPerGame "2.1"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Texas_A&M> ;
+    ns1:threePoints "33.0"^^xsd:float .
+
+<http://dbpedia.org/resource/Sydney_Colson__3> ns1:Year "2009–10"^^xsd:string ;
+    ns1:assistsPerGame "4.3"^^xsd:float ;
+    ns1:blockPerGame "0.2"^^xsd:float ;
+    ns1:fieldGoal "44.9"^^xsd:float ;
+    ns1:freeThrow "64.8"^^xsd:float ;
+    ns1:gamesPlayed "30.0"^^xsd:float ;
+    ns1:pointPerGame "7.3"^^xsd:float ;
+    ns1:reboundsPerGame "1.6"^^xsd:float ;
+    ns1:stealsPerGame "1.7"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Texas_A&M> ;
+    ns1:threePoints "37.7"^^xsd:float .
+
+<http://dbpedia.org/resource/Sydney_Colson__4> ns1:Year "2010–11"^^xsd:string ;
+    ns1:assistsPerGame "6.1"^^xsd:float ;
+    ns1:blockPerGame "0.1"^^xsd:float ;
+    ns1:fieldGoal "39.8"^^xsd:float ;
+    ns1:freeThrow "73.0"^^xsd:float ;
+    ns1:gamesPlayed "36.0"^^xsd:float ;
+    ns1:pointPerGame "8.0"^^xsd:float ;
+    ns1:reboundsPerGame "2.3"^^xsd:float ;
+    ns1:stealsPerGame "2.4"^^xsd:float ;
+    ns1:team <http://dbpedia.org/resource/Texas_A&M> ;
+    ns1:threePoints "30.1"^^xsd:float .
+
+<http://dbpedia.org/resource/Tony_Delk__1> ns1:assistsPerGame "0.73"^^xsd:float ;
+    ns1:pointPerGame "4.5"^^xsd:float ;
+    ns1:reboundsPerGame "1.9"^^xsd:float ;
+    ns1:season "1992-93"^^xsd:string ;
+    ns1:stealsPerGame "0.57"^^xsd:float .
+
+<http://dbpedia.org/resource/Tony_Delk__2> ns1:assistsPerGame "1.7"^^xsd:float ;
+    ns1:pointPerGame "16.6"^^xsd:float ;
+    ns1:reboundsPerGame "4.5"^^xsd:float ;
+    ns1:season "1993-94"^^xsd:string ;
+    ns1:stealsPerGame "1.9"^^xsd:float .
+
+<http://dbpedia.org/resource/Tony_Delk__3> ns1:assistsPerGame "1.97"^^xsd:float ;
+    ns1:pointPerGame "16.7"^^xsd:float ;
+    ns1:reboundsPerGame "3.3"^^xsd:float ;
+    ns1:season "1994-95"^^xsd:string ;
+    ns1:stealsPerGame "1.6"^^xsd:float .
+
+<http://dbpedia.org/resource/Tony_Delk__4> ns1:assistsPerGame "1.8"^^xsd:float ;
+    ns1:pointPerGame "17.8"^^xsd:float ;
+    ns1:reboundsPerGame "4.2"^^xsd:float ;
+    ns1:season "1995-96"^^xsd:string ;
+    ns1:stealsPerGame "1.9"^^xsd:float .
+

@@ -1,0 +1,3159 @@
+INFO 07/22 03:26:16 PM You're analyzing wiki tables, wiki chapter: it, topic: BasketballPlayer
+INFO 07/22 03:26:18 PM The file which contains the list of resources is: C:\Users\Luca_\PycharmProjects\table-extractor\table_extractor\../Resource_lists/2017_07_22_BasketballPlayer_it.txt
+INFO 07/22 03:26:18 PM Resources found and serialized:  1000
+INFO 07/22 03:26:21 PM Analyzing resource: Magic_Johnson
+INFO 07/22 03:26:21 PM Table under section: Stagione regolare
+INFO 07/22 03:26:21 PM Headers Found
+INFO 07/22 03:26:21 PM Data refined
+INFO 07/22 03:26:21 PM Rows extracted: 14
+INFO 07/22 03:26:21 PM Data extracted for this table: 196
+INFO 07/22 03:26:21 PM Table under section: Play-off
+INFO 07/22 03:26:21 PM Headers Found
+INFO 07/22 03:26:21 PM Data refined
+INFO 07/22 03:26:21 PM Rows extracted: 14
+INFO 07/22 03:26:21 PM Data extracted for this table: 196
+INFO 07/22 03:26:21 PM Table under section: NCAA
+INFO 07/22 03:26:21 PM Headers Found
+INFO 07/22 03:26:21 PM Data refined
+INFO 07/22 03:26:21 PM Rows extracted: 2
+INFO 07/22 03:26:21 PM Data extracted for this table: 28
+INFO 07/22 03:26:21 PM Table under section: Basketligan
+INFO 07/22 03:26:21 PM Headers Found
+INFO 07/22 03:26:21 PM Data refined
+INFO 07/22 03:26:21 PM Rows extracted: 1
+INFO 07/22 03:26:21 PM Data extracted for this table: 14
+INFO 07/22 03:26:21 PM Table under section: Lega NEBL
+INFO 07/22 03:26:21 PM Headers Found
+INFO 07/22 03:26:21 PM Data refined
+INFO 07/22 03:26:21 PM Rows extracted: 1
+INFO 07/22 03:26:21 PM Data extracted for this table: 14
+INFO 07/22 03:26:21 PM Table under section: Nazionale
+INFO 07/22 03:26:21 PM Headers Found
+INFO 07/22 03:26:21 PM Data refined
+INFO 07/22 03:26:21 PM Rows extracted: 20
+INFO 07/22 03:26:21 PM Data extracted for this table: 160
+INFO 07/22 03:26:22 PM New header found: Stagione
+INFO 07/22 03:26:22 PM New header found: Squadra
+INFO 07/22 03:26:22 PM New header found: Campion.
+INFO 07/22 03:26:23 PM New header found: Partite - Pres.
+INFO 07/22 03:26:23 PM New header found: Partite - Titol.
+INFO 07/22 03:26:23 PM New header found: Partite - Minuti
+INFO 07/22 03:26:23 PM New header found: Statistiche tiro - Tiri da 2
+INFO 07/22 03:26:23 PM New header found: Statistiche tiro - Tiri da 3
+INFO 07/22 03:26:23 PM New header found: Statistiche tiro - Liberi
+INFO 07/22 03:26:23 PM New header found: Altre statistiche - Rimb.
+INFO 07/22 03:26:24 PM New header found: Altre statistiche - Assist
+INFO 07/22 03:26:24 PM New header found: Altre statistiche - Rubate
+INFO 07/22 03:26:24 PM New header found: Altre statistiche - Stopp.
+INFO 07/22 03:26:24 PM New header found: Altre statistiche - Punti
+INFO 07/22 03:26:24 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - Data
+INFO 07/22 03:26:24 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - Citt?
+INFO 07/22 03:26:25 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - In casa
+INFO 07/22 03:26:25 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - Risultato
+INFO 07/22 03:26:25 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - Ospiti
+INFO 07/22 03:26:25 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - Competizione
+INFO 07/22 03:26:25 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - Punti
+INFO 07/22 03:26:25 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - Note
+INFO 07/22 03:26:26 PM Analyzing resource: Kareem_Abdul-Jabbar
+INFO 07/22 03:26:26 PM Table under section: Regular season
+INFO 07/22 03:26:26 PM Headers Found
+INFO 07/22 03:26:26 PM Data refined
+INFO 07/22 03:26:26 PM Rows extracted: 20
+INFO 07/22 03:26:26 PM Data extracted for this table: 280
+INFO 07/22 03:26:26 PM Table under section: Playoffs
+INFO 07/22 03:26:26 PM Headers Found
+INFO 07/22 03:26:26 PM Data refined
+INFO 07/22 03:26:26 PM Rows extracted: 18
+INFO 07/22 03:26:26 PM Data extracted for this table: 252
+INFO 07/22 03:26:27 PM Analyzing resource: Cesare_Rubini
+INFO 07/22 03:26:27 PM No Tables found for this resource.
+INFO 07/22 03:26:27 PM Analyzing resource: Jason_Richardson_(cestista)
+INFO 07/22 03:26:27 PM No Tables found for this resource.
+INFO 07/22 03:26:28 PM Analyzing resource: Đorđe_Gagić
+INFO 07/22 03:26:28 PM No Tables found for this resource.
+INFO 07/22 03:26:29 PM Analyzing resource: Rafał_Bigus
+INFO 07/22 03:26:29 PM No Tables found for this resource.
+INFO 07/22 03:26:29 PM Analyzing resource: Maciej_Zieliński
+INFO 07/22 03:26:29 PM No Tables found for this resource.
+INFO 07/22 03:26:30 PM Analyzing resource: Tomasz_Jankowski
+INFO 07/22 03:26:30 PM No Tables found for this resource.
+INFO 07/22 03:26:31 PM Analyzing resource: Ron_Howard_(cestista)
+INFO 07/22 03:26:31 PM No Tables found for this resource.
+INFO 07/22 03:26:31 PM Analyzing resource: Andy_Panko
+INFO 07/22 03:26:31 PM No Tables found for this resource.
+INFO 07/22 03:26:32 PM Analyzing resource: Marreese_Speights
+INFO 07/22 03:26:32 PM No Tables found for this resource.
+INFO 07/22 03:26:33 PM Analyzing resource: Jonas_Mačiulis
+INFO 07/22 03:26:33 PM No Tables found for this resource.
+INFO 07/22 03:26:33 PM Analyzing resource: Tony_Wroten
+INFO 07/22 03:26:33 PM No Tables found for this resource.
+INFO 07/22 03:26:34 PM Analyzing resource: Coleman_Collins
+INFO 07/22 03:26:34 PM No Tables found for this resource.
+INFO 07/22 03:26:34 PM Analyzing resource: Mark_Tyndale
+INFO 07/22 03:26:34 PM No Tables found for this resource.
+INFO 07/22 03:26:35 PM Analyzing resource: Klay_Thompson
+INFO 07/22 03:26:35 PM No Tables found for this resource.
+INFO 07/22 03:26:36 PM Analyzing resource: Yinka_Dare
+INFO 07/22 03:26:36 PM No Tables found for this resource.
+INFO 07/22 03:26:36 PM Analyzing resource: Gaios_Skordilis
+INFO 07/22 03:26:36 PM No Tables found for this resource.
+INFO 07/22 03:26:36 PM Analyzing resource: Luke_Ridnour
+INFO 07/22 03:26:36 PM No Tables found for this resource.
+INFO 07/22 03:26:38 PM Analyzing resource: Michael_Jordan
+INFO 07/22 03:26:38 PM Table under section: Stagione regolare
+INFO 07/22 03:26:38 PM Headers Found
+INFO 07/22 03:26:38 PM Data refined
+INFO 07/22 03:26:38 PM Rows extracted: 16
+INFO 07/22 03:26:38 PM Data extracted for this table: 224
+INFO 07/22 03:26:38 PM Table under section: Play-off
+INFO 07/22 03:26:38 PM Headers Found
+INFO 07/22 03:26:38 PM Data refined
+INFO 07/22 03:26:38 PM Rows extracted: 14
+INFO 07/22 03:26:38 PM Data extracted for this table: 196
+INFO 07/22 03:26:38 PM Table under section: NCAA
+INFO 07/22 03:26:38 PM Headers Found
+INFO 07/22 03:26:38 PM Data refined
+INFO 07/22 03:26:38 PM Rows extracted: 3
+INFO 07/22 03:26:38 PM Data extracted for this table: 42
+INFO 07/22 03:26:38 PM Analyzing resource: Breanna_Stewart
+INFO 07/22 03:26:38 PM No Tables found for this resource.
+INFO 07/22 03:26:39 PM Analyzing resource: Kebu_Stewart
+INFO 07/22 03:26:39 PM No Tables found for this resource.
+INFO 07/22 03:26:40 PM Analyzing resource: Gregg_Marshall
+INFO 07/22 03:26:40 PM No Tables found for this resource.
+INFO 07/22 03:26:41 PM Analyzing resource: Darius_Washington
+INFO 07/22 03:26:41 PM No Tables found for this resource.
+INFO 07/22 03:26:42 PM Analyzing resource: Kevin_Garnett
+INFO 07/22 03:26:42 PM Table under section: Regular season
+INFO 07/22 03:26:42 PM Headers Found
+INFO 07/22 03:26:42 PM Data refined
+INFO 07/22 03:26:42 PM Rows extracted: 23
+INFO 07/22 03:26:42 PM Data extracted for this table: 322
+INFO 07/22 03:26:42 PM Table under section: Play-off
+INFO 07/22 03:26:42 PM Headers Found
+INFO 07/22 03:26:42 PM Data refined
+INFO 07/22 03:26:42 PM Rows extracted: 15
+INFO 07/22 03:26:42 PM Data extracted for this table: 210
+INFO 07/22 03:26:42 PM Analyzing resource: Marco_Mordente
+INFO 07/22 03:26:42 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:26:42 PM Headers Found
+INFO 07/22 03:26:42 PM Data refined
+INFO 07/22 03:26:42 PM Rows extracted: 16
+INFO 07/22 03:26:42 PM Data extracted for this table: 128
+INFO 07/22 03:26:43 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Data
+INFO 07/22 03:26:43 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Citt?
+INFO 07/22 03:26:43 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Italia - In casa
+INFO 07/22 03:26:43 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Risultato
+INFO 07/22 03:26:43 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Ospiti
+INFO 07/22 03:26:44 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Competizione
+INFO 07/22 03:26:44 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Punti
+INFO 07/22 03:26:44 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Note
+INFO 07/22 03:26:44 PM Analyzing resource: Paolo_Rossi_(cestista)
+INFO 07/22 03:26:44 PM No Tables found for this resource.
+INFO 07/22 03:26:45 PM Analyzing resource: Corey_Albano
+INFO 07/22 03:26:45 PM No Tables found for this resource.
+INFO 07/22 03:26:46 PM Analyzing resource: Benedetta_Bagnara
+INFO 07/22 03:26:46 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:26:46 PM Headers Found
+INFO 07/22 03:26:46 PM Data refined
+INFO 07/22 03:26:46 PM Rows extracted: 52
+INFO 07/22 03:26:46 PM Data extracted for this table: 416
+INFO 07/22 03:26:46 PM Analyzing resource: Simone_Bagnoli
+INFO 07/22 03:26:46 PM No Tables found for this resource.
+INFO 07/22 03:26:47 PM Analyzing resource: Gianluca_Basile
+INFO 07/22 03:26:47 PM Table under section: Presenze e punti nei club
+INFO 07/22 03:26:47 PM Headers Found
+INFO 07/22 03:26:47 PM Data refined
+INFO 07/22 03:26:47 PM Rows extracted: 22
+INFO 07/22 03:26:47 PM Data extracted for this table: 308
+INFO 07/22 03:26:47 PM Table under section: Cronologia recente presenze e punti in Nazionale
+INFO 07/22 03:26:47 PM Headers Found
+INFO 07/22 03:26:47 PM Data refined
+INFO 07/22 03:26:47 PM Rows extracted: 44
+INFO 07/22 03:26:47 PM Data extracted for this table: 352
+INFO 07/22 03:26:48 PM Analyzing resource: Donato_Avenia
+INFO 07/22 03:26:48 PM Table under section: Nazionale
+INFO 07/22 03:26:48 PM Headers Found
+INFO 07/22 03:26:48 PM Data refined
+INFO 07/22 03:26:48 PM Rows extracted: 3
+INFO 07/22 03:26:48 PM Data extracted for this table: 24
+INFO 07/22 03:26:48 PM Analyzing resource: Ozell_Jones
+INFO 07/22 03:26:48 PM No Tables found for this resource.
+INFO 07/22 03:26:49 PM Analyzing resource: Stratos_Perperoglou
+INFO 07/22 03:26:49 PM No Tables found for this resource.
+INFO 07/22 03:26:50 PM Analyzing resource: Steve_Bucknall
+INFO 07/22 03:26:50 PM No Tables found for this resource.
+INFO 07/22 03:26:50 PM Analyzing resource: Zygmunt_Olesiewicz
+INFO 07/22 03:26:50 PM No Tables found for this resource.
+INFO 07/22 03:26:51 PM Analyzing resource: Billy_McKinney
+INFO 07/22 03:26:51 PM No Tables found for this resource.
+INFO 07/22 03:26:52 PM Analyzing resource: Dane_Watts
+INFO 07/22 03:26:52 PM No Tables found for this resource.
+INFO 07/22 03:26:52 PM Analyzing resource: Brett_Vroman
+INFO 07/22 03:26:52 PM No Tables found for this resource.
+INFO 07/22 03:26:53 PM Analyzing resource: Bob_Kinney
+INFO 07/22 03:26:53 PM No Tables found for this resource.
+INFO 07/22 03:26:54 PM Analyzing resource: Rod_Strickland
+INFO 07/22 03:26:54 PM No Tables found for this resource.
+INFO 07/22 03:26:54 PM Analyzing resource: Anthony_King
+INFO 07/22 03:26:54 PM No Tables found for this resource.
+INFO 07/22 03:26:55 PM Analyzing resource: Solomon_Jones
+INFO 07/22 03:26:55 PM No Tables found for this resource.
+INFO 07/22 03:26:56 PM Analyzing resource: Fernando_Sousa
+INFO 07/22 03:26:56 PM No Tables found for this resource.
+INFO 07/22 03:26:56 PM Analyzing resource: Joe_Cooke
+INFO 07/22 03:26:56 PM No Tables found for this resource.
+INFO 07/22 03:26:57 PM Analyzing resource: Odile_Santaniello
+INFO 07/22 03:26:57 PM No Tables found for this resource.
+INFO 07/22 03:26:58 PM Analyzing resource: Derek_Harper
+INFO 07/22 03:26:58 PM No Tables found for this resource.
+INFO 07/22 03:26:58 PM Analyzing resource: Craig_Bradshaw
+INFO 07/22 03:26:58 PM No Tables found for this resource.
+INFO 07/22 03:26:59 PM Analyzing resource: Donatas_Slanina
+INFO 07/22 03:26:59 PM No Tables found for this resource.
+INFO 07/22 03:27:00 PM Analyzing resource: Wyndol_Gray
+INFO 07/22 03:27:00 PM No Tables found for this resource.
+INFO 07/22 03:27:00 PM Analyzing resource: Kevin_Johnson
+INFO 07/22 03:27:00 PM No Tables found for this resource.
+INFO 07/22 03:27:01 PM Analyzing resource: Del_Harris
+INFO 07/22 03:27:01 PM No Tables found for this resource.
+INFO 07/22 03:27:02 PM Analyzing resource: Cedric_Ceballos
+INFO 07/22 03:27:02 PM No Tables found for this resource.
+INFO 07/22 03:27:02 PM Analyzing resource: Paul_Westphal
+INFO 07/22 03:27:02 PM No Tables found for this resource.
+INFO 07/22 03:27:03 PM Analyzing resource: Danny_Ainge
+INFO 07/22 03:27:03 PM Table under section: Regular season
+INFO 07/22 03:27:03 PM Headers Found
+INFO 07/22 03:27:03 PM Data refined
+INFO 07/22 03:27:03 PM Rows extracted: 17
+INFO 07/22 03:27:03 PM Data extracted for this table: 221
+INFO 07/22 03:27:03 PM Table under section: Play-off
+INFO 07/22 03:27:03 PM Headers Found
+INFO 07/22 03:27:03 PM Data refined
+INFO 07/22 03:27:03 PM Rows extracted: 13
+INFO 07/22 03:27:03 PM Data extracted for this table: 169
+INFO 07/22 03:27:03 PM New header found: Anno
+INFO 07/22 03:27:03 PM New header found: PG
+INFO 07/22 03:27:04 PM New header found: PI
+INFO 07/22 03:27:04 PM New header found: MPP
+INFO 07/22 03:27:04 PM New header found: FG%
+INFO 07/22 03:27:04 PM New header found: 3P%
+INFO 07/22 03:27:04 PM New header found: TL%
+INFO 07/22 03:27:05 PM New header found: RPP
+INFO 07/22 03:27:05 PM New header found: APP
+INFO 07/22 03:27:05 PM New header found: PRPP
+INFO 07/22 03:27:05 PM New header found: SPP
+INFO 07/22 03:27:06 PM New header found: PPP
+INFO 07/22 03:27:06 PM Analyzing resource: Charles_Oakley
+INFO 07/22 03:27:06 PM No Tables found for this resource.
+INFO 07/22 03:27:07 PM Analyzing resource: Jeff_Malone
+INFO 07/22 03:27:07 PM No Tables found for this resource.
+INFO 07/22 03:27:08 PM Analyzing resource: Sergej_Belov
+INFO 07/22 03:27:08 PM No Tables found for this resource.
+INFO 07/22 03:27:08 PM Analyzing resource: Robert_Lowery
+INFO 07/22 03:27:08 PM No Tables found for this resource.
+INFO 07/22 03:27:09 PM Analyzing resource: Bob_Douglas
+INFO 07/22 03:27:09 PM No Tables found for this resource.
+INFO 07/22 03:27:10 PM Analyzing resource: Dino_Meneghin
+INFO 07/22 03:27:10 PM No Tables found for this resource.
+INFO 07/22 03:27:10 PM Analyzing resource: Patrick_Ewing
+INFO 07/22 03:27:10 PM Table under section: Regular season
+INFO 07/22 03:27:10 PM Headers Found
+INFO 07/22 03:27:10 PM Data refined
+INFO 07/22 03:27:10 PM Rows extracted: 17
+INFO 07/22 03:27:10 PM Data extracted for this table: 238
+INFO 07/22 03:27:10 PM Table under section: Play-off
+INFO 07/22 03:27:10 PM Headers Found
+INFO 07/22 03:27:10 PM Data refined
+INFO 07/22 03:27:10 PM Rows extracted: 14
+INFO 07/22 03:27:10 PM Data extracted for this table: 196
+INFO 07/22 03:27:12 PM Analyzing resource: Larry_Bird
+INFO 07/22 03:27:12 PM Table under section: Regular season
+INFO 07/22 03:27:12 PM Headers Found
+INFO 07/22 03:27:12 PM Data refined
+INFO 07/22 03:27:12 PM Rows extracted: 13
+INFO 07/22 03:27:12 PM Data extracted for this table: 182
+INFO 07/22 03:27:12 PM Table under section: Play-off
+INFO 07/22 03:27:12 PM Headers Found
+INFO 07/22 03:27:12 PM Data refined
+INFO 07/22 03:27:12 PM Rows extracted: 12
+INFO 07/22 03:27:12 PM Data extracted for this table: 168
+INFO 07/22 03:27:12 PM Analyzing resource: Julius_Erving
+INFO 07/22 03:27:12 PM No Tables found for this resource.
+INFO 07/22 03:27:13 PM Analyzing resource: Joe_Dumars
+INFO 07/22 03:27:13 PM No Tables found for this resource.
+INFO 07/22 03:27:14 PM Analyzing resource: Clyde_Drexler
+INFO 07/22 03:27:14 PM No Tables found for this resource.
+INFO 07/22 03:27:15 PM Analyzing resource: John_Stockton
+INFO 07/22 03:27:15 PM No Tables found for this resource.
+INFO 07/22 03:27:16 PM Analyzing resource: Oscar_Robertson
+INFO 07/22 03:27:16 PM No Tables found for this resource.
+INFO 07/22 03:27:17 PM Analyzing resource: James_Naismith
+INFO 07/22 03:27:17 PM Table under section: Statistiche
+INFO 07/22 03:27:17 PM Headers Found
+INFO 07/22 03:27:17 PM Data refined
+INFO 07/22 03:27:17 PM Rows extracted: 9
+INFO 07/22 03:27:17 PM Data extracted for this table: 47
+INFO 07/22 03:27:17 PM New header found: Statistiche - Lega
+INFO 07/22 03:27:17 PM New header found: Statistiche - G
+INFO 07/22 03:27:17 PM New header found: Statistiche - V
+INFO 07/22 03:27:17 PM New header found: Statistiche - P
+INFO 07/22 03:27:18 PM New header found: Statistiche - V-P%
+INFO 07/22 03:27:19 PM Analyzing resource: Grant_Hill
+INFO 07/22 03:27:19 PM Table under section: Statistiche
+INFO 07/22 03:27:19 PM Headers Found
+INFO 07/22 03:27:19 PM Data refined
+INFO 07/22 03:27:19 PM Rows extracted: 18
+INFO 07/22 03:27:19 PM Data extracted for this table: 252
+INFO 07/22 03:27:19 PM Table under section: Statistiche
+INFO 07/22 03:27:19 PM Headers Found
+INFO 07/22 03:27:19 PM Data refined
+INFO 07/22 03:27:19 PM Rows extracted: 8
+INFO 07/22 03:27:19 PM Data extracted for this table: 112
+INFO 07/22 03:27:19 PM Table under section: Record individuali
+INFO 07/22 03:27:19 PM Headers Found
+INFO 07/22 03:27:19 PM Data refined
+INFO 07/22 03:27:19 PM Rows extracted: 14
+INFO 07/22 03:27:19 PM Data extracted for this table: 28
+INFO 07/22 03:27:19 PM New header found: Statistica
+INFO 07/22 03:27:19 PM New header found: NBA
+INFO 07/22 03:27:20 PM Analyzing resource: Vince_Carter
+INFO 07/22 03:27:20 PM No Tables found for this resource.
+INFO 07/22 03:27:20 PM Analyzing resource: Alphonso_Ford
+INFO 07/22 03:27:20 PM No Tables found for this resource.
+INFO 07/22 03:27:21 PM Analyzing resource: Davide_Ancilotto
+INFO 07/22 03:27:21 PM No Tables found for this resource.
+INFO 07/22 03:27:22 PM Analyzing resource: Scottie_Pippen
+INFO 07/22 03:27:22 PM Table under section: Regular season
+INFO 07/22 03:27:22 PM Headers Found
+INFO 07/22 03:27:22 PM Data refined
+INFO 07/22 03:27:22 PM Rows extracted: 17
+INFO 07/22 03:27:22 PM Data extracted for this table: 238
+INFO 07/22 03:27:22 PM Table under section: Play-off
+INFO 07/22 03:27:22 PM Headers Found
+INFO 07/22 03:27:22 PM Data refined
+INFO 07/22 03:27:22 PM Rows extracted: 16
+INFO 07/22 03:27:22 PM Data extracted for this table: 224
+INFO 07/22 03:27:22 PM Analyzing resource: Chuck_Daly
+INFO 07/22 03:27:22 PM No Tables found for this resource.
+INFO 07/22 03:27:23 PM Analyzing resource: Charles_Barkley
+INFO 07/22 03:27:23 PM Table under section: Regular season
+INFO 07/22 03:27:23 PM Headers Found
+INFO 07/22 03:27:23 PM Data refined
+INFO 07/22 03:27:23 PM Rows extracted: 16
+INFO 07/22 03:27:23 PM Data extracted for this table: 224
+INFO 07/22 03:27:23 PM Table under section: Play-off
+INFO 07/22 03:27:23 PM Headers Found
+INFO 07/22 03:27:23 PM Data refined
+INFO 07/22 03:27:23 PM Rows extracted: 13
+INFO 07/22 03:27:23 PM Data extracted for this table: 182
+INFO 07/22 03:27:24 PM Analyzing resource: Phil_Jackson
+INFO 07/22 03:27:24 PM No Tables found for this resource.
+INFO 07/22 03:27:24 PM Analyzing resource: Stephon_Marbury
+INFO 07/22 03:27:24 PM No Tables found for this resource.
+INFO 07/22 03:27:25 PM Analyzing resource: Wilt_Chamberlain
+INFO 07/22 03:27:25 PM No Tables found for this resource.
+INFO 07/22 03:27:26 PM Analyzing resource: Antoine_Walker
+INFO 07/22 03:27:26 PM No Tables found for this resource.
+INFO 07/22 03:27:26 PM Analyzing resource: Oscar_Schmidt
+INFO 07/22 03:27:26 PM No Tables found for this resource.
+INFO 07/22 03:27:27 PM Analyzing resource: Sam_Cassell
+INFO 07/22 03:27:27 PM No Tables found for this resource.
+INFO 07/22 03:27:27 PM Analyzing resource: Giacomo_Galanda
+INFO 07/22 03:27:27 PM No Tables found for this resource.
+INFO 07/22 03:27:28 PM Analyzing resource: Andrew_Toney
+INFO 07/22 03:27:28 PM No Tables found for this resource.
+INFO 07/22 03:27:29 PM Analyzing resource: Casey_Shaw
+INFO 07/22 03:27:29 PM No Tables found for this resource.
+INFO 07/22 03:27:29 PM Analyzing resource: Joseph_Blair
+INFO 07/22 03:27:29 PM No Tables found for this resource.
+INFO 07/22 03:27:30 PM Analyzing resource: Maurice_Cheeks
+INFO 07/22 03:27:30 PM No Tables found for this resource.
+INFO 07/22 03:27:31 PM Analyzing resource: Billy_Cunningham
+INFO 07/22 03:27:31 PM No Tables found for this resource.
+INFO 07/22 03:27:31 PM Analyzing resource: Aldo_Ossola
+INFO 07/22 03:27:31 PM No Tables found for this resource.
+INFO 07/22 03:27:32 PM Analyzing resource: Eddie_Shannon
+INFO 07/22 03:27:32 PM No Tables found for this resource.
+INFO 07/22 03:27:33 PM Analyzing resource: Karl_Malone
+INFO 07/22 03:27:33 PM Table under section: Regular season
+INFO 07/22 03:27:33 PM Headers Found
+INFO 07/22 03:27:33 PM Data refined
+INFO 07/22 03:27:33 PM Rows extracted: 19
+INFO 07/22 03:27:33 PM Data extracted for this table: 266
+INFO 07/22 03:27:33 PM Table under section: Play-off
+INFO 07/22 03:27:33 PM Headers Found
+INFO 07/22 03:27:33 PM Data refined
+INFO 07/22 03:27:33 PM Rows extracted: 19
+INFO 07/22 03:27:33 PM Data extracted for this table: 266
+INFO 07/22 03:27:34 PM Analyzing resource: Shaquille_O'Neal
+INFO 07/22 03:27:34 PM Table under section: Regular season
+INFO 07/22 03:27:34 PM Headers Found
+INFO 07/22 03:27:34 PM Data refined
+INFO 07/22 03:27:34 PM Rows extracted: 20
+INFO 07/22 03:27:34 PM Data extracted for this table: 280
+INFO 07/22 03:27:34 PM Table under section: Playoffs
+INFO 07/22 03:27:34 PM Headers Found
+INFO 07/22 03:27:34 PM Data refined
+INFO 07/22 03:27:34 PM Rows extracted: 16
+INFO 07/22 03:27:34 PM Data extracted for this table: 224
+INFO 07/22 03:27:35 PM Analyzing resource: Dwyane_Wade
+INFO 07/22 03:27:35 PM Table under section: Regular season
+INFO 07/22 03:27:35 PM Headers Found
+INFO 07/22 03:27:35 PM Data refined
+INFO 07/22 03:27:35 PM Rows extracted: 11
+INFO 07/22 03:27:35 PM Data extracted for this table: 154
+INFO 07/22 03:27:35 PM Table under section: Play-off
+INFO 07/22 03:27:35 PM Headers Found
+INFO 07/22 03:27:35 PM Data refined
+INFO 07/22 03:27:35 PM Rows extracted: 10
+INFO 07/22 03:27:35 PM Data extracted for this table: 140
+INFO 07/22 03:27:36 PM Analyzing resource: Arvydas_Sabonis
+INFO 07/22 03:27:36 PM No Tables found for this resource.
+INFO 07/22 03:27:37 PM Analyzing resource: Roberto_Brunamonti
+INFO 07/22 03:27:37 PM No Tables found for this resource.
+INFO 07/22 03:27:38 PM Analyzing resource: Steve_Nash
+INFO 07/22 03:27:38 PM Table under section: Regular season
+INFO 07/22 03:27:38 PM Headers Found
+INFO 07/22 03:27:38 PM Data refined
+INFO 07/22 03:27:38 PM Rows extracted: 18
+INFO 07/22 03:27:38 PM Data extracted for this table: 252
+INFO 07/22 03:27:38 PM Table under section: Play-off
+INFO 07/22 03:27:38 PM Headers Found
+INFO 07/22 03:27:38 PM Data refined
+INFO 07/22 03:27:38 PM Rows extracted: 12
+INFO 07/22 03:27:38 PM Data extracted for this table: 168
+INFO 07/22 03:27:39 PM Analyzing resource: Amar'e_Stoudemire
+INFO 07/22 03:27:39 PM Table under section: Regular season
+INFO 07/22 03:27:39 PM Headers Found
+INFO 07/22 03:27:39 PM Data refined
+INFO 07/22 03:27:39 PM Rows extracted: 17
+INFO 07/22 03:27:39 PM Data extracted for this table: 255
+INFO 07/22 03:27:39 PM Table under section: Play-off
+INFO 07/22 03:27:39 PM Headers Found
+INFO 07/22 03:27:39 PM Data refined
+INFO 07/22 03:27:39 PM Rows extracted: 10
+INFO 07/22 03:27:39 PM Data extracted for this table: 150
+INFO 07/22 03:27:39 PM New header found: MPG
+INFO 07/22 03:27:39 PM New header found: FT%
+INFO 07/22 03:27:40 PM New header found: OFF
+INFO 07/22 03:27:40 PM New header found: DIF
+INFO 07/22 03:27:40 PM New header found: RPG
+INFO 07/22 03:27:40 PM New header found: APG
+INFO 07/22 03:27:41 PM New header found: PRPG
+INFO 07/22 03:27:41 PM New header found: SPG
+INFO 07/22 03:27:41 PM New header found: PPG
+INFO 07/22 03:27:41 PM New header found: Year
+INFO 07/22 03:27:41 PM New header found: Team
+INFO 07/22 03:27:42 PM Analyzing resource: Predrag_Danilović
+INFO 07/22 03:27:42 PM No Tables found for this resource.
+INFO 07/22 03:27:43 PM Analyzing resource: Tony_Parker
+INFO 07/22 03:27:43 PM Table under section: Regular season
+INFO 07/22 03:27:43 PM Headers Found
+INFO 07/22 03:27:43 PM Data refined
+INFO 07/22 03:27:43 PM Rows extracted: 15
+INFO 07/22 03:27:43 PM Data extracted for this table: 210
+INFO 07/22 03:27:43 PM Table under section: Play-off
+INFO 07/22 03:27:43 PM Headers Found
+INFO 07/22 03:27:43 PM Data refined
+INFO 07/22 03:27:43 PM Rows extracted: 15
+INFO 07/22 03:27:43 PM Data extracted for this table: 210
+INFO 07/22 03:27:43 PM Analyzing resource: Brent_Barry
+INFO 07/22 03:27:43 PM No Tables found for this resource.
+INFO 07/22 03:27:45 PM Analyzing resource: Denis_Marconato
+INFO 07/22 03:27:45 PM No Tables found for this resource.
+INFO 07/22 03:27:45 PM Analyzing resource: Riccardo_Pittis
+INFO 07/22 03:27:45 PM No Tables found for this resource.
+INFO 07/22 03:27:46 PM Analyzing resource: Tracy_McGrady
+INFO 07/22 03:27:46 PM No Tables found for this resource.
+INFO 07/22 03:27:46 PM Analyzing resource: Massimo_Bulleri
+INFO 07/22 03:27:46 PM No Tables found for this resource.
+INFO 07/22 03:27:47 PM Analyzing resource: Moses_Malone
+INFO 07/22 03:27:47 PM Table under section: Regular season
+INFO 07/22 03:27:47 PM Headers Found
+INFO 07/22 03:27:47 PM Data refined
+INFO 07/22 03:27:47 PM Rows extracted: 20
+INFO 07/22 03:27:47 PM Data extracted for this table: 280
+INFO 07/22 03:27:47 PM Table under section: Play-off
+INFO 07/22 03:27:47 PM Headers Found
+INFO 07/22 03:27:47 PM Data refined
+INFO 07/22 03:27:47 PM Rows extracted: 12
+INFO 07/22 03:27:47 PM Data extracted for this table: 168
+INFO 07/22 03:27:48 PM Analyzing resource: David_Robinson
+INFO 07/22 03:27:48 PM Table under section: Regular season
+INFO 07/22 03:27:48 PM Headers Found
+INFO 07/22 03:27:48 PM Data refined
+INFO 07/22 03:27:48 PM Rows extracted: 14
+INFO 07/22 03:27:48 PM Data extracted for this table: 196
+INFO 07/22 03:27:48 PM Table under section: Playoff
+INFO 07/22 03:27:48 PM Headers Found
+INFO 07/22 03:27:48 PM Data refined
+INFO 07/22 03:27:48 PM Rows extracted: 12
+INFO 07/22 03:27:48 PM Data extracted for this table: 168
+INFO 07/22 03:27:49 PM Analyzing resource: Hakeem_Olajuwon
+INFO 07/22 03:27:49 PM Table under section: Regular season
+INFO 07/22 03:27:49 PM Headers Found
+INFO 07/22 03:27:49 PM Data refined
+INFO 07/22 03:27:49 PM Rows extracted: 18
+INFO 07/22 03:27:49 PM Data extracted for this table: 252
+INFO 07/22 03:27:49 PM Table under section: Play-off
+INFO 07/22 03:27:49 PM Headers Found
+INFO 07/22 03:27:49 PM Data refined
+INFO 07/22 03:27:49 PM Rows extracted: 15
+INFO 07/22 03:27:49 PM Data extracted for this table: 210
+INFO 07/22 03:27:50 PM Analyzing resource: Bill_Walton
+INFO 07/22 03:27:50 PM No Tables found for this resource.
+INFO 07/22 03:27:50 PM Analyzing resource: Bob_McAdoo
+INFO 07/22 03:27:50 PM No Tables found for this resource.
+INFO 07/22 03:27:52 PM Analyzing resource: Dave_Cowens
+INFO 07/22 03:27:52 PM No Tables found for this resource.
+INFO 07/22 03:27:52 PM Analyzing resource: Willis_Reed
+INFO 07/22 03:27:52 PM No Tables found for this resource.
+INFO 07/22 03:27:53 PM Analyzing resource: Bob_Pettit
+INFO 07/22 03:27:53 PM Table under section: Regular season
+INFO 07/22 03:27:53 PM Headers Found
+INFO 07/22 03:27:53 PM Data refined
+INFO 07/22 03:27:53 PM Rows extracted: 11
+INFO 07/22 03:27:53 PM Data extracted for this table: 154
+INFO 07/22 03:27:53 PM Table under section: Play-off
+INFO 07/22 03:27:53 PM Headers Found
+INFO 07/22 03:27:53 PM Data refined
+INFO 07/22 03:27:53 PM Rows extracted: 9
+INFO 07/22 03:27:53 PM Data extracted for this table: 126
+INFO 07/22 03:27:54 PM Analyzing resource: Bob_Cousy
+INFO 07/22 03:27:54 PM No Tables found for this resource.
+INFO 07/22 03:27:54 PM Analyzing resource: Wes_Unseld
+INFO 07/22 03:27:54 PM No Tables found for this resource.
+INFO 07/22 03:27:55 PM Analyzing resource: Yao_Ming
+INFO 07/22 03:27:55 PM Table under section: Regular season
+INFO 07/22 03:27:55 PM Headers Found
+INFO 07/22 03:27:55 PM Data refined
+INFO 07/22 03:27:55 PM Rows extracted: 9
+INFO 07/22 03:27:55 PM Data extracted for this table: 126
+INFO 07/22 03:27:55 PM Table under section: Play-off
+INFO 07/22 03:27:55 PM Headers Found
+INFO 07/22 03:27:55 PM Data refined
+INFO 07/22 03:27:55 PM Rows extracted: 4
+INFO 07/22 03:27:55 PM Data extracted for this table: 56
+INFO 07/22 03:27:56 PM Analyzing resource: Duane_Woodward
+INFO 07/22 03:27:56 PM No Tables found for this resource.
+INFO 07/22 03:27:56 PM Analyzing resource: Paul_Arizin
+INFO 07/22 03:27:56 PM No Tables found for this resource.
+INFO 07/22 03:27:57 PM Analyzing resource: Nate_Archibald
+INFO 07/22 03:27:57 PM No Tables found for this resource.
+INFO 07/22 03:27:58 PM Analyzing resource: Kobe_Bryant
+INFO 07/22 03:27:58 PM Table under section: Regular season
+INFO 07/22 03:27:58 PM Headers Found
+INFO 07/22 03:27:58 PM Data refined
+INFO 07/22 03:27:58 PM Rows extracted: 21
+INFO 07/22 03:27:58 PM Data extracted for this table: 294
+INFO 07/22 03:27:58 PM Table under section: Play-off
+INFO 07/22 03:27:58 PM Headers Found
+INFO 07/22 03:27:58 PM Data refined
+INFO 07/22 03:27:58 PM Rows extracted: 16
+INFO 07/22 03:27:58 PM Data extracted for this table: 224
+INFO 07/22 03:27:58 PM Table under section: Nazionale
+INFO 07/22 03:27:58 PM Headers Found
+INFO 07/22 03:27:58 PM Data refined
+INFO 07/22 03:27:58 PM Rows extracted: 37
+INFO 07/22 03:27:58 PM Data extracted for this table: 296
+INFO 07/22 03:27:59 PM Analyzing resource: Matteo_Soragna
+INFO 07/22 03:27:59 PM Table under section: Presenze e punti nei club
+INFO 07/22 03:27:59 PM Headers Found
+INFO 07/22 03:27:59 PM Data refined
+INFO 07/22 03:27:59 PM Rows extracted: 22
+INFO 07/22 03:27:59 PM Data extracted for this table: 308
+INFO 07/22 03:27:59 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:27:59 PM Headers Found
+INFO 07/22 03:27:59 PM Data refined
+INFO 07/22 03:27:59 PM Rows extracted: 11
+INFO 07/22 03:27:59 PM Data extracted for this table: 88
+INFO 07/22 03:28:00 PM Analyzing resource: Pat_Riley
+INFO 07/22 03:28:00 PM No Tables found for this resource.
+INFO 07/22 03:28:00 PM Analyzing resource: Spud_Webb
+INFO 07/22 03:28:00 PM No Tables found for this resource.
+INFO 07/22 03:28:01 PM Analyzing resource: Dejan_Bodiroga
+INFO 07/22 03:28:01 PM No Tables found for this resource.
+INFO 07/22 03:28:02 PM Analyzing resource: LeBron_James
+INFO 07/22 03:28:02 PM Table under section: Regular season
+INFO 07/22 03:28:02 PM Headers Found
+INFO 07/22 03:28:02 PM Data refined
+INFO 07/22 03:28:02 PM Rows extracted: 14
+INFO 07/22 03:28:02 PM Data extracted for this table: 196
+INFO 07/22 03:28:02 PM Table under section: Play-off
+INFO 07/22 03:28:02 PM Headers Found
+INFO 07/22 03:28:02 PM Data refined
+INFO 07/22 03:28:02 PM Rows extracted: 12
+INFO 07/22 03:28:02 PM Data extracted for this table: 168
+INFO 07/22 03:28:04 PM Analyzing resource: Dražen_Petrović
+INFO 07/22 03:28:04 PM No Tables found for this resource.
+INFO 07/22 03:28:04 PM Analyzing resource: Bobby_Jones_(cestista_1951)
+INFO 07/22 03:28:04 PM No Tables found for this resource.
+INFO 07/22 03:28:05 PM Analyzing resource: Chet_Walker
+INFO 07/22 03:28:05 PM No Tables found for this resource.
+INFO 07/22 03:28:05 PM Analyzing resource: Hal_Greer
+INFO 07/22 03:28:05 PM No Tables found for this resource.
+INFO 07/22 03:28:06 PM Analyzing resource: Predrag_Stojaković
+INFO 07/22 03:28:06 PM No Tables found for this resource.
+INFO 07/22 03:28:07 PM Analyzing resource: Žydrūnas_Ilgauskas
+INFO 07/22 03:28:07 PM No Tables found for this resource.
+INFO 07/22 03:28:08 PM Analyzing resource: Aleksandar_Đorđević
+INFO 07/22 03:28:08 PM No Tables found for this resource.
+INFO 07/22 03:28:08 PM Analyzing resource: Tim_Duncan
+INFO 07/22 03:28:08 PM Table under section: Regular season
+INFO 07/22 03:28:08 PM Headers Found
+INFO 07/22 03:28:08 PM Data refined
+INFO 07/22 03:28:08 PM Rows extracted: 21
+INFO 07/22 03:28:08 PM Data extracted for this table: 315
+INFO 07/22 03:28:08 PM Table under section: Play-off
+INFO 07/22 03:28:08 PM Headers Found
+INFO 07/22 03:28:08 PM Data refined
+INFO 07/22 03:28:08 PM Rows extracted: 19
+INFO 07/22 03:28:08 PM Data extracted for this table: 285
+INFO 07/22 03:28:09 PM Analyzing resource: Emanuel_Ginóbili
+INFO 07/22 03:28:09 PM Table under section: Legenda
+INFO 07/22 03:28:09 PM Headers Found
+INFO 07/22 03:28:09 PM Data refined
+INFO 07/22 03:28:09 PM Rows extracted: 2
+INFO 07/22 03:28:09 PM Data extracted for this table: 22
+INFO 07/22 03:28:09 PM Table under section: Stagione regolare
+INFO 07/22 03:28:09 PM Headers Found
+INFO 07/22 03:28:09 PM Data refined
+INFO 07/22 03:28:09 PM Rows extracted: 17
+INFO 07/22 03:28:09 PM Data extracted for this table: 221
+INFO 07/22 03:28:09 PM Table under section: Playoffs
+INFO 07/22 03:28:09 PM Headers Found
+INFO 07/22 03:28:09 PM Data refined
+INFO 07/22 03:28:09 PM Rows extracted: 15
+INFO 07/22 03:28:09 PM Data extracted for this table: 195
+INFO 07/22 03:28:10 PM New header found: BPG
+INFO 07/22 03:28:10 PM New header found: Edizione
+INFO 07/22 03:28:10 PM Analyzing resource: Jonathan_Tabu
+INFO 07/22 03:28:10 PM No Tables found for this resource.
+INFO 07/22 03:28:11 PM Analyzing resource: Raymond_Dalmau
+INFO 07/22 03:28:11 PM No Tables found for this resource.
+INFO 07/22 03:28:11 PM Analyzing resource: John_Hazen
+INFO 07/22 03:28:11 PM No Tables found for this resource.
+INFO 07/22 03:28:12 PM Analyzing resource: Jrue_Holiday
+INFO 07/22 03:28:12 PM Table under section: Regular season
+INFO 07/22 03:28:12 PM Headers Found
+INFO 07/22 03:28:12 PM Data refined
+INFO 07/22 03:28:12 PM Rows extracted: 4
+INFO 07/22 03:28:12 PM Data extracted for this table: 56
+INFO 07/22 03:28:12 PM Table under section: Play-off
+INFO 07/22 03:28:12 PM Headers Found
+INFO 07/22 03:28:12 PM Data refined
+INFO 07/22 03:28:12 PM Rows extracted: 2
+INFO 07/22 03:28:12 PM Data extracted for this table: 28
+INFO 07/22 03:28:12 PM Analyzing resource: Philip_Szanyiel
+INFO 07/22 03:28:12 PM No Tables found for this resource.
+INFO 07/22 03:28:13 PM Analyzing resource: Souarata_Cissé
+INFO 07/22 03:28:13 PM No Tables found for this resource.
+INFO 07/22 03:28:14 PM Analyzing resource: Cindy_Lima
+INFO 07/22 03:28:14 PM No Tables found for this resource.
+INFO 07/22 03:28:14 PM Analyzing resource: Bekir_Yarangüme
+INFO 07/22 03:28:14 PM No Tables found for this resource.
+INFO 07/22 03:28:15 PM Analyzing resource: Jennifer_Rizzotti
+INFO 07/22 03:28:15 PM No Tables found for this resource.
+INFO 07/22 03:28:15 PM Analyzing resource: Hollie_Grima
+INFO 07/22 03:28:15 PM No Tables found for this resource.
+INFO 07/22 03:28:16 PM Analyzing resource: Jordan_Hasquet
+INFO 07/22 03:28:16 PM No Tables found for this resource.
+INFO 07/22 03:28:17 PM Analyzing resource: Bart_Kofoed
+INFO 07/22 03:28:17 PM No Tables found for this resource.
+INFO 07/22 03:28:18 PM Analyzing resource: Elvis_Rolle
+INFO 07/22 03:28:18 PM No Tables found for this resource.
+INFO 07/22 03:28:18 PM Analyzing resource: Vladimir_Lučić
+INFO 07/22 03:28:18 PM No Tables found for this resource.
+INFO 07/22 03:28:18 PM Analyzing resource: Tamar_Slay
+INFO 07/22 03:28:18 PM No Tables found for this resource.
+INFO 07/22 03:28:19 PM Analyzing resource: Tamara_Moore
+INFO 07/22 03:28:19 PM No Tables found for this resource.
+INFO 07/22 03:28:20 PM Analyzing resource: Paola_Mazzali
+INFO 07/22 03:28:20 PM No Tables found for this resource.
+INFO 07/22 03:28:20 PM Analyzing resource: Ettore_Messina
+INFO 07/22 03:28:20 PM No Tables found for this resource.
+INFO 07/22 03:28:21 PM Analyzing resource: Laura_Gorla
+INFO 07/22 03:28:21 PM Table under section: Statistiche
+INFO 07/22 03:28:21 PM Headers Found
+INFO 07/22 03:28:21 PM Data refined
+INFO 07/22 03:28:21 PM Rows extracted: 5
+INFO 07/22 03:28:21 PM Data extracted for this table: 70
+INFO 07/22 03:28:22 PM Analyzing resource: Rubén_Magnano
+INFO 07/22 03:28:22 PM No Tables found for this resource.
+INFO 07/22 03:28:22 PM Analyzing resource: Laia_Palau
+INFO 07/22 03:28:22 PM No Tables found for this resource.
+INFO 07/22 03:28:23 PM Analyzing resource: Adrian_Griffin
+INFO 07/22 03:28:23 PM No Tables found for this resource.
+INFO 07/22 03:28:24 PM Analyzing resource: Blake_Griffin
+INFO 07/22 03:28:24 PM Table under section: Regular season
+INFO 07/22 03:28:24 PM Headers Found
+INFO 07/22 03:28:24 PM Data refined
+INFO 07/22 03:28:24 PM Rows extracted: 5
+INFO 07/22 03:28:24 PM Data extracted for this table: 70
+INFO 07/22 03:28:24 PM Table under section: Play-off
+INFO 07/22 03:28:24 PM Headers Found
+INFO 07/22 03:28:24 PM Data refined
+INFO 07/22 03:28:24 PM Rows extracted: 3
+INFO 07/22 03:28:24 PM Data extracted for this table: 42
+INFO 07/22 03:28:24 PM Analyzing resource: Eddie_Griffin_(cestista)
+INFO 07/22 03:28:24 PM No Tables found for this resource.
+INFO 07/22 03:28:25 PM Analyzing resource: Greg_Griffin
+INFO 07/22 03:28:25 PM No Tables found for this resource.
+INFO 07/22 03:28:26 PM Analyzing resource: Kelsey_Griffin
+INFO 07/22 03:28:26 PM No Tables found for this resource.
+INFO 07/22 03:28:26 PM Analyzing resource: Paul_Griffin
+INFO 07/22 03:28:26 PM No Tables found for this resource.
+INFO 07/22 03:28:27 PM Analyzing resource: Rod_Griffin
+INFO 07/22 03:28:27 PM No Tables found for this resource.
+INFO 07/22 03:28:27 PM Analyzing resource: Taylor_Griffin
+INFO 07/22 03:28:27 PM No Tables found for this resource.
+INFO 07/22 03:28:28 PM Analyzing resource: Gianni_Molina
+INFO 07/22 03:28:28 PM No Tables found for this resource.
+INFO 07/22 03:28:28 PM Analyzing resource: Dick_Motta
+INFO 07/22 03:28:28 PM No Tables found for this resource.
+INFO 07/22 03:28:29 PM Analyzing resource: Silvano_Motta
+INFO 07/22 03:28:29 PM No Tables found for this resource.
+INFO 07/22 03:28:30 PM Analyzing resource: Alberto_Rossini
+INFO 07/22 03:28:30 PM No Tables found for this resource.
+INFO 07/22 03:28:30 PM Analyzing resource: Lou_Rossini
+INFO 07/22 03:28:30 PM No Tables found for this resource.
+INFO 07/22 03:28:31 PM Analyzing resource: Patricio_Prato
+INFO 07/22 03:28:31 PM No Tables found for this resource.
+INFO 07/22 03:28:32 PM Analyzing resource: Antonello_Riva
+INFO 07/22 03:28:32 PM No Tables found for this resource.
+INFO 07/22 03:28:32 PM Analyzing resource: Richard_Mason_Rocca
+INFO 07/22 03:28:32 PM No Tables found for this resource.
+INFO 07/22 03:28:33 PM Analyzing resource: Roberto_Quercia
+INFO 07/22 03:28:33 PM No Tables found for this resource.
+INFO 07/22 03:28:34 PM Analyzing resource: Jerry_Steiner
+INFO 07/22 03:28:34 PM No Tables found for this resource.
+INFO 07/22 03:28:34 PM Analyzing resource: Bobby_Jones_(cestista_1984)
+INFO 07/22 03:28:34 PM Table under section: NBA
+INFO 07/22 03:28:34 PM Headers Found
+INFO 07/22 03:28:34 PM Data refined
+INFO 07/22 03:28:34 PM Rows extracted: 6
+INFO 07/22 03:28:34 PM Data extracted for this table: 84
+INFO 07/22 03:28:35 PM Analyzing resource: Glen_Rice
+INFO 07/22 03:28:35 PM No Tables found for this resource.
+INFO 07/22 03:28:36 PM Analyzing resource: Ryan_Anderson
+INFO 07/22 03:28:36 PM Table under section: Regular Season
+INFO 07/22 03:28:36 PM Headers Found
+INFO 07/22 03:28:36 PM Data refined
+INFO 07/22 03:28:36 PM Rows extracted: 10
+INFO 07/22 03:28:36 PM Data extracted for this table: 130
+INFO 07/22 03:28:36 PM Table under section: Playoffs
+INFO 07/22 03:28:36 PM Headers Found
+INFO 07/22 03:28:36 PM Data refined
+INFO 07/22 03:28:36 PM Rows extracted: 6
+INFO 07/22 03:28:36 PM Data extracted for this table: 78
+INFO 07/22 03:28:36 PM Analyzing resource: Michael_Malone
+INFO 07/22 03:28:36 PM No Tables found for this resource.
+INFO 07/22 03:28:37 PM Analyzing resource: JaJuan_Johnson
+INFO 07/22 03:28:37 PM Table under section: Statistiche
+INFO 07/22 03:28:37 PM Headers Found
+INFO 07/22 03:28:37 PM Data refined
+INFO 07/22 03:28:37 PM Rows extracted: 12
+INFO 07/22 03:28:37 PM Data extracted for this table: 168
+INFO 07/22 03:28:38 PM Analyzing resource: Brian_Clifford
+INFO 07/22 03:28:38 PM No Tables found for this resource.
+INFO 07/22 03:28:38 PM Analyzing resource: Brett_Blizzard
+INFO 07/22 03:28:38 PM No Tables found for this resource.
+INFO 07/22 03:28:39 PM Analyzing resource: Melvin_Newbern
+INFO 07/22 03:28:39 PM No Tables found for this resource.
+INFO 07/22 03:28:40 PM Analyzing resource: Leilani_Mitchell
+INFO 07/22 03:28:40 PM No Tables found for this resource.
+INFO 07/22 03:28:40 PM Analyzing resource: Chris_Kramer
+INFO 07/22 03:28:40 PM No Tables found for this resource.
+INFO 07/22 03:28:41 PM Analyzing resource: Dennis_Nutt
+INFO 07/22 03:28:41 PM No Tables found for this resource.
+INFO 07/22 03:28:41 PM Analyzing resource: Jon_Scheyer
+INFO 07/22 03:28:41 PM No Tables found for this resource.
+INFO 07/22 03:28:42 PM Analyzing resource: Bob_Lienhard
+INFO 07/22 03:28:42 PM No Tables found for this resource.
+INFO 07/22 03:28:42 PM Analyzing resource: Dee_Bost
+INFO 07/22 03:28:42 PM No Tables found for this resource.
+INFO 07/22 03:28:43 PM Analyzing resource: Gheorghe_Mureșan
+INFO 07/22 03:28:43 PM No Tables found for this resource.
+INFO 07/22 03:28:43 PM Analyzing resource: Aleksandr_Gomel'skij
+INFO 07/22 03:28:43 PM No Tables found for this resource.
+INFO 07/22 03:28:46 PM Analyzing resource: Pau_Gasol
+INFO 07/22 03:28:46 PM Table under section: Regular season
+INFO 07/22 03:28:46 PM Headers Found
+INFO 07/22 03:28:46 PM Data refined
+INFO 07/22 03:28:46 PM Rows extracted: 19
+INFO 07/22 03:28:46 PM Data extracted for this table: 285
+INFO 07/22 03:28:46 PM Table under section: Playoff
+INFO 07/22 03:28:46 PM Headers Found
+INFO 07/22 03:28:46 PM Data refined
+INFO 07/22 03:28:46 PM Rows extracted: 12
+INFO 07/22 03:28:46 PM Data extracted for this table: 180
+INFO 07/22 03:28:46 PM Analyzing resource: Tomas_Ress
+INFO 07/22 03:28:46 PM No Tables found for this resource.
+INFO 07/22 03:28:47 PM Analyzing resource: Jim_O'Brien_(cestista_1951)
+INFO 07/22 03:28:47 PM No Tables found for this resource.
+INFO 07/22 03:28:48 PM Analyzing resource: Walt_Williams
+INFO 07/22 03:28:48 PM No Tables found for this resource.
+INFO 07/22 03:28:48 PM Analyzing resource: Nikos_Pappas
+INFO 07/22 03:28:48 PM No Tables found for this resource.
+INFO 07/22 03:28:49 PM Analyzing resource: Bob_Schafer
+INFO 07/22 03:28:49 PM No Tables found for this resource.
+INFO 07/22 03:28:50 PM Analyzing resource: Miguel_Miranda
+INFO 07/22 03:28:50 PM No Tables found for this resource.
+INFO 07/22 03:28:50 PM Analyzing resource: Helen_Cristina_Santos_Luz
+INFO 07/22 03:28:50 PM No Tables found for this resource.
+INFO 07/22 03:28:51 PM Analyzing resource: Francisco_Elson
+INFO 07/22 03:28:51 PM No Tables found for this resource.
+INFO 07/22 03:28:52 PM Analyzing resource: Tihana_Abrlić
+INFO 07/22 03:28:52 PM No Tables found for this resource.
+INFO 07/22 03:28:52 PM Analyzing resource: Mardy_Collins
+INFO 07/22 03:28:52 PM No Tables found for this resource.
+INFO 07/22 03:28:53 PM Analyzing resource: Bernard_King_(1981)
+INFO 07/22 03:28:53 PM No Tables found for this resource.
+INFO 07/22 03:28:53 PM Analyzing resource: DeWayne_Jefferson
+INFO 07/22 03:28:53 PM No Tables found for this resource.
+INFO 07/22 03:28:54 PM Analyzing resource: Buck_Sydnor
+INFO 07/22 03:28:54 PM No Tables found for this resource.
+INFO 07/22 03:28:54 PM Analyzing resource: David_Vaughn_(cestista_1973)
+INFO 07/22 03:28:54 PM No Tables found for this resource.
+INFO 07/22 03:28:55 PM Analyzing resource: John_Williams_(cestista)
+INFO 07/22 03:28:55 PM No Tables found for this resource.
+INFO 07/22 03:28:56 PM Analyzing resource: Richard_Petruška
+INFO 07/22 03:28:56 PM No Tables found for this resource.
+INFO 07/22 03:28:56 PM Analyzing resource: O.J._Mayo
+INFO 07/22 03:28:56 PM No Tables found for this resource.
+INFO 07/22 03:28:58 PM Analyzing resource: Galeazzo_Dondi
+INFO 07/22 03:28:58 PM No Tables found for this resource.
+INFO 07/22 03:28:58 PM Analyzing resource: Maria_Laterza
+INFO 07/22 03:28:58 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:28:58 PM Headers Found
+INFO 07/22 03:28:58 PM Data refined
+INFO 07/22 03:28:58 PM Rows extracted: 22
+INFO 07/22 03:28:58 PM Data extracted for this table: 176
+INFO 07/22 03:28:58 PM Analyzing resource: Dennis_Hamilton
+INFO 07/22 03:28:58 PM No Tables found for this resource.
+INFO 07/22 03:28:59 PM Analyzing resource: Derek_Hamilton
+INFO 07/22 03:28:59 PM No Tables found for this resource.
+INFO 07/22 03:29:00 PM Analyzing resource: Joe_Hamilton
+INFO 07/22 03:29:00 PM No Tables found for this resource.
+INFO 07/22 03:29:00 PM Analyzing resource: Ralph_Hamilton
+INFO 07/22 03:29:00 PM No Tables found for this resource.
+INFO 07/22 03:29:01 PM Analyzing resource: Richard_Hamilton_(cestista)
+INFO 07/22 03:29:01 PM Table under section: Regular season
+INFO 07/22 03:29:01 PM Headers Found
+INFO 07/22 03:29:01 PM Data refined
+INFO 07/22 03:29:01 PM Rows extracted: 14
+INFO 07/22 03:29:01 PM Data extracted for this table: 196
+INFO 07/22 03:29:01 PM Table under section: Play-off
+INFO 07/22 03:29:01 PM Headers Found
+INFO 07/22 03:29:01 PM Data refined
+INFO 07/22 03:29:01 PM Rows extracted: 9
+INFO 07/22 03:29:01 PM Data extracted for this table: 126
+INFO 07/22 03:29:02 PM Analyzing resource: Thomas_Hamilton
+INFO 07/22 03:29:02 PM No Tables found for this resource.
+INFO 07/22 03:29:02 PM Analyzing resource: Roy_Hamilton_(cestista)
+INFO 07/22 03:29:02 PM No Tables found for this resource.
+INFO 07/22 03:29:03 PM Analyzing resource: Venson_Hamilton
+INFO 07/22 03:29:03 PM No Tables found for this resource.
+INFO 07/22 03:29:03 PM Analyzing resource: Tang_Hamilton
+INFO 07/22 03:29:03 PM No Tables found for this resource.
+INFO 07/22 03:29:04 PM Analyzing resource: Alessandro_Fantozzi
+INFO 07/22 03:29:04 PM No Tables found for this resource.
+INFO 07/22 03:29:04 PM Analyzing resource: Chris_Douglas-Roberts
+INFO 07/22 03:29:04 PM No Tables found for this resource.
+INFO 07/22 03:29:05 PM Analyzing resource: Pablo_Aguilar_(cestista)
+INFO 07/22 03:29:05 PM No Tables found for this resource.
+INFO 07/22 03:29:06 PM Analyzing resource: José_Cabrera
+INFO 07/22 03:29:06 PM No Tables found for this resource.
+INFO 07/22 03:29:06 PM Analyzing resource: Carmelo_Cabrera
+INFO 07/22 03:29:06 PM No Tables found for this resource.
+INFO 07/22 03:29:07 PM Analyzing resource: Thabo_Sefolosha
+INFO 07/22 03:29:07 PM No Tables found for this resource.
+INFO 07/22 03:29:08 PM Analyzing resource: Toni_Kukoč
+INFO 07/22 03:29:08 PM No Tables found for this resource.
+INFO 07/22 03:29:08 PM Analyzing resource: Shawn_Bradley
+INFO 07/22 03:29:08 PM No Tables found for this resource.
+INFO 07/22 03:29:09 PM Analyzing resource: Riccardo_Cortese
+INFO 07/22 03:29:09 PM Table under section: Presenze e punti nei club
+INFO 07/22 03:29:09 PM Headers Found
+INFO 07/22 03:29:09 PM Data refined
+INFO 07/22 03:29:09 PM Rows extracted: 5
+INFO 07/22 03:29:09 PM Data extracted for this table: 70
+INFO 07/22 03:29:10 PM Analyzing resource: Riccardo_Moraschini
+INFO 07/22 03:29:10 PM Table under section: Campionato
+INFO 07/22 03:29:10 PM Headers Found
+INFO 07/22 03:29:10 PM Data refined
+INFO 07/22 03:29:10 PM Rows extracted: 10
+INFO 07/22 03:29:10 PM Data extracted for this table: 140
+INFO 07/22 03:29:10 PM Table under section: Statistiche
+INFO 07/22 03:29:10 PM Headers Found
+INFO 07/22 03:29:10 PM Data refined
+INFO 07/22 03:29:10 PM Rows extracted: 18
+INFO 07/22 03:29:10 PM Data extracted for this table: 144
+INFO 07/22 03:29:10 PM Analyzing resource: Kevin_Martin
+INFO 07/22 03:29:10 PM Table under section: Regular season
+INFO 07/22 03:29:10 PM Headers Found
+INFO 07/22 03:29:10 PM Data refined
+INFO 07/22 03:29:10 PM Rows extracted: 12
+INFO 07/22 03:29:10 PM Data extracted for this table: 168
+INFO 07/22 03:29:10 PM Table under section: Play-off
+INFO 07/22 03:29:10 PM Headers Found
+INFO 07/22 03:29:10 PM Data refined
+INFO 07/22 03:29:10 PM Rows extracted: 2
+INFO 07/22 03:29:10 PM Data extracted for this table: 28
+INFO 07/22 03:29:11 PM Analyzing resource: Kenny_George
+INFO 07/22 03:29:11 PM No Tables found for this resource.
+INFO 07/22 03:29:12 PM Analyzing resource: Linton_Johnson
+INFO 07/22 03:29:12 PM No Tables found for this resource.
+INFO 07/22 03:29:12 PM Analyzing resource: Derrick_Rose
+INFO 07/22 03:29:12 PM Table under section: High school
+INFO 07/22 03:29:12 PM Headers Found
+INFO 07/22 03:29:12 PM Data refined
+INFO 07/22 03:29:12 PM Rows extracted: 5
+INFO 07/22 03:29:12 PM Data extracted for this table: 40
+INFO 07/22 03:29:12 PM Table under section: College
+INFO 07/22 03:29:12 PM Headers Found
+INFO 07/22 03:29:12 PM Data refined
+INFO 07/22 03:29:12 PM Rows extracted: 1
+INFO 07/22 03:29:12 PM Data extracted for this table: 14
+INFO 07/22 03:29:12 PM Table under section: Regular season
+INFO 07/22 03:29:12 PM Headers Found
+INFO 07/22 03:29:12 PM Data refined
+INFO 07/22 03:29:12 PM Rows extracted: 8
+INFO 07/22 03:29:12 PM Data extracted for this table: 112
+INFO 07/22 03:29:12 PM Table under section: Play-off
+INFO 07/22 03:29:12 PM Headers Found
+INFO 07/22 03:29:12 PM Data refined
+INFO 07/22 03:29:12 PM Rows extracted: 5
+INFO 07/22 03:29:12 PM Data extracted for this table: 70
+INFO 07/22 03:29:12 PM New header found: H.S.
+INFO 07/22 03:29:13 PM Analyzing resource: Nico_Messina
+INFO 07/22 03:29:13 PM No Tables found for this resource.
+INFO 07/22 03:29:14 PM Analyzing resource: Andrea_Meneghin
+INFO 07/22 03:29:14 PM No Tables found for this resource.
+INFO 07/22 03:29:15 PM Analyzing resource: Pierluigi_Marzorati
+INFO 07/22 03:29:15 PM Table under section: Statistiche
+INFO 07/22 03:29:15 PM Headers Found
+INFO 07/22 03:29:15 PM Data refined
+INFO 07/22 03:29:15 PM Rows extracted: 23
+INFO 07/22 03:29:15 PM Data extracted for this table: 322
+INFO 07/22 03:29:16 PM Analyzing resource: Cecilia_Zandalasini
+INFO 07/22 03:29:16 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:29:16 PM Headers Found
+INFO 07/22 03:29:16 PM Data refined
+INFO 07/22 03:29:16 PM Rows extracted: 19
+INFO 07/22 03:29:16 PM Data extracted for this table: 152
+INFO 07/22 03:29:16 PM Analyzing resource: Lolo_Sainz
+INFO 07/22 03:29:16 PM No Tables found for this resource.
+INFO 07/22 03:29:17 PM Analyzing resource: Lee_Shaffer
+INFO 07/22 03:29:17 PM No Tables found for this resource.
+INFO 07/22 03:29:18 PM Analyzing resource: Don_Otten
+INFO 07/22 03:29:18 PM No Tables found for this resource.
+INFO 07/22 03:29:18 PM Analyzing resource: Vladimir_Kondrašin
+INFO 07/22 03:29:18 PM No Tables found for this resource.
+INFO 07/22 03:29:19 PM Analyzing resource: Marty_Conlon
+INFO 07/22 03:29:19 PM No Tables found for this resource.
+INFO 07/22 03:29:20 PM Analyzing resource: Gary_Harris
+INFO 07/22 03:29:20 PM Table under section: Regular Season
+INFO 07/22 03:29:20 PM Headers Found
+INFO 07/22 03:29:20 PM Data refined
+INFO 07/22 03:29:20 PM Rows extracted: 4
+INFO 07/22 03:29:20 PM Data extracted for this table: 52
+INFO 07/22 03:29:20 PM New header found: FG?/?
+INFO 07/22 03:29:20 PM New header found: 3P?/?
+INFO 07/22 03:29:20 PM New header found: FT?/?
+INFO 07/22 03:29:20 PM Analyzing resource: Michael_Joiner
+INFO 07/22 03:29:20 PM No Tables found for this resource.
+INFO 07/22 03:29:21 PM Analyzing resource: John_Thompson_(cestista_1906)
+INFO 07/22 03:29:21 PM No Tables found for this resource.
+INFO 07/22 03:29:22 PM Analyzing resource: Nemanja_Bešović
+INFO 07/22 03:29:22 PM No Tables found for this resource.
+INFO 07/22 03:29:22 PM Analyzing resource: Herm_Gilliam
+INFO 07/22 03:29:22 PM No Tables found for this resource.
+INFO 07/22 03:29:23 PM Analyzing resource: Shaunzinski_Gortman
+INFO 07/22 03:29:23 PM No Tables found for this resource.
+INFO 07/22 03:29:23 PM Analyzing resource: Thomas_Soltau
+INFO 07/22 03:29:23 PM No Tables found for this resource.
+INFO 07/22 03:29:24 PM Analyzing resource: Salva_Maldonado
+INFO 07/22 03:29:24 PM No Tables found for this resource.
+INFO 07/22 03:29:24 PM Analyzing resource: Damir_Rančić
+INFO 07/22 03:29:24 PM No Tables found for this resource.
+INFO 07/22 03:29:25 PM Analyzing resource: Boštjan_Nachbar
+INFO 07/22 03:29:25 PM No Tables found for this resource.
+INFO 07/22 03:29:26 PM Analyzing resource: Alex_Righetti
+INFO 07/22 03:29:26 PM No Tables found for this resource.
+INFO 07/22 03:29:26 PM Analyzing resource: Rajon_Rondo
+INFO 07/22 03:29:26 PM Table under section: Regular season
+INFO 07/22 03:29:26 PM Headers Found
+INFO 07/22 03:29:26 PM Data refined
+INFO 07/22 03:29:26 PM Rows extracted: 14
+INFO 07/22 03:29:26 PM Data extracted for this table: 210
+INFO 07/22 03:29:26 PM Table under section: Play-off
+INFO 07/22 03:29:26 PM Headers Found
+INFO 07/22 03:29:26 PM Data refined
+INFO 07/22 03:29:26 PM Rows extracted: 8
+INFO 07/22 03:29:26 PM Data extracted for this table: 120
+INFO 07/22 03:29:27 PM Analyzing resource: Henri_Grange
+INFO 07/22 03:29:27 PM No Tables found for this resource.
+INFO 07/22 03:29:28 PM Analyzing resource: Maurice_Evans_(cestista)
+INFO 07/22 03:29:28 PM No Tables found for this resource.
+INFO 07/22 03:29:28 PM Analyzing resource: Reggie_Evans
+INFO 07/22 03:29:28 PM No Tables found for this resource.
+INFO 07/22 03:29:29 PM Analyzing resource: Tyreke_Evans
+INFO 07/22 03:29:29 PM Table under section: Regular season
+INFO 07/22 03:29:29 PM Headers Found
+INFO 07/22 03:29:29 PM Data refined
+INFO 07/22 03:29:29 PM Rows extracted: 3
+INFO 07/22 03:29:29 PM Data extracted for this table: 42
+INFO 07/22 03:29:30 PM Analyzing resource: Enrico_Lana
+INFO 07/22 03:29:30 PM No Tables found for this resource.
+INFO 07/22 03:29:30 PM Analyzing resource: Juan_Fernández_(cestista)
+INFO 07/22 03:29:30 PM No Tables found for this resource.
+INFO 07/22 03:29:30 PM Analyzing resource: Jay_Vincent
+INFO 07/22 03:29:30 PM No Tables found for this resource.
+INFO 07/22 03:29:31 PM Analyzing resource: Rosetta_Bozzolo
+INFO 07/22 03:29:31 PM No Tables found for this resource.
+INFO 07/22 03:29:32 PM Analyzing resource: Fabio_Colombo
+INFO 07/22 03:29:32 PM No Tables found for this resource.
+INFO 07/22 03:29:32 PM Analyzing resource: Lukáš_Kraus
+INFO 07/22 03:29:32 PM No Tables found for this resource.
+INFO 07/22 03:29:33 PM Analyzing resource: Dan_Peterson
+INFO 07/22 03:29:33 PM No Tables found for this resource.
+INFO 07/22 03:29:34 PM Analyzing resource: David_Blatt
+INFO 07/22 03:29:34 PM No Tables found for this resource.
+INFO 07/22 03:29:34 PM Analyzing resource: Stan_Love
+INFO 07/22 03:29:34 PM No Tables found for this resource.
+INFO 07/22 03:29:35 PM Analyzing resource: Lionel_Malamed
+INFO 07/22 03:29:35 PM No Tables found for this resource.
+INFO 07/22 03:29:36 PM Analyzing resource: Liliana_Ronchetti
+INFO 07/22 03:29:36 PM No Tables found for this resource.
+INFO 07/22 03:29:36 PM Analyzing resource: João_Francisco_Bráz
+INFO 07/22 03:29:36 PM No Tables found for this resource.
+INFO 07/22 03:29:37 PM Analyzing resource: Małgorzata_Babicka
+INFO 07/22 03:29:37 PM No Tables found for this resource.
+INFO 07/22 03:29:38 PM Analyzing resource: Yotam_Halperin
+INFO 07/22 03:29:38 PM No Tables found for this resource.
+INFO 07/22 03:29:38 PM Analyzing resource: John_Logan
+INFO 07/22 03:29:38 PM No Tables found for this resource.
+INFO 07/22 03:29:38 PM Analyzing resource: Bob_Fitzgerald
+INFO 07/22 03:29:38 PM No Tables found for this resource.
+INFO 07/22 03:29:39 PM Analyzing resource: Nikolaj_Vărbanov
+INFO 07/22 03:29:39 PM No Tables found for this resource.
+INFO 07/22 03:29:40 PM Analyzing resource: Boris_Diaw
+INFO 07/22 03:29:40 PM No Tables found for this resource.
+INFO 07/22 03:29:41 PM Analyzing resource: Anfernee_Hardaway
+INFO 07/22 03:29:41 PM No Tables found for this resource.
+INFO 07/22 03:29:42 PM Analyzing resource: Ferdinando_Gentile
+INFO 07/22 03:29:42 PM No Tables found for this resource.
+INFO 07/22 03:29:42 PM Analyzing resource: Šarūnas_Jasikevičius
+INFO 07/22 03:29:42 PM No Tables found for this resource.
+INFO 07/22 03:29:43 PM Analyzing resource: Ramūnas_Šiškauskas
+INFO 07/22 03:29:43 PM No Tables found for this resource.
+INFO 07/22 03:29:44 PM Analyzing resource: Anderson_Varejão
+INFO 07/22 03:29:44 PM No Tables found for this resource.
+INFO 07/22 03:29:45 PM Analyzing resource: Aza_Nikolić
+INFO 07/22 03:29:45 PM No Tables found for this resource.
+INFO 07/22 03:29:46 PM Analyzing resource: Kevin_McHale
+INFO 07/22 03:29:46 PM No Tables found for this resource.
+INFO 07/22 03:29:46 PM Analyzing resource: Terrence_Jones
+INFO 07/22 03:29:46 PM No Tables found for this resource.
+INFO 07/22 03:29:47 PM Analyzing resource: Rickie_Winslow
+INFO 07/22 03:29:47 PM No Tables found for this resource.
+INFO 07/22 03:29:47 PM Analyzing resource: Georgi_Gluškov
+INFO 07/22 03:29:47 PM No Tables found for this resource.
+INFO 07/22 03:29:48 PM Analyzing resource: Kevin_Rankin
+INFO 07/22 03:29:48 PM No Tables found for this resource.
+INFO 07/22 03:29:48 PM Analyzing resource: Harun_Erdenay
+INFO 07/22 03:29:48 PM No Tables found for this resource.
+INFO 07/22 03:29:49 PM Analyzing resource: Haluk_Yıldırım
+INFO 07/22 03:29:49 PM No Tables found for this resource.
+INFO 07/22 03:29:50 PM Analyzing resource: Dirk_Nowitzki
+INFO 07/22 03:29:50 PM Table under section: Stagione regolare
+INFO 07/22 03:29:50 PM Headers Found
+INFO 07/22 03:29:50 PM Data refined
+INFO 07/22 03:29:50 PM Rows extracted: 21
+INFO 07/22 03:29:50 PM Data extracted for this table: 315
+INFO 07/22 03:29:50 PM Table under section: Play-off
+INFO 07/22 03:29:50 PM Headers Found
+INFO 07/22 03:29:50 PM Data refined
+INFO 07/22 03:29:50 PM Rows extracted: 16
+INFO 07/22 03:29:50 PM Data extracted for this table: 240
+INFO 07/22 03:29:50 PM Analyzing resource: Sophie_von_Saldern
+INFO 07/22 03:29:50 PM No Tables found for this resource.
+INFO 07/22 03:29:51 PM Analyzing resource: Yohann_Sangaré
+INFO 07/22 03:29:51 PM No Tables found for this resource.
+INFO 07/22 03:29:52 PM Analyzing resource: Tutku_Açık
+INFO 07/22 03:29:52 PM No Tables found for this resource.
+INFO 07/22 03:29:52 PM Analyzing resource: Rod_Hundley
+INFO 07/22 03:29:52 PM No Tables found for this resource.
+INFO 07/22 03:29:53 PM Analyzing resource: Dwight_Howard
+INFO 07/22 03:29:53 PM Table under section: Regular season
+INFO 07/22 03:29:53 PM Headers Found
+INFO 07/22 03:29:53 PM Data refined
+INFO 07/22 03:29:53 PM Rows extracted: 9
+INFO 07/22 03:29:53 PM Data extracted for this table: 126
+INFO 07/22 03:29:53 PM Table under section: Play-off
+INFO 07/22 03:29:53 PM Headers Found
+INFO 07/22 03:29:53 PM Data refined
+INFO 07/22 03:29:53 PM Rows extracted: 6
+INFO 07/22 03:29:53 PM Data extracted for this table: 84
+INFO 07/22 03:29:54 PM Analyzing resource: Tomislav_Zubčić
+INFO 07/22 03:29:54 PM No Tables found for this resource.
+INFO 07/22 03:29:56 PM Analyzing resource: Butch_van_Breda_Kolff
+INFO 07/22 03:29:56 PM No Tables found for this resource.
+INFO 07/22 03:29:57 PM Analyzing resource: Arnett_Moultrie
+INFO 07/22 03:29:57 PM No Tables found for this resource.
+INFO 07/22 03:29:57 PM Analyzing resource: Festus_Ezeli
+INFO 07/22 03:29:57 PM Table under section: Regular Season
+INFO 07/22 03:29:57 PM Headers Found
+INFO 07/22 03:29:57 PM Data refined
+INFO 07/22 03:29:57 PM Rows extracted: 4
+INFO 07/22 03:29:57 PM Data extracted for this table: 52
+INFO 07/22 03:29:57 PM Table under section: Playoffs
+INFO 07/22 03:29:57 PM Headers Found
+INFO 07/22 03:29:57 PM Data refined
+INFO 07/22 03:29:57 PM Rows extracted: 4
+INFO 07/22 03:29:57 PM Data extracted for this table: 52
+INFO 07/22 03:29:58 PM Analyzing resource: Jeff_Taylor_(cestista_1989)
+INFO 07/22 03:29:58 PM No Tables found for this resource.
+INFO 07/22 03:29:58 PM Analyzing resource: Jared_Newson
+INFO 07/22 03:29:58 PM No Tables found for this resource.
+INFO 07/22 03:29:59 PM Analyzing resource: Pedro_Llompart
+INFO 07/22 03:29:59 PM No Tables found for this resource.
+INFO 07/22 03:29:59 PM Analyzing resource: Moe_Harkless
+INFO 07/22 03:29:59 PM No Tables found for this resource.
+INFO 07/22 03:30:01 PM Analyzing resource: Kevin_Durant
+INFO 07/22 03:30:01 PM Table under section: Regular season
+INFO 07/22 03:30:01 PM Headers Found
+INFO 07/22 03:30:01 PM Data refined
+INFO 07/22 03:30:01 PM Rows extracted: 9
+INFO 07/22 03:30:01 PM Data extracted for this table: 126
+INFO 07/22 03:30:01 PM Table under section: Play-off
+INFO 07/22 03:30:01 PM Headers Found
+INFO 07/22 03:30:01 PM Data refined
+INFO 07/22 03:30:01 PM Rows extracted: 6
+INFO 07/22 03:30:01 PM Data extracted for this table: 84
+INFO 07/22 03:30:02 PM Analyzing resource: Jonas_Kazlauskas
+INFO 07/22 03:30:02 PM No Tables found for this resource.
+INFO 07/22 03:30:03 PM Analyzing resource: Leandro_Barbosa
+INFO 07/22 03:30:03 PM No Tables found for this resource.
+INFO 07/22 03:30:04 PM Analyzing resource: Devan_Downey
+INFO 07/22 03:30:04 PM No Tables found for this resource.
+INFO 07/22 03:30:04 PM Analyzing resource: Thaddeus_Young
+INFO 07/22 03:30:04 PM Table under section: Regular season
+INFO 07/22 03:30:04 PM Headers Found
+INFO 07/22 03:30:04 PM Data refined
+INFO 07/22 03:30:04 PM Rows extracted: 12
+INFO 07/22 03:30:04 PM Data extracted for this table: 156
+INFO 07/22 03:30:04 PM Table under section: Play-off
+INFO 07/22 03:30:04 PM Headers Found
+INFO 07/22 03:30:04 PM Data refined
+INFO 07/22 03:30:04 PM Rows extracted: 7
+INFO 07/22 03:30:04 PM Data extracted for this table: 91
+INFO 07/22 03:30:05 PM Analyzing resource: Tod_Murphy
+INFO 07/22 03:30:05 PM No Tables found for this resource.
+INFO 07/22 03:30:06 PM Analyzing resource: Michael_Anderson_(cestista)
+INFO 07/22 03:30:06 PM No Tables found for this resource.
+INFO 07/22 03:30:06 PM Analyzing resource: Dejan_Koturović
+INFO 07/22 03:30:06 PM No Tables found for this resource.
+INFO 07/22 03:30:06 PM Analyzing resource: Dirk_Bauermann
+INFO 07/22 03:30:06 PM No Tables found for this resource.
+INFO 07/22 03:30:07 PM Analyzing resource: Boniface_N'Dong
+INFO 07/22 03:30:07 PM No Tables found for this resource.
+INFO 07/22 03:30:07 PM Analyzing resource: Robert_Garrett_(cestista)
+INFO 07/22 03:30:07 PM No Tables found for this resource.
+INFO 07/22 03:30:08 PM Analyzing resource: Donatas_Zavackas
+INFO 07/22 03:30:08 PM No Tables found for this resource.
+INFO 07/22 03:30:09 PM Analyzing resource: Dragan_Tarlać
+INFO 07/22 03:30:09 PM No Tables found for this resource.
+INFO 07/22 03:30:10 PM Analyzing resource: Maalik_Wayns
+INFO 07/22 03:30:10 PM No Tables found for this resource.
+INFO 07/22 03:30:10 PM Analyzing resource: Darius_Johnson-Odom
+INFO 07/22 03:30:10 PM No Tables found for this resource.
+INFO 07/22 03:30:11 PM Analyzing resource: Tim_Ohlbrecht
+INFO 07/22 03:30:11 PM No Tables found for this resource.
+INFO 07/22 03:30:12 PM Analyzing resource: Stephen_Arigbabu
+INFO 07/22 03:30:12 PM No Tables found for this resource.
+INFO 07/22 03:30:13 PM Analyzing resource: Casey_Mitchell
+INFO 07/22 03:30:13 PM No Tables found for this resource.
+INFO 07/22 03:30:13 PM Analyzing resource: Westher_Molteni
+INFO 07/22 03:30:13 PM No Tables found for this resource.
+INFO 07/22 03:30:14 PM Analyzing resource: Sharon_Drucker
+INFO 07/22 03:30:14 PM No Tables found for this resource.
+INFO 07/22 03:30:15 PM Analyzing resource: Frédéric_Forte
+INFO 07/22 03:30:15 PM No Tables found for this resource.
+INFO 07/22 03:30:15 PM Analyzing resource: Erin_Thorn
+INFO 07/22 03:30:15 PM No Tables found for this resource.
+INFO 07/22 03:30:16 PM Analyzing resource: Rod_Thorn
+INFO 07/22 03:30:16 PM No Tables found for this resource.
+INFO 07/22 03:30:16 PM Analyzing resource: Diego_García
+INFO 07/22 03:30:16 PM No Tables found for this resource.
+INFO 07/22 03:30:17 PM Analyzing resource: Francesco_Vescovi
+INFO 07/22 03:30:17 PM No Tables found for this resource.
+INFO 07/22 03:30:18 PM Analyzing resource: Jerry_Krause
+INFO 07/22 03:30:18 PM No Tables found for this resource.
+INFO 07/22 03:30:18 PM Analyzing resource: Moose_Krause
+INFO 07/22 03:30:18 PM No Tables found for this resource.
+INFO 07/22 03:30:19 PM Analyzing resource: James_Robinson_(cestista)
+INFO 07/22 03:30:19 PM No Tables found for this resource.
+INFO 07/22 03:30:19 PM Analyzing resource: Dea_Klein-Šumanovac
+INFO 07/22 03:30:19 PM No Tables found for this resource.
+INFO 07/22 03:30:20 PM Analyzing resource: Giuseppe_Bernini
+INFO 07/22 03:30:20 PM No Tables found for this resource.
+INFO 07/22 03:30:20 PM Analyzing resource: Ernesto_Cima
+INFO 07/22 03:30:20 PM No Tables found for this resource.
+INFO 07/22 03:30:21 PM Analyzing resource: George_Adams_(cestista)
+INFO 07/22 03:30:21 PM No Tables found for this resource.
+INFO 07/22 03:30:22 PM Analyzing resource: Georges_Adams
+INFO 07/22 03:30:22 PM No Tables found for this resource.
+INFO 07/22 03:30:22 PM Analyzing resource: Alvin_Young
+INFO 07/22 03:30:22 PM No Tables found for this resource.
+INFO 07/22 03:30:23 PM Analyzing resource: Dick_Rosenthal
+INFO 07/22 03:30:23 PM No Tables found for this resource.
+INFO 07/22 03:30:23 PM Analyzing resource: Filiberto_Manzo
+INFO 07/22 03:30:23 PM No Tables found for this resource.
+INFO 07/22 03:30:24 PM Analyzing resource: Archie_Goodwin_(cestista)
+INFO 07/22 03:30:24 PM Table under section: Regular Season
+INFO 07/22 03:30:24 PM Headers Found
+INFO 07/22 03:30:24 PM Data refined
+INFO 07/22 03:30:24 PM Rows extracted: 6
+INFO 07/22 03:30:24 PM Data extracted for this table: 78
+INFO 07/22 03:30:24 PM Analyzing resource: Mattia_Soloperto
+INFO 07/22 03:30:24 PM No Tables found for this resource.
+INFO 07/22 03:30:25 PM Analyzing resource: Valerio_Mazzola
+INFO 07/22 03:30:25 PM Table under section: Statistiche
+INFO 07/22 03:30:25 PM Headers Found
+INFO 07/22 03:30:25 PM Data refined
+INFO 07/22 03:30:25 PM Rows extracted: 1
+INFO 07/22 03:30:25 PM Data extracted for this table: 8
+INFO 07/22 03:30:26 PM Analyzing resource: Sandro_Luporini
+INFO 07/22 03:30:26 PM No Tables found for this resource.
+INFO 07/22 03:30:26 PM Analyzing resource: Šime_Špralja
+INFO 07/22 03:30:26 PM No Tables found for this resource.
+INFO 07/22 03:30:27 PM Analyzing resource: Aaron_McGhee
+INFO 07/22 03:30:27 PM No Tables found for this resource.
+INFO 07/22 03:30:27 PM Analyzing resource: Janusz_Patrzykont
+INFO 07/22 03:30:27 PM No Tables found for this resource.
+INFO 07/22 03:30:28 PM Analyzing resource: Justas_Sinica
+INFO 07/22 03:30:28 PM No Tables found for this resource.
+INFO 07/22 03:30:28 PM Analyzing resource: Craig_Osaikhwuwuomwan
+INFO 07/22 03:30:28 PM No Tables found for this resource.
+INFO 07/22 03:30:29 PM Analyzing resource: Isaiah_Canaan
+INFO 07/22 03:30:29 PM Table under section: Regular Season
+INFO 07/22 03:30:29 PM Headers Found
+INFO 07/22 03:30:29 PM Data refined
+INFO 07/22 03:30:29 PM Rows extracted: 6
+INFO 07/22 03:30:29 PM Data extracted for this table: 78
+INFO 07/22 03:30:29 PM Table under section: Playoffs
+INFO 07/22 03:30:29 PM Headers Found
+INFO 07/22 03:30:29 PM Data refined
+INFO 07/22 03:30:29 PM Rows extracted: 1
+INFO 07/22 03:30:29 PM Data extracted for this table: 13
+INFO 07/22 03:30:30 PM Analyzing resource: Igors_Miglinieks
+INFO 07/22 03:30:30 PM No Tables found for this resource.
+INFO 07/22 03:30:30 PM Analyzing resource: Povilas_Čukinas
+INFO 07/22 03:30:30 PM No Tables found for this resource.
+INFO 07/22 03:30:31 PM Analyzing resource: Fritz_Nagy
+INFO 07/22 03:30:31 PM No Tables found for this resource.
+INFO 07/22 03:30:32 PM Analyzing resource: Andrew_Drevo
+INFO 07/22 03:30:32 PM No Tables found for this resource.
+INFO 07/22 03:30:32 PM Analyzing resource: Daniel_Ledent
+INFO 07/22 03:30:32 PM No Tables found for this resource.
+INFO 07/22 03:30:32 PM Analyzing resource: Miranda_Ayim
+INFO 07/22 03:30:32 PM No Tables found for this resource.
+INFO 07/22 03:30:33 PM Analyzing resource: Scottie_Reynolds
+INFO 07/22 03:30:33 PM No Tables found for this resource.
+INFO 07/22 03:30:34 PM Analyzing resource: Diego_Pinheiro
+INFO 07/22 03:30:34 PM No Tables found for this resource.
+INFO 07/22 03:30:34 PM Analyzing resource: Drew_Nicholas
+INFO 07/22 03:30:34 PM No Tables found for this resource.
+INFO 07/22 03:30:35 PM Analyzing resource: Dino_Rađa
+INFO 07/22 03:30:35 PM No Tables found for this resource.
+INFO 07/22 03:30:36 PM Analyzing resource: Roberto_Dueñas
+INFO 07/22 03:30:36 PM No Tables found for this resource.
+INFO 07/22 03:30:37 PM Analyzing resource: Marco_Belinelli
+INFO 07/22 03:30:37 PM Table under section: Serie A
+INFO 07/22 03:30:37 PM Headers Found
+INFO 07/22 03:30:37 PM Data refined
+INFO 07/22 03:30:37 PM Rows extracted: 6
+INFO 07/22 03:30:37 PM Data extracted for this table: 84
+INFO 07/22 03:30:37 PM Table under section: Regular season
+INFO 07/22 03:30:37 PM Headers Found
+INFO 07/22 03:30:37 PM Data refined
+INFO 07/22 03:30:37 PM Rows extracted: 11
+INFO 07/22 03:30:37 PM Data extracted for this table: 154
+INFO 07/22 03:30:37 PM Table under section: Play-off
+INFO 07/22 03:30:37 PM Headers Found
+INFO 07/22 03:30:37 PM Data refined
+INFO 07/22 03:30:37 PM Rows extracted: 5
+INFO 07/22 03:30:37 PM Data extracted for this table: 70
+INFO 07/22 03:30:37 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:30:37 PM Headers Found
+INFO 07/22 03:30:37 PM Data refined
+INFO 07/22 03:30:37 PM Rows extracted: 61
+INFO 07/22 03:30:37 PM Data extracted for this table: 488
+INFO 07/22 03:30:38 PM Analyzing resource: Isiah_Thomas
+INFO 07/22 03:30:38 PM Table under section: Statistiche
+INFO 07/22 03:30:38 PM Headers Found
+INFO 07/22 03:30:38 PM Data refined
+INFO 07/22 03:30:38 PM Rows extracted: 2
+INFO 07/22 03:30:38 PM Data extracted for this table: 20
+INFO 07/22 03:30:38 PM New header found: Gioc.
+INFO 07/22 03:30:38 PM New header found: %Tiri tot.
+INFO 07/22 03:30:38 PM New header found: %Tiri lib.
+INFO 07/22 03:30:39 PM New header found: Rimb.
+INFO 07/22 03:30:39 PM New header found: Media r.
+INFO 07/22 03:30:39 PM New header found: Ass.
+INFO 07/22 03:30:40 PM New header found: Media a.
+INFO 07/22 03:30:40 PM New header found: Palle rub.
+INFO 07/22 03:30:40 PM New header found: Punti
+INFO 07/22 03:30:40 PM New header found: Media p.
+INFO 07/22 03:30:41 PM Analyzing resource: James_Singleton
+INFO 07/22 03:30:41 PM No Tables found for this resource.
+INFO 07/22 03:30:42 PM Analyzing resource: Aaron_McKie
+INFO 07/22 03:30:42 PM No Tables found for this resource.
+INFO 07/22 03:30:43 PM Analyzing resource: Andrea_Bargnani
+INFO 07/22 03:30:43 PM Table under section: Serie A
+INFO 07/22 03:30:43 PM Headers Found
+INFO 07/22 03:30:43 PM Data refined
+INFO 07/22 03:30:43 PM Rows extracted: 3
+INFO 07/22 03:30:43 PM Data extracted for this table: 42
+INFO 07/22 03:30:43 PM Table under section: Regular season
+INFO 07/22 03:30:43 PM Headers Found
+INFO 07/22 03:30:43 PM Data refined
+INFO 07/22 03:30:43 PM Rows extracted: 10
+INFO 07/22 03:30:43 PM Data extracted for this table: 140
+INFO 07/22 03:30:43 PM Table under section: Play-off
+INFO 07/22 03:30:43 PM Headers Found
+INFO 07/22 03:30:43 PM Data refined
+INFO 07/22 03:30:43 PM Rows extracted: 2
+INFO 07/22 03:30:43 PM Data extracted for this table: 28
+INFO 07/22 03:30:43 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:30:43 PM Headers Found
+INFO 07/22 03:30:43 PM Data refined
+INFO 07/22 03:30:43 PM Rows extracted: 30
+INFO 07/22 03:30:43 PM Data extracted for this table: 240
+INFO 07/22 03:30:44 PM Analyzing resource: Artis_Gilmore
+INFO 07/22 03:30:44 PM No Tables found for this resource.
+INFO 07/22 03:30:44 PM Analyzing resource: Nikos_Zīsīs
+INFO 07/22 03:30:44 PM No Tables found for this resource.
+INFO 07/22 03:30:45 PM Analyzing resource: Bianca_Rossi
+INFO 07/22 03:30:45 PM No Tables found for this resource.
+INFO 07/22 03:30:46 PM Analyzing resource: Roberto_Chiacig
+INFO 07/22 03:30:46 PM No Tables found for this resource.
+INFO 07/22 03:30:46 PM Analyzing resource: Michalīs_Kakiouzīs
+INFO 07/22 03:30:46 PM No Tables found for this resource.
+INFO 07/22 03:30:47 PM Analyzing resource: Elena_Paparazzo
+INFO 07/22 03:30:47 PM No Tables found for this resource.
+INFO 07/22 03:30:48 PM Analyzing resource: Stefano_Mancinelli
+INFO 07/22 03:30:48 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:30:48 PM Headers Found
+INFO 07/22 03:30:48 PM Data refined
+INFO 07/22 03:30:48 PM Rows extracted: 13
+INFO 07/22 03:30:48 PM Data extracted for this table: 104
+INFO 07/22 03:30:48 PM Analyzing resource: Stefano_Rusconi
+INFO 07/22 03:30:48 PM No Tables found for this resource.
+INFO 07/22 03:30:50 PM Analyzing resource: Marion_Jones
+INFO 07/22 03:30:50 PM Table under section: 100 metri piani
+INFO 07/22 03:30:50 PM Headers Found
+INFO 07/22 03:30:50 PM Data refined
+INFO 07/22 03:30:50 PM Rows extracted: 11
+INFO 07/22 03:30:50 PM Data extracted for this table: 55
+INFO 07/22 03:30:50 PM Table under section: 200 metri piani
+INFO 07/22 03:30:50 PM Headers Found
+INFO 07/22 03:30:50 PM Data refined
+INFO 07/22 03:30:50 PM Rows extracted: 9
+INFO 07/22 03:30:50 PM Data extracted for this table: 44
+INFO 07/22 03:30:50 PM Table under section: Salto in lungo
+INFO 07/22 03:30:50 PM Headers Found
+INFO 07/22 03:30:50 PM Data refined
+INFO 07/22 03:30:50 PM Rows extracted: 8
+INFO 07/22 03:30:50 PM Data extracted for this table: 40
+INFO 07/22 03:30:50 PM Table under section: Palmarès
+INFO 07/22 03:30:50 PM Headers Found
+INFO 07/22 03:30:50 PM Data refined
+INFO 07/22 03:30:50 PM Rows extracted: 9
+INFO 07/22 03:30:50 PM Data extracted for this table: 57
+INFO 07/22 03:30:50 PM New header found: Risultato
+INFO 07/22 03:30:50 PM New header found: Luogo
+INFO 07/22 03:30:50 PM New header found: Data
+INFO 07/22 03:30:50 PM New header found: Rank. Mond.
+INFO 07/22 03:30:50 PM New header found: Manifestazione
+INFO 07/22 03:30:51 PM New header found: Sede
+INFO 07/22 03:30:51 PM New header found: Evento
+INFO 07/22 03:30:51 PM New header found: Prestazione
+INFO 07/22 03:30:52 PM New header found: Note
+INFO 07/22 03:30:52 PM Analyzing resource: Carlton_Myers
+INFO 07/22 03:30:52 PM No Tables found for this resource.
+INFO 07/22 03:30:53 PM Analyzing resource: Dennis_Rodman
+INFO 07/22 03:30:53 PM Table under section: Regular season
+INFO 07/22 03:30:53 PM Headers Found
+INFO 07/22 03:30:53 PM Data refined
+INFO 07/22 03:30:53 PM Rows extracted: 14
+INFO 07/22 03:30:53 PM Data extracted for this table: 196
+INFO 07/22 03:30:53 PM Table under section: Play-off
+INFO 07/22 03:30:53 PM Headers Found
+INFO 07/22 03:30:53 PM Data refined
+INFO 07/22 03:30:53 PM Rows extracted: 11
+INFO 07/22 03:30:53 PM Data extracted for this table: 154
+INFO 07/22 03:30:54 PM Analyzing resource: David_Hawkins
+INFO 07/22 03:30:54 PM No Tables found for this resource.
+INFO 07/22 03:30:54 PM Analyzing resource: J.R._Bremer
+INFO 07/22 03:30:54 PM No Tables found for this resource.
+INFO 07/22 03:30:54 PM Analyzing resource: Robert_Horry
+INFO 07/22 03:30:54 PM No Tables found for this resource.
+INFO 07/22 03:30:55 PM Analyzing resource: Chauncey_Billups
+INFO 07/22 03:30:55 PM No Tables found for this resource.
+INFO 07/22 03:30:56 PM Analyzing resource: Damon_Williams
+INFO 07/22 03:30:56 PM No Tables found for this resource.
+INFO 07/22 03:30:57 PM Analyzing resource: Jorge_Garbajosa
+INFO 07/22 03:30:57 PM No Tables found for this resource.
+INFO 07/22 03:30:58 PM Analyzing resource: Marco_Cusin
+INFO 07/22 03:30:58 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:30:58 PM Headers Found
+INFO 07/22 03:30:58 PM Data refined
+INFO 07/22 03:30:58 PM Rows extracted: 76
+INFO 07/22 03:30:58 PM Data extracted for this table: 608
+INFO 07/22 03:30:59 PM Analyzing resource: Erazem_Lorbek
+INFO 07/22 03:30:59 PM No Tables found for this resource.
+INFO 07/22 03:31:00 PM Analyzing resource: Marcelo_Nicola
+INFO 07/22 03:31:00 PM No Tables found for this resource.
+INFO 07/22 03:31:00 PM Analyzing resource: Michele_Maggioli
+INFO 07/22 03:31:00 PM No Tables found for this resource.
+INFO 07/22 03:31:00 PM Analyzing resource: Dan_Gay
+INFO 07/22 03:31:00 PM No Tables found for this resource.
+INFO 07/22 03:31:01 PM Analyzing resource: Carmelo_Anthony
+INFO 07/22 03:31:01 PM Table under section: Regular season
+INFO 07/22 03:31:01 PM Headers Found
+INFO 07/22 03:31:01 PM Data refined
+INFO 07/22 03:31:01 PM Rows extracted: 15
+INFO 07/22 03:31:01 PM Data extracted for this table: 210
+INFO 07/22 03:31:01 PM Table under section: Play-off
+INFO 07/22 03:31:01 PM Headers Found
+INFO 07/22 03:31:01 PM Data refined
+INFO 07/22 03:31:01 PM Rows extracted: 10
+INFO 07/22 03:31:01 PM Data extracted for this table: 140
+INFO 07/22 03:31:02 PM Analyzing resource: Byron_Scott
+INFO 07/22 03:31:02 PM No Tables found for this resource.
+INFO 07/22 03:31:03 PM Analyzing resource: Olden_Polynice
+INFO 07/22 03:31:03 PM No Tables found for this resource.
+INFO 07/22 03:31:04 PM Analyzing resource: Walt_Frazier
+INFO 07/22 03:31:04 PM No Tables found for this resource.
+INFO 07/22 03:31:04 PM Analyzing resource: Cheryl_Miller
+INFO 07/22 03:31:04 PM No Tables found for this resource.
+INFO 07/22 03:31:05 PM Analyzing resource: Rony_Seikaly
+INFO 07/22 03:31:05 PM No Tables found for this resource.
+INFO 07/22 03:31:06 PM Analyzing resource: Gabriele_Ganeto
+INFO 07/22 03:31:06 PM No Tables found for this resource.
+INFO 07/22 03:31:06 PM Analyzing resource: Tyus_Edney
+INFO 07/22 03:31:06 PM No Tables found for this resource.
+INFO 07/22 03:31:07 PM Analyzing resource: Luca_Garri
+INFO 07/22 03:31:07 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:31:07 PM Headers Found
+INFO 07/22 03:31:07 PM Data refined
+INFO 07/22 03:31:07 PM Rows extracted: 4
+INFO 07/22 03:31:07 PM Data extracted for this table: 32
+INFO 07/22 03:31:07 PM Analyzing resource: Allen_Iverson
+INFO 07/22 03:31:07 PM Table under section: Regular season
+INFO 07/22 03:31:07 PM Headers Found
+INFO 07/22 03:31:07 PM Data refined
+INFO 07/22 03:31:07 PM Rows extracted: 17
+INFO 07/22 03:31:07 PM Data extracted for this table: 238
+INFO 07/22 03:31:07 PM Table under section: Play-off
+INFO 07/22 03:31:07 PM Headers Found
+INFO 07/22 03:31:07 PM Data refined
+INFO 07/22 03:31:07 PM Rows extracted: 8
+INFO 07/22 03:31:07 PM Data extracted for this table: 112
+INFO 07/22 03:31:08 PM Analyzing resource: Walter_Santarossa
+INFO 07/22 03:31:08 PM No Tables found for this resource.
+INFO 07/22 03:31:09 PM Analyzing resource: George_Mikan
+INFO 07/22 03:31:09 PM No Tables found for this resource.
+INFO 07/22 03:31:09 PM Analyzing resource: Sheryl_Swoopes
+INFO 07/22 03:31:09 PM No Tables found for this resource.
+INFO 07/22 03:31:10 PM Analyzing resource: Gary_Trent
+INFO 07/22 03:31:10 PM No Tables found for this resource.
+INFO 07/22 03:31:10 PM Analyzing resource: Gary_Payton
+INFO 07/22 03:31:10 PM Table under section: Regular season
+INFO 07/22 03:31:10 PM Headers Found
+INFO 07/22 03:31:10 PM Data refined
+INFO 07/22 03:31:10 PM Rows extracted: 17
+INFO 07/22 03:31:10 PM Data extracted for this table: 170
+INFO 07/22 03:31:10 PM New header found: GP
+INFO 07/22 03:31:11 PM New header found: GS
+INFO 07/22 03:31:11 PM Analyzing resource: John_Havlicek
+INFO 07/22 03:31:11 PM No Tables found for this resource.
+INFO 07/22 03:31:12 PM Analyzing resource: Rick_Barry
+INFO 07/22 03:31:12 PM No Tables found for this resource.
+INFO 07/22 03:31:13 PM Analyzing resource: Vinny_Del_Negro
+INFO 07/22 03:31:13 PM No Tables found for this resource.
+INFO 07/22 03:31:13 PM Analyzing resource: Andre_Iguodala
+INFO 07/22 03:31:13 PM No Tables found for this resource.
+INFO 07/22 03:31:14 PM Analyzing resource: Christian_Di_Giuliomaria
+INFO 07/22 03:31:14 PM No Tables found for this resource.
+INFO 07/22 03:31:15 PM Analyzing resource: Enrico_Gilardi
+INFO 07/22 03:31:15 PM No Tables found for this resource.
+INFO 07/22 03:31:15 PM Analyzing resource: Trajan_Langdon
+INFO 07/22 03:31:15 PM No Tables found for this resource.
+INFO 07/22 03:31:16 PM Analyzing resource: Paul_Pierce
+INFO 07/22 03:31:16 PM Table under section: Regular Season
+INFO 07/22 03:31:16 PM Headers Found
+INFO 07/22 03:31:16 PM Data refined
+INFO 07/22 03:31:16 PM Rows extracted: 17
+INFO 07/22 03:31:16 PM Data extracted for this table: 238
+INFO 07/22 03:31:16 PM Table under section: College
+INFO 07/22 03:31:16 PM Headers Found
+INFO 07/22 03:31:16 PM Data refined
+INFO 07/22 03:31:16 PM Rows extracted: 4
+INFO 07/22 03:31:16 PM Data extracted for this table: 52
+INFO 07/22 03:31:16 PM Table under section: Play-off
+INFO 07/22 03:31:16 PM Headers Found
+INFO 07/22 03:31:16 PM Data refined
+INFO 07/22 03:31:16 PM Rows extracted: 15
+INFO 07/22 03:31:16 PM Data extracted for this table: 195
+INFO 07/22 03:31:17 PM Analyzing resource: Shawn_Marion
+INFO 07/22 03:31:17 PM Table under section: Regular season
+INFO 07/22 03:31:17 PM Headers Found
+INFO 07/22 03:31:17 PM Data refined
+INFO 07/22 03:31:17 PM Rows extracted: 15
+INFO 07/22 03:31:17 PM Data extracted for this table: 195
+INFO 07/22 03:31:17 PM Table under section: Playoffs
+INFO 07/22 03:31:17 PM Headers Found
+INFO 07/22 03:31:17 PM Data refined
+INFO 07/22 03:31:17 PM Rows extracted: 11
+INFO 07/22 03:31:17 PM Data extracted for this table: 143
+INFO 07/22 03:31:17 PM New header found: Playoffs
+INFO 07/22 03:31:18 PM Analyzing resource: Alessandro_Cittadini
+INFO 07/22 03:31:18 PM No Tables found for this resource.
+INFO 07/22 03:31:19 PM Analyzing resource: Aleksandr_Belov
+INFO 07/22 03:31:19 PM No Tables found for this resource.
+INFO 07/22 03:31:19 PM Analyzing resource: Lynn_Greer
+INFO 07/22 03:31:19 PM No Tables found for this resource.
+INFO 07/22 03:31:20 PM Analyzing resource: Gregor_Fučka
+INFO 07/22 03:31:20 PM No Tables found for this resource.
+INFO 07/22 03:31:21 PM Analyzing resource: Andrej_Kirilenko
+INFO 07/22 03:31:21 PM No Tables found for this resource.
+INFO 07/22 03:31:21 PM Analyzing resource: Rodolfo_Rombaldoni
+INFO 07/22 03:31:21 PM No Tables found for this resource.
+INFO 07/22 03:31:22 PM Analyzing resource: Ben_Wallace
+INFO 07/22 03:31:22 PM No Tables found for this resource.
+INFO 07/22 03:31:22 PM Analyzing resource: Michel_Morandais
+INFO 07/22 03:31:22 PM No Tables found for this resource.
+INFO 07/22 03:31:23 PM Analyzing resource: Jacopo_Giachetti
+INFO 07/22 03:31:23 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:31:23 PM Headers Found
+INFO 07/22 03:31:23 PM Data refined
+INFO 07/22 03:31:23 PM Rows extracted: 13
+INFO 07/22 03:31:23 PM Data extracted for this table: 104
+INFO 07/22 03:31:23 PM Analyzing resource: Samuel_Dalembert
+INFO 07/22 03:31:23 PM No Tables found for this resource.
+INFO 07/22 03:31:25 PM Analyzing resource: Svetislav_Pešić
+INFO 07/22 03:31:25 PM No Tables found for this resource.
+INFO 07/22 03:31:25 PM Analyzing resource: Pete_Maravich
+INFO 07/22 03:31:25 PM Table under section: Stagione regolare
+INFO 07/22 03:31:25 PM Headers Found
+INFO 07/22 03:31:25 PM Data refined
+INFO 07/22 03:31:25 PM Rows extracted: 11
+INFO 07/22 03:31:25 PM Data extracted for this table: 154
+INFO 07/22 03:31:25 PM Table under section: Playoffs
+INFO 07/22 03:31:25 PM Headers Found
+INFO 07/22 03:31:25 PM Data refined
+INFO 07/22 03:31:25 PM Rows extracted: 4
+INFO 07/22 03:31:25 PM Data extracted for this table: 56
+INFO 07/22 03:31:25 PM Table under section: NCAA
+INFO 07/22 03:31:25 PM Headers Found
+INFO 07/22 03:31:25 PM Data refined
+INFO 07/22 03:31:25 PM Rows extracted: 3
+INFO 07/22 03:31:25 PM Data extracted for this table: 42
+INFO 07/22 03:31:26 PM Analyzing resource: Ben_Gordon
+INFO 07/22 03:31:26 PM No Tables found for this resource.
+INFO 07/22 03:31:27 PM Analyzing resource: Marco_Bonamico
+INFO 07/22 03:31:27 PM No Tables found for this resource.
+INFO 07/22 03:31:27 PM Analyzing resource: Kirk_Hinrich
+INFO 07/22 03:31:27 PM No Tables found for this resource.
+INFO 07/22 03:31:28 PM Analyzing resource: Brandon_Hunter
+INFO 07/22 03:31:28 PM No Tables found for this resource.
+INFO 07/22 03:31:29 PM Analyzing resource: Davide_Bonora
+INFO 07/22 03:31:29 PM No Tables found for this resource.
+INFO 07/22 03:31:29 PM Analyzing resource: Vincenzo_Esposito_(cestista)
+INFO 07/22 03:31:29 PM No Tables found for this resource.
+INFO 07/22 03:31:30 PM Analyzing resource: Michele_Mian
+INFO 07/22 03:31:30 PM No Tables found for this resource.
+INFO 07/22 03:31:30 PM Analyzing resource: Arvydas_Macijauskas
+INFO 07/22 03:31:30 PM No Tables found for this resource.
+INFO 07/22 03:31:31 PM Analyzing resource: Chris_Paul
+INFO 07/22 03:31:31 PM Table under section: Regular season
+INFO 07/22 03:31:31 PM Headers Found
+INFO 07/22 03:31:31 PM Data refined
+INFO 07/22 03:31:31 PM Rows extracted: 11
+INFO 07/22 03:31:31 PM Data extracted for this table: 154
+INFO 07/22 03:31:31 PM Table under section: Play-off
+INFO 07/22 03:31:31 PM Headers Found
+INFO 07/22 03:31:31 PM Data refined
+INFO 07/22 03:31:31 PM Rows extracted: 8
+INFO 07/22 03:31:31 PM Data extracted for this table: 112
+INFO 07/22 03:31:32 PM Analyzing resource: Riccardo_Sales
+INFO 07/22 03:31:32 PM No Tables found for this resource.
+INFO 07/22 03:31:33 PM Analyzing resource: Jason_Kidd
+INFO 07/22 03:31:33 PM No Tables found for this resource.
+INFO 07/22 03:31:34 PM Analyzing resource: Ray_Allen
+INFO 07/22 03:31:34 PM Table under section: Regular season
+INFO 07/22 03:31:34 PM Headers Found
+INFO 07/22 03:31:34 PM Data refined
+INFO 07/22 03:31:34 PM Rows extracted: 19
+INFO 07/22 03:31:34 PM Data extracted for this table: 266
+INFO 07/22 03:31:34 PM Table under section: Playoffs
+INFO 07/22 03:31:34 PM Headers Found
+INFO 07/22 03:31:34 PM Data refined
+INFO 07/22 03:31:34 PM Rows extracted: 11
+INFO 07/22 03:31:34 PM Data extracted for this table: 154
+INFO 07/22 03:31:34 PM Analyzing resource: Dikembe_Mutombo
+INFO 07/22 03:31:34 PM No Tables found for this resource.
+INFO 07/22 03:31:35 PM Analyzing resource: Jalen_Rose
+INFO 07/22 03:31:35 PM No Tables found for this resource.
+INFO 07/22 03:31:36 PM Analyzing resource: Chris_Webber
+INFO 07/22 03:31:36 PM No Tables found for this resource.
+INFO 07/22 03:31:36 PM Analyzing resource: Latrell_Sprewell
+INFO 07/22 03:31:36 PM No Tables found for this resource.
+INFO 07/22 03:31:37 PM Analyzing resource: Mario_Boni
+INFO 07/22 03:31:37 PM Table under section: Nazionale
+INFO 07/22 03:31:37 PM Headers Found
+INFO 07/22 03:31:37 PM Data refined
+INFO 07/22 03:31:37 PM Rows extracted: 1
+INFO 07/22 03:31:37 PM Data extracted for this table: 8
+INFO 07/22 03:31:38 PM Analyzing resource: Vin_Baker
+INFO 07/22 03:31:38 PM No Tables found for this resource.
+INFO 07/22 03:31:38 PM Analyzing resource: Michael_Finley
+INFO 07/22 03:31:38 PM No Tables found for this resource.
+INFO 07/22 03:31:39 PM Analyzing resource: Shareef_Abdur-Rahim
+INFO 07/22 03:31:39 PM No Tables found for this resource.
+INFO 07/22 03:31:39 PM Analyzing resource: Nick_Van_Exel
+INFO 07/22 03:31:39 PM No Tables found for this resource.
+INFO 07/22 03:31:40 PM Analyzing resource: Vlade_Divac
+INFO 07/22 03:31:40 PM No Tables found for this resource.
+INFO 07/22 03:31:41 PM Analyzing resource: Alonzo_Mourning
+INFO 07/22 03:31:41 PM No Tables found for this resource.
+INFO 07/22 03:31:42 PM Analyzing resource: Antonio_McDyess
+INFO 07/22 03:31:42 PM No Tables found for this resource.
+INFO 07/22 03:31:42 PM Analyzing resource: Mitch_Richmond
+INFO 07/22 03:31:42 PM No Tables found for this resource.
+INFO 07/22 03:31:43 PM Analyzing resource: Dominique_Wilkins
+INFO 07/22 03:31:43 PM No Tables found for this resource.
+INFO 07/22 03:31:44 PM Analyzing resource: Jerry_Stackhouse
+INFO 07/22 03:31:44 PM No Tables found for this resource.
+INFO 07/22 03:31:44 PM Analyzing resource: Allan_Houston
+INFO 07/22 03:31:44 PM No Tables found for this resource.
+INFO 07/22 03:31:45 PM Analyzing resource: Metta_World_Peace
+INFO 07/22 03:31:45 PM Table under section: Regular season
+INFO 07/22 03:31:45 PM Headers Found
+INFO 07/22 03:31:45 PM Data refined
+INFO 07/22 03:31:45 PM Rows extracted: 20
+INFO 07/22 03:31:45 PM Data extracted for this table: 280
+INFO 07/22 03:31:45 PM Table under section: Playoffs
+INFO 07/22 03:31:45 PM Headers Found
+INFO 07/22 03:31:45 PM Data refined
+INFO 07/22 03:31:45 PM Rows extracted: 10
+INFO 07/22 03:31:45 PM Data extracted for this table: 140
+INFO 07/22 03:31:45 PM New header found: PT
+INFO 07/22 03:31:45 PM New header found: TOV
+INFO 07/22 03:31:46 PM Analyzing resource: Dante_Calabria
+INFO 07/22 03:31:46 PM No Tables found for this resource.
+INFO 07/22 03:31:47 PM Analyzing resource: Keith_Van_Horn
+INFO 07/22 03:31:47 PM No Tables found for this resource.
+INFO 07/22 03:31:47 PM Analyzing resource: Rasheed_Wallace
+INFO 07/22 03:31:47 PM Table under section: Regular season
+INFO 07/22 03:31:47 PM Headers Found
+INFO 07/22 03:31:47 PM Data refined
+INFO 07/22 03:31:47 PM Rows extracted: 19
+INFO 07/22 03:31:47 PM Data extracted for this table: 266
+INFO 07/22 03:31:47 PM Table under section: Play-off
+INFO 07/22 03:31:47 PM Headers Found
+INFO 07/22 03:31:47 PM Data refined
+INFO 07/22 03:31:47 PM Rows extracted: 15
+INFO 07/22 03:31:47 PM Data extracted for this table: 210
+INFO 07/22 03:31:48 PM Analyzing resource: Claudio_Coldebella
+INFO 07/22 03:31:48 PM No Tables found for this resource.
+INFO 07/22 03:31:49 PM Analyzing resource: Joe_Bryant
+INFO 07/22 03:31:49 PM No Tables found for this resource.
+INFO 07/22 03:31:49 PM Analyzing resource: Nate_Thurmond
+INFO 07/22 03:31:49 PM No Tables found for this resource.
+INFO 07/22 03:31:50 PM Analyzing resource: Dajuan_Wagner
+INFO 07/22 03:31:50 PM No Tables found for this resource.
+INFO 07/22 03:31:51 PM Analyzing resource: Bill_Russell
+INFO 07/22 03:31:51 PM No Tables found for this resource.
+INFO 07/22 03:31:51 PM Analyzing resource: Paulo_Pinto
+INFO 07/22 03:31:51 PM No Tables found for this resource.
+INFO 07/22 03:31:52 PM Analyzing resource: Bob_Morse
+INFO 07/22 03:31:52 PM Table under section: Statistiche
+INFO 07/22 03:31:52 PM Headers Found
+INFO 07/22 03:31:52 PM Data refined
+INFO 07/22 03:31:52 PM Rows extracted: 14
+INFO 07/22 03:31:52 PM Data extracted for this table: 196
+INFO 07/22 03:31:52 PM Analyzing resource: Filippo_Faina
+INFO 07/22 03:31:52 PM No Tables found for this resource.
+INFO 07/22 03:31:53 PM Analyzing resource: Anthony_Carter
+INFO 07/22 03:31:53 PM No Tables found for this resource.
+INFO 07/22 03:31:54 PM Analyzing resource: Keith_Carter
+INFO 07/22 03:31:54 PM No Tables found for this resource.
+INFO 07/22 03:31:54 PM Analyzing resource: Stephanie_Wagner
+INFO 07/22 03:31:54 PM No Tables found for this resource.
+INFO 07/22 03:31:55 PM Analyzing resource: Bob_Love
+INFO 07/22 03:31:55 PM No Tables found for this resource.
+INFO 07/22 03:31:55 PM Analyzing resource: Kevin_Love
+INFO 07/22 03:31:55 PM Table under section: Regular season
+INFO 07/22 03:31:55 PM Headers Found
+INFO 07/22 03:31:55 PM Data refined
+INFO 07/22 03:31:55 PM Rows extracted: 8
+INFO 07/22 03:31:55 PM Data extracted for this table: 112
+INFO 07/22 03:31:56 PM Analyzing resource: Mark_Pope
+INFO 07/22 03:31:56 PM No Tables found for this resource.
+INFO 07/22 03:31:56 PM Analyzing resource: Andrea_Casella
+INFO 07/22 03:31:56 PM No Tables found for this resource.
+INFO 07/22 03:31:57 PM Analyzing resource: Massimiliano_Monti
+INFO 07/22 03:31:57 PM No Tables found for this resource.
+INFO 07/22 03:31:58 PM Analyzing resource: Michele_Cardinali
+INFO 07/22 03:31:58 PM No Tables found for this resource.
+INFO 07/22 03:31:58 PM Analyzing resource: Steve_Rogers_(cestista)
+INFO 07/22 03:31:58 PM No Tables found for this resource.
+INFO 07/22 03:31:59 PM Analyzing resource: Deán_Borges
+INFO 07/22 03:31:59 PM No Tables found for this resource.
+INFO 07/22 03:31:59 PM Analyzing resource: Tabaré_Borges
+INFO 07/22 03:31:59 PM No Tables found for this resource.
+INFO 07/22 03:32:00 PM Analyzing resource: Angelo_Gigli
+INFO 07/22 03:32:00 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:32:00 PM Headers Found
+INFO 07/22 03:32:00 PM Data refined
+INFO 07/22 03:32:00 PM Rows extracted: 16
+INFO 07/22 03:32:00 PM Data extracted for this table: 128
+INFO 07/22 03:32:00 PM Analyzing resource: James_Martin_(cestista)
+INFO 07/22 03:32:00 PM No Tables found for this resource.
+INFO 07/22 03:32:01 PM Analyzing resource: Kenyon_Martin
+INFO 07/22 03:32:01 PM No Tables found for this resource.
+INFO 07/22 03:32:02 PM Analyzing resource: Phil_Martin_(cestista_1980)
+INFO 07/22 03:32:02 PM No Tables found for this resource.
+INFO 07/22 03:32:02 PM Analyzing resource: Phil_Martin_(cestista_1928)
+INFO 07/22 03:32:02 PM No Tables found for this resource.
+INFO 07/22 03:32:03 PM Analyzing resource: Kaniel_Dickens
+INFO 07/22 03:32:03 PM No Tables found for this resource.
+INFO 07/22 03:32:04 PM Analyzing resource: Andrew_Lawrence_(cestista)
+INFO 07/22 03:32:04 PM No Tables found for this resource.
+INFO 07/22 03:32:04 PM Analyzing resource: Martina_Weber
+INFO 07/22 03:32:04 PM No Tables found for this resource.
+INFO 07/22 03:32:05 PM Analyzing resource: Sam_Jones_(cestista)
+INFO 07/22 03:32:05 PM No Tables found for this resource.
+INFO 07/22 03:32:05 PM Analyzing resource: Valentino_Battisti
+INFO 07/22 03:32:05 PM No Tables found for this resource.
+INFO 07/22 03:32:06 PM Analyzing resource: Laura_Macchi
+INFO 07/22 03:32:06 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:32:06 PM Headers Found
+INFO 07/22 03:32:06 PM Data refined
+INFO 07/22 03:32:06 PM Rows extracted: 36
+INFO 07/22 03:32:06 PM Data extracted for this table: 288
+INFO 07/22 03:32:07 PM Analyzing resource: Kevin_Kunnert
+INFO 07/22 03:32:07 PM No Tables found for this resource.
+INFO 07/22 03:32:07 PM Analyzing resource: Ian_Lockhart
+INFO 07/22 03:32:07 PM No Tables found for this resource.
+INFO 07/22 03:32:08 PM Analyzing resource: Michael_Olowokandi
+INFO 07/22 03:32:08 PM No Tables found for this resource.
+INFO 07/22 03:32:09 PM Analyzing resource: Jack_McMahon
+INFO 07/22 03:32:09 PM No Tables found for this resource.
+INFO 07/22 03:32:09 PM Analyzing resource: Raitis_Grafs
+INFO 07/22 03:32:09 PM No Tables found for this resource.
+INFO 07/22 03:32:10 PM Analyzing resource: Tommy_Smith_(cestista)
+INFO 07/22 03:32:10 PM No Tables found for this resource.
+INFO 07/22 03:32:10 PM Analyzing resource: Bill_Bolger
+INFO 07/22 03:32:10 PM No Tables found for this resource.
+INFO 07/22 03:32:11 PM Analyzing resource: Red_Robbins
+INFO 07/22 03:32:11 PM No Tables found for this resource.
+INFO 07/22 03:32:11 PM Analyzing resource: Ralph_Bishop
+INFO 07/22 03:32:11 PM No Tables found for this resource.
+INFO 07/22 03:32:12 PM Analyzing resource: Etdrick_Bohannon
+INFO 07/22 03:32:12 PM No Tables found for this resource.
+INFO 07/22 03:32:13 PM Analyzing resource: Bariša_Krasić
+INFO 07/22 03:32:13 PM No Tables found for this resource.
+INFO 07/22 03:32:14 PM Analyzing resource: Carlo_Recalcati
+INFO 07/22 03:32:14 PM No Tables found for this resource.
+INFO 07/22 03:32:14 PM Analyzing resource: Sandro_Gamba
+INFO 07/22 03:32:14 PM No Tables found for this resource.
+INFO 07/22 03:32:15 PM Analyzing resource: Domenico_Morena
+INFO 07/22 03:32:15 PM No Tables found for this resource.
+INFO 07/22 03:32:16 PM Analyzing resource: James_Worthy
+INFO 07/22 03:32:16 PM No Tables found for this resource.
+INFO 07/22 03:32:17 PM Analyzing resource: Bob_Davies
+INFO 07/22 03:32:17 PM No Tables found for this resource.
+INFO 07/22 03:32:18 PM Analyzing resource: Martynas_Pocius
+INFO 07/22 03:32:18 PM No Tables found for this resource.
+INFO 07/22 03:32:18 PM Analyzing resource: Nadežda_Grišaeva
+INFO 07/22 03:32:18 PM No Tables found for this resource.
+INFO 07/22 03:32:19 PM Analyzing resource: Anatolij_Kaširov
+INFO 07/22 03:32:19 PM No Tables found for this resource.
+INFO 07/22 03:32:20 PM Analyzing resource: Philip_Zwiener
+INFO 07/22 03:32:20 PM No Tables found for this resource.
+INFO 07/22 03:32:20 PM Analyzing resource: Erick_Dampier
+INFO 07/22 03:32:20 PM No Tables found for this resource.
+INFO 07/22 03:32:20 PM Analyzing resource: Nasos_Galakteros
+INFO 07/22 03:32:20 PM No Tables found for this resource.
+INFO 07/22 03:32:21 PM Analyzing resource: Satoru_Furuta
+INFO 07/22 03:32:21 PM No Tables found for this resource.
+INFO 07/22 03:32:22 PM Analyzing resource: Cori_Blakebrough
+INFO 07/22 03:32:22 PM No Tables found for this resource.
+INFO 07/22 03:32:22 PM Analyzing resource: Fred_Cofield
+INFO 07/22 03:32:22 PM No Tables found for this resource.
+INFO 07/22 03:32:23 PM Analyzing resource: Tristan_Thompson
+INFO 07/22 03:32:23 PM Table under section: Regular season
+INFO 07/22 03:32:23 PM Headers Found
+INFO 07/22 03:32:23 PM Data refined
+INFO 07/22 03:32:23 PM Rows extracted: 5
+INFO 07/22 03:32:23 PM Data extracted for this table: 70
+INFO 07/22 03:32:23 PM Table under section: Play-off
+INFO 07/22 03:32:23 PM Headers Found
+INFO 07/22 03:32:23 PM Data refined
+INFO 07/22 03:32:23 PM Rows extracted: 2
+INFO 07/22 03:32:23 PM Data extracted for this table: 28
+INFO 07/22 03:32:24 PM Analyzing resource: Begoña_García
+INFO 07/22 03:32:24 PM No Tables found for this resource.
+INFO 07/22 03:32:24 PM Analyzing resource: Jannik_Freese
+INFO 07/22 03:32:24 PM No Tables found for this resource.
+INFO 07/22 03:32:25 PM Analyzing resource: Charley_Eckman
+INFO 07/22 03:32:25 PM No Tables found for this resource.
+INFO 07/22 03:32:25 PM Analyzing resource: Jerry_Lucas
+INFO 07/22 03:32:25 PM No Tables found for this resource.
+INFO 07/22 03:32:26 PM Analyzing resource: Dan_Langhi
+INFO 07/22 03:32:26 PM No Tables found for this resource.
+INFO 07/22 03:32:26 PM Analyzing resource: Jewell_Young
+INFO 07/22 03:32:26 PM No Tables found for this resource.
+INFO 07/22 03:32:27 PM Analyzing resource: Penny_Moore
+INFO 07/22 03:32:27 PM No Tables found for this resource.
+INFO 07/22 03:32:28 PM Analyzing resource: Lamond_Murray
+INFO 07/22 03:32:28 PM No Tables found for this resource.
+INFO 07/22 03:32:28 PM Analyzing resource: Marouan_Laghnej
+INFO 07/22 03:32:28 PM No Tables found for this resource.
+INFO 07/22 03:32:29 PM Analyzing resource: Marko_Tušek
+INFO 07/22 03:32:29 PM Table under section: Statistiche nel Campionato Italiano
+INFO 07/22 03:32:29 PM Headers Found
+INFO 07/22 03:32:29 PM Data refined
+INFO 07/22 03:32:29 PM Rows extracted: 14
+INFO 07/22 03:32:29 PM Data extracted for this table: 196
+INFO 07/22 03:32:30 PM Analyzing resource: Sani_Bečirovič
+INFO 07/22 03:32:30 PM No Tables found for this resource.
+INFO 07/22 03:32:30 PM Analyzing resource: Aleksandar_Ćapin
+INFO 07/22 03:32:30 PM No Tables found for this resource.
+INFO 07/22 03:32:31 PM Analyzing resource: Red_Auerbach
+INFO 07/22 03:32:31 PM No Tables found for this resource.
+INFO 07/22 03:32:32 PM Analyzing resource: Gabriel_Fernández_(cestista)
+INFO 07/22 03:32:32 PM No Tables found for this resource.
+INFO 07/22 03:32:32 PM Analyzing resource: Doug_Moe
+INFO 07/22 03:32:32 PM Table under section: Statistiche
+INFO 07/22 03:32:32 PM Headers Found
+INFO 07/22 03:32:32 PM Data refined
+INFO 07/22 03:32:32 PM Rows extracted: 7
+INFO 07/22 03:32:32 PM Data extracted for this table: 98
+INFO 07/22 03:32:33 PM Analyzing resource: Alessandro_Frosini
+INFO 07/22 03:32:33 PM No Tables found for this resource.
+INFO 07/22 03:32:34 PM Analyzing resource: Salvatore_Genovese_(cestista)
+INFO 07/22 03:32:34 PM No Tables found for this resource.
+INFO 07/22 03:32:34 PM Analyzing resource: Joe_Isaac
+INFO 07/22 03:32:34 PM No Tables found for this resource.
+INFO 07/22 03:32:35 PM Analyzing resource: Hilton_Armstrong
+INFO 07/22 03:32:35 PM No Tables found for this resource.
+INFO 07/22 03:32:36 PM Analyzing resource: Chiara_Pastore
+INFO 07/22 03:32:36 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:32:36 PM Headers Found
+INFO 07/22 03:32:36 PM Data refined
+INFO 07/22 03:32:36 PM Rows extracted: 51
+INFO 07/22 03:32:36 PM Data extracted for this table: 408
+INFO 07/22 03:32:36 PM Analyzing resource: Marco_Cucco
+INFO 07/22 03:32:36 PM No Tables found for this resource.
+INFO 07/22 03:32:37 PM Analyzing resource: Jeremy_Lin
+INFO 07/22 03:32:37 PM Table under section: Regular season
+INFO 07/22 03:32:37 PM Headers Found
+INFO 07/22 03:32:37 PM Data refined
+INFO 07/22 03:32:37 PM Rows extracted: 3
+INFO 07/22 03:32:37 PM Data extracted for this table: 42
+INFO 07/22 03:32:37 PM Table under section: Play-off
+INFO 07/22 03:32:37 PM Headers Found
+INFO 07/22 03:32:37 PM Data refined
+INFO 07/22 03:32:37 PM Rows extracted: 1
+INFO 07/22 03:32:37 PM Data extracted for this table: 14
+INFO 07/22 03:32:38 PM Analyzing resource: Eddie_Johnson_(cestista_1955)
+INFO 07/22 03:32:38 PM No Tables found for this resource.
+INFO 07/22 03:32:39 PM Analyzing resource: Eddie_Johnson_(cestista_1959)
+INFO 07/22 03:32:39 PM No Tables found for this resource.
+INFO 07/22 03:32:40 PM Analyzing resource: Paolo_Moretti
+INFO 07/22 03:32:40 PM No Tables found for this resource.
+INFO 07/22 03:32:40 PM Analyzing resource: Roberto_Premier
+INFO 07/22 03:32:40 PM No Tables found for this resource.
+INFO 07/22 03:32:41 PM Analyzing resource: Andre_Brown
+INFO 07/22 03:32:41 PM No Tables found for this resource.
+INFO 07/22 03:32:41 PM Analyzing resource: Brandon_Brown
+INFO 07/22 03:32:41 PM No Tables found for this resource.
+INFO 07/22 03:32:42 PM Analyzing resource: Brett_Brown
+INFO 07/22 03:32:42 PM No Tables found for this resource.
+INFO 07/22 03:32:42 PM Analyzing resource: Brian_Brown
+INFO 07/22 03:32:42 PM No Tables found for this resource.
+INFO 07/22 03:32:43 PM Analyzing resource: Carl_Brown
+INFO 07/22 03:32:43 PM No Tables found for this resource.
+INFO 07/22 03:32:44 PM Analyzing resource: Chucky_Brown
+INFO 07/22 03:32:44 PM No Tables found for this resource.
+INFO 07/22 03:32:44 PM Analyzing resource: Damone_Brown
+INFO 07/22 03:32:44 PM No Tables found for this resource.
+INFO 07/22 03:32:45 PM Analyzing resource: Dee_Brown_(cestista_1984)
+INFO 07/22 03:32:45 PM No Tables found for this resource.
+INFO 07/22 03:32:45 PM Analyzing resource: Devin_Brown
+INFO 07/22 03:32:45 PM No Tables found for this resource.
+INFO 07/22 03:32:46 PM Analyzing resource: Edwina_Brown
+INFO 07/22 03:32:46 PM No Tables found for this resource.
+INFO 07/22 03:32:47 PM Analyzing resource: Elton_Brown
+INFO 07/22 03:32:47 PM No Tables found for this resource.
+INFO 07/22 03:32:47 PM Analyzing resource: Ernest_Brown
+INFO 07/22 03:32:47 PM No Tables found for this resource.
+INFO 07/22 03:32:48 PM Analyzing resource: Fred_Brown
+INFO 07/22 03:32:48 PM No Tables found for this resource.
+INFO 07/22 03:32:49 PM Analyzing resource: Gerald_Brown_(cestista_1975)
+INFO 07/22 03:32:49 PM No Tables found for this resource.
+INFO 07/22 03:32:49 PM Analyzing resource: Harold_Brown
+INFO 07/22 03:32:49 PM No Tables found for this resource.
+INFO 07/22 03:32:50 PM Analyzing resource: Herb_Brown
+INFO 07/22 03:32:50 PM No Tables found for this resource.
+INFO 07/22 03:32:51 PM Analyzing resource: Hubie_Brown
+INFO 07/22 03:32:51 PM No Tables found for this resource.
+INFO 07/22 03:32:51 PM Analyzing resource: Kedrick_Brown
+INFO 07/22 03:32:51 PM No Tables found for this resource.
+INFO 07/22 03:32:52 PM Analyzing resource: Kiesha_Brown
+INFO 07/22 03:32:52 PM No Tables found for this resource.
+INFO 07/22 03:32:52 PM Analyzing resource: Kwame_Brown
+INFO 07/22 03:32:52 PM No Tables found for this resource.
+INFO 07/22 03:32:53 PM Analyzing resource: Larry_Brown
+INFO 07/22 03:32:53 PM No Tables found for this resource.
+INFO 07/22 03:32:54 PM Analyzing resource: Lewis_Brown
+INFO 07/22 03:32:54 PM No Tables found for this resource.
+INFO 07/22 03:32:54 PM Analyzing resource: Marcus_Brown
+INFO 07/22 03:32:54 PM No Tables found for this resource.
+INFO 07/22 03:32:55 PM Analyzing resource: Mike_Brown_(cestista_1963)
+INFO 07/22 03:32:55 PM No Tables found for this resource.
+INFO 07/22 03:32:56 PM Analyzing resource: Mike_Brown_(cestista_1970)
+INFO 07/22 03:32:56 PM No Tables found for this resource.
+INFO 07/22 03:32:56 PM Analyzing resource: Myron_Brown
+INFO 07/22 03:32:56 PM No Tables found for this resource.
+INFO 07/22 03:32:57 PM Analyzing resource: Randy_Brown
+INFO 07/22 03:32:57 PM No Tables found for this resource.
+INFO 07/22 03:32:57 PM Analyzing resource: Rickey_Brown_(cestista_1955)
+INFO 07/22 03:32:57 PM No Tables found for this resource.
+INFO 07/22 03:32:58 PM Analyzing resource: Rickey_Brown_(cestista_1958)
+INFO 07/22 03:32:58 PM No Tables found for this resource.
+INFO 07/22 03:32:58 PM Analyzing resource: Bobby_Brown_(cestista)
+INFO 07/22 03:32:58 PM Table under section: Regular Season
+INFO 07/22 03:32:58 PM Headers Found
+INFO 07/22 03:32:58 PM Data refined
+INFO 07/22 03:32:58 PM Rows extracted: 6
+INFO 07/22 03:32:58 PM Data extracted for this table: 78
+INFO 07/22 03:32:58 PM Table under section: Playoffs
+INFO 07/22 03:32:58 PM Headers Found
+INFO 07/22 03:32:58 PM Data refined
+INFO 07/22 03:32:58 PM Rows extracted: 1
+INFO 07/22 03:32:58 PM Data extracted for this table: 13
+INFO 07/22 03:32:58 PM Table under section: Statistiche Eurolega
+INFO 07/22 03:32:58 PM Headers Found
+INFO 07/22 03:32:58 PM Data refined
+INFO 07/22 03:32:58 PM Rows extracted: 3
+INFO 07/22 03:32:58 PM Data extracted for this table: 42
+INFO 07/22 03:32:59 PM New header found: PIR
+INFO 07/22 03:32:59 PM Analyzing resource: Rod_Brown
+INFO 07/22 03:32:59 PM No Tables found for this resource.
+INFO 07/22 03:33:00 PM Analyzing resource: Roger_Brown_(cestista_1942)
+INFO 07/22 03:33:00 PM No Tables found for this resource.
+INFO 07/22 03:33:00 PM Analyzing resource: Roger_Brown_(cestista_1950)
+INFO 07/22 03:33:00 PM No Tables found for this resource.
+INFO 07/22 03:33:01 PM Analyzing resource: P.J._Brown
+INFO 07/22 03:33:01 PM No Tables found for this resource.
+INFO 07/22 03:33:02 PM Analyzing resource: Rushia_Brown
+INFO 07/22 03:33:02 PM No Tables found for this resource.
+INFO 07/22 03:33:02 PM Analyzing resource: Shannon_Brown
+INFO 07/22 03:33:02 PM Table under section: Regular season
+INFO 07/22 03:33:02 PM Headers Found
+INFO 07/22 03:33:02 PM Data refined
+INFO 07/22 03:33:02 PM Rows extracted: 6
+INFO 07/22 03:33:02 PM Data extracted for this table: 60
+INFO 07/22 03:33:02 PM Table under section: Play-off
+INFO 07/22 03:33:02 PM Headers Found
+INFO 07/22 03:33:02 PM Data refined
+INFO 07/22 03:33:02 PM Rows extracted: 2
+INFO 07/22 03:33:02 PM Data extracted for this table: 20
+INFO 07/22 03:33:03 PM Analyzing resource: Stan_Brown
+INFO 07/22 03:33:03 PM No Tables found for this resource.
+INFO 07/22 03:33:03 PM Analyzing resource: Tierre_Brown
+INFO 07/22 03:33:03 PM No Tables found for this resource.
+INFO 07/22 03:33:04 PM Analyzing resource: Tony_Brown_(cestista_1960)
+INFO 07/22 03:33:04 PM No Tables found for this resource.
+INFO 07/22 03:33:05 PM Analyzing resource: Tony_Brown_(cestista_1979)
+INFO 07/22 03:33:05 PM No Tables found for this resource.
+INFO 07/22 03:33:05 PM Analyzing resource: Amanda_Brown
+INFO 07/22 03:33:05 PM No Tables found for this resource.
+INFO 07/22 03:33:06 PM Analyzing resource: Denham_Brown
+INFO 07/22 03:33:06 PM No Tables found for this resource.
+INFO 07/22 03:33:06 PM Analyzing resource: Donna_Brown
+INFO 07/22 03:33:06 PM No Tables found for this resource.
+INFO 07/22 03:33:07 PM Analyzing resource: Earl_Brown
+INFO 07/22 03:33:07 PM No Tables found for this resource.
+INFO 07/22 03:33:08 PM Analyzing resource: DeJuan_Blair
+INFO 07/22 03:33:08 PM No Tables found for this resource.
+INFO 07/22 03:33:08 PM Analyzing resource: Stefano_Michelini
+INFO 07/22 03:33:08 PM No Tables found for this resource.
+INFO 07/22 03:33:09 PM Analyzing resource: Richard_Dumas
+INFO 07/22 03:33:09 PM No Tables found for this resource.
+INFO 07/22 03:33:09 PM Analyzing resource: Tony_Dumas
+INFO 07/22 03:33:09 PM No Tables found for this resource.
+INFO 07/22 03:33:10 PM Analyzing resource: Michael_Polite
+INFO 07/22 03:33:10 PM No Tables found for this resource.
+INFO 07/22 03:33:10 PM Analyzing resource: Giancarlo_Marinelli_(cestista)
+INFO 07/22 03:33:10 PM No Tables found for this resource.
+INFO 07/22 03:33:11 PM Analyzing resource: Valerio_Spinelli
+INFO 07/22 03:33:11 PM No Tables found for this resource.
+INFO 07/22 03:33:12 PM Analyzing resource: Francesco_Conti_(cestista)
+INFO 07/22 03:33:12 PM No Tables found for this resource.
+INFO 07/22 03:33:12 PM Analyzing resource: Paolo_Conti_(cestista_1969)
+INFO 07/22 03:33:12 PM No Tables found for this resource.
+INFO 07/22 03:33:13 PM Analyzing resource: Riccardo_Antonelli
+INFO 07/22 03:33:13 PM No Tables found for this resource.
+INFO 07/22 03:33:13 PM Analyzing resource: Marco_Baldi
+INFO 07/22 03:33:13 PM No Tables found for this resource.
+INFO 07/22 03:33:14 PM Analyzing resource: Howard_Carter_(cestista)
+INFO 07/22 03:33:14 PM No Tables found for this resource.
+INFO 07/22 03:33:15 PM Analyzing resource: Joan_Crawford_(cestista)
+INFO 07/22 03:33:15 PM No Tables found for this resource.
+INFO 07/22 03:33:15 PM Analyzing resource: Renato_Pasquali
+INFO 07/22 03:33:15 PM No Tables found for this resource.
+INFO 07/22 03:33:16 PM Analyzing resource: Massimo_Guerra
+INFO 07/22 03:33:16 PM No Tables found for this resource.
+INFO 07/22 03:33:17 PM Analyzing resource: Sergio_Paganella
+INFO 07/22 03:33:17 PM No Tables found for this resource.
+INFO 07/22 03:33:17 PM Analyzing resource: Gordan_Giriček
+INFO 07/22 03:33:17 PM No Tables found for this resource.
+INFO 07/22 03:33:18 PM Analyzing resource: Henrik_Rödl
+INFO 07/22 03:33:18 PM No Tables found for this resource.
+INFO 07/22 03:33:18 PM Analyzing resource: Larry_Wright
+INFO 07/22 03:33:18 PM No Tables found for this resource.
+INFO 07/22 03:33:19 PM Analyzing resource: Michael_Scott_(cestista)
+INFO 07/22 03:33:19 PM No Tables found for this resource.
+INFO 07/22 03:33:20 PM Analyzing resource: Lizanne_Murphy
+INFO 07/22 03:33:20 PM No Tables found for this resource.
+INFO 07/22 03:33:21 PM Analyzing resource: Jared_Dillinger
+INFO 07/22 03:33:21 PM No Tables found for this resource.
+INFO 07/22 03:33:21 PM Analyzing resource: Gene_Stump
+INFO 07/22 03:33:21 PM No Tables found for this resource.
+INFO 07/22 03:33:21 PM Analyzing resource: Marie_Ferdinand
+INFO 07/22 03:33:21 PM No Tables found for this resource.
+INFO 07/22 03:33:22 PM Analyzing resource: Tim_Abromaitis
+INFO 07/22 03:33:22 PM No Tables found for this resource.
+INFO 07/22 03:33:23 PM Analyzing resource: Sead_Šehović
+INFO 07/22 03:33:23 PM No Tables found for this resource.
+INFO 07/22 03:33:23 PM Analyzing resource: Félix_Morales
+INFO 07/22 03:33:23 PM No Tables found for this resource.
+INFO 07/22 03:33:24 PM Analyzing resource: Andre_Miller
+INFO 07/22 03:33:24 PM No Tables found for this resource.
+INFO 07/22 03:33:25 PM Analyzing resource: Anthony_Miller
+INFO 07/22 03:33:25 PM No Tables found for this resource.
+INFO 07/22 03:33:25 PM Analyzing resource: Brad_Miller
+INFO 07/22 03:33:25 PM No Tables found for this resource.
+INFO 07/22 03:33:26 PM Analyzing resource: Coco_Miller
+INFO 07/22 03:33:26 PM No Tables found for this resource.
+INFO 07/22 03:33:27 PM Analyzing resource: Darius_Miller
+INFO 07/22 03:33:27 PM No Tables found for this resource.
+INFO 07/22 03:33:27 PM Analyzing resource: Dick_Miller_(cestista)
+INFO 07/22 03:33:27 PM No Tables found for this resource.
+INFO 07/22 03:33:27 PM Analyzing resource: Jay_Miller
+INFO 07/22 03:33:27 PM No Tables found for this resource.
+INFO 07/22 03:33:28 PM Analyzing resource: Keith_Miller
+INFO 07/22 03:33:28 PM No Tables found for this resource.
+INFO 07/22 03:33:28 PM Analyzing resource: Kelly_Miller
+INFO 07/22 03:33:28 PM No Tables found for this resource.
+INFO 07/22 03:33:29 PM Analyzing resource: Mike_Miller
+INFO 07/22 03:33:29 PM No Tables found for this resource.
+INFO 07/22 03:33:29 PM Analyzing resource: Quincy_Miller
+INFO 07/22 03:33:29 PM No Tables found for this resource.
+INFO 07/22 03:33:30 PM Analyzing resource: Ralph_Miller
+INFO 07/22 03:33:30 PM No Tables found for this resource.
+INFO 07/22 03:33:31 PM Analyzing resource: Reggie_Miller
+INFO 07/22 03:33:31 PM Table under section: Regular season
+INFO 07/22 03:33:31 PM Headers Found
+INFO 07/22 03:33:31 PM Data refined
+INFO 07/22 03:33:31 PM Rows extracted: 18
+INFO 07/22 03:33:31 PM Data extracted for this table: 252
+INFO 07/22 03:33:31 PM Table under section: Playoffs
+INFO 07/22 03:33:31 PM Headers Found
+INFO 07/22 03:33:31 PM Data refined
+INFO 07/22 03:33:31 PM Rows extracted: 15
+INFO 07/22 03:33:31 PM Data extracted for this table: 210
+INFO 07/22 03:33:32 PM Analyzing resource: Teana_Miller
+INFO 07/22 03:33:32 PM No Tables found for this resource.
+INFO 07/22 03:33:33 PM Analyzing resource: Carlos_Arroyo
+INFO 07/22 03:33:33 PM No Tables found for this resource.
+INFO 07/22 03:33:33 PM Analyzing resource: Valerio_Bianchini
+INFO 07/22 03:33:33 PM No Tables found for this resource.
+INFO 07/22 03:33:34 PM Analyzing resource: Maya_Moore
+INFO 07/22 03:33:34 PM No Tables found for this resource.
+INFO 07/22 03:33:35 PM Analyzing resource: Cameron_Moore
+INFO 07/22 03:33:35 PM No Tables found for this resource.
+INFO 07/22 03:33:35 PM Analyzing resource: Derek_Moore
+INFO 07/22 03:33:35 PM No Tables found for this resource.
+INFO 07/22 03:33:36 PM Analyzing resource: E'Twaun_Moore
+INFO 07/22 03:33:36 PM Table under section: Regular Season
+INFO 07/22 03:33:36 PM Headers Found
+INFO 07/22 03:33:36 PM Data refined
+INFO 07/22 03:33:36 PM Rows extracted: 7
+INFO 07/22 03:33:36 PM Data extracted for this table: 91
+INFO 07/22 03:33:36 PM Table under section: Playoffs
+INFO 07/22 03:33:36 PM Headers Found
+INFO 07/22 03:33:36 PM Data refined
+INFO 07/22 03:33:36 PM Rows extracted: 3
+INFO 07/22 03:33:36 PM Data extracted for this table: 39
+INFO 07/22 03:33:37 PM Analyzing resource: Jacqueline_Moore_(cestista)
+INFO 07/22 03:33:37 PM No Tables found for this resource.
+INFO 07/22 03:33:37 PM Analyzing resource: Reggie_Moore
+INFO 07/22 03:33:37 PM No Tables found for this resource.
+INFO 07/22 03:33:38 PM Analyzing resource: Ken_Spain
+INFO 07/22 03:33:38 PM No Tables found for this resource.
+INFO 07/22 03:33:39 PM Analyzing resource: Bud_Acton
+INFO 07/22 03:33:39 PM No Tables found for this resource.
+INFO 07/22 03:33:39 PM Analyzing resource: Jameer_Nelson
+INFO 07/22 03:33:39 PM No Tables found for this resource.
+INFO 07/22 03:33:40 PM Analyzing resource: Spencer_Nelson
+INFO 07/22 03:33:40 PM No Tables found for this resource.
+INFO 07/22 03:33:40 PM Analyzing resource: Paolo_Lanza_(cestista)
+INFO 07/22 03:33:40 PM No Tables found for this resource.
+INFO 07/22 03:33:41 PM Analyzing resource: Valentina_Fabbri
+INFO 07/22 03:33:41 PM Table under section: Presenze e punti nei club
+INFO 07/22 03:33:41 PM Headers Found
+INFO 07/22 03:33:41 PM Data refined
+INFO 07/22 03:33:41 PM Rows extracted: 8
+INFO 07/22 03:33:41 PM Data extracted for this table: 112
+INFO 07/22 03:33:41 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:33:41 PM Headers Found
+INFO 07/22 03:33:41 PM Data refined
+INFO 07/22 03:33:41 PM Rows extracted: 13
+INFO 07/22 03:33:41 PM Data extracted for this table: 104
+INFO 07/22 03:33:42 PM Analyzing resource: Pietro_Generali_(cestista)
+INFO 07/22 03:33:42 PM No Tables found for this resource.
+INFO 07/22 03:33:42 PM Analyzing resource: Federica_Ciampoli
+INFO 07/22 03:33:42 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:33:42 PM Headers Found
+INFO 07/22 03:33:42 PM Data refined
+INFO 07/22 03:33:42 PM Rows extracted: 24
+INFO 07/22 03:33:42 PM Data extracted for this table: 192
+INFO 07/22 03:33:43 PM Analyzing resource: Alessandro_Bianchi_(cestista)
+INFO 07/22 03:33:43 PM No Tables found for this resource.
+INFO 07/22 03:33:44 PM Analyzing resource: Betty_Lennox
+INFO 07/22 03:33:44 PM No Tables found for this resource.
+INFO 07/22 03:33:44 PM Analyzing resource: Léon_Lampo
+INFO 07/22 03:33:44 PM No Tables found for this resource.
+INFO 07/22 03:33:45 PM Analyzing resource: Jim_Marsh
+INFO 07/22 03:33:45 PM No Tables found for this resource.
+INFO 07/22 03:33:45 PM Analyzing resource: Ricardo_Marsh
+INFO 07/22 03:33:45 PM No Tables found for this resource.
+INFO 07/22 03:33:46 PM Analyzing resource: Ricky_Marsh
+INFO 07/22 03:33:46 PM No Tables found for this resource.
+INFO 07/22 03:33:46 PM Analyzing resource: Marco_Bergonzoni
+INFO 07/22 03:33:46 PM No Tables found for this resource.
+INFO 07/22 03:33:47 PM Analyzing resource: Valerio_Amoroso
+INFO 07/22 03:33:47 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:33:47 PM Headers Found
+INFO 07/22 03:33:47 PM Data refined
+INFO 07/22 03:33:47 PM Rows extracted: 10
+INFO 07/22 03:33:47 PM Data extracted for this table: 80
+INFO 07/22 03:33:47 PM Analyzing resource: Bob_Thornton_(cestista)
+INFO 07/22 03:33:47 PM No Tables found for this resource.
+INFO 07/22 03:33:48 PM Analyzing resource: Massimo_Lucarelli
+INFO 07/22 03:33:48 PM No Tables found for this resource.
+INFO 07/22 03:33:49 PM Analyzing resource: Jurij_Pavlov
+INFO 07/22 03:33:49 PM No Tables found for this resource.
+INFO 07/22 03:33:49 PM Analyzing resource: Gérard_Sturla
+INFO 07/22 03:33:49 PM No Tables found for this resource.
+INFO 07/22 03:33:50 PM Analyzing resource: Marco_Rossi_(cestista)
+INFO 07/22 03:33:50 PM No Tables found for this resource.
+INFO 07/22 03:33:50 PM Analyzing resource: Roberto_Castellano
+INFO 07/22 03:33:50 PM No Tables found for this resource.
+INFO 07/22 03:33:51 PM Analyzing resource: Massimo_Galli
+INFO 07/22 03:33:51 PM No Tables found for this resource.
+INFO 07/22 03:33:52 PM Analyzing resource: Alessandro_Bencaster
+INFO 07/22 03:33:52 PM No Tables found for this resource.
+INFO 07/22 03:33:52 PM Analyzing resource: Charlie_Bell
+INFO 07/22 03:33:52 PM No Tables found for this resource.
+INFO 07/22 03:33:53 PM Analyzing resource: Jón_Stefánsson
+INFO 07/22 03:33:53 PM No Tables found for this resource.
+INFO 07/22 03:33:54 PM Analyzing resource: Jerry_West
+INFO 07/22 03:33:54 PM No Tables found for this resource.
+INFO 07/22 03:33:55 PM Analyzing resource: Chris_Bosh
+INFO 07/22 03:33:55 PM Table under section: Regular season
+INFO 07/22 03:33:55 PM Headers Found
+INFO 07/22 03:33:55 PM Data refined
+INFO 07/22 03:33:55 PM Rows extracted: 14
+INFO 07/22 03:33:55 PM Data extracted for this table: 168
+INFO 07/22 03:33:55 PM Table under section: Play-off
+INFO 07/22 03:33:55 PM Headers Found
+INFO 07/22 03:33:55 PM Data refined
+INFO 07/22 03:33:55 PM Rows extracted: 7
+INFO 07/22 03:33:55 PM Data extracted for this table: 84
+INFO 07/22 03:33:55 PM New header found: Regular season
+INFO 07/22 03:33:55 PM Analyzing resource: Marcus_Goree
+INFO 07/22 03:33:55 PM No Tables found for this resource.
+INFO 07/22 03:33:56 PM Analyzing resource: Charlie_Yelverton
+INFO 07/22 03:33:56 PM No Tables found for this resource.
+INFO 07/22 03:33:56 PM Analyzing resource: Corny_Thompson
+INFO 07/22 03:33:56 PM No Tables found for this resource.
+INFO 07/22 03:33:57 PM Analyzing resource: Lisa_Leslie
+INFO 07/22 03:33:57 PM No Tables found for this resource.
+INFO 07/22 03:33:58 PM Analyzing resource: Francesca_Zara
+INFO 07/22 03:33:58 PM Table under section: Presenze e punti nei club
+INFO 07/22 03:33:58 PM Headers Found
+INFO 07/22 03:33:58 PM Data refined
+INFO 07/22 03:33:58 PM Rows extracted: 21
+INFO 07/22 03:33:58 PM Data extracted for this table: 294
+INFO 07/22 03:33:58 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:33:58 PM Headers Found
+INFO 07/22 03:33:58 PM Data refined
+INFO 07/22 03:33:58 PM Rows extracted: 27
+INFO 07/22 03:33:58 PM Data extracted for this table: 216
+INFO 07/22 03:33:59 PM Analyzing resource: Mara_Fullin
+INFO 07/22 03:33:59 PM No Tables found for this resource.
+INFO 07/22 03:33:59 PM Analyzing resource: Susanna_Bonfiglio
+INFO 07/22 03:33:59 PM Table under section: Presenze e punti nei club
+INFO 07/22 03:33:59 PM Headers Found
+INFO 07/22 03:33:59 PM Data refined
+INFO 07/22 03:33:59 PM Rows extracted: 27
+INFO 07/22 03:33:59 PM Data extracted for this table: 378
+INFO 07/22 03:33:59 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:33:59 PM Headers Found
+INFO 07/22 03:33:59 PM Data refined
+INFO 07/22 03:33:59 PM Rows extracted: 44
+INFO 07/22 03:33:59 PM Data extracted for this table: 352
+INFO 07/22 03:34:00 PM Analyzing resource: Nik'oloz_Tskit'ishvili
+INFO 07/22 03:34:00 PM No Tables found for this resource.
+INFO 07/22 03:34:01 PM Analyzing resource: Romeo_Sacchetti
+INFO 07/22 03:34:01 PM No Tables found for this resource.
+INFO 07/22 03:34:02 PM Analyzing resource: Andrea_Niccolai
+INFO 07/22 03:34:02 PM No Tables found for this resource.
+INFO 07/22 03:34:03 PM Analyzing resource: Alessandro_Abbio
+INFO 07/22 03:34:03 PM No Tables found for this resource.
+INFO 07/22 03:34:03 PM Analyzing resource: Walter_Magnifico
+INFO 07/22 03:34:03 PM No Tables found for this resource.
+INFO 07/22 03:34:04 PM Analyzing resource: Alessandro_Boni
+INFO 07/22 03:34:04 PM No Tables found for this resource.
+INFO 07/22 03:34:05 PM Analyzing resource: Ario_Costa
+INFO 07/22 03:34:05 PM No Tables found for this resource.
+INFO 07/22 03:34:06 PM Analyzing resource: Fabio_Di_Bella
+INFO 07/22 03:34:06 PM No Tables found for this resource.
+INFO 07/22 03:34:07 PM Analyzing resource: Jamal_Crawford
+INFO 07/22 03:34:07 PM No Tables found for this resource.
+INFO 07/22 03:34:07 PM Analyzing resource: David_Blu
+INFO 07/22 03:34:07 PM No Tables found for this resource.
+INFO 07/22 03:34:08 PM Analyzing resource: Jason_Terry
+INFO 07/22 03:34:08 PM Table under section: Regular season
+INFO 07/22 03:34:08 PM Headers Found
+INFO 07/22 03:34:08 PM Data refined
+INFO 07/22 03:34:08 PM Rows extracted: 14
+INFO 07/22 03:34:08 PM Data extracted for this table: 196
+INFO 07/22 03:34:08 PM Table under section: Play-off
+INFO 07/22 03:34:08 PM Headers Found
+INFO 07/22 03:34:08 PM Data refined
+INFO 07/22 03:34:08 PM Rows extracted: 8
+INFO 07/22 03:34:08 PM Data extracted for this table: 112
+INFO 07/22 03:34:09 PM Analyzing resource: Juan_Carlos_Navarro
+INFO 07/22 03:34:09 PM Table under section: Regular season
+INFO 07/22 03:34:09 PM Headers Found
+INFO 07/22 03:34:09 PM Data refined
+INFO 07/22 03:34:09 PM Rows extracted: 17
+INFO 07/22 03:34:09 PM Data extracted for this table: 238
+INFO 07/22 03:34:10 PM Analyzing resource: Kiwane_Garris
+INFO 07/22 03:34:10 PM Table under section: Statistiche nel Campionato Italiano
+INFO 07/22 03:34:10 PM Headers Found
+INFO 07/22 03:34:10 PM Data refined
+INFO 07/22 03:34:10 PM Rows extracted: 9
+INFO 07/22 03:34:10 PM Data extracted for this table: 126
+INFO 07/22 03:34:10 PM Analyzing resource: Mike_D'Antoni
+INFO 07/22 03:34:10 PM No Tables found for this resource.
+INFO 07/22 03:34:11 PM Analyzing resource: Tal_Burstein
+INFO 07/22 03:34:11 PM No Tables found for this resource.
+INFO 07/22 03:34:12 PM Analyzing resource: Christian_Welp
+INFO 07/22 03:34:12 PM No Tables found for this resource.
+INFO 07/22 03:34:12 PM Analyzing resource: Pero_Cameron
+INFO 07/22 03:34:12 PM No Tables found for this resource.
+INFO 07/22 03:34:13 PM Analyzing resource: Sean_Marks
+INFO 07/22 03:34:13 PM No Tables found for this resource.
+INFO 07/22 03:34:14 PM Analyzing resource: Luigi_Datome
+INFO 07/22 03:34:14 PM Table under section: Serie A
+INFO 07/22 03:34:14 PM Headers Found
+INFO 07/22 03:34:14 PM Data refined
+INFO 07/22 03:34:14 PM Rows extracted: 11
+INFO 07/22 03:34:14 PM Data extracted for this table: 154
+INFO 07/22 03:34:14 PM Table under section: NBA
+INFO 07/22 03:34:14 PM Headers Found
+INFO 07/22 03:34:14 PM Data refined
+INFO 07/22 03:34:14 PM Rows extracted: 3
+INFO 07/22 03:34:14 PM Data extracted for this table: 42
+INFO 07/22 03:34:14 PM Table under section: Play-off
+INFO 07/22 03:34:14 PM Headers Found
+INFO 07/22 03:34:14 PM Data refined
+INFO 07/22 03:34:14 PM Rows extracted: 1
+INFO 07/22 03:34:14 PM Data extracted for this table: 14
+INFO 07/22 03:34:14 PM Table under section: D-League
+INFO 07/22 03:34:14 PM Headers Found
+INFO 07/22 03:34:14 PM Data refined
+INFO 07/22 03:34:14 PM Rows extracted: 1
+INFO 07/22 03:34:14 PM Data extracted for this table: 14
+INFO 07/22 03:34:14 PM Table under section: Nazionale
+INFO 07/22 03:34:14 PM Headers Found
+INFO 07/22 03:34:14 PM Data refined
+INFO 07/22 03:34:14 PM Rows extracted: 80
+INFO 07/22 03:34:14 PM Data extracted for this table: 640
+INFO 07/22 03:34:15 PM Analyzing resource: Michael_Redd
+INFO 07/22 03:34:15 PM No Tables found for this resource.
+INFO 07/22 03:34:16 PM Analyzing resource: Uwe_Blab
+INFO 07/22 03:34:16 PM No Tables found for this resource.
+INFO 07/22 03:34:16 PM Analyzing resource: Cristiano_Zanus_Fortes
+INFO 07/22 03:34:16 PM No Tables found for this resource.
+INFO 07/22 03:34:17 PM Analyzing resource: Kirk_Penney
+INFO 07/22 03:34:17 PM No Tables found for this resource.
+INFO 07/22 03:34:18 PM Analyzing resource: Patrick_Femerling
+INFO 07/22 03:34:18 PM No Tables found for this resource.
+INFO 07/22 03:34:18 PM Analyzing resource: Cynthia_Cooper
+INFO 07/22 03:34:18 PM No Tables found for this resource.
+INFO 07/22 03:34:19 PM Analyzing resource: Yann_Bonato
+INFO 07/22 03:34:19 PM No Tables found for this resource.
+INFO 07/22 03:34:20 PM Analyzing resource: Cyril_Julian
+INFO 07/22 03:34:20 PM No Tables found for this resource.
+INFO 07/22 03:34:20 PM Analyzing resource: Paccelis_Morlende
+INFO 07/22 03:34:20 PM No Tables found for this resource.
+INFO 07/22 03:34:21 PM Analyzing resource: Stéphane_Ostrowski
+INFO 07/22 03:34:21 PM No Tables found for this resource.
+INFO 07/22 03:34:22 PM Analyzing resource: Valéry_Demory
+INFO 07/22 03:34:22 PM No Tables found for this resource.
+INFO 07/22 03:34:22 PM Analyzing resource: Frédéric_Fauthoux
+INFO 07/22 03:34:22 PM No Tables found for this resource.
+INFO 07/22 03:34:23 PM Analyzing resource: Alessandro_Tonolli
+INFO 07/22 03:34:23 PM No Tables found for this resource.
+INFO 07/22 03:34:24 PM Analyzing resource: Renato_Villalta
+INFO 07/22 03:34:24 PM Table under section: Statistiche
+INFO 07/22 03:34:24 PM Headers Found
+INFO 07/22 03:34:24 PM Data refined
+INFO 07/22 03:34:24 PM Rows extracted: 20
+INFO 07/22 03:34:24 PM Data extracted for this table: 280
+INFO 07/22 03:34:25 PM Analyzing resource: Antoine_Rigaudeau
+INFO 07/22 03:34:25 PM No Tables found for this resource.
+INFO 07/22 03:34:26 PM Analyzing resource: Hugo_Sconochini
+INFO 07/22 03:34:26 PM No Tables found for this resource.
+INFO 07/22 03:34:26 PM Analyzing resource: Laurent_Sciarra
+INFO 07/22 03:34:26 PM No Tables found for this resource.
+INFO 07/22 03:34:26 PM Analyzing resource: Charles_Smith_(cestista_1965)
+INFO 07/22 03:34:26 PM No Tables found for this resource.
+INFO 07/22 03:34:27 PM Analyzing resource: Nate_Green
+INFO 07/22 03:34:27 PM No Tables found for this resource.
+INFO 07/22 03:34:28 PM Analyzing resource: Andrea_Michelori
+INFO 07/22 03:34:28 PM No Tables found for this resource.
+INFO 07/22 03:34:28 PM Analyzing resource: Daniel_Santiago
+INFO 07/22 03:34:28 PM No Tables found for this resource.
+INFO 07/22 03:34:29 PM Analyzing resource: Virginijus_Praškevičius
+INFO 07/22 03:34:29 PM No Tables found for this resource.
+INFO 07/22 03:34:30 PM Analyzing resource: Danilo_Gallinari
+INFO 07/22 03:34:30 PM Table under section: Italia
+INFO 07/22 03:34:30 PM Headers Found
+INFO 07/22 03:34:30 PM Data refined
+INFO 07/22 03:34:30 PM Rows extracted: 5
+INFO 07/22 03:34:30 PM Data extracted for this table: 70
+INFO 07/22 03:34:30 PM Table under section: Italia
+INFO 07/22 03:34:30 PM Headers Found
+INFO 07/22 03:34:30 PM Data refined
+INFO 07/22 03:34:30 PM Rows extracted: 2
+INFO 07/22 03:34:30 PM Data extracted for this table: 28
+INFO 07/22 03:34:30 PM Table under section: NBA
+INFO 07/22 03:34:30 PM Headers Found
+INFO 07/22 03:34:30 PM Data refined
+INFO 07/22 03:34:30 PM Rows extracted: 9
+INFO 07/22 03:34:30 PM Data extracted for this table: 126
+INFO 07/22 03:34:30 PM Table under section: NBA
+INFO 07/22 03:34:30 PM Headers Found
+INFO 07/22 03:34:30 PM Data refined
+INFO 07/22 03:34:30 PM Rows extracted: 2
+INFO 07/22 03:34:30 PM Data extracted for this table: 28
+INFO 07/22 03:34:30 PM Table under section: Record individuali
+INFO 07/22 03:34:30 PM Headers Found
+INFO 07/22 03:34:30 PM Data refined
+INFO 07/22 03:34:30 PM Rows extracted: 7
+INFO 07/22 03:34:30 PM Data extracted for this table: 28
+INFO 07/22 03:34:30 PM Table under section: Nazionale
+INFO 07/22 03:34:30 PM Headers Found
+INFO 07/22 03:34:30 PM Data refined
+INFO 07/22 03:34:30 PM Rows extracted: 44
+INFO 07/22 03:34:30 PM Data extracted for this table: 352
+INFO 07/22 03:34:30 PM New header found: Serie A
+INFO 07/22 03:34:30 PM New header found: Eurolega
+INFO 07/22 03:34:31 PM Analyzing resource: Vittorio_Gallinari
+INFO 07/22 03:34:31 PM No Tables found for this resource.
+INFO 07/22 03:34:32 PM Analyzing resource: Andrea_Pecile
+INFO 07/22 03:34:32 PM Table under section: Presenze e punti nei club
+INFO 07/22 03:34:32 PM Headers Found
+INFO 07/22 03:34:32 PM Data refined
+INFO 07/22 03:34:32 PM Rows extracted: 21
+INFO 07/22 03:34:32 PM Data extracted for this table: 294
+INFO 07/22 03:34:32 PM Analyzing resource: Giorgio_Boscagin
+INFO 07/22 03:34:32 PM No Tables found for this resource.
+INFO 07/22 03:34:33 PM Analyzing resource: Matteo_Malaventura
+INFO 07/22 03:34:33 PM Table under section: Statistiche nel Campionato Italiano
+INFO 07/22 03:34:33 PM Headers Found
+INFO 07/22 03:34:33 PM Data refined
+INFO 07/22 03:34:33 PM Rows extracted: 15
+INFO 07/22 03:34:33 PM Data extracted for this table: 210
+INFO 07/22 03:34:34 PM Analyzing resource: Andrea_Crosariol
+INFO 07/22 03:34:34 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:34:34 PM Headers Found
+INFO 07/22 03:34:34 PM Data refined
+INFO 07/22 03:34:34 PM Rows extracted: 12
+INFO 07/22 03:34:34 PM Data extracted for this table: 96
+INFO 07/22 03:34:34 PM Analyzing resource: Alvin_Robertson
+INFO 07/22 03:34:34 PM No Tables found for this resource.
+INFO 07/22 03:34:35 PM Analyzing resource: Luca_Sottana
+INFO 07/22 03:34:35 PM No Tables found for this resource.
+INFO 07/22 03:34:36 PM Analyzing resource: Daniele_Cavaliero
+INFO 07/22 03:34:36 PM Table under section: Statistiche nel Campionato Italiano
+INFO 07/22 03:34:36 PM Headers Found
+INFO 07/22 03:34:36 PM Data refined
+INFO 07/22 03:34:36 PM Rows extracted: 17
+INFO 07/22 03:34:36 PM Data extracted for this table: 238
+INFO 07/22 03:34:36 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:34:36 PM Headers Found
+INFO 07/22 03:34:36 PM Data refined
+INFO 07/22 03:34:36 PM Rows extracted: 5
+INFO 07/22 03:34:36 PM Data extracted for this table: 40
+INFO 07/22 03:34:36 PM Analyzing resource: Vlado_Ilievski
+INFO 07/22 03:34:36 PM No Tables found for this resource.
+INFO 07/22 03:34:37 PM Analyzing resource: Joel_Zacchetti
+INFO 07/22 03:34:37 PM No Tables found for this resource.
+INFO 07/22 03:34:38 PM Analyzing resource: Michele_Antonutti
+INFO 07/22 03:34:38 PM No Tables found for this resource.
+INFO 07/22 03:34:38 PM Analyzing resource: Andrea_Ghiacci
+INFO 07/22 03:34:38 PM No Tables found for this resource.
+INFO 07/22 03:34:39 PM Analyzing resource: Stefano_Attruia
+INFO 07/22 03:34:39 PM No Tables found for this resource.
+INFO 07/22 03:34:39 PM Analyzing resource: Emanuele_Rotondo
+INFO 07/22 03:34:39 PM No Tables found for this resource.
+INFO 07/22 03:34:40 PM Analyzing resource: Mabel_Bocchi
+INFO 07/22 03:34:40 PM No Tables found for this resource.
+INFO 07/22 03:34:40 PM Analyzing resource: Beppe_Bosa
+INFO 07/22 03:34:40 PM No Tables found for this resource.
+INFO 07/22 03:34:41 PM Analyzing resource: Hanno_Möttölä
+INFO 07/22 03:34:41 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:34:41 PM Headers Found
+INFO 07/22 03:34:41 PM Data refined
+INFO 07/22 03:34:41 PM Rows extracted: 1
+INFO 07/22 03:34:41 PM Data extracted for this table: 8
+INFO 07/22 03:34:41 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Finlandia - Data
+INFO 07/22 03:34:41 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Finlandia - Citt?
+INFO 07/22 03:34:41 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Finlandia - In casa
+INFO 07/22 03:34:42 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Finlandia - Risultato
+INFO 07/22 03:34:42 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Finlandia - Ospiti
+INFO 07/22 03:34:42 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Finlandia - Competizione
+INFO 07/22 03:34:42 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Finlandia - Punti
+INFO 07/22 03:34:42 PM New header found: Cronologia completa delle presenze e dei punti in Nazionale - Finlandia - Note
+INFO 07/22 03:34:43 PM Analyzing resource: Enrico_Ravaglia
+INFO 07/22 03:34:43 PM No Tables found for this resource.
+INFO 07/22 03:34:45 PM Analyzing resource: Kristaps_Janičenoks
+INFO 07/22 03:34:45 PM No Tables found for this resource.
+INFO 07/22 03:34:45 PM Analyzing resource: Vasil_Evtimov
+INFO 07/22 03:34:45 PM No Tables found for this resource.
+INFO 07/22 03:34:46 PM Analyzing resource: Gino_Cuccarolo
+INFO 07/22 03:34:46 PM No Tables found for this resource.
+INFO 07/22 03:34:46 PM Analyzing resource: Richie_Frahm
+INFO 07/22 03:34:46 PM No Tables found for this resource.
+INFO 07/22 03:34:47 PM Analyzing resource: Carlos_Delfino
+INFO 07/22 03:34:47 PM No Tables found for this resource.
+INFO 07/22 03:34:47 PM Analyzing resource: Marco_Solfrini
+INFO 07/22 03:34:47 PM No Tables found for this resource.
+INFO 07/22 03:34:48 PM Analyzing resource: José_Calderón
+INFO 07/22 03:34:48 PM Table under section: Regular season
+INFO 07/22 03:34:48 PM Headers Found
+INFO 07/22 03:34:48 PM Data refined
+INFO 07/22 03:34:48 PM Rows extracted: 15
+INFO 07/22 03:34:48 PM Data extracted for this table: 195
+INFO 07/22 03:34:48 PM Table under section: Playoffs
+INFO 07/22 03:34:48 PM Headers Found
+INFO 07/22 03:34:48 PM Data refined
+INFO 07/22 03:34:48 PM Rows extracted: 5
+INFO 07/22 03:34:48 PM Data extracted for this table: 65
+INFO 07/22 03:34:49 PM Analyzing resource: Marco_Carra
+INFO 07/22 03:34:49 PM No Tables found for this resource.
+INFO 07/22 03:34:49 PM Analyzing resource: Robert_Parish
+INFO 07/22 03:34:49 PM No Tables found for this resource.
+INFO 07/22 03:34:50 PM Analyzing resource: Simone_Cotani
+INFO 07/22 03:34:50 PM No Tables found for this resource.
+INFO 07/22 03:34:50 PM Analyzing resource: Daniele_Cinciarini
+INFO 07/22 03:34:50 PM No Tables found for this resource.
+INFO 07/22 03:34:51 PM Analyzing resource: Paolo_Barlera
+INFO 07/22 03:34:51 PM No Tables found for this resource.
+INFO 07/22 03:34:51 PM Analyzing resource: Terrell_Lyday
+INFO 07/22 03:34:51 PM No Tables found for this resource.
+INFO 07/22 03:34:52 PM Analyzing resource: Catarina_Pollini
+INFO 07/22 03:34:52 PM No Tables found for this resource.
+INFO 07/22 03:34:53 PM Analyzing resource: Oluoma_Nnamaka
+INFO 07/22 03:34:53 PM No Tables found for this resource.
+INFO 07/22 03:34:53 PM Analyzing resource: Mats_Levin
+INFO 07/22 03:34:53 PM No Tables found for this resource.
+INFO 07/22 03:34:54 PM Analyzing resource: Agron_Xiarchos
+INFO 07/22 03:34:54 PM No Tables found for this resource.
+INFO 07/22 03:34:54 PM Analyzing resource: Carlo_Caglieris
+INFO 07/22 03:34:54 PM No Tables found for this resource.
+INFO 07/22 03:34:55 PM Analyzing resource: Flavio_Carera
+INFO 07/22 03:34:55 PM No Tables found for this resource.
+INFO 07/22 03:34:56 PM Analyzing resource: Delonte_Holland
+INFO 07/22 03:34:56 PM No Tables found for this resource.
+INFO 07/22 03:34:56 PM Analyzing resource: Giuseppe_Frascolla
+INFO 07/22 03:34:56 PM No Tables found for this resource.
+INFO 07/22 03:34:57 PM Analyzing resource: Craig_Ehlo
+INFO 07/22 03:34:57 PM No Tables found for this resource.
+INFO 07/22 03:34:57 PM Analyzing resource: Flavio_Portaluppi
+INFO 07/22 03:34:57 PM No Tables found for this resource.
+INFO 07/22 03:34:58 PM Analyzing resource: Elgin_Baylor
+INFO 07/22 03:34:58 PM No Tables found for this resource.
+INFO 07/22 03:34:59 PM Analyzing resource: Alberto_Vianini
+INFO 07/22 03:34:59 PM No Tables found for this resource.
+INFO 07/22 03:34:59 PM Analyzing resource: Renzo_Bariviera
+INFO 07/22 03:34:59 PM No Tables found for this resource.
+INFO 07/22 03:35:00 PM Analyzing resource: Giuseppe_Brumatti
+INFO 07/22 03:35:00 PM Table under section: Statistiche
+INFO 07/22 03:35:00 PM Headers Found
+INFO 07/22 03:35:00 PM Data refined
+INFO 07/22 03:35:00 PM Rows extracted: 23
+INFO 07/22 03:35:00 PM Data extracted for this table: 322
+INFO 07/22 03:35:01 PM Analyzing resource: Sven_Schultze
+INFO 07/22 03:35:01 PM No Tables found for this resource.
+INFO 07/22 03:35:01 PM Analyzing resource: Steffen_Hamann
+INFO 07/22 03:35:01 PM No Tables found for this resource.
+INFO 07/22 03:35:02 PM Analyzing resource: Ivan_Gatto
+INFO 07/22 03:35:02 PM No Tables found for this resource.
+INFO 07/22 03:35:02 PM Analyzing resource: Teemu_Rannikko
+INFO 07/22 03:35:02 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:35:02 PM Headers Found
+INFO 07/22 03:35:02 PM Data refined
+INFO 07/22 03:35:02 PM Rows extracted: 1
+INFO 07/22 03:35:02 PM Data extracted for this table: 8
+INFO 07/22 03:35:03 PM Analyzing resource: Earl_Monroe
+INFO 07/22 03:35:03 PM No Tables found for this resource.
+INFO 07/22 03:35:04 PM Analyzing resource: Vrbica_Stefanov
+INFO 07/22 03:35:04 PM No Tables found for this resource.
+INFO 07/22 03:35:04 PM Analyzing resource: Mindaugas_Žukauskas
+INFO 07/22 03:35:04 PM No Tables found for this resource.
+INFO 07/22 03:35:05 PM Analyzing resource: Lamayn_Wilson
+INFO 07/22 03:35:05 PM No Tables found for this resource.
+INFO 07/22 03:35:06 PM Analyzing resource: Juan_Manuel_Fabi
+INFO 07/22 03:35:06 PM No Tables found for this resource.
+INFO 07/22 03:35:06 PM Analyzing resource: Marque_Perry
+INFO 07/22 03:35:06 PM No Tables found for this resource.
+INFO 07/22 03:35:07 PM Analyzing resource: Phillip_Ramelli
+INFO 07/22 03:35:07 PM No Tables found for this resource.
+INFO 07/22 03:35:07 PM Analyzing resource: Juan_Manuel_Moltedo
+INFO 07/22 03:35:07 PM No Tables found for this resource.
+INFO 07/22 03:35:08 PM Analyzing resource: Dušan_Jelić
+INFO 07/22 03:35:08 PM No Tables found for this resource.
+INFO 07/22 03:35:09 PM Analyzing resource: Mike_Bernard
+INFO 07/22 03:35:09 PM No Tables found for this resource.
+INFO 07/22 03:35:09 PM Analyzing resource: Brad_Traina
+INFO 07/22 03:35:09 PM No Tables found for this resource.
+INFO 07/22 03:35:10 PM Analyzing resource: Pavel_Podkol'zin
+INFO 07/22 03:35:10 PM No Tables found for this resource.
+INFO 07/22 03:35:11 PM Analyzing resource: Richard_Dacoury
+INFO 07/22 03:35:11 PM No Tables found for this resource.
+INFO 07/22 03:35:11 PM Analyzing resource: Susanna_Stabile
+INFO 07/22 03:35:11 PM No Tables found for this resource.
+INFO 07/22 03:35:12 PM Analyzing resource: George_Gervin
+INFO 07/22 03:35:12 PM No Tables found for this resource.
+INFO 07/22 03:35:12 PM Analyzing resource: Andrés_Nocioni
+INFO 07/22 03:35:12 PM Table under section: Regular Season
+INFO 07/22 03:35:12 PM Headers Found
+INFO 07/22 03:35:12 PM Data refined
+INFO 07/22 03:35:12 PM Rows extracted: 10
+INFO 07/22 03:35:12 PM Data extracted for this table: 130
+INFO 07/22 03:35:12 PM Table under section: Playoffs
+INFO 07/22 03:35:12 PM Headers Found
+INFO 07/22 03:35:12 PM Data refined
+INFO 07/22 03:35:12 PM Rows extracted: 5
+INFO 07/22 03:35:12 PM Data extracted for this table: 65
+INFO 07/22 03:35:14 PM Analyzing resource: Davide_Lamma
+INFO 07/22 03:35:14 PM No Tables found for this resource.
+INFO 07/22 03:35:15 PM Analyzing resource: Muggsy_Bogues
+INFO 07/22 03:35:15 PM No Tables found for this resource.
+INFO 07/22 03:35:17 PM Analyzing resource: Cristiano_Fazzi
+INFO 07/22 03:35:17 PM No Tables found for this resource.
+INFO 07/22 03:35:17 PM Analyzing resource: Germán_Scarone
+INFO 07/22 03:35:17 PM Table under section: Statistiche nel Campionato Italiano
+INFO 07/22 03:35:17 PM Headers Found
+INFO 07/22 03:35:17 PM Data refined
+INFO 07/22 03:35:17 PM Rows extracted: 20
+INFO 07/22 03:35:17 PM Data extracted for this table: 280
+INFO 07/22 03:35:18 PM Analyzing resource: Renzo_Vecchiato
+INFO 07/22 03:35:18 PM No Tables found for this resource.
+INFO 07/22 03:35:19 PM Analyzing resource: Cinzia_Milella
+INFO 07/22 03:35:19 PM No Tables found for this resource.
+INFO 07/22 03:35:20 PM Analyzing resource: Sofia_Vinci
+INFO 07/22 03:35:20 PM Table under section: Presenze e punti nei club
+INFO 07/22 03:35:20 PM Headers Found
+INFO 07/22 03:35:20 PM Data refined
+INFO 07/22 03:35:20 PM Rows extracted: 21
+INFO 07/22 03:35:20 PM Data extracted for this table: 294
+INFO 07/22 03:35:20 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:35:20 PM Headers Found
+INFO 07/22 03:35:20 PM Data refined
+INFO 07/22 03:35:20 PM Rows extracted: 17
+INFO 07/22 03:35:20 PM Data extracted for this table: 136
+INFO 07/22 03:35:21 PM Analyzing resource: Marco_Sambugaro
+INFO 07/22 03:35:21 PM No Tables found for this resource.
+INFO 07/22 03:35:22 PM Analyzing resource: Alain_Digbeu
+INFO 07/22 03:35:22 PM No Tables found for this resource.
+INFO 07/22 03:35:23 PM Analyzing resource: Sandro_Dell'Agnello
+INFO 07/22 03:35:23 PM No Tables found for this resource.
+INFO 07/22 03:35:24 PM Analyzing resource: Massimo_Minto
+INFO 07/22 03:35:24 PM No Tables found for this resource.
+INFO 07/22 03:35:24 PM Analyzing resource: Marcelo_Damião
+INFO 07/22 03:35:24 PM No Tables found for this resource.
+INFO 07/22 03:35:25 PM Analyzing resource: Manuel_Vanuzzo
+INFO 07/22 03:35:25 PM Table under section: Statistiche personali
+INFO 07/22 03:35:25 PM Headers Found
+INFO 07/22 03:35:25 PM Data refined
+INFO 07/22 03:35:25 PM Rows extracted: 38
+INFO 07/22 03:35:25 PM Data extracted for this table: 532
+INFO 07/22 03:35:25 PM Analyzing resource: Detlef_Schrempf
+INFO 07/22 03:35:25 PM No Tables found for this resource.
+INFO 07/22 03:35:26 PM Analyzing resource: Bill_Laimbeer
+INFO 07/22 03:35:26 PM No Tables found for this resource.
+INFO 07/22 03:35:27 PM Analyzing resource: Andrew_Gaze
+INFO 07/22 03:35:27 PM No Tables found for this resource.
+INFO 07/22 03:35:27 PM Analyzing resource: Leonardo_Busca
+INFO 07/22 03:35:27 PM No Tables found for this resource.
+INFO 07/22 03:35:28 PM Analyzing resource: Terrell_McIntyre
+INFO 07/22 03:35:28 PM No Tables found for this resource.
+INFO 07/22 03:35:29 PM Analyzing resource: Ansu_Sesay
+INFO 07/22 03:35:29 PM No Tables found for this resource.
+INFO 07/22 03:35:29 PM Analyzing resource: Augusto_Binelli
+INFO 07/22 03:35:29 PM No Tables found for this resource.
+INFO 07/22 03:35:30 PM Analyzing resource: Earl_Boykins
+INFO 07/22 03:35:30 PM No Tables found for this resource.
+INFO 07/22 03:35:31 PM Analyzing resource: Ognjen_Aškrabić
+INFO 07/22 03:35:31 PM No Tables found for this resource.
+INFO 07/22 03:35:31 PM Analyzing resource: Loukas_Maurokefalidīs
+INFO 07/22 03:35:31 PM No Tables found for this resource.
+INFO 07/22 03:35:32 PM Analyzing resource: Chuck_Jura
+INFO 07/22 03:35:32 PM Table under section: Statistiche
+INFO 07/22 03:35:32 PM Headers Found
+INFO 07/22 03:35:32 PM Data refined
+INFO 07/22 03:35:32 PM Rows extracted: 12
+INFO 07/22 03:35:32 PM Data extracted for this table: 168
+INFO 07/22 03:35:32 PM Analyzing resource: Laurent_Foirest
+INFO 07/22 03:35:32 PM No Tables found for this resource.
+INFO 07/22 03:35:33 PM Analyzing resource: Rolando_Howell
+INFO 07/22 03:35:33 PM No Tables found for this resource.
+INFO 07/22 03:35:33 PM Analyzing resource: Alessandro_De_Pol
+INFO 07/22 03:35:33 PM No Tables found for this resource.
+INFO 07/22 03:35:34 PM Analyzing resource: Tim_Pickett
+INFO 07/22 03:35:34 PM No Tables found for this resource.
+INFO 07/22 03:35:35 PM Analyzing resource: Rolando_Blackman
+INFO 07/22 03:35:35 PM No Tables found for this resource.
+INFO 07/22 03:35:35 PM Analyzing resource: Eugenio_Capone
+INFO 07/22 03:35:35 PM No Tables found for this resource.
+INFO 07/22 03:35:36 PM Analyzing resource: Peter_Guarasci
+INFO 07/22 03:35:36 PM No Tables found for this resource.
+INFO 07/22 03:35:36 PM Analyzing resource: Yakhouba_Diawara
+INFO 07/22 03:35:36 PM No Tables found for this resource.
+INFO 07/22 03:35:37 PM Analyzing resource: Elvin_Hayes
+INFO 07/22 03:35:37 PM No Tables found for this resource.
+INFO 07/22 03:35:37 PM Analyzing resource: Robert_Fultz
+INFO 07/22 03:35:37 PM No Tables found for this resource.
+INFO 07/22 03:35:38 PM Analyzing resource: Manute_Bol
+INFO 07/22 03:35:38 PM No Tables found for this resource.
+INFO 07/22 03:35:38 PM Analyzing resource: Gianfranco_Pieri
+INFO 07/22 03:35:38 PM No Tables found for this resource.
+INFO 07/22 03:35:39 PM Analyzing resource: Gilbert_Arenas
+INFO 07/22 03:35:39 PM No Tables found for this resource.
+INFO 07/22 03:35:40 PM Analyzing resource: Tom_Chambers
+INFO 07/22 03:35:40 PM No Tables found for this resource.
+INFO 07/22 03:35:40 PM Analyzing resource: Mire_Chatman
+INFO 07/22 03:35:40 PM No Tables found for this resource.
+INFO 07/22 03:35:41 PM Analyzing resource: Vladimir_Bogojevič
+INFO 07/22 03:35:41 PM No Tables found for this resource.
+INFO 07/22 03:35:42 PM Analyzing resource: Gregor_Hafnar
+INFO 07/22 03:35:42 PM No Tables found for this resource.
+INFO 07/22 03:35:42 PM Analyzing resource: Billy_Keys
+INFO 07/22 03:35:42 PM No Tables found for this resource.
+INFO 07/22 03:35:43 PM Analyzing resource: Luca_Infante
+INFO 07/22 03:35:43 PM No Tables found for this resource.
+INFO 07/22 03:35:43 PM Analyzing resource: Anna_Zimerle
+INFO 07/22 03:35:43 PM No Tables found for this resource.
+INFO 07/22 03:35:44 PM Analyzing resource: Jim_Pollard
+INFO 07/22 03:35:44 PM No Tables found for this resource.
+INFO 07/22 03:35:44 PM Analyzing resource: Darius_Songaila
+INFO 07/22 03:35:44 PM No Tables found for this resource.
+INFO 07/22 03:35:45 PM Analyzing resource: Nikola_Radulović
+INFO 07/22 03:35:45 PM No Tables found for this resource.
+INFO 07/22 03:35:46 PM Analyzing resource: Jermaine_O'Neal
+INFO 07/22 03:35:46 PM Table under section: Regular season
+INFO 07/22 03:35:46 PM Headers Found
+INFO 07/22 03:35:46 PM Data refined
+INFO 07/22 03:35:46 PM Rows extracted: 21
+INFO 07/22 03:35:46 PM Data extracted for this table: 273
+INFO 07/22 03:35:46 PM Analyzing resource: Andrea_Cattani
+INFO 07/22 03:35:46 PM No Tables found for this resource.
+INFO 07/22 03:35:47 PM Analyzing resource: Sun_Ming_Ming
+INFO 07/22 03:35:47 PM No Tables found for this resource.
+INFO 07/22 03:35:48 PM Analyzing resource: Phillip_Jones
+INFO 07/22 03:35:48 PM No Tables found for this resource.
+INFO 07/22 03:35:48 PM Analyzing resource: Kaspars_Kambala
+INFO 07/22 03:35:48 PM No Tables found for this resource.
+INFO 07/22 03:35:49 PM Analyzing resource: Adalgisa_Impastato
+INFO 07/22 03:35:49 PM Table under section: Statistiche
+INFO 07/22 03:35:49 PM Headers Found
+INFO 07/22 03:35:49 PM Data refined
+INFO 07/22 03:35:49 PM Rows extracted: 8
+INFO 07/22 03:35:49 PM Data extracted for this table: 112
+INFO 07/22 03:35:49 PM Analyzing resource: Rubén_Douglas
+INFO 07/22 03:35:49 PM No Tables found for this resource.
+INFO 07/22 03:35:50 PM Analyzing resource: Jérôme_Moïso
+INFO 07/22 03:35:50 PM No Tables found for this resource.
+INFO 07/22 03:35:51 PM Analyzing resource: Francesco_Foiera
+INFO 07/22 03:35:51 PM No Tables found for this resource.
+INFO 07/22 03:35:51 PM Analyzing resource: Željko_Rebrača
+INFO 07/22 03:35:51 PM No Tables found for this resource.
+INFO 07/22 03:35:52 PM Analyzing resource: Charles_Hentz
+INFO 07/22 03:35:52 PM No Tables found for this resource.
+INFO 07/22 03:35:53 PM Analyzing resource: Luka_Pavićević
+INFO 07/22 03:35:53 PM No Tables found for this resource.
+INFO 07/22 03:35:54 PM Analyzing resource: Kim_Anderson
+INFO 07/22 03:35:54 PM No Tables found for this resource.
+INFO 07/22 03:35:54 PM Analyzing resource: Sergej_Panov
+INFO 07/22 03:35:54 PM No Tables found for this resource.
+INFO 07/22 03:35:54 PM Analyzing resource: Ralph_Ogden
+INFO 07/22 03:35:54 PM No Tables found for this resource.
+INFO 07/22 03:35:55 PM Analyzing resource: Gene_Rock
+INFO 07/22 03:35:55 PM No Tables found for this resource.
+INFO 07/22 03:35:56 PM Analyzing resource: Fat_Lever
+INFO 07/22 03:35:56 PM No Tables found for this resource.
+INFO 07/22 03:35:56 PM Analyzing resource: Ronnie_Price
+INFO 07/22 03:35:56 PM Table under section: Regular season
+INFO 07/22 03:35:56 PM Headers Found
+INFO 07/22 03:35:56 PM Data refined
+INFO 07/22 03:35:56 PM Rows extracted: 13
+INFO 07/22 03:35:56 PM Data extracted for this table: 169
+INFO 07/22 03:35:56 PM Table under section: Play-off
+INFO 07/22 03:35:56 PM Headers Found
+INFO 07/22 03:35:56 PM Data refined
+INFO 07/22 03:35:56 PM Rows extracted: 5
+INFO 07/22 03:35:56 PM Data extracted for this table: 65
+INFO 07/22 03:35:57 PM Analyzing resource: Milica_Dabović
+INFO 07/22 03:35:57 PM No Tables found for this resource.
+INFO 07/22 03:35:58 PM Analyzing resource: Carlos_Sevillano
+INFO 07/22 03:35:58 PM No Tables found for this resource.
+INFO 07/22 03:35:58 PM Analyzing resource: Richard_Duke
+INFO 07/22 03:35:58 PM No Tables found for this resource.
+INFO 07/22 03:36:00 PM Analyzing resource: Luca_Vitali
+INFO 07/22 03:36:00 PM Table under section: Statistiche Campionato Italiano
+INFO 07/22 03:36:00 PM Headers Found
+INFO 07/22 03:36:00 PM Data refined
+INFO 07/22 03:36:00 PM Rows extracted: 12
+INFO 07/22 03:36:00 PM Data extracted for this table: 168
+INFO 07/22 03:36:00 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:36:00 PM Headers Found
+INFO 07/22 03:36:00 PM Data refined
+INFO 07/22 03:36:00 PM Rows extracted: 114
+INFO 07/22 03:36:00 PM Data extracted for this table: 912
+INFO 07/22 03:36:00 PM Analyzing resource: Emilio_Clerici
+INFO 07/22 03:36:00 PM No Tables found for this resource.
+INFO 07/22 03:36:01 PM Analyzing resource: Eleonora_Zanetti
+INFO 07/22 03:36:01 PM No Tables found for this resource.
+INFO 07/22 03:36:01 PM Analyzing resource: Lucrezia_Zanetti
+INFO 07/22 03:36:01 PM Table under section: Presenze e punti nei club
+INFO 07/22 03:36:01 PM Headers Found
+INFO 07/22 03:36:01 PM Data refined
+INFO 07/22 03:36:01 PM Rows extracted: 3
+INFO 07/22 03:36:01 PM Data extracted for this table: 42
+INFO 07/22 03:36:02 PM Analyzing resource: Luis_Jiménez_(cestista)
+INFO 07/22 03:36:02 PM No Tables found for this resource.
+INFO 07/22 03:36:03 PM Analyzing resource: Giordano_Damiani
+INFO 07/22 03:36:03 PM No Tables found for this resource.
+INFO 07/22 03:36:03 PM Analyzing resource: Mauro_Sartori
+INFO 07/22 03:36:03 PM Table under section: Presenze e punti nei club
+INFO 07/22 03:36:03 PM Headers Found
+INFO 07/22 03:36:03 PM Data refined
+INFO 07/22 03:36:03 PM Rows extracted: 23
+INFO 07/22 03:36:03 PM Data extracted for this table: 138
+INFO 07/22 03:36:04 PM New header found: Campionato - Camp
+INFO 07/22 03:36:04 PM New header found: Campionato - Pres
+INFO 07/22 03:36:04 PM New header found: Campionato - Punti
+INFO 07/22 03:36:04 PM New header found: Campionato - Rimb
+INFO 07/22 03:36:05 PM Analyzing resource: Maurizio_Ferrara_(cestista)
+INFO 07/22 03:36:05 PM No Tables found for this resource.
+INFO 07/22 03:36:06 PM Analyzing resource: Alessandro_Gentile
+INFO 07/22 03:36:06 PM Table under section: Campionato
+INFO 07/22 03:36:06 PM Headers Found
+INFO 07/22 03:36:06 PM Data refined
+INFO 07/22 03:36:06 PM Rows extracted: 11
+INFO 07/22 03:36:06 PM Data extracted for this table: 154
+INFO 07/22 03:36:06 PM Table under section: Nazionale
+INFO 07/22 03:36:06 PM Headers Found
+INFO 07/22 03:36:06 PM Data refined
+INFO 07/22 03:36:06 PM Rows extracted: 60
+INFO 07/22 03:36:06 PM Data extracted for this table: 480
+INFO 07/22 03:36:06 PM Analyzing resource: Stefano_Gentile
+INFO 07/22 03:36:06 PM Table under section: Statistiche
+INFO 07/22 03:36:06 PM Headers Found
+INFO 07/22 03:36:06 PM Data refined
+INFO 07/22 03:36:06 PM Rows extracted: 2
+INFO 07/22 03:36:06 PM Data extracted for this table: 16
+INFO 07/22 03:36:07 PM Analyzing resource: John_Mills_(cestista)
+INFO 07/22 03:36:07 PM No Tables found for this resource.
+INFO 07/22 03:36:08 PM Analyzing resource: Marco_Rossetti
+INFO 07/22 03:36:08 PM No Tables found for this resource.
+INFO 07/22 03:36:08 PM Analyzing resource: Fred_Hetzel
+INFO 07/22 03:36:08 PM No Tables found for this resource.
+INFO 07/22 03:36:09 PM Analyzing resource: Benjamin_Eze
+INFO 07/22 03:36:09 PM No Tables found for this resource.
+INFO 07/22 03:36:10 PM Analyzing resource: Diego_Fajardo
+INFO 07/22 03:36:10 PM No Tables found for this resource.
+INFO 07/22 03:36:10 PM Analyzing resource: Adrian_Smith_(cestista)
+INFO 07/22 03:36:10 PM No Tables found for this resource.
+INFO 07/22 03:36:10 PM Analyzing resource: Andre_Smith_(cestista)
+INFO 07/22 03:36:10 PM No Tables found for this resource.
+INFO 07/22 03:36:11 PM Analyzing resource: Beverly_Smith
+INFO 07/22 03:36:11 PM No Tables found for this resource.
+INFO 07/22 03:36:12 PM Analyzing resource: Bingo_Smith
+INFO 07/22 03:36:12 PM No Tables found for this resource.
+INFO 07/22 03:36:12 PM Analyzing resource: Bryant_Smith
+INFO 07/22 03:36:12 PM No Tables found for this resource.
+INFO 07/22 03:36:12 PM Analyzing resource: Brooke_Smith_(cestista)
+INFO 07/22 03:36:12 PM No Tables found for this resource.
+INFO 07/22 03:36:13 PM Analyzing resource: Charles_Smith_(cestista_1967)
+INFO 07/22 03:36:13 PM No Tables found for this resource.
+INFO 07/22 03:36:14 PM Analyzing resource: Charles_Smith_(cestista_1975)
+INFO 07/22 03:36:14 PM No Tables found for this resource.
+INFO 07/22 03:36:14 PM Analyzing resource: Charlotte_Smith_(cestista)
+INFO 07/22 03:36:14 PM No Tables found for this resource.
+INFO 07/22 03:36:15 PM Analyzing resource: Chris_Smith_(cestista_1970)
+INFO 07/22 03:36:15 PM No Tables found for this resource.
+INFO 07/22 03:36:15 PM Analyzing resource: Clinton_Smith
+INFO 07/22 03:36:15 PM No Tables found for this resource.
+INFO 07/22 03:36:16 PM Analyzing resource: Dean_Smith
+INFO 07/22 03:36:16 PM No Tables found for this resource.
+INFO 07/22 03:36:16 PM Analyzing resource: Deb_Smith
+INFO 07/22 03:36:16 PM No Tables found for this resource.
+INFO 07/22 03:36:17 PM Analyzing resource: Derek_Smith
+INFO 07/22 03:36:17 PM No Tables found for this resource.
+INFO 07/22 03:36:18 PM Analyzing resource: Don_Smith_(cestista_1951)
+INFO 07/22 03:36:18 PM No Tables found for this resource.
+INFO 07/22 03:36:18 PM Analyzing resource: Donta_Smith
+INFO 07/22 03:36:18 PM No Tables found for this resource.
+INFO 07/22 03:36:19 PM Analyzing resource: Doug_Smith
+INFO 07/22 03:36:19 PM No Tables found for this resource.
+INFO 07/22 03:36:20 PM Analyzing resource: Elmore_Smith
+INFO 07/22 03:36:20 PM No Tables found for this resource.
+INFO 07/22 03:36:20 PM Analyzing resource: Garfield_Smith
+INFO 07/22 03:36:20 PM No Tables found for this resource.
+INFO 07/22 03:36:21 PM Analyzing resource: Greg_Smith_(cestista_1947)
+INFO 07/22 03:36:21 PM No Tables found for this resource.
+INFO 07/22 03:36:21 PM Analyzing resource: Greg_Smith_(cestista_1991)
+INFO 07/22 03:36:21 PM No Tables found for this resource.
+INFO 07/22 03:36:22 PM Analyzing resource: Ishmael_Smith
+INFO 07/22 03:36:22 PM No Tables found for this resource.
+INFO 07/22 03:36:22 PM Analyzing resource: J.R._Smith
+INFO 07/22 03:36:22 PM No Tables found for this resource.
+INFO 07/22 03:36:23 PM Analyzing resource: Jabari_Smith
+INFO 07/22 03:36:23 PM No Tables found for this resource.
+INFO 07/22 03:36:24 PM Analyzing resource: Jason_Smith_(cestista_1974)
+INFO 07/22 03:36:24 PM No Tables found for this resource.
+INFO 07/22 03:36:24 PM Analyzing resource: Jason_Smith_(cestista_1986)
+INFO 07/22 03:36:24 PM No Tables found for this resource.
+INFO 07/22 03:36:24 PM Analyzing resource: Jesse_Smith_(cestista)
+INFO 07/22 03:36:24 PM No Tables found for this resource.
+INFO 07/22 03:36:25 PM Analyzing resource: Joe_Troy_Smith
+INFO 07/22 03:36:25 PM No Tables found for this resource.
+INFO 07/22 03:36:26 PM Analyzing resource: John_Smith_(cestista_1944)
+INFO 07/22 03:36:26 PM No Tables found for this resource.
+INFO 07/22 03:36:26 PM Analyzing resource: Josh_Smith
+INFO 07/22 03:36:26 PM Table under section: Regular season
+INFO 07/22 03:36:26 PM Headers Found
+INFO 07/22 03:36:26 PM Data refined
+INFO 07/22 03:36:26 PM Rows extracted: 9
+INFO 07/22 03:36:26 PM Data extracted for this table: 126
+INFO 07/22 03:36:26 PM Table under section: Play-off
+INFO 07/22 03:36:26 PM Headers Found
+INFO 07/22 03:36:26 PM Data refined
+INFO 07/22 03:36:26 PM Rows extracted: 6
+INFO 07/22 03:36:26 PM Data extracted for this table: 84
+INFO 07/22 03:36:27 PM Analyzing resource: Katie_Smith
+INFO 07/22 03:36:27 PM No Tables found for this resource.
+INFO 07/22 03:36:28 PM Analyzing resource: Kim_Smith
+INFO 07/22 03:36:28 PM No Tables found for this resource.
+INFO 07/22 03:36:28 PM Analyzing resource: LaBradford_Smith
+INFO 07/22 03:36:28 PM No Tables found for this resource.
+INFO 07/22 03:36:29 PM Analyzing resource: Leon_Smith
+INFO 07/22 03:36:29 PM No Tables found for this resource.
+INFO 07/22 03:36:30 PM Analyzing resource: Mike_Smith_(cestista_1976)
+INFO 07/22 03:36:30 PM No Tables found for this resource.
+INFO 07/22 03:36:30 PM Analyzing resource: Nolan_Smith
+INFO 07/22 03:36:30 PM No Tables found for this resource.
+INFO 07/22 03:36:30 PM Analyzing resource: Otis_Smith
+INFO 07/22 03:36:30 PM No Tables found for this resource.
+INFO 07/22 03:36:31 PM Analyzing resource: Phil_Smith
+INFO 07/22 03:36:31 PM No Tables found for this resource.
+INFO 07/22 03:36:32 PM Analyzing resource: Reggie_Smith
+INFO 07/22 03:36:32 PM No Tables found for this resource.
+INFO 07/22 03:36:32 PM Analyzing resource: Sam_Smith_(cestista_1944)
+INFO 07/22 03:36:32 PM No Tables found for this resource.
+INFO 07/22 03:36:32 PM Analyzing resource: Sam_Smith_(cestista_1955)
+INFO 07/22 03:36:32 PM No Tables found for this resource.
+INFO 07/22 03:36:33 PM Analyzing resource: Steve_Smith_(cestista)
+INFO 07/22 03:36:33 PM No Tables found for this resource.
+INFO 07/22 03:36:34 PM Analyzing resource: Stevin_Smith
+INFO 07/22 03:36:34 PM No Tables found for this resource.
+INFO 07/22 03:36:34 PM Analyzing resource: Tangela_Smith
+INFO 07/22 03:36:34 PM No Tables found for this resource.
+INFO 07/22 03:36:35 PM Analyzing resource: Theron_Smith
+INFO 07/22 03:36:35 PM No Tables found for this resource.
+INFO 07/22 03:36:36 PM Analyzing resource: Tubby_Smith
+INFO 07/22 03:36:36 PM No Tables found for this resource.
+INFO 07/22 03:36:36 PM Analyzing resource: Vernon_Smith_(cestista)
+INFO 07/22 03:36:36 PM No Tables found for this resource.
+INFO 07/22 03:36:36 PM Analyzing resource: Wayne_Smith_(cestista)
+INFO 07/22 03:36:36 PM No Tables found for this resource.
+INFO 07/22 03:36:37 PM Analyzing resource: William_Smith_(cestista)
+INFO 07/22 03:36:37 PM No Tables found for this resource.
+INFO 07/22 03:36:37 PM Analyzing resource: Andy_Johnson_(cestista)
+INFO 07/22 03:36:37 PM No Tables found for this resource.
+INFO 07/22 03:36:38 PM Analyzing resource: Reggie_Johnson_(cestista)
+INFO 07/22 03:36:38 PM No Tables found for this resource.
+INFO 07/22 03:36:39 PM Analyzing resource: Alan_Anderson
+INFO 07/22 03:36:39 PM Table under section: Regular Season
+INFO 07/22 03:36:39 PM Headers Found
+INFO 07/22 03:36:39 PM Data refined
+INFO 07/22 03:36:39 PM Rows extracted: 9
+INFO 07/22 03:36:39 PM Data extracted for this table: 117
+INFO 07/22 03:36:39 PM Table under section: Playoffs
+INFO 07/22 03:36:39 PM Headers Found
+INFO 07/22 03:36:39 PM Data refined
+INFO 07/22 03:36:39 PM Rows extracted: 3
+INFO 07/22 03:36:39 PM Data extracted for this table: 39
+INFO 07/22 03:36:39 PM Analyzing resource: James_Anderson_(cestista)
+INFO 07/22 03:36:39 PM No Tables found for this resource.
+INFO 07/22 03:36:40 PM Analyzing resource: Anthony_Parker
+INFO 07/22 03:36:40 PM No Tables found for this resource.
+INFO 07/22 03:36:40 PM Analyzing resource: Candace_Parker
+INFO 07/22 03:36:40 PM No Tables found for this resource.
+INFO 07/22 03:36:41 PM Analyzing resource: Smush_Parker
+INFO 07/22 03:36:41 PM No Tables found for this resource.
+INFO 07/22 03:36:42 PM Analyzing resource: Sonny_Parker_(cestista)
+INFO 07/22 03:36:42 PM No Tables found for this resource.
+INFO 07/22 03:36:42 PM Analyzing resource: T.J._Parker
+INFO 07/22 03:36:42 PM No Tables found for this resource.
+INFO 07/22 03:36:43 PM Analyzing resource: David_Andersen
+INFO 07/22 03:36:43 PM No Tables found for this resource.
+INFO 07/22 03:36:43 PM Analyzing resource: Stefano_Salieri
+INFO 07/22 03:36:43 PM No Tables found for this resource.
+INFO 07/22 03:36:44 PM Analyzing resource: Al_Jefferson
+INFO 07/22 03:36:44 PM No Tables found for this resource.
+INFO 07/22 03:36:44 PM Analyzing resource: Richard_Jefferson
+INFO 07/22 03:36:44 PM No Tables found for this resource.
+INFO 07/22 03:36:45 PM Analyzing resource: Ron_Watts
+INFO 07/22 03:36:45 PM No Tables found for this resource.
+INFO 07/22 03:36:46 PM Analyzing resource: Samuel_Watts
+INFO 07/22 03:36:46 PM No Tables found for this resource.
+INFO 07/22 03:36:46 PM Analyzing resource: Slick_Watts
+INFO 07/22 03:36:46 PM No Tables found for this resource.
+INFO 07/22 03:36:46 PM Analyzing resource: Stan_Watts
+INFO 07/22 03:36:46 PM No Tables found for this resource.
+INFO 07/22 03:36:47 PM Analyzing resource: Nello_Lorenzetti
+INFO 07/22 03:36:47 PM No Tables found for this resource.
+INFO 07/22 03:36:48 PM Analyzing resource: Francesco_Orsini
+INFO 07/22 03:36:48 PM No Tables found for this resource.
+INFO 07/22 03:36:48 PM Analyzing resource: Lorenzo_Alberti
+INFO 07/22 03:36:48 PM No Tables found for this resource.
+INFO 07/22 03:36:49 PM Analyzing resource: Paolo_Alberti
+INFO 07/22 03:36:49 PM No Tables found for this resource.
+INFO 07/22 03:36:50 PM Analyzing resource: Maurizio_Ferro
+INFO 07/22 03:36:50 PM No Tables found for this resource.
+INFO 07/22 03:36:50 PM Analyzing resource: Greg_Francis
+INFO 07/22 03:36:50 PM No Tables found for this resource.
+INFO 07/22 03:36:50 PM Analyzing resource: Steve_Francis
+INFO 07/22 03:36:50 PM No Tables found for this resource.
+INFO 07/22 03:36:51 PM Analyzing resource: Torin_Francis
+INFO 07/22 03:36:51 PM Table under section: Presenze e punti nei club
+INFO 07/22 03:36:51 PM Headers Found
+INFO 07/22 03:36:51 PM Data refined
+INFO 07/22 03:36:51 PM Rows extracted: 4
+INFO 07/22 03:36:51 PM Data extracted for this table: 56
+INFO 07/22 03:36:52 PM Analyzing resource: Bobby_Simmons
+INFO 07/22 03:36:52 PM No Tables found for this resource.
+INFO 07/22 03:36:52 PM Analyzing resource: A.C._Green
+INFO 07/22 03:36:52 PM No Tables found for this resource.
+INFO 07/22 03:36:53 PM Analyzing resource: Gerald_Green_(cestista)
+INFO 07/22 03:36:53 PM Table under section: Regular Season
+INFO 07/22 03:36:53 PM Headers Found
+INFO 07/22 03:36:53 PM Data refined
+INFO 07/22 03:36:53 PM Rows extracted: 12
+INFO 07/22 03:36:53 PM Data extracted for this table: 156
+INFO 07/22 03:36:53 PM Table under section: Playoffs
+INFO 07/22 03:36:53 PM Headers Found
+INFO 07/22 03:36:53 PM Data refined
+INFO 07/22 03:36:53 PM Rows extracted: 5
+INFO 07/22 03:36:53 PM Data extracted for this table: 65
+INFO 07/22 03:36:54 PM Analyzing resource: James_Ray
+INFO 07/22 03:36:54 PM No Tables found for this resource.
+INFO 07/22 03:36:54 PM Analyzing resource: Brandon_Roy
+INFO 07/22 03:36:54 PM No Tables found for this resource.
+INFO 07/22 03:36:55 PM Analyzing resource: Carl_Shy
+INFO 07/22 03:36:55 PM No Tables found for this resource.
+INFO 07/22 03:36:55 PM Analyzing resource: Pape_Sow_(cestista)
+INFO 07/22 03:36:55 PM No Tables found for this resource.
+INFO 07/22 03:36:56 PM Analyzing resource: Sean_May
+INFO 07/22 03:36:56 PM No Tables found for this resource.
+INFO 07/22 03:36:56 PM Analyzing resource: Tariq_Abdul-Wahad
+INFO 07/22 03:36:56 PM No Tables found for this resource.
+INFO 07/22 03:36:57 PM Analyzing resource: Patrycja_Gulak
+INFO 07/22 03:36:57 PM Table under section: Statistiche
+INFO 07/22 03:36:57 PM Headers Found
+INFO 07/22 03:36:57 PM Data refined
+INFO 07/22 03:36:57 PM Rows extracted: 3
+INFO 07/22 03:36:57 PM Data extracted for this table: 42
+INFO 07/22 03:36:58 PM Analyzing resource: Tamara_Tatham
+INFO 07/22 03:36:58 PM No Tables found for this resource.
+INFO 07/22 03:36:58 PM Analyzing resource: Wayne_Chapman
+INFO 07/22 03:36:58 PM No Tables found for this resource.
+INFO 07/22 03:36:59 PM Analyzing resource: Oranda_Rodríguez
+INFO 07/22 03:36:59 PM No Tables found for this resource.
+INFO 07/22 03:36:59 PM Analyzing resource: Dean_Kelley
+INFO 07/22 03:36:59 PM No Tables found for this resource.
+INFO 07/22 03:37:00 PM Analyzing resource: Lionel_Bomayako
+INFO 07/22 03:37:00 PM No Tables found for this resource.
+INFO 07/22 03:37:00 PM Analyzing resource: John_Wall_(cestista)
+INFO 07/22 03:37:00 PM Table under section: Regular season
+INFO 07/22 03:37:00 PM Headers Found
+INFO 07/22 03:37:00 PM Data refined
+INFO 07/22 03:37:00 PM Rows extracted: 5
+INFO 07/22 03:37:00 PM Data extracted for this table: 70
+INFO 07/22 03:37:00 PM Table under section: Play-off
+INFO 07/22 03:37:00 PM Headers Found
+INFO 07/22 03:37:00 PM Data refined
+INFO 07/22 03:37:00 PM Rows extracted: 2
+INFO 07/22 03:37:00 PM Data extracted for this table: 28
+INFO 07/22 03:37:01 PM Analyzing resource: Johnny_Green_(cestista)
+INFO 07/22 03:37:01 PM No Tables found for this resource.
+INFO 07/22 03:37:02 PM Analyzing resource: Clyde_Lee
+INFO 07/22 03:37:02 PM No Tables found for this resource.
+INFO 07/22 03:37:02 PM Analyzing resource: Claudio_Crippa
+INFO 07/22 03:37:02 PM No Tables found for this resource.
+INFO 07/22 03:37:02 PM Analyzing resource: Lindsay_Wisdom
+INFO 07/22 03:37:02 PM No Tables found for this resource.
+INFO 07/22 03:37:03 PM Analyzing resource: Javier_Sanjuán
+INFO 07/22 03:37:03 PM No Tables found for this resource.
+INFO 07/22 03:37:04 PM Analyzing resource: Jody_Conradt
+INFO 07/22 03:37:04 PM No Tables found for this resource.
+INFO 07/22 03:37:04 PM Analyzing resource: Allen_Murphy
+INFO 07/22 03:37:04 PM No Tables found for this resource.
+INFO 07/22 03:37:05 PM Analyzing resource: Mark_Karcher
+INFO 07/22 03:37:05 PM No Tables found for this resource.
+INFO 07/22 03:37:05 PM Analyzing resource: Igor_Kokoškov
+INFO 07/22 03:37:05 PM No Tables found for this resource.
+INFO 07/22 03:37:06 PM Analyzing resource: Dexter_Shouse
+INFO 07/22 03:37:06 PM No Tables found for this resource.
+INFO 07/22 03:37:06 PM Analyzing resource: Vanja_Marinković
+INFO 07/22 03:37:06 PM No Tables found for this resource.
+INFO 07/22 03:37:07 PM Analyzing resource: Sidney_Moncrief
+INFO 07/22 03:37:07 PM No Tables found for this resource.
+INFO 07/22 03:37:08 PM Analyzing resource: Jerry_Shipp
+INFO 07/22 03:37:08 PM No Tables found for this resource.
+INFO 07/22 03:37:08 PM Analyzing resource: Pino_Zaccheria
+INFO 07/22 03:37:08 PM No Tables found for this resource.
+INFO 07/22 03:37:09 PM Analyzing resource: Giancarlo_Primo
+INFO 07/22 03:37:09 PM No Tables found for this resource.
+INFO 07/22 03:37:10 PM Analyzing resource: Javier_Imbroda
+INFO 07/22 03:37:10 PM No Tables found for this resource.
+INFO 07/22 03:37:10 PM Analyzing resource: Ezio_Riva
+INFO 07/22 03:37:10 PM No Tables found for this resource.
+INFO 07/22 03:37:11 PM Analyzing resource: Jo_Jo_White
+INFO 07/22 03:37:11 PM No Tables found for this resource.
+INFO 07/22 03:37:12 PM Analyzing resource: Juan_Antonio_San_Epifanio
+INFO 07/22 03:37:12 PM No Tables found for this resource.
+INFO 07/22 03:37:13 PM Analyzing resource: Horace_Grant
+INFO 07/22 03:37:13 PM No Tables found for this resource.
+INFO 07/22 03:37:13 PM Analyzing resource: Scoonie_Penn
+INFO 07/22 03:37:13 PM No Tables found for this resource.
+INFO 07/22 03:37:14 PM Analyzing resource: Chris_Warren_(cestista)
+INFO 07/22 03:37:14 PM No Tables found for this resource.
+INFO 07/22 03:37:14 PM Analyzing resource: Patrizia_Schiavone
+INFO 07/22 03:37:14 PM No Tables found for this resource.
+INFO 07/22 03:37:15 PM Analyzing resource: Don_Shields
+INFO 07/22 03:37:15 PM No Tables found for this resource.
+INFO 07/22 03:37:16 PM Analyzing resource: Ricky_Shields
+INFO 07/22 03:37:16 PM No Tables found for this resource.
+INFO 07/22 03:37:16 PM Analyzing resource: John_Johnson_(cestista)
+INFO 07/22 03:37:16 PM No Tables found for this resource.
+INFO 07/22 03:37:16 PM Analyzing resource: Venzo_Vannini
+INFO 07/22 03:37:16 PM No Tables found for this resource.
+INFO 07/22 03:37:17 PM Analyzing resource: Adrian_Hurley
+INFO 07/22 03:37:17 PM No Tables found for this resource.
+INFO 07/22 03:37:17 PM Analyzing resource: Bobby_Hurley
+INFO 07/22 03:37:17 PM No Tables found for this resource.
+INFO 07/22 03:37:18 PM Analyzing resource: Roy_Hurley
+INFO 07/22 03:37:18 PM No Tables found for this resource.
+INFO 07/22 03:37:18 PM Analyzing resource: Frido_Frey
+INFO 07/22 03:37:18 PM No Tables found for this resource.
+INFO 07/22 03:37:19 PM Analyzing resource: Jonathan_Edwards_(cestista)
+INFO 07/22 03:37:19 PM No Tables found for this resource.
+INFO 07/22 03:37:19 PM Analyzing resource: Davor_Kus
+INFO 07/22 03:37:19 PM No Tables found for this resource.
+INFO 07/22 03:37:20 PM Analyzing resource: Acie_Law
+INFO 07/22 03:37:20 PM No Tables found for this resource.
+INFO 07/22 03:37:20 PM Analyzing resource: Gianluca_Pol
+INFO 07/22 03:37:20 PM No Tables found for this resource.
+INFO 07/22 03:37:21 PM Analyzing resource: Mark_Davis_(cestista_1963)
+INFO 07/22 03:37:21 PM No Tables found for this resource.
+INFO 07/22 03:37:22 PM Analyzing resource: Mark_Davis_(cestista_1973)
+INFO 07/22 03:37:22 PM No Tables found for this resource.
+INFO 07/22 03:37:22 PM Analyzing resource: Jerry_Rullo
+INFO 07/22 03:37:22 PM No Tables found for this resource.
+INFO 07/22 03:37:23 PM Analyzing resource: Antoine_Wright
+INFO 07/22 03:37:23 PM No Tables found for this resource.
+INFO 07/22 03:37:24 PM Analyzing resource: Bracey_Wright
+INFO 07/22 03:37:24 PM No Tables found for this resource.
+INFO 07/22 03:37:24 PM Analyzing resource: Brandan_Wright
+INFO 07/22 03:37:24 PM No Tables found for this resource.
+INFO 07/22 03:37:25 PM Analyzing resource: Dorell_Wright
+INFO 07/22 03:37:25 PM No Tables found for this resource.
+INFO 07/22 03:37:25 PM Analyzing resource: Julian_Wright
+INFO 07/22 03:37:25 PM No Tables found for this resource.
+INFO 07/22 03:37:26 PM Analyzing resource: Lonnie_Wright
+INFO 07/22 03:37:26 PM No Tables found for this resource.
+INFO 07/22 03:37:26 PM Analyzing resource: Lorenzen_Wright
+INFO 07/22 03:37:26 PM No Tables found for this resource.
+INFO 07/22 03:37:27 PM Analyzing resource: Rashad_Wright
+INFO 07/22 03:37:27 PM No Tables found for this resource.
+INFO 07/22 03:37:28 PM Analyzing resource: Sharone_Wright
+INFO 07/22 03:37:28 PM No Tables found for this resource.
+INFO 07/22 03:37:29 PM Analyzing resource: Don_Casey
+INFO 07/22 03:37:29 PM No Tables found for this resource.
+INFO 07/22 03:37:29 PM Analyzing resource: Luis_García_(cestista)
+INFO 07/22 03:37:29 PM No Tables found for this resource.
+INFO 07/22 03:37:30 PM Analyzing resource: Ansley_Truitt
+INFO 07/22 03:37:30 PM No Tables found for this resource.
+INFO 07/22 03:37:30 PM Analyzing resource: Bill_Garnett
+INFO 07/22 03:37:30 PM No Tables found for this resource.
+INFO 07/22 03:37:31 PM Analyzing resource: Ben_Pepper
+INFO 07/22 03:37:31 PM No Tables found for this resource.
+INFO 07/22 03:37:32 PM Analyzing resource: Anthony_Maestranzi
+INFO 07/22 03:37:32 PM Table under section: Statistiche nel Campionato Italiano
+INFO 07/22 03:37:32 PM Headers Found
+INFO 07/22 03:37:32 PM Data refined
+INFO 07/22 03:37:32 PM Rows extracted: 6
+INFO 07/22 03:37:32 PM Data extracted for this table: 84
+INFO 07/22 03:37:32 PM Table under section: Cronologia presenze e punti in Nazionale
+INFO 07/22 03:37:32 PM Headers Found
+INFO 07/22 03:37:32 PM Data refined
+INFO 07/22 03:37:32 PM Rows extracted: 5
+INFO 07/22 03:37:32 PM Data extracted for this table: 40
+INFO 07/22 03:37:32 PM Analyzing resource: Dani_Díez
+INFO 07/22 03:37:32 PM No Tables found for this resource.
+INFO 07/22 03:37:33 PM Analyzing resource: Maja_Milutinović
+INFO 07/22 03:37:33 PM No Tables found for this resource.
+INFO 07/22 03:37:33 PM Analyzing resource: Bernard_James
+INFO 07/22 03:37:33 PM No Tables found for this resource.
