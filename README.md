@@ -113,8 +113,8 @@ This script, written in collaboration with Federica Baiocchi (@github/Feddie), i
 
 
 ## Progress pages
- *  [GSoC 2016 progress page](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone "Progress")
  *  [GSoC 2017 progress page](https://github.com/dbpedia/table-extractor/wiki/GSoC-2017:-Luca-Virgili-progress)
+ *  [GSoC 2016 progress page](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone "Progress")
 
 For any questions please feel to contact:
 * Simone papalini, papalini.simone.an@gmail.com , GSoC 2016 student.
