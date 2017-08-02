@@ -1,4 +1,5 @@
 from table_extractor import settings
+from collections import OrderedDict
 
 
 class WriteSettingsFile:
@@ -14,19 +15,17 @@ class WriteSettingsFile:
     - sectionProperty: represent ontology property to map section.
     - one row for each table's header -->  "Header":"ontology property"
     """
-    def __init__(self, all_sections, all_headers, example_wikipedia_pages, explorer_tools):
+    def __init__(self, all_sections, all_headers, explorer_tools):
         """
         Instantiate class, read all parameters then start to print settings file
 
         :param all_sections: sections found in wikipedia resources
         :param all_headers: set that contains table's headers
-        :param example_wikipedia_pages: contains one wikipedia page for each section
         :param explorer_tools: explorer_tools class that will be useful for public methods.
         """
-        # take all parameters
-        self.all_sections = all_sections
+        # order dictionary by key
+        self.all_sections = OrderedDict(sorted(all_sections.iteritems(), key=lambda x: x[0]))
         self.all_headers = all_headers
-        self.example_wikipedia_pages = example_wikipedia_pages
         self.explorer_tools = explorer_tools
         self.chapter = explorer_tools.chapter
         self.topic = explorer_tools.topic
@@ -46,13 +45,13 @@ class WriteSettingsFile:
         self.write_file_heading(domain_explored_file)
 
         for key, section_dict in self.all_sections.items():
-            # take wikipedia page example for this section
-            wikipedia_example = self.explorer_tools.replace_accents(self.get_example_wikipedia_pages(key))
             # adjust key to print in output
             key = self.explorer_tools.replace_accents(key.replace(" ", "_").replace("-", "_"))
             # print comments and first line of section
-            domain_explored_file.write(settings.COMMENT_FOR_EXAMPLE_PAGE + wikipedia_example + "\n")
-            domain_explored_file.write(settings.SECTION_NAME + key + "={\n")
+            domain_explored_file.write(settings.COMMENT_FOR_EXAMPLE_PAGE + section_dict["exampleWiki"] + "\n")
+            # delete example page that is useless now
+            del section_dict["exampleWiki"]
+            domain_explored_file.write(settings.SECTION_NAME + key + " = {\n")
             # print section dictionary that contains all table headers.
             self.print_dictionary_on_file(domain_explored_file, section_dict)
             domain_explored_file.write("} \n\n")
@@ -74,25 +73,12 @@ class WriteSettingsFile:
 
         domain_explored_file.write(settings.CODING_DOMAIN + "\n")
         domain_explored_file.write(settings.FIRST_COMMENT + "\n")
-        domain_explored_file.write(settings.DOMAIN_TITLE + "='" + self.topic + "' \n")
-        domain_explored_file.write(settings.CHAPTER + "='" + self.chapter + "' \n")
-        domain_explored_file.write(settings.RESEARCH_TYPE + "='" + self.explorer_tools.research_type + "' \n")
-        domain_explored_file.write(settings.VERBOSE_TYPE + "='" + str(self.explorer_tools.verbose) + "' \n")
-        domain_explored_file.write(settings.RESOURCE_FILE + "='" + self.explorer_tools.get_res_list_file() + "' \n\n")
+        domain_explored_file.write(settings.DOMAIN_TITLE + " = '" + self.topic + "' \n")
+        domain_explored_file.write(settings.CHAPTER + " = '" + self.chapter + "' \n")
+        domain_explored_file.write(settings.RESEARCH_TYPE + " = '" + self.explorer_tools.research_type + "' \n")
+        domain_explored_file.write(settings.VERBOSE_TYPE + " = '" + str(self.explorer_tools.verbose) + "' \n")
+        domain_explored_file.write(settings.RESOURCE_FILE + " = '" + self.explorer_tools.get_res_list_file() + "' \n\n")
         domain_explored_file.write(settings.COMMENT_SECTION_PROPERTY + "\n\n")
-
-    def get_example_wikipedia_pages(self, section):
-        """
-        This method extract wikipedia page from a particular section. It's used to help user in filling settings file.
-        Each section has only one wikipedia page associated.
-        :param section: section name to analyze
-        :return:
-        """
-        # each element in example_wikipedia_pages --> [0] page name where there is section name    [1]section name
-        for element in self.example_wikipedia_pages:
-            section_page = element.split(settings.CHARACTER_SEPARATOR)
-            if section_page[1] in section:
-                return section_page[0].replace(" ", "_").replace("-", "_")
 
     def print_dictionary_on_file(self, file_settings, section_dict):
         """
