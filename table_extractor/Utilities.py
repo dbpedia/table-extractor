@@ -12,6 +12,7 @@ import logging
 import settings
 import unicodedata
 import sys
+import socket
 
 from collections import OrderedDict
 import mapping_rules
@@ -87,6 +88,9 @@ class Utilities:
 
         if update:
             self.dictionary = self.update_mapping_rules()
+
+        # define timeout for url request
+        socket.setdefaulttimeout(settings.REQUEST_TIMEOUT)
 
         # Variables used in final report, see print_report()
         self.res_analyzed = 0
@@ -196,24 +200,32 @@ class Utilities:
         :param url_passed: type string,is the url to reach for a rest service
         :return json_parsed: the method returns the JSON parsed answer
         """
-        try:
-            # open a call with urllib.urlopen and passing the URL
-            call = urllib.urlopen(url_passed)
-            # read the answer
-            answer = call.read()
-            # decode the answer in json
-            json_parsed = json.loads(answer)
-            # return the answer parsed
-            return json_parsed
-        except IOError:
-            print ("Try, again, some problems due to Internet connection, url: " + url_passed)
-            return "Internet problems"
-        except ValueError:
-            print ("Not a JSON object.")
-            return "ValueE"
-        except Exception as e:
-            print "Exception with url:" + str(url_passed)
-            return "GeneralE"
+        attempts = 0
+        result = ""
+        while attempts < settings.MAX_ATTEMPTS:
+            try:
+                # open a call with urllib.urlopen and passing the URL
+                call = urllib.urlopen(url_passed)
+                # read the answer
+                answer = call.read()
+                # decode the answer in json
+                json_parsed = json.loads(answer)
+                # return the answer parsed
+                result = json_parsed
+                return result
+            except IOError:
+                print ("Try, again, some problems due to Internet connection or empty url: " + url_passed)
+                attempts += 1
+                result = "Internet problems"
+            except ValueError:
+                print ("Not a JSON object.")
+                result = "ValueE"
+                attempts += 1
+            except Exception as e:
+                print "Exception with url:" + str(url_passed)
+                result = "GeneralE"
+                attempts += 1
+        return result
 
     def html_answer(self, url_passed):
         try:
@@ -278,7 +290,7 @@ class Utilities:
             return total_res_found
         except:
             logging.exception("Unable to find the total number of resource involved..")
-            print("total resource not found")
+            return 0
 
     def dbpedia_res_list(self, query, offset):
         """
@@ -520,7 +532,7 @@ class Utilities:
             #     self.logging.warn(message)
             return new_mapping_rules
 
-    def update_differences_between_dictionaries(self,actual_mapping_rules,new_mapping_rules):
+    def update_differences_between_dictionaries(self, actual_mapping_rules,new_mapping_rules):
         """
         Search for differences between old and new mapping rules
         :param actual_mapping_rules: properties dictionary already defined
@@ -587,6 +599,6 @@ class Utilities:
         else:
             result = "Research type (" + self.research_type + ") is wrong, check domain_settings.py"
         # check resource file
-        if not os.path.isfile(self.get_resource_file()):
+        if self.research_type != "s" and not os.path.isfile(self.get_resource_file()):
             result = "Resource file doesn't exists, check domain_settings.py"
         return result
