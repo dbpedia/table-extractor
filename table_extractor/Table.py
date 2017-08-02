@@ -44,3 +44,4 @@ class Table:
 
         self.cells_refined += data_num
         self.data_refined_rows += rows
+        self.n_headers = len(self.headers_refined)
