@@ -9,8 +9,6 @@ from collections import OrderedDict
 all_sections = OrderedDict()
 # All headers found in tables analyzed
 all_headers = OrderedDict()
-# Array that will contains resources name where it was found a particular section. It will be useful for user.
-example_wikipedia_pages = []
 __author__ = "Luca Virgili"
 
 """
@@ -19,8 +17,8 @@ have been found.
 All data will be represented in all_sections variable. 
 It's a nested dictionary that has this organization: each key of all_sections represents a particular section 
 and its related value is a dictionary that contains all section's headers.
-Output of this script is a settings file, named "domain_settings", that user has to fill in order to map all fields that hasn't a clear
-property.
+Output of this script is a settings file, named "domain_settings", that user has to fill in order to map all fields 
+that hasn't a clear property.
 
 """
 
@@ -51,6 +49,7 @@ def analyze_uri_resource_list(uri_resource_list, actual_dictionary):
     """
     Analyze each resource uri's to get sections and headers of related table.
     :param uri_resource_list: list of all resource's uri
+    :param actual_dictionary
     :return:
     """
     for single_uri in uri_resource_list:
@@ -63,12 +62,14 @@ def get_resource_sections_and_headers(res_name, actual_dictionary):
     If there are defined tables, I will analyze each of them.
     First of all I will study section's table, then I will go on headers' table.
     :param res_name: resource name that has to be analyzed
+    :param actual_dictionary
     :return:
     """
     # Get all tables
     all_tables = explorer_tools.html_table_parser(res_name)
     # For each table defined
     for table in all_tables:
+
         # I won't get tables with only one row --> It can be an error during table's reading
         if table.n_rows > 1:
             check_if_section_is_present(table.table_section, table.headers_refined, res_name, actual_dictionary)
@@ -81,6 +82,7 @@ def check_if_section_is_present(string_to_check, headers_refined, res_name, actu
     :param string_to_check: section name to check
     :param headers_refined: all headers of this sections (JSON object that contains properties like 'colspan', etc..)
     :param res_name: resource name that has to be analyzed
+    :param actual_dictionary
     :return:
     """
     section_name = check_if_similar_section_is_present(string_to_check, res_name)
@@ -124,7 +126,7 @@ def check_if_similar_section_is_present(string_to_check, res_name):
         else:
             all_sections[new_key] = OrderedDict()
             all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, "")
-            example_wikipedia_pages.append(res_name + settings.CHARACTER_SEPARATOR + new_key)
+            all_sections[new_key].__setitem__("exampleWiki", res_name)
     else:
         new_key = equal_key
     return new_key
@@ -136,15 +138,15 @@ def check_if_headers_not_present_then_add(headers, section_name, actual_dictiona
 
     :param headers: all table's headers
     :param section_name: section name to analyze
+    :param actual_dictionary
     :return:
     """
     #
     for row in headers:
         header = row['th']
-        if len(header) > 1:
-            # character "'" will produce a wrong output file
-            header = header.replace("'", "")
-            check_if_header_already_exists(header, section_name, actual_dictionary)
+        # character "'" will produce a wrong output file
+        header = header.replace("'", "")
+        check_if_header_already_exists(header, section_name, actual_dictionary)
 
 
 def check_if_header_already_exists(header, section_name, actual_dictionary):
@@ -153,6 +155,7 @@ def check_if_header_already_exists(header, section_name, actual_dictionary):
     except KeyError will caught exception given by lack of a key (in this case 'header' is the key)
     :param header: single table header
     :param section_name: section name to analyze
+    :param actual_dictionary
     :return:
     """
     if header not in all_sections[section_name]:
@@ -227,7 +230,7 @@ def write_sections_and_headers():
     Write sections and headers found. I will use WriteSettingsFile to create output file.
     :return:
     """
-    WriteSettingsFile.WriteSettingsFile(all_sections, all_headers, example_wikipedia_pages,
+    WriteSettingsFile.WriteSettingsFile(all_sections, all_headers,
                                         explorer_tools)
 
 
