@@ -8,15 +8,17 @@
 # When using a online service, number of seconds between two tries
 SECONDS_BTW_TRIES = 2
 # Max number of attempts to contact a web service.
-MAX_ATTEMPTS = 5
+MAX_ATTEMPTS = 3
 
+# Timeout for url request (write that in seconds)
+REQUEST_TIMEOUT = 5
 # Following are values used to compose urls of web services.
 
 SPARQL_CALL_FORMAT = "&format=application%2Fsparql-results%2Bjson&debug=on"
 
 
 # comment to write in mapping_rules.py
-COMMENT_MAPPING_RULES = "# coding = utf-8 \n# Mapping rules used to map table's data, topics are used to evaluate" +\
+COMMENT_MAPPING_RULES = "# coding = utf-8 \n# Mapping rules used to map table's data, topics are used to evaluate " +\
                         "functions with same name."
 
 # mapping rule's prefix
@@ -103,7 +105,7 @@ SPARQL_CHECK_PROPERTY = ["select ?s where{", " ?s rdfs:label ", " } LIMIT 10"]
 ONTOLOGY_TYPE = ["ontology"]
 
 # Queries to select a list of resources and the number of resources involved
-SPARQL_RES_LIST_QUERY = ["SELECT distinct ?s as ?res WHERE{", "} LIMIT 5 OFFSET "]
+SPARQL_RES_LIST_QUERY = ["SELECT distinct ?s as ?res WHERE{", "} LIMIT 100 OFFSET "]
 
 # Query to get number of resources involved in an execution
 SPARQL_NUM_RES_QUERY = ["select (count(distinct ?s) as ?res_num) where{", "}"]
