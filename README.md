@@ -61,7 +61,7 @@ Please refer to [Progress_page](https://github.com/dbpedia/extraction-framework/
 
 **domain_explorer** Folder containing sources files for exploring and reading all properties of a domain.
 
-**Extractions** In this folder you will find .ttl and .log files about extractions you have completed.
+**Extractions** In this folder you will find .ttl and .log files about explorations and extractions you have completed.
 
 **Resource_lists** Here are collected .txt files as result from Selector.py work. Every .txt file contains a list of resources gathered by a SPARQL query (using -t topic or -w custom_where_clause). 
 
@@ -113,9 +113,10 @@ This script, written in collaboration with Federica Baiocchi (@github/Feddie), i
 
 
 ## Progress pages
- *  [GSoC 2016 progress page](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone "Progress")
  *  [GSoC 2017 progress page](https://github.com/dbpedia/table-extractor/wiki/GSoC-2017:-Luca-Virgili-progress)
+ *  [GSoC 2016 progress page](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone "Progress")
 
 For any questions please feel to contact:
-* Simone papalini, papalini.simone.an@gmail.com , GSoC 2016 student.
 * Luca Virgili, lucav48@gmail.com , GSoC 2017 student.
+* Simone papalini, papalini.simone.an@gmail.com , GSoC 2016 student.
+
