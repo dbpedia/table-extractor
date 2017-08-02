@@ -2,7 +2,7 @@
 
 import lxml.html as html
 import re
-
+import string
 import Mapper
 import Table
 
@@ -156,7 +156,7 @@ class HtmlTableParser:
             self.logging.info("Table under section: %s" % tab.table_section)
 
             # find headers for this table
-            self.find_headers(tab)
+            has_headers = self.find_headers(tab)
 
             # Chose to not use this method as it resolves users' made errors but create problems with correctly
             #  written table
@@ -193,7 +193,6 @@ class HtmlTableParser:
                                                self.utils, self.reification_index, tab.table_section, )
                         mapper.map()
                         self.reification_index = mapper.reification_index
-
 
                 # If no data have been found for this table report this condition with tag E3
                 else:
@@ -249,10 +248,13 @@ class HtmlTableParser:
                         else:
                             iter_text = child.itertext()
                             for text in iter_text:
-                                section_text += text
+                                # need only first item
+                                if not section_text:
+                                    section_text += text
 
                         # encode in utf-8 the section text
                         section_text = section_text.encode('utf-8')
+                        section_text = section_text.translate(None, string.punctuation)
                         return section_text
 
         # if a <h> tag was not found return the page's title
@@ -276,11 +278,9 @@ class HtmlTableParser:
         :return: nothing
         """
         try:
-            i = 0   # for counting tables' rows
             # for every the table's row
             started_data = 0    # variable for checking if we started reading data, so we can't find other headers
             for row in self.current_html_table:
-                headers = []
                 # find header cell
                 html_header_row = row.findall('th')
                 # find also data cell in the same row
@@ -292,13 +292,6 @@ class HtmlTableParser:
                 if html_header_row and not html_data and started_data == 0:
                     # headers are composed in the form of a dictionary Eg. {'colspan': '3', 'th': 'Candidati'}
                     header_row = self.compose_tab_headers(html_header_row)
-
-                # this is the case where headers looks like data cell.
-                # we take only the first row as headers and the others rows will be taken as data cells (tag td)
-                elif i == 0 and not html_header_row and html_data:
-                    # headers are composed in the form of a dictionary Eg. {'colspan': '3', 'td': 'Candidati'}
-                    header_row = self.compose_tab_headers(html_data)
-
                 # another particular case where headers are in columns instead of being in a row.
                 elif html_data and html_header_row:
                     # headers are composed in the form of a dictionary Eg. {'colspan': '3', 'td': 'Candidati'}
@@ -311,7 +304,6 @@ class HtmlTableParser:
                 # if headers are found append them to the tab.headers list
                 if header_row:
                     tab.headers.append(header_row)
-                i += 1
         except:
             self.logging.warning("Error Finding the headers, resource: %s" % self.resource)
 
@@ -1018,9 +1010,10 @@ class HtmlTableParser:
                     tab.data_refined.append(temp_row)
 
     def print_table(self, tab):
-        print "nome sezione ", tab.table_section, " verticale: ", tab.vertical_table
+        print "section ", tab.table_section, " vertical table: ", tab.vertical_table
         for value in self.current_html_table:
             str = ""
             for x in value.itertext():
                 str = str + x
             print str.replace("\n", " ")
+
