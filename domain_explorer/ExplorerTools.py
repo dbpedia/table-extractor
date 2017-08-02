@@ -124,9 +124,10 @@ class ExplorerTools:
         """
         uri_resource_list = []
         if not self.args.single:
-            self.selector.collect_resources()
-            uri_resource_file = self.selector.res_list_file
-            uri_resource_list = self.extract_resources(uri_resource_file)
+            if self.selector.tot_res_interested > 0:
+                self.selector.collect_resources()
+                uri_resource_file = self.selector.res_list_file
+                uri_resource_list = self.extract_resources(uri_resource_file)
         else:
             uri_resource_list.append(self.args.single)
         return uri_resource_list
