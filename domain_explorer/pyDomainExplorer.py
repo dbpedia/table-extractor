@@ -39,6 +39,8 @@ def start_exploration():
     if uri_resource_list:
         # Analyze uri list
         analyze_uri_resource_list(uri_resource_list, actual_dictionary)
+        # print report of extractor
+        explorer_tools.utils.print_report()
         # write settings file
         write_sections_and_headers()
     else:
@@ -52,8 +54,14 @@ def analyze_uri_resource_list(uri_resource_list, actual_dictionary):
     :param actual_dictionary
     :return:
     """
+    actual_resource = 0
+    total_resources = len(uri_resource_list)
     for single_uri in uri_resource_list:
         print "Resource: ", single_uri
+        actual_resource += 1
+        explorer_tools.printProgressBar(actual_resource, total_resources)
+        # update number of resources analyzed
+        explorer_tools.utils.res_analyzed += 1
         get_resource_sections_and_headers(single_uri, actual_dictionary)
 
 
