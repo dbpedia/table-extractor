@@ -94,16 +94,19 @@ class Selector:
                 for res in self.current_res_list:
                     try:
                         # set the res_name which resides under res['res']['value'] and replace useless parts
-                        split_uri = res['res']['value'].split("/")
-                        # index of resource --> res_name will be after "resource" string in uri
-                        i = split_uri.index('resource') + 1
-                        res_name = split_uri[i]
-                        # encode res_name in utf-8
-                        res_name = res_name.encode('utf-8')
-                        # write the resource in the file with a newline tag
-                        self.list.write(str(res_name) + '\n')
-                        # update the number of resources serialized
-                        self.resources_serialized += 1
+                        uri = res['res']['value']
+                        split_uri = uri.split("/")
+                        # filter for elements like entity or ontology
+                        if "resource" in uri:
+                            # index of resource --> res_name will be after "resource" string in uri
+                            i = split_uri.index('resource') + 1
+                            res_name = split_uri[i]
+                            # encode res_name in utf-8
+                            res_name = res_name.encode('utf-8')
+                            # write the resource in the file with a newline tag
+                            self.list.write(str(res_name) + '\n')
+                            # update the number of resources serialized
+                            self.resources_serialized += 1
 
                     except:
                         self.utils.logging.exception("Something went wrong writing down this resource: %s" % res)
