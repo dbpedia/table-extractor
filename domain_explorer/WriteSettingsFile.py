@@ -1,7 +1,6 @@
 from table_extractor import settings
 from collections import OrderedDict
 
-
 class WriteSettingsFile:
     """
     WriteSettingsFile is a class that contains all methods for printing settings file in output.
@@ -54,7 +53,7 @@ class WriteSettingsFile:
             domain_explored_file.write(settings.SECTION_NAME + key + " = {\n")
             # print section dictionary that contains all table headers.
             self.print_dictionary_on_file(domain_explored_file, section_dict)
-            domain_explored_file.write("} \n\n")
+            domain_explored_file.write("} \n")
         domain_explored_file.close()
 
     def write_file_heading(self, domain_explored_file):
@@ -70,14 +69,13 @@ class WriteSettingsFile:
         :param domain_explored_file: reference to the output file
         :return:
         """
-
         domain_explored_file.write(settings.CODING_DOMAIN + "\n")
         domain_explored_file.write(settings.FIRST_COMMENT + "\n")
-        domain_explored_file.write(settings.DOMAIN_TITLE + " = '" + self.topic + "' \n")
-        domain_explored_file.write(settings.CHAPTER + " = '" + self.chapter + "' \n")
-        domain_explored_file.write(settings.RESEARCH_TYPE + " = '" + self.explorer_tools.research_type + "' \n")
-        domain_explored_file.write(settings.VERBOSE_TYPE + " = '" + str(self.explorer_tools.verbose) + "' \n")
-        domain_explored_file.write(settings.RESOURCE_FILE + " = '" + self.explorer_tools.get_res_list_file() + "' \n\n")
+        domain_explored_file.write(settings.DOMAIN_TITLE + ' = "' + self.topic + '" \n')
+        domain_explored_file.write(settings.CHAPTER + ' = "' + self.chapter + '" \n')
+        domain_explored_file.write(settings.RESEARCH_TYPE + ' = "' + self.explorer_tools.research_type + '" \n')
+        domain_explored_file.write(settings.VERBOSE_TYPE + ' = "' + str(self.explorer_tools.verbose) + '" \n')
+        domain_explored_file.write(settings.RESOURCE_FILE + ' = "' + self.explorer_tools.get_res_list_file() + '" \n\n')
         domain_explored_file.write(settings.COMMENT_SECTION_PROPERTY + "\n\n")
 
     def print_dictionary_on_file(self, file_settings, section_dict):
@@ -91,11 +89,11 @@ class WriteSettingsFile:
         """
         for key, value in section_dict.items():
             if self.verbose == 1:
-                file_settings.write("'" + key + "':'" + value + "'" + ", \n")
+                file_settings.write("'" + key + "': '" + value + "'" + ", \n")
             elif self.verbose == 2:
                 # don't print header already printed
                 if key == settings.SECTION_NAME_PROPERTY:
-                    file_settings.write("'" + key + "':'" + value + "'" + ", \n")
+                    file_settings.write("'" + key + "': '" + value + "'" + ", \n")
                 elif self.all_headers[key] != "printed":
-                    file_settings.write("'" + key + "':'" + value + "'" + ", \n")
+                    file_settings.write("'" + key + "': '" + value + "'" + ", \n")
                     self.all_headers.__setitem__(key, "printed")
