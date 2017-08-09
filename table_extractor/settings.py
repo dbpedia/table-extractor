@@ -36,18 +36,20 @@ PATH_ACTUAL_DICTIONARY = "../table_extractor/mapping_rules.py"
 # strings for settings file's header
 CODING_DOMAIN = "# coding = utf-8"
 RESEARCH_TYPE = "RESEACH_TYPE"
-VERBOSE_TYPE = "VERBOSE_TYPE"
+VERBOSE_TYPE = "VERBOSE_VALUE"
 DOMAIN_TITLE = "DOMAIN_EXPLORED"
 CHAPTER = "CHAPTER"
 SECTION_NAME = "SECTION_"
 CHARACTER_SEPARATOR = "_tte_"
 SECTION_NAME_PROPERTY = "sectionProperty"
 FIRST_COMMENT = "# Comments below will help you in filling this file settings. Remember to change only " +\
-                SECTION_NAME + " variables \n# Research parameters "
+                SECTION_NAME + " variables.\n# Please do not modify research parameters. \n\n# Research parameters "
 COMMENT_FOR_EXAMPLE_PAGE = "# Example page where it was found this section: "
 COMMENT_SECTION_PROPERTY = "# The entry named " + SECTION_NAME_PROPERTY + " represents ontology property associated " +\
-    "to table's section. (Eg. in basket domain, section named playoff can be mapped with something like 'playoff' or "\
-    " 'playoffMatch')."
+    "to table's section.\n" \
+    "# (Eg. in basket domain, section named playoff can be mapped with something like 'playoff' or "\
+    " 'playoffMatch').\n# Triple example: <http://dbpedia.org/resource/Kobe_Bryant> " \
+    "<http://dbpedia.org/ontology/playoffMatch>\n# <http://dbpedia.org/resource/Kobe_Bryant__1>"
 RESOURCE_FILE = "RESOURCE_FILE"
 
 # Path where pyDomainExplorer print the result file .py
