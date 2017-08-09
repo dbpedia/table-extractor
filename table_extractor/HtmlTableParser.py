@@ -156,7 +156,7 @@ class HtmlTableParser:
             self.logging.info("Table under section: %s" % tab.table_section)
 
             # find headers for this table
-            has_headers = self.find_headers(tab)
+            self.find_headers(tab)
 
             # Chose to not use this method as it resolves users' made errors but create problems with correctly
             #  written table
@@ -253,11 +253,16 @@ class HtmlTableParser:
                                     section_text += text
 
                         # encode in utf-8 the section text
+                        section_text = self.utils.delete_accented_characters(section_text)
                         section_text = section_text.encode('utf-8')
                         section_text = section_text.translate(None, string.punctuation)
                         return section_text
 
         # if a <h> tag was not found return the page's title
+        string.punctuation = string.punctuation.replace("_", "")
+        self.resource = self.utils.delete_accented_characters(self.resource)
+        self.resource = self.resource.encode('utf-8')
+        self.resource = self.resource.translate(None, string.punctuation)
         return self.resource
 
     def count_rows(self):
@@ -280,6 +285,7 @@ class HtmlTableParser:
         try:
             # for every the table's row
             started_data = 0    # variable for checking if we started reading data, so we can't find other headers
+            # used to delete header that are in last row.
             for row in self.current_html_table:
                 # find header cell
                 html_header_row = row.findall('th')
@@ -299,7 +305,7 @@ class HtmlTableParser:
                     # variable that will be useful for mapper class. In this way we can distinct
                     # different table types.
                     tab.vertical_table = 1
-                else:
+                elif html_data:
                     started_data = 1
                 # if headers are found append them to the tab.headers list
                 if header_row:
@@ -442,8 +448,12 @@ class HtmlTableParser:
         # self.print_headers(tab)
 
         # We want to make a single header's row, associating every header row with the next one.
-        self.associate_super_and_sub_headers(tab)
-
+        if tab.vertical_table == 0:
+            self.associate_super_and_sub_headers(tab)
+        else:
+            # don't have to associate header with super header, because it is a table where each row has: header - data
+            for element in tab.headers:
+                tab.headers_refined.append(element[0])
         # Finally encode headers
         self.encode_headers(tab)
 
@@ -557,7 +567,6 @@ class HtmlTableParser:
         try:
             # make a copy of table headers
             headers_copy = tab.headers
-
             # Iterates for a 'rows number' times
             for iteration in range(0, len(headers_copy) - 1):
 
@@ -611,10 +620,6 @@ class HtmlTableParser:
             for element in headers_copy[0]:
                 tab.headers_refined.append(element)
 
-            # Finally prints out new headers to have a visual feedback
-            #print "New headers:"
-            #for header in tab.headers_refined:
-            #    print(header['th'])
         except:
             print("Error gathering sub and super headers.. resource: " + str(self.resource))
 
