@@ -60,10 +60,10 @@ class Utilities:
         if not self.chapter:
             self.read_parameters_research()
             self.setup_log("extractor")
-            update = True   # utilities called by extractor, so i need to update mapping rules
+            self.extractor = True   # utilities called by extractor, so i need to update mapping rules
         else:
             self.setup_log("explorer")
-            update = False
+            self.extractor = False
         self.logging = logging
         # use dbpedia_selection to set self.dbpedia and self.dbpedia_sparql_url
         self.dbpedia_sparql_url = self.dbpedia_selection()
@@ -86,7 +86,7 @@ class Utilities:
 
         self.html_format = "https://" + self.chapter + ".wikipedia.org/wiki/"
 
-        if update:
+        if self.extractor:
             self.dictionary = self.update_mapping_rules()
 
         # define timeout for url request
@@ -391,20 +391,21 @@ class Utilities:
 
         self.logging.info("+           Total # of exceptions extracting data : %d" % self.data_extraction_errors)
 
-        self.logging.info("+           Total # of \'header not resolved\' errors : %d" % self.not_resolved_header_errors)
+        if self.extractor:
+            self.logging.info("+           Total # of \'header not resolved\' errors : %d" % self.not_resolved_header_errors)
 
-        self.logging.info("+           Total # of \'no headers\' errors : %d" % self.headers_errors)
+            self.logging.info("+           Total # of \'no headers\' errors : %d" % self.headers_errors)
 
-        self.logging.info("+           Total # of \'no mapping rule\' errors : %d" % self.no_mapping_rule_errors)
+            self.logging.info("+           Total # of \'no mapping rule\' errors : %d" % self.no_mapping_rule_errors)
 
-        self.logging.info("+           Total # of table's rows triples serialized : %d" % self.triples_row)
+            self.logging.info("+           Total # of table's rows triples serialized : %d" % self.triples_row)
 
-        self.logging.info("+           Total # of table's cells triples serialized : %d" % self.mapped_cells)
+            self.logging.info("+           Total # of table's cells triples serialized : %d" % self.mapped_cells)
 
-        self.logging.info("+           Total # of triples serialized : %d" % int(self.mapped_cells + self.triples_row))
+            self.logging.info("+           Total # of triples serialized : %d" % int(self.mapped_cells + self.triples_row))
 
-        effectiveness = (self.mapped_cells/float(self.data_extracted))
-        self.logging.info("+           Percentage of mapping effectiveness  : %.3f" % effectiveness)
+            effectiveness = (self.mapped_cells/float(self.data_extracted))
+            self.logging.info("+           Percentage of mapping effectiveness  : %.3f" % effectiveness)
 
     def delete_accented_characters(self, text):
         """
@@ -532,18 +533,19 @@ class Utilities:
             #     self.logging.warn(message)
             return new_mapping_rules
 
-    def update_differences_between_dictionaries(self, actual_mapping_rules,new_mapping_rules):
+    def update_differences_between_dictionaries(self, actual_mapping_rules, new_mapping_rules):
         """
         Search for differences between old and new mapping rules
         :param actual_mapping_rules: properties dictionary already defined
         :param new_mapping_rules: properties dictionary defined by user
         :return: updated dictionary with old and new mapping rules
         """
-        for key, value in new_mapping_rules.items():
-            try:
-                actual_mapping_rules[key]
-            except KeyError:
-                actual_mapping_rules.__setitem__(key, value)
+        if new_mapping_rules:
+            for key, value in new_mapping_rules.items():
+                try:
+                    actual_mapping_rules[key]
+                except KeyError:
+                    actual_mapping_rules.__setitem__(key, value)
         return actual_mapping_rules
 
     def print_updated_mapping_rules(self, updated_mapping_rules):
