@@ -51,10 +51,50 @@ Notes:
 * If you choose a topic (-t) or you pass to the script a custom where clause, a list of resources (.txt files) are created in /Resource_lists . 
 * If everything is ok, two files are created in /Extractions : a log file (for reporting purpose) and a .ttl file containing the serialized rdf data set.
 
+###**Example of verbose usage**
 
+In a domain like basketball player, you can observe these `domain_settings` file. The first one refers to verbose 1 while the second one refers to verbose 2. You can use this parameter to simplify your work over all different domains.
+```
+### VERBOSE VALUE: 1
+# Example page where it was found this section: Kobe_Bryant
+SECTION_Playoffs = {
+'sectionProperty': '', 
+'Year': 'Year', 
+'Team': 'team', 
+'GamesPlayed': '', 
+'GamesStarted': ''
+} 
+# Example page where it was found this section: Kobe_Bryant
+SECTION_Regular_season = {
+'sectionProperty': '', 
+'Year': 'Year', 
+'Team': 'team', 
+'GamesPlayed': '', 
+'GamesStarted': ''
+} 
+
+# END OF FILE 
+```
+```
+### VERBOSE VALUE: 2
+# Example page where it was found this section: Kobe_Bryant
+SECTION_Playoffs = {
+'sectionProperty': '', 
+'Year': 'Year', 
+'Team': 'team', 
+'GamesPlayed': '', 
+'GamesStarted': ''
+} 
+# Example page where it was found this section: Kobe_Bryant
+SECTION_Regular_season = {
+'sectionProperty': '',
+} 
+
+# END OF FILE 
+```
 
 ## Results
-Please refer to [Progress_page](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone)
+In this page: [Results page](https://github.com/dbpedia/table-extractor/tree/master/Extractions/GSoC%202017%20Results) you can observe dataset (english and italian) extracted using `table extractor` . Furthermore you can read log file created in order to see all operations made up for creating RDF triples.
 
 ## Folders
 **table_extractor** Folder containing sources files for analyzing and mapping all properties found in the script "pyDomainExplorer.py"
