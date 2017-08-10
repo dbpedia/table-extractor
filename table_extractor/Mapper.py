@@ -224,10 +224,11 @@ class Mapper:
             if header in self.dictionary:
                 value = self.dictionary[header]
                 message = "Header: " + header + " mapped with: " + str(value)
+            else:
+                message = "Key " + key + " not found. Check actual dictionary on mapping_rules.py"
             key = header
         else:
             # there's no mapping rule in dictionary for this header ( deep search isn't for table section)
-            self.utils.no_mapping_rule_errors += 1
             message = "Key " + key + " not found. Check actual dictionary on mapping_rules.py"
 
         # print message in log
@@ -238,6 +239,7 @@ class Mapper:
             # means a lack of mapping rules
             if value == "":
                 print message
+                self.utils.no_mapping_rule_errors += 1
         return value
 
     def is_float(self, value):
