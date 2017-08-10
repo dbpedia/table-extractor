@@ -49,7 +49,7 @@ def start_exploration():
 
 def analyze_uri_resource_list(uri_resource_list, actual_dictionary):
     """
-    Analyze each resource uri's to get sections and headers of related table.
+    Analyze each resource's uri to get sections and headers of related table.
     :param uri_resource_list: list of all resource's uri
     :param actual_dictionary
     :return:
@@ -59,7 +59,7 @@ def analyze_uri_resource_list(uri_resource_list, actual_dictionary):
     for single_uri in uri_resource_list:
         print "Resource: ", single_uri
         actual_resource += 1
-        explorer_tools.printProgressBar(actual_resource, total_resources)
+        explorer_tools.print_progress_bar(actual_resource, total_resources)
         # update number of resources analyzed
         explorer_tools.utils.res_analyzed += 1
         get_resource_sections_and_headers(single_uri, actual_dictionary)
@@ -93,12 +93,12 @@ def check_if_section_is_present(string_to_check, headers_refined, res_name, actu
     :param actual_dictionary
     :return:
     """
-    section_name = check_if_similar_section_is_present(string_to_check, res_name)
+    section_name = check_if_similar_section_is_present(string_to_check, res_name, actual_dictionary)
     # Check if this section was already created, if not it will create another dictionary
     check_if_headers_not_present_then_add(headers_refined, section_name, actual_dictionary)
 
 
-def check_if_similar_section_is_present(string_to_check, res_name):
+def check_if_similar_section_is_present(string_to_check, res_name, actual_dictionary):
     """
     Check if there are sections that are similar.
     (For example 'College' and 'College statistics' will be joint in one unique section to map)
@@ -128,12 +128,18 @@ def check_if_similar_section_is_present(string_to_check, res_name):
             app_dict = dict(all_sections[similar_key[0]])
             del all_sections[similar_key[0]]
             all_sections[new_key] = OrderedDict()
-            all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, "")
+            if new_key in actual_dictionary:
+                all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, actual_dictionary[new_key])
+            else:
+                all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, "")
             all_sections[new_key].update(app_dict)
         # If there isn't similar key, I simply create a new one in all_sections dictionary.
         else:
             all_sections[new_key] = OrderedDict()
-            all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, "")
+            if new_key in actual_dictionary:
+                all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, actual_dictionary[new_key])
+            else:
+                all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, "")
             all_sections[new_key].__setitem__("exampleWiki", res_name)
     else:
         new_key = equal_key
@@ -167,23 +173,22 @@ def check_if_header_already_exists(header, section_name, actual_dictionary):
     :return:
     """
     if header not in all_sections[section_name]:
-        # check if this header is already defined in actual_dictionary
-        if header in actual_dictionary:
-            # if it's not related to section
-            header_property = actual_dictionary[header]
-        elif (section_name + "_" + header) in actual_dictionary:
+            # check if this header is already defined in actual_dictionary
+        if (section_name + "_" + header) in actual_dictionary:
             # if it's associated to section (depend on verbose value)
             header_property = actual_dictionary[section_name + "_" + header]
+        elif header in actual_dictionary:
+            # if it's not related to section
+            header_property = actual_dictionary[header]
         else:
-            # check if it's already defined a property for this header
+            # check if it's already defined a property for this header on dbpedia
             header_property = check_if_property_exists(header)
-        # delete headers that have only one character
-        if len(header) > 1:
-            all_sections[section_name].__setitem__(header, header_property)
-            # verify if in all_headers is already defined
-            if header not in all_headers:
-                all_headers.__setitem__(header, header_property)
-                explorer_tools.print_log_msg("info", "New header found: " + header)
+
+        all_sections[section_name].__setitem__(header, header_property)
+        # verify if in all_headers is already defined
+        if header not in all_headers:
+            all_headers.__setitem__(header, header_property)
+            explorer_tools.print_log_msg("info", "New header found: " + header)
 
 
 def check_if_property_exists(header):
