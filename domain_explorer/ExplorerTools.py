@@ -269,7 +269,8 @@ class ExplorerTools:
             self.utils.logging.error(msg)
 
     # Print iterations progress
-    def printProgressBar(self, iteration, total, prefix='Progress: ', suffix='Complete', decimals=1, length=30, fill='#'):
+    def print_progress_bar(self, iteration, total, prefix='Progress: ', suffix='Complete', decimals=1, length=30,
+                           fill='#'):
         """
         Call in a loop to create terminal progress bar
         @params:
@@ -286,6 +287,3 @@ class ExplorerTools:
         bar = fill * filledLength + '-' * (length - filledLength)
         print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix))
         print "\n"
-        # Print New Line on Complete
-        if iteration == total:
-            print "\n"
