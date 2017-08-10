@@ -486,20 +486,19 @@ class Utilities:
         parsed_mapping_rules = OrderedDict()
         for section_key, section_dict in new_mapping_rules.items():
             for key, value in section_dict.items():
-                if value != "":
-                    # Change the sectionProperty with the name of the section
-                    if key == settings.SECTION_NAME_PROPERTY:
-                        # replace _ with a space.
-                        sections = section_key.split(settings.CHARACTER_SEPARATOR)
-                        for section in sections:
-                            parsed_mapping_rules.__setitem__(section.replace("_", " "), value)
-                    else:
-                        sections = section_key.split(settings.CHARACTER_SEPARATOR)
-                        for section in sections:
-                            if self.verbose == "2":
-                                parsed_mapping_rules.__setitem__(key, value)
-                            else:
-                                parsed_mapping_rules.__setitem__(section.replace("_", " ") + "_" + key, value)
+                # Change the sectionProperty with the name of the section
+                if key == settings.SECTION_NAME_PROPERTY:
+                    # replace _ with a space.
+                    sections = section_key.split(settings.CHARACTER_SEPARATOR)
+                    for section in sections:
+                        parsed_mapping_rules.__setitem__(section.replace("_", " "), value)
+                else:
+                    sections = section_key.split(settings.CHARACTER_SEPARATOR)
+                    for section in sections:
+                        if self.verbose == "2":
+                            parsed_mapping_rules.__setitem__(key, value)
+                        else:
+                            parsed_mapping_rules.__setitem__(section.replace("_", " ") + "_" + key, value)
         return parsed_mapping_rules
 
     def read_actual_mapping_rules(self):
@@ -542,10 +541,18 @@ class Utilities:
         """
         if new_mapping_rules:
             for key, value in new_mapping_rules.items():
-                try:
-                    actual_mapping_rules[key]
-                except KeyError:
+                if value != "":
+                    # if user add a new mapping rule
                     actual_mapping_rules.__setitem__(key, value)
+                else:
+                    # user deleted a property that was filled in domain_settings, so I will empty that
+                    # mapping rule.
+                    if key in actual_mapping_rules:
+                        del actual_mapping_rules[key]
+                    else:
+                        search_key = [x for x in actual_mapping_rules.keys() if key in x]
+                        for k in search_key:
+                            del actual_mapping_rules[k]
         return actual_mapping_rules
 
     def print_updated_mapping_rules(self, updated_mapping_rules):
