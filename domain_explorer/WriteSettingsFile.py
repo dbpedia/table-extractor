@@ -54,6 +54,7 @@ class WriteSettingsFile:
             # print section dictionary that contains all table headers.
             self.print_dictionary_on_file(domain_explored_file, section_dict)
             domain_explored_file.write("} \n")
+        domain_explored_file.write(settings.END_OF_FILE)
         domain_explored_file.close()
 
     def write_file_heading(self, domain_explored_file):
@@ -77,6 +78,7 @@ class WriteSettingsFile:
         domain_explored_file.write(settings.VERBOSE_TYPE + ' = "' + str(self.explorer_tools.verbose) + '" \n')
         domain_explored_file.write(settings.RESOURCE_FILE + ' = "' + self.explorer_tools.get_res_list_file() + '" \n\n')
         domain_explored_file.write(settings.COMMENT_SECTION_PROPERTY + "\n\n")
+        domain_explored_file.write(settings.COMMENT_FILLED_ELEMENT + "\n\n")
 
     def print_dictionary_on_file(self, file_settings, section_dict):
         """
