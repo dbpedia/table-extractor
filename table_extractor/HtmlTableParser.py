@@ -405,6 +405,7 @@ class HtmlTableParser:
                 self.headers_not_resolved += 1
 
             # Append this cell to the headers list then continues for other cells
+            header_cell['th'] = header_cell['th'].replace("'", ".")
             headers.append(header_cell)
 
         # Once every row has been tested, return headers
@@ -633,6 +634,8 @@ class HtmlTableParser:
 
         for header in tab.headers_refined:
             header['th'] = header['th'].encode('ascii', 'replace')
+            if "?" in header['th']:
+                header['th'] = header['th'].replace("?", ".")
 
     def encode_data(self, tab):
         """
