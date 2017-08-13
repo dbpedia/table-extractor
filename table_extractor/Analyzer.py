@@ -153,7 +153,12 @@ class Analyzer:
                 self.logging.info("Analyzing " + str(resource))
                 # update res_analyzed index
                 self.res_analyzed += 1
-
+                if self.res_list:
+                    # search over many resources
+                    self.utils.print_progress_bar(self.res_analyzed, len(self.res_list))
+                else:
+                    # uses chose to analyze only one resource
+                    self.utils.print_progress_bar(self.res_analyzed, 1)
                 if resource:
                     html_doc_tree = self.utils.html_object_getter(resource)
                     if html_doc_tree:
