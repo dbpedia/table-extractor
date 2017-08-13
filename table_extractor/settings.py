@@ -124,3 +124,5 @@ SPARQL_RES_LIST_QUERY = ["SELECT distinct ?s as ?res WHERE{", "} LIMIT 100 OFFSE
 
 # Query to get number of resources involved in an execution
 SPARQL_NUM_RES_QUERY = ["select (count(distinct ?s) as ?res_num) where{", "}"]
+
+NUMBER_OF_WIKI_EXAMPLES = 3
