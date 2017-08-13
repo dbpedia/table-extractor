@@ -13,6 +13,7 @@ import settings
 import unicodedata
 import sys
 import socket
+import string
 
 from collections import OrderedDict
 import mapping_rules
@@ -218,7 +219,7 @@ class Utilities:
                 attempts += 1
                 result = "Internet problems"
             except ValueError:
-                print ("Not a JSON object.")
+                # print ("Not a JSON object.")
                 result = "ValueE"
                 attempts += 1
             except Exception as e:
@@ -486,13 +487,15 @@ class Utilities:
         parsed_mapping_rules = OrderedDict()
         for section_key, section_dict in new_mapping_rules.items():
             for key, value in section_dict.items():
+                # i need to delete all punctuation: ontology properties hasn't that type of character
+                value = value.translate(None, string.punctuation)
                 # Change the sectionProperty with the name of the section
                 if key == settings.SECTION_NAME_PROPERTY:
                     # replace _ with a space.
                     sections = section_key.split(settings.CHARACTER_SEPARATOR)
                     for section in sections:
                         parsed_mapping_rules.__setitem__(section.replace("_", " "), value)
-                else:
+                elif key != "":
                     sections = section_key.split(settings.CHARACTER_SEPARATOR)
                     for section in sections:
                         if self.verbose == "2":
@@ -611,3 +614,21 @@ class Utilities:
         if self.research_type != "s" and not os.path.isfile(self.get_resource_file()):
             result = "Resource file doesn't exists, check domain_settings.py"
         return result
+
+    def print_progress_bar(self, iteration, total, prefix='Progress: ', suffix='Complete', decimals=1, length=30,
+                           fill='#'):
+        """
+        Call in a loop to create terminal progress bar
+        @params:
+            iteration   - Required  : current iteration (Int)
+            total       - Required  : total iterations (Int)
+            prefix      - Optional  : prefix string (Str)
+            suffix      - Optional  : suffix string (Str)
+            decimals    - Optional  : positive number of decimals in percent complete (Int)
+            length      - Optional  : character length of bar (Int)
+            fill        - Optional  : bar fill character (Str)
+        """
+        percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
+        filledLength = int(length * iteration // total)
+        bar = fill * filledLength + '-' * (length - filledLength)
+        print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix))
