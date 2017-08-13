@@ -54,14 +54,12 @@ def analyze_uri_resource_list(uri_resource_list, actual_dictionary):
     :param actual_dictionary
     :return:
     """
-    actual_resource = 0
     total_resources = len(uri_resource_list)
     for single_uri in uri_resource_list:
         print "Resource: ", single_uri
-        actual_resource += 1
-        explorer_tools.print_progress_bar(actual_resource, total_resources)
         # update number of resources analyzed
         explorer_tools.utils.res_analyzed += 1
+        explorer_tools.print_progress_bar(explorer_tools.utils.res_analyzed, total_resources)
         get_resource_sections_and_headers(single_uri, actual_dictionary)
 
 
@@ -140,9 +138,15 @@ def check_if_similar_section_is_present(string_to_check, res_name, actual_dictio
                 all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, actual_dictionary[new_key])
             else:
                 all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, "")
+            # example of wiki pages where i found a particular section
             all_sections[new_key].__setitem__("exampleWiki", res_name)
     else:
         new_key = equal_key
+        # check if there is already an example page of wikipedia and i want at most NUMBER_OF_WIKI_EXAMPLES examples
+        if "exampleWiki" in all_sections[new_key] and len(all_sections[new_key]["exampleWiki"].split(",")) <\
+                settings.NUMBER_OF_WIKI_EXAMPLES:
+            old_example = all_sections[new_key]["exampleWiki"]
+            all_sections[new_key].__setitem__("exampleWiki", old_example + ", " + res_name)
     return new_key
 
 
