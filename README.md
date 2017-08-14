@@ -14,7 +14,7 @@ You can install requirements using requirements.txt `pip install -r requirements
 
 ###**User guide**
 
-Idea's project is to: analyze selected resources and then create related RDF triples. First of all you have to run `pyDomainExplorer`, passing right arguments. This script will create a settings file (named `domain_settings.py`) that you have to fill: it is commented in order to help you.
+Idea's project is to: analyze selected resources and then create related RDF triples. First of all you have to run `pyDomainExplorer`, passing right arguments to it. This script will create a settings file (named `domain_settings.py`) that you have to fill: it is commented in order to help you.
 Finally you can run `pyTableExtractor` that read previous filled file and start to map all resources so that you can obtain RDF triples saved in `Extractions` folder.
 
 ###**How to run pyDomainExplorer.py**
@@ -55,7 +55,7 @@ Notes:
 
 ###**Example of verbose usage**
 
-In a domain like basketball player, you can observe these `domain_settings` files. The first one refers to verbose 1 while the second one is related to verbose 2. You can use this parameter to simplify your work over all different domains.
+In a domain like basketball player, you can observe these `domain_settings.py` files. The first one refers to verbose 1 while the second one is related to verbose 2. You can use this parameter to simplify your work over all different domains.
 ```
 ### VERBOSE VALUE: 1
 # Example page where it was found this section: Kobe_Bryant
@@ -97,11 +97,12 @@ SECTION_Regular_season = {
 
 ## Results
 In this page: [Results page](https://github.com/dbpedia/table-extractor/tree/master/Extractions/GSoC%202017%20Results) you can observe dataset (english and italian) extracted using `table extractor` . Furthermore you can read log file created in order to see all operations made up for creating RDF triples.
+Note that effectiveness of the mapping operation mostly depends on how many rules user has wrote in `domain_settings.py`.
 
 ## Folders
-**table_extractor** Folder containing sources files for analyzing and mapping all properties found in the script "pyDomainExplorer.py"
+**table_extractor** Folder containing sources files for analyzing and mapping all resources found. Related to `pyTableExtractor` module.
 
-**domain_explorer** Folder containing sources files for exploring and reading all properties of a domain.
+**domain_explorer** Folder containing sources files for exploring and reading all properties of a domain. Related to `pyDomainExplorer` module.
 
 **Extractions** In this folder you will find .ttl and .log files about explorations and extractions you have completed.
 
@@ -112,11 +113,11 @@ In this page: [Results page](https://github.com/dbpedia/table-extractor/tree/mas
 ### pyTableExtractor module
 **pyTableExtractor** Module: contains main() function. It will read research's parameters from `domain_settings.py` and it will organize the workflow of all classes.
  
-**settings** A settings file used to store default values, both for `pyDomainExplorer` and for `pyTableExplorer`. You can customize scripts from here. 
+**settings** A settings file used to store default values, both for `pyDomainExplorer` and for `pyTableExplorer`. You can customize scripts from there. 
 
 **Analyzer** Once a list of resources (or a single one) has been formed, Analyzer is summoned in order to analyze tables. It takes a single resource at a time, from a .txt file or from -s parameter.
  
-**Utilities** Contains accessory methods used, for example, to setup log file, to get time and date or to call outer services (sparql dbpedia endpoints, JSONPedia, wiki pages as html object).
+**Utilities** Contains accessory methods used, for example, to setup log file, to get time and date or to call outer services (sparql dbpedia endpoints, JSONPedia, wiki pages as html object). This class will be used from both module.
 
 **Table** Class representing a table. It has some data structures used by other classes in order to recreate the table structure and to extract data.
 
@@ -128,7 +129,7 @@ In this page: [Results page](https://github.com/dbpedia/table-extractor/tree/mas
 
 ### pyDomainExplorer module
 
-**pyDomainExplorer** Main file for exploring the domain or single resource under exam.
+**pyDomainExplorer** Main file to explore the domain or single resource under exam.
 
 **ExplorerTools** Set of functions that help the previous script in the explorer task. There are methods for making SPARQL query on DBpedia, for working with HtmlTableParser and more over.
 
