@@ -24,20 +24,22 @@ Finally you can run `pyTableExtractor` that read previous filled file and start 
 * `-c`, `--chapter` : Optional. 2 letter long string representing the desidered endpoint/Wikipedia language (e.g. `en`, `it`, `fr` ...) Default value: 'en'.
 * `-v`, `--verbose` : Optional. One number that can be 1 or 2. Each value correspond to a different organization of output file.
 
-###**How to run pyTableExtractor.py**
-
-`python pyTableExtractor.py`
-* this script read all parameters in `domain_settings.py` file, so you can run `pyTableExtractor.py` without any problem. It will print file in output that contains RDF triples obtained by domain's analysis.
-
 ####**Verbose**
-* 1 - Output file will contain new data to map and old mapping rules contained in the table extractor's dictionary.
-* 2 - Output file will contain new data to map (shown only one time) and the mapping rules saved in table extractor's dictionary
+* 1 - Output file will contain new data to map and mapping rules that are in the table extractor's dictionary.
+* 2 - Output file will contain new data to map (shown only one time) and mapping rules saved in table extractor's dictionary
 
 #####**Note:** -w -s -t are all mutual exclusive parameters  
 
 * `-t`, `--topic` : Optional. Represents a DBpedia ontology class that you want to explore and analyze. It's important to preserve the camelcase form. Eg. "BasketballPlayer".
 * `-w`, `--where` : Optional. A SPARQL where clause. Eg. "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>.  ?film <http://dbpedia.org/ontology/director> ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s
 * `-s`, `--single` : Optional. can be used to select a wiki page at a time. Eg. -s 'Channel_Tunnel' takes only the [wiki page](https://en.wikipedia.org/wiki/Channel_Tunnel "Channel Tunnel wiki page") representing the European channel tunnel between France and UK. [-s]Note: please use only the name of a wiki page without spaces ( substitued by underscores) Eg. Use -s [German_federal_election,_1874](https://en.wikipedia.org/wiki/German_federal_election,_1874 "German federal 1874 election") and not https://en.wikipedia.org/wiki/German_federal_election,_1874 or German federal election, 1874 .
+
+
+###**How to run pyTableExtractor.py**
+
+`python pyTableExtractor.py`
+* this script read all parameters in `domain_settings.py` file, so you can run `pyTableExtractor.py` without any problem. It will print file in output that contains RDF triples obtained by domain's analysis.
+
 
 ###**Usage examples**
 
@@ -49,11 +51,11 @@ Finally you can run `pyTableExtractor` that read previous filled file and start 
 
 Notes:
 * If you choose a topic (-t) or you pass to the script a custom where clause, a list of resources (.txt files) are created in /Resource_lists . 
-* If everything is ok, two files are created in /Extractions : a log file (for reporting purpose) and a .ttl file containing the serialized rdf data set.
+* If everything is ok, three files are created in /Extractions : two log file (one for pyDomainExplorer and one for pyTableExtractor) and a .ttl file containing the serialized rdf data set.
 
 ###**Example of verbose usage**
 
-In a domain like basketball player, you can observe these `domain_settings` file. The first one refers to verbose 1 while the second one refers to verbose 2. You can use this parameter to simplify your work over all different domains.
+In a domain like basketball player, you can observe these `domain_settings` files. The first one refers to verbose 1 while the second one is related to verbose 2. You can use this parameter to simplify your work over all different domains.
 ```
 ### VERBOSE VALUE: 1
 # Example page where it was found this section: Kobe_Bryant
