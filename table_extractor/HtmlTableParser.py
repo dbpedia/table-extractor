@@ -184,13 +184,14 @@ class HtmlTableParser:
 
                     # update data cells extracted in order to <make a final report
                     self.utils.data_extracted += tab.cells_refined
+                    self.utils.data_extracted_to_map += tab.cells_refined
                     self.utils.rows_extracted += tab.data_refined_rows
                     # Start the mapping process
                     self.all_tables.append(tab)
                     if self.mapping:
                         # Create a MAPPER object in order to map data extracted
                         mapper = Mapper.Mapper(self.chapter, self.graph, self.topic, self.resource, tab.data_refined,
-                                               self.utils, self.reification_index, tab.table_section, )
+                                               self.utils, self.reification_index, tab.table_section)
                         mapper.map()
                         self.reification_index = mapper.reification_index
 
@@ -259,11 +260,11 @@ class HtmlTableParser:
                         return section_text
 
         # if a <h> tag was not found return the page's title
-        string.punctuation = string.punctuation.replace("_", "")
-        self.resource = self.utils.delete_accented_characters(self.resource)
-        self.resource = self.resource.encode('utf-8')
-        self.resource = self.resource.translate(None, string.punctuation)
-        return self.resource
+        resource = self.resource.replace("_", " ")
+        resource = self.utils.delete_accented_characters(resource)
+        resource = resource.encode('utf-8')
+        resource = resource.translate(None, string.punctuation)
+        return resource
 
     def count_rows(self):
         """
@@ -694,6 +695,8 @@ class HtmlTableParser:
                     # If some text has been found
                     if td:
                         # Append the dictionary containing the text to cell's list
+                        # cells can also contain \n, so I have to replace it
+                        td['td'] = td['td'].replace("\n", "/")
                         data_cell.append(td)
 
                     # At last, if neither anchors or text has been found, append {'td': '-'}  in order to mark an empty
