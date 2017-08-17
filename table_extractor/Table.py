@@ -39,9 +39,13 @@ class Table:
         """
         data_num = 0
         rows = len(self.data_refined)
+        # i don't want to count empty cell (empty cell has "-") --> no data in there
         for row in self.data_refined:
-            data_num += len(row)
-
+            keys = row.keys()
+            for key in keys:
+                # row[key] is a list
+                if row[key][0] != "-":
+                    data_num += 1
         self.cells_refined += data_num
         self.data_refined_rows += rows
         self.n_headers = len(self.headers_refined)
