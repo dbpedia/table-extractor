@@ -75,7 +75,6 @@ def get_resource_sections_and_headers(res_name, actual_dictionary):
     all_tables = explorer_tools.html_table_parser(res_name)
     # For each table defined
     for table in all_tables:
-
         # I won't get tables with only one row --> It can be an error during table's reading
         if table.n_rows > 1:
             check_if_section_is_present(table.table_section, table.headers_refined, res_name, actual_dictionary)
@@ -237,7 +236,7 @@ def search_equal_key(array_string, string_to_check):
     for string in array_string:
         keys = string.split(settings.CHARACTER_SEPARATOR)
         for key in keys:
-            if key.lower() == string_to_check.lower():
+            if key == string_to_check:
                 result = string
     return result
 
