@@ -183,35 +183,28 @@
     ns1:typeDigitalMultiplex <http://dbpedia.org/resource/SD> .
 
 <http://dbpedia.org/resource/ABN_(TV_station)__10> ns1:callRelayStations <http://dbpedia.org/resource/ABLN> ;
-    ns1:channelType """2 (VHF)6
-10 (VHF)"""^^xsd:string ;
+    ns1:channelType "2 (VHF)6/10 (VHF)"^^xsd:string ;
     ns1:city <http://dbpedia.org/resource/Broken_Hill> ;
-    ns1:erp """5 kW
-4 kW"""^^xsd:string ;
+    ns1:erp "5 kW/4 kW"^^xsd:string ;
     ns1:firstAirDate "14 December 1965"^^xsd:string ;
-    ns1:haat """95 m
-104 m"""^^xsd:string ;
+    ns1:haat "95 m/104 m"^^xsd:string ;
     ns1:regionServed <http://dbpedia.org/resource/Broken_Hill> ;
     ns1:transmitterCoordinates "31°57′5″S 141°26′26″E﻿ / ﻿31.95139°S 141.44056°E﻿ / -31.95139; 141.44056﻿ (ABLN)"^^xsd:string ;
     ns1:transmitterLocation <http://dbpedia.org/resource/Rocky_Hill> .
 
 <http://dbpedia.org/resource/ABN_(TV_station)__11> ns1:callRelayStations <http://dbpedia.org/resource/ABMN> ;
-    ns1:channelType """0 (VHF)7
-46 (UHF)"""^^xsd:string ;
+    ns1:channelType "0 (VHF)7/46 (UHF)"^^xsd:string ;
     ns1:city <http://dbpedia.org/resource/Wagga_Wagga> ;
-    ns1:erp """200 kW
-600 kW"""^^xsd:string ;
+    ns1:erp "200 kW/600 kW"^^xsd:string ;
     ns1:firstAirDate "30 April 1965"^^xsd:string ;
-    ns1:haat """466 m
-543 m"""^^xsd:string ;
+    ns1:haat "466 m/543 m"^^xsd:string ;
     ns1:regionServed "South Western Slopes and Eastern Riverina"^^xsd:string ;
     ns1:transmitterCoordinates "34°49′13″S 147°54′5″E﻿ / ﻿34.82028°S 147.90139°E﻿ / -34.82028; 147.90139﻿ (ABMN)"^^xsd:string ;
     ns1:transmitterLocation <http://dbpedia.org/resource/Mount_Ulandra> .
 
 <http://dbpedia.org/resource/ABN_(TV_station)__12> ns1:acronym "MungindI"^^xsd:string ;
     ns1:callRelayStations <http://dbpedia.org/resource/ABMIN> ;
-    ns1:channelType """10 (VHF)
-NA"""^^xsd:string ;
+    ns1:channelType "10 (VHF)/NA"^^xsd:string ;
     ns1:city <http://dbpedia.org/resource/Mungindi> ;
     ns1:erp "0.1 kW"^^xsd:string ;
     ns1:firstAirDate "1 January 1974"^^xsd:string ;
@@ -221,36 +214,29 @@ NA"""^^xsd:string ;
     ns1:transmitterLocation <http://dbpedia.org/resource/Mungindi> .
 
 <http://dbpedia.org/resource/ABN_(TV_station)__13> ns1:callRelayStations <http://dbpedia.org/resource/ABQN> ;
-    ns1:channelType """11 (VHF)3 7
-12 (VHF)"""^^xsd:string ;
+    ns1:channelType "11 (VHF)3 7/12 (VHF)"^^xsd:string ;
     ns1:city <http://dbpedia.org/resource/Dubbo> ;
-    ns1:erp """400 kW
-100 kW"""^^xsd:string ;
+    ns1:erp "400 kW/100 kW"^^xsd:string ;
     ns1:firstAirDate "12 September 1966"^^xsd:string ;
-    ns1:haat """638 m
-638 m"""^^xsd:string ;
+    ns1:haat "638 m/638 m"^^xsd:string ;
     ns1:regionServed <http://dbpedia.org/resource/Central_Western_Slopes> ;
     ns1:transmitterCoordinates "31°20′34″S 149°1′23″E﻿ / ﻿31.34278°S 149.02306°E﻿ / -31.34278; 149.02306﻿ (ABQN)"^^xsd:string ;
     ns1:transmitterLocation <http://dbpedia.org/resource/Mount_Cenn_Cruaich> .
 
 <http://dbpedia.org/resource/ABN_(TV_station)__14> ns1:acronym <http://dbpedia.org/resource/Richmond_and_Tweed> ;
     ns1:callRelayStations <http://dbpedia.org/resource/ABRN> ;
-    ns1:channelType """6 (VHF)8
-29 (UHF)"""^^xsd:string ;
+    ns1:channelType "6 (VHF)8/29 (UHF)"^^xsd:string ;
     ns1:city <http://dbpedia.org/resource/Lismore> ;
-    ns1:erp """200 kW
-200 kW"""^^xsd:string ;
+    ns1:erp "200 kW/200 kW"^^xsd:string ;
     ns1:firstAirDate "20 April 1964"^^xsd:string ;
-    ns1:haat """621 m
-645 m"""^^xsd:string ;
+    ns1:haat "621 m/645 m"^^xsd:string ;
     ns1:regionServed <http://dbpedia.org/resource/Richmond_and_Tweed> ;
     ns1:transmitterCoordinates "28°32′44″S 153°17′15″E﻿ / ﻿28.54556°S 153.28750°E﻿ / -28.54556; 153.28750﻿ (ABRN)"^^xsd:string ;
     ns1:transmitterLocation <http://dbpedia.org/resource/Mount_Nardi> .
 
 <http://dbpedia.org/resource/ABN_(TV_station)__15> ns1:acronym <http://dbpedia.org/resource/South_East> ;
     ns1:callRelayStations <http://dbpedia.org/resource/ABSN> ;
-    ns1:channelType """8 (VHF)7
-NA"""^^xsd:string ;
+    ns1:channelType "8 (VHF)7/NA"^^xsd:string ;
     ns1:city <http://dbpedia.org/resource/Bega> ;
     ns1:erp "200 kW"^^xsd:string ;
     ns1:firstAirDate "29 June 1966"^^xsd:string ;
@@ -261,45 +247,35 @@ NA"""^^xsd:string ;
 
 <http://dbpedia.org/resource/ABN_(TV_station)__16> ns1:acronym <http://dbpedia.org/resource/Taree> ;
     ns1:callRelayStations <http://dbpedia.org/resource/ABTN> ;
-    ns1:channelType """6 (VHF)4 8
-7 (VHF)"""^^xsd:string ;
+    ns1:channelType "6 (VHF)4 8/7 (VHF)"^^xsd:string ;
     ns1:city <http://dbpedia.org/resource/Taree> ;
-    ns1:erp """315 kW
-80 kW"""^^xsd:string ;
+    ns1:erp "315 kW/80 kW"^^xsd:string ;
     ns1:firstAirDate "29 April 1966"^^xsd:string ;
-    ns1:haat """599 m
-599 m"""^^xsd:string ;
+    ns1:haat "599 m/599 m"^^xsd:string ;
     ns1:regionServed <http://dbpedia.org/resource/Manning_River> ;
     ns1:transmitterCoordinates "31°42′7″S 152°40′43″E﻿ / ﻿31.70194°S 152.67861°E﻿ / -31.70194; 152.67861﻿ (ABTN)"^^xsd:string ;
     ns1:transmitterLocation <http://dbpedia.org/resource/Middle_Brother> .
 
 <http://dbpedia.org/resource/ABN_(TV_station)__17> ns1:acronym "Upper Namoi"^^xsd:string ;
     ns1:callRelayStations <http://dbpedia.org/resource/ABUN> ;
-    ns1:channelType """7 (VHF)8
-8 (VHF)"""^^xsd:string ;
+    ns1:channelType "7 (VHF)8/8 (VHF)"^^xsd:string ;
     ns1:city <http://dbpedia.org/resource/Tamworth> ;
-    ns1:erp """72 kW
-22.5 kW"""^^xsd:string ;
+    ns1:erp "72 kW/22.5 kW"^^xsd:string ;
     ns1:firstAirDate "27 September 1965"^^xsd:string ;
-    ns1:haat """859 m
-849 m"""^^xsd:string ;
+    ns1:haat "859 m/849 m"^^xsd:string ;
     ns1:regionServed "Upper Namoi"^^xsd:string ;
     ns1:transmitterCoordinates "30°17′4″S 150°10′2″E﻿ / ﻿30.28444°S 150.16722°E﻿ / -30.28444; 150.16722﻿ (ABUN)"^^xsd:string ;
     ns1:transmitterLocation <http://dbpedia.org/resource/Mount_Dowe> .
 
 <http://dbpedia.org/resource/ABN_(TV_station)__18> ns1:acronym <http://dbpedia.org/resource/Wollongong> ;
     ns1:callRelayStations <http://dbpedia.org/resource/ABWN> ;
-    ns1:channelType """56 (UHF)5 7
-51 (UHF)"""^^xsd:string ;
+    ns1:channelType "56 (UHF)5 7/51 (UHF)"^^xsd:string ;
     ns1:city <http://dbpedia.org/resource/Wollongong> ;
-    ns1:erp """960 kW
-250 kW"""^^xsd:string ;
+    ns1:erp "960 kW/250 kW"^^xsd:string ;
     ns1:firstAirDate "28 October 1963"^^xsd:string ;
-    ns1:haat """618 m
-618 m"""^^xsd:string ;
+    ns1:haat "618 m/618 m"^^xsd:string ;
     ns1:regionServed <http://dbpedia.org/resource/Illawarra> ;
-    ns1:transmitterCoordinates """34°37′23″S 150°41′39″E﻿ / ﻿34.62306°S 150.69417°E﻿ / -34.62306; 150.69417﻿ (ABWN) (analog)
-34°37′24″S 150°41′40″E﻿ / ﻿34.62333°S 150.69444°E﻿ / -34.62333; 150.69444﻿ (ABWN) (digital)"""^^xsd:string ;
+    ns1:transmitterCoordinates "34°37′23″S 150°41′39″E﻿ / ﻿34.62306°S 150.69417°E﻿ / -34.62306; 150.69417﻿ (ABWN) (analog)/34°37′24″S 150°41′40″E﻿ / ﻿34.62333°S 150.69444°E﻿ / -34.62333; 150.69444﻿ (ABWN) (digital)"^^xsd:string ;
     ns1:transmitterLocation <http://dbpedia.org/resource/Knights_Hill> .
 
 <http://dbpedia.org/resource/ABN_(TV_station)__2> ns1:lcn "20.0"^^xsd:float ;
@@ -320,84 +296,65 @@ NA"""^^xsd:string ;
 
 <http://dbpedia.org/resource/ABN_(TV_station)__6> ns1:acronym <http://dbpedia.org/resource/Central_Tablelands> ;
     ns1:callRelayStations <http://dbpedia.org/resource/ABC> ;
-    ns1:channelType """1 (VHF)7
-36 (UHF)"""^^xsd:string ;
+    ns1:channelType "1 (VHF)7/36 (UHF)"^^xsd:string ;
     ns1:city <http://dbpedia.org/resource/Orange> ;
-    ns1:erp """160 kW
-570 kW"""^^xsd:string ;
+    ns1:erp "160 kW/570 kW"^^xsd:string ;
     ns1:firstAirDate "31 March 1964"^^xsd:string ;
-    ns1:haat """655 m
-677 m"""^^xsd:string ;
+    ns1:haat "655 m/677 m"^^xsd:string ;
     ns1:regionServed <http://dbpedia.org/resource/Central_Tablelands> ;
     ns1:transmitterCoordinates <http://dbpedia.org/resource/ABC> ;
     ns1:transmitterLocation <http://dbpedia.org/resource/Mount_Canobolas> .
 
 <http://dbpedia.org/resource/ABN_(TV_station)__7> ns1:callRelayStations <http://dbpedia.org/resource/ABDN> ;
-    ns1:channelType """2 (VHF)8
-36 (UHF)"""^^xsd:string ;
+    ns1:channelType "2 (VHF)8/36 (UHF)"^^xsd:string ;
     ns1:city <http://dbpedia.org/resource/Coffs_Harbour> ;
-    ns1:erp """160 kW
-250 kW"""^^xsd:string ;
+    ns1:erp "160 kW/250 kW"^^xsd:string ;
     ns1:firstAirDate "28 June 1965"^^xsd:string ;
-    ns1:haat """661 m
-730 m"""^^xsd:string ;
+    ns1:haat "661 m/730 m"^^xsd:string ;
     ns1:regionServed "Grafton/Kempsey"^^xsd:string ;
     ns1:transmitterCoordinates "30°19′2″S 152°51′35″E﻿ / ﻿30.31722°S 152.85972°E﻿ / -30.31722; 152.85972﻿ (ABDN)"^^xsd:string ;
     ns1:transmitterLocation <http://dbpedia.org/resource/Mount_Moombil> .
 
 <http://dbpedia.org/resource/ABN_(TV_station)__8> ns1:acronym <http://dbpedia.org/resource/Griffith> ;
     ns1:callRelayStations <http://dbpedia.org/resource/ABGN> ;
-    ns1:channelType """7 (VHF)7
-11 (VHF)"""^^xsd:string ;
+    ns1:channelType "7 (VHF)7/11 (VHF)"^^xsd:string ;
     ns1:city <http://dbpedia.org/resource/Griffith> ;
-    ns1:erp """200 kW
-50 kW"""^^xsd:string ;
+    ns1:erp "200 kW/50 kW"^^xsd:string ;
     ns1:firstAirDate "25 July 1966"^^xsd:string ;
-    ns1:haat """416 m
-412 m"""^^xsd:string ;
+    ns1:haat "416 m/412 m"^^xsd:string ;
     ns1:regionServed <http://dbpedia.org/resource/Murrumbidgee_Irrigation_Area> ;
     ns1:transmitterCoordinates "34°7′17″S 146°14′7″E﻿ / ﻿34.12139°S 146.23528°E﻿ / -34.12139; 146.23528﻿ (ABGN)"^^xsd:string ;
     ns1:transmitterLocation <http://dbpedia.org/resource/Mount_Bingar> .
 
 <http://dbpedia.org/resource/ABN_(TV_station)__9> ns1:acronym <http://dbpedia.org/resource/Hunter_River> ;
     ns1:callRelayStations <http://dbpedia.org/resource/ABHN> ;
-    ns1:channelType """5A (VHF)2 8
-37 (UHF)"""^^xsd:string ;
+    ns1:channelType "5A (VHF)2 8/37 (UHF)"^^xsd:string ;
     ns1:city <http://dbpedia.org/resource/Newcastle> ;
-    ns1:erp """200 kW
-250 kW"""^^xsd:string ;
+    ns1:erp "200 kW/250 kW"^^xsd:string ;
     ns1:firstAirDate "5 June 1963"^^xsd:string ;
-    ns1:haat """405 m
-440 m"""^^xsd:string ;
+    ns1:haat "405 m/440 m"^^xsd:string ;
     ns1:regionServed <http://dbpedia.org/resource/Hunter_River> ;
-    ns1:transmitterCoordinates """32°53′30″S 151°32′18″E﻿ / ﻿32.89167°S 151.53833°E﻿ / -32.89167; 151.53833﻿ (ABHN) (analog)
-32°53′24″S 151°32′20″E﻿ / ﻿32.89000°S 151.53889°E﻿ / -32.89000; 151.53889﻿ (ABHN) (digital)"""^^xsd:string ;
+    ns1:transmitterCoordinates "32°53′30″S 151°32′18″E﻿ / ﻿32.89167°S 151.53833°E﻿ / -32.89167; 151.53833﻿ (ABHN) (analog)/32°53′24″S 151°32′20″E﻿ / ﻿32.89000°S 151.53889°E﻿ / -32.89000; 151.53889﻿ (ABHN) (digital)"^^xsd:string ;
     ns1:transmitterLocation <http://dbpedia.org/resource/Mount_Sugarloaf> .
 
 <http://dbpedia.org/resource/ABT_(TV_station)__1> ns1:acronym <http://dbpedia.org/resource/King_Island> ;
     ns1:callRelayStations <http://dbpedia.org/resource/ABKT> ;
-    ns1:channelType """11 (VHF)3
-57 (UHF)"""^^xsd:string ;
+    ns1:channelType "11 (VHF)3/57 (UHF)"^^xsd:string ;
     ns1:city <http://dbpedia.org/resource/King_Island> ;
-    ns1:erp """2.6 kW
-6.5 kW"""^^xsd:string ;
+    ns1:erp "2.6 kW/6.5 kW"^^xsd:string ;
     ns1:firstAirDate "14 January 1972"^^xsd:string ;
-    ns1:haat """190 m
-198 m"""^^xsd:string ;
+    ns1:haat "190 m/198 m"^^xsd:string ;
     ns1:regionServed <http://dbpedia.org/resource/King_Island> ;
     ns1:transmitterCoordinates "40°2′11″S 144°1′0″E﻿ / ﻿40.03639°S 144.01667°E﻿ / -40.03639; 144.01667﻿ (ABKT)"^^xsd:string ;
     ns1:transmitterLocation <http://dbpedia.org/resource/Gentle_Annie> .
 
 <http://dbpedia.org/resource/ABT_(TV_station)__2> ns1:acronym <http://dbpedia.org/resource/North_Eastern> ;
     ns1:callRelayStations <http://dbpedia.org/resource/ABNT> ;
-    ns1:channelType """32 (UHF)3
-41 (UHF)"""^^xsd:string ;
+    ns1:channelType "32 (UHF)3/41 (UHF)"^^xsd:string ;
     ns1:city <http://dbpedia.org/resource/Launceston> ;
-    ns1:erp """2000 kW
-1250 kW"""^^xsd:string ;
+    ns1:erp "2000 kW/1250 kW"^^xsd:string ;
     ns1:firstAirDate "29 July 1963"^^xsd:string ;
-    ns1:haat """847 m
-847 m"""^^xsd:string ;
+    ns1:haat "847 m/847 m"^^xsd:string ;
     ns1:regionServed <http://dbpedia.org/resource/North_Eastern> ;
     ns1:transmitterCoordinates "41°23′30″S 147°25′36″E﻿ / ﻿41.39167°S 147.42667°E﻿ / -41.39167; 147.42667﻿ (ABNT)"^^xsd:string ;
     ns1:transmitterLocation <http://dbpedia.org/resource/Mount_Barrow> .
@@ -507,11 +464,9 @@ NA"""^^xsd:string ;
     ns1:language <http://dbpedia.org/resource/Dutch> ;
     ns1:startDate "11 April 1940"^^xsd:string .
 
-<http://dbpedia.org/resource/BBC_World_Service__16> ns1:closeDate """2 April 1945
-13 May 1951"""^^xsd:string ;
+<http://dbpedia.org/resource/BBC_World_Service__16> ns1:closeDate "2 April 1945/13 May 1951"^^xsd:string ;
     ns1:language <http://dbpedia.org/resource/Dutch> ;
-    ns1:startDate """28 August 1944
-25 May 1946"""^^xsd:string .
+    ns1:startDate "28 August 1944/25 May 1946"^^xsd:string .
 
 <http://dbpedia.org/resource/BBC_World_Service__17> ns1:Website <http://dbpedia.org/resource/BBC_World_Service> ;
     ns1:language <http://dbpedia.org/resource/English> ;
@@ -527,11 +482,9 @@ NA"""^^xsd:string ;
     ns1:startDate "18 March 1940"^^xsd:string .
 
 <http://dbpedia.org/resource/BBC_World_Service__2> ns1:Website "BBC Albanian Archive"^^xsd:string ;
-    ns1:closeDate """20 January 1967
-28 February 2011"""^^xsd:string ;
+    ns1:closeDate "20 January 1967/28 February 2011"^^xsd:string ;
     ns1:language <http://dbpedia.org/resource/Albanian> ;
-    ns1:startDate """12 November 1940
-20 February 1993"""^^xsd:string .
+    ns1:startDate "12 November 1940/20 February 1993"^^xsd:string .
 
 <http://dbpedia.org/resource/BBC_World_Service__20> ns1:Website "BBC French"^^xsd:string ;
     ns1:language "French for Africa"^^xsd:string ;
@@ -646,11 +599,9 @@ NA"""^^xsd:string ;
     ns1:startDate "10 August 1940"^^xsd:string .
 
 <http://dbpedia.org/resource/BBC_World_Service__45> ns1:Website "to restart mid 2017"^^xsd:string ;
-    ns1:closeDate """3 September 1944
-25 December 1958"""^^xsd:string ;
+    ns1:closeDate "3 September 1944/25 December 1958"^^xsd:string ;
     ns1:language <http://dbpedia.org/resource/Marathi> ;
-    ns1:startDate """1 March 1942
-31 December 1944"""^^xsd:string .
+    ns1:startDate "1 March 1942/31 December 1944"^^xsd:string .
 
 <http://dbpedia.org/resource/BBC_World_Service__46> ns1:Website <http://dbpedia.org/resource/BBC_Nepali> ;
     ns1:language <http://dbpedia.org/resource/Nepali> ;
@@ -701,8 +652,7 @@ NA"""^^xsd:string ;
 <http://dbpedia.org/resource/BBC_World_Service__56> ns1:Website <http://dbpedia.org/resource/BBC_Russian> ;
     ns1:closeDate "26 May 1943"^^xsd:string ;
     ns1:language <http://dbpedia.org/resource/Russian> ;
-    ns1:startDate """7 October 1942
-24 March 1946"""^^xsd:string .
+    ns1:startDate "7 October 1942/24 March 1946"^^xsd:string .
 
 <http://dbpedia.org/resource/BBC_World_Service__57> ns1:Website "BBC Serbian Archive"^^xsd:string ;
     ns1:closeDate "25 February 2011[51]"^^xsd:string ;
@@ -712,8 +662,7 @@ NA"""^^xsd:string ;
 <http://dbpedia.org/resource/BBC_World_Service__58> ns1:Website "BBC Sinhala"^^xsd:string ;
     ns1:closeDate "30 March 1976"^^xsd:string ;
     ns1:language <http://dbpedia.org/resource/Sinhala> ;
-    ns1:startDate """10 March 1942
-11 March 1990"""^^xsd:string .
+    ns1:startDate "10 March 1942/11 March 1990"^^xsd:string .
 
 <http://dbpedia.org/resource/BBC_World_Service__59> ns1:Website "BBC Slovak Archive"^^xsd:string ;
     ns1:closeDate "31 December 2005"^^xsd:string ;
@@ -749,14 +698,10 @@ NA"""^^xsd:string ;
     ns1:language <http://dbpedia.org/resource/Tamil> ;
     ns1:startDate "3 May 1941"^^xsd:string .
 
-<http://dbpedia.org/resource/BBC_World_Service__66> ns1:Website """BBC Thai Archive
-BBC Thai Facebook page"""^^xsd:string ;
-    ns1:closeDate """5 March 1960
-13 January 2006"""^^xsd:string ;
+<http://dbpedia.org/resource/BBC_World_Service__66> ns1:Website "BBC Thai Archive/BBC Thai Facebook page"^^xsd:string ;
+    ns1:closeDate "5 March 1960/13 January 2006"^^xsd:string ;
     ns1:language <http://dbpedia.org/resource/Thai> ;
-    ns1:startDate """27 April 1941
-3 June 1962
-10 July 2014[52]"""^^xsd:string .
+    ns1:startDate "27 April 1941/3 June 1962/10 July 2014[52]"^^xsd:string .
 
 <http://dbpedia.org/resource/BBC_World_Service__67> ns1:Website <http://dbpedia.org/resource/BBC_Turkish> ;
     ns1:language <http://dbpedia.org/resource/Turkish> ;

@@ -14,7 +14,7 @@ You can install requirements using requirements.txt `pip install -r requirements
 
 ###**User guide**
 
-Idea's project is to: analyze selected resources and then create related RDF triples. First of all you have to run `pyDomainExplorer`, passing right arguments. This script will create a settings file (named `domain_settings.py`) that you have to fill: it is commented in order to help you.
+Idea's project is to: analyze selected resources and then create related RDF triples. First of all you have to run `pyDomainExplorer`, passing right arguments to it. This script will create a settings file (named `domain_settings.py`) that you have to fill: it is commented in order to help you.
 Finally you can run `pyTableExtractor` that read previous filled file and start to map all resources so that you can obtain RDF triples saved in `Extractions` folder.
 
 ###**How to run pyDomainExplorer.py**
@@ -24,20 +24,22 @@ Finally you can run `pyTableExtractor` that read previous filled file and start 
 * `-c`, `--chapter` : Optional. 2 letter long string representing the desidered endpoint/Wikipedia language (e.g. `en`, `it`, `fr` ...) Default value: 'en'.
 * `-v`, `--verbose` : Optional. One number that can be 1 or 2. Each value correspond to a different organization of output file.
 
-###**How to run pyTableExtractor.py**
-
-`python pyTableExtractor.py`
-* this script read all parameters in `domain_settings.py` file, so you can run `pyTableExtractor.py` without any problem. It will print file in output that contains RDF triples obtained by domain's analysis.
-
 ####**Verbose**
-* 1 - Output file will contain new data to map and old mapping rules contained in the table extractor's dictionary.
-* 2 - Output file will contain new data to map (shown only one time) and the mapping rules saved in table extractor's dictionary
+* 1 - Output file will contain new data to map and mapping rules that are in the table extractor's dictionary.
+* 2 - Output file will contain new data to map (shown only one time) and mapping rules saved in table extractor's dictionary
 
 #####**Note:** -w -s -t are all mutual exclusive parameters  
 
 * `-t`, `--topic` : Optional. Represents a DBpedia ontology class that you want to explore and analyze. It's important to preserve the camelcase form. Eg. "BasketballPlayer".
 * `-w`, `--where` : Optional. A SPARQL where clause. Eg. "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>.  ?film <http://dbpedia.org/ontology/director> ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s
 * `-s`, `--single` : Optional. can be used to select a wiki page at a time. Eg. -s 'Channel_Tunnel' takes only the [wiki page](https://en.wikipedia.org/wiki/Channel_Tunnel "Channel Tunnel wiki page") representing the European channel tunnel between France and UK. [-s]Note: please use only the name of a wiki page without spaces ( substitued by underscores) Eg. Use -s [German_federal_election,_1874](https://en.wikipedia.org/wiki/German_federal_election,_1874 "German federal 1874 election") and not https://en.wikipedia.org/wiki/German_federal_election,_1874 or German federal election, 1874 .
+
+
+###**How to run pyTableExtractor.py**
+
+`python pyTableExtractor.py`
+* this script read all parameters in `domain_settings.py` file, so you can run `pyTableExtractor.py` without any problem. It will print file in output that contains RDF triples obtained by domain's analysis.
+
 
 ###**Usage examples**
 
@@ -49,11 +51,11 @@ Finally you can run `pyTableExtractor` that read previous filled file and start 
 
 Notes:
 * If you choose a topic (-t) or you pass to the script a custom where clause, a list of resources (.txt files) are created in /Resource_lists . 
-* If everything is ok, two files are created in /Extractions : a log file (for reporting purpose) and a .ttl file containing the serialized rdf data set.
+* If everything is ok, three files are created in /Extractions : two log file (one for pyDomainExplorer and one for pyTableExtractor) and a .ttl file containing the serialized rdf data set.
 
 ###**Example of verbose usage**
 
-In a domain like basketball player, you can observe these `domain_settings` file. The first one refers to verbose 1 while the second one refers to verbose 2. You can use this parameter to simplify your work over all different domains.
+In a domain like basketball player, you can observe these `domain_settings.py` files. The first one refers to verbose 1 while the second one is related to verbose 2. You can use this parameter to simplify your work over all different domains.
 ```
 ### VERBOSE VALUE: 1
 # Example page where it was found this section: Kobe_Bryant
@@ -95,11 +97,12 @@ SECTION_Regular_season = {
 
 ## Results
 In this page: [Results page](https://github.com/dbpedia/table-extractor/tree/master/Extractions/GSoC%202017%20Results) you can observe dataset (english and italian) extracted using `table extractor` . Furthermore you can read log file created in order to see all operations made up for creating RDF triples.
+Note that effectiveness of the mapping operation mostly depends on how many rules user has wrote in `domain_settings.py`.
 
 ## Folders
-**table_extractor** Folder containing sources files for analyzing and mapping all properties found in the script "pyDomainExplorer.py"
+**table_extractor** Folder containing sources files for analyzing and mapping all resources found. Related to `pyTableExtractor` module.
 
-**domain_explorer** Folder containing sources files for exploring and reading all properties of a domain.
+**domain_explorer** Folder containing sources files for exploring and reading all properties of a domain. Related to `pyDomainExplorer` module.
 
 **Extractions** In this folder you will find .ttl and .log files about explorations and extractions you have completed.
 
@@ -110,11 +113,11 @@ In this page: [Results page](https://github.com/dbpedia/table-extractor/tree/mas
 ### pyTableExtractor module
 **pyTableExtractor** Module: contains main() function. It will read research's parameters from `domain_settings.py` and it will organize the workflow of all classes.
  
-**settings** A settings file used to store default values, both for `pyDomainExplorer` and for `pyTableExplorer`. You can customize scripts from here. 
+**settings** A settings file used to store default values, both for `pyDomainExplorer` and for `pyTableExplorer`. You can customize scripts from there. 
 
 **Analyzer** Once a list of resources (or a single one) has been formed, Analyzer is summoned in order to analyze tables. It takes a single resource at a time, from a .txt file or from -s parameter.
  
-**Utilities** Contains accessory methods used, for example, to setup log file, to get time and date or to call outer services (sparql dbpedia endpoints, JSONPedia, wiki pages as html object).
+**Utilities** Contains accessory methods used, for example, to setup log file, to get time and date or to call outer services (sparql dbpedia endpoints, JSONPedia, wiki pages as html object). This class will be used from both module.
 
 **Table** Class representing a table. It has some data structures used by other classes in order to recreate the table structure and to extract data.
 
@@ -126,7 +129,7 @@ In this page: [Results page](https://github.com/dbpedia/table-extractor/tree/mas
 
 ### pyDomainExplorer module
 
-**pyDomainExplorer** Main file for exploring the domain or single resource under exam.
+**pyDomainExplorer** Main file to explore the domain or single resource under exam.
 
 **ExplorerTools** Set of functions that help the previous script in the explorer task. There are methods for making SPARQL query on DBpedia, for working with HtmlTableParser and more over.
 
@@ -139,14 +142,14 @@ In this page: [Results page](https://github.com/dbpedia/table-extractor/tree/mas
 ####**statistics.py**
 
 This script, written in collaboration with Federica Baiocchi (@github/Feddie), is useful to know the number of tables or lists contained in Wikipedia pages from a given topic, and was created in collaboration with Feddie who is working on the [List Extractor](https://github.com/dbpedia/list-extractor). We both used it in the beginning of our projects to choose a domain to start from.
-#####**How to run statistics.py**
+####**How to run statistics.py**
 
 `python statistics.py language struct_type topic`
 * `language` : a two letter long prefix representing the desidered endpoint/Wikipedia language to search (e.g. `en`, `it`, `fr` ...)
 * `struct_type` : `t` for tables, `l` for lists
 * `topic ` : can be either a where clause of a sparql query specifying the requested features of a ?s subject, or a keyword from the following: _dir_ for all DBpedia directors with a Wikipedia pages,  _act_ for actors, _soccer_ for soccer players,_writer_ for writers
 
-######**Usage examples**
+###**Usage examples**
 
 *`python statistics.py it t "?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"`
 *`python statistics.py en l writer`
