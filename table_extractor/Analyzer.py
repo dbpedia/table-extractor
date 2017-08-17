@@ -178,12 +178,15 @@ class Analyzer:
                 self.utils.res_analyzed = self.res_analyzed
 
                 # Print out and in the log every header cell without mapping rule
-                print("There are %d headers and sections without mapping rules" % self.utils.no_mapping_rule_errors)
+                print("There are %d sections without mapping rules." % self.utils.no_mapping_rule_errors_section)
+                print("There are %d headers without mapping rules." % self.utils.no_mapping_rule_errors_headers)
+                self.logging.info("There are %d sections and sections without mapping rules" %
+                                  self.utils.no_mapping_rule_errors_section)
                 self.logging.info("There are %d headers and sections without mapping rules" %
-                                  self.utils.no_mapping_rule_errors)
+                                  self.utils.no_mapping_rule_errors_headers)
 
                 self.logging.info("End Of File reached, now you can serialize the graph")
-                print ("End Of Resource File reached")
+                print ("\nEnd Of Resource File reached")
 
     def get_filename(self):
         """
