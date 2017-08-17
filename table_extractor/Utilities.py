@@ -97,13 +97,16 @@ class Utilities:
         self.res_analyzed = 0
         self.res_collected = 0
         self.data_extracted = 0
+        # data to map, that doesn't represents sum or mean of previous value
+        self.data_extracted_to_map = 0
         self.tot_tables = 0
         self.tot_tables_analyzed = 0
         self.rows_extracted = 0
         self.data_extraction_errors = 0
         self.not_resolved_header_errors = 0
         self.headers_errors = 0
-        self.no_mapping_rule_errors = 0
+        self.no_mapping_rule_errors_headers = 0
+        self.no_mapping_rule_errors_section = 0
         self.mapped_cells = 0
         self.triples_row = 0  # number of triples created for table's rows
 
@@ -376,7 +379,8 @@ class Utilities:
             Simply call print_report() as last method of entire extraction
         """
         self.logging.info("REPORT:")
-        # if the table_extractor is executed in single_res mode, no resources are collected from dbpedia sparql endpoints
+        # if the table_extractor is executed in single_res mode, no resources are collected
+        # from dbpedia sparql endpoints
         if self.res_collected:
             self.logging.info("+           # of resources collected for this topic (%s) : %d" % (self.topic, self.res_collected))
 
@@ -392,12 +396,16 @@ class Utilities:
 
         self.logging.info("+           Total # of exceptions extracting data : %d" % self.data_extraction_errors)
 
+        self.logging.info("+           Total # of \'header not resolved\' errors : %d" % self.not_resolved_header_errors)
+
+        self.logging.info("+           Total # of \'no headers\' errors : %d" % self.headers_errors)
+
         if self.extractor:
-            self.logging.info("+           Total # of \'header not resolved\' errors : %d" % self.not_resolved_header_errors)
+            self.logging.info("+           Total # of \'no mapping rule\' errors for section : %d" % self.no_mapping_rule_errors_section)
 
-            self.logging.info("+           Total # of \'no headers\' errors : %d" % self.headers_errors)
+            self.logging.info("+           Total # of \'no mapping rule\' errors for headers : %d" % self.no_mapping_rule_errors_headers)
 
-            self.logging.info("+           Total # of \'no mapping rule\' errors : %d" % self.no_mapping_rule_errors)
+            self.logging.info("+           Total # of data cells extracted that needs to be mapped: %d" % self.data_extracted_to_map)
 
             self.logging.info("+           Total # of table's rows triples serialized : %d" % self.triples_row)
 
@@ -405,7 +413,7 @@ class Utilities:
 
             self.logging.info("+           Total # of triples serialized : %d" % int(self.mapped_cells + self.triples_row))
 
-            effectiveness = (self.mapped_cells/float(self.data_extracted))
+            effectiveness = self.mapped_cells/float(self.data_extracted_to_map)
             self.logging.info("+           Percentage of mapping effectiveness  : %.3f" % effectiveness)
 
     def delete_accented_characters(self, text):
@@ -488,7 +496,7 @@ class Utilities:
         for section_key, section_dict in new_mapping_rules.items():
             for key, value in section_dict.items():
                 # i need to delete all punctuation: ontology properties hasn't that type of character
-                value = value.translate(None, string.punctuation)
+                value = value.translate(None, string.punctuation).replace(" ", "")
                 # Change the sectionProperty with the name of the section
                 if key == settings.SECTION_NAME_PROPERTY:
                     # replace _ with a space.
@@ -552,10 +560,6 @@ class Utilities:
                     # mapping rule.
                     if key in actual_mapping_rules:
                         del actual_mapping_rules[key]
-                    else:
-                        search_key = [x for x in actual_mapping_rules.keys() if key in x]
-                        for k in search_key:
-                            del actual_mapping_rules[k]
         return actual_mapping_rules
 
     def print_updated_mapping_rules(self, updated_mapping_rules):
