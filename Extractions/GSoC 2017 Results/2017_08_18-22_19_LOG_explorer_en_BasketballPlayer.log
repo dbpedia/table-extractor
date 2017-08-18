@@ -1,0 +1,636 @@
+INFO 08/18 10:19:51 PM You're analyzing wiki tables, wiki chapter: en, topic: BasketballPlayer
+INFO 08/18 10:19:51 PM The file which contains the list of resources is: C:\Users\Luca_\PycharmProjects\table-extractor\table_extractor\../Resource_lists/2017_08_18_BasketballPlayer_en.txt
+INFO 08/18 10:19:52 PM Resources found and serialized:  100
+INFO 08/18 10:19:53 PM Analyzing resource: Larry_Bird
+INFO 08/18 10:19:53 PM Table under section: NBA career statistics
+DEBUG 08/18 10:19:53 PM  E2 Unable to find headers - resource: Larry_Bird
+INFO 08/18 10:19:53 PM Table under section: College statistics
+INFO 08/18 10:19:53 PM Headers Found
+INFO 08/18 10:19:53 PM Data refined
+INFO 08/18 10:19:53 PM Rows extracted: 4
+INFO 08/18 10:19:53 PM Data extracted for this table: 51
+INFO 08/18 10:19:53 PM Table under section: Regular season
+INFO 08/18 10:19:53 PM Headers Found
+INFO 08/18 10:19:53 PM Data refined
+INFO 08/18 10:19:53 PM Rows extracted: 14
+INFO 08/18 10:19:53 PM Data extracted for this table: 182
+INFO 08/18 10:19:53 PM Table under section: Playoffs
+INFO 08/18 10:19:53 PM Headers Found
+INFO 08/18 10:19:53 PM Data refined
+INFO 08/18 10:19:53 PM Rows extracted: 13
+INFO 08/18 10:19:53 PM Data extracted for this table: 169
+INFO 08/18 10:19:53 PM Table under section: Head coaching record
+INFO 08/18 10:19:53 PM Headers Found
+INFO 08/18 10:19:53 PM Data refined
+INFO 08/18 10:19:53 PM Rows extracted: 4
+INFO 08/18 10:19:53 PM Data extracted for this table: 45
+INFO 08/18 10:19:53 PM New header found: Year
+INFO 08/18 10:19:53 PM New header found: Team
+INFO 08/18 10:19:53 PM New header found: GP
+INFO 08/18 10:19:53 PM New header found: GS
+INFO 08/18 10:19:53 PM New header found: MPG
+INFO 08/18 10:19:53 PM New header found: FG%
+INFO 08/18 10:19:53 PM New header found: 3P%
+INFO 08/18 10:19:53 PM New header found: FT%
+INFO 08/18 10:19:53 PM New header found: RPG
+INFO 08/18 10:19:53 PM New header found: APG
+INFO 08/18 10:19:53 PM New header found: SPG
+INFO 08/18 10:19:53 PM New header found: BPG
+INFO 08/18 10:19:53 PM New header found: PPG
+INFO 08/18 10:19:53 PM New header found: G
+INFO 08/18 10:19:53 PM New header found: W
+INFO 08/18 10:19:53 PM New header found: L
+INFO 08/18 10:19:53 PM New header found: W.L%
+INFO 08/18 10:19:53 PM New header found: Finish
+INFO 08/18 10:19:53 PM New header found: PG
+INFO 08/18 10:19:53 PM New header found: PW
+INFO 08/18 10:19:53 PM New header found: PL
+INFO 08/18 10:19:53 PM New header found: PW.L%
+INFO 08/18 10:19:53 PM New header found: Result
+INFO 08/18 10:19:54 PM Analyzing resource: Magic_Johnson
+INFO 08/18 10:19:54 PM Table under section: NBA career statistics
+DEBUG 08/18 10:19:54 PM  E2 Unable to find headers - resource: Magic_Johnson
+INFO 08/18 10:19:54 PM Table under section: Regular season
+INFO 08/18 10:19:54 PM Headers Found
+INFO 08/18 10:19:54 PM Data refined
+INFO 08/18 10:19:54 PM Rows extracted: 15
+INFO 08/18 10:19:54 PM Data extracted for this table: 190
+INFO 08/18 10:19:54 PM Table under section: Playoffs
+INFO 08/18 10:19:54 PM Headers Found
+INFO 08/18 10:19:54 PM Data refined
+INFO 08/18 10:19:54 PM Rows extracted: 14
+INFO 08/18 10:19:54 PM Data extracted for this table: 182
+INFO 08/18 10:19:54 PM Analyzing resource: A'dia_Mathies
+INFO 08/18 10:19:54 PM Table under section: Kentucky statistics
+INFO 08/18 10:19:54 PM Headers Found
+INFO 08/18 10:19:54 PM Data refined
+INFO 08/18 10:19:54 PM Rows extracted: 5
+INFO 08/18 10:19:54 PM Data extracted for this table: 60
+INFO 08/18 10:19:54 PM New header found: Points
+INFO 08/18 10:19:55 PM Analyzing resource: Alfrancis_Chua
+INFO 08/18 10:19:55 PM No Tables found for this resource.
+INFO 08/18 10:19:55 PM Analyzing resource: Barry_Stevens_(basketball)
+INFO 08/18 10:19:55 PM No Tables found for this resource.
+INFO 08/18 10:19:56 PM Analyzing resource: Brian_Martin_(basketball)
+INFO 08/18 10:19:56 PM No Tables found for this resource.
+INFO 08/18 10:19:56 PM Analyzing resource: Chris_Anstey
+INFO 08/18 10:19:56 PM Table under section: NBL
+DEBUG 08/18 10:19:56 PM  E2 Unable to find headers - resource: Chris_Anstey
+INFO 08/18 10:19:56 PM Table under section: NBA
+INFO 08/18 10:19:56 PM Headers Found
+INFO 08/18 10:19:56 PM Data refined
+INFO 08/18 10:19:56 PM Rows extracted: 4
+INFO 08/18 10:19:56 PM Data extracted for this table: 52
+INFO 08/18 10:19:56 PM Table under section: NBL
+INFO 08/18 10:19:56 PM Headers Found
+INFO 08/18 10:19:56 PM Data refined
+INFO 08/18 10:19:56 PM Rows extracted: 12
+INFO 08/18 10:19:56 PM Data extracted for this table: 156
+INFO 08/18 10:19:56 PM Table under section: NBL
+INFO 08/18 10:19:56 PM Headers Found
+INFO 08/18 10:19:56 PM Data refined
+INFO 08/18 10:19:56 PM Rows extracted: 4
+INFO 08/18 10:19:56 PM Data extracted for this table: 45
+INFO 08/18 10:19:56 PM Analyzing resource: Christian_Steinmetz
+INFO 08/18 10:19:56 PM No Tables found for this resource.
+INFO 08/18 10:19:57 PM Analyzing resource: Donald_Williams_(basketball)
+INFO 08/18 10:19:57 PM No Tables found for this resource.
+INFO 08/18 10:19:57 PM Analyzing resource: Emel_Türkyılmaz
+INFO 08/18 10:19:57 PM No Tables found for this resource.
+INFO 08/18 10:19:58 PM Analyzing resource: George_Stone_(basketball)
+INFO 08/18 10:19:58 PM No Tables found for this resource.
+INFO 08/18 10:19:58 PM Analyzing resource: Hervé_Touré
+INFO 08/18 10:19:58 PM No Tables found for this resource.
+INFO 08/18 10:19:59 PM Analyzing resource: Jack_Haley_(basketball)
+INFO 08/18 10:19:59 PM No Tables found for this resource.
+INFO 08/18 10:19:59 PM Analyzing resource: Jay_Carty
+INFO 08/18 10:19:59 PM No Tables found for this resource.
+INFO 08/18 10:20:01 PM Analyzing resource: Jonny_Flynn
+INFO 08/18 10:20:01 PM Table under section: Regular season
+INFO 08/18 10:20:01 PM Headers Found
+INFO 08/18 10:20:01 PM Data refined
+INFO 08/18 10:20:01 PM Rows extracted: 5
+INFO 08/18 10:20:01 PM Data extracted for this table: 64
+INFO 08/18 10:20:01 PM Analyzing resource: Mike_Flynn_(basketball)
+INFO 08/18 10:20:01 PM No Tables found for this resource.
+INFO 08/18 10:20:02 PM Analyzing resource: Ramone_Moore
+INFO 08/18 10:20:02 PM Table under section: Ramone Moore
+INFO 08/18 10:20:02 PM Headers Found
+INFO 08/18 10:20:02 PM Data refined
+INFO 08/18 10:20:02 PM Rows extracted: 4
+INFO 08/18 10:20:02 PM Data extracted for this table: 52
+INFO 08/18 10:20:03 PM Analyzing resource: Richard_Melzer
+INFO 08/18 10:20:03 PM No Tables found for this resource.
+INFO 08/18 10:20:04 PM Analyzing resource: Sven_Kaldre
+INFO 08/18 10:20:04 PM No Tables found for this resource.
+INFO 08/18 10:20:05 PM Analyzing resource: Tatiana_Popova
+INFO 08/18 10:20:05 PM No Tables found for this resource.
+INFO 08/18 10:20:08 PM Analyzing resource: Udonis_Haslem
+INFO 08/18 10:20:08 PM Table under section: NBA career statistics
+DEBUG 08/18 10:20:08 PM  E2 Unable to find headers - resource: Udonis_Haslem
+INFO 08/18 10:20:08 PM Table under section: Regular season
+INFO 08/18 10:20:08 PM Headers Found
+INFO 08/18 10:20:08 PM Data refined
+INFO 08/18 10:20:08 PM Rows extracted: 15
+INFO 08/18 10:20:08 PM Data extracted for this table: 195
+INFO 08/18 10:20:08 PM Table under section: Playoffs
+INFO 08/18 10:20:08 PM Headers Found
+INFO 08/18 10:20:08 PM Data refined
+INFO 08/18 10:20:08 PM Rows extracted: 12
+INFO 08/18 10:20:08 PM Data extracted for this table: 156
+INFO 08/18 10:20:09 PM Analyzing resource: Vanda_Baranović
+INFO 08/18 10:20:09 PM No Tables found for this resource.
+INFO 08/18 10:20:09 PM Analyzing resource: Víctor_Sada
+INFO 08/18 10:20:09 PM No Tables found for this resource.
+INFO 08/18 10:20:10 PM Analyzing resource: Adrienne_Goodson
+INFO 08/18 10:20:10 PM No Tables found for this resource.
+INFO 08/18 10:20:10 PM Analyzing resource: Akeem_Richmond
+INFO 08/18 10:20:10 PM Table under section: High school career
+INFO 08/18 10:20:10 PM Headers Found
+INFO 08/18 10:20:10 PM Data refined
+INFO 08/18 10:20:10 PM Rows extracted: 3
+INFO 08/18 10:20:10 PM Data extracted for this table: 13
+INFO 08/18 10:20:10 PM New header found: Name
+INFO 08/18 10:20:10 PM New header found: Hometown
+INFO 08/18 10:20:10 PM New header found: High school / college
+INFO 08/18 10:20:10 PM New header found: Height
+INFO 08/18 10:20:10 PM New header found: Weight
+INFO 08/18 10:20:10 PM New header found: Commit date
+INFO 08/18 10:20:11 PM Analyzing resource: Akeem_Vargas
+INFO 08/18 10:20:11 PM No Tables found for this resource.
+INFO 08/18 10:20:11 PM Analyzing resource: Al_Vergara
+INFO 08/18 10:20:11 PM No Tables found for this resource.
+INFO 08/18 10:20:11 PM Analyzing resource: Alberto_Babo
+INFO 08/18 10:20:11 PM No Tables found for this resource.
+INFO 08/18 10:20:12 PM Analyzing resource: Alex_Groza
+INFO 08/18 10:20:12 PM No Tables found for this resource.
+INFO 08/18 10:20:12 PM Analyzing resource: Alison_Bales
+INFO 08/18 10:20:12 PM Table under section: Duke statistics
+INFO 08/18 10:20:12 PM Headers Found
+INFO 08/18 10:20:12 PM Data refined
+INFO 08/18 10:20:12 PM Rows extracted: 5
+INFO 08/18 10:20:12 PM Data extracted for this table: 58
+INFO 08/18 10:20:12 PM Analyzing resource: Andrew_Smith_(basketball)
+INFO 08/18 10:20:12 PM No Tables found for this resource.
+INFO 08/18 10:20:13 PM Analyzing resource: Andrew_Wiggins
+INFO 08/18 10:20:13 PM Table under section: High school career
+INFO 08/18 10:20:13 PM Headers Found
+INFO 08/18 10:20:13 PM Data refined
+INFO 08/18 10:20:13 PM Rows extracted: 7
+INFO 08/18 10:20:13 PM Data extracted for this table: 37
+INFO 08/18 10:20:13 PM Table under section: College statistics
+INFO 08/18 10:20:13 PM Headers Found
+INFO 08/18 10:20:13 PM Data refined
+INFO 08/18 10:20:13 PM Rows extracted: 1
+INFO 08/18 10:20:13 PM Data extracted for this table: 13
+INFO 08/18 10:20:13 PM Table under section: Regular season
+INFO 08/18 10:20:13 PM Headers Found
+INFO 08/18 10:20:13 PM Data refined
+INFO 08/18 10:20:13 PM Rows extracted: 4
+INFO 08/18 10:20:13 PM Data extracted for this table: 52
+INFO 08/18 10:20:13 PM Analyzing resource: Andy_Duncan_(basketball)
+INFO 08/18 10:20:13 PM Table under section: Regular season
+INFO 08/18 10:20:13 PM Headers Found
+INFO 08/18 10:20:13 PM Data refined
+INFO 08/18 10:20:13 PM Rows extracted: 4
+INFO 08/18 10:20:13 PM Data extracted for this table: 28
+INFO 08/18 10:20:13 PM Table under section: Playoffs
+INFO 08/18 10:20:13 PM Headers Found
+INFO 08/18 10:20:13 PM Data refined
+INFO 08/18 10:20:13 PM Rows extracted: 3
+INFO 08/18 10:20:13 PM Data extracted for this table: 21
+INFO 08/18 10:20:14 PM Analyzing resource: Anthony_Roberson
+INFO 08/18 10:20:14 PM Table under section: Regular season
+INFO 08/18 10:20:14 PM Headers Found
+INFO 08/18 10:20:14 PM Data refined
+INFO 08/18 10:20:14 PM Rows extracted: 5
+INFO 08/18 10:20:14 PM Data extracted for this table: 64
+INFO 08/18 10:20:14 PM Table under section: Playoffs
+INFO 08/18 10:20:14 PM Headers Found
+INFO 08/18 10:20:14 PM Data refined
+INFO 08/18 10:20:14 PM Rows extracted: 2
+INFO 08/18 10:20:14 PM Data extracted for this table: 25
+INFO 08/18 10:20:14 PM Analyzing resource: Anthony_Stewart_(basketball)
+INFO 08/18 10:20:14 PM No Tables found for this resource.
+INFO 08/18 10:20:15 PM Analyzing resource: Antonio_Davis
+INFO 08/18 10:20:15 PM No Tables found for this resource.
+INFO 08/18 10:20:15 PM Analyzing resource: Antonio_Latimer
+INFO 08/18 10:20:15 PM No Tables found for this resource.
+INFO 08/18 10:20:15 PM Analyzing resource: Antonio_McDyess
+INFO 08/18 10:20:15 PM Table under section: Regular season
+INFO 08/18 10:20:15 PM Headers Found
+INFO 08/18 10:20:15 PM Data refined
+INFO 08/18 10:20:15 PM Rows extracted: 18
+INFO 08/18 10:20:15 PM Data extracted for this table: 234
+INFO 08/18 10:20:15 PM Table under section: Playoffs
+INFO 08/18 10:20:15 PM Headers Found
+INFO 08/18 10:20:15 PM Data refined
+INFO 08/18 10:20:15 PM Rows extracted: 9
+INFO 08/18 10:20:15 PM Data extracted for this table: 117
+INFO 08/18 10:20:16 PM Analyzing resource: Ben_Davis_(basketball)
+INFO 08/18 10:20:16 PM No Tables found for this resource.
+INFO 08/18 10:20:16 PM Analyzing resource: Bill_Allen_(basketball)
+INFO 08/18 10:20:16 PM No Tables found for this resource.
+INFO 08/18 10:20:17 PM Analyzing resource: Bill_Berry_(basketball)
+INFO 08/18 10:20:17 PM Table under section: College
+INFO 08/18 10:20:17 PM Headers Found
+INFO 08/18 10:20:17 PM Data refined
+INFO 08/18 10:20:17 PM Rows extracted: 16
+INFO 08/18 10:20:17 PM Data extracted for this table: 85
+INFO 08/18 10:20:17 PM Table under section: NBA
+INFO 08/18 10:20:17 PM Headers Found
+INFO 08/18 10:20:17 PM Data refined
+INFO 08/18 10:20:17 PM Rows extracted: 1
+INFO 08/18 10:20:17 PM Data extracted for this table: 12
+INFO 08/18 10:20:17 PM New header found: Season
+INFO 08/18 10:20:17 PM New header found: Overall
+INFO 08/18 10:20:17 PM New header found: Conference
+INFO 08/18 10:20:17 PM New header found: Standing
+INFO 08/18 10:20:17 PM New header found: Postseason
+INFO 08/18 10:20:17 PM Analyzing resource: Bill_Blair_(basketball)
+INFO 08/18 10:20:17 PM Table under section: College
+INFO 08/18 10:20:17 PM Headers Found
+INFO 08/18 10:20:17 PM Data refined
+INFO 08/18 10:20:17 PM Rows extracted: 18
+INFO 08/18 10:20:17 PM Data extracted for this table: 95
+INFO 08/18 10:20:17 PM Table under section: NBA
+INFO 08/18 10:20:17 PM Headers Found
+INFO 08/18 10:20:17 PM Data refined
+INFO 08/18 10:20:17 PM Rows extracted: 4
+INFO 08/18 10:20:17 PM Data extracted for this table: 45
+INFO 08/18 10:20:18 PM Analyzing resource: Billy_Thompson_(basketball)
+INFO 08/18 10:20:18 PM No Tables found for this resource.
+INFO 08/18 10:20:19 PM Analyzing resource: Bob_Kinney
+INFO 08/18 10:20:19 PM No Tables found for this resource.
+INFO 08/18 10:20:19 PM Analyzing resource: Bobby_Brown_(basketball)
+INFO 08/18 10:20:19 PM Table under section: Career statistics
+DEBUG 08/18 10:20:19 PM  E2 Unable to find headers - resource: Bobby_Brown_(basketball)
+INFO 08/18 10:20:19 PM Table under section: NBA
+INFO 08/18 10:20:19 PM Headers Found
+INFO 08/18 10:20:19 PM Data refined
+INFO 08/18 10:20:19 PM Rows extracted: 6
+INFO 08/18 10:20:19 PM Data extracted for this table: 77
+INFO 08/18 10:20:19 PM Table under section: Playoffs
+INFO 08/18 10:20:19 PM Headers Found
+INFO 08/18 10:20:19 PM Data refined
+INFO 08/18 10:20:19 PM Rows extracted: 2
+INFO 08/18 10:20:19 PM Data extracted for this table: 26
+INFO 08/18 10:20:19 PM Table under section: EuroLeague
+INFO 08/18 10:20:19 PM Headers Found
+INFO 08/18 10:20:19 PM Data refined
+INFO 08/18 10:20:19 PM Rows extracted: 3
+INFO 08/18 10:20:19 PM Data extracted for this table: 41
+INFO 08/18 10:20:19 PM New header found: PIR
+INFO 08/18 10:20:20 PM Analyzing resource: Bobby_Parks
+INFO 08/18 10:20:20 PM No Tables found for this resource.
+INFO 08/18 10:20:21 PM Analyzing resource: Bobby_Ray_Parks_Jr.
+INFO 08/18 10:20:21 PM Table under section: Regular season
+INFO 08/18 10:20:21 PM Headers Found
+INFO 08/18 10:20:21 PM Data refined
+INFO 08/18 10:20:21 PM Rows extracted: 2
+INFO 08/18 10:20:21 PM Data extracted for this table: 25
+INFO 08/18 10:20:23 PM Analyzing resource: Brett_Maher
+INFO 08/18 10:20:23 PM Table under section: Honour roll
+INFO 08/18 10:20:23 PM Headers Found
+INFO 08/18 10:20:23 PM Data refined
+INFO 08/18 10:20:23 PM Rows extracted: 16
+INFO 08/18 10:20:23 PM Data extracted for this table: 16
+INFO 08/18 10:20:23 PM Table under section: NBL career stats
+DEBUG 08/18 10:20:23 PM  E2 Unable to find headers - resource: Brett_Maher
+INFO 08/18 10:20:23 PM Table under section: NBL career stats
+INFO 08/18 10:20:23 PM Headers Found
+INFO 08/18 10:20:23 PM Data refined
+INFO 08/18 10:20:23 PM Rows extracted: 19
+INFO 08/18 10:20:23 PM Data extracted for this table: 247
+INFO 08/18 10:20:23 PM New header found: NBL career:
+INFO 08/18 10:20:23 PM New header found: NBL Grand Final appearances:
+INFO 08/18 10:20:23 PM New header found: NBL Championships:
+INFO 08/18 10:20:23 PM New header found: NBL Grand Final MVP:
+INFO 08/18 10:20:23 PM New header found: NBL Finals appearances:
+INFO 08/18 10:20:23 PM New header found: All-NBL First Team:
+INFO 08/18 10:20:23 PM New header found: NBL All-Star Game:
+INFO 08/18 10:20:23 PM New header found: Adelaide 36ers Club MVP:
+INFO 08/18 10:20:23 PM Analyzing resource: Brett_Wheeler
+INFO 08/18 10:20:23 PM Table under section: Honour roll
+INFO 08/18 10:20:23 PM Headers Found
+INFO 08/18 10:20:23 PM Data refined
+INFO 08/18 10:20:23 PM Rows extracted: 8
+INFO 08/18 10:20:23 PM Data extracted for this table: 8
+INFO 08/18 10:20:23 PM Table under section: NBL career stats
+INFO 08/18 10:20:23 PM Headers Found
+INFO 08/18 10:20:23 PM Data refined
+INFO 08/18 10:20:23 PM Rows extracted: 18
+INFO 08/18 10:20:23 PM Data extracted for this table: 18
+INFO 08/18 10:20:23 PM New header found: Games:
+INFO 08/18 10:20:23 PM New header found: Rebounds:
+INFO 08/18 10:20:23 PM New header found: Points:
+INFO 08/18 10:20:23 PM New header found: Free Throws:
+INFO 08/18 10:20:23 PM New header found: Field Goals:
+INFO 08/18 10:20:23 PM New header found: 3 Points:
+INFO 08/18 10:20:23 PM New header found: Steals:
+INFO 08/18 10:20:23 PM New header found: Assists:
+INFO 08/18 10:20:23 PM New header found: Blocks:
+INFO 08/18 10:20:24 PM Analyzing resource: Brian_Hill_(basketball)
+INFO 08/18 10:20:24 PM Table under section: College
+INFO 08/18 10:20:24 PM Headers Found
+INFO 08/18 10:20:24 PM Data refined
+INFO 08/18 10:20:24 PM Rows extracted: 12
+INFO 08/18 10:20:24 PM Data extracted for this table: 57
+INFO 08/18 10:20:24 PM Table under section: NBA
+INFO 08/18 10:20:24 PM Headers Found
+INFO 08/18 10:20:24 PM Data refined
+INFO 08/18 10:20:24 PM Rows extracted: 10
+INFO 08/18 10:20:24 PM Data extracted for this table: 117
+INFO 08/18 10:20:24 PM Analyzing resource: Brock_Gillespie
+INFO 08/18 10:20:24 PM No Tables found for this resource.
+INFO 08/18 10:20:24 PM Analyzing resource: Bruce_Douglas_(basketball)
+INFO 08/18 10:20:24 PM No Tables found for this resource.
+INFO 08/18 10:20:25 PM Analyzing resource: Bryan_Smithson
+INFO 08/18 10:20:25 PM No Tables found for this resource.
+INFO 08/18 10:20:25 PM Analyzing resource: Cameron_Bairstow
+INFO 08/18 10:20:25 PM Table under section: International statistics
+INFO 08/18 10:20:25 PM Headers Found
+INFO 08/18 10:20:25 PM Data refined
+INFO 08/18 10:20:25 PM Rows extracted: 4
+INFO 08/18 10:20:25 PM Data extracted for this table: 16
+INFO 08/18 10:20:25 PM Table under section: Regular season
+INFO 08/18 10:20:25 PM Headers Found
+INFO 08/18 10:20:25 PM Data refined
+INFO 08/18 10:20:25 PM Rows extracted: 3
+INFO 08/18 10:20:25 PM Data extracted for this table: 39
+INFO 08/18 10:20:25 PM New header found: Tournament
+INFO 08/18 10:20:25 PM New header found: Points per game
+INFO 08/18 10:20:25 PM New header found: Rebounds per game
+INFO 08/18 10:20:25 PM New header found: Assists per game
+INFO 08/18 10:20:26 PM Analyzing resource: Chantelle_Anderson
+INFO 08/18 10:20:26 PM Table under section: Vanderbilt statistics
+INFO 08/18 10:20:26 PM Headers Found
+INFO 08/18 10:20:26 PM Data refined
+INFO 08/18 10:20:26 PM Rows extracted: 5
+INFO 08/18 10:20:26 PM Data extracted for this table: 59
+INFO 08/18 10:20:26 PM Analyzing resource: Cheryl_Ford
+INFO 08/18 10:20:26 PM Table under section: Louisiana Tech statistics
+INFO 08/18 10:20:26 PM Headers Found
+INFO 08/18 10:20:26 PM Data refined
+INFO 08/18 10:20:26 PM Rows extracted: 5
+INFO 08/18 10:20:26 PM Data extracted for this table: 56
+INFO 08/18 10:20:27 PM Analyzing resource: Cheryl_Miller
+INFO 08/18 10:20:27 PM No Tables found for this resource.
+INFO 08/18 10:20:27 PM Analyzing resource: Chris_Jefferies
+INFO 08/18 10:20:27 PM No Tables found for this resource.
+INFO 08/18 10:20:28 PM Analyzing resource: Chris_Lofton
+INFO 08/18 10:20:28 PM No Tables found for this resource.
+INFO 08/18 10:20:28 PM Analyzing resource: Chris_Warren_(basketball,_born_1981)
+INFO 08/18 10:20:28 PM Table under section: College
+INFO 08/18 10:20:28 PM Headers Found
+INFO 08/18 10:20:28 PM Data refined
+INFO 08/18 10:20:28 PM Rows extracted: 3
+INFO 08/18 10:20:28 PM Data extracted for this table: 38
+INFO 08/18 10:20:28 PM Table under section: Euroleague
+INFO 08/18 10:20:28 PM Headers Found
+INFO 08/18 10:20:28 PM Data refined
+INFO 08/18 10:20:28 PM Rows extracted: 5
+INFO 08/18 10:20:28 PM Data extracted for this table: 69
+INFO 08/18 10:20:28 PM Table under section: Eurocup
+INFO 08/18 10:20:28 PM Headers Found
+INFO 08/18 10:20:28 PM Data refined
+INFO 08/18 10:20:28 PM Rows extracted: 3
+INFO 08/18 10:20:28 PM Data extracted for this table: 41
+INFO 08/18 10:20:29 PM Analyzing resource: Chris_Warren_(basketball,_born_1988)
+INFO 08/18 10:20:29 PM No Tables found for this resource.
+INFO 08/18 10:20:29 PM Analyzing resource: Christopher_McNaughton
+INFO 08/18 10:20:29 PM No Tables found for this resource.
+INFO 08/18 10:20:29 PM Analyzing resource: Corey_Williams_(basketball,_born_1970)
+INFO 08/18 10:20:29 PM Table under section: Head coaching record
+INFO 08/18 10:20:29 PM Headers Found
+INFO 08/18 10:20:29 PM Data refined
+INFO 08/18 10:20:29 PM Rows extracted: 10
+INFO 08/18 10:20:29 PM Data extracted for this table: 52
+INFO 08/18 10:20:30 PM Analyzing resource: Corey_Williams_(basketball,_born_1977)
+INFO 08/18 10:20:30 PM No Tables found for this resource.
+INFO 08/18 10:20:30 PM Analyzing resource: D'Angelo_Russell
+INFO 08/18 10:20:30 PM Table under section: College statistics
+INFO 08/18 10:20:30 PM Headers Found
+INFO 08/18 10:20:30 PM Data refined
+INFO 08/18 10:20:30 PM Rows extracted: 1
+INFO 08/18 10:20:30 PM Data extracted for this table: 13
+INFO 08/18 10:20:30 PM Table under section: Regular season
+INFO 08/18 10:20:30 PM Headers Found
+INFO 08/18 10:20:30 PM Data refined
+INFO 08/18 10:20:30 PM Rows extracted: 3
+INFO 08/18 10:20:30 PM Data extracted for this table: 39
+INFO 08/18 10:20:31 PM Analyzing resource: D._J._Strawberry
+INFO 08/18 10:20:31 PM Table under section: Regular season
+INFO 08/18 10:20:31 PM Headers Found
+INFO 08/18 10:20:31 PM Data refined
+INFO 08/18 10:20:31 PM Rows extracted: 2
+INFO 08/18 10:20:31 PM Data extracted for this table: 25
+INFO 08/18 10:20:31 PM Table under section: Playoffs
+INFO 08/18 10:20:31 PM Headers Found
+INFO 08/18 10:20:31 PM Data refined
+INFO 08/18 10:20:31 PM Rows extracted: 2
+INFO 08/18 10:20:31 PM Data extracted for this table: 25
+INFO 08/18 10:20:31 PM Table under section: Domestic leagues
+INFO 08/18 10:20:31 PM Headers Found
+INFO 08/18 10:20:31 PM Data refined
+INFO 08/18 10:20:31 PM Rows extracted: 14
+INFO 08/18 10:20:31 PM Data extracted for this table: 182
+INFO 08/18 10:20:31 PM New header found: League
+INFO 08/18 10:20:31 PM Analyzing resource: Dan_Issel
+INFO 08/18 10:20:31 PM Table under section: NBA
+INFO 08/18 10:20:31 PM Headers Found
+INFO 08/18 10:20:31 PM Data refined
+INFO 08/18 10:20:31 PM Rows extracted: 7
+INFO 08/18 10:20:31 PM Data extracted for this table: 82
+INFO 08/18 10:20:32 PM Analyzing resource: Dan_O'Sullivan
+INFO 08/18 10:20:32 PM No Tables found for this resource.
+INFO 08/18 10:20:32 PM Analyzing resource: Danijel_Jusup
+INFO 08/18 10:20:32 PM No Tables found for this resource.
+INFO 08/18 10:20:32 PM Analyzing resource: Darnell_Hillman
+INFO 08/18 10:20:32 PM No Tables found for this resource.
+INFO 08/18 10:20:33 PM Analyzing resource: Darren_Collison
+INFO 08/18 10:20:33 PM Table under section: Regular season
+INFO 08/18 10:20:33 PM Headers Found
+INFO 08/18 10:20:33 PM Data refined
+INFO 08/18 10:20:33 PM Rows extracted: 9
+INFO 08/18 10:20:33 PM Data extracted for this table: 117
+INFO 08/18 10:20:33 PM Table under section: Playoffs
+INFO 08/18 10:20:33 PM Headers Found
+INFO 08/18 10:20:33 PM Data refined
+INFO 08/18 10:20:33 PM Rows extracted: 4
+INFO 08/18 10:20:33 PM Data extracted for this table: 52
+INFO 08/18 10:20:33 PM Analyzing resource: Darren_Ng
+INFO 08/18 10:20:33 PM No Tables found for this resource.
+INFO 08/18 10:20:34 PM Analyzing resource: Dave_Wohl
+INFO 08/18 10:20:34 PM Table under section: Head Coaching Record
+INFO 08/18 10:20:34 PM Headers Found
+INFO 08/18 10:20:34 PM Data refined
+INFO 08/18 10:20:34 PM Rows extracted: 4
+INFO 08/18 10:20:34 PM Data extracted for this table: 46
+INFO 08/18 10:20:34 PM Analyzing resource: David_Holston
+INFO 08/18 10:20:34 PM No Tables found for this resource.
+INFO 08/18 10:20:34 PM Analyzing resource: David_Kool
+INFO 08/18 10:20:34 PM Table under section: Statistics
+INFO 08/18 10:20:34 PM Headers Found
+INFO 08/18 10:20:34 PM Data refined
+INFO 08/18 10:20:34 PM Rows extracted: 4
+INFO 08/18 10:20:34 PM Data extracted for this table: 88
+INFO 08/18 10:20:34 PM New header found: FGM
+INFO 08/18 10:20:34 PM New header found: FGA
+INFO 08/18 10:20:34 PM New header found: 3PM
+INFO 08/18 10:20:34 PM New header found: 3PA
+INFO 08/18 10:20:34 PM New header found: FTM
+INFO 08/18 10:20:34 PM New header found: FTA
+INFO 08/18 10:20:34 PM New header found: REB
+INFO 08/18 10:20:34 PM New header found: AST
+INFO 08/18 10:20:34 PM New header found: STL
+INFO 08/18 10:20:34 PM New header found: BLK
+INFO 08/18 10:20:34 PM New header found: PTS
+INFO 08/18 10:20:35 PM Analyzing resource: David_West_(basketball)
+INFO 08/18 10:20:35 PM Table under section: NBA career statistics
+DEBUG 08/18 10:20:35 PM  E2 Unable to find headers - resource: David_West_(basketball)
+INFO 08/18 10:20:35 PM Table under section: College statistics
+INFO 08/18 10:20:35 PM Headers Found
+INFO 08/18 10:20:35 PM Data refined
+INFO 08/18 10:20:35 PM Rows extracted: 4
+INFO 08/18 10:20:35 PM Data extracted for this table: 52
+INFO 08/18 10:20:35 PM Table under section: Regular season
+INFO 08/18 10:20:35 PM Headers Found
+INFO 08/18 10:20:35 PM Data refined
+INFO 08/18 10:20:35 PM Rows extracted: 16
+INFO 08/18 10:20:35 PM Data extracted for this table: 208
+INFO 08/18 10:20:35 PM Table under section: Playoffs
+INFO 08/18 10:20:35 PM Headers Found
+INFO 08/18 10:20:35 PM Data refined
+INFO 08/18 10:20:35 PM Rows extracted: 9
+INFO 08/18 10:20:35 PM Data extracted for this table: 117
+INFO 08/18 10:20:36 PM Analyzing resource: David_Wood_(basketball)
+INFO 08/18 10:20:36 PM No Tables found for this resource.
+INFO 08/18 10:20:36 PM Analyzing resource: Deanna_Nolan
+INFO 08/18 10:20:36 PM No Tables found for this resource.
+INFO 08/18 10:20:37 PM Analyzing resource: Dennis_Smith_Jr.
+INFO 08/18 10:20:37 PM Table under section: College statistics
+INFO 08/18 10:20:37 PM Headers Found
+INFO 08/18 10:20:37 PM Data refined
+INFO 08/18 10:20:37 PM Rows extracted: 1
+INFO 08/18 10:20:37 PM Data extracted for this table: 13
+INFO 08/18 10:20:37 PM Analyzing resource: Denny_Fitzpatrick
+INFO 08/18 10:20:37 PM No Tables found for this resource.
+INFO 08/18 10:20:37 PM Analyzing resource: Denzel_Bowles
+INFO 08/18 10:20:37 PM No Tables found for this resource.
+INFO 08/18 10:20:38 PM Analyzing resource: Derek_Smith_(basketball)
+INFO 08/18 10:20:38 PM No Tables found for this resource.
+INFO 08/18 10:20:38 PM Analyzing resource: Elisabeth_Pavel
+INFO 08/18 10:20:38 PM No Tables found for this resource.
+INFO 08/18 10:20:39 PM Analyzing resource: Eric_Anderson_(basketball)
+INFO 08/18 10:20:39 PM No Tables found for this resource.
+INFO 08/18 10:20:39 PM Analyzing resource: Filiberto_Rivera
+INFO 08/18 10:20:39 PM No Tables found for this resource.
+INFO 08/18 10:20:40 PM Analyzing resource: Frank_Johnson_(basketball)
+INFO 08/18 10:20:40 PM Table under section: Head coaching record
+INFO 08/18 10:20:40 PM Headers Found
+INFO 08/18 10:20:40 PM Data refined
+INFO 08/18 10:20:40 PM Rows extracted: 4
+INFO 08/18 10:20:40 PM Data extracted for this table: 45
+INFO 08/18 10:20:40 PM Analyzing resource: Frank_Vogel
+INFO 08/18 10:20:40 PM Table under section: Head coaching record
+INFO 08/18 10:20:40 PM Headers Found
+INFO 08/18 10:20:40 PM Data refined
+INFO 08/18 10:20:40 PM Rows extracted: 8
+INFO 08/18 10:20:40 PM Data extracted for this table: 94
+INFO 08/18 10:20:41 PM Analyzing resource: Fred_Scolari
+INFO 08/18 10:20:41 PM Table under section: Regular season
+INFO 08/18 10:20:41 PM Headers Found
+INFO 08/18 10:20:41 PM Data refined
+INFO 08/18 10:20:41 PM Rows extracted: 11
+INFO 08/18 10:20:41 PM Data extracted for this table: 99
+INFO 08/18 10:20:41 PM Table under section: Playoffs
+INFO 08/18 10:20:41 PM Headers Found
+INFO 08/18 10:20:41 PM Data refined
+INFO 08/18 10:20:41 PM Rows extracted: 8
+INFO 08/18 10:20:41 PM Data extracted for this table: 72
+INFO 08/18 10:20:41 PM Analyzing resource: Gary_Alexander_(basketball)
+INFO 08/18 10:20:41 PM No Tables found for this resource.
+INFO 08/18 10:20:41 PM Analyzing resource: George_Wilson_(basketball,_born_1942)
+INFO 08/18 10:20:41 PM No Tables found for this resource.
+INFO 08/18 10:20:42 PM Analyzing resource: Glen_Davis_(basketball)
+INFO 08/18 10:20:42 PM Table under section: NBA career statistics
+DEBUG 08/18 10:20:42 PM  E2 Unable to find headers - resource: Glen_Davis_(basketball)
+INFO 08/18 10:20:42 PM Table under section: Regular season
+INFO 08/18 10:20:42 PM Headers Found
+INFO 08/18 10:20:42 PM Data refined
+INFO 08/18 10:20:42 PM Rows extracted: 10
+INFO 08/18 10:20:42 PM Data extracted for this table: 130
+INFO 08/18 10:20:42 PM Table under section: Playoffs
+INFO 08/18 10:20:42 PM Headers Found
+INFO 08/18 10:20:42 PM Data refined
+INFO 08/18 10:20:42 PM Rows extracted: 8
+INFO 08/18 10:20:42 PM Data extracted for this table: 104
+INFO 08/18 10:20:42 PM Analyzing resource: Greg_Oden
+INFO 08/18 10:20:42 PM Table under section: College statistics
+INFO 08/18 10:20:42 PM Headers Found
+INFO 08/18 10:20:42 PM Data refined
+INFO 08/18 10:20:42 PM Rows extracted: 1
+INFO 08/18 10:20:42 PM Data extracted for this table: 13
+INFO 08/18 10:20:42 PM Table under section: Regular season
+INFO 08/18 10:20:42 PM Headers Found
+INFO 08/18 10:20:42 PM Data refined
+INFO 08/18 10:20:42 PM Rows extracted: 4
+INFO 08/18 10:20:42 PM Data extracted for this table: 52
+INFO 08/18 10:20:42 PM Table under section: Playoffs
+INFO 08/18 10:20:42 PM Headers Found
+INFO 08/18 10:20:42 PM Data refined
+INFO 08/18 10:20:42 PM Rows extracted: 3
+INFO 08/18 10:20:42 PM Data extracted for this table: 39
+INFO 08/18 10:20:42 PM Table under section: CBA
+INFO 08/18 10:20:42 PM Headers Found
+INFO 08/18 10:20:42 PM Data refined
+INFO 08/18 10:20:42 PM Rows extracted: 2
+INFO 08/18 10:20:42 PM Data extracted for this table: 26
+INFO 08/18 10:20:42 PM New header found: College
+INFO 08/18 10:20:42 PM New header found: MIN
+INFO 08/18 10:20:43 PM Analyzing resource: Guillermo_Diaz_(basketball)
+INFO 08/18 10:20:43 PM Table under section: Domestic leagues
+INFO 08/18 10:20:43 PM Headers Found
+INFO 08/18 10:20:43 PM Data refined
+INFO 08/18 10:20:43 PM Rows extracted: 13
+INFO 08/18 10:20:43 PM Data extracted for this table: 163
+INFO 08/18 10:20:43 PM Analyzing resource: Hakan_Demirel
+INFO 08/18 10:20:43 PM No Tables found for this resource.
+INFO 08/18 10:20:44 PM Analyzing resource: Hakeem_Olajuwon
+INFO 08/18 10:20:44 PM Table under section: NBA career statistics
+DEBUG 08/18 10:20:44 PM  E2 Unable to find headers - resource: Hakeem_Olajuwon
+INFO 08/18 10:20:44 PM Table under section: Regular season
+INFO 08/18 10:20:44 PM Headers Found
+INFO 08/18 10:20:44 PM Data refined
+INFO 08/18 10:20:44 PM Rows extracted: 21
+INFO 08/18 10:20:44 PM Data extracted for this table: 378
+INFO 08/18 10:20:44 PM New header found: Age
+INFO 08/18 10:20:44 PM New header found: OFF
+INFO 08/18 10:20:44 PM New header found: DEF
+INFO 08/18 10:20:44 PM New header found: TOV
+INFO 08/18 10:20:44 PM New header found: PF
+INFO 08/18 10:20:44 PM Analyzing resource: Harold_Johnson_(basketball)
+INFO 08/18 10:20:44 PM Table under section: Regular season
+INFO 08/18 10:20:44 PM Headers Found
+INFO 08/18 10:20:44 PM Data refined
+INFO 08/18 10:20:44 PM Rows extracted: 2
+INFO 08/18 10:20:44 PM Data extracted for this table: 14
+INFO 08/18 10:20:45 PM Analyzing resource: Henry_James_(basketball)
+INFO 08/18 10:20:45 PM No Tables found for this resource.
+INFO 08/18 10:20:45 PM Analyzing resource: Henry_Turner_(basketball)
+INFO 08/18 10:20:45 PM No Tables found for this resource.
+INFO 08/18 10:20:46 PM Analyzing resource: Henry_Ward_(basketball)
+INFO 08/18 10:20:46 PM No Tables found for this resource.
+INFO 08/18 10:20:46 PM Analyzing resource: Henry_Williams_(basketball)
+INFO 08/18 10:20:46 PM No Tables found for this resource.
+INFO 08/18 10:20:46 PM REPORT:
+INFO 08/18 10:20:46 PM +           # of resources collected for this topic (BasketballPlayer) : 100
+INFO 08/18 10:20:46 PM +           Total # resources analyzed: 100
+INFO 08/18 10:20:46 PM +           Total # tables found : 83
+INFO 08/18 10:20:46 PM +           Total # tables analyzed : 83
+INFO 08/18 10:20:46 PM +           Total # of rows extracted: 534
+INFO 08/18 10:20:46 PM +           Total # of data cells extracted : 5788
+INFO 08/18 10:20:46 PM +           Total # of exceptions extracting data : 0
+INFO 08/18 10:20:46 PM +           Total # of 'header not resolved' errors : 0
+INFO 08/18 10:20:46 PM +           Total # of 'no headers' errors : 9
