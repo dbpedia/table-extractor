@@ -13,10 +13,8 @@ import settings
 import unicodedata
 import sys
 import socket
-import string
+import MapperTools
 
-from collections import OrderedDict
-import mapping_rules
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
 
@@ -62,6 +60,7 @@ class Utilities:
             self.read_parameters_research()
             self.setup_log("extractor")
             self.extractor = True   # utilities called by extractor, so i need to update mapping rules
+            self.mapper = MapperTools.MapperTools(self)
         else:
             self.setup_log("explorer")
             self.extractor = False
@@ -76,6 +75,10 @@ class Utilities:
         self.time_to_attend = settings.SECONDS_BTW_TRIES  # seconds to sleep between two internet service call
         self.max_attempts = settings.MAX_ATTEMPTS  # max number of internet service' call tries
 
+        if self.research_type == "t":
+            self.check_dbpedia_class()
+
+
         # self.dbpedia is used to contain which dbpedia to use Eg. dbpedia.org
         if self.chapter == "en":
             self.dbpedia = "dbpedia.org"
@@ -88,7 +91,7 @@ class Utilities:
         self.html_format = "https://" + self.chapter + ".wikipedia.org/wiki/"
 
         if self.extractor:
-            self.dictionary = self.update_mapping_rules()
+            self.dictionary = self.mapper.update_mapping_rules()
 
         # define timeout for url request
         socket.setdefaulttimeout(settings.REQUEST_TIMEOUT)
@@ -413,7 +416,10 @@ class Utilities:
 
             self.logging.info("+           Total # of triples serialized : %d" % int(self.mapped_cells + self.triples_row))
 
-            effectiveness = self.mapped_cells/float(self.data_extracted_to_map)
+            if self.data_extracted_to_map > 0:
+                effectiveness = self.mapped_cells/float(self.data_extracted_to_map)
+            else:
+                effectiveness = 0
             self.logging.info("+           Percentage of mapping effectiveness  : %.3f" % effectiveness)
 
     def delete_accented_characters(self, text):
@@ -431,39 +437,23 @@ class Utilities:
         except TypeError:
             return text
 
-    def update_mapping_rules(self):
+    def print_progress_bar(self, iteration, total, prefix='Progress: ', suffix='Complete', decimals=1, length=30,
+                           fill='#'):
         """
-        Method that:
-        - read new mapping rules defined by user
-        - parse these mapping rules
-        - read actual dictionary and update or add all new keys
-        - print new dictionary
-        :return: updated dictionary
+        Call in a loop to create terminal progress bar
+        @params:
+            iteration   - Required  : current iteration (Int)
+            total       - Required  : total iterations (Int)
+            prefix      - Optional  : prefix string (Str)
+            suffix      - Optional  : suffix string (Str)
+            decimals    - Optional  : positive number of decimals in percent complete (Int)
+            length      - Optional  : character length of bar (Int)
+            fill        - Optional  : bar fill character (Str)
         """
-        new_mapping_rules = self.read_mapping_rules()
-        verified_mapping_rules = self.check_user_input_properties(new_mapping_rules)
-        actual_mapping_rules = self.read_actual_mapping_rules()
-        updated_mapping_rules = self.update_differences_between_dictionaries(actual_mapping_rules,
-                                                                             verified_mapping_rules)
-        self.print_updated_mapping_rules(updated_mapping_rules)
-        return updated_mapping_rules
-
-    def read_mapping_rules(self):
-        """
-        Read mapping rules defined by user and parse it
-        :return: parsed mapping rules
-        """
-        # Import is there for being sure that the file exists.
-        import domain_settings
-        new_mapping_rules = OrderedDict()
-        if os.path.isfile(settings.PATH_DOMAIN_EXPLORER):
-            for name, val in domain_settings.__dict__.iteritems():
-                if settings.SECTION_NAME in name:
-                    name_section = name.replace(settings.SECTION_NAME, "")
-                    new_mapping_rules[name_section] = OrderedDict()
-                    new_mapping_rules[name_section].update(val)
-        parsed_mapping_rules = self.parse_mapping_rules(new_mapping_rules)
-        return parsed_mapping_rules
+        percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
+        filledLength = int(length * iteration // total)
+        bar = fill * filledLength + '-' * (length - filledLength)
+        print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix))
 
     def read_parameters_research(self):
         """
@@ -485,116 +475,6 @@ class Utilities:
                     self.verbose = val
         else:
             sys.exit("File " + settings.PATH_DOMAIN_EXPLORER + " not found. You should running pyDomainExplorer")
-
-    def parse_mapping_rules(self, new_mapping_rules):
-        """
-        Parse mapping rules written by user in order to create an ordinary dictionary
-        :param new_mapping_rules: mapping rules read previously
-        :return: parsed mapping rules
-        """
-        parsed_mapping_rules = OrderedDict()
-        for section_key, section_dict in new_mapping_rules.items():
-            for key, value in section_dict.items():
-                # i need to delete all punctuation: ontology properties hasn't that type of character
-                value = value.translate(None, string.punctuation).replace(" ", "")
-                # Change the sectionProperty with the name of the section
-                if key == settings.SECTION_NAME_PROPERTY:
-                    # replace _ with a space.
-                    sections = section_key.split(settings.CHARACTER_SEPARATOR)
-                    for section in sections:
-                        parsed_mapping_rules.__setitem__(section.replace("_", " "), value)
-                elif key != "":
-                    sections = section_key.split(settings.CHARACTER_SEPARATOR)
-                    for section in sections:
-                        if self.verbose == "2":
-                            parsed_mapping_rules.__setitem__(key, value)
-                        else:
-                            parsed_mapping_rules.__setitem__(section.replace("_", " ") + "_" + key, value)
-        return parsed_mapping_rules
-
-    def read_actual_mapping_rules(self):
-        """
-        Read actual mapping rules of the chapter selected
-        :return: mapping rules already defined
-        """
-        actual_mapping_rules = OrderedDict()
-        for name, val in mapping_rules.__dict__.iteritems():
-            if self.chapter.upper() in name[-2:]:
-                actual_mapping_rules = dict(val)
-        return actual_mapping_rules
-
-    def check_user_input_properties(self, new_mapping_rules):
-        """
-        Check if properties defined by user are defined in dbpedia ontology
-        :param new_mapping_rules: mapping rules defined by user in settings file
-        :return:
-        """
-        for key in new_mapping_rules:
-            # don't check table's row
-            # query = settings.SPARQL_PROPERTY_IN_ONTOLOGY[0] + new_mapping_rules[key] +\
-            #     settings.SPARQL_PROPERTY_IN_ONTOLOGY[1]
-            # url = self.url_composer(query, "dbpedia")
-            # response = self.json_answer_getter(url)['boolean']
-            # if not response:
-            #     message = "Property: " + new_mapping_rules[key] +\
-            #           ", doesn't exist in dbpedia ontology. Please add it."
-            #     print message, "\n"
-            #     del new_mapping_rules[key]
-            #     self.logging.warn(message)
-            return new_mapping_rules
-
-    def update_differences_between_dictionaries(self, actual_mapping_rules, new_mapping_rules):
-        """
-        Search for differences between old and new mapping rules
-        :param actual_mapping_rules: properties dictionary already defined
-        :param new_mapping_rules: properties dictionary defined by user
-        :return: updated dictionary with old and new mapping rules
-        """
-        if new_mapping_rules:
-            for key, value in new_mapping_rules.items():
-                if value != "":
-                    # if user add a new mapping rule
-                    actual_mapping_rules.__setitem__(key, value)
-                else:
-                    # user deleted a property that was filled in domain_settings, so I will empty that
-                    # mapping rule.
-                    if key in actual_mapping_rules:
-                        del actual_mapping_rules[key]
-        return actual_mapping_rules
-
-    def print_updated_mapping_rules(self, updated_mapping_rules):
-        """
-        Print new dictionary with all updated mapping rules
-        :param updated_mapping_rules: dictionary to print
-        :return: nothing
-        """
-        data_to_print = ""
-        printed_out = 0
-        for name, val in mapping_rules.__dict__.iteritems():
-            if settings.MAPPING_RULE_PREFIX in name:
-                if self.chapter.upper() in name[-2:]:
-                    printed_out = 1
-                    data_to_print = data_to_print + name + "=" + str(updated_mapping_rules).replace(", ", ", \n") + "\n\n\n"
-                else:
-                    data_to_print = data_to_print + name + "=" + str(val).replace(", ",", \n") + "\n\n\n"
-        file = open("mapping_rules.py", "w")
-        file.write(settings.COMMENT_MAPPING_RULES + "\n\n")
-        # printed_out == 0 means that the dictionary didn't exists in mapping_rules.py
-        if printed_out == 0:
-            # Building dictionary in string form for printing out to file
-            new_dict = settings.PREFIX_MAPPING_RULE + self.chapter.upper()
-            dict_in_str = "={\n"
-            for key, value in updated_mapping_rules.items():
-                dict_in_str = dict_in_str + "'" + key + "':'" + value + "',\n"
-            new_dict = new_dict + dict_in_str + "} \n"
-            data_to_print = data_to_print + new_dict
-        file.write(data_to_print)
-
-    def get_resource_file(self):
-        """
-        :return: resource file
-        """
-        return settings.PATH_FOLDER_RESOURCE_LIST + "/" + self.resource_file
 
     def validate_user_input(self):
         """
@@ -619,20 +499,14 @@ class Utilities:
             result = "Resource file doesn't exists, check domain_settings.py"
         return result
 
-    def print_progress_bar(self, iteration, total, prefix='Progress: ', suffix='Complete', decimals=1, length=30,
-                           fill='#'):
+    def get_resource_file(self):
         """
-        Call in a loop to create terminal progress bar
-        @params:
-            iteration   - Required  : current iteration (Int)
-            total       - Required  : total iterations (Int)
-            prefix      - Optional  : prefix string (Str)
-            suffix      - Optional  : suffix string (Str)
-            decimals    - Optional  : positive number of decimals in percent complete (Int)
-            length      - Optional  : character length of bar (Int)
-            fill        - Optional  : bar fill character (Str)
+        :return: resource file
         """
-        percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
-        filledLength = int(length * iteration // total)
-        bar = fill * filledLength + '-' * (length - filledLength)
-        print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix))
+        return settings.PATH_FOLDER_RESOURCE_LIST + "/" + self.resource_file
+
+    def check_dbpedia_class(self):
+        class_uri = "http://dbpedia.org/ontology/" + self.topic
+        result = self.ask_if_resource_exists(class_uri)
+        if not result:
+            sys.exit("Class " + self.topic + " defined in arguments doesn't exist in DBpedia ontology")
