@@ -97,6 +97,9 @@ SECTION_Regular_season = {
 
 ## Results
 In this page: [Results page](https://github.com/dbpedia/table-extractor/tree/master/Extractions/GSoC%202017%20Results) you can observe dataset (english and italian) extracted using `table extractor` . Furthermore you can read log file created in order to see all operations made up for creating RDF triples.
+
+I recommend to also see [this page](https://github.com/dbpedia/table-extractor/wiki), that contains idea behind project and an example of result extracted from log files and .ttl dataset.
+
 Note that effectiveness of the mapping operation mostly depends on how many rules user has wrote in `domain_settings.py`.
 
 ## Folders
