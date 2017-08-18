@@ -94,8 +94,10 @@ class ExplorerTools:
         """
         if self.args.topic:
             self.research_type = "t"
-            if self.args.topic.isalpha() and len(self.args.topic) > 2:
+            if self.args.topic.isalpha():
                 return self.args.topic
+            else:
+                sys.exit("Error writing DBpedia class - Class doesn't contain punctuation  characters")
         elif self.args.single:
             self.research_type = "s"
             return self.args.single
