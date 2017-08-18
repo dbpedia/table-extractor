@@ -1,0 +1,1643 @@
+INFO 08/18 11:34:11 PM You're analyzing wiki tables, wiki chapter: en, topic: BasketballPlayer
+INFO 08/18 11:34:11 PM Analyzing Larry_Bird
+INFO 08/18 11:34:13 PM Analyzing resource: Larry_Bird
+INFO 08/18 11:34:13 PM Table under section: NBA career statistics
+DEBUG 08/18 11:34:13 PM  E2 Unable to find headers - resource: Larry_Bird
+INFO 08/18 11:34:13 PM Table under section: College statistics
+INFO 08/18 11:34:13 PM Headers Found
+INFO 08/18 11:34:13 PM Data refined
+INFO 08/18 11:34:13 PM Rows extracted: 4
+INFO 08/18 11:34:13 PM Data extracted for this table: 51
+INFO 08/18 11:34:13 PM Deleted row 4  of table College statistics because it looks like as summary row.
+INFO 08/18 11:34:13 PM Header: College statistics mapped with: collegeStatistics
+INFO 08/18 11:34:13 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:13 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:13 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:13 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:13 PM Header: Year mapped with: Year
+INFO 08/18 11:34:13 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:13 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:13 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:13 PM Header: Team mapped with: team
+INFO 08/18 11:34:13 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:13 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:13 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:13 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:13 PM Table under section: Regular season
+INFO 08/18 11:34:13 PM Headers Found
+INFO 08/18 11:34:13 PM Data refined
+INFO 08/18 11:34:13 PM Rows extracted: 14
+INFO 08/18 11:34:13 PM Data extracted for this table: 182
+INFO 08/18 11:34:13 PM Deleted row 14  of table Regular season because it looks like as summary row.
+INFO 08/18 11:34:13 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:34:13 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:13 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:13 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:13 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:13 PM Header: Year mapped with: Year
+INFO 08/18 11:34:13 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:13 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:13 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:13 PM Header: Team mapped with: team
+INFO 08/18 11:34:13 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:13 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:13 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:13 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:14 PM Table under section: Playoffs
+INFO 08/18 11:34:14 PM Headers Found
+INFO 08/18 11:34:14 PM Data refined
+INFO 08/18 11:34:14 PM Rows extracted: 13
+INFO 08/18 11:34:14 PM Data extracted for this table: 169
+INFO 08/18 11:34:14 PM Deleted row 13  of table Playoffs because it looks like as summary row.
+INFO 08/18 11:34:14 PM Header: Playoffs mapped with: playoff
+INFO 08/18 11:34:14 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:14 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:14 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:14 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:14 PM Header: Year mapped with: Year
+INFO 08/18 11:34:14 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:14 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:14 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:14 PM Header: Team mapped with: team
+INFO 08/18 11:34:14 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:14 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:14 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:14 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:14 PM Table under section: Head coaching record
+INFO 08/18 11:34:14 PM Headers Found
+INFO 08/18 11:34:14 PM Data refined
+INFO 08/18 11:34:14 PM Rows extracted: 4
+INFO 08/18 11:34:14 PM Data extracted for this table: 45
+INFO 08/18 11:34:14 PM Deleted row 4  of table Head coaching record because it looks like as summary row.
+INFO 08/18 11:34:14 PM Header: Head coaching record mapped with: headCoaching
+INFO 08/18 11:34:14 PM Header: Result mapped with: result
+INFO 08/18 11:34:14 PM Header: Finish mapped with: gamesFinished
+INFO 08/18 11:34:14 PM Header: G mapped with: games
+INFO 08/18 11:34:14 PM Header: W.L% mapped with: winLoss
+INFO 08/18 11:34:14 PM Header: Team mapped with: team
+INFO 08/18 11:34:14 PM Header: L mapped with: gamesLost
+INFO 08/18 11:34:14 PM Header: PW.L% mapped with: playoffWinsLoss
+INFO 08/18 11:34:14 PM Header: PG mapped with: playoffGames
+INFO 08/18 11:34:14 PM Header: W mapped with: gamesWin
+INFO 08/18 11:34:14 PM Header: Year mapped with: Year
+INFO 08/18 11:34:14 PM Header: PL mapped with: playoffLosses
+INFO 08/18 11:34:14 PM Header: PW mapped with: playoffWins
+INFO 08/18 11:34:15 PM Analyzing Magic_Johnson
+INFO 08/18 11:34:16 PM Analyzing resource: Magic_Johnson
+INFO 08/18 11:34:16 PM Table under section: NBA career statistics
+DEBUG 08/18 11:34:16 PM  E2 Unable to find headers - resource: Magic_Johnson
+INFO 08/18 11:34:16 PM Table under section: Regular season
+INFO 08/18 11:34:16 PM Headers Found
+INFO 08/18 11:34:16 PM Data refined
+INFO 08/18 11:34:16 PM Rows extracted: 15
+INFO 08/18 11:34:16 PM Data extracted for this table: 190
+INFO 08/18 11:34:16 PM Deleted row 14  of table Regular season because it looks like as summary row.
+INFO 08/18 11:34:16 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:34:16 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:16 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:16 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:16 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:16 PM Header: Year mapped with: Year
+INFO 08/18 11:34:16 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:16 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:16 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:16 PM Header: Team mapped with: team
+INFO 08/18 11:34:16 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:16 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:16 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:16 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:17 PM Table under section: Playoffs
+INFO 08/18 11:34:17 PM Headers Found
+INFO 08/18 11:34:17 PM Data refined
+INFO 08/18 11:34:17 PM Rows extracted: 14
+INFO 08/18 11:34:17 PM Data extracted for this table: 182
+INFO 08/18 11:34:17 PM Deleted row 14  of table Playoffs because it looks like as summary row.
+INFO 08/18 11:34:17 PM Header: Playoffs mapped with: playoff
+INFO 08/18 11:34:17 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:17 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:17 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:17 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:17 PM Header: Year mapped with: Year
+INFO 08/18 11:34:17 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:17 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:17 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:17 PM Header: Team mapped with: team
+INFO 08/18 11:34:17 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:17 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:17 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:17 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:17 PM Analyzing A'dia_Mathies
+INFO 08/18 11:34:18 PM Analyzing resource: A'dia_Mathies
+INFO 08/18 11:34:18 PM Table under section: Kentucky statistics
+INFO 08/18 11:34:18 PM Headers Found
+INFO 08/18 11:34:18 PM Data refined
+INFO 08/18 11:34:18 PM Rows extracted: 5
+INFO 08/18 11:34:18 PM Data extracted for this table: 60
+INFO 08/18 11:34:18 PM Deleted row 5  of table Kentucky statistics because it looks like as summary row.
+INFO 08/18 11:34:18 PM Header: Kentucky statistics mapped with: statistics
+INFO 08/18 11:34:18 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:18 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:18 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:18 PM Header: Year mapped with: Year
+INFO 08/18 11:34:18 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:18 PM Header: Points mapped with: pointsPerGame
+INFO 08/18 11:34:18 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:18 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:18 PM Header: Team mapped with: team
+INFO 08/18 11:34:18 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:18 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:18 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:18 PM Analyzing Alfrancis_Chua
+INFO 08/18 11:34:19 PM Analyzing resource: Alfrancis_Chua
+INFO 08/18 11:34:19 PM No Tables found for this resource.
+INFO 08/18 11:34:19 PM Analyzing Barry_Stevens_(basketball)
+INFO 08/18 11:34:19 PM Analyzing resource: Barry_Stevens_(basketball)
+INFO 08/18 11:34:19 PM No Tables found for this resource.
+INFO 08/18 11:34:19 PM Analyzing Brian_Martin_(basketball)
+INFO 08/18 11:34:19 PM Analyzing resource: Brian_Martin_(basketball)
+INFO 08/18 11:34:19 PM No Tables found for this resource.
+INFO 08/18 11:34:19 PM Analyzing Chris_Anstey
+INFO 08/18 11:34:20 PM Analyzing resource: Chris_Anstey
+INFO 08/18 11:34:20 PM Table under section: NBL
+DEBUG 08/18 11:34:20 PM  E2 Unable to find headers - resource: Chris_Anstey
+INFO 08/18 11:34:20 PM Table under section: NBA
+INFO 08/18 11:34:20 PM Headers Found
+INFO 08/18 11:34:20 PM Data refined
+INFO 08/18 11:34:20 PM Rows extracted: 4
+INFO 08/18 11:34:20 PM Data extracted for this table: 52
+INFO 08/18 11:34:20 PM Deleted row 4  of table NBA because it looks like as summary row.
+INFO 08/18 11:34:20 PM Header: NBA mapped with: nba
+INFO 08/18 11:34:20 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:20 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:20 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:20 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:20 PM Header: Year mapped with: Year
+INFO 08/18 11:34:20 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:20 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:20 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:20 PM Header: Team mapped with: team
+INFO 08/18 11:34:20 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:20 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:20 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:20 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:20 PM Table under section: NBL
+INFO 08/18 11:34:20 PM Headers Found
+INFO 08/18 11:34:20 PM Data refined
+INFO 08/18 11:34:20 PM Rows extracted: 12
+INFO 08/18 11:34:20 PM Data extracted for this table: 156
+INFO 08/18 11:34:20 PM Header: NBL mapped with: nbl
+INFO 08/18 11:34:20 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:20 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:20 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:20 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:20 PM Header: Year mapped with: Year
+INFO 08/18 11:34:20 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:20 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:20 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:20 PM Header: Team mapped with: team
+INFO 08/18 11:34:20 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:20 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:20 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:20 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:21 PM Table under section: NBL
+INFO 08/18 11:34:21 PM Headers Found
+INFO 08/18 11:34:21 PM Data refined
+INFO 08/18 11:34:21 PM Rows extracted: 4
+INFO 08/18 11:34:21 PM Data extracted for this table: 45
+INFO 08/18 11:34:21 PM Deleted row 4  of table NBL because it looks like as summary row.
+INFO 08/18 11:34:21 PM Header: NBL mapped with: nbl
+INFO 08/18 11:34:21 PM Header: Result mapped with: result
+INFO 08/18 11:34:21 PM Header: Finish mapped with: gamesFinished
+INFO 08/18 11:34:21 PM Header: G mapped with: games
+INFO 08/18 11:34:21 PM Header: W.L% mapped with: winLoss
+INFO 08/18 11:34:21 PM Header: Team mapped with: team
+INFO 08/18 11:34:21 PM Header: L mapped with: gamesLost
+INFO 08/18 11:34:21 PM Header: PW.L% mapped with: playoffWinsLoss
+INFO 08/18 11:34:21 PM Header: PG mapped with: playoffGames
+INFO 08/18 11:34:21 PM Header: W mapped with: gamesWin
+INFO 08/18 11:34:21 PM Header: Year mapped with: Year
+INFO 08/18 11:34:21 PM Header: PL mapped with: playoffLosses
+INFO 08/18 11:34:21 PM Header: PW mapped with: playoffWins
+INFO 08/18 11:34:22 PM Analyzing Christian_Steinmetz
+INFO 08/18 11:34:22 PM Analyzing resource: Christian_Steinmetz
+INFO 08/18 11:34:22 PM No Tables found for this resource.
+INFO 08/18 11:34:22 PM Analyzing Donald_Williams_(basketball)
+INFO 08/18 11:34:23 PM Analyzing resource: Donald_Williams_(basketball)
+INFO 08/18 11:34:23 PM No Tables found for this resource.
+INFO 08/18 11:34:23 PM Analyzing Emel_Türkyılmaz
+INFO 08/18 11:34:23 PM Analyzing resource: Emel_Türkyılmaz
+INFO 08/18 11:34:23 PM No Tables found for this resource.
+INFO 08/18 11:34:23 PM Analyzing George_Stone_(basketball)
+INFO 08/18 11:34:23 PM Analyzing resource: George_Stone_(basketball)
+INFO 08/18 11:34:23 PM No Tables found for this resource.
+INFO 08/18 11:34:23 PM Analyzing Hervé_Touré
+INFO 08/18 11:34:24 PM Analyzing resource: Hervé_Touré
+INFO 08/18 11:34:24 PM No Tables found for this resource.
+INFO 08/18 11:34:24 PM Analyzing Jack_Haley_(basketball)
+INFO 08/18 11:34:24 PM Analyzing resource: Jack_Haley_(basketball)
+INFO 08/18 11:34:24 PM No Tables found for this resource.
+INFO 08/18 11:34:24 PM Analyzing Jay_Carty
+INFO 08/18 11:34:25 PM Analyzing resource: Jay_Carty
+INFO 08/18 11:34:25 PM No Tables found for this resource.
+INFO 08/18 11:34:25 PM Analyzing Jonny_Flynn
+INFO 08/18 11:34:25 PM Analyzing resource: Jonny_Flynn
+INFO 08/18 11:34:25 PM Table under section: Regular season
+INFO 08/18 11:34:25 PM Headers Found
+INFO 08/18 11:34:25 PM Data refined
+INFO 08/18 11:34:25 PM Rows extracted: 5
+INFO 08/18 11:34:25 PM Data extracted for this table: 64
+INFO 08/18 11:34:25 PM Deleted row 5  of table Regular season because it looks like as summary row.
+INFO 08/18 11:34:25 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:34:25 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:25 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:25 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:25 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:25 PM Header: Year mapped with: Year
+INFO 08/18 11:34:25 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:25 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:25 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:25 PM Header: Team mapped with: team
+INFO 08/18 11:34:25 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:25 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:25 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:25 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:25 PM Analyzing Mike_Flynn_(basketball)
+INFO 08/18 11:34:26 PM Analyzing resource: Mike_Flynn_(basketball)
+INFO 08/18 11:34:26 PM No Tables found for this resource.
+INFO 08/18 11:34:26 PM Analyzing Ramone_Moore
+INFO 08/18 11:34:27 PM Analyzing resource: Ramone_Moore
+INFO 08/18 11:34:27 PM Table under section: Ramone Moore
+INFO 08/18 11:34:27 PM Headers Found
+INFO 08/18 11:34:27 PM Data refined
+INFO 08/18 11:34:27 PM Rows extracted: 4
+INFO 08/18 11:34:27 PM Data extracted for this table: 52
+INFO 08/18 11:34:27 PM Header: Ramone Moore mapped with: statistics
+INFO 08/18 11:34:27 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:27 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:27 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:27 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:27 PM Header: Year mapped with: Year
+INFO 08/18 11:34:27 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:27 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:27 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:27 PM Header: Team mapped with: team
+INFO 08/18 11:34:27 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:27 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:27 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:27 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:27 PM Analyzing Richard_Melzer
+INFO 08/18 11:34:27 PM Analyzing resource: Richard_Melzer
+INFO 08/18 11:34:27 PM No Tables found for this resource.
+INFO 08/18 11:34:27 PM Analyzing Sven_Kaldre
+INFO 08/18 11:34:27 PM Analyzing resource: Sven_Kaldre
+INFO 08/18 11:34:27 PM No Tables found for this resource.
+INFO 08/18 11:34:27 PM Analyzing Tatiana_Popova
+INFO 08/18 11:34:28 PM Analyzing resource: Tatiana_Popova
+INFO 08/18 11:34:28 PM No Tables found for this resource.
+INFO 08/18 11:34:28 PM Analyzing Udonis_Haslem
+INFO 08/18 11:34:28 PM Analyzing resource: Udonis_Haslem
+INFO 08/18 11:34:28 PM Table under section: NBA career statistics
+DEBUG 08/18 11:34:28 PM  E2 Unable to find headers - resource: Udonis_Haslem
+INFO 08/18 11:34:28 PM Table under section: Regular season
+INFO 08/18 11:34:28 PM Headers Found
+INFO 08/18 11:34:28 PM Data refined
+INFO 08/18 11:34:28 PM Rows extracted: 15
+INFO 08/18 11:34:28 PM Data extracted for this table: 195
+INFO 08/18 11:34:28 PM Deleted row 15  of table Regular season because it looks like as summary row.
+INFO 08/18 11:34:28 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:34:28 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:28 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:28 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:28 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:28 PM Header: Year mapped with: Year
+INFO 08/18 11:34:28 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:28 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:28 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:28 PM Header: Team mapped with: team
+INFO 08/18 11:34:29 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:29 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:29 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:29 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:29 PM Table under section: Playoffs
+INFO 08/18 11:34:29 PM Headers Found
+INFO 08/18 11:34:29 PM Data refined
+INFO 08/18 11:34:29 PM Rows extracted: 12
+INFO 08/18 11:34:29 PM Data extracted for this table: 156
+INFO 08/18 11:34:29 PM Header: Playoffs mapped with: playoff
+INFO 08/18 11:34:29 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:29 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:29 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:29 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:29 PM Header: Year mapped with: Year
+INFO 08/18 11:34:29 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:29 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:29 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:29 PM Header: Team mapped with: team
+INFO 08/18 11:34:29 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:29 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:29 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:29 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:29 PM Analyzing Vanda_Baranović
+INFO 08/18 11:34:29 PM Analyzing resource: Vanda_Baranović
+INFO 08/18 11:34:29 PM No Tables found for this resource.
+INFO 08/18 11:34:29 PM Analyzing Víctor_Sada
+INFO 08/18 11:34:29 PM Analyzing resource: Víctor_Sada
+INFO 08/18 11:34:29 PM No Tables found for this resource.
+INFO 08/18 11:34:29 PM Analyzing Adrienne_Goodson
+INFO 08/18 11:34:30 PM Analyzing resource: Adrienne_Goodson
+INFO 08/18 11:34:30 PM No Tables found for this resource.
+INFO 08/18 11:34:30 PM Analyzing Akeem_Richmond
+INFO 08/18 11:34:30 PM Analyzing resource: Akeem_Richmond
+INFO 08/18 11:34:30 PM Table under section: High school career
+INFO 08/18 11:34:30 PM Headers Found
+INFO 08/18 11:34:30 PM Data refined
+INFO 08/18 11:34:30 PM Rows extracted: 3
+INFO 08/18 11:34:30 PM Data extracted for this table: 13
+INFO 08/18 11:34:30 PM Header: High school career mapped with: highSchoolCareer
+INFO 08/18 11:34:30 PM Header: Name mapped with: Name
+INFO 08/18 11:34:30 PM Header: Weight mapped with: weight
+INFO 08/18 11:34:30 PM Header: Hometown mapped with: town
+INFO 08/18 11:34:31 PM Header: Height mapped with: height
+INFO 08/18 11:34:31 PM Header: High school / college mapped with: collegeName
+INFO 08/18 11:34:32 PM Header: Commit date mapped with: commitDate
+INFO 08/18 11:34:36 PM Analyzing Akeem_Vargas
+INFO 08/18 11:34:37 PM Analyzing resource: Akeem_Vargas
+INFO 08/18 11:34:37 PM No Tables found for this resource.
+INFO 08/18 11:34:37 PM Analyzing Al_Vergara
+INFO 08/18 11:34:37 PM Analyzing resource: Al_Vergara
+INFO 08/18 11:34:37 PM No Tables found for this resource.
+INFO 08/18 11:34:37 PM Analyzing Alberto_Babo
+INFO 08/18 11:34:38 PM Analyzing resource: Alberto_Babo
+INFO 08/18 11:34:38 PM No Tables found for this resource.
+INFO 08/18 11:34:38 PM Analyzing Alex_Groza
+INFO 08/18 11:34:38 PM Analyzing resource: Alex_Groza
+INFO 08/18 11:34:38 PM No Tables found for this resource.
+INFO 08/18 11:34:38 PM Analyzing Alison_Bales
+INFO 08/18 11:34:38 PM Analyzing resource: Alison_Bales
+INFO 08/18 11:34:38 PM Table under section: Duke statistics
+INFO 08/18 11:34:38 PM Headers Found
+INFO 08/18 11:34:38 PM Data refined
+INFO 08/18 11:34:38 PM Rows extracted: 5
+INFO 08/18 11:34:38 PM Data extracted for this table: 58
+INFO 08/18 11:34:38 PM Deleted row 5  of table Duke statistics because it looks like as summary row.
+INFO 08/18 11:34:38 PM Header: Duke statistics mapped with: statistics
+INFO 08/18 11:34:38 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:38 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:38 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:38 PM Header: Year mapped with: Year
+INFO 08/18 11:34:39 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:39 PM Header: Points mapped with: pointsPerGame
+INFO 08/18 11:34:39 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:39 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:39 PM Header: Team mapped with: team
+INFO 08/18 11:34:39 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:39 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:39 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:39 PM Analyzing Andrew_Smith_(basketball)
+INFO 08/18 11:34:40 PM Analyzing resource: Andrew_Smith_(basketball)
+INFO 08/18 11:34:40 PM No Tables found for this resource.
+INFO 08/18 11:34:40 PM Analyzing Andrew_Wiggins
+INFO 08/18 11:34:40 PM Analyzing resource: Andrew_Wiggins
+INFO 08/18 11:34:40 PM Table under section: High school career
+INFO 08/18 11:34:40 PM Headers Found
+INFO 08/18 11:34:40 PM Data refined
+INFO 08/18 11:34:40 PM Rows extracted: 7
+INFO 08/18 11:34:40 PM Data extracted for this table: 37
+INFO 08/18 11:34:40 PM Header: High school career mapped with: highSchoolCareer
+INFO 08/18 11:34:40 PM Header: Name mapped with: Name
+INFO 08/18 11:34:41 PM Header: Weight mapped with: weight
+INFO 08/18 11:34:41 PM Header: Hometown mapped with: town
+INFO 08/18 11:34:41 PM Header: Height mapped with: height
+INFO 08/18 11:34:41 PM Header: High school / college mapped with: collegeName
+INFO 08/18 11:34:41 PM Header: Commit date mapped with: commitDate
+INFO 08/18 11:34:50 PM Table under section: College statistics
+INFO 08/18 11:34:50 PM Headers Found
+INFO 08/18 11:34:50 PM Data refined
+INFO 08/18 11:34:50 PM Rows extracted: 1
+INFO 08/18 11:34:50 PM Data extracted for this table: 13
+INFO 08/18 11:34:50 PM Header: College statistics mapped with: collegeStatistics
+INFO 08/18 11:34:50 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:50 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:50 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:50 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:50 PM Header: Year mapped with: Year
+INFO 08/18 11:34:50 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:50 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:50 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:50 PM Header: Team mapped with: team
+INFO 08/18 11:34:50 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:50 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:50 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:50 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:50 PM Table under section: Regular season
+INFO 08/18 11:34:50 PM Headers Found
+INFO 08/18 11:34:50 PM Data refined
+INFO 08/18 11:34:50 PM Rows extracted: 4
+INFO 08/18 11:34:50 PM Data extracted for this table: 52
+INFO 08/18 11:34:50 PM Deleted row 4  of table Regular season because it looks like as summary row.
+INFO 08/18 11:34:50 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:34:50 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:50 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:50 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:50 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:50 PM Header: Year mapped with: Year
+INFO 08/18 11:34:50 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:50 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:50 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:50 PM Header: Team mapped with: team
+INFO 08/18 11:34:50 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:50 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:50 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:50 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:50 PM Analyzing Andy_Duncan_(basketball)
+INFO 08/18 11:34:50 PM Analyzing resource: Andy_Duncan_(basketball)
+INFO 08/18 11:34:50 PM Table under section: Regular season
+INFO 08/18 11:34:50 PM Headers Found
+INFO 08/18 11:34:50 PM Data refined
+INFO 08/18 11:34:50 PM Rows extracted: 4
+INFO 08/18 11:34:50 PM Data extracted for this table: 28
+INFO 08/18 11:34:50 PM Deleted row 4  of table Regular season because it looks like as summary row.
+INFO 08/18 11:34:50 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:34:50 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:50 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:50 PM Header: Year mapped with: Year
+INFO 08/18 11:34:50 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:50 PM Header: Team mapped with: team
+INFO 08/18 11:34:51 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:51 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:51 PM Table under section: Playoffs
+INFO 08/18 11:34:51 PM Headers Found
+INFO 08/18 11:34:51 PM Data refined
+INFO 08/18 11:34:51 PM Rows extracted: 3
+INFO 08/18 11:34:51 PM Data extracted for this table: 21
+INFO 08/18 11:34:51 PM Deleted row 3  of table Playoffs because it looks like as summary row.
+INFO 08/18 11:34:51 PM Header: Playoffs mapped with: playoff
+INFO 08/18 11:34:51 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:51 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:51 PM Header: Year mapped with: Year
+INFO 08/18 11:34:51 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:51 PM Header: Team mapped with: team
+INFO 08/18 11:34:51 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:51 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:51 PM Analyzing Anthony_Roberson
+INFO 08/18 11:34:51 PM Analyzing resource: Anthony_Roberson
+INFO 08/18 11:34:51 PM Table under section: Regular season
+INFO 08/18 11:34:51 PM Headers Found
+INFO 08/18 11:34:51 PM Data refined
+INFO 08/18 11:34:51 PM Rows extracted: 5
+INFO 08/18 11:34:51 PM Data extracted for this table: 64
+INFO 08/18 11:34:51 PM Deleted row 3  of table Regular season because it looks like as summary row.
+INFO 08/18 11:34:51 PM Deleted row 3  of table Regular season because it looks like as summary row.
+INFO 08/18 11:34:51 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:34:51 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:51 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:51 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:51 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:51 PM Header: Year mapped with: Year
+INFO 08/18 11:34:51 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:51 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:51 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:51 PM Header: Team mapped with: team
+INFO 08/18 11:34:51 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:51 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:51 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:51 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:51 PM Table under section: Playoffs
+INFO 08/18 11:34:51 PM Headers Found
+INFO 08/18 11:34:51 PM Data refined
+INFO 08/18 11:34:51 PM Rows extracted: 2
+INFO 08/18 11:34:51 PM Data extracted for this table: 25
+INFO 08/18 11:34:51 PM Deleted row 2  of table Playoffs because it looks like as summary row.
+INFO 08/18 11:34:51 PM Header: Playoffs mapped with: playoff
+INFO 08/18 11:34:51 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:51 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:51 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:51 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:51 PM Header: Year mapped with: Year
+INFO 08/18 11:34:51 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:51 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:51 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:51 PM Header: Team mapped with: team
+INFO 08/18 11:34:52 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:52 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:52 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:52 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:52 PM Analyzing Anthony_Stewart_(basketball)
+INFO 08/18 11:34:52 PM Analyzing resource: Anthony_Stewart_(basketball)
+INFO 08/18 11:34:52 PM No Tables found for this resource.
+INFO 08/18 11:34:52 PM Analyzing Antonio_Davis
+INFO 08/18 11:34:52 PM Analyzing resource: Antonio_Davis
+INFO 08/18 11:34:52 PM No Tables found for this resource.
+INFO 08/18 11:34:52 PM Analyzing Antonio_Latimer
+INFO 08/18 11:34:53 PM Analyzing resource: Antonio_Latimer
+INFO 08/18 11:34:53 PM No Tables found for this resource.
+INFO 08/18 11:34:53 PM Analyzing Antonio_McDyess
+INFO 08/18 11:34:53 PM Analyzing resource: Antonio_McDyess
+INFO 08/18 11:34:53 PM Table under section: Regular season
+INFO 08/18 11:34:53 PM Headers Found
+INFO 08/18 11:34:53 PM Data refined
+INFO 08/18 11:34:53 PM Rows extracted: 18
+INFO 08/18 11:34:53 PM Data extracted for this table: 234
+INFO 08/18 11:34:53 PM Deleted row 17  of table Regular season because it looks like as summary row.
+INFO 08/18 11:34:53 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:34:53 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:53 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:53 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:53 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:53 PM Header: Year mapped with: Year
+INFO 08/18 11:34:53 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:53 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:53 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:53 PM Header: Team mapped with: team
+INFO 08/18 11:34:53 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:53 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:53 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:53 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:54 PM Table under section: Playoffs
+INFO 08/18 11:34:54 PM Headers Found
+INFO 08/18 11:34:54 PM Data refined
+INFO 08/18 11:34:54 PM Rows extracted: 9
+INFO 08/18 11:34:54 PM Data extracted for this table: 117
+INFO 08/18 11:34:54 PM Deleted row 9  of table Playoffs because it looks like as summary row.
+INFO 08/18 11:34:54 PM Header: Playoffs mapped with: playoff
+INFO 08/18 11:34:54 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:34:54 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:34:54 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:34:54 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:34:54 PM Header: Year mapped with: Year
+INFO 08/18 11:34:54 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:34:54 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:34:54 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:34:54 PM Header: Team mapped with: team
+INFO 08/18 11:34:54 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:34:54 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:34:54 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:34:54 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:34:54 PM Analyzing Ben_Davis_(basketball)
+INFO 08/18 11:34:54 PM Analyzing resource: Ben_Davis_(basketball)
+INFO 08/18 11:34:54 PM No Tables found for this resource.
+INFO 08/18 11:34:54 PM Analyzing Bill_Allen_(basketball)
+INFO 08/18 11:34:55 PM Analyzing resource: Bill_Allen_(basketball)
+INFO 08/18 11:34:55 PM No Tables found for this resource.
+INFO 08/18 11:34:55 PM Analyzing Bill_Berry_(basketball)
+INFO 08/18 11:34:55 PM Analyzing resource: Bill_Berry_(basketball)
+INFO 08/18 11:34:55 PM Table under section: College
+INFO 08/18 11:34:55 PM Headers Found
+INFO 08/18 11:34:55 PM Data refined
+INFO 08/18 11:34:55 PM Rows extracted: 16
+INFO 08/18 11:34:55 PM Data extracted for this table: 85
+INFO 08/18 11:34:55 PM Header: College mapped with: collegeStatistics
+INFO 08/18 11:34:55 PM Header: Conference mapped with: conference
+INFO 08/18 11:34:55 PM Header: Standing mapped with: standind
+INFO 08/18 11:34:55 PM Header: Season mapped with: season
+INFO 08/18 11:34:55 PM Header: Overall mapped with: overall
+INFO 08/18 11:34:55 PM Header: Team mapped with: team
+INFO 08/18 11:34:55 PM Header: Postseason mapped with: postseason
+INFO 08/18 11:34:59 PM Table under section: NBA
+INFO 08/18 11:34:59 PM Headers Found
+INFO 08/18 11:34:59 PM Data refined
+INFO 08/18 11:34:59 PM Rows extracted: 1
+INFO 08/18 11:34:59 PM Data extracted for this table: 12
+INFO 08/18 11:34:59 PM Header: NBA mapped with: nba
+INFO 08/18 11:34:59 PM Header: Result mapped with: result
+INFO 08/18 11:34:59 PM Header: Finish mapped with: gamesFinished
+INFO 08/18 11:35:00 PM Header: G mapped with: games
+INFO 08/18 11:35:00 PM Header: W.L% mapped with: winLoss
+INFO 08/18 11:35:00 PM Header: Team mapped with: team
+INFO 08/18 11:35:00 PM Header: L mapped with: gamesLost
+INFO 08/18 11:35:00 PM Header: PW.L% mapped with: playoffWinsLoss
+INFO 08/18 11:35:00 PM Header: PG mapped with: playoffGames
+INFO 08/18 11:35:00 PM Header: W mapped with: gamesWin
+INFO 08/18 11:35:00 PM Header: Year mapped with: Year
+INFO 08/18 11:35:00 PM Header: PL mapped with: playoffLosses
+INFO 08/18 11:35:00 PM Header: PW mapped with: playoffWins
+INFO 08/18 11:35:00 PM Analyzing Bill_Blair_(basketball)
+INFO 08/18 11:35:00 PM Analyzing resource: Bill_Blair_(basketball)
+INFO 08/18 11:35:00 PM Table under section: College
+INFO 08/18 11:35:00 PM Headers Found
+INFO 08/18 11:35:00 PM Data refined
+INFO 08/18 11:35:00 PM Rows extracted: 18
+INFO 08/18 11:35:00 PM Data extracted for this table: 95
+INFO 08/18 11:35:00 PM Header: College mapped with: collegeStatistics
+INFO 08/18 11:35:00 PM Header: Conference mapped with: conference
+INFO 08/18 11:35:00 PM Header: Standing mapped with: standind
+INFO 08/18 11:35:00 PM Header: Season mapped with: season
+INFO 08/18 11:35:00 PM Header: Overall mapped with: overall
+INFO 08/18 11:35:00 PM Header: Team mapped with: team
+INFO 08/18 11:35:00 PM Header: Postseason mapped with: postseason
+INFO 08/18 11:35:05 PM Table under section: NBA
+INFO 08/18 11:35:05 PM Headers Found
+INFO 08/18 11:35:05 PM Data refined
+INFO 08/18 11:35:05 PM Rows extracted: 4
+INFO 08/18 11:35:05 PM Data extracted for this table: 45
+INFO 08/18 11:35:05 PM Deleted row 4  of table NBA because it looks like as summary row.
+INFO 08/18 11:35:05 PM Header: NBA mapped with: nba
+INFO 08/18 11:35:05 PM Header: Result mapped with: result
+INFO 08/18 11:35:05 PM Header: Finish mapped with: gamesFinished
+INFO 08/18 11:35:05 PM Header: G mapped with: games
+INFO 08/18 11:35:05 PM Header: W.L% mapped with: winLoss
+INFO 08/18 11:35:05 PM Header: Team mapped with: team
+INFO 08/18 11:35:05 PM Header: L mapped with: gamesLost
+INFO 08/18 11:35:05 PM Header: PW.L% mapped with: playoffWinsLoss
+INFO 08/18 11:35:05 PM Header: PG mapped with: playoffGames
+INFO 08/18 11:35:05 PM Header: W mapped with: gamesWin
+INFO 08/18 11:35:05 PM Header: Year mapped with: Year
+INFO 08/18 11:35:05 PM Header: PL mapped with: playoffLosses
+INFO 08/18 11:35:05 PM Header: PW mapped with: playoffWins
+INFO 08/18 11:35:05 PM Analyzing Billy_Thompson_(basketball)
+INFO 08/18 11:35:06 PM Analyzing resource: Billy_Thompson_(basketball)
+INFO 08/18 11:35:06 PM No Tables found for this resource.
+INFO 08/18 11:35:06 PM Analyzing Bob_Kinney
+INFO 08/18 11:35:06 PM Analyzing resource: Bob_Kinney
+INFO 08/18 11:35:06 PM No Tables found for this resource.
+INFO 08/18 11:35:06 PM Analyzing Bobby_Brown_(basketball)
+INFO 08/18 11:35:07 PM Analyzing resource: Bobby_Brown_(basketball)
+INFO 08/18 11:35:07 PM Table under section: Career statistics
+DEBUG 08/18 11:35:07 PM  E2 Unable to find headers - resource: Bobby_Brown_(basketball)
+INFO 08/18 11:35:07 PM Table under section: NBA
+INFO 08/18 11:35:07 PM Headers Found
+INFO 08/18 11:35:07 PM Data refined
+INFO 08/18 11:35:07 PM Rows extracted: 6
+INFO 08/18 11:35:07 PM Data extracted for this table: 77
+INFO 08/18 11:35:07 PM Deleted row 6  of table NBA because it looks like as summary row.
+INFO 08/18 11:35:07 PM Header: NBA mapped with: nba
+INFO 08/18 11:35:07 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:07 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:07 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:07 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:07 PM Header: Year mapped with: Year
+INFO 08/18 11:35:07 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:07 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:07 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:07 PM Header: Team mapped with: team
+INFO 08/18 11:35:07 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:07 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:07 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:07 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:07 PM Table under section: Playoffs
+INFO 08/18 11:35:07 PM Headers Found
+INFO 08/18 11:35:07 PM Data refined
+INFO 08/18 11:35:07 PM Rows extracted: 2
+INFO 08/18 11:35:07 PM Data extracted for this table: 26
+INFO 08/18 11:35:07 PM Deleted row 2  of table Playoffs because it looks like as summary row.
+INFO 08/18 11:35:07 PM Header: Playoffs mapped with: playoff
+INFO 08/18 11:35:07 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:07 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:07 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:07 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:07 PM Header: Year mapped with: Year
+INFO 08/18 11:35:07 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:07 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:07 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:07 PM Header: Team mapped with: team
+INFO 08/18 11:35:07 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:07 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:07 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:07 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:07 PM Table under section: EuroLeague
+INFO 08/18 11:35:07 PM Headers Found
+INFO 08/18 11:35:07 PM Data refined
+INFO 08/18 11:35:07 PM Rows extracted: 3
+INFO 08/18 11:35:07 PM Data extracted for this table: 41
+INFO 08/18 11:35:07 PM Deleted row 3  of table EuroLeague because it looks like as summary row.
+INFO 08/18 11:35:07 PM Header: EuroLeague mapped with: league
+INFO 08/18 11:35:07 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:07 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:07 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:07 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:07 PM Header: Year mapped with: Year
+INFO 08/18 11:35:07 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:07 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:07 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:07 PM Header: Team mapped with: team
+INFO 08/18 11:35:07 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:07 PM Header: PIR mapped with: performanceIndex
+INFO 08/18 11:35:07 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:07 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:07 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:07 PM Analyzing Bobby_Parks
+INFO 08/18 11:35:08 PM Analyzing resource: Bobby_Parks
+INFO 08/18 11:35:08 PM No Tables found for this resource.
+INFO 08/18 11:35:08 PM Analyzing Bobby_Ray_Parks_Jr.
+INFO 08/18 11:35:08 PM Analyzing resource: Bobby_Ray_Parks_Jr.
+INFO 08/18 11:35:08 PM Table under section: Regular season
+INFO 08/18 11:35:08 PM Headers Found
+INFO 08/18 11:35:08 PM Data refined
+INFO 08/18 11:35:08 PM Rows extracted: 2
+INFO 08/18 11:35:08 PM Data extracted for this table: 25
+INFO 08/18 11:35:08 PM Deleted row 2  of table Regular season because it looks like as summary row.
+INFO 08/18 11:35:08 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:35:08 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:08 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:08 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:08 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:08 PM Header: Year mapped with: Year
+INFO 08/18 11:35:08 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:08 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:08 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:08 PM Header: Team mapped with: team
+INFO 08/18 11:35:08 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:08 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:08 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:08 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:08 PM Analyzing Brett_Maher
+INFO 08/18 11:35:09 PM Analyzing resource: Brett_Maher
+INFO 08/18 11:35:09 PM Table under section: Honour roll
+INFO 08/18 11:35:09 PM Headers Found
+INFO 08/18 11:35:09 PM Data refined
+INFO 08/18 11:35:09 PM Rows extracted: 16
+INFO 08/18 11:35:09 PM Data extracted for this table: 16
+INFO 08/18 11:35:09 PM Header: Honour roll mapped with: honourRoll
+INFO 08/18 11:35:09 PM Header: NBL career: mapped with: nblCareer
+INFO 08/18 11:35:11 PM Table under section: NBL career stats
+DEBUG 08/18 11:35:11 PM  E2 Unable to find headers - resource: Brett_Maher
+INFO 08/18 11:35:11 PM Table under section: NBL career stats
+INFO 08/18 11:35:11 PM Headers Found
+INFO 08/18 11:35:11 PM Data refined
+INFO 08/18 11:35:11 PM Rows extracted: 19
+INFO 08/18 11:35:11 PM Data extracted for this table: 247
+INFO 08/18 11:35:11 PM Header: NBL career stats mapped with: nbl
+INFO 08/18 11:35:11 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:11 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:11 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:11 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:11 PM Header: Year mapped with: Year
+INFO 08/18 11:35:11 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:11 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:11 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:11 PM Header: Team mapped with: team
+INFO 08/18 11:35:11 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:11 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:11 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:11 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:11 PM Analyzing Brett_Wheeler
+INFO 08/18 11:35:11 PM Analyzing resource: Brett_Wheeler
+INFO 08/18 11:35:11 PM Table under section: Honour roll
+INFO 08/18 11:35:11 PM Headers Found
+INFO 08/18 11:35:11 PM Data refined
+INFO 08/18 11:35:11 PM Rows extracted: 8
+INFO 08/18 11:35:11 PM Data extracted for this table: 8
+INFO 08/18 11:35:11 PM Header: Honour roll mapped with: honourRoll
+INFO 08/18 11:35:11 PM Header: NBL career: mapped with: nblCareer
+INFO 08/18 11:35:12 PM Table under section: NBL career stats
+INFO 08/18 11:35:12 PM Headers Found
+INFO 08/18 11:35:12 PM Data refined
+INFO 08/18 11:35:12 PM Rows extracted: 18
+INFO 08/18 11:35:12 PM Data extracted for this table: 18
+INFO 08/18 11:35:12 PM Header: NBL career stats mapped with: nbl
+INFO 08/18 11:35:12 PM Header: Games: mapped with: games
+INFO 08/18 11:35:15 PM Analyzing Brian_Hill_(basketball)
+INFO 08/18 11:35:15 PM Analyzing resource: Brian_Hill_(basketball)
+INFO 08/18 11:35:15 PM Table under section: College
+INFO 08/18 11:35:15 PM Headers Found
+INFO 08/18 11:35:15 PM Data refined
+INFO 08/18 11:35:15 PM Rows extracted: 12
+INFO 08/18 11:35:15 PM Data extracted for this table: 57
+INFO 08/18 11:35:15 PM Header: College mapped with: collegeStatistics
+INFO 08/18 11:35:15 PM Header: Conference mapped with: conference
+INFO 08/18 11:35:15 PM Header: Standing mapped with: standind
+INFO 08/18 11:35:15 PM Header: Season mapped with: season
+INFO 08/18 11:35:15 PM Header: Overall mapped with: overall
+INFO 08/18 11:35:15 PM Header: Team mapped with: team
+INFO 08/18 11:35:15 PM Header: Postseason mapped with: postseason
+INFO 08/18 11:35:16 PM Table under section: NBA
+INFO 08/18 11:35:16 PM Headers Found
+INFO 08/18 11:35:16 PM Data refined
+INFO 08/18 11:35:16 PM Rows extracted: 10
+INFO 08/18 11:35:16 PM Data extracted for this table: 117
+INFO 08/18 11:35:16 PM Deleted row 10  of table NBA because it looks like as summary row.
+INFO 08/18 11:35:16 PM Header: NBA mapped with: nba
+INFO 08/18 11:35:16 PM Header: Result mapped with: result
+INFO 08/18 11:35:16 PM Header: Finish mapped with: gamesFinished
+INFO 08/18 11:35:16 PM Header: G mapped with: games
+INFO 08/18 11:35:16 PM Header: W.L% mapped with: winLoss
+INFO 08/18 11:35:16 PM Header: Team mapped with: team
+INFO 08/18 11:35:17 PM Header: L mapped with: gamesLost
+INFO 08/18 11:35:17 PM Header: PW.L% mapped with: playoffWinsLoss
+INFO 08/18 11:35:17 PM Header: PG mapped with: playoffGames
+INFO 08/18 11:35:17 PM Header: W mapped with: gamesWin
+INFO 08/18 11:35:17 PM Header: Year mapped with: Year
+INFO 08/18 11:35:17 PM Header: PL mapped with: playoffLosses
+INFO 08/18 11:35:17 PM Header: PW mapped with: playoffWins
+INFO 08/18 11:35:18 PM Analyzing Brock_Gillespie
+INFO 08/18 11:35:18 PM Analyzing resource: Brock_Gillespie
+INFO 08/18 11:35:18 PM No Tables found for this resource.
+INFO 08/18 11:35:18 PM Analyzing Bruce_Douglas_(basketball)
+INFO 08/18 11:35:19 PM Analyzing resource: Bruce_Douglas_(basketball)
+INFO 08/18 11:35:19 PM No Tables found for this resource.
+INFO 08/18 11:35:19 PM Analyzing Bryan_Smithson
+INFO 08/18 11:35:19 PM Analyzing resource: Bryan_Smithson
+INFO 08/18 11:35:19 PM No Tables found for this resource.
+INFO 08/18 11:35:19 PM Analyzing Cameron_Bairstow
+INFO 08/18 11:35:20 PM Analyzing resource: Cameron_Bairstow
+INFO 08/18 11:35:20 PM Table under section: International statistics
+INFO 08/18 11:35:20 PM Headers Found
+INFO 08/18 11:35:20 PM Data refined
+INFO 08/18 11:35:20 PM Rows extracted: 4
+INFO 08/18 11:35:20 PM Data extracted for this table: 16
+INFO 08/18 11:35:20 PM Header: International statistics mapped with: statistics
+INFO 08/18 11:35:20 PM Header: Rebounds per game mapped with: reboundsPerGame
+INFO 08/18 11:35:20 PM Header: Assists per game mapped with: assistsPerGame
+INFO 08/18 11:35:20 PM Header: Tournament mapped with: Tournament
+INFO 08/18 11:35:20 PM Header: Points per game mapped with: pointsPerGame
+INFO 08/18 11:35:21 PM Table under section: Regular season
+INFO 08/18 11:35:21 PM Headers Found
+INFO 08/18 11:35:21 PM Data refined
+INFO 08/18 11:35:21 PM Rows extracted: 3
+INFO 08/18 11:35:21 PM Data extracted for this table: 39
+INFO 08/18 11:35:21 PM Deleted row 3  of table Regular season because it looks like as summary row.
+INFO 08/18 11:35:21 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:35:21 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:21 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:21 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:21 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:21 PM Header: Year mapped with: Year
+INFO 08/18 11:35:21 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:21 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:21 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:21 PM Header: Team mapped with: team
+INFO 08/18 11:35:21 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:21 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:21 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:21 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:21 PM Analyzing Chantelle_Anderson
+INFO 08/18 11:35:21 PM Analyzing resource: Chantelle_Anderson
+INFO 08/18 11:35:21 PM Table under section: Vanderbilt statistics
+INFO 08/18 11:35:21 PM Headers Found
+INFO 08/18 11:35:21 PM Data refined
+INFO 08/18 11:35:21 PM Rows extracted: 5
+INFO 08/18 11:35:21 PM Data extracted for this table: 59
+INFO 08/18 11:35:21 PM Deleted row 5  of table Vanderbilt statistics because it looks like as summary row.
+INFO 08/18 11:35:21 PM Header: Vanderbilt statistics mapped with: statistics
+INFO 08/18 11:35:21 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:21 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:21 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:21 PM Header: Year mapped with: Year
+INFO 08/18 11:35:22 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:22 PM Header: Points mapped with: pointsPerGame
+INFO 08/18 11:35:22 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:22 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:22 PM Header: Team mapped with: team
+INFO 08/18 11:35:22 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:22 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:22 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:22 PM Analyzing Cheryl_Ford
+INFO 08/18 11:35:23 PM Analyzing resource: Cheryl_Ford
+INFO 08/18 11:35:23 PM Table under section: Louisiana Tech statistics
+INFO 08/18 11:35:23 PM Headers Found
+INFO 08/18 11:35:23 PM Data refined
+INFO 08/18 11:35:23 PM Rows extracted: 5
+INFO 08/18 11:35:23 PM Data extracted for this table: 56
+INFO 08/18 11:35:23 PM Deleted row 5  of table Louisiana Tech statistics because it looks like as summary row.
+INFO 08/18 11:35:23 PM Header: Louisiana Tech statistics mapped with: statistics
+INFO 08/18 11:35:23 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:23 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:23 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:23 PM Header: Year mapped with: Year
+INFO 08/18 11:35:23 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:23 PM Header: Points mapped with: pointsPerGame
+INFO 08/18 11:35:23 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:23 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:23 PM Header: Team mapped with: team
+INFO 08/18 11:35:23 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:23 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:23 PM Analyzing Cheryl_Miller
+INFO 08/18 11:35:23 PM Analyzing resource: Cheryl_Miller
+INFO 08/18 11:35:23 PM No Tables found for this resource.
+INFO 08/18 11:35:23 PM Analyzing Chris_Jefferies
+INFO 08/18 11:35:24 PM Analyzing resource: Chris_Jefferies
+INFO 08/18 11:35:24 PM No Tables found for this resource.
+INFO 08/18 11:35:24 PM Analyzing Chris_Lofton
+INFO 08/18 11:35:24 PM Analyzing resource: Chris_Lofton
+INFO 08/18 11:35:24 PM No Tables found for this resource.
+INFO 08/18 11:35:24 PM Analyzing Chris_Warren_(basketball,_born_1981)
+INFO 08/18 11:35:25 PM Analyzing resource: Chris_Warren_(basketball,_born_1981)
+INFO 08/18 11:35:25 PM Table under section: College
+INFO 08/18 11:35:25 PM Headers Found
+INFO 08/18 11:35:25 PM Data refined
+INFO 08/18 11:35:25 PM Rows extracted: 3
+INFO 08/18 11:35:25 PM Data extracted for this table: 38
+INFO 08/18 11:35:25 PM Deleted row 3  of table College because it looks like as summary row.
+INFO 08/18 11:35:25 PM Header: College mapped with: collegeStatistics
+INFO 08/18 11:35:25 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:25 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:25 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:25 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:25 PM Header: Year mapped with: Year
+INFO 08/18 11:35:25 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:25 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:25 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:25 PM Header: Team mapped with: team
+INFO 08/18 11:35:25 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:25 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:25 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:25 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:25 PM Table under section: Euroleague
+INFO 08/18 11:35:25 PM Headers Found
+INFO 08/18 11:35:25 PM Data refined
+INFO 08/18 11:35:25 PM Rows extracted: 5
+INFO 08/18 11:35:25 PM Data extracted for this table: 69
+INFO 08/18 11:35:25 PM Deleted row 5  of table Euroleague because it looks like as summary row.
+INFO 08/18 11:35:25 PM Header: Euroleague mapped with: league
+INFO 08/18 11:35:25 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:25 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:25 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:25 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:25 PM Header: Year mapped with: Year
+INFO 08/18 11:35:25 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:25 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:25 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:25 PM Header: Team mapped with: team
+INFO 08/18 11:35:25 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:25 PM Header: PIR mapped with: performanceIndex
+INFO 08/18 11:35:25 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:25 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:25 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:25 PM Table under section: Eurocup
+INFO 08/18 11:35:25 PM Headers Found
+INFO 08/18 11:35:25 PM Data refined
+INFO 08/18 11:35:25 PM Rows extracted: 3
+INFO 08/18 11:35:25 PM Data extracted for this table: 41
+INFO 08/18 11:35:25 PM Deleted row 3  of table Eurocup because it looks like as summary row.
+INFO 08/18 11:35:25 PM Header: Eurocup mapped with: euroCup
+INFO 08/18 11:35:25 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:25 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:25 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:25 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:25 PM Header: Year mapped with: Year
+INFO 08/18 11:35:25 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:25 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:25 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:25 PM Header: Team mapped with: team
+INFO 08/18 11:35:25 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:25 PM Header: PIR mapped with: performanceIndex
+INFO 08/18 11:35:25 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:25 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:25 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:26 PM Analyzing Chris_Warren_(basketball,_born_1988)
+INFO 08/18 11:35:26 PM Analyzing resource: Chris_Warren_(basketball,_born_1988)
+INFO 08/18 11:35:26 PM No Tables found for this resource.
+INFO 08/18 11:35:26 PM Analyzing Christopher_McNaughton
+INFO 08/18 11:35:26 PM Analyzing resource: Christopher_McNaughton
+INFO 08/18 11:35:26 PM No Tables found for this resource.
+INFO 08/18 11:35:26 PM Analyzing Corey_Williams_(basketball,_born_1970)
+INFO 08/18 11:35:27 PM Analyzing resource: Corey_Williams_(basketball,_born_1970)
+INFO 08/18 11:35:27 PM Table under section: Head coaching record
+INFO 08/18 11:35:27 PM Headers Found
+INFO 08/18 11:35:27 PM Data refined
+INFO 08/18 11:35:27 PM Rows extracted: 10
+INFO 08/18 11:35:27 PM Data extracted for this table: 52
+INFO 08/18 11:35:27 PM Header: Head coaching record mapped with: headCoaching
+INFO 08/18 11:35:27 PM Header: Conference mapped with: conference
+INFO 08/18 11:35:27 PM Header: Standing mapped with: standind
+INFO 08/18 11:35:27 PM Header: Season mapped with: season
+INFO 08/18 11:35:27 PM Header: Overall mapped with: overall
+INFO 08/18 11:35:27 PM Header: Team mapped with: team
+INFO 08/18 11:35:27 PM Header: Postseason mapped with: postseason
+INFO 08/18 11:35:30 PM Analyzing Corey_Williams_(basketball,_born_1977)
+INFO 08/18 11:35:30 PM Analyzing resource: Corey_Williams_(basketball,_born_1977)
+INFO 08/18 11:35:30 PM No Tables found for this resource.
+INFO 08/18 11:35:30 PM Analyzing D'Angelo_Russell
+INFO 08/18 11:35:31 PM Analyzing resource: D'Angelo_Russell
+INFO 08/18 11:35:31 PM Table under section: College statistics
+INFO 08/18 11:35:31 PM Headers Found
+INFO 08/18 11:35:31 PM Data refined
+INFO 08/18 11:35:31 PM Rows extracted: 1
+INFO 08/18 11:35:31 PM Data extracted for this table: 13
+INFO 08/18 11:35:31 PM Header: College statistics mapped with: collegeStatistics
+INFO 08/18 11:35:31 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:31 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:31 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:31 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:31 PM Header: Year mapped with: Year
+INFO 08/18 11:35:31 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:31 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:31 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:31 PM Header: Team mapped with: team
+INFO 08/18 11:35:31 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:31 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:31 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:31 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:31 PM Table under section: Regular season
+INFO 08/18 11:35:31 PM Headers Found
+INFO 08/18 11:35:31 PM Data refined
+INFO 08/18 11:35:31 PM Rows extracted: 3
+INFO 08/18 11:35:31 PM Data extracted for this table: 39
+INFO 08/18 11:35:31 PM Deleted row 3  of table Regular season because it looks like as summary row.
+INFO 08/18 11:35:31 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:35:31 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:31 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:31 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:31 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:31 PM Header: Year mapped with: Year
+INFO 08/18 11:35:31 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:31 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:31 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:31 PM Header: Team mapped with: team
+INFO 08/18 11:35:31 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:31 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:31 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:31 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:31 PM Analyzing D._J._Strawberry
+INFO 08/18 11:35:32 PM Analyzing resource: D._J._Strawberry
+INFO 08/18 11:35:32 PM Table under section: Regular season
+INFO 08/18 11:35:32 PM Headers Found
+INFO 08/18 11:35:32 PM Data refined
+INFO 08/18 11:35:32 PM Rows extracted: 2
+INFO 08/18 11:35:32 PM Data extracted for this table: 25
+INFO 08/18 11:35:32 PM Deleted row 2  of table Regular season because it looks like as summary row.
+INFO 08/18 11:35:32 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:35:32 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:32 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:32 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:32 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:32 PM Header: Year mapped with: Year
+INFO 08/18 11:35:32 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:32 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:32 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:32 PM Header: Team mapped with: team
+INFO 08/18 11:35:32 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:32 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:32 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:32 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:32 PM Table under section: Playoffs
+INFO 08/18 11:35:32 PM Headers Found
+INFO 08/18 11:35:32 PM Data refined
+INFO 08/18 11:35:32 PM Rows extracted: 2
+INFO 08/18 11:35:32 PM Data extracted for this table: 25
+INFO 08/18 11:35:32 PM Deleted row 2  of table Playoffs because it looks like as summary row.
+INFO 08/18 11:35:32 PM Header: Playoffs mapped with: playoff
+INFO 08/18 11:35:32 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:32 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:32 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:32 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:32 PM Header: Year mapped with: Year
+INFO 08/18 11:35:32 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:32 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:32 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:32 PM Header: Team mapped with: team
+INFO 08/18 11:35:32 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:32 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:32 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:32 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:32 PM Table under section: Domestic leagues
+INFO 08/18 11:35:32 PM Headers Found
+INFO 08/18 11:35:32 PM Data refined
+INFO 08/18 11:35:32 PM Rows extracted: 14
+INFO 08/18 11:35:32 PM Data extracted for this table: 182
+INFO 08/18 11:35:32 PM Header: Domestic leagues mapped with: league
+INFO 08/18 11:35:32 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:32 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:32 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:32 PM Header: League mapped with: nameLeague
+INFO 08/18 11:35:32 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:32 PM Header: Season mapped with: season
+INFO 08/18 11:35:32 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:32 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:32 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:32 PM Header: Team mapped with: team
+INFO 08/18 11:35:34 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:34 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:34 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:37 PM Analyzing Dan_Issel
+INFO 08/18 11:35:39 PM Analyzing resource: Dan_Issel
+INFO 08/18 11:35:39 PM Table under section: NBA
+INFO 08/18 11:35:39 PM Headers Found
+INFO 08/18 11:35:39 PM Data refined
+INFO 08/18 11:35:39 PM Rows extracted: 7
+INFO 08/18 11:35:39 PM Data extracted for this table: 82
+INFO 08/18 11:35:39 PM Deleted row 7  of table NBA because it looks like as summary row.
+INFO 08/18 11:35:39 PM Header: NBA mapped with: nba
+INFO 08/18 11:35:39 PM Header: Result mapped with: result
+INFO 08/18 11:35:40 PM Header: Finish mapped with: gamesFinished
+INFO 08/18 11:35:40 PM Header: G mapped with: games
+INFO 08/18 11:35:40 PM Header: W.L% mapped with: winLoss
+INFO 08/18 11:35:40 PM Header: Team mapped with: team
+INFO 08/18 11:35:40 PM Header: L mapped with: gamesLost
+INFO 08/18 11:35:40 PM Header: PW.L% mapped with: playoffWinsLoss
+INFO 08/18 11:35:40 PM Header: PG mapped with: playoffGames
+INFO 08/18 11:35:40 PM Header: W mapped with: gamesWin
+INFO 08/18 11:35:40 PM Header: Year mapped with: Year
+INFO 08/18 11:35:40 PM Header: PL mapped with: playoffLosses
+INFO 08/18 11:35:40 PM Header: PW mapped with: playoffWins
+INFO 08/18 11:35:42 PM Analyzing Dan_O'Sullivan
+INFO 08/18 11:35:44 PM Analyzing resource: Dan_O'Sullivan
+INFO 08/18 11:35:44 PM No Tables found for this resource.
+INFO 08/18 11:35:44 PM Analyzing Danijel_Jusup
+INFO 08/18 11:35:45 PM Analyzing resource: Danijel_Jusup
+INFO 08/18 11:35:45 PM No Tables found for this resource.
+INFO 08/18 11:35:45 PM Analyzing Darnell_Hillman
+INFO 08/18 11:35:46 PM Analyzing resource: Darnell_Hillman
+INFO 08/18 11:35:46 PM No Tables found for this resource.
+INFO 08/18 11:35:46 PM Analyzing Darren_Collison
+INFO 08/18 11:35:46 PM Analyzing resource: Darren_Collison
+INFO 08/18 11:35:46 PM Table under section: Regular season
+INFO 08/18 11:35:46 PM Headers Found
+INFO 08/18 11:35:46 PM Data refined
+INFO 08/18 11:35:46 PM Rows extracted: 9
+INFO 08/18 11:35:46 PM Data extracted for this table: 117
+INFO 08/18 11:35:46 PM Deleted row 9  of table Regular season because it looks like as summary row.
+INFO 08/18 11:35:46 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:35:46 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:46 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:46 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:46 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:46 PM Header: Year mapped with: Year
+INFO 08/18 11:35:46 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:46 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:46 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:46 PM Header: Team mapped with: team
+INFO 08/18 11:35:46 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:46 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:46 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:46 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:46 PM Table under section: Playoffs
+INFO 08/18 11:35:46 PM Headers Found
+INFO 08/18 11:35:46 PM Data refined
+INFO 08/18 11:35:46 PM Rows extracted: 4
+INFO 08/18 11:35:46 PM Data extracted for this table: 52
+INFO 08/18 11:35:46 PM Header: Playoffs mapped with: playoff
+INFO 08/18 11:35:46 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:46 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:46 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:46 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:46 PM Header: Year mapped with: Year
+INFO 08/18 11:35:46 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:46 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:46 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:46 PM Header: Team mapped with: team
+INFO 08/18 11:35:46 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:46 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:46 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:46 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:46 PM Analyzing Darren_Ng
+INFO 08/18 11:35:48 PM Analyzing resource: Darren_Ng
+INFO 08/18 11:35:48 PM No Tables found for this resource.
+INFO 08/18 11:35:48 PM Analyzing Dave_Wohl
+INFO 08/18 11:35:49 PM Analyzing resource: Dave_Wohl
+INFO 08/18 11:35:49 PM Table under section: Head Coaching Record
+INFO 08/18 11:35:49 PM Headers Found
+INFO 08/18 11:35:49 PM Data refined
+INFO 08/18 11:35:49 PM Rows extracted: 4
+INFO 08/18 11:35:49 PM Data extracted for this table: 46
+INFO 08/18 11:35:49 PM Deleted row 4  of table Head Coaching Record because it looks like as summary row.
+INFO 08/18 11:35:49 PM Header: Head Coaching Record mapped with: headCoaching
+INFO 08/18 11:35:49 PM Header: Result mapped with: result
+INFO 08/18 11:35:49 PM Header: Finish mapped with: gamesFinished
+INFO 08/18 11:35:49 PM Header: G mapped with: games
+INFO 08/18 11:35:49 PM Header: W.L% mapped with: winLoss
+INFO 08/18 11:35:49 PM Header: Team mapped with: team
+INFO 08/18 11:35:49 PM Header: L mapped with: gamesLost
+INFO 08/18 11:35:49 PM Header: PW.L% mapped with: playoffWinsLoss
+INFO 08/18 11:35:49 PM Header: PG mapped with: playoffGames
+INFO 08/18 11:35:49 PM Header: W mapped with: gamesWin
+INFO 08/18 11:35:49 PM Header: Year mapped with: Year
+INFO 08/18 11:35:49 PM Header: PL mapped with: playoffLosses
+INFO 08/18 11:35:49 PM Header: PW mapped with: playoffWins
+INFO 08/18 11:35:50 PM Analyzing David_Holston
+INFO 08/18 11:35:52 PM Analyzing resource: David_Holston
+INFO 08/18 11:35:52 PM No Tables found for this resource.
+INFO 08/18 11:35:52 PM Analyzing David_Kool
+INFO 08/18 11:35:52 PM Analyzing resource: David_Kool
+INFO 08/18 11:35:52 PM Table under section: Statistics
+INFO 08/18 11:35:52 PM Headers Found
+INFO 08/18 11:35:52 PM Data refined
+INFO 08/18 11:35:52 PM Rows extracted: 4
+INFO 08/18 11:35:52 PM Data extracted for this table: 88
+INFO 08/18 11:35:52 PM Header: Statistics mapped with: statistics
+INFO 08/18 11:35:52 PM Header: 3PM mapped with: 3pm
+INFO 08/18 11:35:52 PM Header: REB mapped with: reboundsPerGame
+INFO 08/18 11:35:52 PM Header: 3PA mapped with: 3pa
+INFO 08/18 11:35:52 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:52 PM Header: AST mapped with: assistsPerGame
+INFO 08/18 11:35:52 PM Header: FGM mapped with: fgm
+INFO 08/18 11:35:52 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:52 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:52 PM Header: PTS mapped with: pointsPerGame
+INFO 08/18 11:35:52 PM Header: FGA mapped with: fga
+INFO 08/18 11:35:52 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:52 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:52 PM Header: STL mapped with: stolePerGame
+INFO 08/18 11:35:52 PM Header: FTA mapped with: fta
+INFO 08/18 11:35:52 PM Header: BLK mapped with: blocksPerGame
+INFO 08/18 11:35:52 PM Header: Team mapped with: team
+INFO 08/18 11:35:53 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:53 PM Header: FTM mapped with: ftm
+INFO 08/18 11:35:53 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:53 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:53 PM Header: Year mapped with: Year
+INFO 08/18 11:35:53 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:53 PM Analyzing David_West_(basketball)
+INFO 08/18 11:35:54 PM Analyzing resource: David_West_(basketball)
+INFO 08/18 11:35:54 PM Table under section: NBA career statistics
+DEBUG 08/18 11:35:54 PM  E2 Unable to find headers - resource: David_West_(basketball)
+INFO 08/18 11:35:54 PM Table under section: College statistics
+INFO 08/18 11:35:54 PM Headers Found
+INFO 08/18 11:35:54 PM Data refined
+INFO 08/18 11:35:54 PM Rows extracted: 4
+INFO 08/18 11:35:54 PM Data extracted for this table: 52
+INFO 08/18 11:35:54 PM Header: College statistics mapped with: collegeStatistics
+INFO 08/18 11:35:54 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:54 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:54 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:54 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:54 PM Header: Year mapped with: Year
+INFO 08/18 11:35:54 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:54 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:54 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:54 PM Header: Team mapped with: team
+INFO 08/18 11:35:55 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:55 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:55 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:55 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:55 PM Table under section: Regular season
+INFO 08/18 11:35:55 PM Headers Found
+INFO 08/18 11:35:55 PM Data refined
+INFO 08/18 11:35:55 PM Rows extracted: 16
+INFO 08/18 11:35:55 PM Data extracted for this table: 208
+INFO 08/18 11:35:55 PM Deleted row 15  of table Regular season because it looks like as summary row.
+INFO 08/18 11:35:55 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:35:55 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:55 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:55 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:55 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:55 PM Header: Year mapped with: Year
+INFO 08/18 11:35:55 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:55 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:55 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:55 PM Header: Team mapped with: team
+INFO 08/18 11:35:55 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:55 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:55 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:55 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:55 PM Table under section: Playoffs
+INFO 08/18 11:35:55 PM Headers Found
+INFO 08/18 11:35:55 PM Data refined
+INFO 08/18 11:35:55 PM Rows extracted: 9
+INFO 08/18 11:35:55 PM Data extracted for this table: 117
+INFO 08/18 11:35:55 PM Deleted row 9  of table Playoffs because it looks like as summary row.
+INFO 08/18 11:35:55 PM Header: Playoffs mapped with: playoff
+INFO 08/18 11:35:55 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:55 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:55 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:55 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:55 PM Header: Year mapped with: Year
+INFO 08/18 11:35:55 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:55 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:55 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:55 PM Header: Team mapped with: team
+INFO 08/18 11:35:55 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:55 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:55 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:55 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:55 PM Analyzing David_Wood_(basketball)
+INFO 08/18 11:35:56 PM Analyzing resource: David_Wood_(basketball)
+INFO 08/18 11:35:56 PM No Tables found for this resource.
+INFO 08/18 11:35:56 PM Analyzing Deanna_Nolan
+INFO 08/18 11:35:57 PM Analyzing resource: Deanna_Nolan
+INFO 08/18 11:35:57 PM No Tables found for this resource.
+INFO 08/18 11:35:57 PM Analyzing Dennis_Smith_Jr.
+INFO 08/18 11:35:58 PM Analyzing resource: Dennis_Smith_Jr.
+INFO 08/18 11:35:58 PM Table under section: College statistics
+INFO 08/18 11:35:58 PM Headers Found
+INFO 08/18 11:35:58 PM Data refined
+INFO 08/18 11:35:58 PM Rows extracted: 1
+INFO 08/18 11:35:58 PM Data extracted for this table: 13
+INFO 08/18 11:35:58 PM Header: College statistics mapped with: collegeStatistics
+INFO 08/18 11:35:58 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:35:58 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:35:58 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:35:58 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:35:58 PM Header: Year mapped with: Year
+INFO 08/18 11:35:58 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:35:58 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:35:58 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:35:58 PM Header: Team mapped with: team
+INFO 08/18 11:35:58 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:35:58 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:35:58 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:35:58 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:35:58 PM Analyzing Denny_Fitzpatrick
+INFO 08/18 11:35:59 PM Analyzing resource: Denny_Fitzpatrick
+INFO 08/18 11:35:59 PM No Tables found for this resource.
+INFO 08/18 11:35:59 PM Analyzing Denzel_Bowles
+INFO 08/18 11:36:00 PM Analyzing resource: Denzel_Bowles
+INFO 08/18 11:36:00 PM No Tables found for this resource.
+INFO 08/18 11:36:00 PM Analyzing Derek_Smith_(basketball)
+INFO 08/18 11:36:02 PM Analyzing resource: Derek_Smith_(basketball)
+INFO 08/18 11:36:02 PM No Tables found for this resource.
+INFO 08/18 11:36:02 PM Analyzing Elisabeth_Pavel
+INFO 08/18 11:36:03 PM Analyzing resource: Elisabeth_Pavel
+INFO 08/18 11:36:03 PM No Tables found for this resource.
+INFO 08/18 11:36:03 PM Analyzing Eric_Anderson_(basketball)
+INFO 08/18 11:36:04 PM Analyzing resource: Eric_Anderson_(basketball)
+INFO 08/18 11:36:04 PM No Tables found for this resource.
+INFO 08/18 11:36:04 PM Analyzing Filiberto_Rivera
+INFO 08/18 11:36:05 PM Analyzing resource: Filiberto_Rivera
+INFO 08/18 11:36:05 PM No Tables found for this resource.
+INFO 08/18 11:36:05 PM Analyzing Frank_Johnson_(basketball)
+INFO 08/18 11:36:05 PM Analyzing resource: Frank_Johnson_(basketball)
+INFO 08/18 11:36:05 PM Table under section: Head coaching record
+INFO 08/18 11:36:05 PM Headers Found
+INFO 08/18 11:36:05 PM Data refined
+INFO 08/18 11:36:05 PM Rows extracted: 4
+INFO 08/18 11:36:05 PM Data extracted for this table: 45
+INFO 08/18 11:36:05 PM Deleted row 4  of table Head coaching record because it looks like as summary row.
+INFO 08/18 11:36:05 PM Header: Head coaching record mapped with: headCoaching
+INFO 08/18 11:36:05 PM Header: Result mapped with: result
+INFO 08/18 11:36:05 PM Header: Finish mapped with: gamesFinished
+INFO 08/18 11:36:05 PM Header: G mapped with: games
+INFO 08/18 11:36:05 PM Header: W.L% mapped with: winLoss
+INFO 08/18 11:36:05 PM Header: Team mapped with: team
+INFO 08/18 11:36:05 PM Header: L mapped with: gamesLost
+INFO 08/18 11:36:05 PM Header: PW.L% mapped with: playoffWinsLoss
+INFO 08/18 11:36:05 PM Header: PG mapped with: playoffGames
+INFO 08/18 11:36:05 PM Header: W mapped with: gamesWin
+INFO 08/18 11:36:05 PM Header: Year mapped with: Year
+INFO 08/18 11:36:05 PM Header: PL mapped with: playoffLosses
+INFO 08/18 11:36:05 PM Header: PW mapped with: playoffWins
+INFO 08/18 11:36:05 PM Analyzing Frank_Vogel
+INFO 08/18 11:36:08 PM Analyzing resource: Frank_Vogel
+INFO 08/18 11:36:08 PM Table under section: Head coaching record
+INFO 08/18 11:36:08 PM Headers Found
+INFO 08/18 11:36:08 PM Data refined
+INFO 08/18 11:36:08 PM Rows extracted: 8
+INFO 08/18 11:36:08 PM Data extracted for this table: 94
+INFO 08/18 11:36:08 PM Deleted row 8  of table Head coaching record because it looks like as summary row.
+INFO 08/18 11:36:08 PM Header: Head coaching record mapped with: headCoaching
+INFO 08/18 11:36:08 PM Header: Result mapped with: result
+INFO 08/18 11:36:09 PM Header: Finish mapped with: gamesFinished
+INFO 08/18 11:36:09 PM Header: G mapped with: games
+INFO 08/18 11:36:09 PM Header: W.L% mapped with: winLoss
+INFO 08/18 11:36:09 PM Header: Team mapped with: team
+INFO 08/18 11:36:09 PM Header: L mapped with: gamesLost
+INFO 08/18 11:36:09 PM Header: PW.L% mapped with: playoffWinsLoss
+INFO 08/18 11:36:09 PM Header: PG mapped with: playoffGames
+INFO 08/18 11:36:09 PM Header: W mapped with: gamesWin
+INFO 08/18 11:36:09 PM Header: Year mapped with: Year
+INFO 08/18 11:36:09 PM Header: PL mapped with: playoffLosses
+INFO 08/18 11:36:09 PM Header: PW mapped with: playoffWins
+INFO 08/18 11:36:11 PM Analyzing Fred_Scolari
+INFO 08/18 11:36:12 PM Analyzing resource: Fred_Scolari
+INFO 08/18 11:36:12 PM Table under section: Regular season
+INFO 08/18 11:36:12 PM Headers Found
+INFO 08/18 11:36:12 PM Data refined
+INFO 08/18 11:36:12 PM Rows extracted: 11
+INFO 08/18 11:36:12 PM Data extracted for this table: 99
+INFO 08/18 11:36:12 PM Deleted row 11  of table Regular season because it looks like as summary row.
+INFO 08/18 11:36:12 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:36:12 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:36:12 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:36:12 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:36:12 PM Header: Year mapped with: Year
+INFO 08/18 11:36:12 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:36:12 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:36:12 PM Header: Team mapped with: team
+INFO 08/18 11:36:13 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:36:13 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:36:14 PM Table under section: Playoffs
+INFO 08/18 11:36:14 PM Headers Found
+INFO 08/18 11:36:14 PM Data refined
+INFO 08/18 11:36:14 PM Rows extracted: 8
+INFO 08/18 11:36:14 PM Data extracted for this table: 72
+INFO 08/18 11:36:14 PM Header: Playoffs mapped with: playoff
+INFO 08/18 11:36:14 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:36:14 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:36:14 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:36:14 PM Header: Year mapped with: Year
+INFO 08/18 11:36:14 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:36:14 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:36:14 PM Header: Team mapped with: team
+INFO 08/18 11:36:14 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:36:14 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:36:14 PM Analyzing Gary_Alexander_(basketball)
+INFO 08/18 11:36:15 PM Analyzing resource: Gary_Alexander_(basketball)
+INFO 08/18 11:36:15 PM No Tables found for this resource.
+INFO 08/18 11:36:15 PM Analyzing George_Wilson_(basketball,_born_1942)
+INFO 08/18 11:36:16 PM Analyzing resource: George_Wilson_(basketball,_born_1942)
+INFO 08/18 11:36:16 PM No Tables found for this resource.
+INFO 08/18 11:36:16 PM Analyzing Glen_Davis_(basketball)
+INFO 08/18 11:36:17 PM Analyzing resource: Glen_Davis_(basketball)
+INFO 08/18 11:36:17 PM Table under section: NBA career statistics
+DEBUG 08/18 11:36:17 PM  E2 Unable to find headers - resource: Glen_Davis_(basketball)
+INFO 08/18 11:36:17 PM Table under section: Regular season
+INFO 08/18 11:36:17 PM Headers Found
+INFO 08/18 11:36:17 PM Data refined
+INFO 08/18 11:36:17 PM Rows extracted: 10
+INFO 08/18 11:36:17 PM Data extracted for this table: 130
+INFO 08/18 11:36:17 PM Deleted row 10  of table Regular season because it looks like as summary row.
+INFO 08/18 11:36:17 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:36:17 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:36:17 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:36:17 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:36:17 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:36:17 PM Header: Year mapped with: Year
+INFO 08/18 11:36:17 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:36:17 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:36:17 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:36:17 PM Header: Team mapped with: team
+INFO 08/18 11:36:17 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:36:17 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:36:17 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:36:17 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:36:17 PM Table under section: Playoffs
+INFO 08/18 11:36:17 PM Headers Found
+INFO 08/18 11:36:17 PM Data refined
+INFO 08/18 11:36:17 PM Rows extracted: 8
+INFO 08/18 11:36:17 PM Data extracted for this table: 104
+INFO 08/18 11:36:17 PM Header: Playoffs mapped with: playoff
+INFO 08/18 11:36:17 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:36:17 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:36:17 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:36:17 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:36:17 PM Header: Year mapped with: Year
+INFO 08/18 11:36:17 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:36:17 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:36:17 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:36:17 PM Header: Team mapped with: team
+INFO 08/18 11:36:17 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:36:17 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:36:17 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:36:17 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:36:17 PM Analyzing Greg_Oden
+INFO 08/18 11:36:19 PM Analyzing resource: Greg_Oden
+INFO 08/18 11:36:19 PM Table under section: College statistics
+INFO 08/18 11:36:19 PM Headers Found
+INFO 08/18 11:36:19 PM Data refined
+INFO 08/18 11:36:19 PM Rows extracted: 1
+INFO 08/18 11:36:19 PM Data extracted for this table: 13
+INFO 08/18 11:36:19 PM Header: College statistics mapped with: collegeStatistics
+INFO 08/18 11:36:19 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:36:19 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:36:19 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:36:19 PM Header: MIN mapped with: min
+INFO 08/18 11:36:19 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:36:19 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:36:19 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:36:19 PM Header: College mapped with: collegeStatistics
+INFO 08/18 11:36:19 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:36:19 PM Header: Year mapped with: Year
+INFO 08/18 11:36:19 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:36:19 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:36:19 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:36:19 PM Table under section: Regular season
+INFO 08/18 11:36:19 PM Headers Found
+INFO 08/18 11:36:19 PM Data refined
+INFO 08/18 11:36:19 PM Rows extracted: 4
+INFO 08/18 11:36:19 PM Data extracted for this table: 52
+INFO 08/18 11:36:19 PM Deleted row 4  of table Regular season because it looks like as summary row.
+INFO 08/18 11:36:19 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:36:19 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:36:19 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:36:19 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:36:19 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:36:19 PM Header: Year mapped with: Year
+INFO 08/18 11:36:19 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:36:19 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:36:19 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:36:19 PM Header: Team mapped with: team
+INFO 08/18 11:36:19 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:36:19 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:36:19 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:36:19 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:36:19 PM Table under section: Playoffs
+INFO 08/18 11:36:19 PM Headers Found
+INFO 08/18 11:36:19 PM Data refined
+INFO 08/18 11:36:19 PM Rows extracted: 3
+INFO 08/18 11:36:19 PM Data extracted for this table: 39
+INFO 08/18 11:36:19 PM Header: Playoffs mapped with: playoff
+INFO 08/18 11:36:19 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:36:19 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:36:19 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:36:19 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:36:19 PM Header: Year mapped with: Year
+INFO 08/18 11:36:19 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:36:19 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:36:19 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:36:19 PM Header: Team mapped with: team
+INFO 08/18 11:36:19 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:36:19 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:36:19 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:36:19 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:36:19 PM Table under section: CBA
+INFO 08/18 11:36:19 PM Headers Found
+INFO 08/18 11:36:19 PM Data refined
+INFO 08/18 11:36:19 PM Rows extracted: 2
+INFO 08/18 11:36:19 PM Data extracted for this table: 26
+INFO 08/18 11:36:19 PM Deleted row 2  of table CBA because it looks like as summary row.
+INFO 08/18 11:36:19 PM Header: CBA mapped with: cba
+INFO 08/18 11:36:19 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:36:19 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:36:19 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:36:19 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:36:19 PM Header: Year mapped with: Year
+INFO 08/18 11:36:19 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:36:19 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:36:19 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:36:19 PM Header: Team mapped with: team
+INFO 08/18 11:36:19 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:36:19 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:36:19 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:36:19 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:36:19 PM Analyzing Guillermo_Diaz_(basketball)
+INFO 08/18 11:36:20 PM Analyzing resource: Guillermo_Diaz_(basketball)
+INFO 08/18 11:36:20 PM Table under section: Domestic leagues
+INFO 08/18 11:36:20 PM Headers Found
+INFO 08/18 11:36:20 PM Data refined
+INFO 08/18 11:36:20 PM Rows extracted: 13
+INFO 08/18 11:36:20 PM Data extracted for this table: 163
+INFO 08/18 11:36:20 PM Deleted row 6  of table Domestic leagues because it looks like as summary row.
+INFO 08/18 11:36:20 PM Header: Domestic leagues mapped with: league
+INFO 08/18 11:36:20 PM Header: MPG mapped with: minutesPerGame
+INFO 08/18 11:36:20 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:36:20 PM Header: BPG mapped with: blocksPerGame
+INFO 08/18 11:36:20 PM Header: League mapped with: nameLeague
+INFO 08/18 11:36:21 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:36:21 PM Header: Season mapped with: season
+INFO 08/18 11:36:21 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:36:21 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:36:21 PM Header: RPG mapped with: reboundsPerGame
+INFO 08/18 11:36:21 PM Header: Team mapped with: team
+INFO 08/18 11:36:21 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:36:21 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:36:21 PM Header: SPG mapped with: stolePerGame
+INFO 08/18 11:36:24 PM Analyzing Hakan_Demirel
+INFO 08/18 11:36:26 PM Analyzing resource: Hakan_Demirel
+INFO 08/18 11:36:26 PM No Tables found for this resource.
+INFO 08/18 11:36:26 PM Analyzing Hakeem_Olajuwon
+INFO 08/18 11:36:29 PM Analyzing resource: Hakeem_Olajuwon
+INFO 08/18 11:36:29 PM Table under section: NBA career statistics
+DEBUG 08/18 11:36:29 PM  E2 Unable to find headers - resource: Hakeem_Olajuwon
+INFO 08/18 11:36:29 PM Table under section: Regular season
+INFO 08/18 11:36:29 PM Headers Found
+INFO 08/18 11:36:29 PM Data refined
+INFO 08/18 11:36:29 PM Rows extracted: 21
+INFO 08/18 11:36:29 PM Data extracted for this table: 378
+INFO 08/18 11:36:29 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:36:29 PM Header: OFF mapped with: offensive
+INFO 08/18 11:36:29 PM Header: PF mapped with: pf
+INFO 08/18 11:36:29 PM Header: GS mapped with: gamesStarted
+INFO 08/18 11:36:30 PM Header: MIN mapped with: min
+INFO 08/18 11:36:30 PM Header: STL mapped with: stolePerGame
+INFO 08/18 11:36:30 PM Header: Season mapped with: season
+INFO 08/18 11:36:30 PM Header: Age mapped with: age
+INFO 08/18 11:36:30 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:36:30 PM Header: TOV mapped with: tov
+INFO 08/18 11:36:30 PM Header: AST mapped with: assistsPerGame
+INFO 08/18 11:36:30 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:36:30 PM Header: BLK mapped with: blocksPerGame
+INFO 08/18 11:36:30 PM Header: Team mapped with: team
+INFO 08/18 11:36:30 PM Header: REB mapped with: reboundsPerGame
+INFO 08/18 11:36:30 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:36:30 PM Header: PTS mapped with: pointsPerGame
+INFO 08/18 11:36:30 PM Header: 3P% mapped with: threePoints
+INFO 08/18 11:36:30 PM Header: DEF mapped with: defensive
+INFO 08/18 11:36:39 PM Analyzing Harold_Johnson_(basketball)
+INFO 08/18 11:36:40 PM Analyzing resource: Harold_Johnson_(basketball)
+INFO 08/18 11:36:40 PM Table under section: Regular season
+INFO 08/18 11:36:40 PM Headers Found
+INFO 08/18 11:36:40 PM Data refined
+INFO 08/18 11:36:40 PM Rows extracted: 2
+INFO 08/18 11:36:40 PM Data extracted for this table: 14
+INFO 08/18 11:36:40 PM Deleted row 2  of table Regular season because it looks like as summary row.
+INFO 08/18 11:36:40 PM Header: Regular season mapped with: regularSeason
+INFO 08/18 11:36:40 PM Header: PPG mapped with: pointsPerGame
+INFO 08/18 11:36:40 PM Header: GP mapped with: gamesPlayed
+INFO 08/18 11:36:40 PM Header: Year mapped with: Year
+INFO 08/18 11:36:40 PM Header: FT% mapped with: freeThrow
+INFO 08/18 11:36:40 PM Header: Team mapped with: team
+INFO 08/18 11:36:40 PM Header: FG% mapped with: fieldGoal
+INFO 08/18 11:36:40 PM Header: APG mapped with: assistsPerGame
+INFO 08/18 11:36:40 PM Analyzing Henry_James_(basketball)
+INFO 08/18 11:36:41 PM Analyzing resource: Henry_James_(basketball)
+INFO 08/18 11:36:41 PM No Tables found for this resource.
+INFO 08/18 11:36:41 PM Analyzing Henry_Turner_(basketball)
+INFO 08/18 11:36:42 PM Analyzing resource: Henry_Turner_(basketball)
+INFO 08/18 11:36:42 PM No Tables found for this resource.
+INFO 08/18 11:36:42 PM Analyzing Henry_Ward_(basketball)
+INFO 08/18 11:36:42 PM Analyzing resource: Henry_Ward_(basketball)
+INFO 08/18 11:36:42 PM No Tables found for this resource.
+INFO 08/18 11:36:42 PM Analyzing Henry_Williams_(basketball)
+INFO 08/18 11:36:44 PM Analyzing resource: Henry_Williams_(basketball)
+INFO 08/18 11:36:44 PM No Tables found for this resource.
+INFO 08/18 11:36:44 PM There are 0 sections and sections without mapping rules
+INFO 08/18 11:36:44 PM There are 0 headers and sections without mapping rules
+INFO 08/18 11:36:44 PM End Of File reached, now you can serialize the graph
+INFO 08/18 11:36:45 PM Triples in the graph: 5713
+INFO 08/18 11:36:45 PM Graph serialized, filename: C:\Users\Luca_\PycharmProjects\table-extractor\table_extractor\../Extractions/2017_08_18-23_36_T_Ext_en_BasketballPlayer.ttl
+INFO 08/18 11:36:45 PM REPORT:
+INFO 08/18 11:36:45 PM +           Total # resources analyzed: 100
+INFO 08/18 11:36:45 PM +           Total # tables found : 83
+INFO 08/18 11:36:45 PM +           Total # tables analyzed : 83
+INFO 08/18 11:36:45 PM +           Total # of rows extracted: 534
+INFO 08/18 11:36:45 PM +           Total # of data cells extracted : 5788
+INFO 08/18 11:36:45 PM +           Total # of exceptions extracting data : 0
+INFO 08/18 11:36:45 PM +           Total # of 'header not resolved' errors : 0
+INFO 08/18 11:36:45 PM +           Total # of 'no headers' errors : 9
+INFO 08/18 11:36:45 PM +           Total # of 'no mapping rule' errors for section : 0
+INFO 08/18 11:36:45 PM +           Total # of 'no mapping rule' errors for headers : 0
+INFO 08/18 11:36:45 PM +           Total # of data cells extracted that needs to be mapped: 5227
+INFO 08/18 11:36:45 PM +           Total # of table's rows triples serialized : 486
+INFO 08/18 11:36:45 PM +           Total # of table's cells triples serialized : 5227
+INFO 08/18 11:36:45 PM +           Total # of triples serialized : 5713
+INFO 08/18 11:36:45 PM +           Percentage of mapping effectiveness  : 1.000
