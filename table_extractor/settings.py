@@ -26,12 +26,16 @@ COMMENT_MAPPING_RULES = "# coding = utf-8 \n# Mapping rules used to map table's 
 MAPPING_RULE_PREFIX = "MAPPING_RULES_"
 
 # check if a particular property is defined
-SPARQL_PROPERTY_IN_ONTOLOGY = "ASK { <http://dbpedia.org/ontology/", "> ?s ?o }"
+SPARQL_CHECK_IN_ONTOLOGY = "ASK { <http://dbpedia.org/ontology/", "> ?s ?o }"
 
 PREFIX_MAPPING_RULE = "MAPPING_RULES_"
 
 # Path where the pyTableExtractor dictionary is located
 PATH_ACTUAL_DICTIONARY = "../table_extractor/mapping_rules.py"
+
+APPLY_FILTER_TO_TABLE_DATA = True
+
+CHECK_USER_INPUT_PROPERTY = False
 
 # SETTINGS FOR pyDomainExplorer
 # strings for settings file's header
@@ -120,7 +124,7 @@ SPARQL_CHECK_PROPERTY = ["select ?s where{", " ?s rdfs:label ", " } LIMIT 10"]
 ONTOLOGY_TYPE = ["ontology"]
 
 # Queries to select a list of resources and the number of resources involved
-SPARQL_RES_LIST_QUERY = ["SELECT distinct ?s as ?res WHERE{", "} LIMIT 100 OFFSET "]
+SPARQL_RES_LIST_QUERY = ["SELECT distinct ?s as ?res WHERE{", "} LIMIT 5 OFFSET "]
 
 # Query to get number of resources involved in an execution
 SPARQL_NUM_RES_QUERY = ["select (count(distinct ?s) as ?res_num) where{", "}"]
