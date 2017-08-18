@@ -1,0 +1,1116 @@
+INFO 08/19 12:07:21 AM You're analyzing wiki tables, wiki chapter: it, topic: BasketballPlayer
+INFO 08/19 12:07:21 AM Analyzing Magic_Johnson
+INFO 08/19 12:07:23 AM Analyzing resource: Magic_Johnson
+INFO 08/19 12:07:23 AM Table under section: Stagione regolare
+INFO 08/19 12:07:23 AM Headers Found
+INFO 08/19 12:07:23 AM Data refined
+INFO 08/19 12:07:23 AM Rows extracted: 14
+INFO 08/19 12:07:23 AM Data extracted for this table: 196
+INFO 08/19 12:07:23 AM Header: Stagione regolare mapped with: regularSeason
+INFO 08/19 12:07:23 AM Header: Stagione mapped with: season
+INFO 08/19 12:07:23 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:07:24 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:07:24 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:07:24 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:07:24 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:07:24 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:07:24 AM Header: Campion. mapped with: championship
+INFO 08/19 12:07:25 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:07:25 AM Header: Squadra mapped with: team
+INFO 08/19 12:07:25 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:07:25 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:07:26 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:07:26 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:07:41 AM Table under section: Playoff
+INFO 08/19 12:07:41 AM Headers Found
+INFO 08/19 12:07:41 AM Data refined
+INFO 08/19 12:07:41 AM Rows extracted: 14
+INFO 08/19 12:07:41 AM Data extracted for this table: 196
+INFO 08/19 12:07:41 AM Header: Playoff mapped with: playoff
+INFO 08/19 12:07:41 AM Header: Stagione mapped with: season
+INFO 08/19 12:07:41 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:07:42 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:07:42 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:07:42 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:07:42 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:07:42 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:07:42 AM Header: Campion. mapped with: championship
+INFO 08/19 12:07:42 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:07:42 AM Header: Squadra mapped with: team
+INFO 08/19 12:07:42 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:07:42 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:07:42 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:07:42 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:07:56 AM Table under section: NCAA
+INFO 08/19 12:07:56 AM Headers Found
+INFO 08/19 12:07:56 AM Data refined
+INFO 08/19 12:07:56 AM Rows extracted: 2
+INFO 08/19 12:07:56 AM Data extracted for this table: 21
+INFO 08/19 12:07:56 AM Header: NCAA mapped with: ncaa
+INFO 08/19 12:07:56 AM Header: Stagione mapped with: season
+INFO 08/19 12:07:56 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:07:56 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:07:56 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:07:56 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:07:56 AM Header: Campion. mapped with: championship
+INFO 08/19 12:07:57 AM Header: Squadra mapped with: team
+INFO 08/19 12:07:57 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:07:57 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:07:57 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:07:59 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:07:59 AM Table under section: Basketligan
+INFO 08/19 12:07:59 AM Headers Found
+INFO 08/19 12:07:59 AM Data refined
+INFO 08/19 12:07:59 AM Rows extracted: 1
+INFO 08/19 12:07:59 AM Data extracted for this table: 5
+INFO 08/19 12:07:59 AM Header: Basketligan mapped with: basketligan
+INFO 08/19 12:07:59 AM Header: Stagione mapped with: season
+INFO 08/19 12:07:59 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:07:59 AM Header: Campion. mapped with: championship
+INFO 08/19 12:07:59 AM Header: Squadra mapped with: team
+INFO 08/19 12:07:59 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:07:59 AM Table under section: Lega NEBL
+INFO 08/19 12:07:59 AM Headers Found
+INFO 08/19 12:07:59 AM Data refined
+INFO 08/19 12:07:59 AM Rows extracted: 1
+INFO 08/19 12:07:59 AM Data extracted for this table: 12
+INFO 08/19 12:07:59 AM Header: Lega NEBL mapped with: nebl
+INFO 08/19 12:07:59 AM Header: Stagione mapped with: season
+INFO 08/19 12:07:59 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:07:59 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:08:00 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:08:00 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:08:00 AM Header: Campion. mapped with: championship
+INFO 08/19 12:08:00 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:08:00 AM Header: Squadra mapped with: team
+INFO 08/19 12:08:00 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:08:00 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:08:01 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:08:01 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:08:01 AM Table under section: Nazionale
+INFO 08/19 12:08:01 AM Headers Found
+INFO 08/19 12:08:01 AM Data refined
+INFO 08/19 12:08:01 AM Rows extracted: 20
+INFO 08/19 12:08:01 AM Data extracted for this table: 160
+INFO 08/19 12:08:01 AM Header: Nazionale mapped with: national
+INFO 08/19 12:08:01 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - Ospiti mapped with: visiting
+INFO 08/19 12:08:01 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - Punti mapped with: points
+INFO 08/19 12:08:01 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - In casa mapped with: home
+INFO 08/19 12:08:01 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - Competizione mapped with: championship
+INFO 08/19 12:08:01 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - Data mapped with: date
+INFO 08/19 12:08:01 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - Risultato mapped with: result
+INFO 08/19 12:08:02 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - Citt. mapped with: town
+INFO 08/19 12:08:02 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Stati Uniti - Note mapped with: notes
+INFO 08/19 12:08:28 AM Analyzing Kareem_Abdul-Jabbar
+INFO 08/19 12:08:32 AM Analyzing resource: Kareem_Abdul-Jabbar
+INFO 08/19 12:08:32 AM Table under section: Regular season
+INFO 08/19 12:08:32 AM Headers Found
+INFO 08/19 12:08:32 AM Data refined
+INFO 08/19 12:08:32 AM Rows extracted: 20
+INFO 08/19 12:08:32 AM Data extracted for this table: 250
+INFO 08/19 12:08:32 AM Header: Regular season mapped with: regularSeason
+INFO 08/19 12:08:32 AM Header: Stagione mapped with: season
+INFO 08/19 12:08:32 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:08:34 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:08:34 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:08:34 AM Header: Campion. mapped with: championship
+INFO 08/19 12:08:34 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:08:34 AM Header: Squadra mapped with: team
+INFO 08/19 12:08:34 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:08:34 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:08:34 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:08:36 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:08:36 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:08:39 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:08:42 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:08:50 AM Table under section: Playoffs
+INFO 08/19 12:08:50 AM Headers Found
+INFO 08/19 12:08:50 AM Data refined
+INFO 08/19 12:08:50 AM Rows extracted: 18
+INFO 08/19 12:08:50 AM Data extracted for this table: 226
+INFO 08/19 12:08:50 AM Header: Playoffs mapped with: playoff
+INFO 08/19 12:08:50 AM Header: Stagione mapped with: season
+INFO 08/19 12:08:50 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:08:50 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:08:50 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:08:50 AM Header: Campion. mapped with: championship
+INFO 08/19 12:08:50 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:08:50 AM Header: Squadra mapped with: team
+INFO 08/19 12:08:50 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:08:50 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:08:50 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:08:52 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:08:52 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:08:54 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:08:57 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:09:02 AM Analyzing Cesare_Rubini
+INFO 08/19 12:09:04 AM Analyzing resource: Cesare_Rubini
+INFO 08/19 12:09:04 AM No Tables found for this resource.
+INFO 08/19 12:09:04 AM Analyzing Jason_Richardson_(cestista)
+INFO 08/19 12:09:05 AM Analyzing resource: Jason_Richardson_(cestista)
+INFO 08/19 12:09:05 AM No Tables found for this resource.
+INFO 08/19 12:09:05 AM Analyzing Đorđe_Gagić
+INFO 08/19 12:09:05 AM Analyzing resource: Đorđe_Gagić
+INFO 08/19 12:09:05 AM No Tables found for this resource.
+INFO 08/19 12:09:05 AM Analyzing Rafał_Bigus
+INFO 08/19 12:09:07 AM Analyzing resource: Rafał_Bigus
+INFO 08/19 12:09:07 AM No Tables found for this resource.
+INFO 08/19 12:09:07 AM Analyzing Maciej_Zieliński
+INFO 08/19 12:09:08 AM Analyzing resource: Maciej_Zieliński
+INFO 08/19 12:09:08 AM No Tables found for this resource.
+INFO 08/19 12:09:08 AM Analyzing Tomasz_Jankowski
+INFO 08/19 12:09:11 AM Analyzing resource: Tomasz_Jankowski
+INFO 08/19 12:09:11 AM No Tables found for this resource.
+INFO 08/19 12:09:11 AM Analyzing Ron_Howard_(cestista)
+INFO 08/19 12:09:13 AM Analyzing resource: Ron_Howard_(cestista)
+INFO 08/19 12:09:13 AM No Tables found for this resource.
+INFO 08/19 12:09:13 AM Analyzing Andy_Panko
+INFO 08/19 12:09:15 AM Analyzing resource: Andy_Panko
+INFO 08/19 12:09:15 AM No Tables found for this resource.
+INFO 08/19 12:09:15 AM Analyzing Marreese_Speights
+INFO 08/19 12:09:17 AM Analyzing resource: Marreese_Speights
+INFO 08/19 12:09:17 AM No Tables found for this resource.
+INFO 08/19 12:09:17 AM Analyzing Jonas_Mačiulis
+INFO 08/19 12:09:17 AM Analyzing resource: Jonas_Mačiulis
+INFO 08/19 12:09:17 AM No Tables found for this resource.
+INFO 08/19 12:09:17 AM Analyzing Tony_Wroten
+INFO 08/19 12:09:19 AM Analyzing resource: Tony_Wroten
+INFO 08/19 12:09:19 AM No Tables found for this resource.
+INFO 08/19 12:09:19 AM Analyzing Coleman_Collins
+INFO 08/19 12:09:21 AM Analyzing resource: Coleman_Collins
+INFO 08/19 12:09:21 AM No Tables found for this resource.
+INFO 08/19 12:09:21 AM Analyzing Mark_Tyndale
+INFO 08/19 12:09:21 AM Analyzing resource: Mark_Tyndale
+INFO 08/19 12:09:21 AM No Tables found for this resource.
+INFO 08/19 12:09:21 AM Analyzing Klay_Thompson
+INFO 08/19 12:09:23 AM Analyzing resource: Klay_Thompson
+INFO 08/19 12:09:23 AM No Tables found for this resource.
+INFO 08/19 12:09:23 AM Analyzing Yinka_Dare
+INFO 08/19 12:09:25 AM Analyzing resource: Yinka_Dare
+INFO 08/19 12:09:25 AM No Tables found for this resource.
+INFO 08/19 12:09:25 AM Analyzing Gaios_Skordilis
+INFO 08/19 12:09:26 AM Analyzing resource: Gaios_Skordilis
+INFO 08/19 12:09:26 AM No Tables found for this resource.
+INFO 08/19 12:09:26 AM Analyzing Luke_Ridnour
+INFO 08/19 12:09:27 AM Analyzing resource: Luke_Ridnour
+INFO 08/19 12:09:27 AM No Tables found for this resource.
+INFO 08/19 12:09:27 AM Analyzing Michael_Jordan
+INFO 08/19 12:09:29 AM Analyzing resource: Michael_Jordan
+INFO 08/19 12:09:29 AM Table under section: Stagione regolare
+INFO 08/19 12:09:29 AM Headers Found
+INFO 08/19 12:09:30 AM Data refined
+INFO 08/19 12:09:30 AM Rows extracted: 16
+INFO 08/19 12:09:30 AM Data extracted for this table: 224
+INFO 08/19 12:09:30 AM Header: Stagione regolare mapped with: regularSeason
+INFO 08/19 12:09:30 AM Header: Stagione mapped with: season
+INFO 08/19 12:09:30 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:09:31 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:09:31 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:09:31 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:09:31 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:09:31 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:09:31 AM Header: Campion. mapped with: championship
+INFO 08/19 12:09:31 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:09:31 AM Header: Squadra mapped with: team
+INFO 08/19 12:09:31 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:09:31 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:09:32 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:09:32 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:09:52 AM Table under section: Playoff
+INFO 08/19 12:09:52 AM Headers Found
+INFO 08/19 12:09:52 AM Data refined
+INFO 08/19 12:09:52 AM Rows extracted: 14
+INFO 08/19 12:09:52 AM Data extracted for this table: 196
+INFO 08/19 12:09:52 AM Header: Playoff mapped with: playoff
+INFO 08/19 12:09:52 AM Header: Stagione mapped with: season
+INFO 08/19 12:09:52 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:09:52 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:09:52 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:09:52 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:09:52 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:09:52 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:09:52 AM Header: Campion. mapped with: championship
+INFO 08/19 12:09:52 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:09:52 AM Header: Squadra mapped with: team
+INFO 08/19 12:09:52 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:09:52 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:09:53 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:09:53 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:10:06 AM Table under section: NCAA
+INFO 08/19 12:10:06 AM Headers Found
+INFO 08/19 12:10:06 AM Data refined
+INFO 08/19 12:10:06 AM Rows extracted: 3
+INFO 08/19 12:10:06 AM Data extracted for this table: 34
+INFO 08/19 12:10:06 AM Header: NCAA mapped with: ncaa
+INFO 08/19 12:10:06 AM Header: Stagione mapped with: season
+INFO 08/19 12:10:07 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:10:07 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:10:07 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:10:07 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:10:07 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:10:07 AM Header: Campion. mapped with: championship
+INFO 08/19 12:10:07 AM Header: Squadra mapped with: team
+INFO 08/19 12:10:08 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:10:08 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:10:08 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:10:08 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:10:10 AM Analyzing Breanna_Stewart
+INFO 08/19 12:10:10 AM Analyzing resource: Breanna_Stewart
+INFO 08/19 12:10:10 AM No Tables found for this resource.
+INFO 08/19 12:10:10 AM Analyzing Kebu_Stewart
+INFO 08/19 12:10:11 AM Analyzing resource: Kebu_Stewart
+INFO 08/19 12:10:11 AM No Tables found for this resource.
+INFO 08/19 12:10:11 AM Analyzing Gregg_Marshall
+INFO 08/19 12:10:11 AM Analyzing resource: Gregg_Marshall
+INFO 08/19 12:10:11 AM No Tables found for this resource.
+INFO 08/19 12:10:11 AM Analyzing Darius_Washington
+INFO 08/19 12:10:13 AM Analyzing resource: Darius_Washington
+INFO 08/19 12:10:13 AM No Tables found for this resource.
+INFO 08/19 12:10:13 AM Analyzing Kevin_Garnett
+INFO 08/19 12:10:14 AM Analyzing resource: Kevin_Garnett
+INFO 08/19 12:10:14 AM Table under section: Regular season
+INFO 08/19 12:10:14 AM Headers Found
+INFO 08/19 12:10:14 AM Data refined
+INFO 08/19 12:10:14 AM Rows extracted: 23
+INFO 08/19 12:10:14 AM Data extracted for this table: 322
+INFO 08/19 12:10:14 AM Header: Regular season mapped with: regularSeason
+INFO 08/19 12:10:14 AM Header: Stagione mapped with: season
+INFO 08/19 12:10:15 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:10:15 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:10:15 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:10:15 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:10:15 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:10:15 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:10:15 AM Header: Campion. mapped with: championship
+INFO 08/19 12:10:15 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:10:15 AM Header: Squadra mapped with: team
+INFO 08/19 12:10:16 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:10:16 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:10:17 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:10:17 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:10:40 AM Table under section: Playoff
+INFO 08/19 12:10:40 AM Headers Found
+INFO 08/19 12:10:40 AM Data refined
+INFO 08/19 12:10:40 AM Rows extracted: 15
+INFO 08/19 12:10:40 AM Data extracted for this table: 210
+INFO 08/19 12:10:40 AM Header: Playoff mapped with: playoff
+INFO 08/19 12:10:40 AM Header: Stagione mapped with: season
+INFO 08/19 12:10:40 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:10:40 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:10:41 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:10:41 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:10:41 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:10:41 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:10:41 AM Header: Campion. mapped with: championship
+INFO 08/19 12:10:41 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:10:41 AM Header: Squadra mapped with: team
+INFO 08/19 12:10:41 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:10:41 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:10:43 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:10:43 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:10:54 AM Analyzing Marco_Mordente
+INFO 08/19 12:10:56 AM Analyzing resource: Marco_Mordente
+INFO 08/19 12:10:56 AM Table under section: Cronologia presenze e punti in Nazionale
+INFO 08/19 12:10:56 AM Headers Found
+INFO 08/19 12:10:56 AM Data refined
+INFO 08/19 12:10:56 AM Rows extracted: 16
+INFO 08/19 12:10:56 AM Data extracted for this table: 118
+INFO 08/19 12:10:56 AM Header: Cronologia presenze e punti in Nazionale mapped with: national
+INFO 08/19 12:10:56 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Risultato mapped with: result
+INFO 08/19 12:10:57 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - In casa mapped with: home
+INFO 08/19 12:10:57 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Competizione mapped with: championship
+INFO 08/19 12:10:57 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Ospiti mapped with: visiting
+INFO 08/19 12:10:58 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Citt. mapped with: town
+INFO 08/19 12:10:58 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Data mapped with: date
+INFO 08/19 12:10:58 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Punti mapped with: points
+INFO 08/19 12:10:58 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Note mapped with: notes
+INFO 08/19 12:11:18 AM Analyzing Paolo_Rossi_(cestista)
+INFO 08/19 12:11:18 AM Analyzing resource: Paolo_Rossi_(cestista)
+INFO 08/19 12:11:18 AM No Tables found for this resource.
+INFO 08/19 12:11:18 AM Analyzing Corey_Albano
+INFO 08/19 12:11:20 AM Analyzing resource: Corey_Albano
+INFO 08/19 12:11:20 AM No Tables found for this resource.
+INFO 08/19 12:11:20 AM Analyzing Benedetta_Bagnara
+INFO 08/19 12:11:22 AM Analyzing resource: Benedetta_Bagnara
+INFO 08/19 12:11:22 AM Table under section: Cronologia presenze e punti in Nazionale
+INFO 08/19 12:11:22 AM Headers Found
+INFO 08/19 12:11:22 AM Data refined
+INFO 08/19 12:11:22 AM Rows extracted: 52
+INFO 08/19 12:11:22 AM Data extracted for this table: 416
+INFO 08/19 12:11:22 AM Header: Cronologia presenze e punti in Nazionale mapped with: national
+INFO 08/19 12:11:22 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Risultato mapped with: result
+INFO 08/19 12:11:22 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - In casa mapped with: home
+INFO 08/19 12:11:22 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Competizione mapped with: championship
+INFO 08/19 12:11:22 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Ospiti mapped with: visiting
+INFO 08/19 12:11:22 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Citt. mapped with: town
+INFO 08/19 12:11:22 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Data mapped with: date
+INFO 08/19 12:11:22 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Punti mapped with: points
+INFO 08/19 12:11:22 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Note mapped with: notes
+INFO 08/19 12:12:31 AM Analyzing Simone_Bagnoli
+INFO 08/19 12:12:32 AM Analyzing resource: Simone_Bagnoli
+INFO 08/19 12:12:32 AM No Tables found for this resource.
+INFO 08/19 12:12:32 AM Analyzing Gianluca_Basile
+INFO 08/19 12:12:33 AM Analyzing resource: Gianluca_Basile
+INFO 08/19 12:12:33 AM Table under section: Presenze e punti nei club
+INFO 08/19 12:12:33 AM Headers Found
+INFO 08/19 12:12:33 AM Data refined
+INFO 08/19 12:12:33 AM Rows extracted: 22
+INFO 08/19 12:12:33 AM Data extracted for this table: 308
+INFO 08/19 12:12:33 AM Header: Presenze e punti nei club mapped with: statistics
+INFO 08/19 12:12:33 AM Header: Stagione mapped with: season
+INFO 08/19 12:12:34 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:12:34 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:12:35 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:12:35 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:12:35 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:12:35 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:12:35 AM Header: Campion. mapped with: championship
+INFO 08/19 12:12:35 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:12:35 AM Header: Squadra mapped with: team
+INFO 08/19 12:12:35 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:12:35 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:12:36 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:12:36 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:13:05 AM Table under section: Cronologia recente presenze e punti in Nazionale
+INFO 08/19 12:13:05 AM Headers Found
+INFO 08/19 12:13:05 AM Data refined
+INFO 08/19 12:13:05 AM Rows extracted: 44
+INFO 08/19 12:13:05 AM Data extracted for this table: 290
+INFO 08/19 12:13:05 AM Header: Cronologia recente presenze e punti in Nazionale mapped with: statistics
+INFO 08/19 12:13:05 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Risultato mapped with: result
+INFO 08/19 12:13:06 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - In casa mapped with: home
+INFO 08/19 12:13:06 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Competizione mapped with: championship
+INFO 08/19 12:13:06 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Ospiti mapped with: visiting
+INFO 08/19 12:13:06 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Citt. mapped with: town
+INFO 08/19 12:13:06 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Data mapped with: date
+INFO 08/19 12:13:06 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Punti mapped with: points
+INFO 08/19 12:13:36 AM Analyzing Donato_Avenia
+INFO 08/19 12:13:37 AM Analyzing resource: Donato_Avenia
+INFO 08/19 12:13:37 AM Table under section: Nazionale
+INFO 08/19 12:13:37 AM Headers Found
+INFO 08/19 12:13:37 AM Data refined
+INFO 08/19 12:13:37 AM Rows extracted: 3
+INFO 08/19 12:13:37 AM Data extracted for this table: 21
+INFO 08/19 12:13:37 AM Header: Nazionale mapped with: national
+INFO 08/19 12:13:37 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Risultato mapped with: result
+INFO 08/19 12:13:37 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - In casa mapped with: home
+INFO 08/19 12:13:37 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Competizione mapped with: championship
+INFO 08/19 12:13:37 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Ospiti mapped with: visiting
+INFO 08/19 12:13:37 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Citt. mapped with: town
+INFO 08/19 12:13:38 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Data mapped with: date
+INFO 08/19 12:13:38 AM Header: Cronologia completa delle presenze e dei punti in Nazionale - Italia - Punti mapped with: points
+INFO 08/19 12:13:41 AM Analyzing Ozell_Jones
+INFO 08/19 12:13:42 AM Analyzing resource: Ozell_Jones
+INFO 08/19 12:13:42 AM No Tables found for this resource.
+INFO 08/19 12:13:42 AM Analyzing Stratos_Perperoglou
+INFO 08/19 12:13:43 AM Analyzing resource: Stratos_Perperoglou
+INFO 08/19 12:13:43 AM No Tables found for this resource.
+INFO 08/19 12:13:43 AM Analyzing Steve_Bucknall
+INFO 08/19 12:13:45 AM Analyzing resource: Steve_Bucknall
+INFO 08/19 12:13:45 AM No Tables found for this resource.
+INFO 08/19 12:13:45 AM Analyzing Zygmunt_Olesiewicz
+INFO 08/19 12:13:46 AM Analyzing resource: Zygmunt_Olesiewicz
+INFO 08/19 12:13:46 AM No Tables found for this resource.
+INFO 08/19 12:13:46 AM Analyzing Billy_McKinney
+INFO 08/19 12:13:47 AM Analyzing resource: Billy_McKinney
+INFO 08/19 12:13:47 AM No Tables found for this resource.
+INFO 08/19 12:13:47 AM Analyzing Dane_Watts
+INFO 08/19 12:13:48 AM Analyzing resource: Dane_Watts
+INFO 08/19 12:13:48 AM No Tables found for this resource.
+INFO 08/19 12:13:48 AM Analyzing Brett_Vroman
+INFO 08/19 12:13:50 AM Analyzing resource: Brett_Vroman
+INFO 08/19 12:13:50 AM No Tables found for this resource.
+INFO 08/19 12:13:50 AM Analyzing Bob_Kinney
+INFO 08/19 12:13:50 AM Analyzing resource: Bob_Kinney
+INFO 08/19 12:13:50 AM No Tables found for this resource.
+INFO 08/19 12:13:50 AM Analyzing Rod_Strickland
+INFO 08/19 12:13:52 AM Analyzing resource: Rod_Strickland
+INFO 08/19 12:13:52 AM No Tables found for this resource.
+INFO 08/19 12:13:52 AM Analyzing Anthony_King
+INFO 08/19 12:13:53 AM Analyzing resource: Anthony_King
+INFO 08/19 12:13:53 AM No Tables found for this resource.
+INFO 08/19 12:13:53 AM Analyzing Solomon_Jones
+INFO 08/19 12:13:54 AM Analyzing resource: Solomon_Jones
+INFO 08/19 12:13:54 AM No Tables found for this resource.
+INFO 08/19 12:13:54 AM Analyzing Fernando_Sousa
+INFO 08/19 12:13:55 AM Analyzing resource: Fernando_Sousa
+INFO 08/19 12:13:55 AM No Tables found for this resource.
+INFO 08/19 12:13:55 AM Analyzing Joe_Cooke
+INFO 08/19 12:13:56 AM Analyzing resource: Joe_Cooke
+INFO 08/19 12:13:56 AM No Tables found for this resource.
+INFO 08/19 12:13:56 AM Analyzing Odile_Santaniello
+INFO 08/19 12:13:58 AM Analyzing resource: Odile_Santaniello
+INFO 08/19 12:13:58 AM No Tables found for this resource.
+INFO 08/19 12:13:58 AM Analyzing Derek_Harper
+INFO 08/19 12:14:00 AM Analyzing resource: Derek_Harper
+INFO 08/19 12:14:00 AM No Tables found for this resource.
+INFO 08/19 12:14:00 AM Analyzing Craig_Bradshaw
+INFO 08/19 12:14:01 AM Analyzing resource: Craig_Bradshaw
+INFO 08/19 12:14:01 AM No Tables found for this resource.
+INFO 08/19 12:14:01 AM Analyzing Donatas_Slanina
+INFO 08/19 12:14:02 AM Analyzing resource: Donatas_Slanina
+INFO 08/19 12:14:02 AM No Tables found for this resource.
+INFO 08/19 12:14:02 AM Analyzing Wyndol_Gray
+INFO 08/19 12:14:03 AM Analyzing resource: Wyndol_Gray
+INFO 08/19 12:14:03 AM No Tables found for this resource.
+INFO 08/19 12:14:03 AM Analyzing Kevin_Johnson
+INFO 08/19 12:14:04 AM Analyzing resource: Kevin_Johnson
+INFO 08/19 12:14:04 AM No Tables found for this resource.
+INFO 08/19 12:14:04 AM Analyzing Del_Harris
+INFO 08/19 12:14:06 AM Analyzing resource: Del_Harris
+INFO 08/19 12:14:06 AM No Tables found for this resource.
+INFO 08/19 12:14:06 AM Analyzing Cedric_Ceballos
+INFO 08/19 12:14:07 AM Analyzing resource: Cedric_Ceballos
+INFO 08/19 12:14:07 AM No Tables found for this resource.
+INFO 08/19 12:14:07 AM Analyzing Paul_Westphal
+INFO 08/19 12:14:08 AM Analyzing resource: Paul_Westphal
+INFO 08/19 12:14:08 AM No Tables found for this resource.
+INFO 08/19 12:14:08 AM Analyzing Danny_Ainge
+INFO 08/19 12:14:10 AM Analyzing resource: Danny_Ainge
+INFO 08/19 12:14:10 AM Table under section: Regular season
+INFO 08/19 12:14:10 AM Headers Found
+INFO 08/19 12:14:10 AM Data refined
+INFO 08/19 12:14:10 AM Rows extracted: 17
+INFO 08/19 12:14:10 AM Data extracted for this table: 220
+INFO 08/19 12:14:10 AM Deleted row 16  of table Regular season because it looks like as summary row.
+INFO 08/19 12:14:10 AM Header: Regular season mapped with: regularSeason
+INFO 08/19 12:14:10 AM Header: RPP mapped with: rpp
+INFO 08/19 12:14:10 AM Header: PRPP mapped with: prpp
+INFO 08/19 12:14:10 AM Header: Squadra mapped with: team
+INFO 08/19 12:14:10 AM Header: SPP mapped with: spp
+INFO 08/19 12:14:11 AM Header: APP mapped with: app
+INFO 08/19 12:14:11 AM Header: PPP mapped with: ppp
+INFO 08/19 12:14:12 AM Header: Anno mapped with: year
+INFO 08/19 12:14:12 AM Header: TL% mapped with: tl
+INFO 08/19 12:14:12 AM Header: PG mapped with: playoffGames
+INFO 08/19 12:14:12 AM Header: MPP mapped with: mpp
+INFO 08/19 12:14:12 AM Header: FG% mapped with: fieldGoal
+INFO 08/19 12:14:12 AM Header: PI mapped with: performanceIndex
+INFO 08/19 12:14:12 AM Header: 3P% mapped with: threePoints
+INFO 08/19 12:14:52 AM Table under section: Playoff
+INFO 08/19 12:14:52 AM Headers Found
+INFO 08/19 12:14:52 AM Data refined
+INFO 08/19 12:14:52 AM Rows extracted: 13
+INFO 08/19 12:14:52 AM Data extracted for this table: 168
+INFO 08/19 12:14:52 AM Header: Playoff mapped with: playoff
+INFO 08/19 12:14:52 AM Header: RPP mapped with: rpp
+INFO 08/19 12:14:52 AM Header: PRPP mapped with: prpp
+INFO 08/19 12:14:52 AM Header: Squadra mapped with: team
+INFO 08/19 12:14:52 AM Header: SPP mapped with: spp
+INFO 08/19 12:14:53 AM Header: APP mapped with: app
+INFO 08/19 12:14:53 AM Header: PPP mapped with: ppp
+INFO 08/19 12:14:53 AM Header: Anno mapped with: year
+INFO 08/19 12:14:54 AM Header: TL% mapped with: tl
+INFO 08/19 12:14:54 AM Header: PG mapped with: playoffGames
+INFO 08/19 12:14:54 AM Header: MPP mapped with: mpp
+INFO 08/19 12:14:54 AM Header: FG% mapped with: fieldGoal
+INFO 08/19 12:14:54 AM Header: PI mapped with: performanceIndex
+INFO 08/19 12:14:54 AM Header: 3P% mapped with: threePoints
+INFO 08/19 12:15:25 AM Analyzing Charles_Oakley
+INFO 08/19 12:15:26 AM Analyzing resource: Charles_Oakley
+INFO 08/19 12:15:26 AM No Tables found for this resource.
+INFO 08/19 12:15:26 AM Analyzing Jeff_Malone
+INFO 08/19 12:15:27 AM Analyzing resource: Jeff_Malone
+INFO 08/19 12:15:27 AM No Tables found for this resource.
+INFO 08/19 12:15:27 AM Analyzing Sergej_Belov
+INFO 08/19 12:15:30 AM Analyzing resource: Sergej_Belov
+INFO 08/19 12:15:30 AM No Tables found for this resource.
+INFO 08/19 12:15:30 AM Analyzing Robert_Lowery
+INFO 08/19 12:15:31 AM Analyzing resource: Robert_Lowery
+INFO 08/19 12:15:31 AM No Tables found for this resource.
+INFO 08/19 12:15:31 AM Analyzing Bob_Douglas
+INFO 08/19 12:15:32 AM Analyzing resource: Bob_Douglas
+INFO 08/19 12:15:32 AM No Tables found for this resource.
+INFO 08/19 12:15:32 AM Analyzing Dino_Meneghin
+INFO 08/19 12:15:34 AM Analyzing resource: Dino_Meneghin
+INFO 08/19 12:15:34 AM No Tables found for this resource.
+INFO 08/19 12:15:34 AM Analyzing Patrick_Ewing
+INFO 08/19 12:15:36 AM Analyzing resource: Patrick_Ewing
+INFO 08/19 12:15:36 AM Table under section: Regular season
+INFO 08/19 12:15:36 AM Headers Found
+INFO 08/19 12:15:36 AM Data refined
+INFO 08/19 12:15:36 AM Rows extracted: 17
+INFO 08/19 12:15:36 AM Data extracted for this table: 238
+INFO 08/19 12:15:36 AM Header: Regular season mapped with: regularSeason
+INFO 08/19 12:15:36 AM Header: Stagione mapped with: season
+INFO 08/19 12:15:36 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:15:37 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:15:37 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:15:37 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:15:37 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:15:37 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:15:37 AM Header: Campion. mapped with: championship
+INFO 08/19 12:15:37 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:15:37 AM Header: Squadra mapped with: team
+INFO 08/19 12:15:38 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:15:38 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:15:38 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:15:38 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:15:56 AM Table under section: Playoff
+INFO 08/19 12:15:56 AM Headers Found
+INFO 08/19 12:15:56 AM Data refined
+INFO 08/19 12:15:56 AM Rows extracted: 14
+INFO 08/19 12:15:56 AM Data extracted for this table: 196
+INFO 08/19 12:15:56 AM Header: Playoff mapped with: playoff
+INFO 08/19 12:15:56 AM Header: Stagione mapped with: season
+INFO 08/19 12:15:56 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:15:57 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:15:58 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:15:58 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:15:58 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:15:58 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:15:58 AM Header: Campion. mapped with: championship
+INFO 08/19 12:15:58 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:15:58 AM Header: Squadra mapped with: team
+INFO 08/19 12:15:58 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:15:58 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:15:58 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:15:58 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:16:06 AM Analyzing Larry_Bird
+INFO 08/19 12:16:09 AM Analyzing resource: Larry_Bird
+INFO 08/19 12:16:09 AM Table under section: Regular season
+INFO 08/19 12:16:09 AM Headers Found
+INFO 08/19 12:16:09 AM Data refined
+INFO 08/19 12:16:09 AM Rows extracted: 13
+INFO 08/19 12:16:09 AM Data extracted for this table: 182
+INFO 08/19 12:16:09 AM Header: Regular season mapped with: regularSeason
+INFO 08/19 12:16:09 AM Header: Stagione mapped with: season
+INFO 08/19 12:16:09 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:16:09 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:16:10 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:16:10 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:16:10 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:16:10 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:16:10 AM Header: Campion. mapped with: championship
+INFO 08/19 12:16:10 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:16:10 AM Header: Squadra mapped with: team
+INFO 08/19 12:16:10 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:16:10 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:16:11 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:16:11 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:16:26 AM Table under section: Playoff
+INFO 08/19 12:16:26 AM Headers Found
+INFO 08/19 12:16:26 AM Data refined
+INFO 08/19 12:16:26 AM Rows extracted: 12
+INFO 08/19 12:16:26 AM Data extracted for this table: 166
+INFO 08/19 12:16:26 AM Header: Playoff mapped with: playoff
+INFO 08/19 12:16:26 AM Header: Stagione mapped with: season
+INFO 08/19 12:16:26 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:16:26 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:16:26 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:16:26 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:16:26 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:16:26 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:16:26 AM Header: Campion. mapped with: championship
+INFO 08/19 12:16:26 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:16:26 AM Header: Squadra mapped with: team
+INFO 08/19 12:16:26 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:16:26 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:16:26 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:16:28 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:16:36 AM Analyzing Julius_Erving
+INFO 08/19 12:16:38 AM Analyzing resource: Julius_Erving
+INFO 08/19 12:16:38 AM No Tables found for this resource.
+INFO 08/19 12:16:38 AM Analyzing Joe_Dumars
+INFO 08/19 12:16:40 AM Analyzing resource: Joe_Dumars
+INFO 08/19 12:16:40 AM No Tables found for this resource.
+INFO 08/19 12:16:40 AM Analyzing Clyde_Drexler
+INFO 08/19 12:16:42 AM Analyzing resource: Clyde_Drexler
+INFO 08/19 12:16:42 AM No Tables found for this resource.
+INFO 08/19 12:16:42 AM Analyzing John_Stockton
+INFO 08/19 12:16:43 AM Analyzing resource: John_Stockton
+INFO 08/19 12:16:43 AM No Tables found for this resource.
+INFO 08/19 12:16:43 AM Analyzing Oscar_Robertson
+INFO 08/19 12:16:45 AM Analyzing resource: Oscar_Robertson
+INFO 08/19 12:16:45 AM No Tables found for this resource.
+INFO 08/19 12:16:45 AM Analyzing James_Naismith
+INFO 08/19 12:16:48 AM Analyzing resource: James_Naismith
+INFO 08/19 12:16:48 AM Table under section: Statistiche
+INFO 08/19 12:16:48 AM Headers Found
+INFO 08/19 12:16:48 AM Data refined
+INFO 08/19 12:16:48 AM Rows extracted: 9
+INFO 08/19 12:16:48 AM Data extracted for this table: 47
+INFO 08/19 12:16:48 AM Header: Statistiche mapped with: statistics
+INFO 08/19 12:16:48 AM Header: Statistiche - Lega mapped with: division
+INFO 08/19 12:16:48 AM Header: Stagione mapped with: season
+INFO 08/19 12:16:48 AM Header: Statistiche - P mapped with: loss
+INFO 08/19 12:16:48 AM Header: Statistiche - V mapped with: wins
+INFO 08/19 12:16:48 AM Header: Statistiche - V-P% mapped with: winLoss
+INFO 08/19 12:16:48 AM Header: Squadra mapped with: team
+INFO 08/19 12:16:48 AM Header: Statistiche - G mapped with: games
+INFO 08/19 12:16:50 AM Analyzing Grant_Hill
+INFO 08/19 12:16:52 AM Analyzing resource: Grant_Hill
+INFO 08/19 12:16:52 AM Table under section: Statistiche
+INFO 08/19 12:16:52 AM Headers Found
+INFO 08/19 12:16:52 AM Data refined
+INFO 08/19 12:16:52 AM Rows extracted: 18
+INFO 08/19 12:16:52 AM Data extracted for this table: 252
+INFO 08/19 12:16:52 AM Header: Statistiche mapped with: statistics
+INFO 08/19 12:16:52 AM Header: Stagione mapped with: season
+INFO 08/19 12:16:52 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:16:53 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:16:53 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:16:53 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:16:53 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:16:53 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:16:53 AM Header: Campion. mapped with: championship
+INFO 08/19 12:16:53 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:16:53 AM Header: Squadra mapped with: team
+INFO 08/19 12:16:54 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:16:54 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:16:54 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:16:54 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:17:14 AM Table under section: Statistiche
+INFO 08/19 12:17:14 AM Headers Found
+INFO 08/19 12:17:14 AM Data refined
+INFO 08/19 12:17:14 AM Rows extracted: 8
+INFO 08/19 12:17:14 AM Data extracted for this table: 112
+INFO 08/19 12:17:14 AM Header: Statistiche mapped with: statistics
+INFO 08/19 12:17:14 AM Header: Stagione mapped with: season
+INFO 08/19 12:17:14 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:17:14 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:17:15 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:17:15 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:17:15 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:17:15 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:17:15 AM Header: Campion. mapped with: championship
+INFO 08/19 12:17:15 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:17:15 AM Header: Squadra mapped with: team
+INFO 08/19 12:17:15 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:17:15 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:17:15 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:17:15 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:17:24 AM Table under section: Record individuali
+INFO 08/19 12:17:24 AM Headers Found
+INFO 08/19 12:17:24 AM Data refined
+INFO 08/19 12:17:24 AM Rows extracted: 14
+INFO 08/19 12:17:24 AM Data extracted for this table: 28
+INFO 08/19 12:17:24 AM Header: Record individuali mapped with: individualRecord
+INFO 08/19 12:17:24 AM Header: Statistica mapped with: statisticsRecord
+INFO 08/19 12:17:25 AM Header: NBA mapped with: nba
+INFO 08/19 12:17:31 AM Analyzing Vince_Carter
+INFO 08/19 12:17:31 AM Analyzing resource: Vince_Carter
+INFO 08/19 12:17:31 AM No Tables found for this resource.
+INFO 08/19 12:17:31 AM Analyzing Alphonso_Ford
+INFO 08/19 12:17:32 AM Analyzing resource: Alphonso_Ford
+INFO 08/19 12:17:32 AM No Tables found for this resource.
+INFO 08/19 12:17:32 AM Analyzing Davide_Ancilotto
+INFO 08/19 12:17:33 AM Analyzing resource: Davide_Ancilotto
+INFO 08/19 12:17:33 AM No Tables found for this resource.
+INFO 08/19 12:17:33 AM Analyzing Scottie_Pippen
+INFO 08/19 12:17:35 AM Analyzing resource: Scottie_Pippen
+INFO 08/19 12:17:35 AM Table under section: Regular season
+INFO 08/19 12:17:35 AM Headers Found
+INFO 08/19 12:17:35 AM Data refined
+INFO 08/19 12:17:35 AM Rows extracted: 17
+INFO 08/19 12:17:35 AM Data extracted for this table: 238
+INFO 08/19 12:17:35 AM Header: Regular season mapped with: regularSeason
+INFO 08/19 12:17:35 AM Header: Stagione mapped with: season
+INFO 08/19 12:17:35 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:17:35 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:17:36 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:17:36 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:17:36 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:17:36 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:17:36 AM Header: Campion. mapped with: championship
+INFO 08/19 12:17:36 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:17:36 AM Header: Squadra mapped with: team
+INFO 08/19 12:17:36 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:17:36 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:17:37 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:17:37 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:17:56 AM Table under section: Playoff
+INFO 08/19 12:17:56 AM Headers Found
+INFO 08/19 12:17:56 AM Data refined
+INFO 08/19 12:17:56 AM Rows extracted: 16
+INFO 08/19 12:17:56 AM Data extracted for this table: 224
+INFO 08/19 12:17:56 AM Header: Playoff mapped with: playoff
+INFO 08/19 12:17:56 AM Header: Stagione mapped with: season
+INFO 08/19 12:17:56 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:17:57 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:17:57 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:17:57 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:17:57 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:17:57 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:17:57 AM Header: Campion. mapped with: championship
+INFO 08/19 12:17:57 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:17:57 AM Header: Squadra mapped with: team
+INFO 08/19 12:17:57 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:17:57 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:17:58 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:17:58 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:18:12 AM Analyzing Chuck_Daly
+INFO 08/19 12:18:13 AM Analyzing resource: Chuck_Daly
+INFO 08/19 12:18:13 AM No Tables found for this resource.
+INFO 08/19 12:18:13 AM Analyzing Charles_Barkley
+INFO 08/19 12:18:15 AM Analyzing resource: Charles_Barkley
+INFO 08/19 12:18:15 AM Table under section: Regular season
+INFO 08/19 12:18:15 AM Headers Found
+INFO 08/19 12:18:15 AM Data refined
+INFO 08/19 12:18:15 AM Rows extracted: 16
+INFO 08/19 12:18:15 AM Data extracted for this table: 224
+INFO 08/19 12:18:15 AM Header: Regular season mapped with: regularSeason
+INFO 08/19 12:18:15 AM Header: Stagione mapped with: season
+INFO 08/19 12:18:15 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:18:16 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:18:16 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:18:16 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:18:16 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:18:16 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:18:16 AM Header: Campion. mapped with: championship
+INFO 08/19 12:18:16 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:18:16 AM Header: Squadra mapped with: team
+INFO 08/19 12:18:16 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:18:16 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:18:16 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:18:16 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:18:35 AM Table under section: Playoff
+INFO 08/19 12:18:35 AM Headers Found
+INFO 08/19 12:18:35 AM Data refined
+INFO 08/19 12:18:35 AM Rows extracted: 13
+INFO 08/19 12:18:35 AM Data extracted for this table: 182
+INFO 08/19 12:18:35 AM Header: Playoff mapped with: playoff
+INFO 08/19 12:18:35 AM Header: Stagione mapped with: season
+INFO 08/19 12:18:35 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:18:35 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:18:35 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:18:35 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:18:35 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:18:35 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:18:35 AM Header: Campion. mapped with: championship
+INFO 08/19 12:18:35 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:18:35 AM Header: Squadra mapped with: team
+INFO 08/19 12:18:35 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:18:35 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:18:35 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:18:35 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:18:44 AM Analyzing Phil_Jackson
+INFO 08/19 12:18:45 AM Analyzing resource: Phil_Jackson
+INFO 08/19 12:18:45 AM No Tables found for this resource.
+INFO 08/19 12:18:45 AM Analyzing Stephon_Marbury
+INFO 08/19 12:18:45 AM Analyzing resource: Stephon_Marbury
+INFO 08/19 12:18:45 AM No Tables found for this resource.
+INFO 08/19 12:18:45 AM Analyzing Wilt_Chamberlain
+INFO 08/19 12:18:46 AM Analyzing resource: Wilt_Chamberlain
+INFO 08/19 12:18:46 AM No Tables found for this resource.
+INFO 08/19 12:18:46 AM Analyzing Antoine_Walker
+INFO 08/19 12:18:46 AM Analyzing resource: Antoine_Walker
+INFO 08/19 12:18:46 AM No Tables found for this resource.
+INFO 08/19 12:18:46 AM Analyzing Oscar_Schmidt
+INFO 08/19 12:18:47 AM Analyzing resource: Oscar_Schmidt
+INFO 08/19 12:18:47 AM No Tables found for this resource.
+INFO 08/19 12:18:47 AM Analyzing Sam_Cassell
+INFO 08/19 12:18:47 AM Analyzing resource: Sam_Cassell
+INFO 08/19 12:18:47 AM No Tables found for this resource.
+INFO 08/19 12:18:47 AM Analyzing Giacomo_Galanda
+INFO 08/19 12:18:48 AM Analyzing resource: Giacomo_Galanda
+INFO 08/19 12:18:48 AM No Tables found for this resource.
+INFO 08/19 12:18:48 AM Analyzing Andrew_Toney
+INFO 08/19 12:18:48 AM Analyzing resource: Andrew_Toney
+INFO 08/19 12:18:48 AM No Tables found for this resource.
+INFO 08/19 12:18:48 AM Analyzing Casey_Shaw
+INFO 08/19 12:18:49 AM Analyzing resource: Casey_Shaw
+INFO 08/19 12:18:49 AM No Tables found for this resource.
+INFO 08/19 12:18:49 AM Analyzing Joseph_Blair
+INFO 08/19 12:18:49 AM Analyzing resource: Joseph_Blair
+INFO 08/19 12:18:49 AM No Tables found for this resource.
+INFO 08/19 12:18:49 AM Analyzing Maurice_Cheeks
+INFO 08/19 12:18:50 AM Analyzing resource: Maurice_Cheeks
+INFO 08/19 12:18:50 AM No Tables found for this resource.
+INFO 08/19 12:18:50 AM Analyzing Billy_Cunningham
+INFO 08/19 12:18:51 AM Analyzing resource: Billy_Cunningham
+INFO 08/19 12:18:51 AM No Tables found for this resource.
+INFO 08/19 12:18:51 AM Analyzing Aldo_Ossola
+INFO 08/19 12:18:52 AM Analyzing resource: Aldo_Ossola
+INFO 08/19 12:18:52 AM No Tables found for this resource.
+INFO 08/19 12:18:52 AM Analyzing Eddie_Shannon
+INFO 08/19 12:18:52 AM Analyzing resource: Eddie_Shannon
+INFO 08/19 12:18:52 AM No Tables found for this resource.
+INFO 08/19 12:18:52 AM Analyzing Karl_Malone
+INFO 08/19 12:18:52 AM Analyzing resource: Karl_Malone
+INFO 08/19 12:18:52 AM Table under section: Regular season
+INFO 08/19 12:18:52 AM Headers Found
+INFO 08/19 12:18:52 AM Data refined
+INFO 08/19 12:18:52 AM Rows extracted: 19
+INFO 08/19 12:18:52 AM Data extracted for this table: 266
+INFO 08/19 12:18:52 AM Header: Regular season mapped with: regularSeason
+INFO 08/19 12:18:52 AM Header: Stagione mapped with: season
+INFO 08/19 12:18:53 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:18:53 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:18:53 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:18:53 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:18:53 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:18:53 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:18:53 AM Header: Campion. mapped with: championship
+INFO 08/19 12:18:53 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:18:53 AM Header: Squadra mapped with: team
+INFO 08/19 12:18:53 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:18:53 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:18:53 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:18:53 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:19:05 AM Table under section: Playoff
+INFO 08/19 12:19:05 AM Headers Found
+INFO 08/19 12:19:05 AM Data refined
+INFO 08/19 12:19:05 AM Rows extracted: 19
+INFO 08/19 12:19:05 AM Data extracted for this table: 266
+INFO 08/19 12:19:05 AM Header: Playoff mapped with: playoff
+INFO 08/19 12:19:05 AM Header: Stagione mapped with: season
+INFO 08/19 12:19:05 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:19:06 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:19:06 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:19:06 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:19:06 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:19:06 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:19:06 AM Header: Campion. mapped with: championship
+INFO 08/19 12:19:06 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:19:06 AM Header: Squadra mapped with: team
+INFO 08/19 12:19:06 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:19:06 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:19:06 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:19:06 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:19:20 AM Analyzing Shaquille_O'Neal
+INFO 08/19 12:19:22 AM Analyzing resource: Shaquille_O'Neal
+INFO 08/19 12:19:22 AM Table under section: Regular season
+INFO 08/19 12:19:22 AM Headers Found
+INFO 08/19 12:19:22 AM Data refined
+INFO 08/19 12:19:22 AM Rows extracted: 20
+INFO 08/19 12:19:22 AM Data extracted for this table: 280
+INFO 08/19 12:19:22 AM Header: Regular season mapped with: regularSeason
+INFO 08/19 12:19:22 AM Header: Stagione mapped with: season
+INFO 08/19 12:19:22 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:19:23 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:19:23 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:19:23 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:19:23 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:19:23 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:19:23 AM Header: Campion. mapped with: championship
+INFO 08/19 12:19:23 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:19:23 AM Header: Squadra mapped with: team
+INFO 08/19 12:19:23 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:19:23 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:19:24 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:19:24 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:19:56 AM Table under section: Playoffs
+INFO 08/19 12:19:56 AM Headers Found
+INFO 08/19 12:19:56 AM Data refined
+INFO 08/19 12:19:56 AM Rows extracted: 16
+INFO 08/19 12:19:56 AM Data extracted for this table: 224
+INFO 08/19 12:19:56 AM Header: Playoffs mapped with: playoff
+INFO 08/19 12:19:56 AM Header: Stagione mapped with: season
+INFO 08/19 12:19:56 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:19:56 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:19:56 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:19:56 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:19:56 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:19:56 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:19:56 AM Header: Campion. mapped with: championship
+INFO 08/19 12:19:56 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:19:56 AM Header: Squadra mapped with: team
+INFO 08/19 12:19:56 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:19:56 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:19:56 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:19:56 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:20:07 AM Analyzing Dwyane_Wade
+INFO 08/19 12:20:09 AM Analyzing resource: Dwyane_Wade
+INFO 08/19 12:20:09 AM Table under section: Regular season
+INFO 08/19 12:20:09 AM Headers Found
+INFO 08/19 12:20:09 AM Data refined
+INFO 08/19 12:20:09 AM Rows extracted: 11
+INFO 08/19 12:20:09 AM Data extracted for this table: 154
+INFO 08/19 12:20:09 AM Header: Regular season mapped with: regularSeason
+INFO 08/19 12:20:09 AM Header: Stagione mapped with: season
+INFO 08/19 12:20:09 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:20:09 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:20:09 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:20:09 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:20:09 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:20:09 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:20:09 AM Header: Campion. mapped with: championship
+INFO 08/19 12:20:09 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:20:09 AM Header: Squadra mapped with: team
+INFO 08/19 12:20:09 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:20:09 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:20:09 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:20:09 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:20:17 AM Table under section: Playoff
+INFO 08/19 12:20:17 AM Headers Found
+INFO 08/19 12:20:17 AM Data refined
+INFO 08/19 12:20:17 AM Rows extracted: 10
+INFO 08/19 12:20:17 AM Data extracted for this table: 140
+INFO 08/19 12:20:17 AM Header: Playoff mapped with: playoff
+INFO 08/19 12:20:17 AM Header: Stagione mapped with: season
+INFO 08/19 12:20:17 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:20:17 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:20:17 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:20:17 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:20:17 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:20:17 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:20:17 AM Header: Campion. mapped with: championship
+INFO 08/19 12:20:17 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:20:17 AM Header: Squadra mapped with: team
+INFO 08/19 12:20:17 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:20:17 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:20:17 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:20:17 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:20:27 AM Analyzing Arvydas_Sabonis
+INFO 08/19 12:20:31 AM Analyzing resource: Arvydas_Sabonis
+INFO 08/19 12:20:31 AM No Tables found for this resource.
+INFO 08/19 12:20:31 AM Analyzing Roberto_Brunamonti
+INFO 08/19 12:20:33 AM Analyzing resource: Roberto_Brunamonti
+INFO 08/19 12:20:33 AM No Tables found for this resource.
+INFO 08/19 12:20:33 AM Analyzing Steve_Nash
+INFO 08/19 12:20:35 AM Analyzing resource: Steve_Nash
+INFO 08/19 12:20:35 AM Table under section: Regular season
+INFO 08/19 12:20:35 AM Headers Found
+INFO 08/19 12:20:35 AM Data refined
+INFO 08/19 12:20:35 AM Rows extracted: 18
+INFO 08/19 12:20:35 AM Data extracted for this table: 252
+INFO 08/19 12:20:35 AM Header: Regular season mapped with: regularSeason
+INFO 08/19 12:20:35 AM Header: Stagione mapped with: season
+INFO 08/19 12:20:35 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:20:36 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:20:36 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:20:36 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:20:36 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:20:36 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:20:36 AM Header: Campion. mapped with: championship
+INFO 08/19 12:20:36 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:20:36 AM Header: Squadra mapped with: team
+INFO 08/19 12:20:36 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:20:36 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:20:36 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:20:36 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:20:56 AM Table under section: Playoff
+INFO 08/19 12:20:56 AM Headers Found
+INFO 08/19 12:20:56 AM Data refined
+INFO 08/19 12:20:56 AM Rows extracted: 12
+INFO 08/19 12:20:56 AM Data extracted for this table: 168
+INFO 08/19 12:20:56 AM Header: Playoff mapped with: playoff
+INFO 08/19 12:20:56 AM Header: Stagione mapped with: season
+INFO 08/19 12:20:56 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:20:56 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:20:56 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:20:56 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:20:56 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:20:56 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:20:56 AM Header: Campion. mapped with: championship
+INFO 08/19 12:20:56 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:20:56 AM Header: Squadra mapped with: team
+INFO 08/19 12:20:56 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:20:56 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:20:57 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:20:57 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:21:08 AM Analyzing Amar'e_Stoudemire
+INFO 08/19 12:21:10 AM Analyzing resource: Amar'e_Stoudemire
+INFO 08/19 12:21:10 AM Table under section: Regular season
+INFO 08/19 12:21:10 AM Headers Found
+INFO 08/19 12:21:10 AM Data refined
+INFO 08/19 12:21:10 AM Rows extracted: 17
+INFO 08/19 12:21:10 AM Data extracted for this table: 253
+INFO 08/19 12:21:10 AM Deleted row 16  of table Regular season because it looks like as summary row.
+INFO 08/19 12:21:10 AM Header: Regular season mapped with: regularSeason
+INFO 08/19 12:21:10 AM Header: MPG mapped with: minutesPerGame
+INFO 08/19 12:21:10 AM Header: OFF mapped with: offensive
+INFO 08/19 12:21:10 AM Header: RPG mapped with: reboundsPerGame
+INFO 08/19 12:21:10 AM Header: PRPG mapped with: prpg
+INFO 08/19 12:21:10 AM Header: DIF mapped with: difensive
+INFO 08/19 12:21:11 AM Header: PPG mapped with: pointsPerGame
+INFO 08/19 12:21:11 AM Header: APG mapped with: assistsPerGame
+INFO 08/19 12:21:11 AM Header: Anno mapped with: year
+INFO 08/19 12:21:11 AM Header: FT% mapped with: freeThrow
+INFO 08/19 12:21:12 AM Header: PG mapped with: playoffGames
+INFO 08/19 12:21:12 AM Header: Squadra mapped with: team
+INFO 08/19 12:21:12 AM Header: FG% mapped with: fieldGoal
+INFO 08/19 12:21:12 AM Header: PI mapped with: performanceIndex
+INFO 08/19 12:21:12 AM Header: 3P% mapped with: threePoints
+INFO 08/19 12:21:12 AM Header: SPG mapped with: stolePerGame
+INFO 08/19 12:22:04 AM Table under section: Playoff
+INFO 08/19 12:22:04 AM Headers Found
+INFO 08/19 12:22:04 AM Data refined
+INFO 08/19 12:22:04 AM Rows extracted: 10
+INFO 08/19 12:22:04 AM Data extracted for this table: 141
+INFO 08/19 12:22:04 AM Header: Playoff mapped with: playoff
+INFO 08/19 12:22:04 AM Header: MPG mapped with: minutesPerGame
+INFO 08/19 12:22:04 AM Header: OFF mapped with: offensive
+INFO 08/19 12:22:04 AM Header: PRPG mapped with: prpg
+INFO 08/19 12:22:04 AM Header: DIF mapped with: difensive
+INFO 08/19 12:22:04 AM Header: Year mapped with: Year
+INFO 08/19 12:22:04 AM Header: APG mapped with: assistsPerGame
+INFO 08/19 12:22:05 AM Header: FT% mapped with: freeThrow
+INFO 08/19 12:22:05 AM Header: PG mapped with: playoffGames
+INFO 08/19 12:22:05 AM Header: RPG mapped with: reboundsPerGame
+INFO 08/19 12:22:06 AM Header: Team mapped with: team
+INFO 08/19 12:22:06 AM Header: FG% mapped with: fieldGoal
+INFO 08/19 12:22:06 AM Header: PI mapped with: performanceIndex
+INFO 08/19 12:22:06 AM Header: PPG mapped with: pointsPerGame
+INFO 08/19 12:22:06 AM Header: 3P% mapped with: threePoints
+INFO 08/19 12:22:06 AM Header: SPG mapped with: stolePerGame
+INFO 08/19 12:22:32 AM Analyzing Predrag_Danilović
+INFO 08/19 12:22:33 AM Analyzing resource: Predrag_Danilović
+INFO 08/19 12:22:33 AM No Tables found for this resource.
+INFO 08/19 12:22:33 AM Analyzing Tony_Parker
+INFO 08/19 12:22:35 AM Analyzing resource: Tony_Parker
+INFO 08/19 12:22:35 AM Table under section: Regular season
+INFO 08/19 12:22:35 AM Headers Found
+INFO 08/19 12:22:35 AM Data refined
+INFO 08/19 12:22:35 AM Rows extracted: 15
+INFO 08/19 12:22:35 AM Data extracted for this table: 210
+INFO 08/19 12:22:35 AM Header: Regular season mapped with: regularSeason
+INFO 08/19 12:22:35 AM Header: Stagione mapped with: season
+INFO 08/19 12:22:35 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:22:36 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:22:36 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:22:36 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:22:36 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:22:36 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:22:36 AM Header: Campion. mapped with: championship
+INFO 08/19 12:22:36 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:22:36 AM Header: Squadra mapped with: team
+INFO 08/19 12:22:37 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:22:37 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:22:37 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:22:37 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:22:52 AM Table under section: Playoff
+INFO 08/19 12:22:52 AM Headers Found
+INFO 08/19 12:22:52 AM Data refined
+INFO 08/19 12:22:52 AM Rows extracted: 15
+INFO 08/19 12:22:52 AM Data extracted for this table: 210
+INFO 08/19 12:22:52 AM Header: Playoff mapped with: playoff
+INFO 08/19 12:22:52 AM Header: Stagione mapped with: season
+INFO 08/19 12:22:52 AM Header: Statistiche tiro - Tiri da 3 mapped with: threePoints
+INFO 08/19 12:22:53 AM Header: Statistiche tiro - Tiri da 2 mapped with: twoPoints
+INFO 08/19 12:22:53 AM Header: Altre statistiche - Rubate mapped with: stealsPerGame
+INFO 08/19 12:22:53 AM Header: Altre statistiche - Punti mapped with: pointsPerGame
+INFO 08/19 12:22:53 AM Header: Altre statistiche - Assist mapped with: assistsPerGame
+INFO 08/19 12:22:53 AM Header: Altre statistiche - Stopp. mapped with: blockPerGame
+INFO 08/19 12:22:53 AM Header: Campion. mapped with: championship
+INFO 08/19 12:22:53 AM Header: Partite - Minuti mapped with: minutesPerGame
+INFO 08/19 12:22:53 AM Header: Squadra mapped with: team
+INFO 08/19 12:22:53 AM Header: Altre statistiche - Rimb. mapped with: reboundsPerGame
+INFO 08/19 12:22:53 AM Header: Statistiche tiro - Liberi mapped with: freeThrow
+INFO 08/19 12:22:54 AM Header: Partite - Titol. mapped with: gamesStarted
+INFO 08/19 12:22:54 AM Header: Partite - Pres. mapped with: gamesPlayed
+INFO 08/19 12:23:03 AM Analyzing Brent_Barry
+INFO 08/19 12:23:05 AM Analyzing resource: Brent_Barry
+INFO 08/19 12:23:05 AM No Tables found for this resource.
+INFO 08/19 12:23:05 AM There are 0 sections and sections without mapping rules
+INFO 08/19 12:23:05 AM There are 0 headers and sections without mapping rules
+INFO 08/19 12:23:05 AM End Of File reached, now you can serialize the graph
+INFO 08/19 12:23:07 AM Triples in the graph: 8895
+INFO 08/19 12:23:07 AM Graph serialized, filename: C:\Users\Luca_\PycharmProjects\table-extractor\table_extractor\../Extractions/2017_08_19-00_23_T_Ext_it_BasketballPlayer.ttl
+INFO 08/19 12:23:07 AM REPORT:
+INFO 08/19 12:23:07 AM +           Total # resources analyzed: 100
+INFO 08/19 12:23:07 AM +           Total # tables found : 44
+INFO 08/19 12:23:07 AM +           Total # tables analyzed : 44
+INFO 08/19 12:23:07 AM +           Total # of rows extracted: 677
+INFO 08/19 12:23:07 AM +           Total # of data cells extracted : 8246
+INFO 08/19 12:23:07 AM +           Total # of exceptions extracting data : 0
+INFO 08/19 12:23:07 AM +           Total # of 'header not resolved' errors : 0
+INFO 08/19 12:23:07 AM +           Total # of 'no headers' errors : 0
+INFO 08/19 12:23:07 AM +           Total # of 'no mapping rule' errors for section : 0
+INFO 08/19 12:23:07 AM +           Total # of 'no mapping rule' errors for headers : 0
+INFO 08/19 12:23:07 AM +           Total # of data cells extracted that needs to be mapped: 8220
+INFO 08/19 12:23:07 AM +           Total # of table's rows triples serialized : 675
+INFO 08/19 12:23:07 AM +           Total # of table's cells triples serialized : 8220
+INFO 08/19 12:23:07 AM +           Total # of triples serialized : 8895
+INFO 08/19 12:23:07 AM +           Percentage of mapping effectiveness  : 1.000
