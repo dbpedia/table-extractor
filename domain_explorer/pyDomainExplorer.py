@@ -51,7 +51,7 @@ def analyze_uri_resource_list(uri_resource_list, actual_dictionary):
     """
     Analyze each resource's uri to get sections and headers of related table.
     :param uri_resource_list: list of all resource's uri
-    :param actual_dictionary
+    :param actual_dictionary: mapping rules defined in pyTableExtractor dictionary
     :return:
     """
     total_resources = len(uri_resource_list)
@@ -59,7 +59,9 @@ def analyze_uri_resource_list(uri_resource_list, actual_dictionary):
         print "Resource: ", single_uri
         # update number of resources analyzed
         explorer_tools.utils.res_analyzed += 1
+        # progress bar to warn user about how many resources have been analyzed
         explorer_tools.print_progress_bar(explorer_tools.utils.res_analyzed, total_resources)
+        # get section and headers
         get_resource_sections_and_headers(single_uri, actual_dictionary)
 
 
@@ -68,7 +70,7 @@ def get_resource_sections_and_headers(res_name, actual_dictionary):
     If there are defined tables, I will analyze each of them.
     First of all I will study section's table, then I will go on headers' table.
     :param res_name: resource name that has to be analyzed
-    :param actual_dictionary
+    :param actual_dictionary: mapping rules defined in pyTableExtractor dictionary
     :return:
     """
     # Get all tables
@@ -84,12 +86,14 @@ def check_if_section_is_present(string_to_check, headers_refined, res_name, actu
     """
     Check if section is already presents in all_sections dictionary.
     I do this in order to create a dictionary that group similar section.
+    Think that this action will help user in filling all fields
     :param string_to_check: section name to check
     :param headers_refined: all headers of this sections (JSON object that contains properties like 'colspan', etc..)
     :param res_name: resource name that has to be analyzed
-    :param actual_dictionary
+    :param actual_dictionary: mapping rules defined in pyTableExtractor dictionary
     :return:
     """
+    # get section name of resource (that can be a single value or grouped and so separated by _tte_
     section_name = check_if_similar_section_is_present(string_to_check, res_name, actual_dictionary)
     # Check if this section was already created, if not it will create another dictionary
     check_if_headers_not_present_then_add(headers_refined, section_name, actual_dictionary)
@@ -101,6 +105,7 @@ def check_if_similar_section_is_present(string_to_check, res_name, actual_dictio
     (For example 'College' and 'College statistics' will be joint in one unique section to map)
     :param string_to_check: section name to check
     :param res_name: resource name that has to be analyzed
+    :param actual_dictionary: mapping rules defined in pyTableExtractor dictionary
     :return: section name that can be:
                 - already defined in all_sections dictionary.
                 - same as before.
@@ -121,10 +126,13 @@ def check_if_similar_section_is_present(string_to_check, res_name, actual_dictio
         # if there is a similar key I have to create another key that contains current key.
         # I have also to delete previous key value in favour of the new key.
         if similar_key:
+            # crete new key
             new_key = similar_key[0] + settings.CHARACTER_SEPARATOR + string_to_check
+            # delete previous dictionary and create a new one with this new key
             app_dict = dict(all_sections[similar_key[0]])
             del all_sections[similar_key[0]]
             all_sections[new_key] = OrderedDict()
+            # search if this new_key is defined in actual_dictionary
             if new_key in actual_dictionary:
                 all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, actual_dictionary[new_key])
             else:
@@ -133,6 +141,7 @@ def check_if_similar_section_is_present(string_to_check, res_name, actual_dictio
         # If there isn't similar key, I simply create a new one in all_sections dictionary.
         else:
             all_sections[new_key] = OrderedDict()
+            # search if this new_key is defined in actual_dictionary
             if new_key in actual_dictionary:
                 all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, actual_dictionary[new_key])
             else:
@@ -155,7 +164,7 @@ def check_if_headers_not_present_then_add(headers, section_name, actual_dictiona
 
     :param headers: all table's headers
     :param section_name: section name to analyze
-    :param actual_dictionary
+    :param actual_dictionary: mapping rules defined in pyTableExtractor dictionary
     :return:
     """
     #
@@ -163,16 +172,16 @@ def check_if_headers_not_present_then_add(headers, section_name, actual_dictiona
         header = row['th']
         # character "'" will produce a wrong output file
         header = header.replace("'", "")
+        # search for equal header
         check_if_header_already_exists(header, section_name, actual_dictionary)
 
 
 def check_if_header_already_exists(header, section_name, actual_dictionary):
     """
     Check if section contains this header.
-    except KeyError will caught exception given by lack of a key (in this case 'header' is the key)
     :param header: single table header
     :param section_name: section name to analyze
-    :param actual_dictionary
+    :param actual_dictionary: mapping rules defined in pyTableExtractor dictionary
     :return:
     """
     if header not in all_sections[section_name]:
@@ -223,7 +232,7 @@ def check_if_property_exists(header):
 
 def search_equal_key(array_string, string_to_check):
     """
-    Method to search over a string list in order to check if a particular string is equal to
+    Method to search over a string list to check if a particular string is equal to
     an element of this list.
 
     :param array_string: string list
@@ -234,6 +243,7 @@ def search_equal_key(array_string, string_to_check):
     """
     result = ""
     for string in array_string:
+        # split by _tte_ to get each sections
         keys = string.split(settings.CHARACTER_SEPARATOR)
         for key in keys:
             if key == string_to_check:
@@ -246,10 +256,12 @@ def write_sections_and_headers():
     Write sections and headers found. I will use WriteSettingsFile to create output file.
     :return:
     """
+    # write output file
     WriteSettingsFile.WriteSettingsFile(all_sections, all_headers,
                                         explorer_tools)
 
 
 if __name__ == "__main__":
+    # instantiate tools that are useful for domain exploration
     explorer_tools = ExplorerTools.ExplorerTools()
     start_exploration()
