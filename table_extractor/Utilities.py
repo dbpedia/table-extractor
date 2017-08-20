@@ -22,8 +22,8 @@ class Utilities:
     """
     Utilities is a class containing a lot of methods and attributes used by the others class and modules.
     It requires only a 2 alpha-characters string representing a wiki chapter and a topic of interest.
-    Topic is used mainly in reporting and composing filename for log while chapter is used to correctly address the outer
-    service calls.
+    Topic is used mainly in reporting and composing filename for log while chapter is used to correctly address the
+    outer service calls.
 
     Public methods:
     - setup_log()
@@ -31,12 +31,13 @@ class Utilities:
     - get_current_dir() # returns current directory
     - join_paths(path1, path2) # use os.path to join tho relative paths
 
-    - json_object_getter(resource, struct='jsonpedia') # retrieve a json representation of the requested resource
     - html_object_getter(resource) # return a html representation of the requested resource
 
-    - tot_res_interested(query) # return the total number of the resources selected with the Sparql query passed as a parameter.
+    - tot_res_interested(query) # return the total number of the resources selected with the Sparql query passed as a
+            parameter.
     - dbpedia_res_list(query, offset) # return 1000 resources at a time of the scope identified by 'query'
-    - ask_if_resource_exists(resource) # test if a resource currently exists in the dbpedia endpoint RDF graph of reference.
+    - ask_if_resource_exists(resource) # test if a resource currently exists in the dbpedia endpoint RDF graph of
+            reference.
     - get_date_time() # return YEAR_MONTH_DAY_HOUR_MINUTES
     - get_date() # return YEAR_MONTH_DAY
     - print_report() # print in the log metrics to evaluate efficiency of the script
@@ -64,6 +65,8 @@ class Utilities:
         else:
             self.setup_log("explorer")
             self.extractor = False
+
+        # define a log
         self.logging = logging
         # use dbpedia_selection to set self.dbpedia and self.dbpedia_sparql_url
         self.dbpedia_sparql_url = self.dbpedia_selection()
@@ -75,9 +78,9 @@ class Utilities:
         self.time_to_attend = settings.SECONDS_BTW_TRIES  # seconds to sleep between two internet service call
         self.max_attempts = settings.MAX_ATTEMPTS  # max number of internet service' call tries
 
+        # check if user has written a class that exists in dbpedia ontology
         if self.research_type == "t":
             self.check_dbpedia_class()
-
 
         # self.dbpedia is used to contain which dbpedia to use Eg. dbpedia.org
         if self.chapter == "en":
@@ -90,10 +93,11 @@ class Utilities:
 
         self.html_format = "https://" + self.chapter + ".wikipedia.org/wiki/"
 
+        # if Utilities class is called by pyTableExtractor
         if self.extractor:
             self.dictionary = self.mapper.update_mapping_rules()
 
-        # define timeout for url request
+        # define timeout for url request in order to don't wait too much time
         socket.setdefaulttimeout(settings.REQUEST_TIMEOUT)
 
         # Variables used in final report, see print_report()
@@ -228,13 +232,18 @@ class Utilities:
                 # print ("Not a JSON object.")
                 result = "ValueE"
                 attempts += 1
-            except Exception as e:
+            except:
                 print "Exception with url:" + str(url_passed)
                 result = "GeneralE"
                 attempts += 1
         return result
 
     def html_answer(self, url_passed):
+        """
+        Open url passed to method
+        :param url_passed: url to analyze
+        :return: html document of that url
+        """
         try:
             call = urllib.urlopen(url_passed)
             html_document = lxml.html.parse(call, self.parser)
@@ -251,12 +260,17 @@ class Utilities:
             return "General Error"
 
     def html_object_getter(self, resource):
+        """
+        Get html object of resource given in input
+        :param resource: resource to transform in html
+        :return: resource in html
+        """
         html_url = self.url_composer(resource, 'html')
         is_answer_ok = False
         attempts = 0
         html_answer = None
 
-        while is_answer_ok != True and attempts < self.max_attempts:
+        while is_answer_ok is not True and attempts < self.max_attempts:
             try:
                 attempts += 1
                 html_answer = self.html_answer(html_url)
@@ -275,7 +289,13 @@ class Utilities:
         return html_answer
 
     def test_html_result(self, html_doc):
-        # TODO implement a test on html_object
+        """
+        Test if html document created is well-formed
+        :param html_doc: html document to test
+        :return:
+            - True if html_doc is well-formed
+            - False otherwise.
+        """
         if type(html_doc) == str and "Error" in html_doc:
             return False
         else:
@@ -342,7 +362,7 @@ class Utilities:
             else:
                 return False
         except:
-            #print("Exception asking if %s exists" % resource)
+            # print("Exception asking if %s exists" % resource)
             return False
 
     def get_date_time(self):
@@ -385,7 +405,8 @@ class Utilities:
         # if the table_extractor is executed in single_res mode, no resources are collected
         # from dbpedia sparql endpoints
         if self.res_collected:
-            self.logging.info("+           # of resources collected for this topic (%s) : %d" % (self.topic, self.res_collected))
+            self.logging.info("+           # of resources collected for this topic (%s) : %d" %
+                              (self.topic, self.res_collected))
 
         self.logging.info("+           Total # resources analyzed: %d" % self.res_analyzed)
 
@@ -399,22 +420,27 @@ class Utilities:
 
         self.logging.info("+           Total # of exceptions extracting data : %d" % self.data_extraction_errors)
 
-        self.logging.info("+           Total # of \'header not resolved\' errors : %d" % self.not_resolved_header_errors)
+        self.logging.info("+           Total # of \'header not resolved\' errors : %d" %
+                          self.not_resolved_header_errors)
 
         self.logging.info("+           Total # of \'no headers\' errors : %d" % self.headers_errors)
 
         if self.extractor:
-            self.logging.info("+           Total # of \'no mapping rule\' errors for section : %d" % self.no_mapping_rule_errors_section)
+            self.logging.info("+           Total # of \'no mapping rule\' errors for section : %d" %
+                              self.no_mapping_rule_errors_section)
 
-            self.logging.info("+           Total # of \'no mapping rule\' errors for headers : %d" % self.no_mapping_rule_errors_headers)
+            self.logging.info("+           Total # of \'no mapping rule\' errors for headers : %d" %
+                              self.no_mapping_rule_errors_headers)
 
-            self.logging.info("+           Total # of data cells extracted that needs to be mapped: %d" % self.data_extracted_to_map)
+            self.logging.info("+           Total # of data cells extracted that needs to be mapped: %d" %
+                              self.data_extracted_to_map)
 
             self.logging.info("+           Total # of table's rows triples serialized : %d" % self.triples_row)
 
             self.logging.info("+           Total # of table's cells triples serialized : %d" % self.mapped_cells)
 
-            self.logging.info("+           Total # of triples serialized : %d" % int(self.mapped_cells + self.triples_row))
+            self.logging.info("+           Total # of triples serialized : %d" % int(self.mapped_cells +
+                                                                                     self.triples_row))
 
             if self.data_extracted_to_map > 0:
                 effectiveness = self.mapped_cells/float(self.data_extracted_to_map)
@@ -425,8 +451,8 @@ class Utilities:
     def delete_accented_characters(self, text):
         """
         Method used to delete all accented characters from the name of resource.
-        It takes in input one string called text and gives in output another string that doesn't have accented characters
-        that it's similar to the previous form.
+        It takes in input one string called text and gives in output another string that doesn't have accented
+        characters that it's similar to the previous form.
         :param text: string where you have to delete accented charactes
         :return:
         """
@@ -451,26 +477,31 @@ class Utilities:
             fill        - Optional  : bar fill character (Str)
         """
         percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
-        filledLength = int(length * iteration // total)
-        bar = fill * filledLength + '-' * (length - filledLength)
+        filled_length = int(length * iteration // total)
+        bar = fill * filled_length + '-' * (length - filled_length)
         print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix))
 
     def read_parameters_research(self):
         """
         Read parameters defined in header of settings file
-        :return:
+        :return: set all parameters of research
         """
         if os.path.isfile(settings.PATH_DOMAIN_EXPLORER):
             import domain_settings
             for name, val in domain_settings.__dict__.iteritems():
+                # read domain
                 if name == settings.DOMAIN_TITLE:
                     self.topic = val
+                # read language
                 elif name == settings.CHAPTER:
                     self.chapter = val
+                # read research type (-s -t or -w)
                 elif name == settings.RESEARCH_TYPE:
                     self.research_type = val
+                # read name of resource's file
                 elif name == settings.RESOURCE_FILE:
                     self.resource_file = val
+                # read verbose value
                 elif name == settings.VERBOSE_TYPE:
                     self.verbose = val
         else:
@@ -506,6 +537,11 @@ class Utilities:
         return settings.PATH_FOLDER_RESOURCE_LIST + "/" + self.resource_file
 
     def check_dbpedia_class(self):
+        """
+        Check if user has written a class that is in dbpedia ontology
+        :return: nothing
+        """
+        # uri of class
         class_uri = "http://dbpedia.org/ontology/" + self.topic
         result = self.ask_if_resource_exists(class_uri)
         if not result:
