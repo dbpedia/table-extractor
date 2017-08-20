@@ -6,12 +6,11 @@ import Utilities
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
-
 def main():
     """
-    The table_extractor is a 2016 GSoC project; here you have the [first project idea]
-     (wiki.dbpedia.org/ideas/idea/59/the-table-extractor/), assigned to Simone Papalini(s.papalini) and developed for
-     DBpedia Spotlight organization.
+    The table_extractor is a 2016&2017 GSoC project; here you have the [first project idea]
+     (wiki.dbpedia.org/ideas/idea/59/the-table-extractor/), assigned to Simone Papalini(s.papalini) in 2016
+     and to Luca Virgili in 2017. Developed for DBpedia Spotlight organization.
 
     Note: Python 2.7, RDFlib, lxml are strictly required, so please install them in your environment.
 
@@ -24,31 +23,11 @@ def main():
 
     pyTableExtractor is a Python script used to carve out data from tables tou can find in wiki pages and to compose a
      RDF data set (.ttl file) with them.
-    Please refer to project's Readme, [Github project page](https://github.com/dbpedia/table-extractor) and [2016 GSoC
-     progress page](https://github.com/dbpedia/extraction-framework/wiki/GSoC_2016_Progress_Simone) to understand
+    Please refer to project's Readme, [Github project page](https://github.com/dbpedia/table-extractor) and [2017 GSoC
+     progress page](https://github.com/dbpedia/table-extractor/wiki/GSoC-2017:-Luca-Virgili-progress) to understand
      script's usage, purposes and options.
 
-    pyTableExtractor.py represents the classical usage of classes and modules for this project;
-     This script shows how you can easily recall modules and classes in order to:
-
-     - Test parameters  (ParamTester.py)
-     - Select a set of wikipedia pages/dbpedia resources you want to analyze (Selector.collect_resources())
-     - Analyze tables you can find in selected resources' pages (Analyzer.analyze()) once they were collected with
-     Selector.
-     - Serialize the mapping result in order to make a RDF dataset (Analyzer.serialize())
-     - Print a final report to have metrics to measure efficiency and effectiveness of algorithm and
-       to have an help writing down new mapping rules. (Utilities.print_report())
-
-    Once you have called pyTableExtractor with correct parameters (see DocStrings of ParamTester.py for help),
-     just relax and wait for the script to serialize a RDF data set (Turtle format) and to report results in a log file.
-
     """
-
-    """
-    single_res is a string containing the name of a wiki page (the same of dbpedia in most cases)
-      NOTE: single_res is not always set, and it is used only in the case a user want to analyze a single wiki page.
-    """
-
     """
     Instancing a Utilities object using correct language and topic.
        Utilities would be used from other classes for different purposes (Internet connection, object testing,
@@ -78,16 +57,16 @@ def main():
         """
         Now we want to analyze the set of resources (or the single one) we just retrieved, so an analyzer is created.
         Parameters passed: language, topic, utilities object, mode,  list filename and the name of the single resource.
-        Note: the last two parameters (res_list_filename and single_res) are actually mutual exclusive, so in both cases,
-             one of them is None.
+        Note: the last two parameters (res_list_filename and single_res) are actually mutual exclusive, so 
+        in both cases, one of them is None.
         """
         analyzer = Analyzer.Analyzer(language, topic, utils, res_list_filename, single_res)
 
         """
         To actually analyze the wiki pages and tables in them, you have to call the analyze() method.
-        Note: Once analyze has started, it carves out tables from every single resource passed to the Analyzer, and then
-            trying to apply mapping rules to every single data cells of those tables. See Mapper class to get an idea of the
-            decision algorithm for the mapping.
+        Note: Once analyze has started, it carves out tables from every single resource passed to the Analyzer, 
+            and then trying to apply mapping rules to every single data cells of those tables. 
+            See Mapper class to get an idea of the decision algorithm for the mapping.
         """
         analyzer.analyze()
 
