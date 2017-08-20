@@ -1,9 +1,10 @@
 from table_extractor import settings
 from collections import OrderedDict
 
+
 class WriteSettingsFile:
     """
-    WriteSettingsFile is a class that contains all methods for printing settings file in output.
+    WriteSettingsFile contains all methods for printing settings file in output.
     It will group sections found in wikipedia resources and each section will have a key that represents
     table's header.
     This file is organized like python dictionary, in this way user can easily fill all fields.
@@ -67,6 +68,7 @@ class WriteSettingsFile:
         - research type, that can be single resource, sparql where or dbpedia ontology class.
         - resource file, that contains all resources involved in user's research.
         - verbose defined.
+        - comments to facilitate user's work.
         :param domain_explored_file: reference to the output file
         :return:
         """
@@ -78,6 +80,7 @@ class WriteSettingsFile:
         domain_explored_file.write(settings.VERBOSE_TYPE + ' = "' + str(self.explorer_tools.verbose) + '" \n')
         domain_explored_file.write(settings.RESOURCE_FILE + ' = "' + self.explorer_tools.get_res_list_file() + '" \n\n')
         domain_explored_file.write(settings.COMMENT_SECTION_PROPERTY + "\n\n")
+        domain_explored_file.write(settings.COMMENT_STRUCTURE + "\n\n")
         domain_explored_file.write(settings.COMMENT_FILLED_ELEMENT + "\n\n")
 
     def print_dictionary_on_file(self, file_settings, section_dict):
@@ -95,7 +98,7 @@ class WriteSettingsFile:
             elif self.verbose == 2:
                 # don't print header already printed
                 if key == settings.SECTION_NAME_PROPERTY:
-                    file_settings.write("'" + key + "': '" + value + "'" + ", \n")
+                    file_settings.write("'" + key + "' : '" + value + "'" + ", \n")
                 elif self.all_headers[key] != "printed":
                     file_settings.write("'" + key + "': '" + value + "'" + ", \n")
                     self.all_headers.__setitem__(key, "printed")
