@@ -6,7 +6,14 @@ import os
 
 
 class MapperTools:
+    """
+    MapperTools has to support Mapper in its work. I moved some methods from Utilities class to there to
+    understand easily how project work.
+    There you will find all functions for reading mapping rules from file, updating them and all checks that are
+    needed.
 
+    There is also method to filter rows from table that summarize previous ones. (Like career rows in athlete).
+    """
     def __init__(self, utils):
         self.utils = utils
         self.chapter = self.utils.chapter
@@ -22,11 +29,16 @@ class MapperTools:
         - print new dictionary
         :return: updated dictionary
         """
+        # read mapping rules wrote by user
         new_mapping_rules = self.read_mapping_rules()
+        # check if user has written right properties (that are in dbpedia ontology)
         verified_mapping_rules = self.check_user_input_properties(new_mapping_rules)
+        # read mapping rules of pyTableExtractor
         actual_mapping_rules = self.read_actual_mapping_rules()
+        # update new mapping rules with old ones
         updated_mapping_rules = self.update_differences_between_dictionaries(actual_mapping_rules,
                                                                              verified_mapping_rules)
+        # print out mapping rules obtained previously
         self.print_updated_mapping_rules(updated_mapping_rules)
         return updated_mapping_rules
 
@@ -39,15 +51,15 @@ class MapperTools:
         import domain_settings
         new_mapping_rules = OrderedDict()
         if os.path.isfile(settings.PATH_DOMAIN_EXPLORER):
+            # search for right dictionary
             for name, val in domain_settings.__dict__.iteritems():
                 if settings.SECTION_NAME in name:
                     name_section = name.replace(settings.SECTION_NAME, "")
                     new_mapping_rules[name_section] = OrderedDict()
                     new_mapping_rules[name_section].update(val)
+        # parse mapping rules
         parsed_mapping_rules = self.parse_mapping_rules(new_mapping_rules)
         return parsed_mapping_rules
-
-
 
     def parse_mapping_rules(self, new_mapping_rules):
         """
@@ -62,13 +74,15 @@ class MapperTools:
                 value = value.translate(None, string.punctuation).replace(" ", "")
                 # Change the sectionProperty with the name of the section
                 if key == settings.SECTION_NAME_PROPERTY:
-                    # replace _ with a space.
+                    # split sections by _tte_ character
                     sections = section_key.split(settings.CHARACTER_SEPARATOR)
+                    # for each section I have to add it to dictionary
                     for section in sections:
                         parsed_mapping_rules.__setitem__(section.replace("_", " "), value)
                 elif key != "":
                     sections = section_key.split(settings.CHARACTER_SEPARATOR)
                     for section in sections:
+                        # verbose 1 define strict rule for each header
                         if self.verbose == "2":
                             parsed_mapping_rules.__setitem__(key, value)
                         else:
@@ -81,6 +95,7 @@ class MapperTools:
         :return: mapping rules already defined
         """
         actual_mapping_rules = OrderedDict()
+        # read dictionary that is of the right language
         for name, val in mapping_rules.__dict__.iteritems():
             if self.chapter.upper() in name[-2:]:
                 actual_mapping_rules = dict(val)
@@ -97,14 +112,16 @@ class MapperTools:
                 # don't check table's row
                 query = settings.SPARQL_CHECK_IN_ONTOLOGY[0] + new_mapping_rules[key] + \
                         settings.SPARQL_CHECK_IN_ONTOLOGY[1]
-                url = self.url_composer(query, "dbpedia")
-                response = self.json_answer_getter(url)['boolean']
+                url = self.utils.url_composer(query, "dbpedia")
+                # get response of request
+                response = self.utils.json_answer_getter(url)['boolean']
+                # if property isn't defined in ontology, i delete it
                 if not response:
                     message = "Property: " + new_mapping_rules[key] +\
                            ", doesn't exist in dbpedia ontology. Please add it."
                     print message, "\n"
                     del new_mapping_rules[key]
-                    self.logging.warn(message)
+                    self.utils.logging.warn(message)
         return new_mapping_rules
 
     def update_differences_between_dictionaries(self, actual_mapping_rules, new_mapping_rules):
@@ -136,13 +153,17 @@ class MapperTools:
         printed_out = 0
         for name, val in mapping_rules.__dict__.iteritems():
             if settings.MAPPING_RULE_PREFIX in name:
+                # read dictionaries that aren't modified and print them
                 if self.chapter.upper() in name[-2:]:
                     printed_out = 1
-                    data_to_print = data_to_print + name + "=" + str(updated_mapping_rules).replace(", ", ", \n") + "\n\n\n"
+                    data_to_print = data_to_print + name + "=" + str(updated_mapping_rules).replace(", ", ", \n") +\
+                        "\n\n\n"
                 else:
-                    data_to_print = data_to_print + name + "=" + str(val).replace(", ",", \n") + "\n\n\n"
-        file = open("mapping_rules.py", "w")
-        file.write(settings.COMMENT_MAPPING_RULES + "\n\n")
+                    # read old dictionary and replace it with new one
+                    data_to_print = data_to_print + name + "=" + str(val).replace(", ", ", \n") + "\n\n\n"
+        # overwrite mapping_rules.py
+        mapping_rules_file = open("mapping_rules.py", "w")
+        mapping_rules_file.write(settings.COMMENT_MAPPING_RULES + "\n\n")
         # printed_out == 0 means that the dictionary didn't exists in mapping_rules.py
         if printed_out == 0:
             # Building dictionary in string form for printing out to file
@@ -152,7 +173,7 @@ class MapperTools:
                 dict_in_str = dict_in_str + "'" + key + "':'" + value + "',\n"
             new_dict = new_dict + dict_in_str + "} \n"
             data_to_print = data_to_print + new_dict
-        file.write(data_to_print)
+        mapping_rules_file.write(data_to_print)
 
     # tools useful to create rdf graph
 
@@ -230,31 +251,46 @@ class MapperTools:
         return table_data
 
     def difference_between_strings(self, a, b):
+        """
+        Count how many chars differs these two strings
+
+        :param a: string
+        :param b: string
+        :return: number of unique chars that differs between two strings
+        """
         counter = 0
+        # if it's float i need to cast to string
         if type(a) == float:
             a = str(a)
         if type(b) == float:
             b = str(b)
+        # get unique chars from string
         unique_chars_a = self.get_unique_chars(a)
         unique_chars_b = self.get_unique_chars(b)
+        # count unique chars from first string
         for char in unique_chars_a:
             if char not in unique_chars_b:
                 counter += 1
 
+        # count unique chars from second string
         for char in unique_chars_b:
             if char not in unique_chars_a:
                 counter += 1
         return counter
 
-    def get_unique_chars(self, string):
-        string = string.replace(" ", "")
+    def get_unique_chars(self, work_string):
+        """
+        Get a list of unique chars that compose a string
+
+        :param work_string: string where to count unique chars
+        :return: list of unique chars
+        """
+        work_string = work_string.replace(" ", "")
         unique_chars = []
-        for char in string:
+        for char in work_string:
             if char not in unique_chars:
                 unique_chars.append(char.lower())
         return unique_chars
-
-
 
     def adjust_resource(self, text):
         """
