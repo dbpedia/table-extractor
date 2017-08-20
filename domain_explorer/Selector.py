@@ -8,8 +8,8 @@ __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 class Selector:
     """
     Class Selector is used to select which kind of wiki pages and so resources, have to be used in table's analysis.
-    A selector object creates a .txt file filled with resources' name. Then this file will be used by the analyzer to
-    have a set of resources to work with.
+    A selector object creates a .txt file filled with resources' name. Then this file will be used by the ExplorerTools
+    to have a set of resources to work with.
 
     Arguments:
         - utils (Utilities object) a Utilities object, useful to call dbpedia service depending on the chapter of
@@ -85,8 +85,7 @@ class Selector:
         :return: After the list file has been serialized, it returns nothing
         """
         # Iterate until the offset is <= the total number of resources from that set
-        # original self.offset <= self.tot_res_interested:
-        while self.offset <= 0:
+        while self.offset <= self.tot_res_interested:
             try:
                 # acquiring a list [] of resources calling utils.dbpedia_res_list(query_res_list, offset)
                 self.current_res_list = self.utils.dbpedia_res_list(self.query_res_list, self.offset)
@@ -140,9 +139,12 @@ class Selector:
         - where clause given by user (-w)
         :return:
         """
+        # DBpedia mapping class search
         if self.utils.research_type == "t":
             return "?s ?o <http://dbpedia.org/ontology/" + self.utils.topic + ">"
+        # single resource
         elif self.utils.research_type == "s":
             return self.utils.topic
+        # query defined by user
         elif self.utils.research_type == "w":
             return self.utils.topic
