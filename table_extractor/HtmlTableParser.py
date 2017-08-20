@@ -30,7 +30,7 @@ class HtmlTableParser:
 
     """
 
-    def __init__(self, html_doc_tree, chapter, graph, topic, resource, utils, mapping = False):
+    def __init__(self, html_doc_tree, chapter, graph, topic, resource, utils, mapping=False):
         """
         HtmlTableParser is a class used to analyze the tables for a preselected resource.
 
@@ -152,6 +152,7 @@ class HtmlTableParser:
             tab.table_attributes = html_table.attrib
             # find out the table section using find_table_section()
             tab.table_section = self.find_table_section()
+
             print "Section found: ", tab.table_section
             self.logging.info("Table under section: %s" % tab.table_section)
 
@@ -188,11 +189,13 @@ class HtmlTableParser:
                     self.utils.rows_extracted += tab.data_refined_rows
                     # Start the mapping process
                     self.all_tables.append(tab)
+                    # if i have to map table found (HtmlTableParser can be called even by pyDomainExplorer)
                     if self.mapping:
                         # Create a MAPPER object in order to map data extracted
                         mapper = Mapper.Mapper(self.chapter, self.graph, self.topic, self.resource, tab.data_refined,
                                                self.utils, self.reification_index, tab.table_section)
                         mapper.map()
+                        # update reification index of this resource
                         self.reification_index = mapper.reification_index
 
                 # If no data have been found for this table report this condition with tag E3
@@ -261,6 +264,7 @@ class HtmlTableParser:
 
         # if a <h> tag was not found return the page's title
         resource = self.resource.replace("_", " ")
+        # I need that section hasn't accented characters
         resource = self.utils.delete_accented_characters(resource)
         resource = resource.encode('utf-8')
         resource = resource.translate(None, string.punctuation)
@@ -271,9 +275,7 @@ class HtmlTableParser:
         Simply count rows in a html table
         :return num_of_rows: number or rows found
         """
-        num_of_rows = 0
-        for row in self.current_html_table:
-            num_of_rows += 1
+        num_of_rows = len(self.current_html_table)
         return num_of_rows
 
     def find_headers(self, tab):
@@ -313,44 +315,6 @@ class HtmlTableParser:
                     tab.headers.append(header_row)
         except:
             self.logging.warning("Error Finding the headers, resource: %s" % self.resource)
-
-    def check_miss_subheaders(self, tab):
-        """
-
-        :param tab:
-        :return:
-        """
-        if tab.headers:
-            last_header = tab.headers[len(tab.headers) - 1]
-            header_error = False
-            for th in last_header:
-                if 'colspan' in th:
-                    if th['colspan'] > 1:
-                        header_error = True
-            if header_error:
-                print ("Some headers are missing, trying to reconstruct sub headers")
-                self.set_new_header(len(tab.headers), tab)
-                self.remove_row(len(tab.headers))
-        else:
-            try:
-                self.set_new_header(0, tab)
-                self.remove_row(1)
-            except:
-                print("Something wrong setting a new header...")
-
-    def set_new_header(self, row_index, tab):
-        row = self.current_html_table.find('tr[' + str(row_index + 1) + ']')
-        td_html = row.findall('td')
-        th_html = row.findall('th')
-        if td_html and not th_html:
-            headers = self.compose_tab_headers(td_html)
-            if headers:
-                tab.headers.append(headers)
-
-    def remove_row(self, tr_index):
-        row = self.current_html_table.find('tr[' + str(tr_index) + ']')
-        self.current_html_table.remove(row)
-        print(html.tostring(self.current_html_table, pretty_print=True))
 
     def compose_tab_headers(self, headers_row):
         """
@@ -793,25 +757,6 @@ class HtmlTableParser:
         # Returns data_cell dictionary
         return data_cell
 
-    '''
-     # Using a WYSIWYG approach, this method is useless
-    def resolve_sub_tag(self, cell, tag):
-        sub_tag = cell.find(tag)
-        if type(sub_tag) == _Element:
-            text = sub_tag.text
-            if tag == 'span':
-                attributes = sub_tag.attrib
-                if 'style' in attributes and attributes['style'] == 'white-space:nowrap; display:inline-block':
-                    text = text.replace(" ", "")
-            if text:
-                return text
-            else:
-                anchor = self.find_anchors(sub_tag)
-                if anchor:
-                    return anchor[0]['a']
-        else:
-            return None
-    '''
     def refine_data(self, tab):
         """
         Refine data rows using different methods over table.data rows.
@@ -1021,10 +966,15 @@ class HtmlTableParser:
                     tab.data_refined.append(temp_row)
 
     def print_table(self, tab):
+        """
+        Print elements that are in table passed to method
+
+        :param tab: table to print
+        :return: nothing
+        """
         print "section ", tab.table_section, " vertical table: ", tab.vertical_table
         for value in self.current_html_table:
-            str = ""
+            str_to_print = ""
             for x in value.itertext():
-                str = str + x
-            print str.replace("\n", " ")
-
+                str_to_print = str_to_print + x
+            print str_to_print.replace("\n", " ")
