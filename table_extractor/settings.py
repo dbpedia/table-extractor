@@ -14,7 +14,6 @@ MAX_ATTEMPTS = 3
 REQUEST_TIMEOUT = 5
 
 # Following are values used to compose urls of web services.
-
 SPARQL_CALL_FORMAT = "&format=application%2Fsparql-results%2Bjson&debug=on"
 
 
@@ -33,8 +32,11 @@ PREFIX_MAPPING_RULE = "MAPPING_RULES_"
 # Path where the pyTableExtractor dictionary is located
 PATH_ACTUAL_DICTIONARY = "../table_extractor/mapping_rules.py"
 
+# enable filter to table's data to delete rows that summarize previous ones. (Like career rows in athlete)
 APPLY_FILTER_TO_TABLE_DATA = True
 
+# check if property wrote by user in domain_settings.py are already in dbpedia or not
+# if a property isn't in dbpedia ontology, user will receive a message and it won't be created related triple
 CHECK_USER_INPUT_PROPERTY = False
 
 # SETTINGS FOR pyDomainExplorer
@@ -44,21 +46,31 @@ RESEARCH_TYPE = "RESEACH_TYPE"
 VERBOSE_TYPE = "VERBOSE_VALUE"
 DOMAIN_TITLE = "DOMAIN_EXPLORED"
 CHAPTER = "CHAPTER"
+# prefix of section variable in domain_settings.py
 SECTION_NAME = "SECTION_"
+# character that separate two or more similar section
 CHARACTER_SEPARATOR = "_tte_"
+# name associated to property section in domain_settings.py
 SECTION_NAME_PROPERTY = "sectionProperty"
+# comments for user
 FIRST_COMMENT = "# Comments below will help you in filling this file settings. Remember to change only " +\
                 SECTION_NAME + " variables.\n# Please do not modify pyDomainExplorer parameters. \n\n" \
                                "# pyDomainExplorer parameters "
 COMMENT_FOR_EXAMPLE_PAGE = "# Example page where it was found this section: "
+
 COMMENT_SECTION_PROPERTY = "# The entry named " + SECTION_NAME_PROPERTY + " represents ontology property associated " +\
     "to table's section.\n" \
     "# (Eg. in basket domain, section named playoff can be mapped with something like 'playoff' or "\
     " 'playoffMatch').\n# Triple example: <http://dbpedia.org/resource/Kobe_Bryant> " \
     "<http://dbpedia.org/ontology/playoffMatch>\n# <http://dbpedia.org/resource/Kobe_Bryant__1>"
-COMMENT_FILLED_ELEMENT = "# If you see elements already filled, it means that I have already found that header" \
-                         " in pyTableExtractor dictionary\n# or on dbpedia ontology\n" \
+
+COMMENT_FILLED_ELEMENT = "# Elements already filled  means that I have already found that header" \
+                         " in pyTableExtractor dictionary\n# or on dbpedia ontology.\n" \
                          "# If you empty a field that was filled, you will delete that rule from dictionary."
+
+COMMENT_STRUCTURE = "# Writing mapping rules is simple --> you have to fill all empty field remembering this" \
+                    " structure:\n# 'table's header':'ontology property' (Example:  'year':'Year', " \
+                    "'GP':'gamesPlayed','High school name':'nameSchool'). "
 
 RESOURCE_FILE = "RESOURCE_FILE"
 END_OF_FILE = "\n# END OF FILE \n"
@@ -68,7 +80,9 @@ FILE_PATH_DOMAIN_EXPLORED = "../domain_settings.py"
 
 # Help for verbose input
 VERBOSE_DEFAULT = '1'
+# possible verbose values
 VERBOSE_CHOISES = [1, 2]
+# Help user on verbose choose
 VERBOSE_HELP = " Verbose can be 1,2. Verbose 1 list all headers for each section, while verbose 2 write only one" \
                " time a header.( Eg. if two sections named 'playoff' and 'regular season' has header 'Year', in " \
                " verbose 2 you will see 'Year' only one time in file settings) "
@@ -129,4 +143,5 @@ SPARQL_RES_LIST_QUERY = ["SELECT distinct ?s as ?res WHERE{", "} LIMIT 5 OFFSET 
 # Query to get number of resources involved in an execution
 SPARQL_NUM_RES_QUERY = ["select (count(distinct ?s) as ?res_num) where{", "}"]
 
+# number of wikipedia pages example that will be printed over section variables in domain_settings.py
 NUMBER_OF_WIKI_EXAMPLES = 3
