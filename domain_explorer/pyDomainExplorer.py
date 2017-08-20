@@ -5,11 +5,12 @@ import WriteSettingsFile
 from table_extractor import settings
 from collections import OrderedDict
 
+__author__ = "lucav48 - Luca Virgil (lucav48@gmail.com)"
+
 # All table's section found
 all_sections = OrderedDict()
 # All headers found in tables analyzed
 all_headers = OrderedDict()
-__author__ = "Luca Virgili"
 
 """
 pyDomainExplorer works over domain specified by user in order to get all sections and headers of tables that 
