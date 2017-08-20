@@ -2,8 +2,8 @@
 import rdflib
 from settings import APPLY_FILTER_TO_TABLE_DATA
 
-
 resources_found = []
+
 
 class Mapper:
     """
@@ -60,6 +60,7 @@ class Mapper:
         self.db = None
         self.define_namespace()
 
+        # user can disable filter on table's data
         if APPLY_FILTER_TO_TABLE_DATA:
             self.table_data = self.mapper.filter_table_data(self.table_data, self.table_section)
 
@@ -88,23 +89,27 @@ class Mapper:
         :return:
         """
         # link with between resource section property and each section's row
-        section_property = self.define_row_and_section_property()
+        section_property = self.search_on_dictionary(self.table_section)
         # if i find a section property that is defined
         if section_property:
             # in row[cell] (that is table's cell value) contains even link in first position
             for row in self.table_data:
                 section_row_property = self.dbr + self.resource + "__" + str(self.reification_index)
                 self.reification_index += 1
+                # add triple to represent table's row
                 self.add_triple_to_graph(self.dbr + self.resource, self.dbo + section_property, section_row_property)
                 self.utils.triples_row += 1
                 for cell in row:
+                    # read value
                     value = self.mapper.extract_value_from_cell(row[cell])
                     # character "-" means that cell is empty
                     if value != '-':
+                        # get property of table's header
                         dictionary_property = self.search_on_dictionary(self.table_section + "_" + cell)
                         if dictionary_property:
+                            # add triple for header
                             self.add_triple_to_graph(section_row_property, self.dbo + dictionary_property, value,
-                                                     type="cell")
+                                                     selection="cell")
                             self.utils.mapped_cells += 1
         else:
             # section without mapping rule
@@ -112,28 +117,19 @@ class Mapper:
             # all headers will not be mapped, so I have to print it in final report
             self.utils.no_mapping_rule_errors_headers += len(self.table_data[0])
 
-
-    def define_row_and_section_property(self):
-        """
-        Method to search property of section and to create row's resource with its own index
-        :return: section property resource
-        """
-        section_property = self.search_on_dictionary(self.table_section)
-        return section_property
-
-    def add_triple_to_graph(self, subject, prop, value, type="row"):
+    def add_triple_to_graph(self, subject, prop, value, selection="row"):
         """
         Simply add triple to graph
         :param subject: subject of triple
         :param prop: property of triple
         :param value: value of triple (value has to check type of value)
-        :param type: can be "row" if i'm adding a row triple or something else if it's a simple triple.
+        :param selection: can be "row" if i'm adding a row triple or something else if it's a simple triple.
         :return: nothing
         """
         subject = rdflib.URIRef(subject)
         prop = rdflib.URIRef(prop)
         # check if i'm working with rows or single header
-        if type == "row":
+        if selection == "row":
             value = rdflib.URIRef(value)
         else:
             value = self.check_value_type(value)
@@ -148,7 +144,6 @@ class Mapper:
                 - empty if 'key' is not defined in dictionary
                 - property associated to 'key' if this exists
         """
-        message = ""
         value = ""
         if key in self.dictionary:
             value = self.dictionary[key]
@@ -156,6 +151,7 @@ class Mapper:
         # if it's a section + "_" + header
         elif len(key.split("_")) > 1:
             header = key.split("_")[-1]
+            # search for a less strict rule like 'header':'property'
             if header in self.dictionary:
                 value = self.dictionary[header]
                 message = "Header: " + header + " mapped with: " + str(value)
@@ -169,6 +165,7 @@ class Mapper:
         # print message in log
         already_printed = [x for x in self.printed_key if x == key]
         if len(already_printed) == 0:
+            # do not print another time message for same header
             self.printed_key.append(key)
             self.logging.info(message)
             # means a lack of mapping rules
@@ -193,6 +190,7 @@ class Mapper:
         else:
             # If this string represents a resource
             resource = self.check_if_is_resource(result)
+            # if it is a resource in dbpedia
             if resource:
                 return rdflib.URIRef(resource)
             else:
@@ -202,14 +200,17 @@ class Mapper:
     def check_if_is_resource(self, resource):
         """
         Make a SPARQL query in dbpedia dataset to know if exists a resource named in a particular way
-        :param resource: name of resource that you want to check if it's a reresource
+        :param resource: name of resource that you want to check if it's a resource
         :return:
             - empty if it's not a resource
             - uri of resource if it exists
         """
+        # resource are stored in variable to save time.
         resource_to_search = self.mapper.adjust_resource(resource)
         saved_resource = [r for r in resources_found if r in resource_to_search]
+        # if i didn't find a resource named like that
         if not saved_resource:
+            # check if it is a dbpedia resource
             if self.utils.ask_if_resource_exists(self.dbr + self.utils.delete_accented_characters(resource_to_search)):
                 resources_found.append(resource_to_search)
                 result = self.dbr + resource_to_search
