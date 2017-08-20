@@ -28,7 +28,7 @@ class Table:
 
         self.data_filtered = []
 
-        # used for understanding if headers are in rows or in columns
+        # used to understand if headers are in rows or in columns
         self.vertical_table = 0
 
     def count_data_cells_and_rows(self):
@@ -40,6 +40,7 @@ class Table:
         data_num = 0
         rows = len(self.data_refined)
         # i don't want to count empty cell (empty cell has "-") --> no data in there
+        # counting empty cell will give a wrong final report
         for row in self.data_refined:
             keys = row.keys()
             for key in keys:
