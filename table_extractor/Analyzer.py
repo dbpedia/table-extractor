@@ -13,8 +13,7 @@ class Analyzer:
 
     It takes resources from .txt file (generally created by Selector objects) or from a string if a single_resource is
      involved.
-    Therefore a Table Parser object (Html or Json), it depends on mode chosen, is called over their wiki page
-     representation.
+    Therefore a Table Parser object is called over their wiki page representation.
      This representation is retrieved by a utilities object (calling html_object_getter()).
     Once the list of resources is finished or the analysis of a resource is done some useful statistics values are set.
     Some of them are passed to the utilities object (res_analyzed), as they are useful to print a final cumulative
@@ -26,8 +25,8 @@ class Analyzer:
     Public Methods:
         -analyze(): it is used to analyze a list of resources(or a single resource) passed once analyzer has been
             initialized. Once you have created Analyzer object simply call this method to begin the analysis.
-            This method doesn't return nothing by itself as useful informations are printed out both in the log and in the
-            console.
+            This method doesn't return nothing by itself as useful informations are printed out both in the log and
+            in the console.
 
         -serialize(): method used to serialize the RDF graph fulfilled with triples during analysis (mapping) phase.
             it creates a .ttl file (serialization of the RDF graph).
@@ -130,7 +129,7 @@ class Analyzer:
 
     def analyze(self):
         """
-        This method iterates over a list of resources and setup a TableParser on a html|json representation of it.
+        This method iterates over a list of resources and setup a TableParser on a html representation of it.
 
         Then it uses the analyze_tables() method of Table Parsers to start the analysis process for tables of current
             resource.
@@ -172,19 +171,19 @@ class Analyzer:
 
                         # Add to the total the number of tables found for this resource
                         self.total_table_num += html_parser.tables_num
-
             except StopIteration:
                 self.lines_to_read = False
                 self.utils.res_analyzed = self.res_analyzed
 
                 # Print out and in the log every header cell without mapping rule
                 print("There are %d sections without mapping rules." % self.utils.no_mapping_rule_errors_section)
-                print("There are %d headers without mapping rules." % self.utils.no_mapping_rule_errors_headers)
                 self.logging.info("There are %d sections and sections without mapping rules" %
                                   self.utils.no_mapping_rule_errors_section)
+                # Print out and in the log every section cell without mapping rule
+                print("There are %d headers without mapping rules." % self.utils.no_mapping_rule_errors_headers)
                 self.logging.info("There are %d headers and sections without mapping rules" %
                                   self.utils.no_mapping_rule_errors_headers)
-
+                # end of resources involved
                 self.logging.info("End Of File reached, now you can serialize the graph")
                 print ("\nEnd Of Resource File reached")
 
