@@ -159,10 +159,6 @@ class HtmlTableParser:
             # find headers for this table
             self.find_headers(tab)
 
-            # Chose to not use this method as it resolves users' made errors but create problems with correctly
-            #  written table
-            # self.check_miss_subheaders(tab)
-
             # if headers have been found
             if tab.headers:
                 self.logging.info("Headers Found")
@@ -170,41 +166,42 @@ class HtmlTableParser:
                 # Refine headers found
                 self.refine_headers(tab)
 
-                # Once the headers are refined, start to extract data cells
-                self.extract_data(tab)
+                if self.mapping:
+                    # Once the headers are refined, start to extract data cells
+                    self.extract_data(tab)
 
-                # Refine data cells found
-                self.refine_data(tab)
+                    # Refine data cells found
+                    self.refine_data(tab)
 
-                # If data are correctly refined
-                if tab.data_refined:
-                    # Count data cells and data rows using table.count_data_cells_and_rows()
-                    tab.count_data_cells_and_rows()
-                    self.logging.info("Rows extracted: %d" % tab.data_refined_rows)
-                    self.logging.info("Data extracted for this table: %d" % tab.cells_refined)
+                    # If data are correctly refined
+                    if tab.data_refined:
+                        # Count data cells and data rows using table.count_data_cells_and_rows()
+                        tab.count_data_cells_and_rows()
+                        self.logging.info("Rows extracted: %d" % tab.data_refined_rows)
+                        self.logging.info("Data extracted for this table: %d" % tab.cells_refined)
 
-                    # update data cells extracted in order to <make a final report
-                    self.utils.data_extracted += tab.cells_refined
-                    self.utils.data_extracted_to_map += tab.cells_refined
-                    self.utils.rows_extracted += tab.data_refined_rows
-                    # Start the mapping process
-                    self.all_tables.append(tab)
-                    # if i have to map table found (HtmlTableParser can be called even by pyDomainExplorer)
-                    if self.mapping:
+                        # update data cells extracted in order to <make a final report
+                        self.utils.data_extracted += tab.cells_refined
+                        self.utils.data_extracted_to_map += tab.cells_refined
+                        self.utils.rows_extracted += tab.data_refined_rows
+                        # Start the mapping process
+                        self.all_tables.append(tab)
+                        # if i have to map table found (HtmlTableParser can be called even by pyDomainExplorer)
+
                         # Create a MAPPER object in order to map data extracted
                         mapper = Mapper.Mapper(self.chapter, self.graph, self.topic, self.resource, tab.data_refined,
                                                self.utils, self.reification_index, tab.table_section)
                         mapper.map()
                         # update reification index of this resource
                         self.reification_index = mapper.reification_index
-
-                # If no data have been found for this table report this condition with tag E3
+                    # If no data have been found for this table report this condition with tag E3
+                    else:
+                        self.logging.debug("E3 - UNABLE TO EXTRACT DATA - resource: %s" % self.resource)
+                        print("E3 UNABLE TO EXTRACT DATA")
+                        # Update the count of tables with this condition (no data found)
+                        self.no_data += 1
                 else:
-                    self.logging.debug("E3 - UNABLE TO EXTRACT DATA - resource: %s" % self.resource)
-                    print("E3 UNABLE TO EXTRACT DATA")
-                    # Update the count of tables with this condition (no data found)
-                    self.no_data += 1
-
+                    self.all_tables.append(tab)
             # if no headers have been found report this critical condition with the tag E2
             else:
                 self.logging.debug(
