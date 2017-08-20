@@ -8,7 +8,7 @@ from collections import OrderedDict
 
 class ExplorerTools:
     """
-    ExplorerTools is a class that implement all methods in order to support pyDomainExplorer.py
+    ExplorerTools implements all methods to support pyDomainExplorer.py
     In this script you will find functions that goes from parsing arguments given by user to get dbpedia resources.
     This is also an interface to class Utilities, HtmlTableParser from table_extractor, because
     I used some methods from those classes.
@@ -30,6 +30,7 @@ class ExplorerTools:
         # declare pyTableExtractor Utilities
         self.utils = Utilities.Utilities(self.chapter, self.topic, self.research_type)
 
+        # if user doesn't choose for single resource
         if not self.args.single:
             self.selector = Selector.Selector(self.utils)
 
@@ -81,6 +82,7 @@ class ExplorerTools:
         """
         if self.args.chapter:
             ch = self.args.chapter.lower()
+            # search if language is available
             search = [x for x in settings.LANGUAGES_AVAILABLE if x == ch]
             if len(search) > 0:
                 return search[0]
@@ -93,15 +95,18 @@ class ExplorerTools:
         :return: topic value
         """
         if self.args.topic:
+            # topic search
             self.research_type = "t"
             if self.args.topic.isalpha():
                 return self.args.topic
             else:
                 sys.exit("Error writing DBpedia class - Class doesn't contain punctuation  characters")
         elif self.args.single:
+            # single resource
             self.research_type = "s"
             return self.args.single
         elif self.args.where:
+            # where clause defined by user
             self.research_type = "w"
             return self.args.where
 
@@ -111,9 +116,11 @@ class ExplorerTools:
         :return: verbose value
         """
         if self.args.verbose:
+            # check if verbose is correcy
             if len(str(self.args.verbose)) == 1 and self.args.verbose <= 2:
                 return self.args.verbose
             else:
+                # use default verbose if user wrote a wrong value
                 print "Wrong verbose, used default: " + settings.VERBOSE_DEFAULT
                 return settings.VERBOSE_DEFAULT
 
@@ -125,11 +132,15 @@ class ExplorerTools:
         :return: list of uri
         """
         uri_resource_list = []
+        # if it's not a single resource
         if not self.args.single:
+            # if there are resource
             if self.selector.tot_res_interested > 0:
                 self.selector.collect_resources()
                 uri_resource_file = self.selector.res_list_file
                 uri_resource_list = self.extract_resources(uri_resource_file)
+            else:
+                sys.exit("No resources found. Please check arguments passed to pyDomainExplorer")
         else:
             uri_resource_list.append(self.args.single)
         return uri_resource_list
@@ -195,7 +206,9 @@ class ExplorerTools:
     def read_actual_dictionary(self):
         """
         Read the pyTableExtractor dictionary. I will choose dictionary of the same language given by chapter.
-
+        If user has written language different from english, I will load anyway english dictionary, because
+        I can find something useful in that dictionary. (Remember that dbpedia is in english, and sometimes in
+        wikipedia pages (that are written in italian or french) there are english terms)
         :return: pyTableExtractor dictionary
         """
         dictionary = OrderedDict()
@@ -261,15 +274,24 @@ class ExplorerTools:
         :param msg: message to print
         :return:
         """
+        # info message in log
         if log_type == "info":
             self.utils.logging.info(msg)
+        # warning message
         elif log_type == "warning":
             self.utils.logging.warning(msg)
+        # exception message
         elif log_type == "exception":
             self.utils.logging.exception(msg)
+        # error message
         elif log_type == "error":
             self.utils.logging.error(msg)
 
-    # Print iterations progress
     def print_progress_bar(self, iteration, total):
+        """
+        Print iterations progress
+        :param iteration: number of actual iteration
+        :param total: total iteration to do
+        :return: nothing, print progress bar
+        """
         self.utils.print_progress_bar(iteration, total)
