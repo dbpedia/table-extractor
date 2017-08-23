@@ -101,44 +101,6 @@ I recommend to also see [this page](https://github.com/dbpedia/table-extractor/w
 
 Note that effectiveness of the mapping operation mostly depends on how many rules user has wrote in `domain_settings.py`.
 
-## Folders
-**table_extractor** Folder containing sources files for analyzing and mapping all resources found. Related to `pyTableExtractor` module.
-
-**domain_explorer** Folder containing sources files for exploring and reading all properties of a domain. Related to `pyDomainExplorer` module.
-
-**Extractions** In this folder you will find .ttl and .log files about explorations and extractions you have completed.
-
-**Resource_lists** Here are collected .txt files as result from Selector.py work. Every .txt file contains a list of resources gathered by a SPARQL query (using -t topic or -w custom_where_clause). 
-
-## Sources Files
-
-### pyTableExtractor module
-**pyTableExtractor** Module: contains main() function. It will read research's parameters from `domain_settings.py` and it will organize the workflow of all classes.
- 
-**settings** A settings file used to store default values, both for `pyDomainExplorer` and for `pyTableExplorer`. You can customize scripts from there. 
-
-**Analyzer** Once a list of resources (or a single one) has been formed, Analyzer is summoned in order to analyze tables. It takes a single resource at a time, from a .txt file or from -s parameter.
- 
-**Utilities** Contains accessory methods used, for example, to setup log file, to get time and date or to call outer services (sparql dbpedia endpoints, JSONPedia, wiki pages as html object). This class will be used from both module.
-
-**Table** Class representing a table. It has some data structures used by other classes in order to recreate the table structure and to extract data.
-
-**HtmlTableParser** Class which takes a html object representing a wiki page of interest. It has the mission to find the structure (extract coherently headers) of the tables in the wiki page selected. Then it tries to extract data and to associate them with the corresponding headers. If the extraction is successful it calls the mapper to map data in RDF statements.
-
-**Mapper** Class used to manage data extracted by the parsers. Depending on mapping_rules.py settings, it tries to map data applying different mapping rules. These rules depend on the chapter and the topic selected. 
-
-**mapping_rules** File that contains mapping rules defined in all previously execution of pyTableExtractor.
-
-### pyDomainExplorer module
-
-**pyDomainExplorer** Main file to explore the domain or single resource under exam.
-
-**ExplorerTools** Set of functions that help the previous script in the explorer task. There are methods for making SPARQL query on DBpedia, for working with HtmlTableParser and more over.
-
-**Selector** A class used to gather a list of resources calling a SPARQL dbpedia endpoint of chapter selected. It then serialize the list in a .txt file so you can keep trace of which set of resources has been found.   
-
-**WriteSettingsFile** Class built to print file `domain_settings.py` that will contains information about research made by user (resource file, verbose, chapter and more over) and all table's headers found. These headers can be empty (so there isn't any properties previously defined) or can contains 
-
 ---
 
 ####**statistics.py**
