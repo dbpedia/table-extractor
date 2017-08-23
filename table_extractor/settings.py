@@ -18,7 +18,7 @@ SPARQL_CALL_FORMAT = "&format=application%2Fsparql-results%2Bjson&debug=on"
 
 
 # comment to write in mapping_rules.py
-COMMENT_MAPPING_RULES = "# coding = utf-8 \n# Mapping rules used to map table's data, topics are used to evaluate " +\
+COMMENT_MAPPING_RULES = "# coding:utf-8 \n# Mapping rules used to map table's data, topics are used to evaluate " +\
                         "functions with same name."
 
 # mapping rule's prefix
@@ -43,7 +43,7 @@ CHECK_USER_INPUT_PROPERTY = False
 # strings for settings file's header
 CODING_DOMAIN = "# coding = utf-8 \n"
 RESEARCH_TYPE = "RESEACH_TYPE"
-VERBOSE_TYPE = "VERBOSE_VALUE"
+OUTPUT_TYPE = "OUTPUT_ORGANIZATION_VALUE"
 DOMAIN_TITLE = "DOMAIN_EXPLORED"
 CHAPTER = "CHAPTER"
 # prefix of section variable in domain_settings.py
@@ -78,14 +78,14 @@ END_OF_FILE = "\n# END OF FILE \n"
 # Path where pyDomainExplorer print the result file .py
 FILE_PATH_DOMAIN_EXPLORED = "../domain_settings.py"
 
-# Help for verbose input
-VERBOSE_DEFAULT = '1'
-# possible verbose values
-VERBOSE_CHOISES = [1, 2]
-# Help user on verbose choose
-VERBOSE_HELP = " Verbose can be 1,2. Verbose 1 list all headers for each section, while verbose 2 write only one" \
-               " time a header.( Eg. if two sections named 'playoff' and 'regular season' has header 'Year', in " \
-               " verbose 2 you will see 'Year' only one time in file settings) "
+# Help for output organization input
+OUTPUT_DEFAULT = '1'
+# possible output organization values
+OUTPUT_CHOISES = [1, 2]
+# Help user on output organization choose
+OUTPUT_HELP = " Output organziation value can be 1,2. Value 1 list all headers for each section, while value " \
+              "2 write only one time a header.( Eg. if two sections named 'playoff' and 'regular season' has header " \
+              "'Year', with output organization 2 you will see 'Year' only one time in file settings) "
 
 # Help for chapter input
 CHAPTER_DEFAULT = 'en'
