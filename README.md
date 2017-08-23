@@ -81,6 +81,7 @@ There are three arguments that has to be passed to `pyDomainExplorer`.
   * `-w`, `--where` : A SPARQL where clause. Eg. "?film http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://dbpedia.org/ontology/Film. ?film http://dbpedia.org/ontology/director ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s.
   
   * `-s`, `--single` : can be used to select a wiki page at a time. Eg. -s 'Channel_Tunnel' takes only the wiki page representing the European channel tunnel between France and UK. [-s]Note: please use only the name of a wiki page without spaces ( substitued by underscores) Eg. Use -s German_federal_election,_1874 and not https://en.wikipedia.org/wiki/German_federal_election,_1874 or German federal election, 1874 .
+
 ### Small digression on -o parameter
 Filling all fields in file like `domain_settings.py` could be a problem for user. So I have to bring ways to facilitate his work. Some of these ways are research over DBpedia ontology and check if a header has already a property. Another way that I provide is through `-o` parameter.
 Suppose that you have to analyze domain like basketball player and you read a table's header like `points`.
@@ -97,7 +98,7 @@ Below there is a little example that could explain better how `-o` parameter wor
 
 #### Example of output organization parameter usage
 
-In a domain like basketball player, you can observe these `domain_settings.py` files. The first one refers to verbose 1 while the second one is related to verbose 2. You can use this parameter to simplify your work over all different domains.
+In a domain like basketball player, you can observe these `domain_settings.py` files. The first one refers to `-o` equal to 1 while the second one is related to `-o` equal to 2. You can use this parameter to simplify your work over all different domains.
 ```
 ### VERBOSE VALUE: 1
 # Example page where it was found this section: Kobe_Bryant
