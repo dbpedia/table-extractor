@@ -50,14 +50,15 @@ class ExplorerTools:
         parser = argparse.ArgumentParser(description=settings.GENERAL_DESCRIPTION)
 
         """ chapter input"""
-        parser.add_argument('-c', '--chapter', type=str, default=settings.CHAPTER_DEFAULT, help=settings.CHAPTER_HELP)
+        parser.add_argument('-c', '--chapter', type=str, default=settings.CHAPTER_DEFAULT, help=settings.CHAPTER_HELP,
+                            required=True)
 
         """ verbose input"""
         parser.add_argument('-v', '--verbose', help=settings.VERBOSE_HELP, type=int,
-                            choices=settings.VERBOSE_CHOISES, default=settings.VERBOSE_DEFAULT)
+                            choices=settings.VERBOSE_CHOISES, default=settings.VERBOSE_DEFAULT, required = True)
 
         # A mutual exclusive group is used to contain --single or --topic or --where parameters.
-        m_e_group = parser.add_mutually_exclusive_group()
+        m_e_group = parser.add_mutually_exclusive_group(required=True)
 
         # -s|--single unicode string representing a single wiki page you want to analyze.
         m_e_group.add_argument('-s', '--single', type=lambda s: unicode(s, sys.getfilesystemencoding()),
