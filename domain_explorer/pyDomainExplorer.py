@@ -143,8 +143,9 @@ def check_if_similar_section_is_present(string_to_check, res_name, actual_dictio
         else:
             all_sections[new_key] = OrderedDict()
             # search if this new_key is defined in actual_dictionary
-            if new_key in actual_dictionary:
-                all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, actual_dictionary[new_key])
+            section_rule = settings.SECTION_NAME + new_key
+            if section_rule in actual_dictionary:
+                all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, actual_dictionary[section_rule])
             else:
                 all_sections[new_key].__setitem__(settings.SECTION_NAME_PROPERTY, "")
             # example of wiki pages where i found a particular section
