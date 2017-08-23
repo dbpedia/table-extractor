@@ -4,44 +4,42 @@
  _Wikipedia is full of data hidden in tables. The aim of this project is to explore the possibilities of exploiting all the data represented with the appearance of tables in Wiki pages, in order to populate the different chapters of DBpedia through new data of interest. The Table Extractor has to be the engine of this data “revolution”: it would achieve the final purpose of extracting the semi structured data from all those tables now scattered in most of the Wiki pages._
 
  
-## Project
-###**Requirements**
+## Get ready
 You can install requirements using requirements.txt `pip install -r requirements.txt`
 * Python 2.7
 * [RDFlib library](http://rdflib.readthedocs.io/en/stable/gettingstarted.html "RDFlib homepage") (v. >= 4.2)
 * [lxml library](http://lxml.de/lxmlhtml.html "lxml homepage") (v. 3.6 Tested)
 * Stable internet connection
 
-###**User guide**
-
-Idea's project is to: analyze selected resources and then create related RDF triples. First of all you have to run `pyDomainExplorer`, passing right arguments to it. This script will create a settings file (named `domain_settings.py`) that you have to fill: it is commented in order to help you.
+## Get started
+The project idea is to analyze selected resources and then create related RDF triples. First of all you have to run `pyDomainExplorer`, passing right arguments to it. This script will create a settings file (named `domain_settings.py`) that you have to fill: it is commented in order to help you.
 Finally you can run `pyTableExtractor` that read previous filled file and start to map all resources so that you can obtain RDF triples saved in `Extractions` folder.
 
-###**How to run pyDomainExplorer.py**
+### How to run pyDomainExplorer.py
 
 `python pyDomainExplorer.py [--chapter --verbose (--where|--single|--topic)]`
 
 * `-c`, `--chapter` : Optional. 2 letter long string representing the desidered endpoint/Wikipedia language (e.g. `en`, `it`, `fr` ...) Default value: 'en'.
 * `-v`, `--verbose` : Optional. One number that can be 1 or 2. Each value correspond to a different organization of output file.
 
-####**Verbose**
+#### Verbose
 * 1 - Output file will contain new data to map and mapping rules that are in the table extractor's dictionary.
 * 2 - Output file will contain new data to map (shown only one time) and mapping rules saved in table extractor's dictionary
 
-#####**Note:** -w -s -t are all mutual exclusive parameters  
+##### Note: -w -s -t are all mutual exclusive parameters  
 
 * `-t`, `--topic` : Optional. Represents a DBpedia ontology class that you want to explore and analyze. It's important to preserve the camelcase form. Eg. "BasketballPlayer".
 * `-w`, `--where` : Optional. A SPARQL where clause. Eg. "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>.  ?film <http://dbpedia.org/ontology/director> ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s
 * `-s`, `--single` : Optional. can be used to select a wiki page at a time. Eg. -s 'Channel_Tunnel' takes only the [wiki page](https://en.wikipedia.org/wiki/Channel_Tunnel "Channel Tunnel wiki page") representing the European channel tunnel between France and UK. [-s]Note: please use only the name of a wiki page without spaces ( substitued by underscores) Eg. Use -s [German_federal_election,_1874](https://en.wikipedia.org/wiki/German_federal_election,_1874 "German federal 1874 election") and not https://en.wikipedia.org/wiki/German_federal_election,_1874 or German federal election, 1874 .
 
 
-###**How to run pyTableExtractor.py**
+### How to run pyTableExtractor.py
 
 `python pyTableExtractor.py`
-* this script read all parameters in `domain_settings.py` file, so you can run `pyTableExtractor.py` without any problem. It will print file in output that contains RDF triples obtained by domain's analysis.
+* this script reads all parameters in `domain_settings.py` file, so you can run `pyTableExtractor.py` without any problem. It will print file in output that contains RDF triples obtained by domain's analysis.
 
 
-###**Usage examples**
+### Usage examples
 
 * `python pyDomainExplorer.py -c it -v 1 -w "?s a <http://dbpedia.org/ontology/SoccerPlayer>"` ---> chapter = 'it', verbose= '1', tries to collect resources (soccer players) which answer to this sparql query from DBpedia.
 
@@ -53,7 +51,7 @@ Notes:
 * If you choose a topic (-t) or you pass to the script a custom where clause, a list of resources (.txt files) are created in /Resource_lists . 
 * If everything is ok, three files are created in /Extractions : two log file (one for pyDomainExplorer and one for pyTableExtractor) and a .ttl file containing the serialized rdf data set.
 
-###**Example of verbose usage**
+### Example of verbose usage
 
 In a domain like basketball player, you can observe these `domain_settings.py` files. The first one refers to verbose 1 while the second one is related to verbose 2. You can use this parameter to simplify your work over all different domains.
 ```
@@ -142,17 +140,17 @@ Note that effectiveness of the mapping operation mostly depends on how many rule
 
 ---
 
-####**statistics.py**
+### statistics.py
 
 This script, written in collaboration with Federica Baiocchi (@github/Feddie), is useful to know the number of tables or lists contained in Wikipedia pages from a given topic, and was created in collaboration with Feddie who is working on the [List Extractor](https://github.com/dbpedia/list-extractor). We both used it in the beginning of our projects to choose a domain to start from.
-####**How to run statistics.py**
+#### How to run statistics.py
 
 `python statistics.py language struct_type topic`
 * `language` : a two letter long prefix representing the desidered endpoint/Wikipedia language to search (e.g. `en`, `it`, `fr` ...)
 * `struct_type` : `t` for tables, `l` for lists
 * `topic ` : can be either a where clause of a sparql query specifying the requested features of a ?s subject, or a keyword from the following: _dir_ for all DBpedia directors with a Wikipedia pages,  _act_ for actors, _soccer_ for soccer players,_writer_ for writers
 
-###**Usage examples**
+#### Usage examples
 
 *`python statistics.py it t "?s a <http://dbpedia.org/ontology/SoccerPlayer>.?s <http://dbpedia.org/ontology/wikiPageID> ?f"`
 *`python statistics.py en l writer`
@@ -165,4 +163,3 @@ This script, written in collaboration with Federica Baiocchi (@github/Feddie), i
 For any questions please feel to contact:
 * Luca Virgili, lucav48@gmail.com , GSoC 2017 student.
 * Simone papalini, papalini.simone.an@gmail.com , GSoC 2016 student.
-
