@@ -24,13 +24,18 @@ You can install requirements using requirements.txt `pip install -r requirements
 ### How to run table-extractor
 
 * Clone repository.
+
 * Choose a language ((e.g. `en`, `it`, `fr` ...).
+
 * Choose a domain to analyze.  that could be:
    * Single resource (e.g. `Kobe_Bryant`, `Roberto_Baggio`, ..). Remember to let underscore instead of space in resource name.
-   * DBpedia mapping class (e.g. `BasketballPlayer`, `SoccerPlayer`,..), you have a complete list [there].(http://mappings.dbpedia.org/server/ontology/classes/)
-   * Where clause (e.g. "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>.  ?film <http://dbpedia.org/ontology/director> ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s).
+   * DBpedia mapping class (e.g. `BasketballPlayer`, `SoccerPlayer`,..), you have a complete list [there](http://mappings.dbpedia.org/server/ontology/classes/).
+   * Where clause (e.g. "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>.  ?film <http://dbpedia.org/ontology/director> ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s.
+   
 * Choose a value for output organization, that could be 1 or 2. See below to understand how this value influence `domain_settings.py` file.
+
 * Now you can run pyDomainExplorer.py:
+
 `python pyDomainExplorer.py [--chapter --verbose (--where|--single|--topic)]`
 
 This module will take resources in language defined by user and will analyze each table that are in wikipedia pages. At the end of execution, it creates a file named `domain_settings.py`.
