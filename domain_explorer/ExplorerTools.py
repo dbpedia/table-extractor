@@ -26,7 +26,7 @@ class ExplorerTools:
         self.research_type = None
         self.topic = self.set_topic()
         self.chapter = self.set_chapter()
-        self.verbose = self.set_verbose()
+        self.output = self.set_output_type()
         # declare pyTableExtractor Utilities
         self.utils = Utilities.Utilities(self.chapter, self.topic, self.research_type)
 
@@ -38,7 +38,7 @@ class ExplorerTools:
         """
         Parse arguments given by user. You can observe three different inputs:
         - chapter: language specified by two letters.
-        - verbose: number that can be 1 or 2, that will change settings file format.
+        - output organization: number that can be 1 or 2, that will change settings file format.
         - mutual exclusive group:
             - s: single resource.
             - t: dbpedia ontology class.
@@ -53,9 +53,9 @@ class ExplorerTools:
         parser.add_argument('-c', '--chapter', type=str, default=settings.CHAPTER_DEFAULT, help=settings.CHAPTER_HELP,
                             required=True)
 
-        """ verbose input"""
-        parser.add_argument('-v', '--verbose', help=settings.VERBOSE_HELP, type=int,
-                            choices=settings.VERBOSE_CHOISES, default=settings.VERBOSE_DEFAULT, required = True)
+        """ output organization input"""
+        parser.add_argument('-o', '--output', help=settings.OUTPUT_HELP, type=int,
+                            choices=settings.OUTPUT_CHOISES, default=settings.OUTPUT_DEFAULT, required = True)
 
         # A mutual exclusive group is used to contain --single or --topic or --where parameters.
         m_e_group = parser.add_mutually_exclusive_group(required=True)
@@ -111,19 +111,19 @@ class ExplorerTools:
             self.research_type = "w"
             return self.args.where
 
-    def set_verbose(self):
+    def set_output_type(self):
         """
-        Read and set verbose. I will use a default value if user makes a mistake.
-        :return: verbose value
+        Read and set output organization. I will use a default value if user makes a mistake.
+        :return: output organization value
         """
-        if self.args.verbose:
-            # check if verbose is correcy
-            if len(str(self.args.verbose)) == 1 and self.args.verbose <= 2:
-                return self.args.verbose
+        if self.args.output:
+            # check if output is correcy
+            if len(str(self.args.output)) == 1 and self.args.output <= 2:
+                return self.args.output
             else:
-                # use default verbose if user wrote a wrong value
-                print "Wrong verbose, used default: " + settings.VERBOSE_DEFAULT
-                return settings.VERBOSE_DEFAULT
+                # use default output organization if user wrote a wrong value
+                print "Wrong output organization value, used default: " + settings.OUTPUT_DEFAULT
+                return settings.OUTPUT_DEFAULT
 
     def get_uri_resources(self):
         """
