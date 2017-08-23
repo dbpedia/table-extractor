@@ -8,6 +8,11 @@ Idea's project is to analyze resources chosen by user and to create related RDF 
 Then run `pyTableExtractor` that read previous filled file and start to map all resources so that you can obtain RDF triples saved in `Extractions` folder.
 
 ## Get Started
+This section is splitted in three parts:
+* Requirements: libraries that you have to install to use this project.
+* pyDomainExplorer: instructions step by step to run this module.
+* pyTableExtractor: guide to run this script.
+
 ### Requirements
 First of all you must have libraries that I used to develop code.
 You can install requirements using requirements.txt `pip install -r requirements.txt`
@@ -16,31 +21,41 @@ You can install requirements using requirements.txt `pip install -r requirements
 * [lxml library](http://lxml.de/lxmlhtml.html "lxml homepage") (v. 3.6 Tested)
 * Stable internet connection
 
-###**How to run pyDomainExplorer.py**
+### How to run table-extractor
+
+* Clone repository.
+
+* Choose a language ((e.g. `en`, `it`, `fr` ...).
+
+* Choose a domain to analyze.  that could be:
+   * Single resource (e.g. `Kobe_Bryant`, `Roberto_Baggio`, ..). Remember to let underscore instead of space in resource name.
+   * DBpedia mapping class (e.g. `BasketballPlayer`, `SoccerPlayer`,..), you have a complete list [there](http://mappings.dbpedia.org/server/ontology/classes/).
+   * Where clause (e.g. "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>.  ?film <http://dbpedia.org/ontology/director> ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s.
+   
+* Choose a value for output organization, that could be 1 or 2. See below to understand how this value influence `domain_settings.py` file.
+
+* Now you can run pyDomainExplorer.py:
 
 `python pyDomainExplorer.py [--chapter --verbose (--where|--single|--topic)]`
 
-* `-c`, `--chapter` : Optional. 2 letter long string representing the desidered endpoint/Wikipedia language (e.g. `en`, `it`, `fr` ...) Default value: 'en'.
-* `-v`, `--verbose` : Optional. One number that can be 1 or 2. Each value correspond to a different organization of output file.
+This module will take resources in language defined by user and will analyze each table that are in wikipedia pages. At the end of execution, it creates a file named `domain_settings.py`.
 
-####**Verbose**
-* 1 - Output file will contain new data to map and mapping rules that are in the table extractor's dictionary.
-* 2 - Output file will contain new data to map (shown only one time) and mapping rules saved in table extractor's dictionary
+What's function of this file?
+`domain_settings.py` contains all sections and headers found in exploration of the domain. You will observe a dictionary structure and some fields that have to be filled. Below there is an example of output.
 
-#####**Note:** -w -s -t are all mutual exclusive parameters  
+* Next step is to fill `domain_settings.py`. Remember that you are writing _mapping rules_, so you are making an association between a table's header (or table's section) with a dbpedia ontology property.
 
-* `-t`, `--topic` : Optional. Represents a DBpedia ontology class that you want to explore and analyze. It's important to preserve the camelcase form. Eg. "BasketballPlayer".
-* `-w`, `--where` : Optional. A SPARQL where clause. Eg. "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>.  ?film <http://dbpedia.org/ontology/director> ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s
-* `-s`, `--single` : Optional. can be used to select a wiki page at a time. Eg. -s 'Channel_Tunnel' takes only the [wiki page](https://en.wikipedia.org/wiki/Channel_Tunnel "Channel Tunnel wiki page") representing the European channel tunnel between France and UK. [-s]Note: please use only the name of a wiki page without spaces ( substitued by underscores) Eg. Use -s [German_federal_election,_1874](https://en.wikipedia.org/wiki/German_federal_election,_1874 "German federal 1874 election") and not https://en.wikipedia.org/wiki/German_federal_election,_1874 or German federal election, 1874 .
-
-
-###**How to run pyTableExtractor.py**
+* When you have compiled `domain_settings.py`, you can easily run `pyTableExtractor.py` in this way:
 
 `python pyTableExtractor.py`
-* this script read all parameters in `domain_settings.py` file, so you can run `pyTableExtractor.py` without any problem. It will print file in output that contains RDF triples obtained by domain's analysis.
 
+This script read all parameters in `domain_settings.py` and print a .ttl file that contains RDF triples obtained by domain's analysis.
 
-###**Usage examples**
+If it goes well, you will get a dataset in `Extraction` folder!
+
+Read below something more about arguments passed to `pyDomainExplorer`.
+
+### Usage examples
 
 * `python pyDomainExplorer.py -c it -v 1 -w "?s a <http://dbpedia.org/ontology/SoccerPlayer>"` ---> chapter = 'it', verbose= '1', tries to collect resources (soccer players) which answer to this sparql query from DBpedia.
 
@@ -52,9 +67,38 @@ Notes:
 * If you choose a topic (-t) or you pass to the script a custom where clause, a list of resources (.txt files) are created in /Resource_lists . 
 * If everything is ok, three files are created in /Extractions : two log file (one for pyDomainExplorer and one for pyTableExtractor) and a .ttl file containing the serialized rdf data set.
 
-###**Example of verbose usage**
 
-In a domain like basketball player, you can observe these `domain_settings.py` files. The first one refers to verbose 1 while the second one is related to verbose 2. You can use this parameter to simplify your work over all different domains.
+### pyDomainExplorer arguments
+There are three arguments that has to be passed to `pyDomainExplorer`.
+* `-c`, `--chapter` : Required. 2 letter long string representing the desidered endpoint/Wikipedia language (e.g. `en`, `it`, `fr` ...) Default value: 'en'.
+
+* `-o`, `--output` : Required. One number that can be 1 or 2. Each value correspond to a different organization of output file.
+
+* Required one of these arguments:
+
+  * `-t`, `--topic` : Represents a DBpedia ontology class that you want to explore and analyze. It's important to preserve the camelcase form. Eg. "BasketballPlayer".
+  
+  * `-w`, `--where` : A SPARQL where clause. Eg. "?film http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://dbpedia.org/ontology/Film. ?film http://dbpedia.org/ontology/director ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s.
+  
+  * `-s`, `--single` : can be used to select a wiki page at a time. Eg. -s 'Channel_Tunnel' takes only the wiki page representing the European channel tunnel between France and UK. [-s]Note: please use only the name of a wiki page without spaces ( substitued by underscores) Eg. Use -s German_federal_election,_1874 and not https://en.wikipedia.org/wiki/German_federal_election,_1874 or German federal election, 1874 .
+
+### Small digression on -o parameter
+Filling all fields in file like `domain_settings.py` could be a problem for user. So I have to bring ways to facilitate his work. Some of these ways are research over DBpedia ontology and check if a header has already a property. Another way that I provide is through `-o` parameter.
+Suppose that you have to analyze domain like basketball player and you read a table's header like `points`.
+In all sections that you will observe, this header is always associated to `totalPoints` of dbpedia ontology.
+For this reason, I think that print only one time this header in `domain_settings.py` will help user that hasn't to rewrite a property n times.
+
+However you can put `-o` to 1, so same header will be printed several times over `domain_settings.py`
+
+In a nutshell, output organization equal to:
+* 1 - Output file will contain same header repeat for all sections where it is present.
+* 2 - Each header is unique, so you won't observe same header in different sections.
+
+Below there is a little example that could explain better how `-o` parameter works.
+
+#### Example of output organization parameter usage
+
+In a domain like basketball player, you can observe these `domain_settings.py` files. The first one refers to `-o` equal to 1 while the second one is related to `-o` equal to 2. You can use this parameter to simplify your work over all different domains.
 ```
 ### VERBOSE VALUE: 1
 # Example page where it was found this section: Kobe_Bryant
