@@ -1,6 +1,6 @@
 # coding=utf-8
 
-import table_extractor.settings
+import table_extractor.settings as settings
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 
@@ -33,13 +33,13 @@ class Selector:
         self.current_res_list = []
 
         # set the  SPARQL query used therefore to retrieve a list of 1000 resources at a time.
-        self.query_res_list = table_extractor.settings.SPARQL_RES_LIST_QUERY[0] + str(self.where_clause) + \
-            table_extractor.settings.SPARQL_RES_LIST_QUERY[1]
+        self.query_res_list = settings.SPARQL_RES_LIST_QUERY[0] + str(self.where_clause) + \
+            settings.SPARQL_RES_LIST_QUERY[1]
 
         """ set the  SPARQL query used to know the total number of resources involved in collection.
            It then will be used by the collect_resources() method to augment the offset till the end of resources set"""
-        self.query_num_res = table_extractor.settings.SPARQL_NUM_RES_QUERY[0] + str(self.where_clause) + \
-            table_extractor.settings.SPARQL_NUM_RES_QUERY[1]
+        self.query_num_res = settings.SPARQL_NUM_RES_QUERY[0] + str(self.where_clause) + \
+            settings.SPARQL_NUM_RES_QUERY[1]
 
         # set total number of resources interested in this topic passing the query_num_res to utils.tot_res_interested()
         self.tot_res_interested = self.utils.tot_res_interested(self.query_num_res)

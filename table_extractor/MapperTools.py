@@ -48,9 +48,9 @@ class MapperTools:
         :return: parsed mapping rules
         """
         # Import is there for being sure that the file exists.
-        import domain_settings
+        from domain_explorer import domain_settings
         new_mapping_rules = OrderedDict()
-        if os.path.isfile(settings.PATH_DOMAIN_EXPLORER):
+        if os.path.isfile(settings.FILE_PATH_DOMAIN_EXPLORED):
             # search for right dictionary
             for name, val in domain_settings.__dict__.iteritems():
                 if settings.SECTION_NAME in name:
@@ -165,7 +165,7 @@ class MapperTools:
                     # read old dictionary and replace it with new one
                     data_to_print = data_to_print + name + "=" + str(val).replace(", ", ", \n") + "\n\n\n"
         # overwrite mapping_rules.py
-        mapping_rules_file = open("mapping_rules.py", "w")
+        mapping_rules_file = open("table_extractor/mapping_rules.py", "w")
         mapping_rules_file.write(settings.COMMENT_MAPPING_RULES + "\n\n")
         # printed_out == 0 means that the dictionary didn't exists in mapping_rules.py
         if printed_out == 0:

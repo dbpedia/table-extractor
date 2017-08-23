@@ -1,8 +1,8 @@
 #!/usr/bin/env python2.7
 # coding=utf-8
 
-import Analyzer
-import Utilities
+from table_extractor import Analyzer
+from table_extractor import Utilities
 
 __author__ = 'papalinis - Simone Papalini - papalini.simone.an@gmail.com'
 

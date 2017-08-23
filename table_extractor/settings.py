@@ -30,7 +30,7 @@ SPARQL_CHECK_IN_ONTOLOGY = "ASK { <http://dbpedia.org/ontology/", "> ?s ?o }"
 PREFIX_MAPPING_RULE = "MAPPING_RULES_"
 
 # Path where the pyTableExtractor dictionary is located
-PATH_ACTUAL_DICTIONARY = "../table_extractor/mapping_rules.py"
+PATH_ACTUAL_DICTIONARY = "table_extractor/mapping_rules.py"
 
 # enable filter to table's data to delete rows that summarize previous ones. (Like career rows in athlete)
 APPLY_FILTER_TO_TABLE_DATA = True
@@ -75,8 +75,11 @@ COMMENT_STRUCTURE = "# Writing mapping rules is simple --> you have to fill all 
 RESOURCE_FILE = "RESOURCE_FILE"
 END_OF_FILE = "\n# END OF FILE \n"
 
+
+NAME_OF_DOMAIN_EXPLORER_RESULT_FILE = "domain_settings.py"
+
 # Path where pyDomainExplorer print the result file .py
-FILE_PATH_DOMAIN_EXPLORED = "../domain_settings.py"
+FILE_PATH_DOMAIN_EXPLORED = "domain_explorer/" + NAME_OF_DOMAIN_EXPLORER_RESULT_FILE
 
 # Help for output organization input
 OUTPUT_DEFAULT = '1'
@@ -118,9 +121,6 @@ WHERE_HELP = "Define a correct SPARQL where clause. It's important to name '?s' 
 
 # define different topic selected by user
 TOPIC_WHERE = "SPARQL where clause defined"
-
-# path for dictionary created by pyDomainExplorer
-PATH_DOMAIN_EXPLORER = "../domain_settings.py"
 
 # path where a file with all resources will created
 PATH_FOLDER_RESOURCE_LIST = "../Resource_lists"

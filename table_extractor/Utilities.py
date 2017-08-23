@@ -486,8 +486,9 @@ class Utilities:
         Read parameters defined in header of settings file
         :return: set all parameters of research
         """
-        if os.path.isfile(settings.PATH_DOMAIN_EXPLORER):
-            import domain_settings
+        # i'm in table_extractor folder so i have to go up
+        if os.path.exists(settings.FILE_PATH_DOMAIN_EXPLORED):
+            from domain_explorer import domain_settings
             for name, val in domain_settings.__dict__.iteritems():
                 # read domain
                 if name == settings.DOMAIN_TITLE:
@@ -505,7 +506,7 @@ class Utilities:
                 elif name == settings.OUTPUT_TYPE:
                     self.output = val
         else:
-            sys.exit("File " + settings.PATH_DOMAIN_EXPLORER + " not found. You should running pyDomainExplorer")
+            sys.exit("File " + settings.FILE_PATH_DOMAIN_EXPLORED + " not found. You should run pyDomainExplorer.")
 
     def validate_user_input(self):
         """

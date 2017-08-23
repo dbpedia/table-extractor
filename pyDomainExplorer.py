@@ -1,11 +1,10 @@
 # coding = utf-8
 
-import ExplorerTools
-import WriteSettingsFile
-from table_extractor import settings
+from domain_explorer import ExplorerTools
+from domain_explorer import WriteSettingsFile
 from collections import OrderedDict
-
-__author__ = "lucav48 - Luca Virgil (lucav48@gmail.com)"
+from table_extractor import settings
+__author__ = "lucav48 - Luca Virgili (lucav48@gmail.com)"
 
 # All table's section found
 all_sections = OrderedDict()
@@ -31,7 +30,6 @@ def start_exploration():
     like a dictionary ---> "Header name":"Ontology property associated"
     :return:
     """
-
     # Read pyTableExtractor dictionary
     actual_dictionary = explorer_tools.read_actual_dictionary()
     # Read uri resources
