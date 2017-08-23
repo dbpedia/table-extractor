@@ -38,7 +38,7 @@ You can install requirements using requirements.txt `pip install -r requirements
 
 `python pyDomainExplorer.py [--chapter --verbose (--where|--single|--topic)]`
 
-This module will take resources in language defined by user and will analyze each table that are in wikipedia pages. At the end of execution, it creates a file named `domain_settings.py`.
+This module will take resources in language defined by user and will analyze each table that are in wikipedia pages. At the end of execution, it creates a file named `domain_settings.py` in `domain_explorer` folder.
 
 What's function of this file?
 `domain_settings.py` contains all sections and headers found in exploration of the domain. You will observe a dictionary structure and some fields that have to be filled. Below there is an example of output.
