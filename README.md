@@ -3,19 +3,18 @@
 ## Abstract
  _Wikipedia is full of data hidden in tables. The aim of this project is to explore the possibilities of exploiting all the data represented with the appearance of tables in Wiki pages, in order to populate the different chapters of DBpedia through new data of interest. The Table Extractor has to be the engine of this data “revolution”: it would achieve the final purpose of extracting the semi structured data from all those tables now scattered in most of the Wiki pages._
 
- 
 ## Project
-###**Requirements**
+Idea's project is to analyze resources chosen by user and to create related RDF triples. First of all you have to run `pyDomainExplorer`, passing right arguments to it. This script will create a settings file (named `domain_settings.py`) that you have to fill: it is commented to help you in this work.
+Then run `pyTableExtractor` that read previous filled file and start to map all resources so that you can obtain RDF triples saved in `Extractions` folder.
+
+## Get Started
+### Requirements
+First of all you must have libraries that I used to develop code.
 You can install requirements using requirements.txt `pip install -r requirements.txt`
 * Python 2.7
 * [RDFlib library](http://rdflib.readthedocs.io/en/stable/gettingstarted.html "RDFlib homepage") (v. >= 4.2)
 * [lxml library](http://lxml.de/lxmlhtml.html "lxml homepage") (v. 3.6 Tested)
 * Stable internet connection
-
-###**User guide**
-
-Idea's project is to: analyze selected resources and then create related RDF triples. First of all you have to run `pyDomainExplorer`, passing right arguments to it. This script will create a settings file (named `domain_settings.py`) that you have to fill: it is commented in order to help you.
-Finally you can run `pyTableExtractor` that read previous filled file and start to map all resources so that you can obtain RDF triples saved in `Extractions` folder.
 
 ###**How to run pyDomainExplorer.py**
 
