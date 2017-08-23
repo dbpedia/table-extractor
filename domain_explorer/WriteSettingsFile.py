@@ -29,7 +29,7 @@ class WriteSettingsFile:
         self.explorer_tools = explorer_tools
         self.chapter = explorer_tools.chapter
         self.topic = explorer_tools.topic
-        self.verbose = explorer_tools.verbose
+        self.output = explorer_tools.output
         # start to write
         self.write_sections_and_headers()
 
@@ -67,7 +67,7 @@ class WriteSettingsFile:
         - chapter, language defined.
         - research type, that can be single resource, sparql where or dbpedia ontology class.
         - resource file, that contains all resources involved in user's research.
-        - verbose defined.
+        - output organization value defined.
         - comments to facilitate user's work.
         :param domain_explored_file: reference to the output file
         :return:
@@ -77,7 +77,7 @@ class WriteSettingsFile:
         domain_explored_file.write(settings.DOMAIN_TITLE + ' = "' + self.topic + '" \n')
         domain_explored_file.write(settings.CHAPTER + ' = "' + self.chapter + '" \n')
         domain_explored_file.write(settings.RESEARCH_TYPE + ' = "' + self.explorer_tools.research_type + '" \n')
-        domain_explored_file.write(settings.VERBOSE_TYPE + ' = "' + str(self.explorer_tools.verbose) + '" \n')
+        domain_explored_file.write(settings.OUTPUT_TYPE + ' = "' + str(self.explorer_tools.output) + '" \n')
         domain_explored_file.write(settings.RESOURCE_FILE + ' = "' + self.explorer_tools.get_res_list_file() + '" \n\n')
         domain_explored_file.write(settings.COMMENT_SECTION_PROPERTY + "\n\n")
         domain_explored_file.write(settings.COMMENT_STRUCTURE + "\n\n")
@@ -85,7 +85,7 @@ class WriteSettingsFile:
 
     def print_dictionary_on_file(self, file_settings, section_dict):
         """
-        Write dictionary in a file. Verbose is a variable for defining which output's type produce:
+        Write dictionary in a file. Output is a variable for defining which output's type produce:
         1 - print all sections and related headers in output file.
         2 - print all sections and only one time same header.
         :param file_settings: reference to output file
@@ -93,9 +93,9 @@ class WriteSettingsFile:
         :return:
         """
         for key, value in section_dict.items():
-            if self.verbose == 1:
+            if self.output == 1:
                 file_settings.write("'" + key + "': '" + value + "'" + ", \n")
-            elif self.verbose == 2:
+            elif self.output == 2:
                 # don't print header already printed
                 if key == settings.SECTION_NAME_PROPERTY:
                     file_settings.write("'" + key + "' : '" + value + "'" + ", \n")

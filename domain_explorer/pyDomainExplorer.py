@@ -189,7 +189,7 @@ def check_if_header_already_exists(header, section_name, actual_dictionary):
     if header not in all_sections[section_name]:
             # check if this header is already defined in actual_dictionary
         if (section_name + "_" + header) in actual_dictionary:
-            # if it's associated to section (depend on verbose value)
+            # if it's associated to section (depend on output organization value)
             header_property = actual_dictionary[section_name + "_" + header]
         elif header in actual_dictionary:
             # if it's not related to section
