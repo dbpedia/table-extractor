@@ -56,9 +56,18 @@ If it goes well, you will get a dataset in `Extraction` folder!
 Read below something more about arguments passed to `pyDomainExplorer`.
 
 ### pyDomainExplorer arguments
+There are three arguments that has to be passed to `pyDomainExplorer`.
 * `-c`, `--chapter` : Required. 2 letter long string representing the desidered endpoint/Wikipedia language (e.g. `en`, `it`, `fr` ...) Default value: 'en'.
+
 * `-v`, `--verbose` : Required. One number that can be 1 or 2. Each value correspond to a different organization of output file.
 
+* Required one of these arguments:
+
+  * `-t`, `--topic` : Represents a DBpedia ontology class that you want to explore and analyze. It's important to preserve the camelcase form. Eg. "BasketballPlayer".
+  
+  * `-w`, `--where` : A SPARQL where clause. Eg. "?film http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://dbpedia.org/ontology/Film. ?film http://dbpedia.org/ontology/director ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s.
+  
+  * `-s`, `--single` : can be used to select a wiki page at a time. Eg. -s 'Channel_Tunnel' takes only the wiki page representing the European channel tunnel between France and UK. [-s]Note: please use only the name of a wiki page without spaces ( substitued by underscores) Eg. Use -s German_federal_election,_1874 and not https://en.wikipedia.org/wiki/German_federal_election,_1874 or German federal election, 1874 .
 #### Verbose
 * 1 - Output file will contain new data to map and mapping rules that are in the table extractor's dictionary.
 * 2 - Output file will contain new data to map (shown only one time) and mapping rules saved in table extractor's dictionary
