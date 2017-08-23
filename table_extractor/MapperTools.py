@@ -78,7 +78,10 @@ class MapperTools:
                     sections = section_key.split(settings.CHARACTER_SEPARATOR)
                     # for each section I have to add it to dictionary
                     for section in sections:
-                        parsed_mapping_rules.__setitem__(section.replace("_", " "), value)
+                        # each section will have prefix to distinguish it from header that could have same name
+                        parsed_mapping_rules.__setitem__(settings.SECTION_NAME + section.replace("_", " "), value)
+                # some tables can report an header that is empty, so i have to delete that option (user's error on
+                # writing that table)
                 elif key != "":
                     sections = section_key.split(settings.CHARACTER_SEPARATOR)
                     for section in sections:
