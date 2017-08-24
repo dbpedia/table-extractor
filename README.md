@@ -8,10 +8,9 @@ Idea's project is to analyze resources chosen by user and to create related RDF 
 Then run `pyTableExtractor` that read previous filled file and start to map all resources so that you can obtain RDF triples saved in `Extractions` folder.
 
 ## Get Started
-This section is splitted in three parts:
+This section is splitted in two parts:
 * Requirements: libraries that you have to install to use this project.
-* pyDomainExplorer: instructions step by step to run this module.
-* pyTableExtractor: guide to run this script.
+* How to run table-extractor: instructions step by step to run both modules `pyDomainExplorer.py` and `pyTableExtractor.py`
 
 ### Requirements
 First of all you must have libraries that I used to develop code.
@@ -34,11 +33,11 @@ You can install requirements using requirements.txt `pip install -r requirements
    
 * Choose a value for output organization, that could be 1 or 2. See below to understand how this value influence `domain_settings.py` file.
 
-* Now you can run pyDomainExplorer.py:
+* Now you can run `pyDomainExplorer.py`:
 
 `python pyDomainExplorer.py [--chapter --verbose (--where|--single|--topic)]`
 
-This module will take resources in language defined by user and will analyze each table that are in wikipedia pages. At the end of execution, it creates a file named `domain_settings.py`.
+This module will take resources in language defined by user and will analyze each table that are in wikipedia pages. At the end of execution, it creates a file named `domain_settings.py` in `domain_explorer` folder.
 
 What's function of this file?
 `domain_settings.py` contains all sections and headers found in exploration of the domain. You will observe a dictionary structure and some fields that have to be filled. Below there is an example of output.
