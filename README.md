@@ -3,14 +3,11 @@
 ## Abstract
  _Wikipedia is full of data hidden in tables. The aim of this project is to explore the possibilities of exploiting all the data represented with the appearance of tables in Wiki pages, in order to populate the different chapters of DBpedia through new data of interest. The Table Extractor has to be the engine of this data “revolution”: it would achieve the final purpose of extracting the semi structured data from all those tables now scattered in most of the Wiki pages._
 
-## Project
+## Get ready
+
+### Project
 Idea's project is to analyze resources chosen by user and to create related RDF triples. First of all you have to run `pyDomainExplorer`, passing right arguments to it. This script will create a settings file (named `domain_settings.py`) that you have to fill: it is commented to help you in this work.
 Then run `pyTableExtractor` that read previous filled file and start to map all resources so that you can obtain RDF triples saved in `Extractions` folder.
-
-## Get Started
-This section is splitted in two parts:
-* Requirements: libraries that you have to install to use this project.
-* How to run table-extractor: instructions step by step to run both modules `pyDomainExplorer.py` and `pyTableExtractor.py`
 
 ### Requirements
 First of all you must have libraries that I used to develop code.
@@ -20,26 +17,28 @@ You can install requirements using requirements.txt `pip install -r requirements
 * [lxml library](http://lxml.de/lxmlhtml.html "lxml homepage") (v. 3.6 Tested)
 * Stable internet connection
 
+## Get started
 ### How to run table-extractor
 
 * Clone repository.
 
-* Choose a language ((e.g. `en`, `it`, `fr` ...).
+* Choose a language (`--chapter`, e.g. `en`, `it`, `fr` ...).
 
-* Choose a domain to analyze.  that could be:
-   * Single resource (e.g. `Kobe_Bryant`, `Roberto_Baggio`, ..). Remember to let underscore instead of space in resource name.
-   * DBpedia mapping class (e.g. `BasketballPlayer`, `SoccerPlayer`,..), you have a complete list [there](http://mappings.dbpedia.org/server/ontology/classes/).
-   * Where clause (e.g. "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>.  ?film <http://dbpedia.org/ontology/director> ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s.
+* Choose a set of resources to analyze,  that could be:
+   * Single resource (`--single`, e.g. `Kobe_Bryant`, `Roberto_Baggio`, ..). Remember to let underscore instead of space in resource name.
+   * DBpedia mapping class (`--topic`, e.g. `BasketballPlayer`, `SoccerPlayer`,..), you have a complete list [there](http://mappings.dbpedia.org/server/ontology/classes/).
+   * Where clause (`--where`, e.g. "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>.  ?film <http://dbpedia.org/ontology/director> ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s.
    
-* Choose a value for output organization, that could be 1 or 2. See below to understand how this value influence `domain_settings.py` file.
+* Choose a value for output format, that could be 1 or 2. See below to understand how this value influence `domain_settings.py` file.
 
 * Now you can run `pyDomainExplorer.py`:
 
-`python pyDomainExplorer.py [--chapter --verbose (--where|--single|--topic)]`
+`python pyDomainExplorer.py [--chapter --output_format (--where|--single|--topic)]`
 
 This module will take resources in language defined by user and will analyze each table that are in wikipedia pages. At the end of execution, it creates a file named `domain_settings.py` in `domain_explorer` folder.
 
-What's function of this file?
+_What is this file for?_
+
 `domain_settings.py` contains all sections and headers found in exploration of the domain. You will observe a dictionary structure and some fields that have to be filled. Below there is an example of output.
 
 * Next step is to fill `domain_settings.py`. Remember that you are writing _mapping rules_, so you are making an association between a table's header (or table's section) with a dbpedia ontology property.
@@ -48,7 +47,7 @@ What's function of this file?
 
 `python pyTableExtractor.py`
 
-This script read all parameters in `domain_settings.py` and print a .ttl file that contains RDF triples obtained by domain's analysis.
+This script read all parameters in `domain_explorer/domain_settings.py` and print a .ttl file that contains RDF triples obtained by domain's analysis.
 
 If it goes well, you will get a dataset in `Extraction` folder!
 
@@ -56,11 +55,11 @@ Read below something more about arguments passed to `pyDomainExplorer`.
 
 ### Usage examples
 
-* `python pyDomainExplorer.py -c it -v 1 -w "?s a <http://dbpedia.org/ontology/SoccerPlayer>"` ---> chapter = 'it', verbose= '1', tries to collect resources (soccer players) which answer to this sparql query from DBpedia.
+* `python pyDomainExplorer.py -c it -f 1 -w "?s a <http://dbpedia.org/ontology/SoccerPlayer>"` ---> chapter = 'it', output_format= '1', tries to collect resources (soccer players) which answer to this sparql query from DBpedia.
 
-* `python pyDomainExplorer.py -c en -v 2 -t BasketballPlayer` ---> chapter='en', verbose='1', topic='BasketballPlayer', collect resources that are in DBpedia ontology class 'BasketballPlayer'.
+* `python pyDomainExplorer.py -c en -f 2 -t BasketballPlayer` ---> chapter='en', output_format='1', topic='BasketballPlayer', collect resources that are in DBpedia ontology class 'BasketballPlayer'.
 
-* `python pyDomainExplorer.py -c it -v 2 -s "Kobe_Bryant"` ---> the script will works only one [wiki page](https://it.wikipedia.org/wiki/Kobe_Bryant "Kobe Bryant") of 'it' chapter. It's important to use the same name of wikipedia page.
+* `python pyDomainExplorer.py -c it -f 2 -s "Kobe_Bryant"` ---> the script will works only one [wiki page](https://it.wikipedia.org/wiki/Kobe_Bryant "Kobe Bryant") of 'it' chapter. It's important to use the same name of wikipedia page.
 
 Notes:
 * If you choose a topic (-t) or you pass to the script a custom where clause, a list of resources (.txt files) are created in /Resource_lists . 
@@ -71,7 +70,7 @@ Notes:
 There are three arguments that has to be passed to `pyDomainExplorer`.
 * `-c`, `--chapter` : Required. 2 letter long string representing the desidered endpoint/Wikipedia language (e.g. `en`, `it`, `fr` ...) Default value: 'en'.
 
-* `-o`, `--output` : Required. One number that can be 1 or 2. Each value correspond to a different organization of output file.
+* `-f`, `--output_format` : Required. One number that can be 1 or 2. Each value correspond to a different organization of output file.
 
 * Required one of these arguments:
 
@@ -81,25 +80,27 @@ There are three arguments that has to be passed to `pyDomainExplorer`.
   
   * `-s`, `--single` : can be used to select a wiki page at a time. Eg. -s 'Channel_Tunnel' takes only the wiki page representing the European channel tunnel between France and UK. [-s]Note: please use only the name of a wiki page without spaces ( substitued by underscores) Eg. Use -s German_federal_election,_1874 and not https://en.wikipedia.org/wiki/German_federal_election,_1874 or German federal election, 1874 .
 
-### Small digression on -o parameter
-Filling all fields in file like `domain_settings.py` could be a problem for user. So I have to bring ways to facilitate his work. Some of these ways are research over DBpedia ontology and check if a header has already a property. Another way that I provide is through `-o` parameter.
+### Small digression on -f parameter
+Filling all fields in file like `domain_settings.py` could be a problem for user. So I have to bring ways to facilitate his work. Some of these ways are research over DBpedia ontology and check if a header has already a property. Another way that I provided is through `-f` parameter.
+
 Suppose that you have to analyze domain like basketball player and you read a table's header like `points`.
+
 In all sections that you will observe, this header is always associated to `totalPoints` of dbpedia ontology.
 For this reason, I think that print only one time this header in `domain_settings.py` will help user that hasn't to rewrite a property n times.
 
-However you can put `-o` to 1, so same header will be printed several times over `domain_settings.py`
+However you can put `-f` to 1, so same header will be printed several times over `domain_settings.py`
 
 In a nutshell, output organization equal to:
-* 1 - Output file will contain same header repeat for all sections where it is present.
+* 1 - Output file will contain same header repeated for all sections where it is.
 * 2 - Each header is unique, so you won't observe same header in different sections.
 
-Below there is a little example that could explain better how `-o` parameter works.
+Below there is a little example that could explain better how `-f` parameter works.
 
 #### Example of output organization parameter usage
 
-In a domain like basketball player, you can observe these `domain_settings.py` files. The first one refers to `-o` equal to 1 while the second one is related to `-o` equal to 2. You can use this parameter to simplify your work over all different domains.
+In a domain like basketball player, you can observe these `domain_settings.py` files. The first one refers to `-f` equal to 1 while the second one is related to `-f` equal to 2. You can use this parameter to simplify your work over all different domains.
 ```
-### VERBOSE VALUE: 1
+### OUTPUT FORMAT VALUE: 1
 # Example page where it was found this section: Kobe_Bryant
 SECTION_Playoffs = {
 'sectionProperty': '', 
@@ -120,7 +121,7 @@ SECTION_Regular_season = {
 # END OF FILE 
 ```
 ```
-### VERBOSE VALUE: 2
+### OUTPUT FORMAT VALUE: 2
 # Example page where it was found this section: Kobe_Bryant
 SECTION_Playoffs = {
 'sectionProperty': '', 
