@@ -57,7 +57,7 @@ Read below something more about arguments passed to `pyDomainExplorer`.
 
 * `python pyDomainExplorer.py -c it -f 1 -w "?s a <http://dbpedia.org/ontology/SoccerPlayer>"` ---> chapter = 'it', output_format= '1', tries to collect resources (soccer players) which answer to this sparql query from DBpedia.
 
-* `python pyDomainExplorer.py -c en -f 2 -t BasketballPlayer` ---> chapter='en', output_format='1', topic='BasketballPlayer', collect resources that are in DBpedia ontology class 'BasketballPlayer'.
+* `python pyDomainExplorer.py -c en -f 2 -t BasketballPlayer` ---> chapter='en', output_format='2', topic='BasketballPlayer', collect resources that are in DBpedia ontology class 'BasketballPlayer'.
 
 * `python pyDomainExplorer.py -c it -f 2 -s "Kobe_Bryant"` ---> the script will works only one [wiki page](https://it.wikipedia.org/wiki/Kobe_Bryant "Kobe Bryant") of 'it' chapter. It's important to use the same name of wikipedia page.
 
@@ -85,7 +85,7 @@ Filling all fields in file like `domain_settings.py` could be a problem for user
 
 Suppose that you have to analyze domain like basketball player and you read a table's header like `points`.
 
-In all sections that you will observe, this header is always associated to `totalPoints` of dbpedia ontology.
+In all sections you will observe that this header is always associated to `totalPoints` of dbpedia ontology.
 For this reason, I think that print only one time this header in `domain_settings.py` will help user that hasn't to rewrite a property n times.
 
 However you can put `-f` to 1, so same header will be printed several times over `domain_settings.py`
@@ -137,6 +137,8 @@ SECTION_Regular_season = {
 
 # END OF FILE 
 ```
+
+As you can see above, headers like `GamesPlayed` and `GamesStarted` are printed twice in `domain_settings.py` with `-f` equal to 1, while on second `domain_settings.py` with `-f` equal to 2, you can see that `GamesPlayed` and `GamesStarted` are printed only one time. In this way you can write only one mapping rules instead of two.
 
 ## Results
 In this page: [Results page](https://github.com/dbpedia/table-extractor/tree/master/Extractions/GSoC%202017%20Results) you can observe dataset (english and italian) extracted using `table extractor` . Furthermore you can read log file created in order to see all operations made up for creating RDF triples.
