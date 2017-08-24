@@ -38,6 +38,7 @@ You can install requirements using requirements.txt `pip install -r requirements
 This module will take resources in language defined by user and will analyze each table that are in wikipedia pages. At the end of execution, it creates a file named `domain_settings.py` in `domain_explorer` folder.
 
 _What is this file for?_
+
 `domain_settings.py` contains all sections and headers found in exploration of the domain. You will observe a dictionary structure and some fields that have to be filled. Below there is an example of output.
 
 * Next step is to fill `domain_settings.py`. Remember that you are writing _mapping rules_, so you are making an association between a table's header (or table's section) with a dbpedia ontology property.
