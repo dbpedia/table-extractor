@@ -123,7 +123,7 @@ WHERE_HELP = "Define a correct SPARQL where clause. It's important to name '?s' 
 TOPIC_WHERE = "SPARQL where clause defined"
 
 # path where a file with all resources will created
-PATH_FOLDER_RESOURCE_LIST = "../Resource_lists"
+PATH_FOLDER_RESOURCE_LIST = "Resource_lists"
 
 # languages available in scripts
 LANGUAGES_AVAILABLE = ["en", "it", "fr", "de", "pt", "es"]
