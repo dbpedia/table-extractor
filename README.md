@@ -81,7 +81,9 @@ There are three arguments that has to be passed to `pyDomainExplorer`.
 
 ### Small digression on -f parameter
 Filling all fields in file like `domain_settings.py` could be a problem for user. So I have to bring ways to facilitate his work. Some of these ways are research over DBpedia ontology and check if a header has already a property. Another way that I provided is through `-f` parameter.
+
 Suppose that you have to analyze domain like basketball player and you read a table's header like `points`.
+
 In all sections that you will observe, this header is always associated to `totalPoints` of dbpedia ontology.
 For this reason, I think that print only one time this header in `domain_settings.py` will help user that hasn't to rewrite a property n times.
 
