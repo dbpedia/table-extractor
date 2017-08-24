@@ -24,7 +24,7 @@ You can install requirements using requirements.txt `pip install -r requirements
 
 * Choose a language (`--chapter`, e.g. `en`, `it`, `fr` ...).
 
-* Choose a domain to analyze.  that could be:
+* Choose a set of resources to analyze,  that could be:
    * Single resource (`--single`, e.g. `Kobe_Bryant`, `Roberto_Baggio`, ..). Remember to let underscore instead of space in resource name.
    * DBpedia mapping class (`--topic`, e.g. `BasketballPlayer`, `SoccerPlayer`,..), you have a complete list [there](http://mappings.dbpedia.org/server/ontology/classes/).
    * Where clause (`--where`, e.g. "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>.  ?film <http://dbpedia.org/ontology/director> ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s.
