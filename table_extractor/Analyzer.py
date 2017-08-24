@@ -215,7 +215,10 @@ class Analyzer:
                 self.topic = "single_res_" + str(self.single_res)
 
             # compose filename of the .ttl file
-            filename = self.utils.get_date_time() + "_T_Ext_" + self.chapter + '_' +\
+            if self.utils.research_type == "w":
+                filename = self.utils.get_date_time() + "_T_Ext_" + self.chapter + "_custom.ttl"
+            else:
+                filename = self.utils.get_date_time() + "_T_Ext_" + self.chapter + '_' +\
                 self.topic + ".ttl"
             # join path of execution with that of ../Extraction
             destination = self.utils.join_paths(cur_dir, '../Extractions/'+filename)
