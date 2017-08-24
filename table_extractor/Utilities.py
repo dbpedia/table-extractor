@@ -50,7 +50,7 @@ class Utilities:
         self.topic = topic
         self.research_type = research_type
         self.resource_file = None
-        self.output = None
+        self.output_format = None
         # test if the directory ../Extractions exists (or create it)
         self.test_dir_existence('../Extractions')
 
@@ -502,9 +502,9 @@ class Utilities:
                 # read name of resource's file
                 elif name == settings.RESOURCE_FILE:
                     self.resource_file = val
-                # read output organization value
-                elif name == settings.OUTPUT_TYPE:
-                    self.output = val
+                # read output format value
+                elif name == settings.OUTPUT_FORMAT_TYPE:
+                    self.output_format = val
         else:
             sys.exit("File " + settings.FILE_PATH_DOMAIN_EXPLORED + " not found. You should run pyDomainExplorer.")
 

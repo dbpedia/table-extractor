@@ -26,7 +26,7 @@ class ExplorerTools:
         self.research_type = None
         self.topic = self.set_topic()
         self.chapter = self.set_chapter()
-        self.output = self.set_output_type()
+        self.output_format = self.set_output_format()
         # declare pyTableExtractor Utilities
         self.utils = Utilities.Utilities(self.chapter, self.topic, self.research_type)
 
@@ -54,8 +54,9 @@ class ExplorerTools:
                             required=True)
 
         """ output organization input"""
-        parser.add_argument('-o', '--output', help=settings.OUTPUT_HELP, type=int,
-                            choices=settings.OUTPUT_CHOISES, default=settings.OUTPUT_DEFAULT, required = True)
+        parser.add_argument('-f', '--output_format', help=settings.OUTPUT_FORMAT_HELP, type=int,
+                            choices=settings.OUTPUT_FORMAT_CHOISES, default=settings.OUTPUT_FORMAT_DEFAULT,
+                            required = True)
 
         # A mutual exclusive group is used to contain --single or --topic or --where parameters.
         m_e_group = parser.add_mutually_exclusive_group(required=True)
@@ -111,19 +112,19 @@ class ExplorerTools:
             self.research_type = "w"
             return self.args.where
 
-    def set_output_type(self):
+    def set_output_format(self):
         """
         Read and set output organization. I will use a default value if user makes a mistake.
         :return: output organization value
         """
-        if self.args.output:
-            # check if output is correcy
-            if len(str(self.args.output)) == 1 and self.args.output <= 2:
-                return self.args.output
+        if self.args.output_format:
+            # check if output_format is correcy
+            if len(str(self.args.output_format)) == 1 and self.args.output_format <= 2:
+                return self.args.output_format
             else:
-                # use default output organization if user wrote a wrong value
-                print "Wrong output organization value, used default: " + settings.OUTPUT_DEFAULT
-                return settings.OUTPUT_DEFAULT
+                # use default output format if user wrote a wrong value
+                print "Wrong output format value, used default: " + settings.OUTPUT_FORMAT_DEFAULT
+                return settings.OUTPUT_FORMAT_DEFAULT
 
     def get_uri_resources(self):
         """

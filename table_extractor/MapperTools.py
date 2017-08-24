@@ -17,7 +17,7 @@ class MapperTools:
     def __init__(self, utils):
         self.utils = utils
         self.chapter = self.utils.chapter
-        self.output = self.utils.output
+        self.output_format = self.utils.output_format
 
     # tools to read and updating mapping rules
     def update_mapping_rules(self):
@@ -86,7 +86,7 @@ class MapperTools:
                     sections = section_key.split(settings.CHARACTER_SEPARATOR)
                     for section in sections:
                         # output organization 1 define strict rule for each header
-                        if self.output == "2":
+                        if self.output_format == "2":
                             parsed_mapping_rules.__setitem__(key, value)
                         else:
                             parsed_mapping_rules.__setitem__(section.replace("_", " ") + "_" + key, value)
