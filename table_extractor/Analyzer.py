@@ -218,8 +218,8 @@ class Analyzer:
             if self.utils.research_type == "w":
                 filename = self.utils.get_date_time() + "_T_Ext_" + self.chapter + "_custom.ttl"
             else:
-                filename = self.utils.get_date_time() + "_T_Ext_" + self.chapter + '_' +\
-                self.topic + ".ttl"
+                filename = self.utils.get_date_time() + "_T_Ext_" + self.chapter + '_' + \
+                           self.topic + ".ttl"
             # join path of execution with that of ../Extraction
             destination = self.utils.join_paths(cur_dir, '../Extractions/'+filename)
 

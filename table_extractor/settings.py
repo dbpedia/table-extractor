@@ -41,7 +41,7 @@ CHECK_USER_INPUT_PROPERTY = False
 
 # SETTINGS FOR pyDomainExplorer
 # strings for settings file's header
-CODING_DOMAIN = "# coding = utf-8 \n"
+CODING_DOMAIN = "# coding:utf-8 \n"
 RESEARCH_TYPE = "RESEACH_TYPE"
 OUTPUT_FORMAT_TYPE = "OUTPUT_FORMAT_VALUE"
 DOMAIN_TITLE = "DOMAIN_EXPLORED"
