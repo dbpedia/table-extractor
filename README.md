@@ -6,7 +6,7 @@
 ## Get ready
 
 ### Project
-Idea's project is to analyze resources chosen by user and to create related RDF triples. First of all you have to run `pyDomainExplorer`, passing right arguments to it. This script will create a settings file (named `domain_settings.py`) that you have to fill: it is commented to help you in this work.
+Idea's project is to analyze resources chosen by user and to create related RDF triples. First of all you have to run `pyDomainExplorer`, passing right arguments to it. This script will create a settings file (named `domain_settings.py` in `domain_explorer` folder) that you have to fill: it is commented to help you in this work.
 Then run `pyTableExtractor` that read previous filled file and start to map all resources so that you can obtain RDF triples saved in `Extractions` folder.
 
 ### Requirements
