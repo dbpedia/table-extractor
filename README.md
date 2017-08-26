@@ -27,7 +27,7 @@ You can install requirements using requirements.txt `pip install -r requirements
 * Choose a set of resources to analyze,  that could be:
    * Single resource (`--single`, e.g. `Kobe_Bryant`, `Roberto_Baggio`, ..). Remember to let underscore instead of space in resource name.
    * DBpedia mapping class (`--topic`, e.g. `BasketballPlayer`, `SoccerPlayer`,..), you have a complete list [there](http://mappings.dbpedia.org/server/ontology/classes/).
-   * Where clause (`--where`, e.g. "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>.  ?film <http://dbpedia.org/ontology/director> ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s.
+   * Where clause (`--where`, e.g. "?film <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>.  ?film <http://dbpedia.org/ontology/director> ?s" is used to collect all film directors of a wiki chapter. Note: please ensure that the set you want to collect is titled as ?s).
    
 * Choose a value for output format, that could be 1 or 2. See below to understand how this value influence `domain_settings.py` file.
 
@@ -141,7 +141,7 @@ SECTION_Regular_season = {
 As you can see above, headers like `GamesPlayed` and `GamesStarted` are printed twice in `domain_settings.py` with `-f` equal to 1, while on second `domain_settings.py` with `-f` equal to 2, you can see that `GamesPlayed` and `GamesStarted` are printed only one time. In this way you can write only one mapping rules instead of two.
 
 ## Results
-In this page: [Results page](https://github.com/dbpedia/table-extractor/tree/master/Extractions/GSoC%202017%20Results) you can observe dataset (english and italian) extracted using `table extractor` . Furthermore you can read log file created in order to see all operations made up for creating RDF triples.
+In this [page](https://github.com/dbpedia/table-extractor/tree/master/Extractions/GSoC%202017%20Results) you can observe dataset (english and italian) extracted using `table extractor` . Furthermore you can read log file created in order to see all operations made up for creating RDF triples.
 
 I recommend to also see [this page](https://github.com/dbpedia/table-extractor/wiki), that contains idea behind project and an example of result extracted from log files and .ttl dataset.
 
