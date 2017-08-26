@@ -151,7 +151,7 @@ Note that effectiveness of the mapping operation mostly depends on how many rule
 
 ## statistics.py
 
-This script, written in collaboration with Federica Baiocchi (@github/Feddie), is useful to know the number of tables or lists contained in Wikipedia pages from a given topic, and was created in collaboration with Feddie who is working on the [List Extractor](https://github.com/dbpedia/list-extractor). We both used it in the beginning of our projects to choose a domain to start from.
+This script, written by Simone Papalini (@github/papalinis) and Federica Baiocchi (@github/Feddie), is useful to know the number of tables or lists contained in Wikipedia pages from a given topic, and was created in collaboration with Feddie who is working on the [List Extractor](https://github.com/dbpedia/list-extractor). We both used it in the beginning of our projects to choose a domain to start from.
 ### Get started
 #### How to run statistics.py
 
